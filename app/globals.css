@@ -1,26 +1,80 @@
 @import "tailwindcss";
 
+/* WRPX brand: black main, white, accent lime #ccff02 — subtle pink #df1591 */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #050505;
+  --foreground: #fafafa;
+  --muted: #737373;
+  --accent: #ccff02;
+  --accent-foreground: #050505;
+  --accent-pink: #df1591;
+  --card: #0a0a0a;
+  --card-foreground: #fafafa;
+  --border: #1a1a1a;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent-pink: var(--accent-pink);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-border: var(--border);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+/* Primary CTA button style */
+.btn-primary {
+  background-color: var(--accent);
+  color: var(--accent-foreground);
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.375rem;
+  transition: opacity 0.15s, transform 0.1s;
+}
+.btn-primary:hover {
+  opacity: 0.95;
+  transform: translateY(-1px);
+}
+
+/* Secondary / outline button */
+.btn-secondary {
+  border: 1px solid var(--border);
+  color: var(--foreground);
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.375rem;
+  transition: border-color 0.15s, background 0.15s;
+}
+.btn-secondary:hover {
+  border-color: var(--accent);
+  background: rgba(204, 255, 2, 0.08);
+}
+
+/* Floating card — rounded, shadow, border for sections; subtle pink on hover */
+.card-float {
+  border-radius: 1rem;
+  border: 1px solid var(--border);
+  background: var(--card);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.card-float:hover {
+  border-color: rgba(223, 21, 145, 0.25);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(223, 21, 145, 0.08);
+}
+
+/* Subtle pink on mailto/tel hover */
+a[href^="mailto"]:hover,
+a[href^="tel"]:hover {
+  color: var(--accent-pink);
 }
