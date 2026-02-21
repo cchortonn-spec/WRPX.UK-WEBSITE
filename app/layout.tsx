@@ -1,10 +1,13 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { StickyCtaBar } from "@/components/StickyCtaBar";
 import { getLocalBusinessSchema } from "@/lib/schema";
+
+const GA_MEASUREMENT_ID = "G-XK2PXVX5XM";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -36,21 +39,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* Google tag (gtag.js) */}
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-XK2PXVX5XM"
-        />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-XK2PXVX5XM');
-            `,
-          }}
-        />
         {/* Google Search Console verification: replace content with the value from Search Console */}
         <meta name="google-site-verification" content="" />
         <script
@@ -63,6 +51,19 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} min-h-screen antialiased`}
       >
+        {/* Google tag (gtag.js) — loads after page is interactive so GA4 receives data */}
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="gtag-config" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_MEASUREMENT_ID}');
+          `}
+        </Script>
         <Header />
         <main className="pb-20 lg:pb-0">{children}</main>
         <Footer />
