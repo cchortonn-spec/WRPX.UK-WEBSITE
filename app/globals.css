@@ -28,7 +28,11 @@
 }
 
 html {
-  background: #000;
+  background-color: #000;
+  background-image: url("/sitebackground.png");
+  background-repeat: repeat;
+  background-size: auto;
+  min-height: 100%;
 }
 
 body {
@@ -41,6 +45,14 @@ body {
   font-family: var(--font-sans), system-ui, sans-serif;
   position: relative;
   min-height: 100vh;
+}
+
+/* Mobile: fixed attachment often ignored, so use scroll so texture still shows */
+@media (max-width: 1023px) {
+  html,
+  body {
+    background-attachment: scroll;
+  }
 }
 
 /* Primary CTA button style */
