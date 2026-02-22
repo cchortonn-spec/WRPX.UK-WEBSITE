@@ -28,31 +28,30 @@
 }
 
 html {
-  background-color: #000;
-  background-image: url("/sitebackground.png");
-  background-repeat: repeat;
-  background-size: auto;
+  background: #000;
   min-height: 100%;
 }
 
 body {
-  background-color: #000;
-  background-image: url("/sitebackground.png");
-  background-repeat: repeat;
-  background-size: auto;
-  background-attachment: fixed;
+  background: #000;
   color: var(--foreground);
   font-family: var(--font-sans), system-ui, sans-serif;
   position: relative;
   min-height: 100vh;
 }
 
-/* Mobile: fixed attachment often ignored, so use scroll so texture still shows */
-@media (max-width: 1023px) {
-  html,
-  body {
-    background-attachment: scroll;
-  }
+/* Fixed layer for texture — stays still on scroll on desktop and mobile */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-color: #000;
+  background-image: url("/sitebackground.png");
+  background-repeat: repeat;
+  background-size: auto;
+  filter: contrast(1.06) brightness(1.03);
 }
 
 /* Primary CTA button style */
