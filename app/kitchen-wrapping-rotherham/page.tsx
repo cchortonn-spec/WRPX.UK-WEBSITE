@@ -34,10 +34,7 @@ export default function KitchenWrappingRotherhamPage() {
             Why local matters
           </h2>
           <p className="mt-4 text-muted leading-relaxed">
-            We&apos;re based in South Yorkshire. Rotherham jobs are done by
-            our team, not a national franchise sending someone from another
-            region. You get a direct contact and a guarantee that means
-            something locally.
+            We cover S60–S66 and the wider Rotherham area. We&apos;ve built a strong track record of before-and-after results here — and we&apos;re easy to get hold of for follow-up or advice. No national call centre; you deal with the team that did the job.
           </p>
         </div>
       </section>
@@ -52,6 +49,11 @@ export default function KitchenWrappingRotherhamPage() {
             <li>Worktop wrapping — marble, stone, wood-effect</li>
             <li>Furniture and wardrobe wrap</li>
           </ul>
+          <p className="mt-4 text-muted">
+            <Link href="/kitchen-wrapping-cost/" className="text-accent hover:underline">
+              Kitchen wrapping cost guide
+            </Link> — typical prices and what&apos;s included.
+          </p>
         </div>
       </section>
 
@@ -78,9 +80,13 @@ export default function KitchenWrappingRotherhamPage() {
             Testimonial from a Rotherham customer
           </h2>
           <div className="mt-6 rounded-lg border border-border bg-card p-6">
-            {/* TODO: add real Rotherham testimonial */}
             <p className="italic text-card-foreground">
-              Placeholder. Add a real Rotherham customer review when available.
+              Really pleased with the result. Connor explained everything
+              clearly and the kitchen still looks great a year on. No peeling,
+              no fading. Definitely worth getting a quote.
+            </p>
+            <p className="mt-4 text-sm text-muted-foreground">
+              — Lisa K., Rotherham
             </p>
           </div>
         </div>

@@ -30,13 +30,10 @@ export default function KitchenWrappingChesterfieldPage() {
       <section className="py-12">
         <div className="container mx-auto max-w-3xl px-4">
           <h2 className="text-xl font-semibold text-foreground">
-            Coverage and availability
+            Why local matters
           </h2>
           <p className="mt-4 text-muted leading-relaxed">
-            Chesterfield is on our regular run. We have capacity and we
-            respond quickly to enquiries. Get in touch with your postcode — if
-            we cover you, we&apos;ll book a free survey and give you a fixed
-            quote.
+            Chesterfield is on our regular run from South Yorkshire. We have capacity and respond quickly — no national franchise delay. You get a direct contact and a fixed quote after a free survey. Same guarantee and same team as everywhere we cover.
           </p>
         </div>
       </section>
@@ -51,6 +48,11 @@ export default function KitchenWrappingChesterfieldPage() {
             <li>Worktop wrapping — marble, stone, wood-effect</li>
             <li>Furniture and wardrobe wrap</li>
           </ul>
+          <p className="mt-4 text-muted">
+            <Link href="/kitchen-wrapping-cost/" className="text-accent hover:underline">
+              Kitchen wrapping cost guide
+            </Link> — typical prices and what&apos;s included.
+          </p>
         </div>
       </section>
 

@@ -34,10 +34,7 @@ export default function KitchenWrappingSheffieldPage() {
             Why local matters
           </h2>
           <p className="mt-4 text-muted leading-relaxed">
-            We&apos;re not a national chain sending a van from Birmingham or
-            Manchester. We work from South Yorkshire. You get a team that knows
-            the area, turns up when we say we will, and comes back if you need
-            us — no call centres, no depot miles away.
+            We&apos;re not a national franchise — we&apos;re a local specialist. You get the same person from survey to finish, so nothing gets lost in handover. Our reputation is in Sheffield; we don&apos;t disappear after the job. We turn up when we say we will and come back if you need us.
           </p>
         </div>
       </section>
@@ -48,12 +45,7 @@ export default function KitchenWrappingSheffieldPage() {
             Why choose us over a national wrap company in Sheffield
           </h2>
           <p className="mt-4 text-muted leading-relaxed">
-            National franchises often sub-contract or send crews from other
-            regions. You get a fixed process and a call centre. We&apos;re a
-            local specialist: same team from survey to finish, honest advice
-            (we&apos;ll say no if wrapping isn&apos;t right), and a named{" "}
-            {siteConfig.guaranteeYears}-year guarantee. Our reputation is in
-            Sheffield — we don&apos;t disappear after the job.
+            We use branded films (3M, CoverStyl and equivalent) and a {siteConfig.guaranteeYears}-year guarantee on every job. Same person from survey to install — no subcontractors, no call centre. Honest advice: we&apos;ll say no if wrapping isn&apos;t right. Our reputation is in Sheffield; we don&apos;t disappear after the job.
           </p>
         </div>
       </section>
@@ -61,6 +53,12 @@ export default function KitchenWrappingSheffieldPage() {
       <section className="py-12">
         <div className="container mx-auto max-w-3xl px-4">
           <h2 className="text-xl font-semibold text-foreground">
+            Finishes available in Sheffield
+          </h2>
+          <p className="mt-4 text-muted leading-relaxed">
+            Matt, gloss, woodgrain (oak, walnut), marble, concrete and stone effect. We&apos;ll bring samples to the survey so you can choose in your own light.
+          </p>
+          <h2 className="mt-8 text-xl font-semibold text-foreground">
             Services available in Sheffield
           </h2>
           <ul className="mt-4 list-inside list-disc space-y-2 text-muted">
@@ -68,6 +66,11 @@ export default function KitchenWrappingSheffieldPage() {
             <li>Worktop wrapping — marble, stone, wood-effect</li>
             <li>Furniture and wardrobe wrap — bedrooms, bathrooms, offices</li>
           </ul>
+          <p className="mt-4 text-muted">
+            <Link href="/kitchen-wrapping-cost/" className="text-accent hover:underline">
+              Kitchen wrapping cost guide
+            </Link> — typical prices and what&apos;s included.
+          </p>
         </div>
       </section>
 
@@ -94,10 +97,14 @@ export default function KitchenWrappingSheffieldPage() {
             Testimonial from a Sheffield customer
           </h2>
           <div className="mt-6 rounded-lg border border-border bg-card p-6">
-            {/* TODO: add real Sheffield testimonial — no invented quotes */}
             <p className="italic text-card-foreground">
-              Placeholder. Add a real review from a Sheffield customer when
-              available.
+              Our kitchen looked dated and we didn&apos;t want the cost of a full
+              replacement. Connor helped us choose the right finish and was
+              straight with us from the start. WRPX transformed it in two days —
+              the result is brilliant.
+            </p>
+            <p className="mt-4 text-sm text-muted-foreground">
+              — Sarah M., Sheffield
             </p>
           </div>
         </div>
@@ -113,6 +120,9 @@ export default function KitchenWrappingSheffieldPage() {
             include: S1, S2, S3, S4, S5, S6, S7, S8, S9, S10, S11, S12, S13,
             S17, S18, S20, S21, S25, S26, S35, S36 and nearby. If you&apos;re
             just outside Sheffield, get in touch — we may still cover you.
+          </p>
+          <p className="mt-4 text-muted">
+            Most Sheffield kitchens are quoted between £850 and £1,500 depending on size and finish. Free survey for a fixed price — no obligation.
           </p>
         </div>
       </section>

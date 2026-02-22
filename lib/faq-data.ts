@@ -2,6 +2,22 @@ import { siteConfig } from "./site-config";
 
 export const faqItems = [
   {
+    q: "How much does kitchen wrapping cost?",
+    a: "Costs vary by kitchen size, finish and whether you include worktops. Typical ranges: from around £45 per door, from £850 for a full kitchen (10–12 doors), from £250 for worktop only. We give a fixed quote after a free survey — no obligation. For a full pricing guide see our Kitchen Wrapping Cost page: https://wrpx.co.uk/kitchen-wrapping-cost/",
+  },
+  {
+    q: "Is kitchen wrapping worth it?",
+    a: "For dated but sound kitchens, usually yes. You get a new look at 70–80% less than a replacement, in 1–3 days, with no rip-out. It won't change the layout or carcasses. If your units are damaged or you want a full redesign, replacement may be better — we'll say so at the survey.",
+  },
+  {
+    q: "Can you wrap a kitchen island?",
+    a: "Yes. We wrap island unit doors, panels and end panels in the same way as the rest of the kitchen. If the island has a worktop, we can wrap that too in marble, stone or wood-effect vinyl. Same guarantee and process.",
+  },
+  {
+    q: "Does kitchen wrapping peel?",
+    a: "Not when it's done properly. We use branded films and trade-level prep so adhesion lasts. Our guarantee covers peeling and adhesion failure for the stated period. Peeling is usually caused by poor prep, cheap film or damage — we avoid the first two and specify care to minimise the third.",
+  },
+  {
     q: "How long does kitchen wrapping last?",
     a: `With correct care and normal use, a professionally wrapped kitchen typically lasts ${siteConfig.guaranteeYears} years or more. We use branded films and trade-level prep so adhesion and colour hold. Our guarantee covers material defects, colour and adhesion for ${siteConfig.guaranteeYears} years.`,
   },

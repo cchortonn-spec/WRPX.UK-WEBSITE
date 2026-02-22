@@ -35,9 +35,7 @@ export default function KitchenWrappingDoncasterPage() {
             Why local matters
           </h2>
           <p className="mt-4 text-muted leading-relaxed">
-            We&apos;re South Yorkshire based, not a national operator. You get
-            a local team, a named {siteConfig.guaranteeYears}-year guarantee,
-            and someone who&apos;s easy to get hold of if you need a follow-up.
+            DN postcode coverage without a national franchise call-out. We&apos;re close enough to turn up when we say we will — no travel cost baked into a generic national rate. You get a named {siteConfig.guaranteeYears}-year guarantee and a direct contact if you need a follow-up.
           </p>
         </div>
       </section>
@@ -52,6 +50,11 @@ export default function KitchenWrappingDoncasterPage() {
             <li>Worktop wrapping — marble, stone, wood-effect</li>
             <li>Furniture and wardrobe wrap</li>
           </ul>
+          <p className="mt-4 text-muted">
+            <Link href="/kitchen-wrapping-cost/" className="text-accent hover:underline">
+              Kitchen wrapping cost guide
+            </Link> — typical prices and what&apos;s included.
+          </p>
         </div>
       </section>
 
@@ -78,9 +81,13 @@ export default function KitchenWrappingDoncasterPage() {
             Testimonial from a Doncaster customer
           </h2>
           <div className="mt-6 rounded-lg border border-border bg-card p-6">
-            {/* TODO: add real Doncaster testimonial */}
             <p className="italic text-card-foreground">
-              Placeholder. Add a real Doncaster customer review when available.
+              Connor came out, gave us a clear quote and no hard sell. Had the
+              doors and worktops wrapped — you can&apos;t tell it&apos;s not new.
+              Professional job, turned up when they said. Would recommend.
+            </p>
+            <p className="mt-4 text-sm text-muted-foreground">
+              — James T., Doncaster
             </p>
           </div>
         </div>

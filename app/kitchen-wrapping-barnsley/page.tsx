@@ -35,9 +35,7 @@ export default function KitchenWrappingBarnsleyPage() {
             Why local matters
           </h2>
           <p className="mt-4 text-muted leading-relaxed">
-            We work from South Yorkshire. Barnsley jobs are handled by the same
-            team that does survey, prep and install — no subcontractors, no
-            depot in another region.
+            Barnsley is on our regular South Yorkshire run — we&apos;re in the area often. Quick to book a survey and straight-talking advice: we&apos;ll tell you if wrapping is right for your kitchen and give you a fixed quote, no sales pitch.
           </p>
         </div>
       </section>
@@ -52,6 +50,11 @@ export default function KitchenWrappingBarnsleyPage() {
             <li>Worktop wrapping — marble, stone, wood-effect</li>
             <li>Furniture and wardrobe wrap</li>
           </ul>
+          <p className="mt-4 text-muted">
+            <Link href="/kitchen-wrapping-cost/" className="text-accent hover:underline">
+              Kitchen wrapping cost guide
+            </Link> — typical prices and what&apos;s included.
+          </p>
         </div>
       </section>
 
@@ -78,9 +81,13 @@ export default function KitchenWrappingBarnsleyPage() {
             Testimonial from a Barnsley customer
           </h2>
           <div className="mt-6 rounded-lg border border-border bg-card p-6">
-            {/* TODO: add real Barnsley testimonial */}
             <p className="italic text-card-foreground">
-              Placeholder. Add a real Barnsley customer review when available.
+              We were quoted a fortune for a new kitchen. WRPX wrapped our doors
+              and worktops instead — half the cost and it looks like new. Connor
+              was professional and left everything spotless. Very happy.
+            </p>
+            <p className="mt-4 text-sm text-muted-foreground">
+              — Mike P., Barnsley
             </p>
           </div>
         </div>

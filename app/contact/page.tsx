@@ -42,7 +42,7 @@ export default function ContactPage() {
         <div className="container mx-auto max-w-lg">
           <div className="card-float p-6 md:p-8">
             <p className="mb-6 text-sm text-muted">
-              Years in the vinyl and sign wrapping industry ·{" "}
+              {siteConfig.yearsInBusiness}+ years in the vinyl and sign wrapping industry ·{" "}
               {siteConfig.guaranteeYears}-year guarantee · No obligation
             </p>
             <QuoteForm />

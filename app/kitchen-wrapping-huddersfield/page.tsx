@@ -33,8 +33,7 @@ export default function KitchenWrappingHuddersfieldPage() {
             Why local matters
           </h2>
           <p className="mt-4 text-muted leading-relaxed">
-            We work from South Yorkshire. Huddersfield is on our patch. Same
-            team from start to finish — survey, prep, wrap, reinstall.
+            Huddersfield is within our coverage — we&apos;re South Yorkshire based and regularly in the area. Same team from survey to finish: no subcontractors, no handover to another crew. You get one point of contact and a guarantee that&apos;s honoured locally.
           </p>
         </div>
       </section>
@@ -49,6 +48,11 @@ export default function KitchenWrappingHuddersfieldPage() {
             <li>Worktop wrapping — marble, stone, wood-effect</li>
             <li>Furniture and wardrobe wrap</li>
           </ul>
+          <p className="mt-4 text-muted">
+            <Link href="/kitchen-wrapping-cost/" className="text-accent hover:underline">
+              Kitchen wrapping cost guide
+            </Link> — typical prices and what&apos;s included.
+          </p>
         </div>
       </section>
 

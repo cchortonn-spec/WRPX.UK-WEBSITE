@@ -10,6 +10,11 @@ export function getLocalBusinessSchema() {
     url: siteConfig.domain,
     telephone: siteConfig.phoneE164,
     email: siteConfig.email,
+    priceRange: "££",
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Kitchen Wrapping Services",
+    },
     areaServed: siteConfig.areaServed,
     address: {
       "@type": "PostalAddress",
@@ -27,5 +32,10 @@ export function getServiceSchema(serviceName: string, description: string) {
     provider: { "@type": "LocalBusiness", name: siteConfig.name },
     areaServed: "South Yorkshire",
     description,
+    offers: {
+      "@type": "Offer",
+      availability: "https://schema.org/InStock",
+      areaServed: "South Yorkshire",
+    },
   };
 }

@@ -17,4 +17,10 @@ export const testimonials = [
     quote:
       "Really pleased with the result. Connor explained everything clearly and the kitchen still looks great a year on. No peeling, no fading. Definitely worth getting a quote.",
   },
+  {
+    name: "Mike P.",
+    area: "Barnsley",
+    quote:
+      "We were quoted a fortune for a new kitchen. WRPX wrapped our doors and worktops instead — half the cost and it looks like new. Connor was professional and left everything spotless. Very happy.",
+  },
 ] as const;

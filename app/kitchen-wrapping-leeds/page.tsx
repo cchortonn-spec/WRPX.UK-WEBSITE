@@ -35,9 +35,7 @@ export default function KitchenWrappingLeedsPage() {
             Why local matters
           </h2>
           <p className="mt-4 text-muted leading-relaxed">
-            We&apos;re South Yorkshire based. Leeds jobs are handled by our
-            team — no national franchise, no subcontractors from another
-            region.
+            Leeds is on our South Yorkshire and surrounding areas patch. You get the same local service as in Sheffield or Doncaster: same team, same guarantee, no national franchise markup. We respond quickly and book surveys at times that suit you.
           </p>
         </div>
       </section>
@@ -52,6 +50,11 @@ export default function KitchenWrappingLeedsPage() {
             <li>Worktop wrapping — marble, stone, wood-effect</li>
             <li>Furniture and wardrobe wrap</li>
           </ul>
+          <p className="mt-4 text-muted">
+            <Link href="/kitchen-wrapping-cost/" className="text-accent hover:underline">
+              Kitchen wrapping cost guide
+            </Link> — typical prices and what&apos;s included.
+          </p>
         </div>
       </section>
 

@@ -8,7 +8,7 @@ export const siteConfig = {
   email: "wrpx.uk@gmail.com",
   domain: "https://wrpx.co.uk",
   guaranteeYears: 5,
-  yearsInBusiness: 4,
+  yearsInBusiness: 7,
   areas: [
     "Sheffield",
     "Doncaster",

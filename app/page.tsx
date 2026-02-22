@@ -225,7 +225,11 @@ export default function HomePage() {
               Ready to transform your kitchen?
             </h2>
             <p className="mt-4 text-muted">
-              Years in the vinyl and sign wrapping industry. Free survey, no obligation.
+              {siteConfig.yearsInBusiness}+ years in the vinyl and sign wrapping industry. Free survey, no obligation.{" "}
+              <Link href="/kitchen-wrapping-cost/" className="text-accent hover:underline">
+                See our kitchen wrapping cost guide
+              </Link>
+              .
             </p>
             <Link href="/contact/" className="btn-primary mt-10 inline-block">
               Book Your Free Survey

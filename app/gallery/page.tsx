@@ -13,14 +13,14 @@ export const metadata: Metadata = {
 const CITIES = siteConfig.areas;
 
 const galleryItems = [
-  { src: "/images/gallery/IMG_8145.webp", alt: "Light grey matt kitchen wrap South Yorkshire — after", caption: "Light grey finish, South Yorkshire" },
-  { src: "/images/gallery/81OfA32zNwL.jpg", alt: "Kitchen cabinet vinyl wrap — after", caption: "Cabinet wrap, 1–2 days" },
-  { src: "/images/gallery/Y923a9kw8pCgp9gZUeYFaH.jpg", alt: "Wrapped kitchen doors and worktop South Yorkshire — after", caption: "Doors and worktop, full wrap" },
-  { src: "/images/gallery/feature-vinyl-kitchen-door-wrapping-costs.jpeg", alt: "Vinyl kitchen door wrapping — after", caption: "Door wrap project" },
-  { src: "/images/gallery/312337366_139426672169451_7140905813060754894_n-683x1024.jpg", alt: "Kitchen wrap before and after South Yorkshire", caption: "Before and after" },
-  { src: "/images/gallery/e2.jpg", alt: "Wrapped kitchen South Yorkshire — after", caption: "Full kitchen wrap" },
-  { src: "/images/gallery/IMG-20230204-WA0011.webp", alt: "Kitchen vinyl wrap project — after", caption: "Vinyl wrap, South Yorkshire" },
-  { src: "/images/gallery/Kitchen_Wrapping_Vinyl_Inspiration_700x.progressive.webp", alt: "Kitchen wrapping vinyl inspiration South Yorkshire", caption: "Vinyl wrap inspiration" },
+  { src: "/images/gallery/IMG_8145.webp", alt: "Light grey matt vinyl kitchen wrap, Sheffield — after", caption: "Light grey matt finish, Sheffield", projectLine: "Matt grey vinyl, South Yorkshire, full kitchen, 2 days" },
+  { src: "/images/gallery/81OfA32zNwL.jpg", alt: "Kitchen cabinet vinyl wrap South Yorkshire — after", caption: "Cabinet wrap, South Yorkshire", projectLine: "Cabinet doors and frames, 1–2 days" },
+  { src: "/images/gallery/Y923a9kw8pCgp9gZUeYFaH.jpg", alt: "Wrapped kitchen doors and worktop, South Yorkshire — after", caption: "Doors and worktop, full wrap", projectLine: "Doors + worktop wrap, marble-effect worktop, 2 days" },
+  { src: "/images/gallery/feature-vinyl-kitchen-door-wrapping-costs.jpeg", alt: "Vinyl kitchen door wrapping South Yorkshire — after", caption: "Door wrap project", projectLine: "Door wrap, branded film, South Yorkshire" },
+  { src: "/images/gallery/312337366_139426672169451_7140905813060754894_n-683x1024.jpg", alt: "Kitchen wrap before and after South Yorkshire", caption: "Before and after", projectLine: "Full kitchen transformation, South Yorkshire" },
+  { src: "/images/gallery/e2.jpg", alt: "Wrapped kitchen South Yorkshire — after", caption: "Full kitchen wrap", projectLine: "Full kitchen wrap, multiple doors, 2–3 days" },
+  { src: "/images/gallery/IMG-20230204-WA0011.webp", alt: "Kitchen vinyl wrap project South Yorkshire — after", caption: "Vinyl wrap, South Yorkshire", projectLine: "Vinyl wrap project, South Yorkshire" },
+  { src: "/images/gallery/Kitchen_Wrapping_Vinyl_Inspiration_700x.progressive.webp", alt: "Kitchen wrapping vinyl inspiration — finishes and colours South Yorkshire", caption: "Vinyl wrap inspiration", projectLine: "Finishes and colour options" },
 ];
 
 export default function GalleryPage() {
@@ -32,7 +32,11 @@ export default function GalleryPage() {
             Kitchen Wrap Gallery — Before & After Projects
           </h1>
           <p className="mt-4 text-muted">
-            Filter by city below. Every image has a descriptive caption.
+            Real kitchen wrapping projects across Sheffield, Doncaster, Barnsley, Rotherham, Leeds and beyond. Every image has descriptive alt text and a short project line.{" "}
+            <Link href="/kitchen-wrapping-cost/" className="text-accent hover:underline">
+              See our cost guide
+            </Link>{" "}
+            for typical prices.
           </p>
         </div>
       </section>
@@ -69,7 +73,10 @@ export default function GalleryPage() {
                   />
                 </div>
                 <figcaption className="border-t border-border bg-card p-4 text-sm text-muted">
-                  {item.caption}
+                  <span className="font-medium text-foreground">{item.caption}</span>
+                  {item.projectLine && (
+                    <span className="mt-1 block text-muted">{item.projectLine}</span>
+                  )}
                 </figcaption>
               </figure>
             ))}
@@ -92,7 +99,10 @@ export default function GalleryPage() {
                   />
                 </div>
                 <figcaption className="border-t border-border bg-card p-4 text-sm text-muted">
-                  {item.caption}
+                  <span className="font-medium text-foreground">{item.caption}</span>
+                  {item.projectLine && (
+                    <span className="mt-1 block text-muted">{item.projectLine}</span>
+                  )}
                 </figcaption>
               </figure>
             ))}

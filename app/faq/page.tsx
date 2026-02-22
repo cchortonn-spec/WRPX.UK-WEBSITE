@@ -40,7 +40,15 @@ export default function FaqPage() {
             Kitchen Wrapping FAQ
           </h1>
           <p className="mt-4 text-muted">
-            Common questions answered. Can&apos;t find what you need?{" "}
+            Common questions answered. See also our{" "}
+            <Link href="/kitchen-wrapping-cost/" className="text-accent hover:underline">
+              kitchen wrapping cost guide
+            </Link>
+            {" "}and our{" "}
+            <Link href="/blog/" className="text-accent hover:underline">
+              blog
+            </Link>
+            {" "}(cost guide, vs new kitchen, vs painting, care tips). Can&apos;t find what you need?{" "}
             <Link href="/contact/" className="text-accent hover:underline">
               Get in touch
             </Link>

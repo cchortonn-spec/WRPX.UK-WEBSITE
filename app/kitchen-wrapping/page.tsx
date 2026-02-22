@@ -5,7 +5,7 @@ import { siteConfig } from "@/lib/site-config";
 import { getServiceSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "Kitchen Wrapping Service | Doors, Frames & Worktops Wrapped",
+  title: "Kitchen Wrapping Service South Yorkshire | Doors, Frames & Worktops",
   description:
     "Full kitchen wrap service covering doors, drawer fronts, carcass faces, plinths, cornice and worktops. Installed in 1–3 days. South Yorkshire based.",
   alternates: { canonical: "https://wrpx.co.uk/kitchen-wrapping/" },
@@ -49,8 +49,11 @@ export default function KitchenWrappingPage() {
             <p className="mt-4 text-muted leading-relaxed">
               Every surface: doors, drawer fronts, carcass faces, end panels,
               plinths, cornice and pelmet. We use branded films such as 3M and
-              CoverStyl for colour retention and durability. Film is applied with
-              trade-level surface preparation so adhesion and finish last.
+              CoverStyl for colour retention and durability. Finishes include
+              matt, gloss, woodgrain, marble, concrete and stone effect — so you
+              can match the look you want (e.g. grey matt kitchen wrap, oak effect,
+              white marble). Film is applied with trade-level surface preparation
+              so adhesion and finish last.
             </p>
           </div>
 
@@ -103,6 +106,28 @@ export default function KitchenWrappingPage() {
               {siteConfig.guaranteeYears}-year guarantee on material defects,
               colour and adhesion. Named on the work. What voids it: customer
               damage, improper cleaning or modifications.
+            </p>
+          </div>
+
+          <div className="card-float p-8">
+            <h2 className="text-xl font-semibold text-foreground">
+              Kitchen wrapping across South Yorkshire
+            </h2>
+            <p className="mt-4 text-muted leading-relaxed">
+              We cover Sheffield, Doncaster, Barnsley, Rotherham, Leeds,
+              Huddersfield and Chesterfield. For typical prices and what&apos;s included, see our{" "}
+              <Link href="/kitchen-wrapping-cost/" className="text-accent hover:underline">
+                kitchen wrapping cost guide
+              </Link>
+              . Same process everywhere: free survey, fixed quote, same team from start to finish.{" "}
+              <Link href="/kitchen-wrapping-sheffield/" className="text-accent hover:underline">
+                Kitchen wrapping Sheffield
+              </Link>{" "}
+              and the rest of South Yorkshire —{" "}
+              <Link href="/contact/" className="text-accent hover:underline">
+                get in touch
+              </Link>{" "}
+              for a free quote.
             </p>
           </div>
 
