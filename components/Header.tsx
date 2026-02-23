@@ -13,7 +13,7 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80">
       <div className="container mx-auto flex min-h-20 max-w-6xl items-center justify-between gap-4 px-4 py-3 md:min-h-28">
-        <Link href="/" className="flex items-center">
+        <Link href="/" className="logo-link flex items-center transition-colors duration-200 hover:text-accent-pink active:text-accent-pink">
           <Image
             src="/logo.png"
             alt="WRPX"
@@ -41,7 +41,7 @@ export function Header() {
         <button
           type="button"
           onClick={() => setMobileOpen(!mobileOpen)}
-          className="flex flex-col gap-1.5 rounded p-2 text-foreground lg:hidden"
+          className="flex flex-col gap-1.5 rounded p-2 text-foreground transition-colors duration-200 hover:text-accent-pink active:text-accent-pink lg:hidden"
           aria-expanded={mobileOpen}
           aria-label="Toggle menu"
         >

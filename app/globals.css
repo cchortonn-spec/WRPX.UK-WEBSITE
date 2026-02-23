@@ -95,6 +95,13 @@ body::before {
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(223, 21, 145, 0.08);
 }
 
+/* Logo turns pink on hover (desktop) and tap/click (mobile) */
+.logo-link:hover img,
+.logo-link:active img {
+  filter: invert(28%) sepia(98%) saturate(5000%) hue-rotate(310deg) brightness(0.9);
+  transition: filter 0.2s ease;
+}
+
 /* Subtle pink on mailto/tel hover */
 a[href^="mailto"]:hover,
 a[href^="tel"]:hover {
