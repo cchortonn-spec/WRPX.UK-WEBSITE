@@ -5,8 +5,8 @@ import { siteConfig } from "@/lib/site-config";
 export const metadata: Metadata = {
   title: "Kitchen Wrapping Cost South Yorkshire | Honest Pricing Guide",
   description:
-    "How much does kitchen wrapping cost in South Yorkshire? Real pricing from a local specialist — per door, full kitchen, worktops. Free quote, no obligation.",
-  alternates: { canonical: "https://wrpx.co.uk/kitchen-wrapping-cost/" },
+    "Kitchen wrapping cost South Yorkshire — per door, full kitchen, worktops. Typical ranges and what's included. Free survey, fixed quote.",
+  alternates: { canonical: "https://www.wrpx.co.uk/kitchen-wrapping-cost/" },
 };
 
 export default function KitchenWrappingCostPage() {

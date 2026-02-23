@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { siteConfig } from "@/lib/site-config";
+import { BlogAuthor } from "@/components/BlogAuthor";
 
 export const metadata: Metadata = {
   title: "Kitchen Wrapping vs New Kitchen — Is It Worth It? | South Yorkshire",
   description:
-    "When kitchen wrapping makes sense and when to replace. Cost, time and durability compared so you can decide. South Yorkshire specialist.",
-  alternates: { canonical: "https://wrpx.co.uk/blog/kitchen-wrapping-vs-new-kitchen/" },
+    "Kitchen wrapping vs new kitchen — cost, time and durability compared. When to wrap and when to replace. South Yorkshire specialist.",
+  alternates: { canonical: "https://www.wrpx.co.uk/blog/kitchen-wrapping-vs-new-kitchen/" },
 };
 
 export default function BlogVsNewKitchenPage() {
@@ -23,6 +25,16 @@ export default function BlogVsNewKitchenPage() {
           <p className="mt-2 text-muted">
             Should you wrap your existing kitchen or replace it? We compare cost, time, durability and when each option makes sense.
           </p>
+          <p className="mt-2 text-xs text-muted">Updated February 2026</p>
+          <div className="mt-8 relative aspect-video w-full max-w-2xl overflow-hidden rounded-lg border border-border">
+            <Image
+              src="/images/gallery/IMG_8145.webp"
+              alt="Wrapped kitchen South Yorkshire"
+              fill
+              className="object-cover"
+              sizes="(max-width: 672px) 100vw, 672px"
+            />
+          </div>
 
           <div className="prose prose-invert mt-10 max-w-none prose-p:text-muted prose-li:text-muted prose-headings:text-foreground">
             <h2>Cost comparison</h2>
@@ -50,6 +62,7 @@ export default function BlogVsNewKitchenPage() {
             </p>
           </div>
 
+          <BlogAuthor />
           <p className="mt-12">
             <Link href="/contact/" className="btn-primary inline-block">
               Get a free survey

@@ -2,12 +2,15 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { siteConfig } from "@/lib/site-config";
+import { locationPageData } from "@/lib/location-pages";
+
+const data = locationPageData.Doncaster;
 
 export const metadata: Metadata = {
   title: "Kitchen Wrapping Doncaster | Local Specialist, Free Quote",
   description:
-    "Professional kitchen wrapping in Doncaster. Doors, worktops and frames wrapped in 1–3 days. Genuine local service, not a national franchise. Free quote.",
-  alternates: { canonical: "https://wrpx.co.uk/kitchen-wrapping-doncaster/" },
+    "Kitchen wrapping in Doncaster — Bessacarr, Balby, Tickhill, Mexborough and across DN postcodes. Doors and worktops in 1–3 days. Free quote.",
+  alternates: { canonical: "https://www.wrpx.co.uk/kitchen-wrapping-doncaster/" },
 };
 
 export default function KitchenWrappingDoncasterPage() {
@@ -19,12 +22,7 @@ export default function KitchenWrappingDoncasterPage() {
             Kitchen Wrapping Doncaster — Local Specialist
           </h1>
           <p className="mt-4 text-muted leading-relaxed">
-            Doncaster and the surrounding villages are part of our core South
-            Yorkshire coverage. We&apos;ve completed jobs across DN postcodes —
-            from town centre to outlying areas. Whether your kitchen is
-            dated melamine or solid wood that just needs a new look, we give
-            you an honest assessment and a fixed process: survey, prep, wrap,
-            reinstall.
+            Doncaster and the surrounding villages — from Bessacarr and Balby to Tickhill, Mexborough and Edlington — are part of our core South Yorkshire coverage. We&apos;ve completed jobs across DN postcodes. Whether your kitchen is dated melamine or solid wood that just needs a new look, we give you an honest assessment and a fixed process: survey, prep, wrap, reinstall.
           </p>
         </div>
       </section>
@@ -35,7 +33,7 @@ export default function KitchenWrappingDoncasterPage() {
             Why local matters
           </h2>
           <p className="mt-4 text-muted leading-relaxed">
-            DN postcode coverage without a national franchise call-out. We&apos;re close enough to turn up when we say we will — no travel cost baked into a generic national rate. You get a named {siteConfig.guaranteeYears}-year guarantee and a direct contact if you need a follow-up.
+            We cover Doncaster and the DN postcodes without a national franchise call-out. Same person from survey to finish — no handover to another crew. We&apos;re close enough to turn up when we say we will, and you get a named {siteConfig.guaranteeYears}-year guarantee and a direct contact if you need a follow-up. Our reputation is in the area; we don&apos;t disappear after the job.
           </p>
         </div>
       </section>
@@ -43,6 +41,12 @@ export default function KitchenWrappingDoncasterPage() {
       <section className="border-y border-border bg-card py-12">
         <div className="container mx-auto max-w-3xl px-4">
           <h2 className="text-xl font-semibold text-foreground">
+            Finishes available in Doncaster
+          </h2>
+          <p className="mt-4 text-muted leading-relaxed">
+            Matt, gloss, woodgrain (oak, walnut), marble, concrete and stone effect. We&apos;ll bring samples to the survey so you can choose in your own light.
+          </p>
+          <h2 className="mt-8 text-xl font-semibold text-foreground">
             Services available in Doncaster
           </h2>
           <ul className="mt-4 list-inside list-disc space-y-2 text-muted">
@@ -65,7 +69,7 @@ export default function KitchenWrappingDoncasterPage() {
           </h2>
           <div className="mt-6 relative aspect-video overflow-hidden rounded-lg border border-border">
             <Image
-              src="/images/gallery/81OfA32zNwL.jpg"
+              src="/images/gallery/kitchen-cabinet-wrap-south-yorkshire.jpg"
               alt="Kitchen wrap Doncaster — recent project"
               fill
               className="object-cover"
@@ -96,12 +100,13 @@ export default function KitchenWrappingDoncasterPage() {
       <section className="py-12">
         <div className="container mx-auto max-w-3xl px-4">
           <h2 className="text-xl font-semibold text-foreground">
-            Coverage — Doncaster postcodes
+            Coverage — Doncaster and surrounding postcodes
           </h2>
           <p className="mt-4 text-muted">
-            We cover Doncaster and the surrounding area. Postcode prefixes
-            include DN1–DN12 and nearby. Get in touch with your postcode to
-            confirm we cover you.
+            We cover Doncaster and the surrounding area. Postcode prefixes include {data.postcodes}. If you&apos;re just outside, get in touch — we may still cover you.
+          </p>
+          <p className="mt-4 text-muted">
+            {data.priceLine}
           </p>
         </div>
       </section>

@@ -2,12 +2,17 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { siteConfig } from "@/lib/site-config";
+import { locationPageData } from "@/lib/location-pages";
+import { testimonials } from "@/lib/testimonials";
+
+const data = locationPageData.Leeds;
+const testimonial = testimonials.find((t) => t.area === "Leeds")!;
 
 export const metadata: Metadata = {
   title: "Kitchen Wrapping Leeds | Local Specialist, Free Quote",
   description:
-    "Professional kitchen wrapping in Leeds. Doors, worktops and frames wrapped in 1–3 days. Genuine local service, not a national franchise. Free quote.",
-  alternates: { canonical: "https://wrpx.co.uk/kitchen-wrapping-leeds/" },
+    "Kitchen wrapping in Leeds — Headingley, Roundhay, Horsforth, Pudsey and LS1–LS29. Doors and worktops in 1–3 days. Free quote.",
+  alternates: { canonical: "https://www.wrpx.co.uk/kitchen-wrapping-leeds/" },
 };
 
 export default function KitchenWrappingLeedsPage() {
@@ -19,12 +24,7 @@ export default function KitchenWrappingLeedsPage() {
             Kitchen Wrapping Leeds — Local Specialist
           </h1>
           <p className="mt-4 text-muted leading-relaxed">
-            Leeds is on our South Yorkshire and surrounding areas patch. We
-            cover the city and nearby postcodes. Same offer as everywhere:
-            free survey, honest advice, trade-level prep and a named{" "}
-            {siteConfig.guaranteeYears}-year guarantee. If your kitchen is
-            suitable for wrapping, we&apos;ll give you a fixed quote and a
-            clear process.
+            Leeds — from Headingley and Roundhay to Horsforth, Pudsey, Morley and across LS postcodes — is on our South Yorkshire and surrounding areas patch. Same offer as everywhere: free survey, honest advice, trade-level prep and a named {siteConfig.guaranteeYears}-year guarantee. If your kitchen is suitable for wrapping, we&apos;ll give you a fixed quote and a clear process.
           </p>
         </div>
       </section>
@@ -35,7 +35,7 @@ export default function KitchenWrappingLeedsPage() {
             Why local matters
           </h2>
           <p className="mt-4 text-muted leading-relaxed">
-            Leeds is on our South Yorkshire and surrounding areas patch. You get the same local service as in Sheffield or Doncaster: same team, same guarantee, no national franchise markup. We respond quickly and book surveys at times that suit you.
+            You get the same local service as in Sheffield or Doncaster: same team, same guarantee, no national franchise markup. We respond quickly and book surveys at times that suit you. Same person from survey to finish — our reputation is in the region and we don&apos;t disappear after the job.
           </p>
         </div>
       </section>
@@ -43,6 +43,12 @@ export default function KitchenWrappingLeedsPage() {
       <section className="border-y border-border bg-card py-12">
         <div className="container mx-auto max-w-3xl px-4">
           <h2 className="text-xl font-semibold text-foreground">
+            Finishes available in Leeds
+          </h2>
+          <p className="mt-4 text-muted leading-relaxed">
+            Matt, gloss, woodgrain (oak, walnut), marble, concrete and stone effect. We&apos;ll bring samples to the survey so you can choose in your own light.
+          </p>
+          <h2 className="mt-8 text-xl font-semibold text-foreground">
             Services available in Leeds
           </h2>
           <ul className="mt-4 list-inside list-disc space-y-2 text-muted">
@@ -65,7 +71,7 @@ export default function KitchenWrappingLeedsPage() {
           </h2>
           <div className="mt-6 relative aspect-video overflow-hidden rounded-lg border border-border">
             <Image
-              src="/images/gallery/e2.jpg"
+              src="/images/gallery/kitchen-wrap-full-kitchen-south-yorkshire.jpg"
               alt="Kitchen wrap Leeds — recent project"
               fill
               className="object-cover"
@@ -78,11 +84,29 @@ export default function KitchenWrappingLeedsPage() {
       <section className="border-y border-border bg-card py-12">
         <div className="container mx-auto max-w-3xl px-4">
           <h2 className="text-xl font-semibold text-foreground">
-            Coverage — Leeds postcodes
+            Testimonial from a Leeds customer
+          </h2>
+          <div className="mt-6 rounded-lg border border-border bg-card p-6">
+            <p className="italic text-card-foreground">
+              {testimonial.quote}
+            </p>
+            <p className="mt-4 text-sm text-muted-foreground">
+              — {testimonial.name}, {testimonial.area}
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-12">
+        <div className="container mx-auto max-w-3xl px-4">
+          <h2 className="text-xl font-semibold text-foreground">
+            Coverage — Leeds and surrounding postcodes
           </h2>
           <p className="mt-4 text-muted">
-            We cover Leeds and the surrounding area. Postcode prefixes include
-            LS1–LS29 and nearby. Send us your postcode to confirm we cover you.
+            We cover Leeds and the surrounding area. Postcode prefixes include {data.postcodes}. If you&apos;re just outside, get in touch — we may still cover you.
+          </p>
+          <p className="mt-4 text-muted">
+            {data.priceLine}
           </p>
         </div>
       </section>

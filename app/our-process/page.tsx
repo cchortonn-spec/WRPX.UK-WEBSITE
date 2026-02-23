@@ -5,8 +5,8 @@ import { siteConfig } from "@/lib/site-config";
 export const metadata: Metadata = {
   title: "Kitchen Wrapping Process & Guarantee | How We Work",
   description:
-    "Surface prep, off-site door wrapping, in-situ frame work, post-install inspection. See exactly how we work and what our guarantee covers.",
-  alternates: { canonical: "https://wrpx.co.uk/our-process/" },
+    "How we wrap your kitchen: free survey, surface prep, off-site doors, in-situ frames. Our process and 5-year guarantee. South Yorkshire.",
+  alternates: { canonical: "https://www.wrpx.co.uk/our-process/" },
 };
 
 export default function OurProcessPage() {

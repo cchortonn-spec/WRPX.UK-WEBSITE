@@ -6,7 +6,7 @@ export const siteConfig = {
   phone: "07398395417",
   phoneE164: "+447398395417",
   email: "wrpx.uk@gmail.com",
-  domain: "https://wrpx.co.uk",
+  domain: "https://www.wrpx.co.uk",
   guaranteeYears: 5,
   yearsInBusiness: 7,
   areas: [

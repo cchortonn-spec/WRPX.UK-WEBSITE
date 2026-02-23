@@ -7,8 +7,8 @@ import { getServiceSchema } from "@/lib/schema";
 export const metadata: Metadata = {
   title: "Worktop Wrapping South Yorkshire | Stone, Marble & Wood Effect",
   description:
-    "Wrap your worktops in marble, stone or wood-effect vinyl for a fraction of replacement cost. Heat and scratch resistant. South Yorkshire specialist.",
-  alternates: { canonical: "https://wrpx.co.uk/worktop-wrapping/" },
+    "Worktop wrapping South Yorkshire — marble, stone and wood-effect vinyl. Heat and scratch resistant. A fraction of replacement cost. Free quote.",
+  alternates: { canonical: "https://www.wrpx.co.uk/worktop-wrapping/" },
 };
 
 export default function WorktopWrappingPage() {
@@ -25,7 +25,7 @@ export default function WorktopWrappingPage() {
       />
       <section className="relative h-[40vh] min-h-[280px] w-full overflow-hidden">
         <Image
-          src="/images/gallery/Y923a9kw8pCgp9gZUeYFaH.jpg"
+          src="/images/gallery/wrapped-kitchen-doors-worktop-south-yorkshire.jpg"
           alt="Worktop wrapping South Yorkshire — transformed countertops"
           fill
           className="object-cover"

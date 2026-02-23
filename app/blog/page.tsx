@@ -5,8 +5,8 @@ import { blogPosts } from "@/lib/blog-posts";
 export const metadata: Metadata = {
   title: "Blog | Kitchen Wrapping Tips & Guides — South Yorkshire",
   description:
-    "Guides on kitchen wrapping cost, vs new kitchen, vs painting, care tips and finish options. South Yorkshire specialist.",
-  alternates: { canonical: "https://wrpx.co.uk/blog/" },
+    "Kitchen wrapping blog — cost guides, wrap vs new kitchen, vs painting, care tips and finishes. South Yorkshire specialist.",
+  alternates: { canonical: "https://www.wrpx.co.uk/blog/" },
 };
 
 export default function BlogPage() {

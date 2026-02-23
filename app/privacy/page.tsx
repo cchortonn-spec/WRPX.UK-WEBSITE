@@ -3,8 +3,9 @@ import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
-  description: "Privacy policy for WRPX kitchen wrapping.",
-  alternates: { canonical: "https://wrpx.co.uk/privacy/" },
+  description:
+    "WRPX privacy policy — how we use your data when you contact us or book a kitchen wrapping job. We do not sell or share your data.",
+  alternates: { canonical: "https://www.wrpx.co.uk/privacy/" },
 };
 
 export default function PrivacyPage() {

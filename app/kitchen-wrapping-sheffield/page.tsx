@@ -6,8 +6,8 @@ import { siteConfig } from "@/lib/site-config";
 export const metadata: Metadata = {
   title: "Kitchen Wrapping Sheffield | Local Specialist, Free Quote",
   description:
-    "Professional kitchen wrapping in Sheffield. Doors, worktops and frames wrapped in 1–3 days. Genuine local service, not a national franchise. Free quote.",
-  alternates: { canonical: "https://wrpx.co.uk/kitchen-wrapping-sheffield/" },
+    "Kitchen wrapping Sheffield — Hillsborough, Ecclesfield, S1–S36. Doors and worktops in 1–3 days. Local specialist, free quote.",
+  alternates: { canonical: "https://www.wrpx.co.uk/kitchen-wrapping-sheffield/" },
 };
 
 export default function KitchenWrappingSheffieldPage() {

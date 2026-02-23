@@ -31,13 +31,6 @@ export function Header() {
           {siteConfig.phone}
         </a>
 
-        <Link
-          href="/contact/"
-          className="btn-primary hidden shrink-0 sm:inline-block"
-        >
-          Get a Free Quote
-        </Link>
-
         <button
           type="button"
           onClick={() => setMobileOpen(!mobileOpen)}
@@ -98,6 +91,13 @@ export function Header() {
             )}
           </div>
         </nav>
+
+        <Link
+          href="/contact/"
+          className="btn-primary hidden shrink-0 sm:inline-block"
+        >
+          Get a Free Quote
+        </Link>
       </div>
 
       {mobileOpen && (

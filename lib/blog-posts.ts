@@ -37,6 +37,13 @@ export const blogPosts = [
       "Matt, gloss, woodgrain, marble and more. A guide to kitchen wrap finishes and how to choose.",
     date: "2025-02-16",
   },
+  {
+    slug: "kitchen-wrapping-ideas-2026",
+    title: "Kitchen Wrapping Ideas for 2026",
+    description:
+      "Trends and ideas for refreshing your kitchen with vinyl wrap in 2026 — colours, finishes and what South Yorkshire homeowners are choosing.",
+    date: "2026-02-20",
+  },
 ] as const;
 
 export type BlogSlug = (typeof blogPosts)[number]["slug"];

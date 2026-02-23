@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { siteConfig } from "@/lib/site-config";
+import { BlogAuthor } from "@/components/BlogAuthor";
 
 export const metadata: Metadata = {
   title: "Kitchen Wrapping vs Painting — Which Is Better? | South Yorkshire",
   description:
-    "Compare vinyl wrapping and painting for kitchen cabinets. Durability, finish and cost for South Yorkshire homeowners.",
-  alternates: { canonical: "https://wrpx.co.uk/blog/kitchen-wrapping-vs-painting/" },
+    "Kitchen wrapping vs painting — durability, finish and cost compared. Which is better for your kitchen? South Yorkshire specialist.",
+  alternates: { canonical: "https://www.wrpx.co.uk/blog/kitchen-wrapping-vs-painting/" },
 };
 
 export default function BlogVsPaintingPage() {
@@ -23,6 +25,16 @@ export default function BlogVsPaintingPage() {
           <p className="mt-2 text-muted">
             Both can refresh a tired kitchen. Here&apos;s how vinyl wrapping and painting compare on durability, finish and cost.
           </p>
+          <p className="mt-2 text-xs text-muted">Updated February 2026</p>
+          <div className="mt-8 relative aspect-video w-full max-w-2xl overflow-hidden rounded-lg border border-border">
+            <Image
+              src="/images/gallery/wrapped-kitchen-doors-worktop-south-yorkshire.jpg"
+              alt="Wrapped kitchen doors and worktop South Yorkshire"
+              fill
+              className="object-cover"
+              sizes="(max-width: 672px) 100vw, 672px"
+            />
+          </div>
 
           <div className="prose prose-invert mt-10 max-w-none prose-p:text-muted prose-li:text-muted prose-headings:text-foreground">
             <h2>Durability</h2>
@@ -50,6 +62,7 @@ export default function BlogVsPaintingPage() {
             </p>
           </div>
 
+          <BlogAuthor />
           <p className="mt-12">
             <Link href="/contact/" className="btn-primary inline-block">
               Get a free quote

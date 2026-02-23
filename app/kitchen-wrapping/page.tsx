@@ -3,12 +3,13 @@ import Link from "next/link";
 import Image from "next/image";
 import { siteConfig } from "@/lib/site-config";
 import { getServiceSchema } from "@/lib/schema";
+import { faqItems } from "@/lib/faq-data";
 
 export const metadata: Metadata = {
   title: "Kitchen Wrapping Service South Yorkshire | Doors, Frames & Worktops",
   description:
-    "Full kitchen wrap service covering doors, drawer fronts, carcass faces, plinths, cornice and worktops. Installed in 1–3 days. South Yorkshire based.",
-  alternates: { canonical: "https://wrpx.co.uk/kitchen-wrapping/" },
+    "Kitchen wrapping South Yorkshire — doors, worktops, frames in 1–3 days. From £850 full kitchen. Free survey, fixed quote. Sheffield, Leeds, Doncaster & more.",
+  alternates: { canonical: "https://www.wrpx.co.uk/kitchen-wrapping/" },
 };
 
 export default function KitchenWrappingPage() {
@@ -25,7 +26,7 @@ export default function KitchenWrappingPage() {
       />
       <section className="relative h-[50vh] min-h-[320px] w-full overflow-hidden">
         <Image
-          src="/images/gallery/81OfA32zNwL.jpg"
+          src="/images/gallery/kitchen-cabinet-wrap-south-yorkshire.jpg"
           alt="Kitchen wrapping service South Yorkshire"
           fill
           className="object-cover"
@@ -73,9 +74,100 @@ export default function KitchenWrappingPage() {
               What we can wrap
             </h2>
             <p className="mt-4 text-muted leading-relaxed">
-              Solid wood, melamine, vinyl-wrapped MDF and painted cabinets. We
-              won&apos;t wrap damaged or warped doors, or surfaces that aren&apos;t
-              suitable — we&apos;ll tell you upfront so you don&apos;t waste money.
+              We wrap solid wood, melamine, vinyl-wrapped MDF and painted cabinets. Kitchen islands, larders and tall units — doors, end panels and plinths — are all in scope. We won&apos;t wrap badly damaged or warped doors, surfaces with loose veneer or flaking paint, or materials that don&apos;t hold adhesive properly. If wrapping isn&apos;t the right option we&apos;ll say so at the free survey so you don&apos;t waste money.
+            </p>
+          </div>
+
+          <div className="card-float p-8">
+            <h2 className="text-xl font-semibold text-foreground">
+              Pricing — typical ranges
+            </h2>
+            <p className="mt-4 text-muted leading-relaxed">
+              From around £45 per door; from around £850 for a full kitchen (10–12 doors, frames, plinths); from around £250 for worktop only. Your quote is fixed after a free survey — no obligation. See our{" "}
+              <Link href="/kitchen-wrapping-cost/" className="text-accent hover:underline">
+                kitchen wrapping cost guide
+              </Link>{" "}
+              for a full breakdown and price table.
+            </p>
+          </div>
+
+          <div className="card-float p-8">
+            <h2 className="text-xl font-semibold text-foreground">
+              Finishes — matt, gloss, woodgrain, marble and more
+            </h2>
+            <p className="mt-4 text-muted leading-relaxed">
+              We use branded films (3M, CoverStyl and others) for colour retention and durability. Finishes include matt, gloss, woodgrain (oak, walnut, light oak), marble, concrete and stone effect. We bring samples to the survey so you can choose in your own light. For more ideas see our{" "}
+              <Link href="/blog/vinyl-wrap-kitchen-finishes/" className="text-accent hover:underline">
+                vinyl wrap kitchen finishes guide
+              </Link>
+              .
+            </p>
+          </div>
+
+          <div className="card-float p-8">
+            <h2 className="text-xl font-semibold text-foreground">
+              Before & after
+            </h2>
+            <div className="mt-4 grid gap-4 sm:grid-cols-2">
+              <div className="relative aspect-[4/3] overflow-hidden rounded-lg border border-border">
+                <Image
+                  src="/images/gallery/kitchen-wrap-before-after-south-yorkshire.jpg"
+                  alt="Kitchen wrap before and after — South Yorkshire"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 640px) 100vw, 50vw"
+                />
+              </div>
+              <div className="relative aspect-[4/3] overflow-hidden rounded-lg border border-border">
+                <Image
+                  src="/images/gallery/IMG_8145.webp"
+                  alt="Kitchen after vinyl wrap — South Yorkshire"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 640px) 100vw, 50vw"
+                />
+              </div>
+            </div>
+            <p className="mt-4 text-sm text-muted">
+              <Link href="/gallery/" className="text-accent hover:underline">View full gallery</Link> for more of our work.
+            </p>
+          </div>
+
+          <div className="card-float p-8">
+            <h2 className="text-xl font-semibold text-foreground">
+              Wrap vs new kitchen vs painting
+            </h2>
+            <p className="mt-4 text-muted leading-relaxed">
+              Wrapping gives you a new look at 70–80% less than a replacement, in 1–3 days with no rip-out. It won&apos;t change the layout or carcasses. Painting is cheaper upfront but less durable and harder to keep clean. For a full comparison see our guides:
+            </p>
+            <ul className="mt-4 space-y-2 text-muted">
+              <li>
+                <Link href="/blog/kitchen-wrapping-vs-new-kitchen/" className="text-accent hover:underline">
+                  Kitchen wrapping vs new kitchen
+                </Link>
+              </li>
+              <li>
+                <Link href="/blog/kitchen-wrapping-vs-painting/" className="text-accent hover:underline">
+                  Kitchen wrapping vs painting
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          <div className="card-float p-8">
+            <h2 className="text-xl font-semibold text-foreground">
+              Frequently asked questions
+            </h2>
+            <ul className="mt-4 space-y-4">
+              {faqItems.slice(0, 5).map((item, i) => (
+                <li key={i}>
+                  <p className="font-medium text-foreground">{item.q}</p>
+                  <p className="mt-1 text-sm text-muted">{item.a}</p>
+                </li>
+              ))}
+            </ul>
+            <p className="mt-4 text-muted">
+              <Link href="/faq/" className="text-accent hover:underline">More questions? See our full FAQ</Link>.
             </p>
           </div>
 

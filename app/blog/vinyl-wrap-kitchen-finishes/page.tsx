@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
+import { BlogAuthor } from "@/components/BlogAuthor";
 
 export const metadata: Metadata = {
   title: "Vinyl Wrap Kitchen Finishes — Ideas and Options | South Yorkshire",
   description:
-    "Matt, gloss, woodgrain, marble and more. A guide to kitchen wrap finishes and how to choose. South Yorkshire specialist.",
-  alternates: { canonical: "https://wrpx.co.uk/blog/vinyl-wrap-kitchen-finishes/" },
+    "Vinyl wrap kitchen finishes — matt, gloss, woodgrain, marble and stone. How to choose the right finish. South Yorkshire specialist.",
+  alternates: { canonical: "https://www.wrpx.co.uk/blog/vinyl-wrap-kitchen-finishes/" },
 };
 
 export default function BlogFinishesPage() {
@@ -22,6 +24,16 @@ export default function BlogFinishesPage() {
           <p className="mt-2 text-muted">
             From matt and gloss to woodgrain and marble, here&apos;s a guide to kitchen wrap finishes and how to choose the right one.
           </p>
+          <p className="mt-2 text-xs text-muted">Updated February 2026</p>
+          <div className="mt-8 relative aspect-video w-full max-w-2xl overflow-hidden rounded-lg border border-border">
+            <Image
+              src="/images/gallery/Kitchen_Wrapping_Vinyl_Inspiration_700x.progressive.webp"
+              alt="Kitchen wrapping vinyl finishes and colours"
+              fill
+              className="object-cover"
+              sizes="(max-width: 672px) 100vw, 672px"
+            />
+          </div>
 
           <div className="prose prose-invert mt-10 max-w-none prose-p:text-muted prose-li:text-muted prose-headings:text-foreground">
             <h2>Matt and gloss</h2>
@@ -49,6 +61,7 @@ export default function BlogFinishesPage() {
             </p>
           </div>
 
+          <BlogAuthor />
           <p className="mt-12">
             <Link href="/contact/" className="btn-primary inline-block">
               Get a free quote

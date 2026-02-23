@@ -3,7 +3,7 @@ import { siteConfig } from "./site-config";
 export const faqItems = [
   {
     q: "How much does kitchen wrapping cost?",
-    a: "Costs vary by kitchen size, finish and whether you include worktops. Typical ranges: from around £45 per door, from £850 for a full kitchen (10–12 doors), from £250 for worktop only. We give a fixed quote after a free survey — no obligation. For a full pricing guide see our Kitchen Wrapping Cost page: https://wrpx.co.uk/kitchen-wrapping-cost/",
+    a: "Costs vary by kitchen size, finish and whether you include worktops. Typical ranges: from around £45 per door, from £850 for a full kitchen (10–12 doors), from £250 for worktop only. We give a fixed quote after a free survey — no obligation. For a full pricing guide see our Kitchen Wrapping Cost page: https://www.wrpx.co.uk/kitchen-wrapping-cost/",
   },
   {
     q: "Is kitchen wrapping worth it?",

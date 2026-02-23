@@ -2,12 +2,15 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { siteConfig } from "@/lib/site-config";
+import { locationPageData } from "@/lib/location-pages";
+
+const data = locationPageData.Rotherham;
 
 export const metadata: Metadata = {
   title: "Kitchen Wrapping Rotherham | Local Specialist, Free Quote",
   description:
-    "Professional kitchen wrapping in Rotherham. Doors, worktops and frames wrapped in 1–3 days. Genuine local service, not a national franchise. Free quote.",
-  alternates: { canonical: "https://wrpx.co.uk/kitchen-wrapping-rotherham/" },
+    "Kitchen wrapping in Rotherham — Wickersley, Maltby, Dinnington, S60–S66. Doors and worktops in 1–3 days. Free quote.",
+  alternates: { canonical: "https://www.wrpx.co.uk/kitchen-wrapping-rotherham/" },
 };
 
 export default function KitchenWrappingRotherhamPage() {
@@ -19,11 +22,7 @@ export default function KitchenWrappingRotherhamPage() {
             Kitchen Wrapping Rotherham — Local Specialist
           </h1>
           <p className="mt-4 text-muted leading-relaxed">
-            Rotherham and the surrounding areas are within our South Yorkshire
-            coverage. We&apos;ve wrapped kitchens across Rotherham — from
-            town centre to the outskirts. Same process everywhere: free
-            survey, honest suitability check, then prep and wrap with a named{" "}
-            {siteConfig.guaranteeYears}-year guarantee.
+            Rotherham and the surrounding areas — Wickersley, Maltby, Dinnington, Rawmarsh, Swinton and across S60–S66 — are within our South Yorkshire coverage. We&apos;ve wrapped kitchens from town centre to the outskirts. Same process everywhere: free survey, honest suitability check, then prep and wrap with a named {siteConfig.guaranteeYears}-year guarantee.
           </p>
         </div>
       </section>
@@ -34,7 +33,7 @@ export default function KitchenWrappingRotherhamPage() {
             Why local matters
           </h2>
           <p className="mt-4 text-muted leading-relaxed">
-            We cover S60–S66 and the wider Rotherham area. We&apos;ve built a strong track record of before-and-after results here — and we&apos;re easy to get hold of for follow-up or advice. No national call centre; you deal with the team that did the job.
+            We cover the Rotherham area and have built a strong track record of before-and-after results here. Same person from survey to finish — no national call centre. We&apos;re easy to get hold of for follow-up or advice; you deal with the team that did the job and a guarantee that&apos;s honoured locally.
           </p>
         </div>
       </section>
@@ -42,6 +41,12 @@ export default function KitchenWrappingRotherhamPage() {
       <section className="border-y border-border bg-card py-12">
         <div className="container mx-auto max-w-3xl px-4">
           <h2 className="text-xl font-semibold text-foreground">
+            Finishes available in Rotherham
+          </h2>
+          <p className="mt-4 text-muted leading-relaxed">
+            Matt, gloss, woodgrain (oak, walnut), marble, concrete and stone effect. We&apos;ll bring samples to the survey so you can choose in your own light.
+          </p>
+          <h2 className="mt-8 text-xl font-semibold text-foreground">
             Services available in Rotherham
           </h2>
           <ul className="mt-4 list-inside list-disc space-y-2 text-muted">
@@ -95,12 +100,13 @@ export default function KitchenWrappingRotherhamPage() {
       <section className="py-12">
         <div className="container mx-auto max-w-3xl px-4">
           <h2 className="text-xl font-semibold text-foreground">
-            Coverage — Rotherham postcodes
+            Coverage — Rotherham and surrounding postcodes
           </h2>
           <p className="mt-4 text-muted">
-            We cover Rotherham and the surrounding area. Postcode prefixes
-            include S60, S61, S62, S63, S64, S65, S66 and nearby. Send us your
-            postcode to check we cover you.
+            We cover Rotherham and the surrounding area. Postcode prefixes include {data.postcodes}. If you&apos;re just outside, get in touch — we may still cover you.
+          </p>
+          <p className="mt-4 text-muted">
+            {data.priceLine}
           </p>
         </div>
       </section>

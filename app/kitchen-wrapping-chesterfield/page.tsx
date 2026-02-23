@@ -1,12 +1,18 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { siteConfig } from "@/lib/site-config";
+import { locationPageData } from "@/lib/location-pages";
+import { testimonials } from "@/lib/testimonials";
+
+const data = locationPageData.Chesterfield;
+const testimonial = testimonials.find((t) => t.area === "Chesterfield")!;
 
 export const metadata: Metadata = {
   title: "Kitchen Wrapping Chesterfield | Local Specialist, Free Quote",
   description:
-    "Professional kitchen wrapping in Chesterfield. Doors, worktops and frames wrapped in 1–3 days. Genuine local service, not a national franchise. Free quote.",
-  alternates: { canonical: "https://wrpx.co.uk/kitchen-wrapping-chesterfield/" },
+    "Kitchen wrapping in Chesterfield — Brampton, Newbold, Staveley, S40–S45. Doors and worktops in 1–3 days. Free quote.",
+  alternates: { canonical: "https://www.wrpx.co.uk/kitchen-wrapping-chesterfield/" },
 };
 
 export default function KitchenWrappingChesterfieldPage() {
@@ -18,11 +24,7 @@ export default function KitchenWrappingChesterfieldPage() {
             Kitchen Wrapping Chesterfield — Local Specialist
           </h1>
           <p className="mt-4 text-muted leading-relaxed">
-            We cover Chesterfield and the surrounding area. Good availability
-            and the same standard: free survey, honest advice, trade-level
-            prep, {siteConfig.guaranteeYears}-year guarantee. No national
-            franchise — you deal with a South Yorkshire specialist who turns up
-            when we say we will.
+            Chesterfield and the surrounding area — Brampton, Newbold, Staveley, Hasland, Brimington and across S40–S45 — are on our regular run from South Yorkshire. Good availability and the same standard: free survey, honest advice, trade-level prep, {siteConfig.guaranteeYears}-year guarantee. No national franchise — you deal with a specialist who turns up when we say we will.
           </p>
         </div>
       </section>
@@ -33,7 +35,7 @@ export default function KitchenWrappingChesterfieldPage() {
             Why local matters
           </h2>
           <p className="mt-4 text-muted leading-relaxed">
-            Chesterfield is on our regular run from South Yorkshire. We have capacity and respond quickly — no national franchise delay. You get a direct contact and a fixed quote after a free survey. Same guarantee and same team as everywhere we cover.
+            We have capacity and respond quickly — no national franchise delay. Same person from survey to finish; you get a direct contact and a fixed quote after a free survey. Same guarantee and same team as everywhere we cover. Our reputation is in the area — we don&apos;t disappear after the job.
           </p>
         </div>
       </section>
@@ -41,6 +43,12 @@ export default function KitchenWrappingChesterfieldPage() {
       <section className="border-y border-border bg-card py-12">
         <div className="container mx-auto max-w-3xl px-4">
           <h2 className="text-xl font-semibold text-foreground">
+            Finishes available in Chesterfield
+          </h2>
+          <p className="mt-4 text-muted leading-relaxed">
+            Matt, gloss, woodgrain (oak, walnut), marble, concrete and stone effect. We&apos;ll bring samples to the survey so you can choose in your own light.
+          </p>
+          <h2 className="mt-8 text-xl font-semibold text-foreground">
             Services in Chesterfield
           </h2>
           <ul className="mt-4 list-inside list-disc space-y-2 text-muted">
@@ -59,12 +67,46 @@ export default function KitchenWrappingChesterfieldPage() {
       <section className="py-12">
         <div className="container mx-auto max-w-3xl px-4">
           <h2 className="text-xl font-semibold text-foreground">
-            Coverage — Chesterfield postcodes
+            Recent work in Chesterfield
+          </h2>
+          <div className="mt-6 relative aspect-video overflow-hidden rounded-lg border border-border">
+            <Image
+              src="/images/gallery/wrapped-kitchen-doors-worktop-south-yorkshire.jpg"
+              alt="Kitchen wrap Chesterfield — recent project"
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 672px"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section className="border-y border-border bg-card py-12">
+        <div className="container mx-auto max-w-3xl px-4">
+          <h2 className="text-xl font-semibold text-foreground">
+            Testimonial from a Chesterfield customer
+          </h2>
+          <div className="mt-6 rounded-lg border border-border bg-card p-6">
+            <p className="italic text-card-foreground">
+              {testimonial.quote}
+            </p>
+            <p className="mt-4 text-sm text-muted-foreground">
+              — {testimonial.name}, {testimonial.area}
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-12">
+        <div className="container mx-auto max-w-3xl px-4">
+          <h2 className="text-xl font-semibold text-foreground">
+            Coverage — Chesterfield and surrounding postcodes
           </h2>
           <p className="mt-4 text-muted">
-            We cover Chesterfield and the surrounding area. Postcode prefixes
-            include S40, S41, S42, S43, S44, S45 and nearby. Contact us to
-            confirm we cover you.
+            We cover Chesterfield and the surrounding area. Postcode prefixes include {data.postcodes}. If you&apos;re just outside, get in touch — we may still cover you.
+          </p>
+          <p className="mt-4 text-muted">
+            {data.priceLine}
           </p>
         </div>
       </section>

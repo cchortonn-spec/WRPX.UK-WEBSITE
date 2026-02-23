@@ -11,6 +11,7 @@ export const nav = {
     { label: "Our Process", href: `${base}/our-process/` },
     { label: "FAQ", href: `${base}/faq/` },
     { label: "Blog", href: `${base}/blog/` },
+    { label: "About", href: `${base}/about/` },
     { label: "Contact", href: `${base}/contact/` },
   ] as const,
   locations: siteConfig.areas.map((city) => ({

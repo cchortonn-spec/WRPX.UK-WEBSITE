@@ -6,11 +6,11 @@ import { testimonials } from "@/lib/testimonials";
 
 const galleryImages = [
   { src: "/images/gallery/IMG_8145.webp", alt: "Vinyl wrapped kitchen South Yorkshire — after" },
-  { src: "/images/gallery/81OfA32zNwL.jpg", alt: "Kitchen cabinet wrap South Yorkshire — after" },
-  { src: "/images/gallery/Y923a9kw8pCgp9gZUeYFaH.jpg", alt: "Wrapped kitchen doors and worktop — after" },
+  { src: "/images/gallery/kitchen-cabinet-wrap-south-yorkshire.jpg", alt: "Kitchen cabinet wrap South Yorkshire — after" },
+  { src: "/images/gallery/wrapped-kitchen-doors-worktop-south-yorkshire.jpg", alt: "Wrapped kitchen doors and worktop — after" },
   { src: "/images/gallery/feature-vinyl-kitchen-door-wrapping-costs.jpeg", alt: "Vinyl kitchen wrap project — after" },
-  { src: "/images/gallery/312337366_139426672169451_7140905813060754894_n-683x1024.jpg", alt: "Kitchen wrap before and after South Yorkshire" },
-  { src: "/images/gallery/e2.jpg", alt: "Wrapped kitchen — after" },
+  { src: "/images/gallery/kitchen-wrap-before-after-south-yorkshire.jpg", alt: "Kitchen wrap before and after South Yorkshire" },
+  { src: "/images/gallery/kitchen-wrap-full-kitchen-south-yorkshire.jpg", alt: "Wrapped kitchen — after" },
 ];
 
 export default function HomePage() {
@@ -58,6 +58,21 @@ export default function HomePage() {
             <p className="mt-6 text-muted leading-relaxed">
               We wrap full kitchens — doors, drawer fronts, carcass faces, worktops and splashbacks — in premium vinyl. We also wrap bedroom and bathroom furniture and office units. If a wrap isn&apos;t the right option for your project, we&apos;ll say so. Honest advice, trade-level prep, and a {siteConfig.guaranteeYears}-year guarantee on materials and workmanship.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Trusted brands — vinyl wrap materials */}
+      <section className="border-y border-border bg-muted/30 py-12">
+        <div className="container mx-auto max-w-4xl px-4">
+          <p className="text-center text-sm font-medium text-muted-foreground">
+            We use premium vinyl from trusted brands
+          </p>
+          <div className="mt-6 flex flex-wrap items-center justify-center gap-8 md:gap-12">
+            <span className="text-lg font-semibold text-foreground">3M</span>
+            <span className="text-lg font-semibold text-foreground">CoverStyl</span>
+            <span className="text-lg font-semibold text-foreground">Avery Dennison</span>
+            <span className="text-lg font-semibold text-foreground">Hexis</span>
           </div>
         </div>
       </section>

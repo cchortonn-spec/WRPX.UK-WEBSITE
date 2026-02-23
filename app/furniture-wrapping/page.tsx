@@ -7,8 +7,8 @@ import { getServiceSchema } from "@/lib/schema";
 export const metadata: Metadata = {
   title: "Furniture & Bedroom Wrapping South Yorkshire | Vinyl Wrap Specialist",
   description:
-    "Wardrobes, bedroom units, bathroom vanity units and office furniture wrapped in premium vinyl. South Yorkshire. Free quote, fast turnaround.",
-  alternates: { canonical: "https://wrpx.co.uk/furniture-wrapping/" },
+    "Furniture wrapping South Yorkshire — wardrobes, bedroom and bathroom units, office furniture. Premium vinyl. Free quote, 1–3 day turnaround.",
+  alternates: { canonical: "https://www.wrpx.co.uk/furniture-wrapping/" },
 };
 
 export default function FurnitureWrappingPage() {

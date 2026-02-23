@@ -5,8 +5,8 @@ import { QuoteForm } from "@/components/QuoteForm";
 export const metadata: Metadata = {
   title: "Free Kitchen Wrap Quote | South Yorkshire & Surrounding Areas",
   description:
-    "Get a free, no-obligation kitchen wrapping quote. We cover Sheffield, Doncaster, Barnsley, Rotherham, Leeds, Huddersfield and Chesterfield.",
-  alternates: { canonical: "https://wrpx.co.uk/contact/" },
+    "Free kitchen wrapping quote — no obligation. Sheffield, Doncaster, Barnsley, Rotherham, Leeds, Huddersfield, Chesterfield. Get in touch.",
+  alternates: { canonical: "https://www.wrpx.co.uk/contact/" },
 };
 
 export default function ContactPage() {

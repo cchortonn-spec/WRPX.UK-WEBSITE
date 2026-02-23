@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { siteConfig } from "@/lib/site-config";
+import { BlogAuthor } from "@/components/BlogAuthor";
 
 export const metadata: Metadata = {
   title: "How to Clean a Wrapped Kitchen — Care Guide | South Yorkshire",
   description:
-    "Simple care tips to keep your wrapped kitchen looking new. What to use, what to avoid, and how to protect your guarantee.",
-  alternates: { canonical: "https://wrpx.co.uk/blog/how-to-clean-a-wrapped-kitchen/" },
+    "How to clean a wrapped kitchen — what to use, what to avoid, and how to protect your guarantee. Care guide from South Yorkshire.",
+  alternates: { canonical: "https://www.wrpx.co.uk/blog/how-to-clean-a-wrapped-kitchen/" },
 };
 
 export default function BlogCleanGuidePage() {
@@ -23,6 +25,16 @@ export default function BlogCleanGuidePage() {
           <p className="mt-2 text-muted">
             Keep your wrapped kitchen looking new with simple, daily care. Here&apos;s what to use and what to avoid so your guarantee stays valid.
           </p>
+          <p className="mt-2 text-xs text-muted">Updated February 2026</p>
+          <div className="mt-8 relative aspect-video w-full max-w-2xl overflow-hidden rounded-lg border border-border">
+            <Image
+              src="/images/gallery/kitchen-wrap-full-kitchen-south-yorkshire.jpg"
+              alt="Wrapped kitchen South Yorkshire"
+              fill
+              className="object-cover"
+              sizes="(max-width: 672px) 100vw, 672px"
+            />
+          </div>
 
           <div className="prose prose-invert mt-10 max-w-none prose-p:text-muted prose-li:text-muted prose-headings:text-foreground">
             <h2>Daily cleaning</h2>
@@ -46,6 +58,7 @@ export default function BlogCleanGuidePage() {
             </p>
           </div>
 
+          <BlogAuthor />
           <p className="mt-12">
             <Link href="/contact/" className="btn-primary inline-block">
               Questions? Get in touch

@@ -5,8 +5,8 @@ import { faqItems } from "@/lib/faq-data";
 export const metadata: Metadata = {
   title: "Kitchen Wrapping FAQ | Common Questions Answered",
   description:
-    "How long does it last? Can my doors be wrapped? What's included? Answers to the most common kitchen wrapping questions from a South Yorkshire specialist.",
-  alternates: { canonical: "https://wrpx.co.uk/faq/" },
+    "Kitchen wrapping FAQ — cost, durability, what we wrap, areas we cover. Answers from a South Yorkshire specialist. Free survey, fixed quote.",
+  alternates: { canonical: "https://www.wrpx.co.uk/faq/" },
 };
 
 function FaqSchema() {

@@ -2,12 +2,15 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { siteConfig } from "@/lib/site-config";
+import { locationPageData } from "@/lib/location-pages";
+
+const data = locationPageData.Barnsley;
 
 export const metadata: Metadata = {
   title: "Kitchen Wrapping Barnsley | Local Specialist, Free Quote",
   description:
-    "Professional kitchen wrapping in Barnsley. Doors, worktops and frames wrapped in 1–3 days. Genuine local service, not a national franchise. Free quote.",
-  alternates: { canonical: "https://wrpx.co.uk/kitchen-wrapping-barnsley/" },
+    "Kitchen wrapping in Barnsley — Hoyland, Wombwell, Cudworth, Royston and across S70–S75. Doors and worktops in 1–3 days. Free quote.",
+  alternates: { canonical: "https://www.wrpx.co.uk/kitchen-wrapping-barnsley/" },
 };
 
 export default function KitchenWrappingBarnsleyPage() {
@@ -19,12 +22,7 @@ export default function KitchenWrappingBarnsleyPage() {
             Kitchen Wrapping Barnsley — Local Specialist
           </h1>
           <p className="mt-4 text-muted leading-relaxed">
-            Barnsley is on our regular South Yorkshire run. We cover the town
-            and the surrounding districts — no long-distance call-out, no
-            franchise middleman. You get a direct quote, trade-level prep and
-            a {siteConfig.guaranteeYears}-year guarantee. If your cabinets are
-            suitable for wrapping, we&apos;ll say so; if not, we&apos;ll tell
-            you that too.
+            Barnsley and the surrounding districts — Hoyland, Wombwell, Cudworth, Royston, Penistone and beyond — are on our regular South Yorkshire run. No long-distance call-out, no franchise middleman. You get a direct quote, trade-level prep and a {siteConfig.guaranteeYears}-year guarantee. If your cabinets are suitable for wrapping, we&apos;ll say so; if not, we&apos;ll tell you that too.
           </p>
         </div>
       </section>
@@ -35,7 +33,7 @@ export default function KitchenWrappingBarnsleyPage() {
             Why local matters
           </h2>
           <p className="mt-4 text-muted leading-relaxed">
-            Barnsley is on our regular South Yorkshire run — we&apos;re in the area often. Quick to book a survey and straight-talking advice: we&apos;ll tell you if wrapping is right for your kitchen and give you a fixed quote, no sales pitch.
+            We&apos;re in the Barnsley area often. Same person from survey to finish — no subcontractors. Quick to book a survey and straight-talking advice: we&apos;ll tell you if wrapping is right for your kitchen and give you a fixed quote, no sales pitch. You get a named guarantee and a direct contact if you need a follow-up.
           </p>
         </div>
       </section>
@@ -43,6 +41,12 @@ export default function KitchenWrappingBarnsleyPage() {
       <section className="border-y border-border bg-card py-12">
         <div className="container mx-auto max-w-3xl px-4">
           <h2 className="text-xl font-semibold text-foreground">
+            Finishes available in Barnsley
+          </h2>
+          <p className="mt-4 text-muted leading-relaxed">
+            Matt, gloss, woodgrain (oak, walnut), marble, concrete and stone effect. We&apos;ll bring samples to the survey so you can choose in your own light.
+          </p>
+          <h2 className="mt-8 text-xl font-semibold text-foreground">
             Services available in Barnsley
           </h2>
           <ul className="mt-4 list-inside list-disc space-y-2 text-muted">
@@ -65,7 +69,7 @@ export default function KitchenWrappingBarnsleyPage() {
           </h2>
           <div className="mt-6 relative aspect-video overflow-hidden rounded-lg border border-border">
             <Image
-              src="/images/gallery/Y923a9kw8pCgp9gZUeYFaH.jpg"
+              src="/images/gallery/wrapped-kitchen-doors-worktop-south-yorkshire.jpg"
               alt="Kitchen wrap Barnsley — recent project"
               fill
               className="object-cover"
@@ -96,12 +100,13 @@ export default function KitchenWrappingBarnsleyPage() {
       <section className="py-12">
         <div className="container mx-auto max-w-3xl px-4">
           <h2 className="text-xl font-semibold text-foreground">
-            Coverage — Barnsley postcodes
+            Coverage — Barnsley and surrounding postcodes
           </h2>
           <p className="mt-4 text-muted">
-            We cover Barnsley and the surrounding area. Postcode prefixes
-            include S70, S71, S72, S73, S74, S75 and nearby. Contact us with
-            your postcode to confirm coverage.
+            We cover Barnsley and the surrounding area. Postcode prefixes include {data.postcodes}. If you&apos;re just outside, get in touch — we may still cover you.
+          </p>
+          <p className="mt-4 text-muted">
+            {data.priceLine}
           </p>
         </div>
       </section>

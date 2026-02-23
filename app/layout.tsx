@@ -7,7 +7,7 @@ import { Footer } from "@/components/Footer";
 import { StickyCtaBar } from "@/components/StickyCtaBar";
 import { getLocalBusinessSchema } from "@/lib/schema";
 
-const GA_MEASUREMENT_ID = "G-XK2PXVX5XM";
+const GA_MEASUREMENT_ID = "G-4D32FG8MK0";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -20,10 +20,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://wrpx.co.uk"),
+  metadataBase: new URL("https://www.wrpx.co.uk"),
   title: "Kitchen Wrapping South Yorkshire | Local Specialist",
   description:
-    "Transform your kitchen without the cost of a replacement. South Yorkshire's kitchen wrapping specialist — Sheffield, Doncaster, Barnsley, Rotherham & beyond. Free quote.",
+    "Kitchen wrapping South Yorkshire — Sheffield, Doncaster, Barnsley, Rotherham, Leeds, Huddersfield, Chesterfield. Transform in 1–3 days. Free quote.",
   openGraph: {
     type: "website",
   },
@@ -44,7 +44,7 @@ export default function RootLayout({
         <link rel="icon" href="/favicon-16x16.png" type="image/png" sizes="16x16" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/site.webmanifest" />
-        {/* Google Search Console verification: replace content with the value from Search Console */}
+        {/* Google Search Console: add your property at https://www.wrpx.co.uk, choose HTML tag, copy the content value and paste below */}
         <meta name="google-site-verification" content="" />
         <script
           type="application/ld+json"

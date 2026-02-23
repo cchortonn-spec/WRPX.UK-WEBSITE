@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { siteConfig } from "@/lib/site-config";
+import { BlogAuthor } from "@/components/BlogAuthor";
 
 export const metadata: Metadata = {
   title: "Kitchen Wrapping Cost Guide — What to Expect | South Yorkshire",
   description:
-    "A detailed guide to kitchen wrapping costs: per door, full kitchen, worktops. What affects the price, what's included and how to get a fixed quote in South Yorkshire.",
-  alternates: { canonical: "https://wrpx.co.uk/blog/kitchen-wrapping-cost-guide/" },
+    "Kitchen wrapping cost guide — per door, full kitchen, worktops. What affects the price and how to get a fixed quote. South Yorkshire.",
+  alternates: { canonical: "https://www.wrpx.co.uk/blog/kitchen-wrapping-cost-guide/" },
 };
 
 export default function BlogCostGuidePage() {
@@ -25,6 +27,16 @@ export default function BlogCostGuidePage() {
           <p className="mt-2 text-muted">
             How much does kitchen wrapping cost? This guide covers typical ranges, what affects the price, and how to get a fixed quote with no surprises.
           </p>
+          <p className="mt-2 text-xs text-muted">Updated February 2026</p>
+          <div className="mt-8 relative aspect-video w-full max-w-2xl overflow-hidden rounded-lg border border-border">
+            <Image
+              src="/images/gallery/kitchen-cabinet-wrap-south-yorkshire.jpg"
+              alt="Kitchen cabinet wrap South Yorkshire"
+              fill
+              className="object-cover"
+              sizes="(max-width: 672px) 100vw, 672px"
+            />
+          </div>
 
           <div className="prose prose-invert mt-10 max-w-none prose-p:text-muted prose-li:text-muted prose-headings:text-foreground">
             <h2>Why cost varies</h2>
@@ -61,6 +73,7 @@ export default function BlogCostGuidePage() {
             </p>
           </div>
 
+          <BlogAuthor />
           <p className="mt-12">
             <Link href="/contact/" className="btn-primary inline-block">
               Get a fixed quote
