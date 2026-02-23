@@ -28,26 +28,27 @@
 }
 
 html {
-  background: #000;
+  background: transparent;
   min-height: 100%;
 }
 
 body {
-  background: #000;
+  background: transparent;
   color: var(--foreground);
   font-family: var(--font-sans), system-ui, sans-serif;
   position: relative;
   min-height: 100vh;
 }
 
-/* Fixed layer for texture — stays still on scroll on desktop and mobile */
+/* Fixed background layer — stays still on scroll for depth effect. Image: public/sitebackground.png */
 body::before {
   content: "";
   position: fixed;
   inset: 0;
+  min-height: 100vh;
   z-index: -1;
   pointer-events: none;
-  background-color: #000;
+  background-color: #0a0a0a;
   background-image: url("/sitebackground.png");
   background-repeat: repeat;
   background-size: auto;
