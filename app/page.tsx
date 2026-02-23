@@ -68,11 +68,43 @@ export default function HomePage() {
           <p className="text-center text-sm font-medium text-muted-foreground">
             We use premium vinyl from trusted brands
           </p>
-          <div className="mt-6 flex flex-wrap items-center justify-center gap-8 md:gap-12">
-            <span className="text-lg font-semibold text-foreground">3M</span>
-            <span className="text-lg font-semibold text-foreground">CoverStyl</span>
-            <span className="text-lg font-semibold text-foreground">Avery Dennison</span>
-            <span className="text-lg font-semibold text-foreground">Hexis</span>
+          <div className="mt-6 flex flex-wrap items-center justify-center gap-6 md:gap-10">
+            <div className="relative h-14 w-32 overflow-hidden md:h-20 md:w-44">
+              <Image
+                src="/images/brands/3m.png"
+                alt="3M"
+                fill
+                className="object-contain object-center"
+                sizes="176px"
+              />
+            </div>
+            <div className="relative h-14 w-36 overflow-hidden md:h-20 md:w-52">
+              <Image
+                src="/images/brands/coverstyl.png"
+                alt="CoverStyl"
+                fill
+                className="object-contain object-center"
+                sizes="208px"
+              />
+            </div>
+            <div className="relative h-14 w-32 overflow-hidden md:h-20 md:w-44">
+              <Image
+                src="/images/brands/avery-dennison.png"
+                alt="Avery Dennison"
+                fill
+                className="object-contain object-center"
+                sizes="176px"
+              />
+            </div>
+            <div className="relative h-14 w-28 overflow-hidden md:h-20 md:w-40">
+              <Image
+                src="/images/brands/hexis.png"
+                alt="Hexis"
+                fill
+                className="object-contain object-center"
+                sizes="160px"
+              />
+            </div>
           </div>
         </div>
       </section>
