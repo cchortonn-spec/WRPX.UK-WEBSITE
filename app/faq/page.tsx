@@ -3,7 +3,7 @@ import Link from "next/link";
 import { faqItems } from "@/lib/faq-data";
 
 export const metadata: Metadata = {
-  title: "Kitchen Wrapping FAQ | Common Questions Answered",
+  title: "Kitchen Wrapping FAQ — South Yorkshire | WRPX",
   description:
     "Kitchen wrapping FAQ — cost, durability, what we wrap, areas we cover. Answers from a South Yorkshire specialist. Free survey, fixed quote.",
   alternates: { canonical: "https://www.wrpx.co.uk/faq/" },

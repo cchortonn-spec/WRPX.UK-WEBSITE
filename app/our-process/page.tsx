@@ -11,10 +11,10 @@ export const metadata: Metadata = {
 
 export default function OurProcessPage() {
   const steps = [
-    { title: "Step 1: Free survey", body: "We assess your doors, frames and surfaces. You get an honest report on suitability. If wrapping isn\u2019t the right option, we\u2019ll say so." },
-    { title: "Step 2: Surface preparation", body: "Cleaning, degreasing, light sanding where needed. This is where quality is won or lost. We don\u2019t skip it." },
-    { title: "Step 3: Wrapping", body: "Doors are removed and wrapped in our workshop for precision. Frames and carcass are wrapped in-situ. We use branded films (e.g. 3M, CoverStyl) for colour and durability." },
-    { title: "Step 4: Reinstallation & inspection", body: "Doors rehung, hardware refitted. Full walkround with you before we leave." },
+    { title: "Step 1: Free survey", body: "We assess your doors, frames and surfaces. You get an honest report on suitability. If wrapping isn\u2019t the right option, we\u2019ll say so — we won\u2019t quote for a job we don\u2019t think will last. That way you don\u2019t waste money and we don\u2019t end up with a callback. We\u2019ll also discuss finishes and any quirks so the quote is accurate." },
+    { title: "Step 2: Surface preparation", body: "Cleaning, degreasing, light sanding where needed. This is where quality is won or lost; we don\u2019t skip it. \"Trade-level prep\" means we treat every surface as it needs: grease and grime removed, any loose or flaking material dealt with, and a key for the film to bond to. Skimp on prep and the wrap can peel or bubble — we do it properly so the finish lasts." },
+    { title: "Step 3: Wrapping", body: "Doors are removed and wrapped in our workshop for precision. Frames and carcass are wrapped in-situ. We use branded films (e.g. 3M, CoverStyl) for colour and durability. Doing doors off-site gives a cleaner, more consistent result than wrapping in the room." },
+    { title: "Step 4: Reinstallation & inspection", body: "Doors rehung, hardware refitted. Full walkround with you before we leave so you\u2019re happy with the result and we can answer any care questions." },
   ];
 
   return (
