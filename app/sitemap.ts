@@ -22,8 +22,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const locations = siteConfig.areas.map((city) =>
     `kitchen-wrapping-${city.toLowerCase()}`
   );
+  const commercialLocations = [
+    "commercial-installation",
+    "commercial-installation-sheffield",
+    "commercial-installation-leeds",
+    "commercial-installation-doncaster",
+    "commercial-installation-manchester",
+    "commercial-installation-rotherham",
+    "commercial-installation-barnsley",
+    "commercial-installation-chesterfield",
+    "commercial-installation-huddersfield",
+    "commercial-installation-york",
+    "commercial-installation-nottingham",
+  ];
   const blogPaths = blogPosts.map((post) => `blog/${post.slug}`);
-  const paths = [...core, ...locations, ...blogPaths];
+  const paths = [...core, ...locations, ...commercialLocations, ...blogPaths];
 
   return paths.map((path) => ({
     url: path ? `${base}/${path}/` : `${base}/`,

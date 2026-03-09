@@ -48,7 +48,11 @@ export default function FaqPage() {
             <Link href="/blog/" className="text-accent hover:underline">
               blog
             </Link>
-            {" "}(cost guide, vs new kitchen, vs painting, care tips). Can&apos;t find what you need?{" "}
+            {" "}(cost guide, vs new kitchen, vs painting, care tips, commercial guides). For shopfronts, wall wraps and retail work see our{" "}
+            <Link href="/commercial-installation/" className="text-accent hover:underline">
+              commercial &amp; retail installation page
+            </Link>
+            . Can&apos;t find what you need?{" "}
             <Link href="/contact/" className="text-accent hover:underline">
               Get in touch
             </Link>

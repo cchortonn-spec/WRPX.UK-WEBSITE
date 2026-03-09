@@ -6,7 +6,7 @@ export function getLocalBusinessSchema() {
     "@type": "LocalBusiness",
     name: siteConfig.name,
     description:
-      "Kitchen wrapping specialist serving South Yorkshire including Sheffield, Doncaster, Barnsley, Rotherham, Leeds, Huddersfield and Chesterfield.",
+      "Kitchen wrapping and commercial vinyl installation specialist serving South Yorkshire including Sheffield, Doncaster, Barnsley, Rotherham, Leeds, Huddersfield and Chesterfield.",
     url: siteConfig.domain,
     telephone: siteConfig.phoneE164,
     email: siteConfig.email,

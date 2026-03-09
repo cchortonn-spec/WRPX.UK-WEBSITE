@@ -44,6 +44,20 @@ export const blogPosts = [
       "Trends and ideas for refreshing your kitchen with vinyl wrap in 2026 — colours, finishes and what South Yorkshire homeowners are choosing.",
     date: "2026-02-20",
   },
+  {
+    slug: "commercial-vinyl-installer-background-matters",
+    title: "Why Your Commercial Vinyl Installer's Background Actually Matters",
+    description:
+      "Not all commercial vinyl installers are equal. Learn why material knowledge and surface preparation decide whether a finish lasts five years or five months.",
+    date: "2026-03-01",
+  },
+  {
+    slug: "window-graphics-wall-wraps-floor-vinyls-commercial-guide",
+    title: "Window Graphics, Wall Wraps & Floor Vinyls: A Commercial Buyer's Guide",
+    description:
+      "Planning commercial vinyl installation for the first time? A practical guide to window graphics, wall wraps, floor vinyls and shop front applications.",
+    date: "2026-03-02",
+  },
 ] as const;
 
 export type BlogSlug = (typeof blogPosts)[number]["slug"];

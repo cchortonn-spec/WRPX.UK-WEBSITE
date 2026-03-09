@@ -62,6 +62,28 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Commercial & retail work */}
+      <section className="px-4 pb-10">
+        <div className="container mx-auto max-w-4xl">
+          <div className="card-float p-8 md:p-10">
+            <h2 className="text-2xl font-semibold text-foreground md:text-3xl">
+              Commercial &amp; retail vinyl installation
+            </h2>
+            <p className="mt-4 text-muted leading-relaxed">
+              Alongside homes, WRPX installs vinyl in commercial and retail spaces — window graphics, wall wraps,
+              floor vinyls, shop fronts and POS displays for brands, agencies, print houses and local businesses
+              across South Yorkshire and the wider North.
+            </p>
+            <p className="mt-4 text-muted">
+              <Link href="/commercial-installation/" className="text-accent hover:underline">
+                See our commercial &amp; retail installation service
+              </Link>
+              .
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Trusted brands — vinyl wrap materials */}
       <section className="border-y border-border bg-muted/30 py-12">
         <div className="container mx-auto max-w-4xl px-4">

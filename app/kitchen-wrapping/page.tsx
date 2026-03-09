@@ -215,7 +215,11 @@ export default function KitchenWrappingPage() {
               <Link href="/kitchen-wrapping-sheffield/" className="text-accent hover:underline">
                 Kitchen wrapping Sheffield
               </Link>{" "}
-              and the rest of South Yorkshire —{" "}
+              and the rest of South Yorkshire. We also install vinyl in{" "}
+              <Link href="/commercial-installation/" className="text-accent hover:underline">
+                commercial and retail spaces
+              </Link>{" "}
+              across the region —{" "}
               <Link href="/contact/" className="text-accent hover:underline">
                 get in touch
               </Link>{" "}
