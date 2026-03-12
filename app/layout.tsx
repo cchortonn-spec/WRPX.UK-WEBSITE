@@ -24,6 +24,9 @@ export const metadata: Metadata = {
   title: "Kitchen Wrapping South Yorkshire | Local Specialist",
   description:
     "Kitchen wrapping South Yorkshire — Sheffield, Doncaster, Barnsley, Rotherham, Leeds, Huddersfield, Chesterfield. Transform in 1–3 days. Free quote.",
+  alternates: {
+    canonical: "https://www.wrpx.co.uk/",
+  },
   openGraph: {
     type: "website",
   },
