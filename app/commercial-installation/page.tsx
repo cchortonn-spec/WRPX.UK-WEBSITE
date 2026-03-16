@@ -381,6 +381,13 @@ export default function CommercialInstallationPage() {
               And all towns, retail parks and commercial districts in between. For larger multi-site
               programmes, national coverage is available — discussed on a project basis.
             </p>
+            <p className="mt-4 text-muted leading-relaxed">
+              We also supply and install privacy film, frosted film and window graphics — see our{" "}
+              <Link href="/window-film/" className="text-accent hover:underline">
+                window film service
+              </Link>
+              .
+            </p>
           </div>
         </div>
       </section>

@@ -84,6 +84,26 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Window film */}
+      <section className="px-4 pb-10">
+        <div className="container mx-auto max-w-4xl">
+          <div className="card-float p-8 md:p-10">
+            <h2 className="text-2xl font-semibold text-foreground md:text-3xl">
+              Window film — privacy, frosted and solar
+            </h2>
+            <p className="mt-4 text-muted leading-relaxed">
+              We install privacy film, frosted window film, one-way mirror film, solar control film and glass manifestation for homes and businesses across South Yorkshire. Same preparation standards and premium materials.
+            </p>
+            <p className="mt-4 text-muted">
+              <Link href="/window-film/" className="text-accent hover:underline">
+                See our window film service
+              </Link>
+              .
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Trusted brands — vinyl wrap materials */}
       <section className="border-y border-border bg-muted/30 py-12">
         <div className="container mx-auto max-w-4xl px-4">

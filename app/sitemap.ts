@@ -35,13 +35,32 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "commercial-installation-york",
     "commercial-installation-nottingham",
   ];
+  const windowFilm = [
+    "window-film",
+    "window-film/frosted-window-film",
+    "window-film/privacy-window-film",
+    "window-film/one-way-mirror-film",
+    "window-film/window-tinting",
+    "window-film/commercial-window-film",
+    "window-film/residential-window-film",
+    "window-film/glass-manifestation",
+    "window-film/solar-control-film",
+    "window-film/window-film-cost",
+    "window-film/window-film-sheffield",
+    "window-film/window-film-doncaster",
+    "window-film/window-film-barnsley",
+    "window-film/window-film-rotherham",
+    "window-film/window-film-leeds",
+    "window-film/window-film-chesterfield",
+    "window-film/window-film-huddersfield",
+  ];
   const blogPaths = blogPosts.map((post) => `blog/${post.slug}`);
-  const paths = [...core, ...locations, ...commercialLocations, ...blogPaths];
+  const paths = [...core, ...locations, ...commercialLocations, ...windowFilm, ...blogPaths];
 
   return paths.map((path) => ({
     url: path ? `${base}/${path}/` : `${base}/`,
     lastModified: new Date(),
     changeFrequency: "monthly" as const,
-    priority: path === "" ? 1 : path === "kitchen-wrapping" || path === "kitchen-wrapping-cost" ? 0.9 : path === "blog" ? 0.85 : 0.8,
+    priority: path === "" ? 1 : path === "kitchen-wrapping" || path === "kitchen-wrapping-cost" || path === "window-film" ? 0.9 : path === "blog" ? 0.85 : 0.8,
   }));
 }
