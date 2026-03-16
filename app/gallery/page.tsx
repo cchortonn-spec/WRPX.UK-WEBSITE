@@ -67,6 +67,19 @@ const galleryItems = [
   { src: "/images/gallery/IMG_8771.png", alt: "Decorative vinyl film South Yorkshire", caption: "Decorative film", projectLine: "Professional wrap" },
   { src: "/images/gallery/IMG_8776.png", alt: "Vinyl wrap South Yorkshire", caption: "Vinyl project", projectLine: "Wrap installation" },
   { src: "/images/gallery/IMG_8778.png", alt: "Commercial vinyl wrap South Yorkshire", caption: "Commercial wrap", projectLine: "Professional vinyl" },
+  // Mirror window film — Rotherham
+  { src: "/images/gallery/mirror-window-film-rotherham-1.png", alt: "Mirror window film Rotherham — reflective gym window interior", caption: "Mirror window film, Rotherham", projectLine: "One-way mirror film, commercial gym, Rotherham" },
+  { src: "/images/gallery/mirror-window-film-rotherham-2.png", alt: "Mirror window film Rotherham — reflective storefront with street reflection", caption: "Mirror film storefront, Rotherham", projectLine: "Reflective window film, Rotherham" },
+  { src: "/images/gallery/mirror-window-film-rotherham-3.png", alt: "Mirror window film Rotherham — commercial window reflection", caption: "Mirror window film installation, Rotherham", projectLine: "One-way mirror film, Rotherham" },
+  { src: "/images/gallery/mirror-window-film-rotherham-4.png", alt: "Mirror window film Rotherham — gym interior reflective glass", caption: "Mirror film gym, Rotherham", projectLine: "Privacy mirror film, commercial, Rotherham" },
+  { src: "/images/gallery/mirror-window-film-rotherham-5.png", alt: "Mirror window film Rotherham — reflective gym window street view", caption: "Mirror film, Rotherham", projectLine: "One-way mirror film installation, Rotherham" },
+  { src: "/images/gallery/mirror-window-film-rotherham-6.png", alt: "Mirror window film Rotherham — reflective commercial window exterior", caption: "Mirror window film, Rotherham", projectLine: "Reflective privacy film, Rotherham" },
+  { src: "/images/gallery/mirror-window-film-rotherham-7.png", alt: "Mirror window film Rotherham — gym window with hexagonal lights reflection", caption: "Mirror film commercial, Rotherham", projectLine: "Mirror window film, Rotherham" },
+  // Primark Manchester — totem pole directional signage wrap
+  { src: "/images/gallery/primark-manchester-totem-pole-wrap-1.png", alt: "Primark Manchester totem pole wrap — directional signage vinyl", caption: "Totem pole wrap, Primark Manchester", projectLine: "Directional totem pole signage, Primark Manchester" },
+  { src: "/images/gallery/primark-manchester-totem-pole-wrap-2.png", alt: "Primark Manchester store totem pole directional wrap — retail wayfinding", caption: "Totem pole signage, Primark Manchester", projectLine: "Vinyl wrap totem poles, customer directions, Manchester" },
+  { src: "/images/gallery/primark-manchester-totem-pole-wrap-3.png", alt: "Primark Manchester totem pole vinyl wrap — floor directions", caption: "Totem pole wrap, Primark Manchester", projectLine: "Commercial totem pole wrap, Manchester" },
+  { src: "/images/gallery/primark-manchester-totem-pole-wrap-4.png", alt: "Primark Manchester directional totem pole — wrapped signage", caption: "Directional totem pole, Primark Manchester", projectLine: "Retail wayfinding wrap, Primark Manchester" },
 ];
 
 export default function GalleryPage() {
