@@ -110,7 +110,7 @@ export default function WindowTintingPage() {
       {/* Hero */}
       <section className="relative h-[40vh] min-h-[280px] w-full overflow-hidden">
         <Image
-          src="/images/hero.jpg"
+          src="/images/window-film/tinting-1.png"
           alt="Window tinting for buildings — South Yorkshire"
           fill
           className="object-cover"

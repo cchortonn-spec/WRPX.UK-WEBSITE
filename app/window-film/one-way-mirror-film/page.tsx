@@ -98,7 +98,7 @@ export default function OneWayMirrorFilmPage() {
       {/* Hero */}
       <section className="relative h-[35vh] min-h-[240px] w-full overflow-hidden">
         <Image
-          src="/images/hero.jpg"
+          src="/images/window-film/one-way-1.png"
           alt="One-way mirror film — reflective window"
           fill
           className="object-cover"

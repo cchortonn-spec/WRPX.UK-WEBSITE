@@ -172,7 +172,7 @@ export default function WindowFilmHubPage() {
       {/* Hero */}
       <section className="relative h-[50vh] min-h-[320px] w-full overflow-hidden">
         <Image
-          src="/images/hero.jpg"
+          src="/images/window-film/frosted-3.png"
           alt="Window film installation South Yorkshire"
           fill
           className="object-cover"
@@ -256,7 +256,7 @@ export default function WindowFilmHubPage() {
             </div>
             <div className="relative aspect-[4/3] overflow-hidden rounded-lg border border-border">
               <Image
-                src="/images/gallery/kitchen-cabinet-wrap-south-yorkshire.jpg"
+                src="/images/window-film/frosted-2.png"
                 alt="Professional vinyl application — WRPX finish standard"
                 fill
                 className="object-cover"

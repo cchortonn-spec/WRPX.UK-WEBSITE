@@ -105,7 +105,7 @@ export default function WindowFilmCostPage() {
       {/* Hero */}
       <section className="relative h-[35vh] min-h-[240px] w-full overflow-hidden">
         <Image
-          src="/images/hero.jpg"
+          src="/images/window-film/frosted-3.png"
           alt="Window film cost — South Yorkshire"
           fill
           className="object-cover"

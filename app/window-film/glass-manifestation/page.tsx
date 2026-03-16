@@ -126,7 +126,7 @@ export default function GlassManifestationPage() {
       {/* Hero */}
       <section className="relative h-[40vh] min-h-[280px] w-full overflow-hidden">
         <Image
-          src="/images/hero.jpg"
+          src="/images/window-film/frosted-2.png"
           alt="Glass manifestation — DDA compliant"
           fill
           className="object-cover"

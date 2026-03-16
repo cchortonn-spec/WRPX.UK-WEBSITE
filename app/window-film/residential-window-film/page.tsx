@@ -128,7 +128,7 @@ export default function ResidentialWindowFilmPage() {
       {/* Hero */}
       <section className="relative h-[40vh] min-h-[280px] w-full overflow-hidden">
         <Image
-          src="/images/hero.jpg"
+          src="/images/window-film/residential-1.png"
           alt="Window film for your home — South Yorkshire"
           fill
           className="object-cover"

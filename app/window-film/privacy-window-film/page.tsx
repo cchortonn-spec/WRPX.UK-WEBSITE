@@ -104,7 +104,7 @@ export default function PrivacyWindowFilmPage() {
       {/* Hero */}
       <section className="relative h-[40vh] min-h-[280px] w-full overflow-hidden">
         <Image
-          src="/images/hero.jpg"
+          src="/images/window-film/privacy-2.png"
           alt="Privacy window film — reflective exterior"
           fill
           className="object-cover"

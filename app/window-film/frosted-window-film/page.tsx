@@ -133,7 +133,7 @@ export default function FrostedWindowFilmPage() {
       {/* Hero */}
       <section className="relative h-[40vh] min-h-[280px] w-full overflow-hidden">
         <Image
-          src="/images/gallery/kitchen-cabinet-wrap-south-yorkshire.jpg"
+          src="/images/window-film/frosted-3.png"
           alt="Frosted window film — clean edge finish"
           fill
           className="object-cover"
@@ -162,7 +162,7 @@ export default function FrostedWindowFilmPage() {
             </div>
             <div className="relative aspect-[4/3] overflow-hidden rounded-lg border border-border">
               <Image
-                src="/images/gallery/kitchen-wrap-before-after-south-yorkshire.jpg"
+                src="/images/window-film/frosted-2.png"
                 alt="Before and after — frosted window film"
                 fill
                 className="object-cover"
