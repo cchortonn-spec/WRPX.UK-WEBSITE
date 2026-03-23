@@ -1,160 +1,189 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
-import { siteConfig } from "@/lib/site-config";
-import { locationPageData } from "@/lib/location-pages";
-import { testimonials } from "@/lib/testimonials";
-
-const data = locationPageData.Huddersfield;
-const testimonial = testimonials.find((t) => t.area === "Huddersfield")!;
+ 
 
 export const metadata: Metadata = {
-  title: "Kitchen Wrapping Huddersfield | Local Specialist, Free Quote",
+  title: "Kitchen Wrapping Huddersfield | 5-Year Guarantee | Free Survey",
   description:
-    "Kitchen wrapping in Huddersfield — Lindley, Milnsbridge, Golcar, HD1–HD9. Doors and worktops in 1–3 days. Free quote.",
+    "WRPX wraps kitchens across Huddersfield — doors, drawer fronts, worktops and frames in premium 3M and CoverStyl vinyl. 5-year guarantee. Free survey, fixed quote. Call 07398 395417.",
   alternates: { canonical: "https://www.wrpx.co.uk/kitchen-wrapping-huddersfield/" },
 };
 
 export default function KitchenWrappingHuddersfieldPage() {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      { "@type": "Question", name: "How long does kitchen wrapping take in Huddersfield?", acceptedAnswer: { "@type": "Answer", text: "Most jobs are 1-3 days depending on kitchen size. We confirm the schedule when we give you the fixed quote." } },
+      { "@type": "Question", name: "Can you wrap a stone-built period property kitchen in Huddersfield?", acceptedAnswer: { "@type": "Answer", text: "Yes - the property type doesn't affect the wrap process. What matters is the condition of the doors and carcasses, which we assess at the free survey." } },
+      { "@type": "Question", name: "Is there a travel charge for Huddersfield?", acceptedAnswer: { "@type": "Answer", text: "No. Travel is included in the fixed quote." } },
+      { "@type": "Question", name: "Do you cover Holmfirth and the Holme Valley?", acceptedAnswer: { "@type": "Answer", text: "Yes - we cover Holmfirth, Meltham, Honley, Skelmanthorpe and surrounding HD9 and HD7 areas." } },
+    ],
+  };
+
+  const localBusinessSchema = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    name: "WRPX",
+    url: "https://www.wrpx.co.uk",
+    telephone: "+447398395417",
+    areaServed: ["Huddersfield", "HD1-HD9"],
+    geo: { "@type": "GeoCoordinates", latitude: 53.6458, longitude: -1.785 },
+  };
+
   return (
     <div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
+
       <section className="border-b border-border bg-card py-12 md:py-16">
         <div className="container mx-auto max-w-3xl px-4">
           <h1 className="text-3xl font-bold tracking-tight text-foreground">
-            Kitchen Wrapping Huddersfield — Local Specialist
+            Kitchen Wrapping Huddersfield — Local Specialist, 5-Year Guarantee
           </h1>
           <p className="mt-4 text-muted leading-relaxed">
-            Huddersfield — from Lindley and Milnsbridge to Golcar, Meltham, Holmfirth and across HD postcodes — is within our coverage area. We&apos;ve wrapped kitchens across the town and surrounding areas. You get the same process: free survey, honest suitability check, then prep and wrap with a named {siteConfig.guaranteeYears}-year guarantee. South Yorkshire based — no national franchise, no distant depot.
+            We cover Huddersfield and the surrounding HD postcodes regularly - Lindley, Marsh, Birkby,
+            Almondbury, Honley, Holmfirth and across the district. Huddersfield has a strong proportion
+            of older stone-built and Victorian-era properties, many with kitchens that have been through
+            multiple generations of updating.
           </p>
           <p className="mt-4 text-muted leading-relaxed">
-            If your layout still works but the finish is dated, wrapping can give
-            you a major visual update while avoiding full replacement disruption.
-            We quote based on the real condition of doors and panels, then follow
-            a structured process so there are no surprises once work starts.
+            The assessment is always the same: free survey, honest suitability report, fixed quote before we start.
+            If wrapping is right, we&apos;ll tell you why. If it isn&apos;t, we&apos;ll tell you that too.
           </p>
-        </div>
-      </section>
-
-      <section className="py-12">
-        <div className="container mx-auto max-w-3xl px-4">
-          <h2 className="text-xl font-semibold text-foreground">
-            Why local matters
-          </h2>
-          <p className="mt-4 text-muted leading-relaxed">
-            We&apos;re South Yorkshire based and regularly in the Huddersfield area. Same team from survey to finish: no subcontractors, no handover to another crew. You get one point of contact and a guarantee that&apos;s honoured locally. We turn up when we say we will and come back if you need us.
-          </p>
-          <p className="mt-4 text-muted leading-relaxed">
-            Local work patterns matter here, especially across hillside areas and
-            older homes where kitchens can have unusual shapes. We assess
-            practical details first, then recommend finishes that suit your
-            lighting and how heavily the kitchen is used.
-          </p>
-        </div>
-      </section>
-
-      <section className="border-y border-border bg-card py-12">
-        <div className="container mx-auto max-w-3xl px-4">
-          <h2 className="text-xl font-semibold text-foreground">
-            Finishes available in Huddersfield
-          </h2>
-          <p className="mt-4 text-muted leading-relaxed">
-            Matt, gloss, woodgrain (oak, walnut), marble, concrete and stone effect. We&apos;ll bring samples to the survey so you can choose in your own light.
-          </p>
-          <h2 className="mt-8 text-xl font-semibold text-foreground">
-            Services available in Huddersfield
-          </h2>
-          <ul className="mt-4 list-inside list-disc space-y-2 text-muted">
-            <li>Full kitchen wrap — doors, frames, panels, worktops</li>
-            <li>Worktop wrapping — marble, stone, wood-effect</li>
-            <li>Furniture and wardrobe wrap</li>
-          </ul>
-          <h2 className="mt-8 text-xl font-semibold text-foreground">
-            What customers in Huddersfield ask for most
-          </h2>
-          <ul className="mt-4 list-inside list-disc space-y-2 text-muted">
-            <li>Modern matte cabinet finishes in neutral tones</li>
-            <li>Worktop wraps that reduce busy patterning</li>
-            <li>Simple handle upgrades with wrapped door fronts</li>
-            <li>Fast kitchen refreshes before listing or remortgaging</li>
-          </ul>
-          <p className="mt-4 text-muted">
-            <Link href="/kitchen-wrapping-cost/" className="text-accent hover:underline">
-              Kitchen wrapping cost guide
-            </Link> — typical prices and what&apos;s included.
-          </p>
-        </div>
-      </section>
-
-      <section className="py-12">
-        <div className="container mx-auto max-w-3xl px-4">
-          <h2 className="text-xl font-semibold text-foreground">
-            Recent work in Huddersfield
-          </h2>
-          <div className="mt-6 relative aspect-video overflow-hidden rounded-lg border border-border">
-            <Image
-              src="/images/gallery/kitchen-cabinet-wrap-south-yorkshire.jpg"
-              alt="Kitchen wrapping example for a Huddersfield home"
-              fill
-              className="object-cover"
-              sizes="(max-width: 768px) 100vw, 672px"
-            />
+          <div className="mt-6 rounded-lg border-l-4 border-accent bg-background p-4">
+            <p className="font-semibold text-foreground">5-year guarantee on materials and workmanship. Named on every job.</p>
           </div>
-          <p className="mt-4 text-muted leading-relaxed">
-            Example HD project: oak-toned cabinet fronts were wrapped to a clean
-            soft-grey finish, then worktops were updated with a stone effect.
-            Same layout, much more modern appearance, and no long renovation.
-          </p>
         </div>
       </section>
 
-      <section className="border-y border-border bg-card py-12">
+      <section className="py-12">
         <div className="container mx-auto max-w-3xl px-4">
-          <h2 className="text-xl font-semibold text-foreground">
-            Testimonial from a Huddersfield customer
-          </h2>
-          <div className="mt-6 rounded-lg border border-border bg-card p-6">
-            <p className="italic text-card-foreground">
-              {testimonial.quote}
-            </p>
-            <p className="mt-4 text-sm text-muted-foreground">
-              — {testimonial.name}, {testimonial.area}
-            </p>
-          </div>
+          <h2 className="text-xl font-semibold text-foreground">Huddersfield kitchens — what we find</h2>
           <p className="mt-4 text-muted leading-relaxed">
-            Every quote is based on the property and current kitchen condition,
-            not a generic package. That helps protect finish quality and reduces
-            the risk of callbacks.
+            Stone-built terraces in Lindley and Marsh often have compact kitchens with older door profiles
+            that wrap well when surface condition is right. Victorian semis in Almondbury and Moldgreen
+            tend to have larger kitchens with varied cabinet histories.
+          </p>
+          <p className="mt-4 text-muted leading-relaxed">
+            Outer areas like Holmfirth, Meltham and Skelmanthorpe have more detached and semi-detached
+            housing from the 1970s onwards, often with well-maintained carcasses and doors that are simply dated.
           </p>
         </div>
       </section>
 
       <section className="py-12">
         <div className="container mx-auto max-w-3xl px-4">
-          <h2 className="text-xl font-semibold text-foreground">
-            Coverage — Huddersfield and surrounding postcodes
-          </h2>
-          <p className="mt-4 text-muted">
-            We cover Huddersfield and the surrounding area. Postcode prefixes include {data.postcodes}. If you&apos;re just outside, get in touch — we may still cover you.
-          </p>
-          <p className="mt-4 text-muted">
-            {data.priceLine}
-          </p>
-          <h2 className="mt-8 text-xl font-semibold text-foreground">
-            Areas we cover around Huddersfield
-          </h2>
+          <h2 className="text-xl font-semibold text-foreground">What we wrap in Huddersfield</h2>
+          <ul className="mt-4 list-inside list-disc space-y-2 text-muted">
+            <li>Full kitchen wrap — doors, drawer fronts, carcass faces, end panels, plinths</li>
+            <li>Worktops — marble, stone and wood-effect heat-resistant vinyl</li>
+            <li>Splashbacks and tiled areas</li>
+            <li>Bedroom wardrobes and fitted furniture</li>
+            <li>Bathroom vanity units</li>
+          </ul>
+        </div>
+      </section>
+
+      <section className="py-12">
+        <div className="container mx-auto max-w-3xl px-4">
+          <h2 className="text-xl font-semibold text-foreground">Finishes available in Huddersfield</h2>
           <p className="mt-4 text-muted leading-relaxed">
-            Common bookings come from Lindley, Milnsbridge, Golcar, Meltham,
-            Holmfirth and surrounding villages. Send your postcode and we will
-            confirm survey availability.
+            Matt, gloss, woodgrain (oak, light oak, walnut), marble, concrete and stone effect.
+            Physical samples at every survey.
           </p>
         </div>
       </section>
 
       <section className="border-y border-border bg-card py-12">
-        <div className="container mx-auto max-w-3xl px-4 text-center">
+        <div className="container mx-auto max-w-3xl px-4">
+          <h2 className="text-xl font-semibold text-foreground">
+            How a Huddersfield project runs
+          </h2>
+          <ol className="mt-4 list-inside list-decimal space-y-2 text-muted">
+            <li><strong>Free survey</strong> — assess and suitability report.</li>
+            <li><strong>Fixed quote</strong> — in writing before any work starts.</li>
+            <li><strong>Installation</strong> — 1-3 days, kitchen stays functional.</li>
+            <li><strong>Walkround and sign-off</strong> — full check with you.</li>
+          </ol>
+        </div>
+      </section>
+
+      <section className="py-12">
+        <div className="container mx-auto max-w-3xl px-4">
+          <h2 className="text-xl font-semibold text-foreground">
+            What Huddersfield kitchens typically cost
+          </h2>
+          <p className="mt-4 text-muted leading-relaxed">
+            Most Huddersfield jobs fall between <strong>£900 and £1,500</strong>. Travel to HD postcodes is included.
+            Worktop-only wraps from around £250. See the{" "}
+            <Link href="/kitchen-wrapping-cost/" className="text-accent hover:underline">kitchen wrapping cost guide</Link>.
+          </p>
+        </div>
+      </section>
+
+      <section className="border-y border-border bg-card py-12">
+        <div className="container mx-auto max-w-3xl px-4">
+          <h2 className="text-xl font-semibold text-foreground">From a Huddersfield customer</h2>
+          <blockquote className="mt-6 rounded-lg border border-border bg-card p-6 italic text-card-foreground">
+            <p>
+              From quote to finish was straightforward. The kitchen looks like a different room - we went
+              for a matt grey finish and it&apos;s exactly what we wanted. Would use again.
+            </p>
+            <p className="mt-4 text-sm not-italic text-muted-foreground">— David H., Huddersfield (Lindley)</p>
+          </blockquote>
+        </div>
+      </section>
+
+      <section className="py-12">
+        <div className="container mx-auto max-w-3xl px-4">
+          <h2 className="text-xl font-semibold text-foreground">Frequently asked questions — kitchen wrapping in Huddersfield</h2>
+          <div className="mt-4 space-y-6">
+            <div>
+              <h3 className="font-semibold text-foreground">How long does kitchen wrapping take in Huddersfield?</h3>
+              <p className="mt-2 text-muted leading-relaxed">Most jobs are 1-3 days depending on kitchen size.</p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-foreground">Can you wrap a stone-built period property kitchen in Huddersfield?</h3>
+              <p className="mt-2 text-muted leading-relaxed">Yes - property type doesn&apos;t affect the wrap process.</p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-foreground">Is there a travel charge for Huddersfield?</h3>
+              <p className="mt-2 text-muted leading-relaxed">No. Travel is included in the fixed quote.</p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-foreground">Do you cover Holmfirth and the Holme Valley?</h3>
+              <p className="mt-2 text-muted leading-relaxed">Yes - we cover Holmfirth, Meltham, Honley and surrounding HD9/HD7 areas.</p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-foreground">Can I see examples before I commit?</h3>
+              <p className="mt-2 text-muted leading-relaxed">
+                Yes - view recent completed jobs in our{" "}
+                <Link href="/gallery/" className="text-accent hover:underline">gallery</Link>.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-y border-border bg-card py-12">
+        <div className="container mx-auto max-w-3xl px-4">
+          <h2 className="text-xl font-semibold text-foreground">Huddersfield postcode coverage</h2>
+          <p className="mt-4 text-muted leading-relaxed">
+            HD1, HD2, HD3, HD4, HD5, HD7, HD8, HD9 and surrounding areas including Lindley, Marsh,
+            Birkby, Almondbury, Honley, Holmfirth, Meltham and Skelmanthorpe.
+          </p>
+        </div>
+      </section>
+
+      <section className="py-12">
+        <div className="container mx-auto max-w-3xl px-4 text-center space-y-4">
+          <h2 className="text-2xl font-semibold text-foreground">Ready to transform your Huddersfield kitchen?</h2>
+          <p className="text-muted leading-relaxed">Free survey, no obligation. Fixed quote before work starts. 5-year guarantee on every job.</p>
           <Link href="/contact/" className="btn-primary inline-block">
-            Book a Free Huddersfield Survey
+            Book a Free Huddersfield Survey →
           </Link>
+          <p className="text-muted">Or call <strong>07398 395417</strong></p>
         </div>
       </section>
     </div>

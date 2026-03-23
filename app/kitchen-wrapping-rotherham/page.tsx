@@ -1,108 +1,151 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
-import { siteConfig } from "@/lib/site-config";
-import { locationPageData } from "@/lib/location-pages";
-
-const data = locationPageData.Rotherham;
 
 export const metadata: Metadata = {
-  title: "Kitchen Wrapping Rotherham | Local Specialist, Free Quote",
+  title: "Kitchen Wrapping Rotherham | 5-Year Guarantee | Free Survey",
   description:
-    "Kitchen wrapping in Rotherham — Wickersley, Maltby, Dinnington, S60–S66. Doors and worktops in 1–3 days. Free quote.",
+    "WRPX wraps kitchens across Rotherham — doors, drawer fronts, worktops and frames in premium 3M and CoverStyl vinyl. 5-year guarantee. Free survey, fixed quote. Call 07398 395417.",
   alternates: { canonical: "https://www.wrpx.co.uk/kitchen-wrapping-rotherham/" },
 };
 
 export default function KitchenWrappingRotherhamPage() {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "Can you wrap foil-wrapped doors that are already peeling?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Sometimes, but carefully. Peeling foil wrap needs to be fully removed and the substrate properly prepared before new vinyl goes down. We assess at the survey - if the underlying door material isn't suitable, we'll tell you.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "How long does kitchen wrapping take in Rotherham?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Most jobs take 1-3 days. We confirm the schedule when we provide the fixed quote.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Do you cover all of Rotherham?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes - S60 through S66 and surrounding postcodes including Wickersley, Maltby, Bramley, Rawmarsh, Swinton and Wath-upon-Dearne.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Is a 5-year guarantee standard?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes. Every WRPX job comes with a 5-year guarantee on materials and workmanship, named in writing. It covers adhesion failure, colour change and material defects.",
+        },
+      },
+    ],
+  };
+
+  const localBusinessSchema = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    name: "WRPX",
+    url: "https://www.wrpx.co.uk",
+    telephone: "+447398395417",
+    areaServed: ["Rotherham", "S60-S66"],
+    geo: { "@type": "GeoCoordinates", latitude: 53.4326, longitude: -1.3635 },
+  };
+
   return (
     <div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      />
+
       <section className="border-b border-border bg-card py-12 md:py-16">
         <div className="container mx-auto max-w-3xl px-4">
           <h1 className="text-3xl font-bold tracking-tight text-foreground">
-            Kitchen Wrapping Rotherham — Local Specialist
+            Kitchen Wrapping Rotherham — Local Specialist, 5-Year Guarantee
           </h1>
           <p className="mt-4 text-muted leading-relaxed">
-            Rotherham and the surrounding areas — Wickersley, Maltby, Dinnington, Rawmarsh, Swinton and across S60–S66 — are within our South Yorkshire coverage. We&apos;ve wrapped kitchens from town centre to the outskirts. Same process everywhere: free survey, honest suitability check, then prep and wrap with a named {siteConfig.guaranteeYears}-year guarantee.
+            Rotherham sits right in the middle of our operating area - we&apos;re out
+            there regularly, and the variety of housing reflects it. From period
+            terraces in Rawmarsh and Wath-upon-Dearne to newer builds in Wickersley
+            and Bramley, we see a wide range of kitchen types and cabinet conditions.
+            Each one gets the same treatment: a proper free survey, an honest
+            assessment, and a fixed price before we start.
           </p>
           <p className="mt-4 text-muted leading-relaxed">
-            If your current kitchen is tired but still structurally solid,
-            wrapping can give you a cleaner and more modern finish with less
-            disruption than replacement. We plan each job around your layout and
-            day-to-day use so the final result looks consistent across all visible
-            surfaces.
+            If your kitchen looks tired but the structure is solid, vinyl wrapping is
+            almost certainly worth a quote. The visual change is immediate and
+            significant - and at typically 70-80% less than a new kitchen, most
+            Rotherham homeowners are surprised by how far the budget stretches.
           </p>
+          <div className="mt-6 rounded-lg border-l-4 border-accent bg-background p-4">
+            <p className="font-semibold text-foreground">
+              5-year guarantee on materials and workmanship. Named on every job.
+            </p>
+          </div>
         </div>
       </section>
 
       <section className="py-12">
         <div className="container mx-auto max-w-3xl px-4">
           <h2 className="text-xl font-semibold text-foreground">
-            Why local matters
+            Rotherham kitchens — what we see
           </h2>
           <p className="mt-4 text-muted leading-relaxed">
-            We cover the Rotherham area and have built a strong track record of before-and-after results here. Same person from survey to finish — no national call centre. We&apos;re easy to get hold of for follow-up or advice; you deal with the team that did the job and a guarantee that&apos;s honoured locally.
+            A significant proportion of Rotherham&apos;s housing stock is post-war and
+            early-private-build, with kitchens that have been updated once or twice
+            over the years. We regularly find perfectly sound carcasses underneath
+            tired laminate finishes or peeling foil wrap - both of which respond very
+            well to a proper vinyl installation when the surfaces are correctly prepared.
           </p>
           <p className="mt-4 text-muted leading-relaxed">
-            Local service matters when properties differ block by block. A home
-            in Wickersley may need a different colour strategy to a rental unit
-            near the town centre. We help you choose practical finishes that
-            balance style with long-term durability.
+            Wickersley, Maltby and Bramley have more modern housing where kitchens
+            are often mid-range quality with standard slab or shaker doors. These are
+            some of our cleanest wrapping jobs. Older properties in Rawmarsh, Swinton
+            and Wath often have more variation - different door materials, older
+            carcass types - and that&apos;s where our prep experience matters.
+          </p>
+          <p className="mt-4 text-muted leading-relaxed">
+            We specify the right film for the substrate. 3M, CoverStyl, Avery Dennison
+            and Hexis have different performance profiles for different surfaces and
+            environments. We don&apos;t use a single film for everything.
           </p>
         </div>
       </section>
 
       <section className="border-y border-border bg-card py-12">
+        <div className="container mx-auto max-w-3xl px-4">
+          <h2 className="text-xl font-semibold text-foreground">
+            What we wrap in Rotherham
+          </h2>
+          <ul className="mt-4 list-inside list-disc space-y-2 text-muted">
+            <li>Full kitchen wrap — doors, drawer fronts, carcass faces, end panels, plinths, cornice</li>
+            <li>Worktops — marble, stone and wood-effect heat-resistant vinyl</li>
+            <li>Splashbacks and tiled surfaces</li>
+            <li>Bedroom wardrobes and fitted storage</li>
+            <li>Bathroom vanity units</li>
+          </ul>
+        </div>
+      </section>
+
+      <section className="py-12">
         <div className="container mx-auto max-w-3xl px-4">
           <h2 className="text-xl font-semibold text-foreground">
             Finishes available in Rotherham
           </h2>
           <p className="mt-4 text-muted leading-relaxed">
-            Matt, gloss, woodgrain (oak, walnut), marble, concrete and stone effect. We&apos;ll bring samples to the survey so you can choose in your own light.
-          </p>
-          <h2 className="mt-8 text-xl font-semibold text-foreground">
-            Services available in Rotherham
-          </h2>
-          <ul className="mt-4 list-inside list-disc space-y-2 text-muted">
-            <li>Full kitchen wrap — doors, frames, panels, worktops</li>
-            <li>Worktop wrapping — marble, stone, wood-effect</li>
-            <li>Furniture and wardrobe wrap</li>
-          </ul>
-          <h2 className="mt-8 text-xl font-semibold text-foreground">
-            Rotherham kitchen wrapping examples
-          </h2>
-          <ul className="mt-4 list-inside list-disc space-y-2 text-muted">
-            <li>Dark oak doors updated to smooth warm-grey matte</li>
-            <li>Busy granite-pattern worktops changed to simple stone-look film</li>
-            <li>Rental kitchens refreshed quickly between tenants</li>
-            <li>Cabinet fronts modernised while keeping appliances in place</li>
-          </ul>
-          <p className="mt-4 text-muted">
-            <Link href="/kitchen-wrapping-cost/" className="text-accent hover:underline">
-              Kitchen wrapping cost guide
-            </Link> — typical prices and what&apos;s included.
-          </p>
-        </div>
-      </section>
-
-      <section className="py-12">
-        <div className="container mx-auto max-w-3xl px-4">
-          <h2 className="text-xl font-semibold text-foreground">
-            Recent work in Rotherham
-          </h2>
-          <div className="mt-6 relative aspect-video overflow-hidden rounded-lg border border-border">
-            <Image
-              src="/images/gallery/feature-vinyl-kitchen-door-wrapping-costs.jpeg"
-              alt="Rotherham kitchen cabinet and worktop wrapping example"
-              fill
-              className="object-cover"
-              sizes="(max-width: 768px) 100vw, 672px"
-            />
-          </div>
-          <p className="mt-4 text-muted leading-relaxed">
-            Recent S66 job: we wrapped cabinet doors in a low-sheen graphite
-            finish and added a lighter stone-effect worktop wrap for contrast.
-            The customer kept the same kitchen footprint but achieved a complete
-            visual reset.
+            Matt, gloss, woodgrain (oak, walnut, light oak), marble, concrete and
+            stone effect. Samples come to your survey so you can choose in your own light.
           </p>
         </div>
       </section>
@@ -110,53 +153,134 @@ export default function KitchenWrappingRotherhamPage() {
       <section className="border-y border-border bg-card py-12">
         <div className="container mx-auto max-w-3xl px-4">
           <h2 className="text-xl font-semibold text-foreground">
-            Testimonial from a Rotherham customer
+            How a Rotherham project runs
           </h2>
-          <div className="mt-6 rounded-lg border border-border bg-card p-6">
-            <p className="italic text-card-foreground">
+          <ol className="mt-4 list-inside list-decimal space-y-2 text-muted">
+            <li><strong>Free survey</strong> — we assess, measure and give you an honest suitability report.</li>
+            <li><strong>Fixed quote</strong> — in writing, before work starts.</li>
+            <li><strong>Installation</strong> — 1-3 days. Kitchen stays functional throughout.</li>
+            <li><strong>Walkround and sign-off</strong> — full check with you before we leave.</li>
+          </ol>
+        </div>
+      </section>
+
+      <section className="py-12">
+        <div className="container mx-auto max-w-3xl px-4">
+          <h2 className="text-xl font-semibold text-foreground">
+            What Rotherham kitchens typically cost
+          </h2>
+          <p className="mt-4 text-muted leading-relaxed">
+            Most Rotherham kitchen wraps fall between <strong>£850 and £1,400</strong>.
+            Worktop-only wraps start from around £250. Fixed price after free survey -
+            see the{" "}
+            <Link href="/kitchen-wrapping-cost/" className="text-accent hover:underline">
+              kitchen wrapping cost guide
+            </Link>{" "}
+            for details.
+          </p>
+        </div>
+      </section>
+
+      <section className="border-y border-border bg-card py-12">
+        <div className="container mx-auto max-w-3xl px-4">
+          <h2 className="text-xl font-semibold text-foreground">
+            From a Rotherham customer
+          </h2>
+          <blockquote className="mt-6 rounded-lg border border-border bg-card p-6 italic text-card-foreground">
+            <p>
               Really pleased with the result. Connor explained everything
               clearly and the kitchen still looks great a year on. No peeling,
               no fading. Definitely worth getting a quote.
             </p>
-            <p className="mt-4 text-sm text-muted-foreground">
-              — Lisa K., Rotherham
+            <p className="mt-4 text-sm not-italic text-muted-foreground">
+              — Lisa K., Rotherham (Wickersley)
             </p>
-          </div>
-          <p className="mt-4 text-muted leading-relaxed">
-            We provide practical aftercare guidance for the first weeks and long
-            term cleaning, so your finish keeps looking consistent and you get
-            full value from the work.
-          </p>
+          </blockquote>
         </div>
       </section>
 
       <section className="py-12">
         <div className="container mx-auto max-w-3xl px-4">
           <h2 className="text-xl font-semibold text-foreground">
-            Coverage — Rotherham and surrounding postcodes
+            Frequently asked questions — kitchen wrapping in Rotherham
           </h2>
-          <p className="mt-4 text-muted">
-            We cover Rotherham and the surrounding area. Postcode prefixes include {data.postcodes}. If you&apos;re just outside, get in touch — we may still cover you.
-          </p>
-          <p className="mt-4 text-muted">
-            {data.priceLine}
-          </p>
-          <h2 className="mt-8 text-xl font-semibold text-foreground">
-            Rotherham neighbourhood coverage
-          </h2>
-          <p className="mt-4 text-muted leading-relaxed">
-            Frequent areas include Wickersley, Maltby, Dinnington, Rawmarsh,
-            Swinton and nearby communities. If you are just outside these zones,
-            send your postcode and we will confirm whether we can visit.
-          </p>
+          <div className="mt-4 space-y-6">
+            <div>
+              <h3 className="font-semibold text-foreground">Can you wrap foil-wrapped doors that are already peeling?</h3>
+              <p className="mt-2 text-muted leading-relaxed">
+                Sometimes, but carefully. Peeling foil wrap needs to be fully removed
+                and the substrate properly prepared before new vinyl goes down. We&apos;ll
+                assess at the survey - if the underlying door material isn&apos;t suitable,
+                we&apos;ll tell you.
+              </p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-foreground">How long does kitchen wrapping take in Rotherham?</h3>
+              <p className="mt-2 text-muted leading-relaxed">
+                Most jobs take 1-3 days. We confirm the schedule when we provide
+                the fixed quote.
+              </p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-foreground">Do you cover all of Rotherham?</h3>
+              <p className="mt-2 text-muted leading-relaxed">
+                Yes - S60, S61, S62, S63, S64, S65, S66 and surrounding postcodes.
+                We regularly cover Wickersley, Maltby, Bramley, Rawmarsh, Swinton,
+                Wath-upon-Dearne, Kimberworth and surrounding areas.
+              </p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-foreground">Is a 5-year guarantee standard?</h3>
+              <p className="mt-2 text-muted leading-relaxed">
+                Yes. Every WRPX job comes with a 5-year guarantee on materials and
+                workmanship, named in writing on every job. It covers adhesion failure,
+                colour change and material defects.
+              </p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-foreground">Can I see examples before I commit?</h3>
+              <p className="mt-2 text-muted leading-relaxed">
+                Yes. You can browse our{" "}
+                <Link href="/gallery/" className="text-accent hover:underline">
+                  gallery
+                </Link>{" "}
+                for recent completed jobs.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
       <section className="border-y border-border bg-card py-12">
-        <div className="container mx-auto max-w-3xl px-4 text-center">
+        <div className="container mx-auto max-w-3xl px-4">
+          <h2 className="text-xl font-semibold text-foreground">
+            Rotherham postcode coverage
+          </h2>
+          <p className="mt-4 text-muted leading-relaxed">
+            S60, S61, S62, S63, S64, S65, S66 and surrounding areas.{" "}
+            <Link href="/contact/" className="text-accent hover:underline">
+              Send your postcode
+            </Link>{" "}
+            if you&apos;re unsure.
+          </p>
+        </div>
+      </section>
+
+      <section className="py-12">
+        <div className="container mx-auto max-w-3xl px-4 text-center space-y-4">
+          <h2 className="text-2xl font-semibold text-foreground">
+            Ready to transform your Rotherham kitchen?
+          </h2>
+          <p className="text-muted leading-relaxed">
+            Free survey, no obligation. Fixed quote before work starts. 5-year
+            guarantee on every job.
+          </p>
           <Link href="/contact/" className="btn-primary inline-block">
-            Book a Free Rotherham Survey
+            Book a Free Rotherham Survey →
           </Link>
+          <p className="text-muted">
+            Or call <strong>07398 395417</strong>
+          </p>
         </div>
       </section>
     </div>
