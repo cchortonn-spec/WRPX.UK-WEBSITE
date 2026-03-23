@@ -1,36 +1,75 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
-import { siteConfig } from "@/lib/site-config";
-import { locationPageData } from "@/lib/location-pages";
-import { testimonials } from "@/lib/testimonials";
-
-const data = locationPageData.Chesterfield;
-const testimonial = testimonials.find((t) => t.area === "Chesterfield")!;
+ 
 
 export const metadata: Metadata = {
-  title: "Kitchen Wrapping Chesterfield | Local Specialist, Free Quote",
+  title: "Kitchen Wrapping Chesterfield | 5-Year Guarantee | Free Survey",
   description:
-    "Kitchen wrapping in Chesterfield — Brampton, Newbold, Staveley, S40–S45. Doors and worktops in 1–3 days. Free quote.",
+    "WRPX wraps kitchens across Chesterfield — doors, drawer fronts, worktops and frames in premium 3M and CoverStyl vinyl. 5-year guarantee. Free survey, fixed quote. Call 07398 395417.",
   alternates: { canonical: "https://www.wrpx.co.uk/kitchen-wrapping-chesterfield/" },
 };
 
 export default function KitchenWrappingChesterfieldPage() {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      { "@type": "Question", name: "How long does kitchen wrapping take in Chesterfield?", acceptedAnswer: { "@type": "Answer", text: "Most jobs are 1-3 days. We confirm the exact schedule when we provide the fixed quote." } },
+      { "@type": "Question", name: "Do you cover Dronfield and the villages south of Chesterfield?", acceptedAnswer: { "@type": "Answer", text: "Yes - Dronfield, Unstone, Eckington and surrounding S18 and S21 areas are all within our operating range." } },
+      { "@type": "Question", name: "Can you wrap shaker-style doors?", acceptedAnswer: { "@type": "Answer", text: "Yes. Shaker profiles require careful film application at the detail edges, but this is standard for us. We assess the profile at the survey and confirm suitability." } },
+      { "@type": "Question", name: "Is the 5-year guarantee the same in Chesterfield as elsewhere?", acceptedAnswer: { "@type": "Answer", text: "Yes. Same guarantee, same terms, named in writing on every job regardless of location." } },
+    ],
+  };
+
+  const localBusinessSchema = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    name: "WRPX",
+    url: "https://www.wrpx.co.uk",
+    telephone: "+447398395417",
+    areaServed: ["Chesterfield", "S40-S45"],
+    geo: { "@type": "GeoCoordinates", latitude: 53.235, longitude: -1.4216 },
+  };
+
   return (
     <div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
+
       <section className="border-b border-border bg-card py-12 md:py-16">
         <div className="container mx-auto max-w-3xl px-4">
           <h1 className="text-3xl font-bold tracking-tight text-foreground">
-            Kitchen Wrapping Chesterfield — Local Specialist
+            Kitchen Wrapping Chesterfield — Local Specialist, 5-Year Guarantee
           </h1>
           <p className="mt-4 text-muted leading-relaxed">
-            Chesterfield and the surrounding area — Brampton, Newbold, Staveley, Hasland, Brimington and across S40–S45 — are on our regular run from South Yorkshire. Good availability and the same standard: free survey, honest advice, trade-level prep, {siteConfig.guaranteeYears}-year guarantee. No national franchise — you deal with a specialist who turns up when we say we will.
+            Chesterfield is at the southern edge of our operating area and we cover the whole
+            S40-S45 postcode range - from Brimington and Staveley through to Dronfield, Clay Cross and Tupton.
+            We&apos;re familiar with the housing across the area: ex-colliery village stock in the east,
+            period terraces in the town centre, and newer estates in the outer suburbs.
           </p>
           <p className="mt-4 text-muted leading-relaxed">
-            Many customers here are looking for a practical middle ground:
-            upgrade the look of an existing kitchen without committing to full
-            replacement costs. Wrapping is often ideal when cabinetry is still
-            sturdy and the main issue is finish style or wear on visible faces.
+            If your kitchen carcasses are in good condition and you want a significant visual
+            upgrade without the cost and disruption of a full replacement, vinyl wrapping is worth a quote.
+            Free survey, fixed price, 5-year guarantee on every job.
+          </p>
+          <div className="mt-6 rounded-lg border-l-4 border-accent bg-background p-4">
+            <p className="font-semibold text-foreground">5-year guarantee on materials and workmanship. Named on every job.</p>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-12">
+        <div className="container mx-auto max-w-3xl px-4">
+          <h2 className="text-xl font-semibold text-foreground">Chesterfield kitchens — what we find</h2>
+          <p className="mt-4 text-muted leading-relaxed">
+            Chesterfield has a strong mix of late-Victorian and Edwardian housing, with kitchens that vary considerably
+            depending on when they were last updated. We also cover former mining village housing with sound carcasses
+            and dated finishes.
+          </p>
+          <p className="mt-4 text-muted leading-relaxed">
+            Dronfield and rural areas between Chesterfield and Sheffield tend to have larger kitchens and better original
+            specification, but finishes that have dated significantly. A wrap on a well-maintained shaker or slab door
+            kitchen here is often one of the most satisfying upgrades.
           </p>
         </div>
       </section>
@@ -38,71 +77,24 @@ export default function KitchenWrappingChesterfieldPage() {
       <section className="py-12">
         <div className="container mx-auto max-w-3xl px-4">
           <h2 className="text-xl font-semibold text-foreground">
-            Why local matters
-          </h2>
-          <p className="mt-4 text-muted leading-relaxed">
-            We have capacity and respond quickly — no national franchise delay. Same person from survey to finish; you get a direct contact and a fixed quote after a free survey. Same guarantee and same team as everywhere we cover. Our reputation is in the area — we don&apos;t disappear after the job.
-          </p>
-          <p className="mt-4 text-muted leading-relaxed">
-            Local knowledge improves planning. We regularly see a mix of older
-            homes and newer developments around Chesterfield, each with different
-            light levels and door profiles. We tailor finish recommendations to
-            those conditions so results hold up in daily use.
-          </p>
-        </div>
-      </section>
-
-      <section className="border-y border-border bg-card py-12">
-        <div className="container mx-auto max-w-3xl px-4">
-          <h2 className="text-xl font-semibold text-foreground">
-            Finishes available in Chesterfield
-          </h2>
-          <p className="mt-4 text-muted leading-relaxed">
-            Matt, gloss, woodgrain (oak, walnut), marble, concrete and stone effect. We&apos;ll bring samples to the survey so you can choose in your own light.
-          </p>
-          <h2 className="mt-8 text-xl font-semibold text-foreground">
-            Services in Chesterfield
+            What we wrap in Chesterfield
           </h2>
           <ul className="mt-4 list-inside list-disc space-y-2 text-muted">
-            <li>Full kitchen wrap — doors, frames, panels, worktops</li>
-            <li>Worktop wrapping — marble, stone, wood-effect</li>
-            <li>Furniture and wardrobe wrap</li>
+            <li>Full kitchen wrap — doors, drawer fronts, carcass faces, end panels, plinths</li>
+            <li>Worktops — marble, stone and wood-effect heat-resistant vinyl</li>
+            <li>Splashbacks and tiled areas</li>
+            <li>Bedroom wardrobes and fitted furniture</li>
+            <li>Bathroom vanity units</li>
           </ul>
-          <h2 className="mt-8 text-xl font-semibold text-foreground">
-            Typical Chesterfield kitchen wrap requests
-          </h2>
-          <ul className="mt-4 list-inside list-disc space-y-2 text-muted">
-            <li>Replacing glossy cream looks with modern matte tones</li>
-            <li>Updating wood-effect doors for a cleaner contemporary style</li>
-            <li>Coordinating worktops and cabinet fronts into one palette</li>
-            <li>Refreshing kitchens before moving house or refinancing</li>
-          </ul>
-          <p className="mt-4 text-muted">
-            <Link href="/kitchen-wrapping-cost/" className="text-accent hover:underline">
-              Kitchen wrapping cost guide
-            </Link> — typical prices and what&apos;s included.
-          </p>
         </div>
       </section>
 
       <section className="py-12">
         <div className="container mx-auto max-w-3xl px-4">
-          <h2 className="text-xl font-semibold text-foreground">
-            Recent work in Chesterfield
-          </h2>
-          <div className="mt-6 relative aspect-video overflow-hidden rounded-lg border border-border">
-            <Image
-              src="/images/gallery/wrapped-kitchen-doors-worktop-south-yorkshire.jpg"
-              alt="Kitchen wrap project completed in Chesterfield"
-              fill
-              className="object-cover"
-              sizes="(max-width: 768px) 100vw, 672px"
-            />
-          </div>
+          <h2 className="text-xl font-semibold text-foreground">Finishes available in Chesterfield</h2>
           <p className="mt-4 text-muted leading-relaxed">
-            Recent S41 example: cabinet doors were wrapped to a charcoal matte
-            finish with a lighter stone-look worktop wrap for contrast. The room
-            felt completely refreshed without altering layout or appliances.
+            Matt, gloss, woodgrain (oak, light oak, walnut), marble, concrete and stone effect.
+            Physical samples to every survey.
           </p>
         </div>
       </section>
@@ -110,51 +102,91 @@ export default function KitchenWrappingChesterfieldPage() {
       <section className="border-y border-border bg-card py-12">
         <div className="container mx-auto max-w-3xl px-4">
           <h2 className="text-xl font-semibold text-foreground">
-            Testimonial from a Chesterfield customer
+            How a Chesterfield project runs
           </h2>
-          <div className="mt-6 rounded-lg border border-border bg-card p-6">
-            <p className="italic text-card-foreground">
-              {testimonial.quote}
-            </p>
-            <p className="mt-4 text-sm text-muted-foreground">
-              — {testimonial.name}, {testimonial.area}
-            </p>
-          </div>
-          <p className="mt-4 text-muted leading-relaxed">
-            We keep feedback grounded in real local projects and back it with a
-            clear process so customers know what quality to expect before work
-            begins.
-          </p>
+          <ol className="mt-4 list-inside list-decimal space-y-2 text-muted">
+            <li><strong>Free survey</strong> — honest assessment and accurate measurements.</li>
+            <li><strong>Fixed quote</strong> — in writing before work starts.</li>
+            <li><strong>Installation</strong> — 1-3 days, kitchen stays functional throughout.</li>
+            <li><strong>Walkround and sign-off</strong> — checked with you before we leave.</li>
+          </ol>
         </div>
       </section>
 
       <section className="py-12">
         <div className="container mx-auto max-w-3xl px-4">
           <h2 className="text-xl font-semibold text-foreground">
-            Coverage — Chesterfield and surrounding postcodes
-          </h2>
-          <p className="mt-4 text-muted">
-            We cover Chesterfield and the surrounding area. Postcode prefixes include {data.postcodes}. If you&apos;re just outside, get in touch — we may still cover you.
-          </p>
-          <p className="mt-4 text-muted">
-            {data.priceLine}
-          </p>
-          <h2 className="mt-8 text-xl font-semibold text-foreground">
-            Areas covered around Chesterfield
+            What Chesterfield kitchens typically cost
           </h2>
           <p className="mt-4 text-muted leading-relaxed">
-            We frequently cover Brampton, Newbold, Staveley, Hasland,
-            Brimington and nearby communities. If you are outside S40-S45, send
-            your postcode and we will confirm travel and availability.
+            Most Chesterfield jobs fall between <strong>£850 and £1,400</strong>. Travel included in quote.
+            Worktop-only wraps from around £250. See the{" "}
+            <Link href="/kitchen-wrapping-cost/" className="text-accent hover:underline">kitchen wrapping cost guide</Link>.
+          </p>
+          <p className="mt-4 text-muted leading-relaxed">
+            See recent completed jobs in our{" "}
+            <Link href="/gallery/" className="text-accent hover:underline">gallery</Link>.
           </p>
         </div>
       </section>
 
       <section className="border-y border-border bg-card py-12">
-        <div className="container mx-auto max-w-3xl px-4 text-center">
+        <div className="container mx-auto max-w-3xl px-4">
+          <h2 className="text-xl font-semibold text-foreground">From a Chesterfield customer</h2>
+          <blockquote className="mt-6 rounded-lg border border-border bg-card p-6 italic text-card-foreground">
+            <p>
+              Had our doors and worktops wrapped last year. Connor was on time, left the place tidy,
+              and the result has lasted really well. Honest advice and a fair price.
+            </p>
+            <p className="mt-4 text-sm not-italic text-muted-foreground">— Rachel F., Chesterfield (Dronfield)</p>
+          </blockquote>
+        </div>
+      </section>
+
+      <section className="py-12">
+        <div className="container mx-auto max-w-3xl px-4">
+          <h2 className="text-xl font-semibold text-foreground">Frequently asked questions — kitchen wrapping in Chesterfield</h2>
+          <div className="mt-4 space-y-6">
+            <div>
+              <h3 className="font-semibold text-foreground">How long does kitchen wrapping take in Chesterfield?</h3>
+              <p className="mt-2 text-muted leading-relaxed">Most jobs are 1-3 days. We confirm the schedule with the fixed quote.</p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-foreground">Do you cover Dronfield and villages south of Chesterfield?</h3>
+              <p className="mt-2 text-muted leading-relaxed">Yes - Dronfield, Unstone, Eckington and surrounding S18/S21 areas are within range.</p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-foreground">Can you wrap shaker-style doors?</h3>
+              <p className="mt-2 text-muted leading-relaxed">Yes. Shaker profiles need careful detail-edge application, which is standard for us.</p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-foreground">Is the 5-year guarantee the same in Chesterfield as elsewhere?</h3>
+              <p className="mt-2 text-muted leading-relaxed">Yes. Same guarantee and terms, named in writing on every job.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-y border-border bg-card py-12">
+        <div className="container mx-auto max-w-3xl px-4">
+          <h2 className="text-xl font-semibold text-foreground">Chesterfield postcode coverage</h2>
+          <p className="mt-4 text-muted leading-relaxed">
+            S40, S41, S42, S43, S44, S45 and surrounding areas including Brimington, Staveley,
+            Clay Cross, Tupton, Dronfield and surrounding S18 and S21 postcodes.
+          </p>
+        </div>
+      </section>
+
+      <section className="py-12">
+        <div className="container mx-auto max-w-3xl px-4 text-center space-y-4">
+          <h2 className="text-2xl font-semibold text-foreground">Ready to transform your Chesterfield kitchen?</h2>
+          <p className="text-muted leading-relaxed">
+            Free survey, no obligation. Fixed quote before work starts. 5-year guarantee on every job.
+          </p>
           <Link href="/contact/" className="btn-primary inline-block">
-            Book a Free Chesterfield Survey
+            Book a Free Chesterfield Survey →
           </Link>
+          <p className="text-muted">Or call <strong>07398 395417</strong></p>
         </div>
       </section>
     </div>

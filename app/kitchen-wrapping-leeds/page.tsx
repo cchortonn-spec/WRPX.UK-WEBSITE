@@ -1,37 +1,72 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
-import { siteConfig } from "@/lib/site-config";
-import { locationPageData } from "@/lib/location-pages";
-import { testimonials } from "@/lib/testimonials";
-
-const data = locationPageData.Leeds;
-const testimonial = testimonials.find((t) => t.area === "Leeds")!;
+ 
 
 export const metadata: Metadata = {
-  title: "Kitchen Wrapping Leeds | Local Specialist, Free Quote",
+  title: "Kitchen Wrapping Leeds | 5-Year Guarantee | Free Survey",
   description:
-    "Kitchen wrapping in Leeds — Headingley, Roundhay, Horsforth, Pudsey and LS1–LS29. Doors and worktops in 1–3 days. Free quote.",
+    "WRPX wraps kitchens across Leeds — doors, drawer fronts, worktops and frames in premium 3M and CoverStyl vinyl. 5-year guarantee. Free survey, fixed quote. Call 07398 395417.",
   alternates: { canonical: "https://www.wrpx.co.uk/kitchen-wrapping-leeds/" },
 };
 
 export default function KitchenWrappingLeedsPage() {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      { "@type": "Question", name: "Do you charge extra to travel to Leeds?", acceptedAnswer: { "@type": "Answer", text: "No. Travel is included in the quote. You get the same fixed-price process as any South Yorkshire job." } },
+      { "@type": "Question", name: "Can you wrap mixed-cabinet kitchens where doors aren't all the same type?", acceptedAnswer: { "@type": "Answer", text: "Yes, though it requires careful assessment. Mixed cabinet types sometimes have different substrates that need different prep approaches. We identify this at the survey and spec accordingly." } },
+      { "@type": "Question", name: "Is vinyl wrapping suitable for a rental property in Leeds?", acceptedAnswer: { "@type": "Answer", text: "Yes - we can recommend films that are robust, easy to clean, and appropriate for tenant use. A worktop-only wrap is also a very cost-effective upgrade for rental kitchens." } },
+      { "@type": "Question", name: "Do you cover the whole of Leeds?", acceptedAnswer: { "@type": "Answer", text: "We cover most LS postcodes including the city, inner suburbs, and outer Leeds as far as Wetherby, Garforth, Morley and Pudsey." } },
+    ],
+  };
+
+  const localBusinessSchema = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    name: "WRPX",
+    url: "https://www.wrpx.co.uk",
+    telephone: "+447398395417",
+    areaServed: ["Leeds", "LS1-LS28"],
+    geo: { "@type": "GeoCoordinates", latitude: 53.8008, longitude: -1.5491 },
+  };
+
   return (
     <div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
+
       <section className="border-b border-border bg-card py-12 md:py-16">
         <div className="container mx-auto max-w-3xl px-4">
           <h1 className="text-3xl font-bold tracking-tight text-foreground">
-            Kitchen Wrapping Leeds — Local Specialist
+            Kitchen Wrapping Leeds — Local Specialist, 5-Year Guarantee
           </h1>
           <p className="mt-4 text-muted leading-relaxed">
-            Leeds — from Headingley and Roundhay to Horsforth, Pudsey, Morley and across LS postcodes — is on our South Yorkshire and surrounding areas patch. Same offer as everywhere: free survey, honest advice, trade-level prep and a named {siteConfig.guaranteeYears}-year guarantee. If your kitchen is suitable for wrapping, we&apos;ll give you a fixed quote and a clear process.
+            We cover Leeds and the surrounding areas from our South Yorkshire base - typically 30-45 minutes from most LS postcodes.
+            Leeds has a wide mix of property types, and we&apos;re familiar with most of them: back-to-back terraces in Armley and Beeston,
+            large Edwardian semis in Chapel Allerton and Roundhay, post-war estates in Seacroft and Halton, and modern city-fringe apartments.
           </p>
           <p className="mt-4 text-muted leading-relaxed">
-            Wrapping is usually chosen when people want to keep a functional
-            layout but replace a dated look. It can be a strong option for busy
-            family homes and city properties where a full replacement would cause
-            too much disruption. We focus on preparation and edge finish so the
-            end result looks intentional and consistent.
+            Each kitchen gets an individual assessment. If the structure is sound, vinyl wrapping gives you a significant visual
+            upgrade at typically 70-80% less than a full replacement. We&apos;ll tell you at the survey whether wrapping is right.
+          </p>
+          <div className="mt-6 rounded-lg border-l-4 border-accent bg-background p-4">
+            <p className="font-semibold text-foreground">5-year guarantee on materials and workmanship. Named on every job.</p>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-12">
+        <div className="container mx-auto max-w-3xl px-4">
+          <h2 className="text-xl font-semibold text-foreground">Leeds kitchens — what we find</h2>
+          <p className="mt-4 text-muted leading-relaxed">
+            Leeds has a higher proportion of older housing than many comparable cities, which means we see a lot of traditional
+            timber and foil-wrapped cabinet doors in varying conditions. Victorian and Edwardian properties often have kitchens
+            that have been through multiple updates, sometimes with mixed cabinet types.
+          </p>
+          <p className="mt-4 text-muted leading-relaxed">
+            Newer housing in outer Leeds tends to have developer-spec kitchens from the 1990s and 2000s that are structurally
+            solid but dated in finish. These are typically straightforward wrap jobs.
           </p>
         </div>
       </section>
@@ -39,17 +74,15 @@ export default function KitchenWrappingLeedsPage() {
       <section className="py-12">
         <div className="container mx-auto max-w-3xl px-4">
           <h2 className="text-xl font-semibold text-foreground">
-            Why local matters
+            What we wrap in Leeds
           </h2>
-          <p className="mt-4 text-muted leading-relaxed">
-            You get the same local service as in Sheffield or Doncaster: same team, same guarantee, no national franchise markup. We respond quickly and book surveys at times that suit you. Same person from survey to finish — our reputation is in the region and we don&apos;t disappear after the job.
-          </p>
-          <p className="mt-4 text-muted leading-relaxed">
-            Leeds has a mix of converted flats, period terraces and newer open
-            plan homes, so design choices vary a lot from project to project. We
-            bring curated samples and review them in your kitchen lighting so you
-            can choose a finish that works in real life, not just online.
-          </p>
+          <ul className="mt-4 list-inside list-disc space-y-2 text-muted">
+            <li>Full kitchen wrap — doors, drawer fronts, carcass faces, end panels, plinths, cornice</li>
+            <li>Worktops — marble, stone and wood-effect heat-resistant vinyl</li>
+            <li>Splashbacks and tiled areas</li>
+            <li>Bedroom wardrobes and fitted storage</li>
+            <li>Bathroom vanity units and home office units</li>
+          </ul>
         </div>
       </section>
 
@@ -59,29 +92,10 @@ export default function KitchenWrappingLeedsPage() {
             Finishes available in Leeds
           </h2>
           <p className="mt-4 text-muted leading-relaxed">
-            Matt, gloss, woodgrain (oak, walnut), marble, concrete and stone effect. We&apos;ll bring samples to the survey so you can choose in your own light.
+            Matt, gloss, woodgrain (oak, light oak, walnut), marble, concrete and stone effect. Physical samples at every survey.
           </p>
-          <h2 className="mt-8 text-xl font-semibold text-foreground">
-            Services available in Leeds
-          </h2>
-          <ul className="mt-4 list-inside list-disc space-y-2 text-muted">
-            <li>Full kitchen wrap — doors, frames, panels, worktops</li>
-            <li>Worktop wrapping — marble, stone, wood-effect</li>
-            <li>Furniture and wardrobe wrap</li>
-          </ul>
-          <h2 className="mt-8 text-xl font-semibold text-foreground">
-            Typical Leeds outcomes
-          </h2>
-          <ul className="mt-4 list-inside list-disc space-y-2 text-muted">
-            <li>Wood-tone kitchens moved to modern neutral matte colours</li>
-            <li>Rental properties refreshed for quicker re-let presentation</li>
-            <li>Worktops and cabinet fronts coordinated into one clean scheme</li>
-            <li>Older style doors modernised without changing carcasses</li>
-          </ul>
           <p className="mt-4 text-muted">
-            <Link href="/kitchen-wrapping-cost/" className="text-accent hover:underline">
-              Kitchen wrapping cost guide
-            </Link> — typical prices and what&apos;s included.
+            Popular choices in Leeds currently: linen grey soft-touch matt, natural oak effect, and Calacatta marble worktop film.
           </p>
         </div>
       </section>
@@ -89,43 +103,30 @@ export default function KitchenWrappingLeedsPage() {
       <section className="py-12">
         <div className="container mx-auto max-w-3xl px-4">
           <h2 className="text-xl font-semibold text-foreground">
-            Recent work in Leeds
+            How a Leeds project runs
           </h2>
-          <div className="mt-6 relative aspect-video overflow-hidden rounded-lg border border-border">
-            <Image
-              src="/images/gallery/kitchen-wrap-full-kitchen-south-yorkshire.jpg"
-              alt="Kitchen wrap installation in Leeds with updated cabinet finish"
-              fill
-              className="object-cover"
-              sizes="(max-width: 768px) 100vw, 672px"
-            />
-          </div>
-          <p className="mt-4 text-muted leading-relaxed">
-            Example LS area project: the customer wanted a brighter look without
-            changing appliances. We wrapped doors in a warm off-white matte and
-            used a subtle stone-effect worktop finish to modernise the room while
-            keeping costs controlled.
-          </p>
+          <ol className="mt-4 list-inside list-decimal space-y-2 text-muted">
+            <li><strong>Free survey</strong> — assess and honest suitability report.</li>
+            <li><strong>Fixed quote</strong> — in writing before any work starts.</li>
+            <li><strong>Installation</strong> — 1-3 days, no rip-out, kitchen functional.</li>
+            <li><strong>Walkround and sign-off</strong> — full check before we leave.</li>
+          </ol>
         </div>
       </section>
 
       <section className="border-y border-border bg-card py-12">
         <div className="container mx-auto max-w-3xl px-4">
           <h2 className="text-xl font-semibold text-foreground">
-            Testimonial from a Leeds customer
+            What Leeds kitchens typically cost
           </h2>
-          <div className="mt-6 rounded-lg border border-border bg-card p-6">
-            <p className="italic text-card-foreground">
-              {testimonial.quote}
-            </p>
-            <p className="mt-4 text-sm text-muted-foreground">
-              — {testimonial.name}, {testimonial.area}
-            </p>
-          </div>
           <p className="mt-4 text-muted leading-relaxed">
-            We match this feedback with practical recommendations at survey
-            stage, including where wrapping is not suitable due to damage or
-            moisture, so quality is protected long term.
+            Most Leeds kitchen wraps fall between <strong>£900 and £1,600</strong> depending on door count, finish and worktops.
+            Travel to LS postcodes is included in the quote. Worktop-only wraps from around £250. See the{" "}
+            <Link href="/kitchen-wrapping-cost/" className="text-accent hover:underline">kitchen wrapping cost guide</Link>.
+          </p>
+          <p className="mt-4 text-muted leading-relaxed">
+            See completed jobs in our{" "}
+            <Link href="/gallery/" className="text-accent hover:underline">gallery</Link>.
           </p>
         </div>
       </section>
@@ -133,30 +134,70 @@ export default function KitchenWrappingLeedsPage() {
       <section className="py-12">
         <div className="container mx-auto max-w-3xl px-4">
           <h2 className="text-xl font-semibold text-foreground">
-            Coverage — Leeds and surrounding postcodes
+            From a Leeds customer
           </h2>
-          <p className="mt-4 text-muted">
-            We cover Leeds and the surrounding area. Postcode prefixes include {data.postcodes}. If you&apos;re just outside, get in touch — we may still cover you.
-          </p>
-          <p className="mt-4 text-muted">
-            {data.priceLine}
-          </p>
-          <h2 className="mt-8 text-xl font-semibold text-foreground">
-            Leeds areas we regularly visit
-          </h2>
+          <blockquote className="mt-6 rounded-lg border border-border bg-card p-6 italic text-card-foreground">
+            <p>
+              Needed a quick refresh without the hassle of a new kitchen. Connor gave us a straight quote,
+              no mess, and the wrap still looks spot on. Really glad we went with WRPX.
+            </p>
+            <p className="mt-4 text-sm not-italic text-muted-foreground">— Emma R., Leeds (Roundhay)</p>
+          </blockquote>
+        </div>
+      </section>
+
+      <section className="py-12">
+        <div className="container mx-auto max-w-3xl px-4">
+          <h2 className="text-xl font-semibold text-foreground">Frequently asked questions — kitchen wrapping in Leeds</h2>
+          <div className="mt-4 space-y-6">
+            <div>
+              <h3 className="font-semibold text-foreground">Do you charge extra to travel to Leeds?</h3>
+              <p className="mt-2 text-muted leading-relaxed">No. Travel is included in the quote.</p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-foreground">How long does kitchen wrapping take in Leeds?</h3>
+              <p className="mt-2 text-muted leading-relaxed">Most jobs are 1-3 days.</p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-foreground">Can you wrap mixed-cabinet kitchens?</h3>
+              <p className="mt-2 text-muted leading-relaxed">Yes, with careful assessment and substrate-specific prep.</p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-foreground">Do you cover the whole of Leeds?</h3>
+              <p className="mt-2 text-muted leading-relaxed">
+                We cover most LS postcodes - including city, inner suburbs, and outer Leeds.
+                If you&apos;re on the boundary,{" "}
+                <Link href="/contact/" className="text-accent hover:underline">send your postcode</Link>.
+              </p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-foreground">Is vinyl wrapping suitable for a rental property in Leeds?</h3>
+              <p className="mt-2 text-muted leading-relaxed">Yes - robust easy-clean film options are available.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-y border-border bg-card py-12">
+        <div className="container mx-auto max-w-3xl px-4">
+          <h2 className="text-xl font-semibold text-foreground">Leeds postcode coverage</h2>
           <p className="mt-4 text-muted leading-relaxed">
-            Common enquiries come from Headingley, Roundhay, Horsforth, Pudsey,
-            Morley and nearby areas. If your postcode is just outside our normal
-            route, send it over and we will confirm availability.
+            LS1 through to LS28 and surrounding areas including Headingley, Chapel Allerton,
+            Roundhay, Armley, Beeston, Morley, Garforth, Wetherby, Pudsey, Seacroft and Halton.
           </p>
         </div>
       </section>
 
       <section className="py-12">
-        <div className="container mx-auto max-w-3xl px-4 text-center">
+        <div className="container mx-auto max-w-3xl px-4 text-center space-y-4">
+          <h2 className="text-2xl font-semibold text-foreground">Ready to transform your Leeds kitchen?</h2>
+          <p className="text-muted leading-relaxed">
+            Free survey, no obligation. Fixed quote before work starts. 5-year guarantee on every job.
+          </p>
           <Link href="/contact/" className="btn-primary inline-block">
-            Book a Free Leeds Survey
+            Book a Free Leeds Survey →
           </Link>
+          <p className="text-muted">Or call <strong>07398 395417</strong></p>
         </div>
       </section>
     </div>
