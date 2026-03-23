@@ -24,6 +24,13 @@ export default function KitchenWrappingRotherhamPage() {
           <p className="mt-4 text-muted leading-relaxed">
             Rotherham and the surrounding areas — Wickersley, Maltby, Dinnington, Rawmarsh, Swinton and across S60–S66 — are within our South Yorkshire coverage. We&apos;ve wrapped kitchens from town centre to the outskirts. Same process everywhere: free survey, honest suitability check, then prep and wrap with a named {siteConfig.guaranteeYears}-year guarantee.
           </p>
+          <p className="mt-4 text-muted leading-relaxed">
+            If your current kitchen is tired but still structurally solid,
+            wrapping can give you a cleaner and more modern finish with less
+            disruption than replacement. We plan each job around your layout and
+            day-to-day use so the final result looks consistent across all visible
+            surfaces.
+          </p>
         </div>
       </section>
 
@@ -34,6 +41,12 @@ export default function KitchenWrappingRotherhamPage() {
           </h2>
           <p className="mt-4 text-muted leading-relaxed">
             We cover the Rotherham area and have built a strong track record of before-and-after results here. Same person from survey to finish — no national call centre. We&apos;re easy to get hold of for follow-up or advice; you deal with the team that did the job and a guarantee that&apos;s honoured locally.
+          </p>
+          <p className="mt-4 text-muted leading-relaxed">
+            Local service matters when properties differ block by block. A home
+            in Wickersley may need a different colour strategy to a rental unit
+            near the town centre. We help you choose practical finishes that
+            balance style with long-term durability.
           </p>
         </div>
       </section>
@@ -54,6 +67,15 @@ export default function KitchenWrappingRotherhamPage() {
             <li>Worktop wrapping — marble, stone, wood-effect</li>
             <li>Furniture and wardrobe wrap</li>
           </ul>
+          <h2 className="mt-8 text-xl font-semibold text-foreground">
+            Rotherham kitchen wrapping examples
+          </h2>
+          <ul className="mt-4 list-inside list-disc space-y-2 text-muted">
+            <li>Dark oak doors updated to smooth warm-grey matte</li>
+            <li>Busy granite-pattern worktops changed to simple stone-look film</li>
+            <li>Rental kitchens refreshed quickly between tenants</li>
+            <li>Cabinet fronts modernised while keeping appliances in place</li>
+          </ul>
           <p className="mt-4 text-muted">
             <Link href="/kitchen-wrapping-cost/" className="text-accent hover:underline">
               Kitchen wrapping cost guide
@@ -70,12 +92,18 @@ export default function KitchenWrappingRotherhamPage() {
           <div className="mt-6 relative aspect-video overflow-hidden rounded-lg border border-border">
             <Image
               src="/images/gallery/feature-vinyl-kitchen-door-wrapping-costs.jpeg"
-              alt="Kitchen wrap Rotherham — recent project"
+              alt="Rotherham kitchen cabinet and worktop wrapping example"
               fill
               className="object-cover"
               sizes="(max-width: 768px) 100vw, 672px"
             />
           </div>
+          <p className="mt-4 text-muted leading-relaxed">
+            Recent S66 job: we wrapped cabinet doors in a low-sheen graphite
+            finish and added a lighter stone-effect worktop wrap for contrast.
+            The customer kept the same kitchen footprint but achieved a complete
+            visual reset.
+          </p>
         </div>
       </section>
 
@@ -94,6 +122,11 @@ export default function KitchenWrappingRotherhamPage() {
               — Lisa K., Rotherham
             </p>
           </div>
+          <p className="mt-4 text-muted leading-relaxed">
+            We provide practical aftercare guidance for the first weeks and long
+            term cleaning, so your finish keeps looking consistent and you get
+            full value from the work.
+          </p>
         </div>
       </section>
 
@@ -107,6 +140,14 @@ export default function KitchenWrappingRotherhamPage() {
           </p>
           <p className="mt-4 text-muted">
             {data.priceLine}
+          </p>
+          <h2 className="mt-8 text-xl font-semibold text-foreground">
+            Rotherham neighbourhood coverage
+          </h2>
+          <p className="mt-4 text-muted leading-relaxed">
+            Frequent areas include Wickersley, Maltby, Dinnington, Rawmarsh,
+            Swinton and nearby communities. If you are just outside these zones,
+            send your postcode and we will confirm whether we can visit.
           </p>
         </div>
       </section>
