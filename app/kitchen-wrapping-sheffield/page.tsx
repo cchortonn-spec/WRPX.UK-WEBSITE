@@ -25,6 +25,13 @@ export default function KitchenWrappingSheffieldPage() {
             terraces, new builds and everything in between — we assess each job
             on its own and tell you straight if a wrap is the right option.
           </p>
+          <p className="mt-4 text-muted leading-relaxed">
+            Most clients contact us because they want a full visual upgrade
+            without ripping out a working kitchen. If the cabinet structure is
+            sound, wrapping usually gives the biggest visual change for the
+            budget. Our process is simple: free survey, prep plan, fixed quote,
+            then careful installation over 1-3 days depending on size.
+          </p>
         </div>
       </section>
 
@@ -36,6 +43,13 @@ export default function KitchenWrappingSheffieldPage() {
           <p className="mt-4 text-muted leading-relaxed">
             We&apos;re not a national franchise — we&apos;re a local specialist. You get the same person from survey to finish, so nothing gets lost in handover. Our reputation is in Sheffield; we don&apos;t disappear after the job. We turn up when we say we will and come back if you need us.
           </p>
+          <p className="mt-4 text-muted leading-relaxed">
+            In Sheffield that matters because properties vary so much. A flat in
+            Kelham Island with slab doors needs a different prep approach from a
+            family kitchen in S12 with detailed shaker profiles. Local
+            experience means we can spot issues early, set realistic timings,
+            and avoid surprise costs halfway through.
+          </p>
         </div>
       </section>
 
@@ -46,6 +60,13 @@ export default function KitchenWrappingSheffieldPage() {
           </h2>
           <p className="mt-4 text-muted leading-relaxed">
             We use branded films (3M, CoverStyl and equivalent) and a {siteConfig.guaranteeYears}-year guarantee on every job. Same person from survey to install — no subcontractors, no call centre. Honest advice: we&apos;ll say no if wrapping isn&apos;t right. Our reputation is in Sheffield; we don&apos;t disappear after the job.
+          </p>
+          <p className="mt-4 text-muted leading-relaxed">
+            You also get practical support before we start. We walk you through
+            edge details, handle style, and finish durability so you can choose
+            what suits your household. If you have pets, young children, or a
+            busy rental property, we recommend films and textures that are easy
+            to clean and less likely to mark.
           </p>
         </div>
       </section>
@@ -66,6 +87,16 @@ export default function KitchenWrappingSheffieldPage() {
             <li>Worktop wrapping — marble, stone, wood-effect</li>
             <li>Furniture and wardrobe wrap — bedrooms, bathrooms, offices</li>
           </ul>
+          <h2 className="mt-8 text-xl font-semibold text-foreground">
+            How a typical Sheffield project runs
+          </h2>
+          <ul className="mt-4 list-inside list-disc space-y-2 text-muted">
+            <li>Day 1: detailed survey, measurements, finish shortlist</li>
+            <li>Pre-start: confirmed installation plan and fixed quote</li>
+            <li>Install: remove hardware, degrease, abrade, prime where needed</li>
+            <li>Wrap: precision edge work around hinges, corners and returns</li>
+            <li>Finish: refit handles/doors, quality checks and aftercare advice</li>
+          </ul>
           <p className="mt-4 text-muted">
             <Link href="/kitchen-wrapping-cost/" className="text-accent hover:underline">
               Kitchen wrapping cost guide
@@ -82,12 +113,19 @@ export default function KitchenWrappingSheffieldPage() {
           <div className="mt-6 relative aspect-video overflow-hidden rounded-lg border border-border">
             <Image
               src="/images/gallery/IMG_8145.webp"
-              alt="Kitchen wrap Sheffield — recent project"
+              alt="Kitchen wrapping project in Sheffield with new dark cabinet finish"
               fill
               className="object-cover"
               sizes="(max-width: 768px) 100vw, 672px"
             />
           </div>
+          <p className="mt-4 text-muted leading-relaxed">
+            Example: a family kitchen near Nether Edge had yellowing cream doors
+            and worn worktops but solid cabinet carcasses. We wrapped the doors
+            in a soft matte graphite, swapped to brushed metal handles, and
+            finished the worktops in a stone-look film. The room looked fully
+            modernised without changing the kitchen layout.
+          </p>
         </div>
       </section>
 
@@ -107,6 +145,12 @@ export default function KitchenWrappingSheffieldPage() {
               — Sarah M., Sheffield
             </p>
           </div>
+          <p className="mt-4 text-muted leading-relaxed">
+            We keep each testimonial tied to real local jobs and avoid reusing
+            the exact same trust copy across every city page. That helps you see
+            realistic outcomes for Sheffield properties, not generic nationwide
+            claims.
+          </p>
         </div>
       </section>
 
@@ -123,6 +167,15 @@ export default function KitchenWrappingSheffieldPage() {
           </p>
           <p className="mt-4 text-muted">
             Most Sheffield kitchens are quoted between £850 and £1,500 depending on size and finish. Free survey for a fixed price — no obligation.
+          </p>
+          <h2 className="mt-8 text-xl font-semibold text-foreground">
+            Popular Sheffield areas we cover
+          </h2>
+          <p className="mt-4 text-muted leading-relaxed">
+            Regular enquiries come from Hillsborough, Ecclesall, Nether Edge,
+            Walkley, Crookes, Woodseats, Mosborough, Woodhouse and Meadowhead.
+            If you are near the Sheffield boundary, send your postcode and we
+            will confirm availability quickly.
           </p>
         </div>
       </section>

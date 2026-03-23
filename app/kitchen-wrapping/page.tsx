@@ -41,6 +41,21 @@ export default function KitchenWrappingPage() {
         </div>
       </section>
 
+      <section className="border-b border-border bg-card px-4 py-8">
+        <div className="container mx-auto max-w-3xl">
+          <div className="rounded-xl border-2 border-accent/40 bg-background p-6">
+            <p className="text-sm font-semibold uppercase tracking-wide text-accent">
+              5-year guarantee
+            </p>
+            <p className="mt-2 text-muted leading-relaxed">
+              Every eligible kitchen wrapping job includes a named{" "}
+              {siteConfig.guaranteeYears}-year guarantee on material defects,
+              colour stability and adhesion when maintained as advised.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section className="px-4 py-16">
         <div className="container mx-auto max-w-3xl space-y-8">
           <div className="card-float p-8">

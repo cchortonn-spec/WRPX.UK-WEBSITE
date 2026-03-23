@@ -26,6 +26,12 @@ export default function KitchenWrappingHuddersfieldPage() {
           <p className="mt-4 text-muted leading-relaxed">
             Huddersfield — from Lindley and Milnsbridge to Golcar, Meltham, Holmfirth and across HD postcodes — is within our coverage area. We&apos;ve wrapped kitchens across the town and surrounding areas. You get the same process: free survey, honest suitability check, then prep and wrap with a named {siteConfig.guaranteeYears}-year guarantee. South Yorkshire based — no national franchise, no distant depot.
           </p>
+          <p className="mt-4 text-muted leading-relaxed">
+            If your layout still works but the finish is dated, wrapping can give
+            you a major visual update while avoiding full replacement disruption.
+            We quote based on the real condition of doors and panels, then follow
+            a structured process so there are no surprises once work starts.
+          </p>
         </div>
       </section>
 
@@ -36,6 +42,12 @@ export default function KitchenWrappingHuddersfieldPage() {
           </h2>
           <p className="mt-4 text-muted leading-relaxed">
             We&apos;re South Yorkshire based and regularly in the Huddersfield area. Same team from survey to finish: no subcontractors, no handover to another crew. You get one point of contact and a guarantee that&apos;s honoured locally. We turn up when we say we will and come back if you need us.
+          </p>
+          <p className="mt-4 text-muted leading-relaxed">
+            Local work patterns matter here, especially across hillside areas and
+            older homes where kitchens can have unusual shapes. We assess
+            practical details first, then recommend finishes that suit your
+            lighting and how heavily the kitchen is used.
           </p>
         </div>
       </section>
@@ -56,6 +68,15 @@ export default function KitchenWrappingHuddersfieldPage() {
             <li>Worktop wrapping — marble, stone, wood-effect</li>
             <li>Furniture and wardrobe wrap</li>
           </ul>
+          <h2 className="mt-8 text-xl font-semibold text-foreground">
+            What customers in Huddersfield ask for most
+          </h2>
+          <ul className="mt-4 list-inside list-disc space-y-2 text-muted">
+            <li>Modern matte cabinet finishes in neutral tones</li>
+            <li>Worktop wraps that reduce busy patterning</li>
+            <li>Simple handle upgrades with wrapped door fronts</li>
+            <li>Fast kitchen refreshes before listing or remortgaging</li>
+          </ul>
           <p className="mt-4 text-muted">
             <Link href="/kitchen-wrapping-cost/" className="text-accent hover:underline">
               Kitchen wrapping cost guide
@@ -72,12 +93,17 @@ export default function KitchenWrappingHuddersfieldPage() {
           <div className="mt-6 relative aspect-video overflow-hidden rounded-lg border border-border">
             <Image
               src="/images/gallery/kitchen-cabinet-wrap-south-yorkshire.jpg"
-              alt="Kitchen wrap Huddersfield — recent project"
+              alt="Kitchen wrapping example for a Huddersfield home"
               fill
               className="object-cover"
               sizes="(max-width: 768px) 100vw, 672px"
             />
           </div>
+          <p className="mt-4 text-muted leading-relaxed">
+            Example HD project: oak-toned cabinet fronts were wrapped to a clean
+            soft-grey finish, then worktops were updated with a stone effect.
+            Same layout, much more modern appearance, and no long renovation.
+          </p>
         </div>
       </section>
 
@@ -94,6 +120,11 @@ export default function KitchenWrappingHuddersfieldPage() {
               — {testimonial.name}, {testimonial.area}
             </p>
           </div>
+          <p className="mt-4 text-muted leading-relaxed">
+            Every quote is based on the property and current kitchen condition,
+            not a generic package. That helps protect finish quality and reduces
+            the risk of callbacks.
+          </p>
         </div>
       </section>
 
@@ -107,6 +138,14 @@ export default function KitchenWrappingHuddersfieldPage() {
           </p>
           <p className="mt-4 text-muted">
             {data.priceLine}
+          </p>
+          <h2 className="mt-8 text-xl font-semibold text-foreground">
+            Areas we cover around Huddersfield
+          </h2>
+          <p className="mt-4 text-muted leading-relaxed">
+            Common bookings come from Lindley, Milnsbridge, Golcar, Meltham,
+            Holmfirth and surrounding villages. Send your postcode and we will
+            confirm survey availability.
           </p>
         </div>
       </section>

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { getServiceSchema } from "@/lib/schema";
+import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
   title: "Commercial & Retail Vinyl Installation South Yorkshire | WRPX",
@@ -44,6 +45,21 @@ export default function CommercialInstallationPage() {
               <a href="mailto:wrpx.uk@gmail.com" className="text-accent hover:underline">
                 wrpx.uk@gmail.com
               </a>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-b border-border bg-card px-4 py-8">
+        <div className="container mx-auto max-w-4xl">
+          <div className="rounded-xl border-2 border-accent/40 bg-background p-6">
+            <p className="text-sm font-semibold uppercase tracking-wide text-accent">
+              5-year guarantee
+            </p>
+            <p className="mt-2 text-muted leading-relaxed">
+              Eligible commercial vinyl installations include a named{" "}
+              {siteConfig.guaranteeYears}-year guarantee on material defects,
+              colour stability and adhesion when correctly maintained.
             </p>
           </div>
         </div>
@@ -135,6 +151,11 @@ export default function CommercialInstallationPage() {
                 of locations. Clean cuts, precise application and a finish that reflects your brand rather
                 than undermining it.
               </p>
+              <p className="mt-4">
+                <Link href="/commercial/window-graphics/" className="text-accent hover:underline">
+                  View window graphics service
+                </Link>
+              </p>
             </div>
 
             <div className="card-float p-8">
@@ -148,6 +169,11 @@ export default function CommercialInstallationPage() {
                 preparation to back it up. Bubbles, lifting edges and visible seams are the result of skipped
                 prep and cheap material. We don&apos;t do either.
               </p>
+              <p className="mt-4">
+                <Link href="/commercial/wall-wraps/" className="text-accent hover:underline">
+                  View wall wraps service
+                </Link>
+              </p>
             </div>
 
             <div className="card-float p-8">
@@ -157,6 +183,11 @@ export default function CommercialInstallationPage() {
                 Applied using anti-slip, heavy-duty commercial floor film rated for the traffic levels of
                 your environment. Properly prepared surfaces. Properly specified materials. Installations that
                 actually last.
+              </p>
+              <p className="mt-4">
+                <Link href="/commercial/floor-graphics/" className="text-accent hover:underline">
+                  View floor graphics service
+                </Link>
               </p>
             </div>
 

@@ -30,6 +30,16 @@ export function Footer() {
                   Furniture Wrapping
                 </Link>
               </li>
+              <li>
+                <Link href="/commercial-installation/" className="text-muted hover:text-accent">
+                  Commercial Installation
+                </Link>
+              </li>
+              <li>
+                <Link href="/window-film/" className="text-muted hover:text-accent">
+                  Window Film
+                </Link>
+              </li>
             </ul>
           </div>
           <div>

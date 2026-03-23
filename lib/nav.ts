@@ -9,6 +9,7 @@ export const nav = {
     { label: "Cost Guide", href: `${base}/kitchen-wrapping-cost/` },
     { label: "Worktop Wrapping", href: `${base}/worktop-wrapping/` },
     { label: "Furniture Wrapping", href: `${base}/furniture-wrapping/` },
+    { label: "Architectural Vinyl Film", href: `${base}/architectural-vinyl-film/` },
     { label: "Window Film", href: `${base}/window-film/` },
     { label: "Commercial & Retail", href: `${base}/commercial-installation/` },
   ] as const,

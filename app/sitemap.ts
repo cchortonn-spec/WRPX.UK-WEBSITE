@@ -11,6 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "kitchen-wrapping-cost",
     "worktop-wrapping",
     "furniture-wrapping",
+    "architectural-vinyl-film",
     "gallery",
     "our-process",
     "faq",
@@ -24,6 +25,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   );
   const commercialLocations = [
     "commercial-installation",
+    "commercial/window-graphics",
+    "commercial/wall-wraps",
+    "commercial/floor-graphics",
     "commercial-installation-sheffield",
     "commercial-installation-leeds",
     "commercial-installation-doncaster",

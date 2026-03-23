@@ -24,6 +24,13 @@ export default function KitchenWrappingDoncasterPage() {
           <p className="mt-4 text-muted leading-relaxed">
             Doncaster and the surrounding villages — from Bessacarr and Balby to Tickhill, Mexborough and Edlington — are part of our core South Yorkshire coverage. We&apos;ve completed jobs across DN postcodes. Whether your kitchen is dated melamine or solid wood that just needs a new look, we give you an honest assessment and a fixed process: survey, prep, wrap, reinstall.
           </p>
+          <p className="mt-4 text-muted leading-relaxed">
+            For most homes, wrapping is chosen because it modernises the room
+            fast while keeping disruption low. If cabinets are still structurally
+            sound, you can get a strong visual transformation without the time
+            and waste of a full rip-out. We set expectations clearly from day
+            one and explain exactly what is and is not included.
+          </p>
         </div>
       </section>
 
@@ -34,6 +41,12 @@ export default function KitchenWrappingDoncasterPage() {
           </h2>
           <p className="mt-4 text-muted leading-relaxed">
             We cover Doncaster and the DN postcodes without a national franchise call-out. Same person from survey to finish — no handover to another crew. We&apos;re close enough to turn up when we say we will, and you get a named {siteConfig.guaranteeYears}-year guarantee and a direct contact if you need a follow-up. Our reputation is in the area; we don&apos;t disappear after the job.
+          </p>
+          <p className="mt-4 text-muted leading-relaxed">
+            Local context helps with planning too. Period terraces in Balby and
+            larger family homes in Bessacarr often need different finish choices
+            and edge details. We recommend styles based on light levels, traffic,
+            and how heavily the kitchen is used day to day.
           </p>
         </div>
       </section>
@@ -54,6 +67,15 @@ export default function KitchenWrappingDoncasterPage() {
             <li>Worktop wrapping — marble, stone, wood-effect</li>
             <li>Furniture and wardrobe wrap</li>
           </ul>
+          <h2 className="mt-8 text-xl font-semibold text-foreground">
+            Common Doncaster project types
+          </h2>
+          <ul className="mt-4 list-inside list-disc space-y-2 text-muted">
+            <li>Landlord refreshes between tenancies</li>
+            <li>Family kitchens upgraded before extending elsewhere in the home</li>
+            <li>Older oak-style doors changed to modern matte finishes</li>
+            <li>Worktops wrapped to remove busy patterns and darken the scheme</li>
+          </ul>
           <p className="mt-4 text-muted">
             <Link href="/kitchen-wrapping-cost/" className="text-accent hover:underline">
               Kitchen wrapping cost guide
@@ -70,12 +92,18 @@ export default function KitchenWrappingDoncasterPage() {
           <div className="mt-6 relative aspect-video overflow-hidden rounded-lg border border-border">
             <Image
               src="/images/gallery/kitchen-cabinet-wrap-south-yorkshire.jpg"
-              alt="Kitchen wrap Doncaster — recent project"
+              alt="Recent kitchen cabinet wrapping project in Doncaster"
               fill
               className="object-cover"
               sizes="(max-width: 768px) 100vw, 672px"
             />
           </div>
+          <p className="mt-4 text-muted leading-relaxed">
+            Recent DN4 example: a customer wanted a cleaner modern look without
+            replacing appliances. We wrapped cabinet fronts in a warm stone-grey
+            finish, updated the kickboards, and wrapped the worktop to match.
+            The kitchen looked fully new while keeping the original layout.
+          </p>
         </div>
       </section>
 
@@ -94,6 +122,11 @@ export default function KitchenWrappingDoncasterPage() {
               — James T., Doncaster
             </p>
           </div>
+          <p className="mt-4 text-muted leading-relaxed">
+            We keep project recommendations practical. If any panel is damaged or
+            swollen from moisture and likely to fail, we flag it before work
+            starts so you can repair or replace that part first.
+          </p>
         </div>
       </section>
 
@@ -107,6 +140,15 @@ export default function KitchenWrappingDoncasterPage() {
           </p>
           <p className="mt-4 text-muted">
             {data.priceLine}
+          </p>
+          <h2 className="mt-8 text-xl font-semibold text-foreground">
+            Areas we regularly serve around Doncaster
+          </h2>
+          <p className="mt-4 text-muted leading-relaxed">
+            We frequently work in Bessacarr, Balby, Tickhill, Armthorpe,
+            Mexborough, Edlington and nearby villages. If your property is a
+            little outside central Doncaster, send the postcode and we will
+            confirm coverage before booking.
           </p>
         </div>
       </section>
