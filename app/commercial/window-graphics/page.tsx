@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Commercial Window Graphics South Yorkshire | WRPX",
+  title: "Window Graphics Installer South Yorkshire | WRPX",
   description:
-    "Commercial window graphics installation across South Yorkshire for retail, office and hospitality sites. Frosted, full colour and campaign graphics.",
+    "Window graphics and vinyl signage installation for retail, offices and hospitality across South Yorkshire. Frosted film, full colour and campaign graphics.",
   alternates: { canonical: "https://www.wrpx.co.uk/commercial/window-graphics/" },
 };
 
@@ -14,10 +14,10 @@ export default function CommercialWindowGraphicsPage() {
       <section className="border-b border-border bg-card py-14">
         <div className="container mx-auto max-w-4xl px-4">
           <h1 className="text-3xl font-bold tracking-tight text-foreground md:text-4xl">
-            Commercial Window Graphics
+            Window Graphics &amp; Vinyl Signage Installation
           </h1>
           <p className="mt-5 text-muted leading-relaxed">
-            We install commercial window graphics for retail, offices and
+            We install window graphics and retail vinyl signage for retail, offices and
             hospitality sites across South Yorkshire and surrounding regions.
             Services include frosted privacy film, full colour promotional
             graphics, one-way vision and seasonal campaign installs.

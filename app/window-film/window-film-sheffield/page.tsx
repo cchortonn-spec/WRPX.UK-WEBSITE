@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { WindowFilmLocationTemplate } from "@/components/WindowFilmLocationTemplate";
 
 export const metadata: Metadata = {
-  title: "Window Film Sheffield | Frosted, Privacy & Solar Film | WRPX",
+  title: "Window Film Installer Sheffield | Frosted, Privacy & Solar | WRPX",
   description:
-    "Window film professionally installed across Sheffield. Frosted bathroom film, privacy window film, solar control for offices and conservatories. WRPX — South Yorkshire specialists.",
+    "Window film installation across Sheffield — frosted bathroom film, privacy film, solar control for offices and conservatories. WRPX — South Yorkshire specialists.",
   alternates: {
     canonical: "https://www.wrpx.co.uk/window-film/window-film-sheffield/",
   },

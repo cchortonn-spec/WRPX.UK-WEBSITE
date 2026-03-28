@@ -4,9 +4,9 @@ import Image from "next/image";
 import { FaqAccordion } from "@/components/FaqAccordion";
 
 export const metadata: Metadata = {
-  title: "Frosted Window Film South Yorkshire | Bathrooms, Offices & Doors | WRPX",
+  title: "Frosted Window Film Installer South Yorkshire | Bathrooms & Offices | WRPX",
   description:
-    "Professional frosted window film installation across South Yorkshire. Privacy day and night — no curtains needed. Bathrooms, front windows, office glass and internal partitions. Free survey.",
+    "Frosted window film installed across South Yorkshire. Privacy day and night — no curtains needed. Bathrooms, front windows, office glass and internal partitions. Free survey.",
   alternates: {
     canonical: "https://www.wrpx.co.uk/window-film/frosted-window-film/",
   },

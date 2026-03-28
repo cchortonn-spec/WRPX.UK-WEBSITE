@@ -3,9 +3,9 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Commercial & Retail Vinyl Installation Manchester | WRPX — South Yorkshire Specialists",
+  title: "Retail Graphics & Signage Installer Manchester | WRPX",
   description:
-    "Professional retail installation, window graphics, wall wraps and vinyl signage in Manchester. WRPX covers Salford, Stockport, Bolton and across Greater Manchester. 7+ years in professional vinyl application.",
+    "Retail graphics and signage installation in Manchester — window graphics, wall wraps, floor graphics, shop fronts and POS. WRPX covers Salford, Stockport, Bolton and Greater Manchester. 7+ years professional application.",
   alternates: {
     canonical: "https://www.wrpx.co.uk/commercial-installation-manchester/",
   },
@@ -17,17 +17,17 @@ export default function CommercialInstallationManchesterPage() {
       <section className="border-b border-border bg-card py-12 md:py-16">
         <div className="container mx-auto max-w-3xl px-4">
           <h1 className="text-3xl font-bold tracking-tight text-foreground">
-            Commercial &amp; Retail Vinyl Installation in Manchester
+            Retail Graphics &amp; Vinyl Signage in Manchester
           </h1>
           <p className="mt-4 text-muted leading-relaxed">
-            WRPX delivers commercial vinyl installation across Greater Manchester and the North West as part of
+            WRPX delivers retail graphics and signage installation across Greater Manchester and the North West as part of
             our regular Northern England operation. From the Manchester Arndale and Trafford Centre to
             Spinningfields, Salford Quays and the wider Greater Manchester retail and commercial network, we
-            provide consistent, high-quality vinyl installation for brands, agencies and print companies with
+            provide consistent, high-quality installation for brands, agencies and print companies with
             Manchester-area sites on their estate.
           </p>
           <p className="mt-4 text-sm italic text-muted">
-            &quot;Searching for a retail vinyl installer near Manchester? Our crews cover Manchester, Salford,
+            &quot;Searching for a retail graphics installer near Manchester? Our crews cover Manchester, Salford,
             Stockport and across Greater Manchester regularly.&quot;
           </p>
         </div>
@@ -38,7 +38,7 @@ export default function CommercialInstallationManchesterPage() {
           <div className="card-float p-8">
             <h2 className="text-xl font-semibold text-foreground">What We Install in Manchester</h2>
             <p className="mt-4 text-muted leading-relaxed">
-              Window graphics, wall wraps, floor vinyls, shop front vinyls, POS display graphics, commercial
+              Window graphics, wall wraps, floor graphics, shop front vinyls, POS display graphics, commercial
               interior wrapping and multi-site rollout installation. The full WRPX commercial service, delivered
               across Greater Manchester with the same South Yorkshire preparation standards.
             </p>

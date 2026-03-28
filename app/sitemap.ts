@@ -19,6 +19,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "about",
     "contact",
     "privacy",
+    "white-label-graphics-installation",
   ];
   const locations = siteConfig.areas.map((city) =>
     `kitchen-wrapping-${city.toLowerCase()}`

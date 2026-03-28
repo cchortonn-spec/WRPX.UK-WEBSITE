@@ -67,16 +67,16 @@ export default function HomePage() {
         <div className="container mx-auto max-w-4xl">
           <div className="card-float p-8 md:p-10">
             <h2 className="text-2xl font-semibold text-foreground md:text-3xl">
-              Commercial &amp; retail vinyl installation
+              Commercial graphics &amp; retail signage
             </h2>
             <p className="mt-4 text-muted leading-relaxed">
-              Alongside homes, WRPX installs vinyl in commercial and retail spaces — window graphics, wall wraps,
-              floor vinyls, shop fronts and POS displays for brands, agencies, print houses and local businesses
+              Alongside homes, WRPX installs retail graphics and signage — window graphics, wall wraps,
+              floor graphics, shop fronts and POS displays for brands, agencies, print houses and local businesses
               across South Yorkshire and the wider North.
             </p>
             <p className="mt-4 text-muted">
               <Link href="/commercial-installation/" className="text-accent hover:underline">
-                See our commercial &amp; retail installation service
+                See our commercial graphics &amp; installation service
               </Link>
               .
             </p>

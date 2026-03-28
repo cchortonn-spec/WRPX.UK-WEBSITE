@@ -5,9 +5,9 @@ import { getServiceSchema } from "@/lib/schema";
 import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
-  title: "Commercial & Retail Vinyl Installation South Yorkshire | WRPX",
+  title: "Commercial Graphics & Vinyl Signage Installer South Yorkshire | WRPX",
   description:
-    "Commercial and retail vinyl installation across South Yorkshire and the North — window graphics, wall wraps, floor vinyls, shop front graphics and multi-site rollouts.",
+    "Retail graphics and signage installation across South Yorkshire and the North — window graphics, wall wraps, floor graphics, shop fronts, POS and multi-site rollouts.",
   alternates: {
     canonical: "https://www.wrpx.co.uk/commercial-installation/",
   },
@@ -15,8 +15,8 @@ export const metadata: Metadata = {
 
 export default function CommercialInstallationPage() {
   const serviceSchema = getServiceSchema(
-    "Commercial & Retail Vinyl Installation",
-    "Professional commercial and retail vinyl installation — window graphics, wall wraps, floor vinyls, shop front graphics, POS and multi-site rollout across South Yorkshire and the North of England."
+    "Commercial Graphics & Vinyl Signage Installation",
+    "Professional retail graphics and signage installation — window graphics, wall wraps, floor graphics, shop fronts, POS and multi-site rollout across South Yorkshire and the North of England."
   );
 
   return (
@@ -30,10 +30,10 @@ export default function CommercialInstallationPage() {
       <section className="border-b border-border bg-card py-16 md:py-20">
         <div className="container mx-auto max-w-4xl px-4 text-center">
           <h1 className="text-3xl font-bold tracking-tight text-foreground md:text-4xl lg:text-5xl">
-            Commercial &amp; Retail Vinyl Installation Across South Yorkshire &amp; the North
+            Commercial Graphics &amp; Vinyl Signage Installer — South Yorkshire &amp; the North
           </h1>
           <p className="mt-6 text-lg text-muted">
-            Window graphics, wall wraps, floor vinyls, shop front graphics, POS display installation and
+            Window graphics, wall wraps, floor graphics, shop fronts, POS display installation and
             multi-site rollout programmes for brands, agencies, print houses and signage companies.
           </p>
           <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row sm:justify-center">
@@ -57,7 +57,7 @@ export default function CommercialInstallationPage() {
               5-year guarantee
             </p>
             <p className="mt-2 text-muted leading-relaxed">
-              Eligible commercial vinyl installations include a named{" "}
+              Eligible commercial graphics installations include a named{" "}
               {siteConfig.guaranteeYears}-year guarantee on material defects,
               colour stability and adhesion when correctly maintained.
             </p>
@@ -77,7 +77,7 @@ export default function CommercialInstallationPage() {
               results.
             </p>
             <p className="mt-4 text-muted leading-relaxed">
-              We deliver window graphics, wall wraps, floor vinyls, shop front graphics, POS display
+              We deliver window graphics, wall wraps, floor graphics, shop fronts, POS display
               installation and coordinated multi-site rollout programmes for brands, agencies, print houses
               and signage companies across South Yorkshire, Yorkshire, Greater Manchester and the wider North
               of England.
@@ -100,7 +100,7 @@ export default function CommercialInstallationPage() {
       <section className="px-4 py-16">
         <div className="container mx-auto max-w-5xl">
           <h2 className="mb-10 text-center text-2xl font-semibold text-foreground md:text-3xl">
-            Recent commercial vinyl installations
+            Recent commercial graphics installations
           </h2>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {[
@@ -179,7 +179,7 @@ export default function CommercialInstallationPage() {
             <div className="card-float p-8">
               <h3 className="text-lg font-semibold text-foreground">Floor Graphics</h3>
               <p className="mt-3 text-muted leading-relaxed">
-                Promotional floor vinyls, branded floor wraps, wayfinding graphics and directional systems.
+                Promotional floor graphics, branded floor wraps, wayfinding graphics and directional systems.
                 Applied using anti-slip, heavy-duty commercial floor film rated for the traffic levels of
                 your environment. Properly prepared surfaces. Properly specified materials. Installations that
                 actually last.
@@ -277,19 +277,23 @@ export default function CommercialInstallationPage() {
           <div className="card-float p-8 md:p-10">
             <h2 className="text-2xl font-semibold text-foreground">White-Label Commercial Installation</h2>
             <p className="mt-4 text-muted leading-relaxed">
-              WRPX works as a white-label installation partner for marketing agencies, print management
-              companies, large-format print houses and signage businesses across the region. We deliver under
-              your brand — your client never needs to know we&apos;re involved — while you maintain full
-              visibility of progress through our reporting process.
+              WRPX works as a white-label installation partner for marketing agencies and signage businesses
+              across the region. We fit <strong className="text-foreground">graphics supplied by you or your supplier</strong>{" "}
+              — installation only; we do not print. We deliver under your brand while you maintain full visibility
+              of progress through our reporting process.
             </p>
             <p className="mt-4 text-muted leading-relaxed">
-              This is particularly relevant for agencies and print companies who have historically struggled
-              to find a reliable Yorkshire-based installer for vinyl-heavy commercial programmes: window
-              graphics, wall wraps, floor vinyls and shop front applications are WRPX&apos;s core competency,
-              not a peripheral service.
+              Window graphics, wall wraps, floor graphics and shop front applications are WRPX&apos;s core competency,
+              not a peripheral service — and we are retail graphics installers, not flooring contractors.
+            </p>
+            <p className="mt-4">
+              <Link href="/white-label-graphics-installation/" className="text-accent hover:underline font-medium">
+                Dedicated white-label page for trade partners
+              </Link>
+              {" — "}who we work with, coverage, process and FAQ.
             </p>
             <p className="mt-4 text-sm italic text-muted">
-              &quot;We quietly deliver for agencies and print companies across the region. Your name on the
+              &quot;We quietly deliver for agencies and sign companies across the region. Your name on the
               project. Our prep, our application, our finish quality.&quot;
             </p>
           </div>
@@ -432,7 +436,7 @@ export default function CommercialInstallationPage() {
             </h2>
             <p className="mt-4 text-muted leading-relaxed">
               Whether you&apos;re a brand, agency, print house or direct business looking for a professional
-              commercial vinyl installer in South Yorkshire and the North, talk to WRPX. We&apos;ll discuss
+              commercial graphics installer in South Yorkshire and the North, talk to WRPX. We&apos;ll discuss
               your project, your surfaces and your timescales and give you a straight quote.
             </p>
             <p className="mt-4 text-muted">

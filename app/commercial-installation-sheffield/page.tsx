@@ -3,9 +3,9 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Commercial & Retail Vinyl Installation Sheffield | WRPX — South Yorkshire Specialists",
+  title: "Retail Graphics & Signage Installer Sheffield | WRPX",
   description:
-    "Professional retail installation, window graphics, wall wraps and vinyl signage in Sheffield. WRPX covers Rotherham, Barnsley, Doncaster and across South Yorkshire. 7+ years in professional vinyl application.",
+    "Retail graphics and signage installation in Sheffield — window graphics, wall wraps, floor graphics, shop fronts and POS. WRPX covers Rotherham, Barnsley, Doncaster and South Yorkshire. 7+ years professional application.",
   alternates: {
     canonical: "https://www.wrpx.co.uk/commercial-installation-sheffield/",
   },
@@ -17,7 +17,7 @@ export default function CommercialInstallationSheffieldPage() {
       <section className="border-b border-border bg-card py-12 md:py-16">
         <div className="container mx-auto max-w-3xl px-4">
           <h1 className="text-3xl font-bold tracking-tight text-foreground">
-            Commercial &amp; Retail Vinyl Installation in Sheffield
+            Retail Graphics &amp; Vinyl Signage in Sheffield
           </h1>
           <p className="mt-4 text-muted leading-relaxed">
             WRPX is a specialist vinyl installation business based in South Yorkshire, with 7+ years of
@@ -33,7 +33,7 @@ export default function CommercialInstallationSheffieldPage() {
             across multiple locations.
           </p>
           <p className="mt-4 text-sm italic text-muted">
-            &quot;Searching for a retail vinyl installer near Sheffield? Our crews are on the road across South
+            &quot;Searching for a retail graphics installer near Sheffield? Our crews are on the road across South
             Yorkshire every week — covering retail parks, high streets, shopping centres and commercial
             units.&quot;
           </p>
@@ -60,7 +60,7 @@ export default function CommercialInstallationSheffieldPage() {
             </p>
             <p className="mt-4 text-muted leading-relaxed">
               <strong>Floor Graphics</strong>{" "}
-              — Directional floor graphics, promotional floor vinyls, branded floor wraps and wayfinding
+              — Directional floor graphics, promotional floor graphics, branded floor wraps and wayfinding
               systems. Applied using anti-slip, heavy-duty commercial floor film specified for the traffic
               levels of your environment — from boutique retail to superstore.
             </p>
@@ -155,7 +155,7 @@ export default function CommercialInstallationSheffieldPage() {
           <p className="mt-4 text-muted leading-relaxed">
             For commercial clients, Sheffield&apos;s retail and hospitality sector is one of the most active in
             the North — a regular programme of brand refreshes, seasonal campaigns, new openings and fit-out
-            installations keeps demand for quality vinyl installation consistent year-round. WRPX is based
+            installations keeps demand for quality retail graphics installation consistent year-round. WRPX is based
             here, available here and knows the access arrangements, centre management contacts and local
             logistics that make installations in Sheffield run smoothly.
           </p>
@@ -235,7 +235,7 @@ export default function CommercialInstallationSheffieldPage() {
           </h2>
           <p className="mt-4 text-muted leading-relaxed">
             Whether you&apos;re a brand, agency, print house or direct business looking for a professional
-            commercial vinyl installer in Sheffield, WRPX can help.
+            commercial graphics installer in Sheffield, WRPX can help.
           </p>
           <p className="mt-4 text-muted">
             <strong>Call: 07398 395417</strong> ·{" "}

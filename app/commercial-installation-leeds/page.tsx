@@ -3,9 +3,9 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Commercial & Retail Vinyl Installation Leeds | WRPX — South Yorkshire Specialists",
+  title: "Retail Graphics & Signage Installer Leeds | WRPX",
   description:
-    "Professional retail installation, window graphics, wall wraps and vinyl signage in Leeds. WRPX covers Huddersfield, Wakefield, Bradford and across West Yorkshire. 7+ years in professional vinyl application.",
+    "Retail graphics and signage installation in Leeds — window graphics, wall wraps, floor graphics, shop fronts and POS. WRPX covers Huddersfield, Wakefield, Bradford and West Yorkshire. 7+ years professional application.",
   alternates: {
     canonical: "https://www.wrpx.co.uk/commercial-installation-leeds/",
   },
@@ -17,7 +17,7 @@ export default function CommercialInstallationLeedsPage() {
       <section className="border-b border-border bg-card py-12 md:py-16">
         <div className="container mx-auto max-w-3xl px-4">
           <h1 className="text-3xl font-bold tracking-tight text-foreground">
-            Commercial &amp; Retail Vinyl Installation in Leeds
+            Retail Graphics &amp; Vinyl Signage in Leeds
           </h1>
           <p className="mt-4 text-muted leading-relaxed">
             WRPX is a specialist vinyl installation business based in South Yorkshire, with 7+ years of
@@ -27,7 +27,7 @@ export default function CommercialInstallationLeedsPage() {
             wall wrap or shop window graphic as we do on every kitchen we transform.
           </p>
           <p className="mt-4 text-sm italic text-muted">
-            &quot;Searching for a retail vinyl installer near Leeds? Our crews are on the road across West
+            &quot;Searching for a retail graphics installer near Leeds? Our crews are on the road across West
             Yorkshire every week — covering retail parks, high streets, shopping centres and commercial
             units.&quot;
           </p>
@@ -52,7 +52,7 @@ export default function CommercialInstallationLeedsPage() {
             </p>
             <p className="mt-4 text-muted leading-relaxed">
               <strong>Floor Graphics</strong>{" "}
-              — Directional floor graphics, promotional floor vinyls, branded floor wraps and wayfinding
+              — Directional floor graphics, promotional floor graphics, branded floor wraps and wayfinding
               systems. Applied using anti-slip, heavy-duty commercial floor film specified for your traffic
               levels.
             </p>
@@ -137,7 +137,7 @@ export default function CommercialInstallationLeedsPage() {
           </p>
           <p className="mt-4 text-muted leading-relaxed">
             For brands rolling out across the region, Leeds is almost always a cornerstone location — and for
-            agencies and print companies based in Leeds who need a specialist vinyl installation partner on the
+            agencies and print companies based in Leeds who need a specialist graphics installation partner on the
             ground in Yorkshire, WRPX provides exactly that.
           </p>
         </div>

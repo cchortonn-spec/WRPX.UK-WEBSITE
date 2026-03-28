@@ -3,9 +3,9 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Commercial & Retail Vinyl Installation Nottingham | WRPX",
+  title: "Retail Graphics & Signage Installer Nottingham | WRPX",
   description:
-    "Retail and commercial vinyl installation in Nottingham. Window graphics, wall wraps, floor vinyls. WRPX covers Nottingham city centre, Victoria Centre, retail parks and the M1 corridor.",
+    "Retail graphics and signage installation in Nottingham — window graphics, wall wraps, floor graphics and shop fronts. WRPX covers city centre, Victoria Centre, retail parks and the M1 corridor.",
   alternates: {
     canonical: "https://www.wrpx.co.uk/commercial-installation-nottingham/",
   },
@@ -17,7 +17,7 @@ export default function CommercialInstallationNottinghamPage() {
       <section className="border-b border-border bg-card py-12 md:py-16">
         <div className="container mx-auto max-w-3xl px-4">
           <h1 className="text-3xl font-bold tracking-tight text-foreground">
-            Commercial &amp; Retail Vinyl Installation in Nottingham
+            Retail Graphics &amp; Vinyl Signage in Nottingham
           </h1>
           <p className="mt-4 text-muted leading-relaxed">
             Nottingham marks the southern edge of WRPX&apos;s primary operating territory — accessible directly

@@ -36,6 +36,11 @@ export function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/white-label-graphics-installation/" className="text-muted hover:text-accent">
+                  White-label install
+                </Link>
+              </li>
+              <li>
                 <Link href="/window-film/" className="text-muted hover:text-accent">
                   Window Film
                 </Link>

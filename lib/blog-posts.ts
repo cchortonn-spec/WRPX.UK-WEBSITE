@@ -53,9 +53,9 @@ export const blogPosts = [
   },
   {
     slug: "window-graphics-wall-wraps-floor-vinyls-commercial-guide",
-    title: "Window Graphics, Wall Wraps & Floor Vinyls: A Commercial Buyer's Guide",
+    title: "Window Graphics, Wall Wraps & Floor Graphics: A Commercial Buyer's Guide",
     description:
-      "Planning commercial vinyl installation for the first time? A practical guide to window graphics, wall wraps, floor vinyls and shop front applications.",
+      "Planning retail graphics installation for the first time? A practical guide to window graphics, wall wraps, floor graphics and shop front applications.",
     date: "2026-03-02",
   },
 ] as const;

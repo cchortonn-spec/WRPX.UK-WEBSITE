@@ -3,9 +3,9 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Commercial & Retail Vinyl Installation Huddersfield | WRPX",
+  title: "Retail Graphics & Signage Installer Huddersfield | WRPX",
   description:
-    "Window graphics, wall wraps and commercial vinyl installation in Huddersfield. WRPX covers Kingsgate Centre, HD1 and the wider Kirklees commercial area.",
+    "Window graphics, wall wraps, floor graphics and retail signage installation in Huddersfield. WRPX covers Kingsgate Centre, HD1 and the wider Kirklees commercial area.",
   alternates: {
     canonical: "https://www.wrpx.co.uk/commercial-installation-huddersfield/",
   },
@@ -17,7 +17,7 @@ export default function CommercialInstallationHuddersfieldPage() {
       <section className="border-b border-border bg-card py-12 md:py-16">
         <div className="container mx-auto max-w-3xl px-4">
           <h1 className="text-3xl font-bold tracking-tight text-foreground">
-            Commercial &amp; Retail Vinyl Installation in Huddersfield
+            Retail Graphics &amp; Vinyl Signage in Huddersfield
           </h1>
           <p className="mt-4 text-muted leading-relaxed">
             Huddersfield sits at the heart of the M62 corridor between Leeds and Manchester — one of the most

@@ -3,9 +3,9 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Commercial & Retail Vinyl Installation Doncaster | WRPX — South Yorkshire Specialists",
+  title: "Retail Graphics & Signage Installer Doncaster | WRPX",
   description:
-    "Professional retail installation, window graphics, wall wraps and vinyl signage in Doncaster. WRPX covers Rotherham, Barnsley, Sheffield and across South Yorkshire. 7+ years in professional vinyl application.",
+    "Retail graphics and signage installation in Doncaster — window graphics, wall wraps, floor graphics, shop fronts and POS. WRPX covers Rotherham, Barnsley, Sheffield and South Yorkshire. 7+ years professional application.",
   alternates: {
     canonical: "https://www.wrpx.co.uk/commercial-installation-doncaster/",
   },
@@ -17,7 +17,7 @@ export default function CommercialInstallationDoncasterPage() {
       <section className="border-b border-border bg-card py-12 md:py-16">
         <div className="container mx-auto max-w-3xl px-4">
           <h1 className="text-3xl font-bold tracking-tight text-foreground">
-            Commercial &amp; Retail Vinyl Installation in Doncaster
+            Retail Graphics &amp; Vinyl Signage in Doncaster
           </h1>
           <p className="mt-4 text-muted leading-relaxed">
             WRPX covers Doncaster and the surrounding South Yorkshire area as part of our regular commercial
@@ -26,7 +26,7 @@ export default function CommercialInstallationDoncasterPage() {
             postcode territory every week.
           </p>
           <p className="mt-4 text-sm italic text-muted">
-            &quot;Searching for a retail vinyl installer near Doncaster? Our crews cover Doncaster, Rotherham,
+            &quot;Searching for a retail graphics installer near Doncaster? Our crews cover Doncaster, Rotherham,
             Barnsley and all areas across South Yorkshire every week of the year.&quot;
           </p>
         </div>
@@ -37,7 +37,7 @@ export default function CommercialInstallationDoncasterPage() {
           <div className="card-float p-8">
             <h2 className="text-xl font-semibold text-foreground">What We Install in Doncaster</h2>
             <p className="mt-4 text-muted leading-relaxed">
-              Window graphics, wall wraps, floor vinyls, shop front vinyls, POS display graphics, commercial
+              Window graphics, wall wraps, floor graphics, shop front vinyls, POS display graphics, commercial
               interior wrapping and multi-site rollout installation. The full WRPX commercial service, delivered
               across Doncaster and the surrounding area with no additional mobilisation costs.
             </p>

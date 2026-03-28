@@ -3,9 +3,9 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Commercial & Retail Vinyl Installation Barnsley | WRPX South Yorkshire",
+  title: "Retail Graphics & Signage Installer Barnsley | WRPX",
   description:
-    "Professional window graphics, wall wraps and retail vinyl installation in Barnsley. WRPX covers Alhambra Shopping Centre, Metrodome and all Barnsley commercial premises.",
+    "Window graphics, wall wraps, floor graphics and retail signage installation in Barnsley. WRPX covers Alhambra Shopping Centre, Metrodome and all Barnsley commercial premises.",
   alternates: {
     canonical: "https://www.wrpx.co.uk/commercial-installation-barnsley/",
   },
@@ -17,7 +17,7 @@ export default function CommercialInstallationBarnsleyPage() {
       <section className="border-b border-border bg-card py-12 md:py-16">
         <div className="container mx-auto max-w-3xl px-4">
           <h1 className="text-3xl font-bold tracking-tight text-foreground">
-            Commercial &amp; Retail Vinyl Installation in Barnsley
+            Retail Graphics &amp; Vinyl Signage in Barnsley
           </h1>
           <p className="mt-4 text-muted leading-relaxed">
             Barnsley&apos;s commercial retail offering — the Alhambra Shopping Centre, the Metrodome leisure
@@ -28,7 +28,7 @@ export default function CommercialInstallationBarnsleyPage() {
           </p>
           <p className="mt-4 text-muted leading-relaxed">
             For local businesses in Barnsley — cafés, salons, offices, showrooms and retail units — looking for
-            a professional vinyl installation service for window graphics, wall murals or shop front vinyls,
+            a professional graphics installation service for window graphics, wall murals or shop front vinyls,
             WRPX brings the same material quality and preparation standards we apply to every commercial job.
           </p>
         </div>
@@ -44,7 +44,7 @@ export default function CommercialInstallationBarnsleyPage() {
               </li>
               <li className="flex items-start gap-2">
                 <span className="mt-1 text-accent">✓</span>
-                <span>Window graphics, wall wraps, floor vinyls, shop front vinyls</span>
+                <span>Window graphics, wall wraps, floor graphics, shop front vinyls</span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="mt-1 text-accent">✓</span>

@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Commercial Floor Graphics South Yorkshire | WRPX",
+  title: "Commercial Floor Graphics Installer South Yorkshire | WRPX",
   description:
-    "Commercial floor graphics and floor vinyl installation across South Yorkshire for retail campaigns, wayfinding and promotional environments.",
+    "Promotional floor graphics and anti-slip floor film installation across South Yorkshire for retail campaigns, wayfinding and in-store messaging.",
   alternates: { canonical: "https://www.wrpx.co.uk/commercial/floor-graphics/" },
 };
 
@@ -20,7 +20,7 @@ export default function CommercialFloorGraphicsPage() {
             We install commercial floor graphics for retail spaces, events and
             public-facing interiors. Typical installs include anti-slip
             promotional graphics, directional systems and campaign-led floor
-            vinyls.
+            graphics.
           </p>
           <p className="mt-4 text-muted leading-relaxed">
             Floor graphics need correct film specification and clean preparation
@@ -41,7 +41,7 @@ export default function CommercialFloorGraphicsPage() {
               <li>Seasonal promotions and campaign support</li>
               <li>Queue management and in-store messaging</li>
               <li>Event and pop-up environment branding</li>
-              <li>Multi-site brand-consistent floor vinyl rollouts</li>
+              <li>Multi-site brand-consistent floor graphics rollouts</li>
             </ul>
           </div>
         </div>

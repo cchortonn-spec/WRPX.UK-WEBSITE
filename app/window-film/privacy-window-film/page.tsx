@@ -4,7 +4,7 @@ import Image from "next/image";
 import { FaqAccordion } from "@/components/FaqAccordion";
 
 export const metadata: Metadata = {
-  title: "Privacy Window Film South Yorkshire | One-Way Mirror Film | WRPX",
+  title: "Privacy Window Film Installer South Yorkshire | One-Way Mirror | WRPX",
   description:
     "Privacy window film and one-way mirrored film for homes, offices and shopfronts across South Yorkshire. Daytime privacy with clear interior view. Honest advice on what works. Free survey.",
   alternates: {

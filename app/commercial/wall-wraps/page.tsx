@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Commercial Wall Wraps South Yorkshire | WRPX",
+  title: "Wall Wrap Installer & Retail Graphics South Yorkshire | WRPX",
   description:
-    "Commercial wall wraps for retail and office interiors across South Yorkshire. Branded murals, feature walls and campaign graphics installed professionally.",
+    "Wall wrap and large-format retail graphics installation across South Yorkshire. Branded murals, feature walls and campaign graphics — professional signage fitters.",
   alternates: { canonical: "https://www.wrpx.co.uk/commercial/wall-wraps/" },
 };
 
@@ -14,11 +14,11 @@ export default function CommercialWallWrapsPage() {
       <section className="border-b border-border bg-card py-14">
         <div className="container mx-auto max-w-4xl px-4">
           <h1 className="text-3xl font-bold tracking-tight text-foreground md:text-4xl">
-            Commercial Wall Wraps
+            Wall Wraps &amp; Large-Format Retail Graphics
           </h1>
           <p className="mt-5 text-muted leading-relaxed">
-            WRPX installs commercial wall wraps for branded interiors, feature
-            walls and campaign-led environments. We work with direct businesses,
+            WRPX installs wall wraps and vinyl graphics for branded interiors, feature
+            walls and campaign-led retail environments. We work with direct businesses,
             agencies and print suppliers across South Yorkshire and the North.
           </p>
           <p className="mt-4 text-muted leading-relaxed">

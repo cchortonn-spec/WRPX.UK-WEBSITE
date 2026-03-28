@@ -3,9 +3,9 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Commercial Window Film South Yorkshire | Offices, Retail & Healthcare | WRPX",
+  title: "Commercial Window Film Installer South Yorkshire | Offices & Retail | WRPX",
   description:
-    "Commercial window film installation for offices, retail, healthcare, education and hospitality across South Yorkshire. Privacy, solar control, branding and manifestation. Multi-site capability.",
+    "Commercial window film installation for offices, retail, healthcare, education and hospitality across South Yorkshire. Privacy, solar control, branding and glass manifestation. Multi-site capability.",
   alternates: {
     canonical: "https://www.wrpx.co.uk/window-film/commercial-window-film/",
   },
@@ -89,7 +89,7 @@ export default function CommercialWindowFilmPage() {
       <section className="px-4 py-16">
         <div className="container mx-auto max-w-4xl">
           <p className="text-muted leading-relaxed">
-            WRPX is a South Yorkshire vinyl installation specialist with 7 years of experience applying premium materials in commercial and retail environments. Window film is a natural extension of what we do — the same preparation standards, the same premium products, the same application discipline that makes our retail vinyl installations last.
+            WRPX is a South Yorkshire window film and retail graphics specialist with 7 years of experience applying premium materials in commercial and retail environments. Window film is a natural extension of what we do — the same preparation standards, the same premium products, the same application discipline that makes our retail graphics installations last.
           </p>
           <p className="mt-4 text-muted leading-relaxed">
             We work directly with businesses or as a white-label installation partner for marketing agencies, print management companies and signage businesses across the region.

@@ -4,9 +4,9 @@ import Image from "next/image";
 import { BlogAuthor } from "@/components/BlogAuthor";
 
 export const metadata: Metadata = {
-  title: "Window Graphics, Wall Wraps & Floor Vinyls: A Commercial Buyer's Guide (2026)",
+  title: "Window Graphics, Wall Wraps & Floor Graphics: A Commercial Buyer's Guide (2026)",
   description:
-    "Planning commercial vinyl installation for the first time? A practical guide to window graphics, wall wraps, floor vinyls and shop front applications.",
+    "Planning retail graphics installation for the first time? A practical guide to window graphics, wall wraps, floor graphics and shop front applications.",
   alternates: {
     canonical:
       "https://www.wrpx.co.uk/blog/window-graphics-wall-wraps-floor-vinyls-commercial-guide/",
@@ -24,10 +24,10 @@ export default function CommercialBuyersGuidePage() {
             </Link>
           </p>
           <h1 className="mt-4 text-3xl font-bold tracking-tight text-foreground">
-            Window Graphics, Wall Wraps &amp; Floor Vinyls: A Commercial Buyer&apos;s Guide
+            Window Graphics, Wall Wraps &amp; Floor Graphics: A Commercial Buyer&apos;s Guide
           </h1>
           <p className="mt-2 text-muted">
-            If you&apos;re planning commercial vinyl installation for the first time —
+            If you&apos;re planning retail graphics installation for the first time —
             or if you&apos;ve had a bad experience with an installer and want to
             understand what good actually looks like — this guide covers the main
             application types, what to expect from a professional service and the
@@ -119,9 +119,9 @@ export default function CommercialBuyersGuidePage() {
               specification matters most.
             </p>
 
-            <h3>Specifying the right floor vinyl</h3>
+            <h3>Specifying the right floor graphic film</h3>
             <p>
-              Floor vinyl must be specified for the traffic levels and surface type of the
+              Floor graphic film must be specified for the traffic levels and surface type of the
               installation environment. A film specified for a low-footfall office
               reception will fail quickly on a superstore entrance. Exterior floor
               graphics require different specification again — anti-UV, anti-slip and
@@ -129,7 +129,7 @@ export default function CommercialBuyersGuidePage() {
               most common and costly mistakes in commercial installation.
             </p>
             <p>
-              WRPX specifies floor vinyls from our commercial range based on the actual
+              WRPX specifies anti-slip floor graphic films from our commercial range based on the actual
               traffic environment — and we carry out the surface preparation (cleaning,
               degreasing and in some cases priming) that ensures adhesion is maintained
               throughout the intended campaign lifespan.

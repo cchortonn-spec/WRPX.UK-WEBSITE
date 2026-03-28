@@ -3,9 +3,9 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Commercial & Retail Vinyl Installation Chesterfield | WRPX",
+  title: "Retail Graphics & Signage Installer Chesterfield | WRPX",
   description:
-    "Commercial vinyl installation in Chesterfield — window graphics, wall wraps, retail vinyls. WRPX covers Vicar Lane, Ravenside Retail Park and the wider Derbyshire corridor.",
+    "Retail graphics and signage installation in Chesterfield — window graphics, wall wraps, floor graphics and shop fronts. WRPX covers Vicar Lane, Ravenside Retail Park and the wider Derbyshire corridor.",
   alternates: {
     canonical: "https://www.wrpx.co.uk/commercial-installation-chesterfield/",
   },
@@ -17,7 +17,7 @@ export default function CommercialInstallationChesterfieldPage() {
       <section className="border-b border-border bg-card py-12 md:py-16">
         <div className="container mx-auto max-w-3xl px-4">
           <h1 className="text-3xl font-bold tracking-tight text-foreground">
-            Commercial &amp; Retail Vinyl Installation in Chesterfield
+            Retail Graphics &amp; Vinyl Signage in Chesterfield
           </h1>
           <p className="mt-4 text-muted leading-relaxed">
             Sitting on the A61 corridor between Sheffield and Derby, Chesterfield is a natural extension of

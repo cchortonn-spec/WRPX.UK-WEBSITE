@@ -3,9 +3,9 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Commercial & Retail Vinyl Installation Rotherham | WRPX South Yorkshire",
+  title: "Retail Graphics & Signage Installer Rotherham | WRPX",
   description:
-    "Window graphics, wall wraps, floor vinyls and retail installation in Rotherham. WRPX covers Parkgate, Cortonwood, Rotherham town centre and the wider South Yorkshire corridor.",
+    "Window graphics, wall wraps, floor graphics and retail signage installation in Rotherham. WRPX covers Parkgate, Cortonwood, Rotherham town centre and the wider South Yorkshire corridor.",
   alternates: {
     canonical: "https://www.wrpx.co.uk/commercial-installation-rotherham/",
   },
@@ -17,7 +17,7 @@ export default function CommercialInstallationRotherhamPage() {
       <section className="border-b border-border bg-card py-12 md:py-16">
         <div className="container mx-auto max-w-3xl px-4">
           <h1 className="text-3xl font-bold tracking-tight text-foreground">
-            Commercial &amp; Retail Vinyl Installation in Rotherham
+            Retail Graphics &amp; Vinyl Signage in Rotherham
           </h1>
           <p className="mt-4 text-muted leading-relaxed">
             Rotherham is one of WRPX&apos;s most regular operating areas — directly adjacent to Sheffield, with
@@ -27,7 +27,7 @@ export default function CommercialInstallationRotherhamPage() {
           </p>
           <p className="mt-4 text-muted leading-relaxed">
             For brands and agencies with Rotherham locations on their estate, or for local businesses looking
-            for a professional commercial vinyl installer without the travel costs of a Sheffield or
+            for a professional commercial graphics installer without the travel costs of a Sheffield or
             Leeds-based team, WRPX is your closest and most cost-effective option.
           </p>
         </div>
@@ -39,7 +39,7 @@ export default function CommercialInstallationRotherhamPage() {
             <ul className="space-y-2 text-muted">
               <li className="flex items-start gap-2">
                 <span className="mt-1 text-accent">✓</span>
-                <span>Window graphics, wall wraps, floor vinyls — Rotherham and all surrounding areas</span>
+                <span>Window graphics, wall wraps, floor graphics — Rotherham and all surrounding areas</span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="mt-1 text-accent">✓</span>

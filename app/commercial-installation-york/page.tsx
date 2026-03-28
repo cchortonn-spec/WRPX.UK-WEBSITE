@@ -3,9 +3,9 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Commercial & Retail Vinyl Installation York | WRPX",
+  title: "Retail Graphics & Signage Installer York | WRPX",
   description:
-    "Professional window graphics, wall wraps and commercial vinyl installation in York. Covering Coppergate, Monks Cross, Vangarde and York city centre.",
+    "Window graphics, wall wraps, floor graphics and retail signage installation in York. Covering Coppergate, Monks Cross, Vangarde and York city centre.",
   alternates: {
     canonical: "https://www.wrpx.co.uk/commercial-installation-york/",
   },
@@ -17,18 +17,18 @@ export default function CommercialInstallationYorkPage() {
       <section className="border-b border-border bg-card py-12 md:py-16">
         <div className="container mx-auto max-w-3xl px-4">
           <h1 className="text-3xl font-bold tracking-tight text-foreground">
-            Commercial &amp; Retail Vinyl Installation in York
+            Retail Graphics &amp; Vinyl Signage in York
           </h1>
           <p className="mt-4 text-muted leading-relaxed">
             York&apos;s retail and commercial estate is distinctive — a historic city centre with one of the
             UK&apos;s highest densities of branded retail units, operating alongside modern retail destinations
-            at Monks Cross and Vangarde. WRPX covers York and North Yorkshire for commercial vinyl installation,
+            at Monks Cross and Vangarde. WRPX covers York and North Yorkshire for retail graphics and signage installation,
             with specific experience working in environments that require careful handling of heritage
             surfaces, restricted access windows and centre-management compliance.
           </p>
           <p className="mt-4 text-muted leading-relaxed">
             For brands, agencies and local businesses commissioning window graphics, wall murals or commercial
-            vinyl installations in York, WRPX provides the material expertise and preparation discipline that
+            graphics installations in York, WRPX provides the material expertise and preparation discipline that
             listed and high-footfall environments demand.
           </p>
         </div>

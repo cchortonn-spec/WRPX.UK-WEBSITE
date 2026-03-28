@@ -27,7 +27,7 @@ export default function CommercialInstallerBackgroundMattersPage() {
             Why Your Commercial Vinyl Installer&apos;s Background Actually Matters
           </h1>
           <p className="mt-2 text-muted">
-            When you&apos;re commissioning wall wraps, window graphics or floor vinyls
+            When you&apos;re commissioning wall wraps, window graphics or floor graphics
             for a commercial space, the installer you choose makes a bigger difference
             than most clients realise — until something goes wrong.
           </p>
@@ -99,7 +99,7 @@ export default function CommercialInstallerBackgroundMattersPage() {
               That knowledge transfers directly to commercial work — and it&apos;s
               visible in the results. Wall wraps applied by WRPX don&apos;t have lifting
               edges at the corners. Window graphics don&apos;t have visible seams at eye
-              level. Floor vinyls are applied flat, with no bubbling from inadequate
+              level. Floor graphics are applied flat, with no bubbling from inadequate
               surface preparation.
             </p>
 

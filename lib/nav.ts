@@ -12,6 +12,7 @@ export const nav = {
     { label: "Architectural Vinyl Film", href: `${base}/architectural-vinyl-film/` },
     { label: "Window Film", href: `${base}/window-film/` },
     { label: "Commercial & Retail", href: `${base}/commercial-installation/` },
+    { label: "White-label install", href: `${base}/white-label-graphics-installation/` },
   ] as const,
   /** Single links between dropdowns */
   main: [
