@@ -13,6 +13,11 @@ export const metadata: Metadata = {
 const CITIES = siteConfig.areas;
 
 const galleryItems = [
+  // Featured at top — grey kitchen wrap project (Rotherham)
+  { src: "/images/gallery/kitchen-wrap-grey-rotherham-01.png", alt: "Grey kitchen wrap in Rotherham — full kitchen view with wrapped cabinet doors", caption: "Grey kitchen wrap, Rotherham", projectLine: "Full kitchen vinyl wrap, matte grey finish, Rotherham" },
+  { src: "/images/gallery/kitchen-wrap-grey-rotherham-07.png", alt: "Grey kitchen wrap project Rotherham — wide view of wrapped cabinets and worktops", caption: "Wide kitchen view, Rotherham", projectLine: "Completed grey kitchen wrap" },
+  { src: "/images/gallery/kitchen-wrap-grey-rotherham-10.png", alt: "Grey wrapped kitchen in Rotherham — full fitted kitchen angle", caption: "Completed kitchen angle, Rotherham", projectLine: "Finished kitchen wrapping project, Rotherham" },
+  { src: "/images/gallery/kitchen-wrap-grey-rotherham-03.png", alt: "Grey wrapped kitchen cabinets in Rotherham — upper cabinet close-up", caption: "Upper cabinet detail, Rotherham", projectLine: "Upper units wrapped in grey vinyl" },
   { src: "/images/gallery/IMG_8145.webp", alt: "Light grey matt vinyl kitchen wrap, Sheffield — after", caption: "Light grey matt finish, Sheffield", projectLine: "Matt grey vinyl, South Yorkshire, full kitchen, 2 days" },
   { src: "/images/gallery/kitchen-cabinet-wrap-south-yorkshire.jpg", alt: "Kitchen cabinet vinyl wrap South Yorkshire — after", caption: "Cabinet wrap, South Yorkshire", projectLine: "Cabinet doors and frames, 1–2 days" },
   { src: "/images/gallery/wrapped-kitchen-doors-worktop-south-yorkshire.jpg", alt: "Wrapped kitchen doors and worktop, South Yorkshire — after", caption: "Doors and worktop, full wrap", projectLine: "Doors + worktop wrap, marble-effect worktop, 2 days" },
@@ -81,16 +86,12 @@ const galleryItems = [
   { src: "/images/gallery/primark-manchester-totem-pole-wrap-3.png", alt: "Primark Manchester totem pole vinyl wrap — floor directions", caption: "Totem pole wrap, Primark Manchester", projectLine: "Commercial totem pole wrap, Manchester" },
   { src: "/images/gallery/primark-manchester-totem-pole-wrap-4.png", alt: "Primark Manchester directional totem pole — wrapped signage", caption: "Directional totem pole, Primark Manchester", projectLine: "Retail wayfinding wrap, Primark Manchester" },
   // Grey kitchen wrap project — Rotherham
-  { src: "/images/gallery/kitchen-wrap-grey-rotherham-01.png", alt: "Grey kitchen wrap in Rotherham — full kitchen view with wrapped cabinet doors", caption: "Grey kitchen wrap, Rotherham", projectLine: "Full kitchen vinyl wrap, matte grey finish, Rotherham" },
   { src: "/images/gallery/kitchen-wrap-grey-rotherham-02.png", alt: "Grey kitchen wrap Rotherham — close-up of wrapped cabinet doors and worktop edge", caption: "Worktop and cabinet detail, Rotherham", projectLine: "Detail finish, wrapped doors and worktop edge" },
-  { src: "/images/gallery/kitchen-wrap-grey-rotherham-03.png", alt: "Grey wrapped kitchen cabinets in Rotherham — upper cabinet close-up", caption: "Upper cabinet detail, Rotherham", projectLine: "Upper units wrapped in grey vinyl" },
   { src: "/images/gallery/kitchen-wrap-grey-rotherham-04.png", alt: "Grey kitchen cabinet wrap Rotherham — drawer and handle close-up", caption: "Drawer detail, Rotherham", projectLine: "Close-up finish quality on wrapped drawer fronts" },
   { src: "/images/gallery/kitchen-wrap-grey-rotherham-05.png", alt: "Grey kitchen wrap Rotherham — wrapped cabinet doors with handle detail", caption: "Cabinet door detail, Rotherham", projectLine: "Grey vinyl wrap detail around hardware" },
   { src: "/images/gallery/kitchen-wrap-grey-rotherham-06.png", alt: "Grey kitchen wrapping in Rotherham — side angle of wrapped base units", caption: "Side angle finish, Rotherham", projectLine: "Wrapped base units and drawer fronts" },
-  { src: "/images/gallery/kitchen-wrap-grey-rotherham-07.png", alt: "Grey kitchen wrap project Rotherham — wide view of wrapped cabinets and worktops", caption: "Wide kitchen view, Rotherham", projectLine: "Completed grey kitchen wrap" },
   { src: "/images/gallery/kitchen-wrap-grey-rotherham-08.png", alt: "Rotherham grey kitchen wrap — long worktop and cabinet run detail", caption: "Long run detail, Rotherham", projectLine: "Worktop and cabinet line finish" },
   { src: "/images/gallery/kitchen-wrap-grey-rotherham-09.png", alt: "Grey kitchen vinyl wrap Rotherham — lower cabinets and drawers close-up", caption: "Lower cabinet detail, Rotherham", projectLine: "Lower cabinet and drawer wrap detail" },
-  { src: "/images/gallery/kitchen-wrap-grey-rotherham-10.png", alt: "Grey wrapped kitchen in Rotherham — full fitted kitchen angle", caption: "Completed kitchen angle, Rotherham", projectLine: "Finished kitchen wrapping project, Rotherham" },
   // White wood-effect worktop wrap — Chesterfield
   { src: "/images/gallery/worktop-wrap-white-wood-effect-chesterfield-01.png", alt: "White wood-effect worktop wrap in Chesterfield — full counter run view", caption: "Worktop wrap, Chesterfield", projectLine: "White wood-effect vinyl worktop wrap, Chesterfield" },
   { src: "/images/gallery/worktop-wrap-white-wood-effect-chesterfield-02.png", alt: "White wood-effect wrapped kitchen worktop Chesterfield — close-up texture detail", caption: "Texture detail, Chesterfield", projectLine: "Close-up of white wood-effect vinyl finish" },
