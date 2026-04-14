@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Kitchen Wrapping Barnsley | 5-Year Guarantee | Free Survey",
@@ -45,6 +46,13 @@ export default function KitchenWrappingBarnsleyPage() {
     areaServed: ["Barnsley", "S70-S75"],
     geo: { "@type": "GeoCoordinates", latitude: 53.5526, longitude: -1.4797 },
   };
+
+  const barnsleyWorktopImages = [
+    { src: "/images/gallery/worktop-wrap-butcher-block-barnsley-01.png", alt: "Butcher block style kitchen worktop wrap in Barnsley, completed corner layout" },
+    { src: "/images/gallery/worktop-wrap-butcher-block-barnsley-02.png", alt: "Barnsley kitchen wrapping project with butcher block style worktop and sage units" },
+    { src: "/images/gallery/worktop-wrap-butcher-block-barnsley-03.png", alt: "Kitchen worktop wrap Barnsley, butcher block style around hob and splashback" },
+    { src: "/images/gallery/worktop-wrap-butcher-block-barnsley-04.png", alt: "Butcher block style worktop wrapping in Barnsley, sink run and cabinet finish" },
+  ];
 
   return (
     <div>
@@ -146,6 +154,34 @@ export default function KitchenWrappingBarnsleyPage() {
             </p>
             <p className="mt-4 text-sm not-italic text-muted-foreground">— Mike P., Barnsley (Hoyland)</p>
           </blockquote>
+        </div>
+      </section>
+
+      <section className="py-12">
+        <div className="container mx-auto max-w-6xl px-4">
+          <h2 className="text-xl font-semibold text-foreground">
+            Recent Barnsley butcher block worktop wrap photos
+          </h2>
+          <p className="mt-4 text-muted leading-relaxed">
+            Real photos from a Barnsley kitchen where we wrapped the worktops in a
+            butcher block style wood-effect vinyl finish.
+          </p>
+          <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {barnsleyWorktopImages.map((image, index) => (
+              <figure key={image.src} className="overflow-hidden rounded-lg border border-border bg-card">
+                <div className="relative aspect-[4/3]">
+                  <Image
+                    src={image.src}
+                    alt={image.alt}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    priority={index < 2}
+                  />
+                </div>
+              </figure>
+            ))}
+          </div>
         </div>
       </section>
 

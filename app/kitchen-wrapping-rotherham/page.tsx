@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Kitchen Wrapping Rotherham | 5-Year Guarantee | Free Survey",
@@ -57,6 +58,19 @@ export default function KitchenWrappingRotherhamPage() {
     areaServed: ["Rotherham", "S60-S66"],
     geo: { "@type": "GeoCoordinates", latitude: 53.4326, longitude: -1.3635 },
   };
+
+  const rotherhamProjectImages = [
+    { src: "/images/gallery/kitchen-wrap-grey-rotherham-01.png", alt: "Grey kitchen wrap Rotherham completed project, full kitchen view" },
+    { src: "/images/gallery/kitchen-wrap-grey-rotherham-02.png", alt: "Grey kitchen wrap Rotherham close-up, wrapped cabinet doors and worktop" },
+    { src: "/images/gallery/kitchen-wrap-grey-rotherham-03.png", alt: "Grey wrapped kitchen cabinets in Rotherham, upper unit detail" },
+    { src: "/images/gallery/kitchen-wrap-grey-rotherham-04.png", alt: "Kitchen wrapping Rotherham, grey wrapped drawer and handle detail" },
+    { src: "/images/gallery/kitchen-wrap-grey-rotherham-05.png", alt: "Grey vinyl kitchen wrap in Rotherham, wrapped cabinet front detail" },
+    { src: "/images/gallery/kitchen-wrap-grey-rotherham-06.png", alt: "Rotherham kitchen wrap project, grey base unit side angle" },
+    { src: "/images/gallery/kitchen-wrap-grey-rotherham-07.png", alt: "Kitchen wrapping in Rotherham, wide view of grey wrapped kitchen" },
+    { src: "/images/gallery/kitchen-wrap-grey-rotherham-08.png", alt: "Grey kitchen wrap Rotherham, long worktop and cabinet run finish" },
+    { src: "/images/gallery/kitchen-wrap-grey-rotherham-09.png", alt: "Rotherham grey kitchen wrapping, lower cabinets and drawer detail" },
+    { src: "/images/gallery/kitchen-wrap-grey-rotherham-10.png", alt: "Completed grey kitchen wrapping project in Rotherham, full fitted view" },
+  ];
 
   return (
     <div>
@@ -196,6 +210,35 @@ export default function KitchenWrappingRotherhamPage() {
               — Lisa K., Rotherham (Wickersley)
             </p>
           </blockquote>
+        </div>
+      </section>
+
+      <section className="py-12">
+        <div className="container mx-auto max-w-6xl px-4">
+          <h2 className="text-xl font-semibold text-foreground">
+            Recent Rotherham kitchen wrap photos
+          </h2>
+          <p className="mt-4 text-muted leading-relaxed">
+            A recent grey kitchen wrapping project completed in Rotherham. These are
+            real install photos showing the finish quality on cabinet doors, drawers
+            and worktop edges.
+          </p>
+          <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {rotherhamProjectImages.map((image, index) => (
+              <figure key={image.src} className="overflow-hidden rounded-lg border border-border bg-card">
+                <div className="relative aspect-[4/3]">
+                  <Image
+                    src={image.src}
+                    alt={image.alt}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    priority={index < 2}
+                  />
+                </div>
+              </figure>
+            ))}
+          </div>
         </div>
       </section>
 
