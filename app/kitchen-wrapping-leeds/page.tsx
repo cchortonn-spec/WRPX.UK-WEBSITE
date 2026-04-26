@@ -194,8 +194,8 @@ export default function KitchenWrappingLeedsPage() {
           <p className="text-muted leading-relaxed">
             Free survey, no obligation. Fixed quote before work starts. 5-year guarantee on every job.
           </p>
-          <Link href="/contact/" className="btn-primary inline-block">
-            Book a Free Leeds Survey →
+          <Link href="/kitchen-wrapping-quote/" className="btn-primary inline-block">
+            Kitchen Quote
           </Link>
           <p className="text-muted">Or call <strong>07398 395417</strong></p>
         </div>

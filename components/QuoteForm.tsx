@@ -81,7 +81,7 @@ export function QuoteForm() {
         isn&apos;t right for your kitchen.
       </p>
       <button type="submit" className="btn-primary w-full">
-        Get a Free Quote
+        Send Enquiry
       </button>
     </form>
   );

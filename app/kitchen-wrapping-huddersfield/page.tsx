@@ -180,8 +180,8 @@ export default function KitchenWrappingHuddersfieldPage() {
         <div className="container mx-auto max-w-3xl px-4 text-center space-y-4">
           <h2 className="text-2xl font-semibold text-foreground">Ready to transform your Huddersfield kitchen?</h2>
           <p className="text-muted leading-relaxed">Free survey, no obligation. Fixed quote before work starts. 5-year guarantee on every job.</p>
-          <Link href="/contact/" className="btn-primary inline-block">
-            Book a Free Huddersfield Survey →
+          <Link href="/kitchen-wrapping-quote/" className="btn-primary inline-block">
+            Kitchen Quote
           </Link>
           <p className="text-muted">Or call <strong>07398 395417</strong></p>
         </div>

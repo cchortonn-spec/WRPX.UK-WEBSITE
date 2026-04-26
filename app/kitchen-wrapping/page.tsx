@@ -235,7 +235,7 @@ export default function KitchenWrappingPage() {
                 commercial and retail spaces
               </Link>{" "}
               across the region —{" "}
-              <Link href="/contact/" className="text-accent hover:underline">
+              <Link href="/kitchen-wrapping-quote/" className="text-accent hover:underline">
                 get in touch
               </Link>{" "}
               for a free quote.
@@ -243,8 +243,8 @@ export default function KitchenWrappingPage() {
           </div>
 
           <div className="text-center pt-4">
-            <Link href="/contact/" className="btn-primary inline-block">
-              Get a Free Quote
+            <Link href="/kitchen-wrapping-quote/" className="btn-primary inline-block">
+              Kitchen Quote
             </Link>
           </div>
         </div>

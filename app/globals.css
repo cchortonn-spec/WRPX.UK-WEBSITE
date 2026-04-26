@@ -107,3 +107,91 @@ a[href^="mailto"]:hover,
 a[href^="tel"]:hover {
   color: var(--accent-pink);
 }
+
+/* Multi-step quote form layout */
+.quote-shell {
+  background: #0b0b0b;
+}
+
+.quote-stepper {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.quote-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  text-align: center;
+}
+
+.quote-step-badge {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 9999px;
+  border: 2px solid #5b5b5b;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #d8d8d8;
+}
+
+.quote-step-label {
+  font-size: 0.75rem;
+  color: #b5b5b5;
+}
+
+.quote-step.active .quote-step-badge {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.quote-step.active .quote-step-label,
+.quote-step.done .quote-step-label {
+  color: var(--foreground);
+}
+
+.quote-step.done .quote-step-badge {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: #050505;
+}
+
+.quote-option-card,
+.quote-style-card {
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  background: #111;
+  padding: 0.75rem;
+  text-align: left;
+  transition: border-color 0.15s, transform 0.1s, box-shadow 0.15s;
+}
+
+.quote-option-card:hover,
+.quote-style-card:hover {
+  border-color: #3d3d3d;
+  transform: translateY(-1px);
+}
+
+.quote-option-card-active {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1px rgba(204, 255, 2, 0.2);
+}
+
+@media (max-width: 640px) {
+  .quote-step-label {
+    font-size: 0.68rem;
+  }
+
+  .quote-step-badge {
+    width: 2rem;
+    height: 2rem;
+  }
+}

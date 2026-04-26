@@ -63,8 +63,8 @@ export default function BlogFinishesPage() {
 
           <BlogAuthor />
           <p className="mt-12">
-            <Link href="/contact/" className="btn-primary inline-block">
-              Get a free quote
+            <Link href="/kitchen-wrapping-quote/" className="btn-primary inline-block">
+              Kitchen Quote
             </Link>
           </p>
         </div>

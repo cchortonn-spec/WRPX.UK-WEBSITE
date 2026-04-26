@@ -5,12 +5,12 @@ import { nav } from "@/lib/nav";
 import { testimonials } from "@/lib/testimonials";
 
 const galleryImages = [
-  { src: "/images/gallery/IMG_8145.webp", alt: "Vinyl wrapped kitchen South Yorkshire — after" },
-  { src: "/images/gallery/kitchen-cabinet-wrap-south-yorkshire.jpg", alt: "Kitchen cabinet wrap South Yorkshire — after" },
-  { src: "/images/gallery/wrapped-kitchen-doors-worktop-south-yorkshire.jpg", alt: "Wrapped kitchen doors and worktop — after" },
-  { src: "/images/gallery/feature-vinyl-kitchen-door-wrapping-costs.jpeg", alt: "Vinyl kitchen wrap project — after" },
-  { src: "/images/gallery/kitchen-wrap-before-after-south-yorkshire.jpg", alt: "Kitchen wrap before and after South Yorkshire" },
-  { src: "/images/gallery/kitchen-wrap-full-kitchen-south-yorkshire.jpg", alt: "Wrapped kitchen — after" },
+  { src: "/images/home/kitchen-home-new-02.png", alt: "Wrapped kitchen with light wall units and tiled splashback" },
+  { src: "/images/home/kitchen-home-new-04.png", alt: "Kitchen worktop and cabinet doors after vinyl wrapping" },
+  { src: "/images/home/kitchen-home-new-01.png", alt: "Modern grey kitchen wrap finish in South Yorkshire" },
+  { src: "/images/home/kitchen-home-new-05.png", alt: "Close-up of wrapped kitchen cabinets and stone-style counters" },
+  { src: "/images/home/kitchen-home-new-03.png", alt: "Kitchen transformation with refreshed wrapped doors and drawers" },
+  { src: "/images/home/kitchen-home-new-06.png", alt: "Full kitchen wrap result with updated cabinet surfaces" },
 ];
 
 export default function HomePage() {
@@ -35,8 +35,8 @@ export default function HomePage() {
             Transform your kitchen in 1–3 days. A fraction of the cost of a new kitchen.
           </p>
           <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row">
-            <Link href="/contact/" className="btn-primary">
-              Get a Free Quote
+            <Link href="/kitchen-wrapping-quote/" className="btn-primary">
+              Kitchen Quote
             </Link>
             <Link href="/gallery/" className="btn-secondary border-white/30 text-white hover:border-accent hover:bg-white/10">
               See Our Work →

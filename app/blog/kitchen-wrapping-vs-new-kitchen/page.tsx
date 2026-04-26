@@ -64,8 +64,8 @@ export default function BlogVsNewKitchenPage() {
 
           <BlogAuthor />
           <p className="mt-12">
-            <Link href="/contact/" className="btn-primary inline-block">
-              Get a free survey
+            <Link href="/kitchen-wrapping-quote/" className="btn-primary inline-block">
+              Kitchen Quote
             </Link>
           </p>
         </div>

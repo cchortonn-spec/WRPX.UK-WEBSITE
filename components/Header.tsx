@@ -157,7 +157,7 @@ export function Header() {
           href="/contact/"
           className="btn-primary hidden shrink-0 sm:inline-block"
         >
-          Get a Free Quote
+          Enquire Now
         </Link>
       </div>
 

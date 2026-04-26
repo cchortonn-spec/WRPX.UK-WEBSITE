@@ -14,7 +14,7 @@ export function StickyCtaBar() {
         {siteConfig.phone}
       </a>
       <Link href="/contact/" className="btn-primary text-center text-sm">
-        Get a Free Quote
+        Enquire
       </Link>
     </div>
   );

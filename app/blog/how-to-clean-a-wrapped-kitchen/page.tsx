@@ -60,8 +60,8 @@ export default function BlogCleanGuidePage() {
 
           <BlogAuthor />
           <p className="mt-12">
-            <Link href="/contact/" className="btn-primary inline-block">
-              Questions? Get in touch
+            <Link href="/kitchen-wrapping-quote/" className="btn-primary inline-block">
+              Kitchen Quote
             </Link>
           </p>
         </div>

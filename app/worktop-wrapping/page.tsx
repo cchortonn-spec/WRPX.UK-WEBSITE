@@ -103,8 +103,8 @@ export default function WorktopWrappingPage() {
           </div>
 
           <div className="text-center pt-4">
-            <Link href="/contact/" className="btn-primary inline-block">
-              Get a free worktop wrap quote
+            <Link href="/kitchen-wrapping-quote/" className="btn-primary inline-block">
+              Kitchen Quote
             </Link>
           </div>
         </div>

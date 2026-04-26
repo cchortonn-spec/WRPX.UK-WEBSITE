@@ -318,8 +318,8 @@ export default function KitchenWrappingRotherhamPage() {
             Free survey, no obligation. Fixed quote before work starts. 5-year
             guarantee on every job.
           </p>
-          <Link href="/contact/" className="btn-primary inline-block">
-            Book a Free Rotherham Survey →
+          <Link href="/kitchen-wrapping-quote/" className="btn-primary inline-block">
+            Kitchen Quote
           </Link>
           <p className="text-muted">
             Or call <strong>07398 395417</strong>
