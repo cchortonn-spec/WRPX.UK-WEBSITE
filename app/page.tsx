@@ -110,6 +110,13 @@ export default function HomePage() {
           <p className="text-center text-sm font-medium text-muted-foreground">
             We use premium vinyl from trusted brands
           </p>
+          <p className="mt-3 text-center text-sm text-muted">
+            Compare textures, tones and patterns in our{" "}
+            <Link href="/architectural-vinyl-finishes/" className="text-accent hover:underline">
+              architectural vinyl finish sample books
+            </Link>
+            .
+          </p>
           <div className="mt-6 flex flex-wrap items-center justify-center gap-6 md:gap-10">
             <div className="relative h-14 w-32 overflow-hidden md:h-20 md:w-44">
               <Image

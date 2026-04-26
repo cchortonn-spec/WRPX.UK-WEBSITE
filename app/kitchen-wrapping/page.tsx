@@ -112,6 +112,10 @@ export default function KitchenWrappingPage() {
             </h2>
             <p className="mt-4 text-muted leading-relaxed">
               We use branded films (3M, CoverStyl and others) for colour retention and durability. Finishes include matt, gloss, woodgrain (oak, walnut, light oak), marble, concrete and stone effect. We bring samples to the survey so you can choose in your own light. For more ideas see our{" "}
+              <Link href="/architectural-vinyl-finishes/" className="text-accent hover:underline">
+                architectural vinyl finishes sample books
+              </Link>{" "}
+              and our{" "}
               <Link href="/blog/vinyl-wrap-kitchen-finishes/" className="text-accent hover:underline">
                 vinyl wrap kitchen finishes guide
               </Link>

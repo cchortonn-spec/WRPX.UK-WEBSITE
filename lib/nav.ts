@@ -11,6 +11,7 @@ export const nav = {
     { label: "Worktop Wrapping", href: `${base}/worktop-wrapping/` },
     { label: "Furniture Wrapping", href: `${base}/furniture-wrapping/` },
     { label: "Architectural Vinyl Film", href: `${base}/architectural-vinyl-film/` },
+    { label: "Vinyl Finishes", href: `${base}/architectural-vinyl-finishes/` },
     { label: "Window Film", href: `${base}/window-film/` },
     { label: "Commercial & Retail", href: `${base}/commercial-installation/` },
     { label: "White-label install", href: `${base}/white-label-graphics-installation/` },

@@ -51,6 +51,16 @@ export default function ArchitecturalVinylFilmPage() {
               tired. Instead of removing serviceable units, we re-skin the
               visible surfaces with professional vinyl films in modern finishes.
             </p>
+            <p className="mt-4 text-muted">
+              Need finish ideas first? Browse our{" "}
+              <Link
+                href="/architectural-vinyl-finishes/"
+                className="text-accent hover:underline"
+              >
+                architectural vinyl finish sample books
+              </Link>
+              .
+            </p>
           </div>
         </div>
       </section>

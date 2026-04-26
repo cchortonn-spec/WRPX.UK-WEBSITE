@@ -109,6 +109,10 @@ export default function KitchenWrappingQuotePage() {
               <Link href="/kitchen-wrapping-cost/" className="text-accent hover:underline">
                 kitchen wrapping cost guide
               </Link>
+              . You can also preview finish options on our{" "}
+              <Link href="/architectural-vinyl-finishes/" className="text-accent hover:underline">
+                architectural vinyl finishes page
+              </Link>
               .
             </p>
           </article>

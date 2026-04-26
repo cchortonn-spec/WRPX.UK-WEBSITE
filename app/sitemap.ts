@@ -13,6 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "worktop-wrapping",
     "furniture-wrapping",
     "architectural-vinyl-film",
+    "architectural-vinyl-finishes",
     "gallery",
     "our-process",
     "faq",
