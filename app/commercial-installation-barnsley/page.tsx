@@ -82,6 +82,28 @@ export default function CommercialInstallationBarnsleyPage() {
           </Link>
         </div>
       </section>
+
+      <section className="px-4 pb-12">
+        <div className="container mx-auto max-w-3xl">
+          <div className="card-float p-6">
+            <h2 className="text-lg font-semibold text-foreground">More commercial areas</h2>
+            <div className="mt-4 flex flex-wrap gap-3">
+              <Link href="/commercial-installation-sheffield/" className="text-accent hover:underline">
+                Commercial installation in Sheffield
+              </Link>
+              <Link href="/commercial-installation-rotherham/" className="text-accent hover:underline">
+                Commercial installation in Rotherham
+              </Link>
+              <Link href="/commercial-installation-doncaster/" className="text-accent hover:underline">
+                Commercial installation in Doncaster
+              </Link>
+              <Link href="/commercial-installation-chesterfield/" className="text-accent hover:underline">
+                Commercial installation in Chesterfield
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

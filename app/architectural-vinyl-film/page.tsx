@@ -7,6 +7,10 @@ export const metadata: Metadata = {
   description:
     "Architectural vinyl film installation across South Yorkshire for kitchens, furniture and commercial interiors. Local specialist with a 5-year guarantee.",
   alternates: { canonical: "https://www.wrpx.co.uk/architectural-vinyl-film/" },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function ArchitecturalVinylFilmPage() {
@@ -58,6 +62,31 @@ export default function ArchitecturalVinylFilmPage() {
                 className="text-accent hover:underline"
               >
                 architectural vinyl finish sample books
+              </Link>
+              .
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="px-4 pb-14">
+        <div className="container mx-auto max-w-4xl">
+          <div className="card-float p-8 md:p-10">
+            <h2 className="text-2xl font-semibold text-foreground">
+              Film installation service vs finish selection page
+            </h2>
+            <p className="mt-4 leading-relaxed text-muted">
+              This page explains our architectural vinyl film installation service: where
+              we install, how we prepare surfaces, and what project types are suitable.
+              If you are choosing colours, patterns, or textures, use the finish guide.
+            </p>
+            <p className="mt-4 leading-relaxed text-muted">
+              Start here when you want survey and fitting details. Use the finishes page
+              when you need style inspiration and downloadable sample books.
+            </p>
+            <p className="mt-4 text-muted">
+              <Link href="/architectural-vinyl-finishes/" className="text-accent hover:underline">
+                Browse architectural vinyl finishes and sample books
               </Link>
               .
             </p>

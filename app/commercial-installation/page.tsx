@@ -412,6 +412,32 @@ export default function CommercialInstallationPage() {
                 · Bradford · York · Harrogate · Manchester · Nottingham · Derby · Lincoln
               </strong>
             </p>
+            <div className="mt-5 flex flex-wrap gap-3 text-sm">
+              <Link href="/commercial-installation-sheffield/" className="text-accent hover:underline">
+                Sheffield commercial installation
+              </Link>
+              <Link href="/commercial-installation-leeds/" className="text-accent hover:underline">
+                Leeds commercial installation
+              </Link>
+              <Link href="/commercial-installation-doncaster/" className="text-accent hover:underline">
+                Doncaster commercial installation
+              </Link>
+              <Link href="/commercial-installation-rotherham/" className="text-accent hover:underline">
+                Rotherham commercial installation
+              </Link>
+              <Link href="/commercial-installation-barnsley/" className="text-accent hover:underline">
+                Barnsley commercial installation
+              </Link>
+              <Link href="/commercial-installation-huddersfield/" className="text-accent hover:underline">
+                Huddersfield commercial installation
+              </Link>
+              <Link href="/commercial-installation-york/" className="text-accent hover:underline">
+                York commercial installation
+              </Link>
+              <Link href="/commercial-installation-nottingham/" className="text-accent hover:underline">
+                Nottingham commercial installation
+              </Link>
+            </div>
             <p className="mt-4 text-muted leading-relaxed">
               And all towns, retail parks and commercial districts in between. For larger multi-site
               programmes, national coverage is available — discussed on a project basis.

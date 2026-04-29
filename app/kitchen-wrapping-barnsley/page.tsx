@@ -216,6 +216,26 @@ export default function KitchenWrappingBarnsleyPage() {
         </div>
       </section>
 
+      <section className="py-10">
+        <div className="container mx-auto max-w-3xl px-4">
+          <div className="card-float p-6">
+            <h2 className="text-lg font-semibold text-foreground">
+              Looking for commercial vinyl installation in Barnsley?
+            </h2>
+            <p className="mt-3 text-muted leading-relaxed">
+              We also cover window graphics, wall wraps and floor graphics for retail,
+              agencies and brands.
+            </p>
+            <p className="mt-3">
+              <Link href="/commercial-installation-barnsley/" className="text-accent hover:underline">
+                See our commercial installation in Barnsley
+              </Link>
+              .
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section className="border-y border-border bg-card py-12">
         <div className="container mx-auto max-w-3xl px-4 text-center space-y-4">
           <h2 className="text-2xl font-semibold text-foreground">Ready to transform your Barnsley kitchen?</h2>

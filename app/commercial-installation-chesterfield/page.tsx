@@ -81,6 +81,28 @@ export default function CommercialInstallationChesterfieldPage() {
           </Link>
         </div>
       </section>
+
+      <section className="px-4 pb-12">
+        <div className="container mx-auto max-w-3xl">
+          <div className="card-float p-6">
+            <h2 className="text-lg font-semibold text-foreground">More commercial areas</h2>
+            <div className="mt-4 flex flex-wrap gap-3">
+              <Link href="/commercial-installation-sheffield/" className="text-accent hover:underline">
+                Commercial installation in Sheffield
+              </Link>
+              <Link href="/commercial-installation-nottingham/" className="text-accent hover:underline">
+                Commercial installation in Nottingham
+              </Link>
+              <Link href="/commercial-installation-york/" className="text-accent hover:underline">
+                Commercial installation in York
+              </Link>
+              <Link href="/commercial-installation-barnsley/" className="text-accent hover:underline">
+                Commercial installation in Barnsley
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

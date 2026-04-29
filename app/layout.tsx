@@ -6,6 +6,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { StickyCtaBar } from "@/components/StickyCtaBar";
 import { getLocalBusinessSchema } from "@/lib/schema";
+import { testimonials } from "@/lib/testimonials";
 
 const GA_MEASUREMENT_ID = "G-4D32FG8MK0";
 
@@ -21,9 +22,9 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.wrpx.co.uk"),
-  title: "Kitchen Wrapping South Yorkshire | Local Specialist",
+  title: "Kitchen & Commercial Vinyl Installation | South Yorkshire | WRPX",
   description:
-    "Kitchen wrapping South Yorkshire — Sheffield, Doncaster, Barnsley, Rotherham, Leeds, Huddersfield, Chesterfield. Transform in 1–3 days. Free quote.",
+    "WRPX installs kitchen wraps, commercial window graphics, wall wraps and floor graphics across South Yorkshire. 7+ years experience. 5-year guarantee. Free survey.",
   alternates: {
     canonical: "https://www.wrpx.co.uk/",
   },
@@ -38,6 +39,37 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const localBusinessSchema = getLocalBusinessSchema();
+  const reviewSchema = testimonials.map((item) => ({
+    "@type": "Review",
+    author: {
+      "@type": "Person",
+      name: item.name,
+    },
+    reviewBody: item.quote,
+    reviewRating: {
+      "@type": "Rating",
+      ratingValue: "5",
+      bestRating: "5",
+      worstRating: "1",
+    },
+    itemReviewed: {
+      "@type": "LocalBusiness",
+      name: "WRPX",
+    },
+  }));
+  const aggregateRatingSchema = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    name: "WRPX",
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "5",
+      reviewCount: String(testimonials.length),
+      bestRating: "5",
+      worstRating: "1",
+    },
+    review: reviewSchema,
+  };
 
   return (
     <html lang="en">
@@ -55,6 +87,12 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(localBusinessSchema),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(aggregateRatingSchema),
           }}
         />
       </head>

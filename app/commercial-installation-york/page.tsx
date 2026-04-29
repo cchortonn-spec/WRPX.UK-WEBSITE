@@ -82,6 +82,28 @@ export default function CommercialInstallationYorkPage() {
           </Link>
         </div>
       </section>
+
+      <section className="px-4 pb-12">
+        <div className="container mx-auto max-w-3xl">
+          <div className="card-float p-6">
+            <h2 className="text-lg font-semibold text-foreground">More commercial areas</h2>
+            <div className="mt-4 flex flex-wrap gap-3">
+              <Link href="/commercial-installation-leeds/" className="text-accent hover:underline">
+                Commercial installation in Leeds
+              </Link>
+              <Link href="/commercial-installation-huddersfield/" className="text-accent hover:underline">
+                Commercial installation in Huddersfield
+              </Link>
+              <Link href="/commercial-installation-doncaster/" className="text-accent hover:underline">
+                Commercial installation in Doncaster
+              </Link>
+              <Link href="/commercial-installation-nottingham/" className="text-accent hover:underline">
+                Commercial installation in Nottingham
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

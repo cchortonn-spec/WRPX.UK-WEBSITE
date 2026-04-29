@@ -115,6 +115,10 @@ export default function HomePage() {
             <Link href="/architectural-vinyl-finishes/" className="text-accent hover:underline">
               architectural vinyl finish sample books
             </Link>
+            {" "}or see full{" "}
+            <Link href="/architectural-vinyl-film/" className="text-accent hover:underline">
+              architectural vinyl film installation details
+            </Link>
             .
           </p>
           <div className="mt-6 flex flex-wrap items-center justify-center gap-6 md:gap-10">

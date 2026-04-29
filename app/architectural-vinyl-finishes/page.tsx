@@ -74,6 +74,10 @@ export const metadata: Metadata = {
   description:
     "Explore architectural vinyl finishes for kitchen wrapping. View sample books, compare textures and colours, and choose the best kitchen finish before your quote.",
   alternates: { canonical: "https://www.wrpx.co.uk/architectural-vinyl-finishes/" },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function ArchitecturalVinylFinishesPage() {
@@ -236,6 +240,27 @@ export default function ArchitecturalVinylFinishesPage() {
                 kitchen wrapping quote
               </Link>{" "}
               and we will confirm suitability at survey.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="px-4 pb-8">
+        <div className="container mx-auto max-w-5xl">
+          <div className="card-float p-6 md:p-8">
+            <h2 className="text-xl font-semibold text-foreground md:text-2xl">
+              Need fitting details instead of style ideas?
+            </h2>
+            <p className="mt-3 leading-relaxed text-muted">
+              This page is focused on style selection: colours, textures, and sample
+              books. If you need installation suitability, prep standards, and service
+              coverage details, use our architectural vinyl film service page.
+            </p>
+            <p className="mt-3 text-muted">
+              <Link href="/architectural-vinyl-film/" className="text-accent hover:underline">
+                Go to architectural vinyl film installation service
+              </Link>
+              .
             </p>
           </div>
         </div>
