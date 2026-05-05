@@ -443,6 +443,35 @@ export default function CommercialInstallationPage() {
               programmes, national coverage is available — discussed on a project basis.
             </p>
             <p className="mt-4 text-muted leading-relaxed">
+              We also publish dedicated commercial vinyl location pages:
+            </p>
+            <div className="mt-3 flex flex-wrap gap-3 text-sm">
+              <Link href="/locations/sheffield/commercial-vinyl-graphics" className="text-accent hover:underline">
+                Sheffield
+              </Link>
+              <Link href="/locations/leeds/commercial-vinyl-graphics" className="text-accent hover:underline">
+                Leeds
+              </Link>
+              <Link href="/locations/doncaster/commercial-vinyl-graphics" className="text-accent hover:underline">
+                Doncaster
+              </Link>
+              <Link href="/locations/rotherham/commercial-vinyl-graphics" className="text-accent hover:underline">
+                Rotherham
+              </Link>
+              <Link href="/locations/barnsley/commercial-vinyl-graphics" className="text-accent hover:underline">
+                Barnsley
+              </Link>
+              <Link href="/locations/huddersfield/commercial-vinyl-graphics" className="text-accent hover:underline">
+                Huddersfield
+              </Link>
+              <Link href="/locations/chesterfield/commercial-vinyl-graphics" className="text-accent hover:underline">
+                Chesterfield
+              </Link>
+              <Link href="/locations/nottingham/commercial-vinyl-graphics" className="text-accent hover:underline">
+                Nottingham
+              </Link>
+            </div>
+            <p className="mt-4 text-muted leading-relaxed">
               We also supply and install privacy film, frosted film and window graphics — see our{" "}
               <Link href="/window-film/" className="text-accent hover:underline">
                 window film service

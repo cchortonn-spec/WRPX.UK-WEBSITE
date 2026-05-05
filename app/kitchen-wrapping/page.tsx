@@ -222,28 +222,38 @@ export default function KitchenWrappingPage() {
 
           <div className="card-float p-8">
             <h2 className="text-xl font-semibold text-foreground">
-              Kitchen wrapping across South Yorkshire
+              We cover
             </h2>
             <p className="mt-4 text-muted leading-relaxed">
-              We cover Sheffield, Doncaster, Barnsley, Rotherham, Leeds,
-              Huddersfield and Chesterfield. For typical prices and what&apos;s included, see our{" "}
-              <Link href="/kitchen-wrapping-cost/" className="text-accent hover:underline">
-                kitchen wrapping cost guide
-              </Link>
-              . Same process everywhere: free survey, fixed quote, same team from start to finish.{" "}
-              <Link href="/kitchen-wrapping-sheffield/" className="text-accent hover:underline">
-                Kitchen wrapping Sheffield
-              </Link>{" "}
-              and the rest of South Yorkshire. We also install vinyl in{" "}
-              <Link href="/commercial-installation/" className="text-accent hover:underline">
-                commercial and retail spaces
-              </Link>{" "}
-              across the region —{" "}
-              <Link href="/kitchen-wrapping-quote/" className="text-accent hover:underline">
-                get in touch
-              </Link>{" "}
-              for a free quote.
+              Browse city pages for kitchen vinyl wrapping. Each page includes local pricing ranges,
+              FAQs and service details.
             </p>
+            <div className="mt-4 flex flex-wrap gap-3 text-sm">
+              <Link href="/locations/sheffield/kitchen-vinyl-wrapping" className="text-accent hover:underline">
+                Sheffield
+              </Link>
+              <Link href="/locations/leeds/kitchen-vinyl-wrapping" className="text-accent hover:underline">
+                Leeds
+              </Link>
+              <Link href="/locations/doncaster/kitchen-vinyl-wrapping" className="text-accent hover:underline">
+                Doncaster
+              </Link>
+              <Link href="/locations/rotherham/kitchen-vinyl-wrapping" className="text-accent hover:underline">
+                Rotherham
+              </Link>
+              <Link href="/locations/barnsley/kitchen-vinyl-wrapping" className="text-accent hover:underline">
+                Barnsley
+              </Link>
+              <Link href="/locations/huddersfield/kitchen-vinyl-wrapping" className="text-accent hover:underline">
+                Huddersfield
+              </Link>
+              <Link href="/locations/chesterfield/kitchen-vinyl-wrapping" className="text-accent hover:underline">
+                Chesterfield
+              </Link>
+              <Link href="/locations/nottingham/kitchen-vinyl-wrapping" className="text-accent hover:underline">
+                Nottingham
+              </Link>
+            </div>
           </div>
 
           <div className="text-center pt-4">

@@ -371,6 +371,42 @@ export default function WindowFilmHubPage() {
           <p className="mt-4 text-center text-sm text-muted">
             Also covering Wakefield, Bradford, York, Harrogate, Worksop, Mansfield and surrounding areas. Commercial multi-site programmes available nationally — discussed on a project basis.
           </p>
+          <p className="mt-6 text-center text-sm text-muted">
+            Browse dedicated location pages:
+          </p>
+          <p className="mt-2 text-center text-sm">
+            <Link href="/locations/sheffield/window-film-installation" className="text-accent hover:underline">
+              Sheffield
+            </Link>
+            {" · "}
+            <Link href="/locations/leeds/window-film-installation" className="text-accent hover:underline">
+              Leeds
+            </Link>
+            {" · "}
+            <Link href="/locations/doncaster/window-film-installation" className="text-accent hover:underline">
+              Doncaster
+            </Link>
+            {" · "}
+            <Link href="/locations/rotherham/window-film-installation" className="text-accent hover:underline">
+              Rotherham
+            </Link>
+            {" · "}
+            <Link href="/locations/barnsley/window-film-installation" className="text-accent hover:underline">
+              Barnsley
+            </Link>
+            {" · "}
+            <Link href="/locations/huddersfield/window-film-installation" className="text-accent hover:underline">
+              Huddersfield
+            </Link>
+            {" · "}
+            <Link href="/locations/chesterfield/window-film-installation" className="text-accent hover:underline">
+              Chesterfield
+            </Link>
+            {" · "}
+            <Link href="/locations/nottingham/window-film-installation" className="text-accent hover:underline">
+              Nottingham
+            </Link>
+          </p>
         </div>
       </section>
 

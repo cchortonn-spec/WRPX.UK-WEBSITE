@@ -95,6 +95,43 @@ export default function ArchitecturalVinylFilmPage() {
       </section>
 
       <section className="px-4 py-14">
+        <div className="container mx-auto max-w-4xl">
+          <div className="card-float p-8 md:p-10">
+            <h2 className="text-2xl font-semibold text-foreground">We cover</h2>
+            <p className="mt-4 text-muted leading-relaxed">
+              Browse city pages for architectural vinyl film installations.
+            </p>
+            <div className="mt-4 flex flex-wrap gap-3 text-sm">
+              <Link href="/locations/sheffield/architectural-vinyl-film" className="text-accent hover:underline">
+                Sheffield
+              </Link>
+              <Link href="/locations/leeds/architectural-vinyl-film" className="text-accent hover:underline">
+                Leeds
+              </Link>
+              <Link href="/locations/doncaster/architectural-vinyl-film" className="text-accent hover:underline">
+                Doncaster
+              </Link>
+              <Link href="/locations/rotherham/architectural-vinyl-film" className="text-accent hover:underline">
+                Rotherham
+              </Link>
+              <Link href="/locations/barnsley/architectural-vinyl-film" className="text-accent hover:underline">
+                Barnsley
+              </Link>
+              <Link href="/locations/huddersfield/architectural-vinyl-film" className="text-accent hover:underline">
+                Huddersfield
+              </Link>
+              <Link href="/locations/chesterfield/architectural-vinyl-film" className="text-accent hover:underline">
+                Chesterfield
+              </Link>
+              <Link href="/locations/nottingham/architectural-vinyl-film" className="text-accent hover:underline">
+                Nottingham
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="px-4 py-14">
         <div className="container mx-auto max-w-5xl">
           <h2 className="mb-8 text-center text-2xl font-semibold text-foreground md:text-3xl">
             Domestic and commercial architectural film services

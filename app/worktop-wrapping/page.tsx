@@ -95,11 +95,38 @@ export default function WorktopWrappingPage() {
 
           <div className="card-float p-8">
             <h2 className="text-xl font-semibold text-foreground">
-              Areas we cover
+              We cover
             </h2>
             <p className="mt-4 text-muted leading-relaxed">
-              We cover South Yorkshire and surrounding areas: Sheffield, Doncaster, Barnsley, Rotherham, Leeds, Huddersfield and Chesterfield. Get in touch with your postcode for a free survey and fixed quote.
+              Browse city pages for worktop vinyl wrapping. Each page includes local service details
+              and FAQs.
             </p>
+            <div className="mt-4 flex flex-wrap gap-3 text-sm">
+              <Link href="/locations/sheffield/worktop-vinyl-wrapping" className="text-accent hover:underline">
+                Sheffield
+              </Link>
+              <Link href="/locations/leeds/worktop-vinyl-wrapping" className="text-accent hover:underline">
+                Leeds
+              </Link>
+              <Link href="/locations/doncaster/worktop-vinyl-wrapping" className="text-accent hover:underline">
+                Doncaster
+              </Link>
+              <Link href="/locations/rotherham/worktop-vinyl-wrapping" className="text-accent hover:underline">
+                Rotherham
+              </Link>
+              <Link href="/locations/barnsley/worktop-vinyl-wrapping" className="text-accent hover:underline">
+                Barnsley
+              </Link>
+              <Link href="/locations/huddersfield/worktop-vinyl-wrapping" className="text-accent hover:underline">
+                Huddersfield
+              </Link>
+              <Link href="/locations/chesterfield/worktop-vinyl-wrapping" className="text-accent hover:underline">
+                Chesterfield
+              </Link>
+              <Link href="/locations/nottingham/worktop-vinyl-wrapping" className="text-accent hover:underline">
+                Nottingham
+              </Link>
+            </div>
           </div>
 
           <div className="text-center pt-4">
