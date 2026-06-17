@@ -31,6 +31,15 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
   },
+  icons: {
+    icon: [
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon.ico", sizes: "any" },
+    ],
+    apple: "/apple-touch-icon.png",
+  },
+  manifest: "/site.webmanifest",
 };
 
 export default function RootLayout({
@@ -74,13 +83,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* Prefer PNG icons (updated logo); .ico as fallback for older browsers */}
-        <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
-        <link rel="icon" href="/favicon-16x16.png" type="image/png" sizes="16x16" />
-        <link rel="icon" href="/android-chrome-192x192.png" type="image/png" sizes="192x192" />
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-        <link rel="manifest" href="/site.webmanifest" />
         {/* Google Search Console: add your property at https://www.wrpx.co.uk, choose HTML tag, copy the content value and paste below */}
         <meta name="google-site-verification" content="" />
         <script
