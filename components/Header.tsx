@@ -2,8 +2,8 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { siteConfig } from "@/lib/site-config";
 import { nav } from "@/lib/nav";
+import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { useState } from "react";
 
 function Dropdown({
@@ -86,13 +86,6 @@ export function Header() {
           />
         </Link>
 
-        <a
-          href={`tel:${siteConfig.phoneE164}`}
-          className="hidden shrink-0 text-muted hover:text-foreground sm:block"
-        >
-          {siteConfig.phone}
-        </a>
-
         <button
           type="button"
           onClick={() => setMobileOpen(!mobileOpen)}
@@ -153,12 +146,7 @@ export function Header() {
           </Link>
         </nav>
 
-        <Link
-          href="/contact/"
-          className="btn-primary hidden shrink-0 sm:inline-block"
-        >
-          Enquire Now
-        </Link>
+        <div className="hidden w-10 lg:block" aria-hidden="true" />
       </div>
 
       {mobileOpen && (
@@ -220,6 +208,9 @@ export function Header() {
                 </Link>
               </li>
             </ul>
+            <div className="mt-6 border-t border-border pt-6">
+              <WhatsAppButton label="Chat on WhatsApp" className="w-full justify-center" />
+            </div>
           </div>
         </div>
       )}

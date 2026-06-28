@@ -69,6 +69,14 @@ export function AnalyticsTracker() {
           event_type: "email_click",
           page_url: pageUrl,
         });
+        return;
+      }
+
+      if (href.includes("wa.me") || href.includes("whatsapp.com")) {
+        trackEvent({
+          event_type: "whatsapp_click",
+          page_url: pageUrl,
+        });
       }
     }
 

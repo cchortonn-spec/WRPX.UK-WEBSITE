@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { siteConfig } from "@/lib/site-config";
 import { QuoteForm } from "@/components/QuoteForm";
+import { WhatsAppButton } from "@/components/WhatsAppButton";
 
 export const metadata: Metadata = {
   title: "Free Kitchen Wrap Quote | South Yorkshire & Surrounding Areas",
@@ -35,6 +36,9 @@ export default function ContactPage() {
             . We cover Sheffield, Doncaster, Barnsley, Rotherham, Leeds,
             Huddersfield and Chesterfield.
           </p>
+          <div className="mt-6">
+            <WhatsAppButton className="w-full justify-center sm:w-auto" />
+          </div>
         </div>
       </section>
 

@@ -5,6 +5,7 @@ export const siteConfig = {
   name: "WRPX",
   phone: "07398395417",
   phoneE164: "+447398395417",
+  whatsappUrl: "https://wa.me/+447398395417",
   email: "wrpx.uk@gmail.com",
   domain: "https://www.wrpx.co.uk",
   guaranteeYears: 5,

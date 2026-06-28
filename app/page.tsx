@@ -3,6 +3,9 @@ import Image from "next/image";
 import { siteConfig } from "@/lib/site-config";
 import { nav } from "@/lib/nav";
 import { testimonials } from "@/lib/testimonials";
+import { HomeHero } from "@/components/HomeHero";
+import { HeroTrustBar } from "@/components/HeroTrustBar";
+import { WhatsAppButton } from "@/components/WhatsAppButton";
 
 const galleryImages = [
   { src: "/images/home/kitchen-home-new-02.png", alt: "Wrapped kitchen with light wall units and tiled splashback" },
@@ -16,40 +19,13 @@ const galleryImages = [
 export default function HomePage() {
   return (
     <div>
-      {/* Hero — full-width cover image with overlay */}
-      <section className="relative min-h-[85vh] w-full overflow-hidden">
-        <Image
-          src="/images/hero.jpg"
-          alt="Kitchen wrapping South Yorkshire — transformed kitchen"
-          fill
-          className="object-cover"
-          priority
-          sizes="100vw"
-        />
-        <div className="absolute inset-0 bg-black/70" />
-        <div className="absolute inset-0 flex flex-col items-center justify-center px-4 text-center">
-          <h1 className="text-4xl font-bold tracking-tight text-white drop-shadow-lg md:text-5xl lg:text-6xl">
-            Kitchen Wrapping Specialists — South Yorkshire
-          </h1>
-          <p className="mt-6 max-w-2xl text-xl text-white/90">
-            Transform your kitchen in 1–3 days. A fraction of the cost of a new kitchen.
-          </p>
-          <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row">
-            <Link href="/kitchen-wrapping-quote/" className="btn-primary">
-              Kitchen Quote
-            </Link>
-            <Link href="/gallery/" className="btn-secondary border-white/30 text-white hover:border-accent hover:bg-white/10">
-              See Our Work →
-            </Link>
-          </div>
-          <p className="mt-10 text-sm text-white/70">
-            Sheffield · Doncaster · Barnsley · Rotherham · Leeds · Huddersfield · Chesterfield
-          </p>
-        </div>
-      </section>
+      <HomeHero />
+      <HeroTrustBar />
+
+      <div className="section-sep" aria-hidden="true" />
 
       {/* What we do — single floating card */}
-      <section className="px-4 py-20">
+      <section className="reveal px-4 py-20">
         <div className="container mx-auto max-w-4xl">
           <div className="card-float p-8 md:p-10">
             <h2 className="text-2xl font-semibold text-foreground md:text-3xl">
@@ -62,8 +38,10 @@ export default function HomePage() {
         </div>
       </section>
 
+      <div className="section-sep" aria-hidden="true" />
+
       {/* Commercial & retail work */}
-      <section className="px-4 pb-10">
+      <section className="reveal px-4 pb-10">
         <div className="container mx-auto max-w-4xl">
           <div className="card-float p-8 md:p-10">
             <h2 className="text-2xl font-semibold text-foreground md:text-3xl">
@@ -75,7 +53,7 @@ export default function HomePage() {
               across South Yorkshire and the wider North.
             </p>
             <p className="mt-4 text-muted">
-              <Link href="/commercial-installation/" className="text-accent hover:underline">
+              <Link href="/commercial-installation/" className="link-subtle">
                 See our commercial graphics &amp; installation service
               </Link>
               .
@@ -85,7 +63,7 @@ export default function HomePage() {
       </section>
 
       {/* Window film */}
-      <section className="px-4 pb-10">
+      <section className="reveal px-4 pb-10">
         <div className="container mx-auto max-w-4xl">
           <div className="card-float p-8 md:p-10">
             <h2 className="text-2xl font-semibold text-foreground md:text-3xl">
@@ -95,7 +73,7 @@ export default function HomePage() {
               We install privacy film, frosted window film, one-way mirror film, solar control film and glass manifestation for homes and businesses across South Yorkshire. Same preparation standards and premium materials.
             </p>
             <p className="mt-4 text-muted">
-              <Link href="/window-film/" className="text-accent hover:underline">
+              <Link href="/window-film/" className="link-subtle">
                 See our window film service
               </Link>
               .
@@ -104,19 +82,21 @@ export default function HomePage() {
         </div>
       </section>
 
+      <div className="section-sep" aria-hidden="true" />
+
       {/* Trusted brands — vinyl wrap materials */}
-      <section className="border-y border-border bg-muted/30 py-12">
+      <section className="home-section-alt reveal py-12">
         <div className="container mx-auto max-w-4xl px-4">
           <p className="text-center text-sm font-medium text-muted-foreground">
             We use premium vinyl from trusted brands
           </p>
           <p className="mt-3 text-center text-sm text-muted">
             Compare textures, tones and patterns in our{" "}
-            <Link href="/architectural-vinyl-finishes/" className="text-accent hover:underline">
+            <Link href="/architectural-vinyl-finishes/" className="link-subtle">
               architectural vinyl finish sample books
             </Link>
             {" "}or see full{" "}
-            <Link href="/architectural-vinyl-film/" className="text-accent hover:underline">
+            <Link href="/architectural-vinyl-film/" className="link-subtle">
               architectural vinyl film installation details
             </Link>
             .
@@ -162,25 +142,27 @@ export default function HomePage() {
         </div>
       </section>
 
+      <div className="section-sep" aria-hidden="true" />
+
       {/* Why wrap — 3 floating cards */}
-      <section className="px-4 py-20">
+      <section className="home-section-alt reveal px-4 py-20">
         <div className="container mx-auto max-w-5xl">
-          <h2 className="mb-12 text-center text-2xl font-semibold text-foreground md:text-3xl">
+          <h2 className="section-heading mb-12 text-2xl font-semibold text-foreground md:text-3xl">
             Why wrap instead of replace
           </h2>
           <div className="grid gap-8 sm:grid-cols-3">
             <div className="card-float p-8 text-center">
-              <p className="text-2xl font-bold text-accent">Cost saving</p>
+              <p className="text-2xl font-bold text-foreground">Cost saving</p>
               <p className="mt-3 text-muted">
                 Typically 70–80% less than a new kitchen.
               </p>
             </div>
             <div className="card-float p-8 text-center">
-              <p className="text-2xl font-bold text-accent">Install time</p>
+              <p className="text-2xl font-bold text-foreground">Install time</p>
               <p className="mt-3 text-muted">1–3 days. No rip-out.</p>
             </div>
             <div className="card-float p-8 text-center">
-              <p className="text-2xl font-bold text-accent">Life expectancy</p>
+              <p className="text-2xl font-bold text-foreground">Life expectancy</p>
               <p className="mt-3 text-muted">
                 {siteConfig.guaranteeYears}+ years with correct care.
               </p>
@@ -189,10 +171,12 @@ export default function HomePage() {
         </div>
       </section>
 
+      <div className="section-sep" aria-hidden="true" />
+
       {/* Before & After — real images in floating cards */}
-      <section className="px-4 py-20">
+      <section className="reveal px-4 py-20">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="mb-12 text-center text-2xl font-semibold text-foreground md:text-3xl">
+          <h2 className="section-heading mb-12 text-2xl font-semibold text-foreground md:text-3xl">
             Before & After
           </h2>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -218,10 +202,12 @@ export default function HomePage() {
         </div>
       </section>
 
+      <div className="section-sep" aria-hidden="true" />
+
       {/* Process — 4 floating cards */}
-      <section className="px-4 py-20">
+      <section className="home-section-alt reveal px-4 py-20">
         <div className="container mx-auto max-w-5xl">
-          <h2 className="mb-12 text-center text-2xl font-semibold text-foreground md:text-3xl">
+          <h2 className="section-heading mb-12 text-2xl font-semibold text-foreground md:text-3xl">
             Our process in 4 steps
           </h2>
           <div className="grid gap-6 sm:grid-cols-2">
@@ -232,9 +218,7 @@ export default function HomePage() {
               { num: 4, title: "Reinstallation & inspection", body: "Doors rehung, hardware refitted, full walkround with you." },
             ].map((step) => (
               <div key={step.num} className="card-float flex gap-4 p-6 md:p-8">
-                <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-accent text-lg font-bold text-accent-foreground">
-                  {step.num}
-                </span>
+                <span className="step-badge">{step.num}</span>
                 <div>
                   <h3 className="font-semibold text-foreground">{step.title}</h3>
                   <p className="mt-2 text-sm text-muted">{step.body}</p>
@@ -245,8 +229,10 @@ export default function HomePage() {
         </div>
       </section>
 
+      <div className="section-sep" aria-hidden="true" />
+
       {/* What's covered — one card */}
-      <section className="px-4 py-20">
+      <section className="reveal px-4 py-20">
         <div className="container mx-auto max-w-2xl">
           <div className="card-float p-8 md:p-10">
             <h2 className="text-2xl font-semibold text-foreground">
@@ -255,7 +241,7 @@ export default function HomePage() {
             <ul className="mt-6 grid gap-3 sm:grid-cols-2">
               {["Doors", "Drawer fronts", "Carcass faces", "Side panels", "Plinths", "Cornice / pelmet", "Worktops", "Splashbacks / tiles"].map((item) => (
                 <li key={item} className="flex items-center gap-2 text-muted">
-                  <span className="text-accent">✓</span> {item}
+                  <span className="text-white/50">✓</span> {item}
                 </li>
               ))}
             </ul>
@@ -263,10 +249,12 @@ export default function HomePage() {
         </div>
       </section>
 
+      <div className="section-sep" aria-hidden="true" />
+
       {/* Guarantee — bold card */}
-      <section className="px-4 py-20">
+      <section className="home-section-alt reveal px-4 py-20">
         <div className="container mx-auto max-w-2xl">
-          <div className="card-float border-accent/30 p-10 text-center">
+          <div className="card-float p-10 text-center">
             <p className="text-4xl font-bold text-accent md:text-5xl">
               {siteConfig.guaranteeYears}-year guarantee
             </p>
@@ -277,16 +265,18 @@ export default function HomePage() {
         </div>
       </section>
 
+      <div className="section-sep" aria-hidden="true" />
+
       {/* Testimonials — 3 floating cards */}
-      <section className="px-4 py-20">
+      <section className="reveal px-4 py-20">
         <div className="container mx-auto max-w-5xl">
-          <h2 className="mb-12 text-center text-2xl font-semibold text-foreground md:text-3xl">
+          <h2 className="section-heading mb-12 text-2xl font-semibold text-foreground md:text-3xl">
             What customers say
           </h2>
           <div className="grid gap-8 sm:grid-cols-3">
             {testimonials.map((t, i) => (
               <div key={i} className="card-float p-6 md:p-8">
-                <p className="text-accent">★★★★★</p>
+                <p className="text-white/70">★★★★★</p>
                 <p className="mt-4 italic text-card-foreground">
                   {t.quote}
                 </p>
@@ -297,10 +287,12 @@ export default function HomePage() {
         </div>
       </section>
 
+      <div className="section-sep" aria-hidden="true" />
+
       {/* Cities — link cards */}
-      <section className="px-4 py-20">
+      <section className="home-section-alt reveal px-4 py-20">
         <div className="container mx-auto max-w-5xl">
-          <h2 className="mb-12 text-center text-2xl font-semibold text-foreground md:text-3xl">
+          <h2 className="section-heading mb-12 text-2xl font-semibold text-foreground md:text-3xl">
             Cities we serve
           </h2>
           <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4">
@@ -317,23 +309,28 @@ export default function HomePage() {
         </div>
       </section>
 
+      <div className="section-sep" aria-hidden="true" />
+
       {/* Final CTA — large bordered section */}
-      <section className="px-4 py-24">
+      <section className="reveal px-4 py-24">
         <div className="container mx-auto max-w-3xl">
-          <div className="card-float border-2 border-accent/40 p-12 text-center md:p-16">
+          <div className="card-float border border-white/10 p-12 text-center md:p-16">
             <h2 className="text-2xl font-semibold text-foreground md:text-3xl">
               Ready to transform your kitchen?
             </h2>
             <p className="mt-4 text-muted">
               {siteConfig.yearsInBusiness}+ years in the vinyl and sign wrapping industry. Free survey, no obligation.{" "}
-              <Link href="/kitchen-wrapping-cost/" className="text-accent hover:underline">
+              <Link href="/kitchen-wrapping-cost/" className="link-subtle">
                 See our kitchen wrapping cost guide
               </Link>
               .
             </p>
-            <Link href="/contact/" className="btn-primary mt-10 inline-block">
-              Book Your Free Survey
-            </Link>
+            <div className="mt-10 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center sm:justify-center">
+              <WhatsAppButton className="w-full justify-center sm:w-auto" />
+              <Link href="/contact/" className="btn-primary w-full text-center sm:w-auto">
+                Book Your Free Survey
+              </Link>
+            </div>
           </div>
         </div>
       </section>

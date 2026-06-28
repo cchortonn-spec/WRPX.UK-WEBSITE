@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { programmaticBusinessContact } from "@/lib/programmatic-pages";
+import { WhatsAppButton } from "@/components/WhatsAppButton";
 
 type CTABlockProps = {
   cityName: string;
@@ -19,16 +20,17 @@ export default function CTABlock({ cityName, serviceName }: CTABlockProps) {
         <p className="mx-auto mt-4 max-w-xl text-background/80">
           Free quotes. No obligation. We cover {cityName} and surrounding areas.
         </p>
-        <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
+        <div className="mt-8 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center">
+          <WhatsAppButton className="w-full justify-center sm:w-auto" />
           <Link
             href="/contact/"
-            className="inline-flex items-center rounded-md bg-background px-8 py-4 text-sm font-bold text-foreground transition-opacity hover:opacity-90"
+            className="inline-flex w-full items-center justify-center rounded-md bg-background px-8 py-4 text-sm font-bold text-foreground transition-opacity hover:opacity-90 sm:w-auto"
           >
             Get a Free Quote
           </Link>
           <a
             href={`tel:${programmaticBusinessContact.phoneE164}`}
-            className="inline-flex items-center rounded-md border border-background/30 px-8 py-4 text-sm font-bold text-background transition-colors hover:border-background"
+            className="inline-flex w-full items-center justify-center rounded-md border border-background/30 px-8 py-4 text-sm font-bold text-background transition-colors hover:border-background sm:w-auto"
           >
             Call {programmaticBusinessContact.phoneDisplay}
           </a>

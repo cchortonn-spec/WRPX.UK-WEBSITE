@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { siteConfig } from "@/lib/site-config";
 import { nav } from "@/lib/nav";
+import { WhatsAppButton } from "@/components/WhatsAppButton";
 
 export function Footer() {
   const year = new Date().getFullYear();
@@ -75,7 +76,10 @@ export function Footer() {
                 {siteConfig.email}
               </a>
             </p>
-            <p className="mt-2 text-sm text-muted">
+            <div className="mt-4">
+              <WhatsAppButton variant="compact" label="Chat on WhatsApp" className="w-full sm:w-auto" />
+            </div>
+            <p className="mt-4 text-sm text-muted">
               <Link href="/contact/" className="hover:text-accent">
                 Free quote
               </Link>

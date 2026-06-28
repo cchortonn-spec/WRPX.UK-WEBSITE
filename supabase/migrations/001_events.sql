@@ -6,6 +6,7 @@ create table if not exists public.events (
     event_type in (
       'phone_click',
       'email_click',
+      'whatsapp_click',
       'quote_form',
       'contact_form',
       'page_view'

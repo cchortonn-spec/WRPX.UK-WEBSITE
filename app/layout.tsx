@@ -6,6 +6,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { StickyCtaBar } from "@/components/StickyCtaBar";
 import { AnalyticsTracker } from "@/components/AnalyticsTracker";
+import { WhatsAppFloat } from "@/components/WhatsAppFloat";
 import { getLocalBusinessSchema } from "@/lib/schema";
 import { testimonials } from "@/lib/testimonials";
 
@@ -119,6 +120,7 @@ export default function RootLayout({
         <main className="pb-20 lg:pb-0">{children}</main>
         <Footer />
         <StickyCtaBar />
+        <WhatsAppFloat />
         <AnalyticsTracker />
       </body>
     </html>
