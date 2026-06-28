@@ -117,7 +117,7 @@ export default function RootLayout({
           `}
         </Script>
         <Header />
-        <main className="pb-20 lg:pb-0">{children}</main>
+        <main className="pb-4 lg:pb-0">{children}</main>
         <Footer />
         <StickyCtaBar />
         <WhatsAppFloat />

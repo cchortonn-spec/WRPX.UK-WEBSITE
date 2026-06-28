@@ -288,10 +288,15 @@ a[href^="tel"]:hover {
 
 @media (max-width: 1023px) {
   .whatsapp-float {
-    bottom: 5.25rem;
+    bottom: 1.25rem;
     right: 0.85rem;
     width: 3.25rem;
     height: 3.25rem;
+    transition: bottom 0.4s ease;
+  }
+
+  body.sticky-cta-visible .whatsapp-float {
+    bottom: 5.25rem;
   }
 }
 
@@ -301,6 +306,48 @@ a[href^="tel"]:hover {
     right: 1.5rem;
     width: 3.75rem;
     height: 3.75rem;
+  }
+}
+
+/* Mobile sticky CTA bar — hidden until user scrolls */
+.sticky-cta-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 40;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-top: 1px solid var(--border);
+  background: rgba(5, 5, 5, 0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 0.75rem;
+  padding-bottom: max(0.75rem, env(safe-area-inset-bottom));
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(100%);
+  transition:
+    opacity 0.4s ease,
+    transform 0.4s ease;
+}
+
+.sticky-cta-bar--visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+@media (min-width: 1024px) {
+  .sticky-cta-bar {
+    display: none;
+  }
+}
+
+@media (max-width: 1023px) {
+  body.sticky-cta-visible main {
+    padding-bottom: 5.5rem;
   }
 }
 
