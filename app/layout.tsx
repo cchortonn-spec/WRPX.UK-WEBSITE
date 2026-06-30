@@ -2,11 +2,8 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { StickyCtaBar } from "@/components/StickyCtaBar";
+import { SiteChrome } from "@/components/SiteChrome";
 import { AnalyticsTracker } from "@/components/AnalyticsTracker";
-import { WhatsAppFloat } from "@/components/WhatsAppFloat";
 import { getLocalBusinessSchema } from "@/lib/schema";
 import { testimonials } from "@/lib/testimonials";
 
@@ -116,11 +113,7 @@ export default function RootLayout({
             gtag('config', '${GA_MEASUREMENT_ID}');
           `}
         </Script>
-        <Header />
-        <main className="pb-4 lg:pb-0">{children}</main>
-        <Footer />
-        <StickyCtaBar />
-        <WhatsAppFloat />
+        <SiteChrome>{children}</SiteChrome>
         <AnalyticsTracker />
       </body>
     </html>
