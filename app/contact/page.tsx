@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { siteConfig } from "@/lib/site-config";
 import { QuoteForm } from "@/components/QuoteForm";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
+import { WrpxTrustPanel } from "@/components/WrpxTrustPanel";
 
 export const metadata: Metadata = {
   title: "Free Kitchen Wrap Quote | South Yorkshire & Surrounding Areas",
@@ -43,13 +44,16 @@ export default function ContactPage() {
       </section>
 
       <section className="px-4 py-16">
-        <div className="container mx-auto max-w-lg">
-          <div className="card-float p-6 md:p-8">
-            <p className="mb-6 text-sm text-muted">
-              {siteConfig.yearsInBusiness}+ years in the vinyl and sign wrapping industry ·{" "}
-              {siteConfig.guaranteeYears}-year guarantee · No obligation
-            </p>
-            <QuoteForm />
+        <div className="container mx-auto max-w-5xl">
+          <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,22rem)] lg:items-start">
+            <div className="card-float p-6 md:p-8">
+              <p className="mb-6 text-sm text-muted">
+                {siteConfig.yearsInBusiness}+ years in the vinyl and sign wrapping industry ·{" "}
+                {siteConfig.guaranteeYears}-year guarantee · No obligation
+              </p>
+              <QuoteForm />
+            </div>
+            <WrpxTrustPanel variant="aside" />
           </div>
         </div>
       </section>

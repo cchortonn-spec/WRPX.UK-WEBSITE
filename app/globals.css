@@ -171,6 +171,173 @@ body::before {
   max-width: 48rem;
 }
 
+/* WRPX trust panel — branded van / local specialist */
+.wrpx-trust-eyebrow {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.wrpx-trust-heading {
+  margin-top: 0.75rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--foreground);
+}
+
+.wrpx-trust-lead {
+  margin-top: 1rem;
+  line-height: 1.65;
+  color: var(--muted);
+}
+
+.wrpx-trust-list {
+  margin-top: 1.25rem;
+  display: grid;
+  gap: 0.65rem;
+  list-style: none;
+  padding: 0;
+}
+
+.wrpx-trust-list li {
+  position: relative;
+  padding-left: 1.35rem;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+.wrpx-trust-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55rem;
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 9999px;
+  background: var(--accent);
+}
+
+.wrpx-trust-featured {
+  padding: 3rem 0 1rem;
+}
+
+.wrpx-trust-featured-grid {
+  display: grid;
+  border-radius: 1rem;
+}
+
+.wrpx-trust-featured-media {
+  position: relative;
+  min-height: 16rem;
+}
+
+.wrpx-trust-featured-copy {
+  padding: 1.75rem;
+}
+
+.wrpx-trust-aside {
+  overflow: hidden;
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.wrpx-trust-aside-media {
+  position: relative;
+  aspect-ratio: 4 / 3;
+}
+
+.wrpx-trust-aside-body {
+  padding: 1.25rem 1.5rem 1.5rem;
+}
+
+.wrpx-trust-banner {
+  overflow: hidden;
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+.wrpx-trust-banner-media {
+  position: relative;
+  aspect-ratio: 16 / 9;
+}
+
+.wrpx-trust-banner-scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    transparent 35%,
+    rgba(0, 0, 0, 0.55) 75%,
+    rgba(0, 0, 0, 0.85) 100%
+  );
+}
+
+.wrpx-trust-banner-points {
+  display: grid;
+  gap: 0.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 1rem 1.25rem 1.25rem;
+  background: rgba(255, 255, 255, 0.04);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.wrpx-trust-banner-points li {
+  position: relative;
+  padding-left: 1.1rem;
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+
+.wrpx-trust-banner-points li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.5rem;
+  width: 0.35rem;
+  height: 0.35rem;
+  border-radius: 9999px;
+  background: var(--accent);
+}
+
+@media (min-width: 768px) {
+  .wrpx-trust-featured-grid {
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  }
+
+  .wrpx-trust-featured-media {
+    min-height: 100%;
+  }
+
+  .wrpx-trust-featured-copy {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2.5rem;
+  }
+
+  .wrpx-trust-heading {
+    font-size: 1.75rem;
+  }
+
+  .wrpx-trust-banner-media {
+    aspect-ratio: 21 / 9;
+  }
+
+  .wrpx-trust-banner-points {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.65rem 1.5rem;
+    padding: 1.25rem 1.5rem;
+  }
+}
+
 /* Process step number badge */
 .step-badge {
   display: flex;

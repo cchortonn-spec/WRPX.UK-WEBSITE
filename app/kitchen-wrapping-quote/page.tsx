@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { getServiceSchema } from "@/lib/schema";
 import { KitchenWrappingQuoteWizard } from "@/components/KitchenWrappingQuoteWizard";
+import { WrpxTrustPanel } from "@/components/WrpxTrustPanel";
 
 export const metadata: Metadata = {
   title: "Kitchen Wrapping Quote South Yorkshire | WRPX",
@@ -76,7 +77,10 @@ export default function KitchenWrappingQuotePage() {
 
       <section className="px-4 py-8 md:py-12">
         <div className="container mx-auto max-w-5xl">
-          <KitchenWrappingQuoteWizard />
+          <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,22rem)] lg:items-start">
+            <KitchenWrappingQuoteWizard />
+            <WrpxTrustPanel variant="aside" className="lg:sticky lg:top-24" />
+          </div>
         </div>
       </section>
 

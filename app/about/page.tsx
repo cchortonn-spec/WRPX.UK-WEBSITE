@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { siteConfig } from "@/lib/site-config";
+import { WrpxTrustPanel } from "@/components/WrpxTrustPanel";
 
 export const metadata: Metadata = {
   title: "About WRPX | Kitchen Wrapping Specialist South Yorkshire",
@@ -32,28 +32,17 @@ export default function AboutPage() {
 
       <section className="px-4 py-16">
         <div className="container mx-auto max-w-3xl">
-          <div className="flex flex-col gap-8 md:flex-row md:items-start">
-            <div className="relative h-64 w-64 shrink-0 overflow-hidden rounded-lg border border-border md:h-72 md:w-72">
-              <Image
-                src="/images/connor.JPG"
-                alt="Connor — WRPX Kitchen Wrapping Specialist"
-                fill
-                className="object-cover"
-                sizes="288px"
-                priority
-              />
-            </div>
-            <div className="min-w-0 flex-1">
-              <h2 className="text-xl font-semibold text-foreground">
-                Connor — WRPX Kitchen Wrapping Specialist
-              </h2>
-              <p className="mt-4 text-muted leading-relaxed">
-                I run WRPX and do the surveys and wrapping myself. No national franchise, no subcontractors — you get one point of contact from first call to final walkround. I&apos;ve been wrapping kitchens, furniture and commercial vinyl for {siteConfig.yearsInBusiness}+ years. If your kitchen is suitable for wrapping I&apos;ll tell you; if it isn&apos;t I&apos;ll say that too. Honest advice, trade-level prep and a {siteConfig.guaranteeYears}-year guarantee on every job.
-              </p>
-              <p className="mt-4 text-muted leading-relaxed">
-                We cover Sheffield, Doncaster, Barnsley, Rotherham, Leeds, Huddersfield and Chesterfield. Free survey, fixed quote, no obligation.
-              </p>
-            </div>
+          <WrpxTrustPanel variant="banner" className="mb-10" />
+          <div>
+            <h2 className="text-xl font-semibold text-foreground">
+              WRPX Kitchen Wrapping Specialist
+            </h2>
+            <p className="mt-4 text-muted leading-relaxed">
+              I run WRPX and do the surveys and wrapping myself. No national franchise, no subcontractors — you get one point of contact from first call to final walkround. I&apos;ve been wrapping kitchens, furniture and commercial vinyl for {siteConfig.yearsInBusiness}+ years. If your kitchen is suitable for wrapping I&apos;ll tell you; if it isn&apos;t I&apos;ll say that too. Honest advice, trade-level prep and a {siteConfig.guaranteeYears}-year guarantee on every job.
+            </p>
+            <p className="mt-4 text-muted leading-relaxed">
+              We cover Sheffield, Doncaster, Barnsley, Rotherham, Leeds, Huddersfield and Chesterfield. Free survey, fixed quote, no obligation.
+            </p>
           </div>
         </div>
       </section>

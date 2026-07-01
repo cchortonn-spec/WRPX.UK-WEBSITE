@@ -6,6 +6,7 @@ import { testimonials } from "@/lib/testimonials";
 import { HomeHero } from "@/components/HomeHero";
 import { HeroTrustBar } from "@/components/HeroTrustBar";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
+import { WrpxTrustPanel } from "@/components/WrpxTrustPanel";
 
 const galleryImages = [
   { src: "/images/home/kitchen-home-new-02.png", alt: "Wrapped kitchen with light wall units and tiled splashback" },
@@ -21,6 +22,7 @@ export default function HomePage() {
     <div>
       <HomeHero />
       <HeroTrustBar />
+      <WrpxTrustPanel variant="featured" />
 
       <div className="section-sep" aria-hidden="true" />
 
