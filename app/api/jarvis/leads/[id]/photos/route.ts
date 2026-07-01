@@ -1,8 +1,12 @@
 import { NextResponse } from "next/server";
-import { getJarvisAuthFromCookies } from "@/lib/jarvis-auth";
+import { logJarvisAudit } from "@/lib/jarvis-audit";
 import {
-  uploadLeadPhotoToCloudinary,
-} from "@/lib/cloudinary-upload";
+  getJarvisSession,
+  jarvisForbidden,
+  jarvisUnauthorized,
+} from "@/lib/jarvis-clerk-auth";
+import { uploadLeadPhotoToCloudinary } from "@/lib/cloudinary-upload";
+import { canUploadPhotos } from "@/lib/jarvis-permissions";
 import {
   PHOTO_TYPES,
   type JarvisLeadPhoto,
@@ -12,17 +16,14 @@ import { getSupabaseAdmin } from "@/lib/supabase";
 
 export const runtime = "nodejs";
 
-function unauthorized() {
-  return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
-}
-
 type RouteContext = {
   params: Promise<{ id: string }>;
 };
 
 export async function GET(_request: Request, context: RouteContext) {
-  if (!(await getJarvisAuthFromCookies())) {
-    return unauthorized();
+  const session = await getJarvisSession();
+  if (!session) {
+    return jarvisUnauthorized();
   }
 
   try {
@@ -46,8 +47,13 @@ export async function GET(_request: Request, context: RouteContext) {
 }
 
 export async function POST(request: Request, context: RouteContext) {
-  if (!(await getJarvisAuthFromCookies())) {
-    return unauthorized();
+  const session = await getJarvisSession();
+  if (!session) {
+    return jarvisUnauthorized();
+  }
+
+  if (!canUploadPhotos(session.user)) {
+    return jarvisForbidden();
   }
 
   try {
@@ -73,7 +79,7 @@ export async function POST(request: Request, context: RouteContext) {
     const supabase = getSupabaseAdmin();
     const { data: lead } = await supabase
       .from("jarvis_leads")
-      .select("id")
+      .select("id, name")
       .eq("id", id)
       .single();
 
@@ -99,7 +105,7 @@ export async function POST(request: Request, context: RouteContext) {
         file_size: uploaded.bytes,
         caption,
         photo_type: photoType,
-        created_by: "connor",
+        created_by: session.user.email,
       })
       .select("*")
       .single();
@@ -119,6 +125,15 @@ export async function POST(request: Request, context: RouteContext) {
         updated_at: new Date().toISOString(),
       })
       .eq("id", id);
+
+    await logJarvisAudit({
+      actor: session.user,
+      action: "photo_uploaded",
+      entityType: "lead",
+      entityId: id,
+      summary: `Uploaded photo to ${lead.name}`,
+      metadata: { photo_id: photo.id, photo_type: photoType },
+    });
 
     return NextResponse.json({ photo: photo as JarvisLeadPhoto }, { status: 201 });
   } catch (error) {

@@ -1,17 +1,20 @@
 import { NextResponse } from "next/server";
-import { getJarvisAuthFromCookies } from "@/lib/jarvis-auth";
+import { logJarvisAudit } from "@/lib/jarvis-audit";
+import {
+  getJarvisSession,
+  jarvisForbidden,
+  jarvisUnauthorized,
+} from "@/lib/jarvis-clerk-auth";
+import { canEditLead } from "@/lib/jarvis-permissions";
 import { PRIORITIES, type JarvisTask, type Priority } from "@/lib/jarvis-types";
 import { getSupabaseAdmin } from "@/lib/supabase";
 
 export const runtime = "nodejs";
 
-function unauthorized() {
-  return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
-}
-
 export async function GET(request: Request) {
-  if (!(await getJarvisAuthFromCookies())) {
-    return unauthorized();
+  const session = await getJarvisSession();
+  if (!session) {
+    return jarvisUnauthorized();
   }
 
   try {
@@ -48,8 +51,13 @@ export async function GET(request: Request) {
 }
 
 export async function POST(request: Request) {
-  if (!(await getJarvisAuthFromCookies())) {
-    return unauthorized();
+  const session = await getJarvisSession();
+  if (!session) {
+    return jarvisUnauthorized();
+  }
+
+  if (!canEditLead(session.user)) {
+    return jarvisForbidden();
   }
 
   try {
@@ -87,6 +95,14 @@ export async function POST(request: Request) {
       console.error("Jarvis task create error:", error);
       return NextResponse.json({ error: "Could not create task" }, { status: 500 });
     }
+
+    await logJarvisAudit({
+      actor: session.user,
+      action: "task_created",
+      entityType: "task",
+      entityId: data.id,
+      summary: `Created task: ${title}`,
+    });
 
     return NextResponse.json({ task: data as JarvisTask }, { status: 201 });
   } catch (error) {

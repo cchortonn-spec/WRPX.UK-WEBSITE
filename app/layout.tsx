@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
+import { ClerkProvider } from "@clerk/nextjs";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { SiteChrome } from "@/components/SiteChrome";
@@ -113,8 +114,14 @@ export default function RootLayout({
             gtag('config', '${GA_MEASUREMENT_ID}');
           `}
         </Script>
-        <SiteChrome>{children}</SiteChrome>
-        <AnalyticsTracker />
+        <ClerkProvider
+          afterSignOutUrl="/jarvis/"
+          signInFallbackRedirectUrl="/jarvis/"
+          signInForceRedirectUrl="/jarvis/"
+        >
+          <SiteChrome>{children}</SiteChrome>
+          <AnalyticsTracker />
+        </ClerkProvider>
       </body>
     </html>
   );

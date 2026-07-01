@@ -5,7 +5,9 @@ import { JarvisAppShell } from "@/components/jarvis/JarvisAppShell";
 
 const PAGE_TITLES: Record<string, string> = {
   "/jarvis": "Home",
+  "/jarvis/": "Home",
   "/jarvis/leads": "Leads",
+  "/jarvis/leads/": "Leads",
 };
 
 export function JarvisLayoutClient({

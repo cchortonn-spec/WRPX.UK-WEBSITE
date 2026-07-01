@@ -1,3 +1,5 @@
+import type { JarvisRole, JarvisUserStatus } from "@/lib/jarvis-roles";
+
 export const LEAD_SOURCES = [
   "facebook",
   "website",
@@ -299,6 +301,37 @@ export type JarvisLeadPriority = {
   reason: string;
   rank: number;
   priority_score: number;
+};
+
+export type JarvisUser = {
+  id: string;
+  clerk_user_id: string;
+  email: string;
+  name: string | null;
+  role: JarvisRole;
+  status: JarvisUserStatus;
+  created_at: string;
+  updated_at: string;
+  last_seen_at: string | null;
+};
+
+export type JarvisAuditLog = {
+  id: string;
+  actor_user_id: string | null;
+  actor_clerk_user_id: string | null;
+  action: string;
+  entity_type: string | null;
+  entity_id: string | null;
+  summary: string;
+  metadata: Record<string, unknown> | null;
+  created_at: string;
+};
+
+export type JarvisSession = {
+  clerkUserId: string;
+  email: string;
+  name: string | null;
+  user: JarvisUser;
 };
 
 export type JarvisBriefing = {

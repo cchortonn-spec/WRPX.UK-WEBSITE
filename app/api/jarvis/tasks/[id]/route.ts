@@ -1,21 +1,28 @@
 import { NextResponse } from "next/server";
-import { getJarvisAuthFromCookies } from "@/lib/jarvis-auth";
+import { logJarvisAudit } from "@/lib/jarvis-audit";
+import {
+  getJarvisSession,
+  jarvisForbidden,
+  jarvisUnauthorized,
+} from "@/lib/jarvis-clerk-auth";
+import { canEditLead } from "@/lib/jarvis-permissions";
 import { PRIORITIES, type Priority } from "@/lib/jarvis-types";
 import { getSupabaseAdmin } from "@/lib/supabase";
 
 export const runtime = "nodejs";
-
-function unauthorized() {
-  return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
-}
 
 type RouteContext = {
   params: Promise<{ id: string }>;
 };
 
 export async function PATCH(request: Request, context: RouteContext) {
-  if (!(await getJarvisAuthFromCookies())) {
-    return unauthorized();
+  const session = await getJarvisSession();
+  if (!session) {
+    return jarvisUnauthorized();
+  }
+
+  if (!canEditLead(session.user)) {
+    return jarvisForbidden();
   }
 
   try {
@@ -63,6 +70,17 @@ export async function PATCH(request: Request, context: RouteContext) {
       console.error("Jarvis task update error:", error);
       return NextResponse.json({ error: "Could not update task" }, { status: 500 });
     }
+
+    await logJarvisAudit({
+      actor: session.user,
+      action: data.status === "completed" ? "task_completed" : "task_updated",
+      entityType: "task",
+      entityId: id,
+      summary:
+        data.status === "completed"
+          ? `Completed task: ${data.title}`
+          : `Updated task: ${data.title}`,
+    });
 
     return NextResponse.json({ task: data });
   } catch (error) {

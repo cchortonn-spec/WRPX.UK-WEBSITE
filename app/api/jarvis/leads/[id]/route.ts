@@ -1,7 +1,13 @@
 import { NextResponse } from "next/server";
-import { getJarvisAuthFromCookies } from "@/lib/jarvis-auth";
+import { logJarvisAudit } from "@/lib/jarvis-audit";
+import {
+  getJarvisSession,
+  jarvisForbidden,
+  jarvisUnauthorized,
+} from "@/lib/jarvis-clerk-auth";
 import { applyFollowUpAction } from "@/lib/jarvis-lead-update";
 import { getLeadInsights } from "@/lib/jarvis-lead-insights";
+import { canEditLead, canViewFinancials } from "@/lib/jarvis-permissions";
 import {
   FOLLOW_UP_STATUSES,
   JOB_TYPES,
@@ -27,17 +33,14 @@ import { getSupabaseAdmin } from "@/lib/supabase";
 
 export const runtime = "nodejs";
 
-function unauthorized() {
-  return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
-}
-
 type RouteContext = {
   params: Promise<{ id: string }>;
 };
 
 export async function GET(_request: Request, context: RouteContext) {
-  if (!(await getJarvisAuthFromCookies())) {
-    return unauthorized();
+  const session = await getJarvisSession();
+  if (!session) {
+    return jarvisUnauthorized();
   }
 
   try {
@@ -89,8 +92,13 @@ export async function GET(_request: Request, context: RouteContext) {
 }
 
 export async function PATCH(request: Request, context: RouteContext) {
-  if (!(await getJarvisAuthFromCookies())) {
-    return unauthorized();
+  const session = await getJarvisSession();
+  if (!session) {
+    return jarvisUnauthorized();
+  }
+
+  if (!canEditLead(session.user)) {
+    return jarvisForbidden();
   }
 
   try {
@@ -149,14 +157,16 @@ export async function PATCH(request: Request, context: RouteContext) {
     if (typeof body.last_contacted_at === "string" || body.last_contacted_at === null) {
       updates.last_contacted_at = body.last_contacted_at;
     }
-    if (typeof body.estimated_amount === "number" || body.estimated_amount === null) {
-      updates.estimated_amount = body.estimated_amount;
-    }
-    if (typeof body.quoted_amount === "number" || body.quoted_amount === null) {
-      updates.quoted_amount = body.quoted_amount;
-    }
-    if (typeof body.deposit_amount === "number" || body.deposit_amount === null) {
-      updates.deposit_amount = body.deposit_amount;
+    if (canViewFinancials(session.user)) {
+      if (typeof body.estimated_amount === "number" || body.estimated_amount === null) {
+        updates.estimated_amount = body.estimated_amount;
+      }
+      if (typeof body.quoted_amount === "number" || body.quoted_amount === null) {
+        updates.quoted_amount = body.quoted_amount;
+      }
+      if (typeof body.deposit_amount === "number" || body.deposit_amount === null) {
+        updates.deposit_amount = body.deposit_amount;
+      }
     }
     if (typeof body.quote_sent_at === "string" || body.quote_sent_at === null) {
       updates.quote_sent_at = body.quote_sent_at;
@@ -190,6 +200,13 @@ export async function PATCH(request: Request, context: RouteContext) {
     }
 
     const supabase = getSupabaseAdmin();
+
+    const { data: existingLead } = await supabase
+      .from("jarvis_leads")
+      .select("status, name")
+      .eq("id", id)
+      .maybeSingle();
+
     const { data, error } = await supabase
       .from("jarvis_leads")
       .update(updates)
@@ -201,6 +218,25 @@ export async function PATCH(request: Request, context: RouteContext) {
       console.error("Jarvis lead update error:", error);
       return NextResponse.json({ error: "Could not update lead" }, { status: 500 });
     }
+
+    const action =
+      typeof updates.status === "string" &&
+      existingLead?.status &&
+      updates.status !== existingLead.status
+        ? "lead_stage_changed"
+        : "lead_updated";
+
+    await logJarvisAudit({
+      actor: session.user,
+      action,
+      entityType: "lead",
+      entityId: id,
+      summary:
+        action === "lead_stage_changed"
+          ? `Moved ${data.name} to ${data.status}`
+          : `Updated lead ${data.name}`,
+      metadata: { status: data.status },
+    });
 
     return NextResponse.json({ lead: data });
   } catch (error) {

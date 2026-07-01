@@ -1,20 +1,27 @@
 import { NextResponse } from "next/server";
-import { getJarvisAuthFromCookies } from "@/lib/jarvis-auth";
+import { logJarvisAudit } from "@/lib/jarvis-audit";
+import {
+  getJarvisSession,
+  jarvisForbidden,
+  jarvisUnauthorized,
+} from "@/lib/jarvis-clerk-auth";
+import { canEditLead } from "@/lib/jarvis-permissions";
 import { getSupabaseAdmin } from "@/lib/supabase";
 
 export const runtime = "nodejs";
-
-function unauthorized() {
-  return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
-}
 
 type RouteContext = {
   params: Promise<{ id: string }>;
 };
 
 export async function POST(request: Request, context: RouteContext) {
-  if (!(await getJarvisAuthFromCookies())) {
-    return unauthorized();
+  const session = await getJarvisSession();
+  if (!session) {
+    return jarvisUnauthorized();
+  }
+
+  if (!canEditLead(session.user)) {
+    return jarvisForbidden();
   }
 
   try {
@@ -30,7 +37,7 @@ export async function POST(request: Request, context: RouteContext) {
 
     const { data: lead } = await supabase
       .from("jarvis_leads")
-      .select("id")
+      .select("id, name")
       .eq("id", id)
       .single();
 
@@ -53,6 +60,14 @@ export async function POST(request: Request, context: RouteContext) {
       .from("jarvis_leads")
       .update({ updated_at: new Date().toISOString() })
       .eq("id", id);
+
+    await logJarvisAudit({
+      actor: session.user,
+      action: "note_added",
+      entityType: "lead",
+      entityId: id,
+      summary: `Added note to ${lead.name}`,
+    });
 
     return NextResponse.json({ note }, { status: 201 });
   } catch (error) {

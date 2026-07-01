@@ -1619,6 +1619,167 @@ a[href^="tel"]:hover {
   padding: 2rem;
 }
 
+.jarvis-clerk-sign-in {
+  max-width: 28rem;
+}
+
+.jarvis-clerk-root {
+  width: 100%;
+}
+
+.jarvis-clerk-card {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  width: 100% !important;
+}
+
+.jarvis-clerk-hidden {
+  display: none !important;
+}
+
+.jarvis-clerk-footer {
+  color: var(--jarvis-text-muted) !important;
+}
+
+.jarvis-clerk-social-btn {
+  background: var(--jarvis-panel-elevated) !important;
+  border: 1px solid var(--jarvis-border) !important;
+  color: var(--jarvis-text) !important;
+}
+
+.jarvis-clerk-main {
+  gap: 1rem;
+}
+
+.jarvis-clerk-label {
+  color: #ffffff !important;
+}
+
+.jarvis-clerk-link {
+  color: var(--jarvis-accent) !important;
+}
+
+.jarvis-clerk-identity {
+  background: rgba(0, 0, 0, 0.25) !important;
+  border: 1px solid var(--jarvis-border) !important;
+}
+
+.jarvis-clerk-identity-text {
+  color: #ffffff !important;
+}
+
+.jarvis-clerk-input {
+  color: #ffffff !important;
+}
+
+.jarvis-clerk-input::placeholder {
+  color: var(--jarvis-text-secondary) !important;
+}
+
+/* Catch any Clerk text not covered by appearance classes */
+.jarvis-clerk-sign-in [class*="cl-formFieldLabel"],
+.jarvis-clerk-sign-in [class*="identityPreviewText"],
+.jarvis-clerk-sign-in [class*="formFieldLabel"],
+.jarvis-clerk-sign-in label {
+  color: #ffffff !important;
+}
+
+.jarvis-clerk-sign-in [class*="formFieldAction"],
+.jarvis-clerk-sign-in [class*="identityPreviewEditButton"],
+.jarvis-clerk-sign-in [class*="formFieldInputShowPasswordButton"] {
+  color: var(--jarvis-accent) !important;
+}
+
+.jarvis-clerk-sign-in input {
+  color: #ffffff !important;
+}
+
+.jarvis-clerk-otp-inputs {
+  display: flex !important;
+  justify-content: center !important;
+  gap: 0.5rem !important;
+}
+
+.jarvis-clerk-otp-input {
+  width: 2.5rem !important;
+  height: 2.75rem !important;
+  background: rgba(0, 0, 0, 0.35) !important;
+  border: 1px solid var(--jarvis-border) !important;
+  border-radius: var(--jarvis-radius) !important;
+  color: #ffffff !important;
+  font-size: 1.25rem !important;
+  font-weight: 600 !important;
+  text-align: center !important;
+}
+
+.jarvis-clerk-otp-input:focus {
+  outline: none !important;
+  border-color: rgba(183, 255, 60, 0.6) !important;
+  box-shadow: 0 0 0 2px rgba(183, 255, 60, 0.15) !important;
+}
+
+.jarvis-clerk-alert-text {
+  color: #ffffff !important;
+}
+
+.jarvis-clerk-sign-in [class*="otpCodeFieldInput"] {
+  width: 2.5rem !important;
+  height: 2.75rem !important;
+  background: rgba(0, 0, 0, 0.35) !important;
+  border: 1px solid var(--jarvis-border) !important;
+  border-radius: var(--jarvis-radius) !important;
+  color: #ffffff !important;
+  font-size: 1.25rem !important;
+  font-weight: 600 !important;
+  text-align: center !important;
+}
+
+.jarvis-clerk-sign-in [class*="otpCodeFieldInput"]:focus {
+  outline: none !important;
+  border-color: rgba(183, 255, 60, 0.6) !important;
+  box-shadow: 0 0 0 2px rgba(183, 255, 60, 0.15) !important;
+}
+
+.jarvis-clerk-sign-in [class*="otpCodeFieldInputs"] {
+  display: flex !important;
+  justify-content: center !important;
+  gap: 0.5rem !important;
+}
+
+.jarvis-clerk-sign-in [class*="alertText"],
+.jarvis-clerk-sign-in [class*="alert"] {
+  color: #ffffff !important;
+}
+
+.jarvis-clerk-sign-in [class*="formResendCodeLink"],
+.jarvis-clerk-sign-in [class*="resendCode"] {
+  color: var(--jarvis-accent) !important;
+}
+
+.jarvis-role-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--jarvis-accent);
+  background: color-mix(in srgb, var(--jarvis-accent) 12%, transparent);
+  border: 1px solid color-mix(in srgb, var(--jarvis-accent) 25%, transparent);
+}
+
+.jarvis-user-button {
+  color: var(--jarvis-text);
+}
+
+.jarvis-user-button-avatar {
+  width: 2rem;
+  height: 2rem;
+}
+
 .jarvis-eyebrow {
   font-size: 0.7rem;
   letter-spacing: 0.12em;

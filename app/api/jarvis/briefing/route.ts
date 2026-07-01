@@ -1,14 +1,15 @@
 import { NextResponse } from "next/server";
-import { getJarvisAuthFromCookies } from "@/lib/jarvis-auth";
+import { filterBriefingForRole } from "@/lib/jarvis-briefing-roles";
+import {
+  getJarvisSession,
+  jarvisUnauthorized,
+  logJarvisLogin,
+} from "@/lib/jarvis-clerk-auth";
 import { rankLeadPriorities } from "@/lib/jarvis-lead-insights";
 import type { JarvisBriefing, JarvisLead } from "@/lib/jarvis-types";
 import { getSupabaseAdmin } from "@/lib/supabase";
 
 export const runtime = "nodejs";
-
-function unauthorized() {
-  return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
-}
 
 function startOfToday() {
   const date = new Date();
@@ -22,19 +23,23 @@ function endOfToday() {
   return date.toISOString();
 }
 
-function getGreeting() {
+function getGreeting(name: string | null) {
   const hour = new Date().getHours();
-  if (hour < 12) return "Good morning Connor.";
-  if (hour < 17) return "Good afternoon Connor.";
-  return "Good evening Connor.";
+  const who = name?.split(" ")[0] ?? "there";
+  if (hour < 12) return `Good morning ${who}.`;
+  if (hour < 17) return `Good afternoon ${who}.`;
+  return `Good evening ${who}.`;
 }
 
 export async function GET() {
-  if (!(await getJarvisAuthFromCookies())) {
-    return unauthorized();
+  const session = await getJarvisSession();
+  if (!session) {
+    return jarvisUnauthorized();
   }
 
   try {
+    await logJarvisLogin(session);
+
     const supabase = getSupabaseAdmin();
 
     const [{ data: leads, error: leadsError }, { data: tasks, error: tasksError }] =
@@ -115,7 +120,7 @@ export async function GET() {
     }
 
     const briefing: JarvisBriefing = {
-      greeting: getGreeting(),
+      greeting: getGreeting(session.user.name),
       summary: "I've reviewed everything. Here's what needs your attention.",
       priorities,
       stats: {
@@ -135,7 +140,7 @@ export async function GET() {
       lastUpdated: new Date().toISOString(),
     };
 
-    return NextResponse.json(briefing);
+    return NextResponse.json(filterBriefingForRole(briefing, session.user));
   } catch (error) {
     console.error("Jarvis briefing error:", error);
     return NextResponse.json({ error: "Server error" }, { status: 500 });

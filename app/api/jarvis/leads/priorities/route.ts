@@ -1,18 +1,15 @@
 import { NextResponse } from "next/server";
-import { getJarvisAuthFromCookies } from "@/lib/jarvis-auth";
+import { getJarvisSession, jarvisUnauthorized } from "@/lib/jarvis-clerk-auth";
 import { rankLeadPriorities } from "@/lib/jarvis-lead-insights";
 import type { JarvisLead } from "@/lib/jarvis-types";
 import { getSupabaseAdmin } from "@/lib/supabase";
 
 export const runtime = "nodejs";
 
-function unauthorized() {
-  return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
-}
-
 export async function GET() {
-  if (!(await getJarvisAuthFromCookies())) {
-    return unauthorized();
+  const session = await getJarvisSession();
+  if (!session) {
+    return jarvisUnauthorized();
   }
 
   try {

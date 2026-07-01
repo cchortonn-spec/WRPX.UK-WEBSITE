@@ -1,22 +1,29 @@
 import { NextResponse } from "next/server";
-import { getJarvisAuthFromCookies } from "@/lib/jarvis-auth";
+import { logJarvisAudit } from "@/lib/jarvis-audit";
+import {
+  getJarvisSession,
+  jarvisForbidden,
+  jarvisUnauthorized,
+} from "@/lib/jarvis-clerk-auth";
 import { deleteLeadPhotoFromCloudinary } from "@/lib/cloudinary-upload";
+import { canUploadPhotos } from "@/lib/jarvis-permissions";
 import { PHOTO_TYPES, type PhotoType } from "@/lib/jarvis-types";
 import { getSupabaseAdmin } from "@/lib/supabase";
 
 export const runtime = "nodejs";
-
-function unauthorized() {
-  return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
-}
 
 type RouteContext = {
   params: Promise<{ id: string; photoId: string }>;
 };
 
 export async function PATCH(request: Request, context: RouteContext) {
-  if (!(await getJarvisAuthFromCookies())) {
-    return unauthorized();
+  const session = await getJarvisSession();
+  if (!session) {
+    return jarvisUnauthorized();
+  }
+
+  if (!canUploadPhotos(session.user)) {
+    return jarvisForbidden();
   }
 
   try {
@@ -55,8 +62,13 @@ export async function PATCH(request: Request, context: RouteContext) {
 }
 
 export async function DELETE(_request: Request, context: RouteContext) {
-  if (!(await getJarvisAuthFromCookies())) {
-    return unauthorized();
+  const session = await getJarvisSession();
+  if (!session) {
+    return jarvisUnauthorized();
+  }
+
+  if (!canUploadPhotos(session.user)) {
+    return jarvisForbidden();
   }
 
   try {
@@ -97,6 +109,15 @@ export async function DELETE(_request: Request, context: RouteContext) {
         .update({ photos_received: false, updated_at: new Date().toISOString() })
         .eq("id", id);
     }
+
+    await logJarvisAudit({
+      actor: session.user,
+      action: "photo_deleted",
+      entityType: "lead",
+      entityId: id,
+      summary: "Deleted lead photo",
+      metadata: { photo_id: photoId },
+    });
 
     return NextResponse.json({ ok: true });
   } catch (error) {

@@ -8,7 +8,8 @@ import {
   LEAD_EVENT_TYPES,
   type AnalyticsEvent,
 } from "@/lib/analytics-types";
-import { getJarvisAuthFromCookies } from "@/lib/jarvis-auth";
+import { getJarvisSession, jarvisForbidden, jarvisUnauthorized } from "@/lib/jarvis-clerk-auth";
+import { canViewAnalytics } from "@/lib/jarvis-permissions";
 import type {
   InsightPriority,
   JarvisAnalyticsInsight,
@@ -17,10 +18,6 @@ import type {
 import { getSupabaseAdmin } from "@/lib/supabase";
 
 export const runtime = "nodejs";
-
-function unauthorized() {
-  return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
-}
 
 function startOfWeek() {
   const date = new Date();
@@ -276,8 +273,13 @@ function buildCommercialOpportunityInsight(
 }
 
 export async function GET() {
-  if (!(await getJarvisAuthFromCookies())) {
-    return unauthorized();
+  const session = await getJarvisSession();
+  if (!session) {
+    return jarvisUnauthorized();
+  }
+
+  if (!canViewAnalytics(session.user)) {
+    return jarvisForbidden();
   }
 
   try {

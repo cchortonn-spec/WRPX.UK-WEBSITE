@@ -1,5 +1,10 @@
 import { NextResponse } from "next/server";
-import { getJarvisAuthFromCookies } from "@/lib/jarvis-auth";
+import { logJarvisAudit } from "@/lib/jarvis-audit";
+import {
+  getJarvisSession,
+  jarvisForbidden,
+  jarvisUnauthorized,
+} from "@/lib/jarvis-clerk-auth";
 import {
   formatJarvisDbError,
   isMissingSchemaColumnError,
@@ -9,6 +14,7 @@ import {
   buildPhase2LeadInsert,
   JARVIS_PHASE_2_MIGRATION_WARNING,
 } from "@/lib/jarvis-lead-create";
+import { canEditLead } from "@/lib/jarvis-permissions";
 import {
   JOB_TYPES,
   LEAD_SOURCES,
@@ -28,13 +34,10 @@ import { getSupabaseAdmin } from "@/lib/supabase";
 
 export const runtime = "nodejs";
 
-function unauthorized() {
-  return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
-}
-
 export async function GET(request: Request) {
-  if (!(await getJarvisAuthFromCookies())) {
-    return unauthorized();
+  const session = await getJarvisSession();
+  if (!session) {
+    return jarvisUnauthorized();
   }
 
   try {
@@ -71,8 +74,13 @@ export async function GET(request: Request) {
 }
 
 export async function POST(request: Request) {
-  if (!(await getJarvisAuthFromCookies())) {
-    return unauthorized();
+  const session = await getJarvisSession();
+  if (!session) {
+    return jarvisUnauthorized();
+  }
+
+  if (!canEditLead(session.user)) {
+    return jarvisForbidden();
   }
 
   try {
@@ -229,6 +237,15 @@ export async function POST(request: Request) {
         body: notes,
       });
     }
+
+    await logJarvisAudit({
+      actor: session.user,
+      action: "lead_created",
+      entityType: "lead",
+      entityId: lead.id,
+      summary: `Created lead ${lead.name}`,
+      metadata: { status: lead.status, source: lead.source },
+    });
 
     return NextResponse.json(
       {
