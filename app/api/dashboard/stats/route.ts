@@ -3,6 +3,7 @@ import {
   formatHourLabel,
   getCountryName,
   getPageTitle,
+  isInternalAnalyticsPath,
   normalizeReferrer,
 } from "@/lib/analytics-helpers";
 import {
@@ -37,10 +38,36 @@ function countByType(events: AnalyticsEvent[]) {
   return totals;
 }
 
+function countPublicLeadTotals(events: AnalyticsEvent[]) {
+  const totals = emptyTotals();
+  for (const event of events) {
+    if (!isPublicLeadEvent(event)) {
+      continue;
+    }
+    totals[event.event_type] += 1;
+  }
+  return totals;
+}
+
+function withPublicLeadTotals(
+  totals: Record<AnalyticsEventType, number>,
+  events: AnalyticsEvent[]
+) {
+  const publicLeadTotals = countPublicLeadTotals(events);
+  for (const type of LEAD_EVENT_TYPES) {
+    totals[type] = publicLeadTotals[type];
+  }
+  return totals;
+}
+
 function isLeadEvent(event: AnalyticsEvent) {
   return LEAD_EVENT_TYPES.includes(
     event.event_type as (typeof LEAD_EVENT_TYPES)[number]
   );
+}
+
+function isPublicLeadEvent(event: AnalyticsEvent) {
+  return isLeadEvent(event) && !isInternalAnalyticsPath(event.page_url);
 }
 
 function startOfToday() {
@@ -138,7 +165,7 @@ function buildTopPages(events: AnalyticsEvent[]): TopPageStat[] {
   }
 
   for (const event of events) {
-    if (!isLeadEvent(event)) {
+    if (!isPublicLeadEvent(event)) {
       continue;
     }
 
@@ -180,7 +207,7 @@ function buildLeadsByPage(events: AnalyticsEvent[]): LeadByPageStat[] {
   >();
 
   for (const event of events) {
-    if (!isLeadEvent(event)) {
+    if (!isPublicLeadEvent(event)) {
       continue;
     }
 
@@ -225,7 +252,7 @@ function dailyActivity(events: AnalyticsEvent[]) {
     const current = counts.get(date) ?? { count: 0, page_views: 0, leads: 0 };
     current.count += 1;
     if (event.event_type === "page_view") current.page_views += 1;
-    if (isLeadEvent(event)) current.leads += 1;
+    if (isPublicLeadEvent(event)) current.leads += 1;
     counts.set(date, current);
   }
 
@@ -280,22 +307,17 @@ export async function GET() {
       (event) => new Date(event.created_at) >= todayStart
     );
 
-    const allTimeTotals = countByType(events);
-    const thisWeekTotals = countByType(thisWeekEvents);
-    const todayTotals = countByType(todayEvents);
+    const allTimeTotals = withPublicLeadTotals(countByType(events), events);
+    const thisWeekTotals = withPublicLeadTotals(countByType(thisWeekEvents), thisWeekEvents);
+    const todayTotals = withPublicLeadTotals(countByType(todayEvents), todayEvents);
 
-    const totalLeads = LEAD_EVENT_TYPES.reduce(
-      (sum, type) => sum + allTimeTotals[type],
-      0
-    );
-    const leadsToday = LEAD_EVENT_TYPES.reduce(
-      (sum, type) => sum + todayTotals[type],
-      0
-    );
-    const leadsThisWeek = LEAD_EVENT_TYPES.reduce(
-      (sum, type) => sum + thisWeekTotals[type],
-      0
-    );
+    const publicLeadEvents = events.filter(isPublicLeadEvent);
+    const publicLeadEventsThisWeek = thisWeekEvents.filter(isPublicLeadEvent);
+    const publicLeadEventsToday = todayEvents.filter(isPublicLeadEvent);
+
+    const totalLeads = publicLeadEvents.length;
+    const leadsToday = publicLeadEventsToday.length;
+    const leadsThisWeek = publicLeadEventsThisWeek.length;
 
     const ukVisitors = events.filter((event) => event.country === "GB").length;
     const internationalVisitors = events.filter(

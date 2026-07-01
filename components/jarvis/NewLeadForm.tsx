@@ -5,7 +5,7 @@ import { LEAD_SOURCES, SOURCE_LABELS, type LeadSource } from "@/lib/jarvis-types
 
 type NewLeadFormProps = {
   onClose: () => void;
-  onCreated: () => void;
+  onCreated: (warning?: string) => void;
 };
 
 export function NewLeadForm({ onClose, onCreated }: NewLeadFormProps) {
@@ -41,7 +41,9 @@ export function NewLeadForm({ onClose, onCreated }: NewLeadFormProps) {
         return;
       }
 
-      onCreated();
+      const data = await response.json();
+
+      onCreated(typeof data.warning === "string" ? data.warning : undefined);
       onClose();
     } catch {
       setError("Could not create lead. Please try again.");
@@ -72,7 +74,7 @@ export function NewLeadForm({ onClose, onCreated }: NewLeadFormProps) {
           </button>
         </div>
 
-        <form onSubmit={handleSubmit} className="jarvis-form" style={{ marginTop: 0 }}>
+        <form onSubmit={handleSubmit} className="jarvis-form jarvis-form-flush">
           <div>
             <label htmlFor="lead-name" className="jarvis-label">
               Name *
@@ -143,7 +145,7 @@ export function NewLeadForm({ onClose, onCreated }: NewLeadFormProps) {
 
           {error ? <p className="jarvis-error">{error}</p> : null}
 
-          <div style={{ display: "flex", gap: "0.75rem" }}>
+          <div className="jarvis-button-row">
             <button
               type="submit"
               className="jarvis-button jarvis-button-primary"

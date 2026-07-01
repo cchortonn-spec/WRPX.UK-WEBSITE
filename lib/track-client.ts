@@ -1,3 +1,4 @@
+import { isInternalAnalyticsPath } from "@/lib/analytics-helpers";
 import type { AnalyticsEventType } from "@/lib/analytics-types";
 
 type TrackPayload = {
@@ -27,7 +28,7 @@ export function trackEvent(payload: TrackPayload) {
     return;
   }
 
-  if (window.location.pathname.startsWith("/dashboard")) {
+  if (isInternalAnalyticsPath(window.location.pathname)) {
     return;
   }
 

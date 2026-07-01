@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { getJarvisAuthFromCookies } from "@/lib/jarvis-auth";
-import type { JarvisBriefing } from "@/lib/jarvis-types";
+import { rankLeadPriorities } from "@/lib/jarvis-lead-insights";
+import type { JarvisBriefing, JarvisLead } from "@/lib/jarvis-types";
 import { getSupabaseAdmin } from "@/lib/supabase";
 
 export const runtime = "nodejs";
@@ -36,95 +37,77 @@ export async function GET() {
   try {
     const supabase = getSupabaseAdmin();
 
-    const { data: leads, error: leadsError } = await supabase
-      .from("jarvis_leads")
-      .select("id, status, created_at");
+    const [{ data: leads, error: leadsError }, { data: tasks, error: tasksError }] =
+      await Promise.all([
+        supabase.from("jarvis_leads").select("*"),
+        supabase
+          .from("jarvis_tasks")
+          .select("id, status, due_at")
+          .eq("status", "open"),
+      ]);
 
-    if (leadsError) {
-      console.error("Jarvis briefing leads error:", leadsError);
+    if (leadsError || tasksError) {
       return NextResponse.json(
         { error: "Could not load briefing" },
         { status: 500 }
       );
     }
 
-    const { data: tasks, error: tasksError } = await supabase
-      .from("jarvis_tasks")
-      .select("id, status, due_at")
-      .eq("status", "open");
-
-    if (tasksError) {
-      console.error("Jarvis briefing tasks error:", tasksError);
-      return NextResponse.json(
-        { error: "Could not load briefing" },
-        { status: 500 }
-      );
-    }
-
-    const allLeads = leads ?? [];
+    const allLeads = (leads ?? []) as JarvisLead[];
     const openTasks = tasks ?? [];
     const todayStart = startOfToday();
     const todayEnd = endOfToday();
+    const now = new Date();
 
     const countByStatus = (statuses: string[]) =>
       allLeads.filter((lead) => statuses.includes(lead.status)).length;
 
-    const qualifiedLeads = countByStatus(["ready_for_estimate"]);
-    const followUpsDue = countByStatus(["follow_up_due"]);
+    const waitingForPhotos = countByStatus(["waiting_for_photos"]);
+    const photosReceived = countByStatus(["photos_received"]);
+    const readyToPrice = countByStatus(["ready_to_price"]);
+    const estimatesSent = countByStatus(["estimate_sent"]);
     const quotesSent = countByStatus(["quote_sent"]);
-    const depositDue = countByStatus(["deposit_due"]);
-    const installsUpcoming = countByStatus(["install_booked"]);
-    const invoicesOverdue = countByStatus(["final_invoice_sent"]);
-    const needsConnor = countByStatus([
-      "ready_for_estimate",
-      "survey_needed",
-      "follow_up_due",
-      "deposit_due",
-      "pricing",
-    ]);
-    const waitingOnCustomer = countByStatus([
-      "waiting_for_reply",
-      "waiting_for_photos",
-      "waiting_for_colour_style",
-      "waiting_for_job_type",
-      "quote_sent",
-    ]);
+    const hotLeads = allLeads.filter(
+      (lead) => lead.lead_temperature === "hot" || lead.install_interest_level === "hot"
+    ).length;
+
+    const followUpsDue = allLeads.filter((lead) => {
+      if (!lead.follow_up_date || lead.follow_up_status === "complete") return false;
+      const due = new Date(lead.follow_up_date);
+      due.setHours(0, 0, 0, 0);
+      const today = new Date();
+      today.setHours(0, 0, 0, 0);
+      return due.getTime() === today.getTime();
+    }).length;
+
+    const overdueFollowUps = allLeads.filter((lead) => {
+      if (!lead.follow_up_date || lead.follow_up_status === "complete") return false;
+      return new Date(lead.follow_up_date) < now;
+    }).length;
+
     const newLeads = allLeads.filter(
       (lead) => lead.created_at >= todayStart && lead.created_at <= todayEnd
     ).length;
 
     const tasksDueToday = openTasks.filter(
       (task) =>
-        task.due_at &&
-        task.due_at >= todayStart &&
-        task.due_at <= todayEnd
+        task.due_at && task.due_at >= todayStart && task.due_at <= todayEnd
     ).length;
 
-    const priorities: string[] = [];
+    const leadPriorities = rankLeadPriorities(allLeads).slice(0, 8);
 
-    if (qualifiedLeads > 0) {
-      priorities.push(
-        `${qualifiedLeads} lead${qualifiedLeads === 1 ? "" : "s"} ready for estimate.`
+    const priorities: string[] = leadPriorities.map(
+      (item) => `${item.name}: ${item.reason}`
+    );
+
+    if (overdueFollowUps > 0) {
+      priorities.unshift(
+        `${overdueFollowUps} overdue follow-up${overdueFollowUps === 1 ? "" : "s"}.`
       );
     }
-    if (followUpsDue > 0) {
+    if (readyToPrice > 0) {
       priorities.push(
-        `${followUpsDue} quote${followUpsDue === 1 ? "" : "s"} need chasing.`
-      );
-    }
-    if (depositDue > 0) {
-      priorities.push(
-        `${depositDue} deposit${depositDue === 1 ? "" : "s"} still unpaid.`
-      );
-    }
-    if (tasksDueToday > 0) {
-      priorities.push(
-        `${tasksDueToday} task${tasksDueToday === 1 ? "" : "s"} due today.`
-      );
-    }
-    if (newLeads > 0) {
-      priorities.push(
-        `${newLeads} new lead${newLeads === 1 ? "" : "s"} arrived today.`
+        `${readyToPrice} lead${readyToPrice === 1 ? "" : "s"} ready to price.`
       );
     }
     if (priorities.length === 0) {
@@ -136,18 +119,19 @@ export async function GET() {
       summary: "I've reviewed everything. Here's what needs your attention.",
       priorities,
       stats: {
-        qualified_leads: qualifiedLeads,
+        waiting_for_photos: waitingForPhotos,
+        photos_received: photosReceived,
+        ready_to_price: readyToPrice,
         follow_ups_due: followUpsDue,
+        overdue_follow_ups: overdueFollowUps,
+        estimates_sent: estimatesSent,
         quotes_sent: quotesSent,
-        deposit_due: depositDue,
-        installs_upcoming: installsUpcoming,
-        invoices_overdue: invoicesOverdue,
-        needs_connor: needsConnor,
-        waiting_on_customer: waitingOnCustomer,
+        hot_leads: hotLeads,
         new_leads: newLeads,
         open_tasks: openTasks.length,
         tasks_due_today: tasksDueToday,
       },
+      lead_priorities: leadPriorities,
       lastUpdated: new Date().toISOString(),
     };
 

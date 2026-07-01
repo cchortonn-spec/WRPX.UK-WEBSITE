@@ -10,6 +10,14 @@ const COUNTRY_NAMES: Record<string, string> = {
   CA: "Canada",
 };
 
+const INTERNAL_ANALYTICS_PREFIXES = ["/dashboard", "/jarvis"];
+
+export function isInternalAnalyticsPath(pathname: string) {
+  return INTERNAL_ANALYTICS_PREFIXES.some(
+    (prefix) => pathname === prefix || pathname.startsWith(`${prefix}/`)
+  );
+}
+
 const PAGE_TITLES: Record<string, string> = {
   "/": "Homepage",
   "/contact/": "Contact",

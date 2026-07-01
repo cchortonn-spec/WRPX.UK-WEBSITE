@@ -5,7 +5,6 @@ import type {
   JarvisAnalyticsInsight,
   JarvisAnalyticsInsightsResponse,
   JarvisBriefing,
-  InsightPriority,
 } from "@/lib/jarvis-types";
 
 function StatCard({ label, value }: { label: string; value: number }) {
@@ -17,25 +16,19 @@ function StatCard({ label, value }: { label: string; value: number }) {
   );
 }
 
-function PriorityPill({ priority }: { priority: InsightPriority }) {
+function PriorityPill({ priority }: { priority: "low" | "medium" | "high" }) {
   const className =
     priority === "high"
       ? "jarvis-pill jarvis-pill-lime"
       : priority === "medium"
         ? "jarvis-pill jarvis-pill-amber"
         : "jarvis-pill jarvis-pill-grey";
-
-  const label =
-    priority === "high" ? "High" : priority === "medium" ? "Medium" : "Low";
-
-  return <span className={className}>{label}</span>;
+  return <span className={className}>{priority}</span>;
 }
 
 function InsightCard({ insight }: { insight: JarvisAnalyticsInsight }) {
   return (
-    <article
-      className={`jarvis-insight-card jarvis-insight-card-${insight.priority}`}
-    >
+    <article className={`jarvis-insight-card jarvis-insight-card-${insight.priority}`}>
       <div className="jarvis-insight-header">
         <h3 className="jarvis-insight-title">{insight.title}</h3>
         <PriorityPill priority={insight.priority} />
@@ -60,9 +53,7 @@ export default function JarvisHomeClient() {
       fetch("/api/jarvis/analytics-insights/", { cache: "no-store" }),
     ]);
 
-    if (!briefingResponse.ok) {
-      throw new Error("Could not load briefing");
-    }
+    if (!briefingResponse.ok) throw new Error("Could not load briefing");
 
     const briefingData = (await briefingResponse.json()) as JarvisBriefing;
     setBriefing(briefingData);
@@ -80,13 +71,8 @@ export default function JarvisHomeClient() {
       .finally(() => setIsLoading(false));
   }, [loadData]);
 
-  if (isLoading) {
-    return <p className="jarvis-muted">Loading briefing...</p>;
-  }
-
-  if (error || !briefing) {
-    return <p className="jarvis-error">{error || "Briefing unavailable."}</p>;
-  }
+  if (isLoading) return <p className="jarvis-muted">Loading briefing...</p>;
+  if (error || !briefing) return <p className="jarvis-error">{error || "Briefing unavailable."}</p>;
 
   return (
     <>
@@ -101,17 +87,14 @@ export default function JarvisHomeClient() {
       </section>
 
       <section className="jarvis-stat-grid">
-        <StatCard label="Qualified leads" value={briefing.stats.qualified_leads} />
+        <StatCard label="Waiting for photos" value={briefing.stats.waiting_for_photos} />
+        <StatCard label="Photos received" value={briefing.stats.photos_received} />
+        <StatCard label="Ready to price" value={briefing.stats.ready_to_price} />
         <StatCard label="Follow-ups due" value={briefing.stats.follow_ups_due} />
+        <StatCard label="Overdue follow-ups" value={briefing.stats.overdue_follow_ups} />
+        <StatCard label="Estimates sent" value={briefing.stats.estimates_sent} />
         <StatCard label="Quotes sent" value={briefing.stats.quotes_sent} />
-        <StatCard label="Deposit due" value={briefing.stats.deposit_due} />
-        <StatCard label="Installs upcoming" value={briefing.stats.installs_upcoming} />
-        <StatCard label="Invoices overdue" value={briefing.stats.invoices_overdue} />
-        <StatCard label="Needs Connor" value={briefing.stats.needs_connor} />
-        <StatCard
-          label="Waiting on customer"
-          value={briefing.stats.waiting_on_customer}
-        />
+        <StatCard label="Hot leads" value={briefing.stats.hot_leads} />
         <StatCard label="New leads today" value={briefing.stats.new_leads} />
         <StatCard label="Open tasks" value={briefing.stats.open_tasks} />
         <StatCard label="Tasks due today" value={briefing.stats.tasks_due_today} />
@@ -119,14 +102,30 @@ export default function JarvisHomeClient() {
 
       <section className="jarvis-insights-section">
         <div className="jarvis-insights-header">
-          <h2 className="jarvis-panel-title">Jarvis SEO &amp; Lead Insights</h2>
-          <p className="jarvis-muted">
-            Recommendations from your website analytics this week.
-          </p>
+          <h2 className="jarvis-panel-title">Jarvis Lead Priorities</h2>
+          <p className="jarvis-muted">Leads that need your attention first.</p>
         </div>
+        {briefing.lead_priorities.length === 0 ? (
+          <p className="jarvis-muted">No lead priorities right now.</p>
+        ) : (
+          <div className="jarvis-insights-grid">
+            {briefing.lead_priorities.map((item) => (
+              <article key={item.lead_id} className="jarvis-insight-card jarvis-insight-card-high">
+                <h3 className="jarvis-insight-title">{item.name}</h3>
+                <p className="jarvis-insight-summary">{item.reason}</p>
+              </article>
+            ))}
+          </div>
+        )}
+      </section>
 
+      <section className="jarvis-insights-section">
+        <div className="jarvis-insights-header">
+          <h2 className="jarvis-panel-title">Jarvis SEO &amp; Lead Insights</h2>
+          <p className="jarvis-muted">Recommendations from your website analytics this week.</p>
+        </div>
         {insights.length === 0 ? (
-          <p className="jarvis-muted">No insights available yet.</p>
+          <p className="jarvis-muted">No analytics insights available yet.</p>
         ) : (
           <div className="jarvis-insights-grid">
             {insights.map((insight) => (

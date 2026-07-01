@@ -56,7 +56,16 @@ export function JarvisAppShell({
       });
 
       if (!response.ok) {
-        setError("Incorrect password.");
+        const data = (await response.json().catch(() => null)) as {
+          error?: string;
+        } | null;
+        setError(
+          data?.error === "Jarvis password is not configured"
+            ? "Jarvis is not set up on this server yet. Add JARVIS_PASSWORD in your hosting environment variables, then redeploy."
+            : data?.error === "Incorrect password"
+              ? "Incorrect password."
+              : "Login failed. Please try again."
+        );
         return;
       }
 

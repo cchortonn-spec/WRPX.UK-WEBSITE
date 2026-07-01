@@ -14,6 +14,9 @@ const COLOR_CLASS: Record<StageColor, string> = {
   red: "jarvis-pill-red",
   olive: "jarvis-pill-olive",
   gold: "jarvis-pill-gold",
+  cyan: "jarvis-pill-blue",
+  violet: "jarvis-pill-purple",
+  slate: "jarvis-pill-grey",
 };
 
 export function StagePill({ stageId }: { stageId: string }) {

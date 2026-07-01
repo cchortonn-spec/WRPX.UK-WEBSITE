@@ -1,12 +1,27 @@
 import { NextResponse } from "next/server";
 import { getJarvisAuthFromCookies } from "@/lib/jarvis-auth";
 import {
+  formatJarvisDbError,
+  isMissingSchemaColumnError,
+} from "@/lib/jarvis-db-errors";
+import {
+  buildPhase1LeadInsert,
+  buildPhase2LeadInsert,
+  JARVIS_PHASE_2_MIGRATION_WARNING,
+} from "@/lib/jarvis-lead-create";
+import {
+  JOB_TYPES,
   LEAD_SOURCES,
   LEAD_STAGE_IDS,
+  LEAD_TEMPERATURES,
+  PRICING_ROUTES,
   PRIORITIES,
   type JarvisLead,
+  type JobType,
   type LeadSource,
   type LeadStageId,
+  type LeadTemperature,
+  type PricingRoute,
   type Priority,
 } from "@/lib/jarvis-types";
 import { getSupabaseAdmin } from "@/lib/supabase";
@@ -79,9 +94,28 @@ export async function POST(request: Request) {
       typeof body.priority === "string" &&
       PRIORITIES.includes(body.priority as Priority)
         ? (body.priority as Priority)
-        : "medium";
-    const colourStyle =
-      typeof body.colour_style === "string" ? body.colour_style.trim() : null;
+        : "normal";
+    const colourScheme =
+      typeof body.colour_scheme === "string"
+        ? body.colour_scheme.trim()
+        : typeof body.colour_style === "string"
+          ? body.colour_style.trim()
+          : null;
+    const jobType =
+      typeof body.job_type === "string" &&
+      JOB_TYPES.includes(body.job_type as JobType)
+        ? (body.job_type as JobType)
+        : null;
+    const pricingRoute =
+      typeof body.pricing_route === "string" &&
+      PRICING_ROUTES.includes(body.pricing_route as PricingRoute)
+        ? (body.pricing_route as PricingRoute)
+        : "unknown";
+    const leadTemperature =
+      typeof body.lead_temperature === "string" &&
+      LEAD_TEMPERATURES.includes(body.lead_temperature as LeadTemperature)
+        ? (body.lead_temperature as LeadTemperature)
+        : "unknown";
     const aiSummary =
       typeof body.ai_summary === "string" ? body.ai_summary.trim() : null;
     const aiNextAction =
@@ -112,32 +146,80 @@ export async function POST(request: Request) {
     if (contactError) {
       console.error("Jarvis contact create error:", contactError);
       return NextResponse.json(
-        { error: "Could not create contact" },
+        {
+          error: formatJarvisDbError(contactError, "Could not create contact"),
+        },
         { status: 500 }
       );
     }
 
-    const { data: lead, error: leadError } = await supabase
+    const leadInput = {
+      contactId: contact.id,
+      name,
+      phone,
+      email,
+      source,
+      status,
+      priority,
+      jobType,
+      colourScheme,
+      pricingRoute,
+      leadTemperature,
+      photosReceived,
+      aiSummary,
+      aiNextAction,
+      updatedAt: now,
+    };
+
+    let migrationWarning: string | undefined;
+    let lead: JarvisLead | null = null;
+
+    const phase2Result = await supabase
       .from("jarvis_leads")
-      .insert({
-        contact_id: contact.id,
-        name,
-        phone,
-        email,
-        source,
-        status,
-        priority,
-        colour_style: colourStyle,
-        photos_received: photosReceived,
-        ai_summary: aiSummary,
-        ai_next_action: aiNextAction,
-        updated_at: now,
-      })
+      .insert(buildPhase2LeadInsert(leadInput))
       .select("*")
       .single();
 
-    if (leadError) {
-      console.error("Jarvis lead create error:", leadError);
+    if (phase2Result.error && isMissingSchemaColumnError(phase2Result.error)) {
+      console.warn(
+        "Jarvis lead create: Phase 2 schema missing, using Phase 1 fallback.",
+        phase2Result.error.message
+      );
+      migrationWarning = JARVIS_PHASE_2_MIGRATION_WARNING;
+
+      const phase1Result = await supabase
+        .from("jarvis_leads")
+        .insert(buildPhase1LeadInsert(leadInput))
+        .select("*")
+        .single();
+
+      if (phase1Result.error) {
+        console.error("Jarvis lead create error:", phase1Result.error);
+        return NextResponse.json(
+          {
+            error: formatJarvisDbError(
+              phase1Result.error,
+              "Could not create lead"
+            ),
+          },
+          { status: 500 }
+        );
+      }
+
+      lead = phase1Result.data as JarvisLead;
+    } else if (phase2Result.error) {
+      console.error("Jarvis lead create error:", phase2Result.error);
+      return NextResponse.json(
+        {
+          error: formatJarvisDbError(phase2Result.error, "Could not create lead"),
+        },
+        { status: 500 }
+      );
+    } else {
+      lead = phase2Result.data as JarvisLead;
+    }
+
+    if (!lead) {
       return NextResponse.json({ error: "Could not create lead" }, { status: 500 });
     }
 
@@ -148,7 +230,13 @@ export async function POST(request: Request) {
       });
     }
 
-    return NextResponse.json({ lead: lead as JarvisLead }, { status: 201 });
+    return NextResponse.json(
+      {
+        lead: lead as JarvisLead,
+        ...(migrationWarning ? { warning: migrationWarning } : {}),
+      },
+      { status: 201 }
+    );
   } catch (error) {
     console.error("Jarvis leads POST error:", error);
     return NextResponse.json({ error: "Server error" }, { status: 500 });

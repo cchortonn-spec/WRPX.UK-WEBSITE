@@ -2,22 +2,32 @@
 
 import { useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
+import { isInternalAnalyticsPath } from "@/lib/analytics-helpers";
+import type { LeadEventType } from "@/lib/analytics-types";
 import { trackEvent } from "@/lib/track-client";
 
-function getFormEventType(pathname: string, form: HTMLFormElement) {
+function getFormEventType(
+  pathname: string,
+  form: HTMLFormElement
+): LeadEventType | null {
+  const explicitEvent = form.dataset.analyticsEvent;
+  if (explicitEvent === "contact_form" || explicitEvent === "quote_form") {
+    return explicitEvent;
+  }
+
   if (pathname.includes("/kitchen-wrapping-quote")) {
-    return "quote_form" as const;
+    return "quote_form";
   }
 
   if (pathname.startsWith("/contact")) {
-    return "contact_form" as const;
+    return "contact_form";
   }
 
   if (form.classList.contains("quote-shell")) {
-    return "quote_form" as const;
+    return "quote_form";
   }
 
-  return "contact_form" as const;
+  return null;
 }
 
 export function AnalyticsTracker() {
@@ -25,7 +35,7 @@ export function AnalyticsTracker() {
   const lastTrackedPath = useRef<string | null>(null);
 
   useEffect(() => {
-    if (pathname.startsWith("/dashboard")) {
+    if (!pathname || isInternalAnalyticsPath(pathname)) {
       return;
     }
 
@@ -43,6 +53,11 @@ export function AnalyticsTracker() {
 
   useEffect(() => {
     function handleClick(event: MouseEvent) {
+      const pageUrl = window.location.pathname;
+      if (isInternalAnalyticsPath(pageUrl)) {
+        return;
+      }
+
       const target = event.target;
       if (!(target instanceof Element)) {
         return;
@@ -54,7 +69,6 @@ export function AnalyticsTracker() {
       }
 
       const href = link.getAttribute("href") ?? "";
-      const pageUrl = window.location.pathname;
 
       if (href.startsWith("tel:")) {
         trackEvent({
@@ -81,14 +95,24 @@ export function AnalyticsTracker() {
     }
 
     function handleSubmit(event: SubmitEvent) {
+      const pageUrl = window.location.pathname;
+      if (isInternalAnalyticsPath(pageUrl)) {
+        return;
+      }
+
       const form = event.target;
       if (!(form instanceof HTMLFormElement)) {
         return;
       }
 
+      const eventType = getFormEventType(pageUrl, form);
+      if (!eventType) {
+        return;
+      }
+
       trackEvent({
-        event_type: getFormEventType(window.location.pathname, form),
-        page_url: window.location.pathname,
+        event_type: eventType,
+        page_url: pageUrl,
       });
     }
 
