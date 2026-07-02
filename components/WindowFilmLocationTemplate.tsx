@@ -8,6 +8,11 @@ const LOCATION_LINKS = [
   { label: "Leeds", href: "/window-film/window-film-leeds/" },
   { label: "Chesterfield", href: "/window-film/window-film-chesterfield/" },
   { label: "Huddersfield", href: "/window-film/window-film-huddersfield/" },
+  { label: "York", href: "/window-film/window-film-york/" },
+  { label: "Nottingham", href: "/window-film/window-film-nottingham/" },
+  { label: "Wakefield", href: "/window-film/window-film-wakefield/" },
+  { label: "Bradford", href: "/window-film/window-film-bradford/" },
+  { label: "Manchester", href: "/window-film/window-film-manchester/" },
 ] as const;
 
 const SERVICES = [
