@@ -367,9 +367,19 @@ export default function WindowFilmHubPage() {
             <Link href="/window-film/window-film-chesterfield/" className="text-accent hover:underline">Chesterfield</Link>
             {" · "}
             <Link href="/window-film/window-film-huddersfield/" className="text-accent hover:underline">Huddersfield</Link>
+            {" · "}
+            <Link href="/window-film/window-film-york/" className="text-accent hover:underline">York</Link>
+            {" · "}
+            <Link href="/window-film/window-film-wakefield/" className="text-accent hover:underline">Wakefield</Link>
+            {" · "}
+            <Link href="/window-film/window-film-bradford/" className="text-accent hover:underline">Bradford</Link>
+            {" · "}
+            <Link href="/window-film/window-film-nottingham/" className="text-accent hover:underline">Nottingham</Link>
+            {" · "}
+            <Link href="/window-film/window-film-manchester/" className="text-accent hover:underline">Manchester</Link>
           </p>
           <p className="mt-4 text-center text-sm text-muted">
-            Also covering Wakefield, Bradford, York, Harrogate, Worksop, Mansfield and surrounding areas. Commercial multi-site programmes available nationally — discussed on a project basis.
+            Also covering Harrogate, Worksop, Mansfield, Derby and surrounding areas. Commercial multi-site programmes available nationally — discussed on a project basis.
           </p>
           <p className="mt-6 text-center text-sm text-muted">
             Browse dedicated location pages:

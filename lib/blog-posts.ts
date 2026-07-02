@@ -72,6 +72,34 @@ export const blogPosts = [
       "Two-tone kitchens, marble islands, bold colour choices and woodgrain finishes. Popular kitchen island wrap ideas for 2026 with costs and advice.",
     date: "2026-07-04",
   },
+  {
+    slug: "how-long-does-kitchen-wrapping-last",
+    title: "How Long Does Kitchen Wrapping Last?",
+    description:
+      "The honest answer on kitchen vinyl wrap lifespan — what affects durability and how to get 7–10+ years from a wrapped kitchen.",
+    date: "2026-07-01",
+  },
+  {
+    slug: "wardrobe-vinyl-wrap-guide",
+    title: "Wardrobe Vinyl Wrap Guide — Ideas, Cost & What to Expect",
+    description:
+      "Complete guide to wardrobe vinyl wrapping: which wardrobes can be done, best finishes, cost and how long it lasts.",
+    date: "2026-07-01",
+  },
+  {
+    slug: "bathroom-cabinet-vinyl-wrap",
+    title: "Bathroom Cabinet Vinyl Wrap — Guide, Cost & Best Finishes",
+    description:
+      "Can you vinyl wrap bathroom cabinets? Yes — here's how it works, which films to use, what it costs and how long it lasts.",
+    date: "2026-07-01",
+  },
+  {
+    slug: "kitchen-wrapping-near-me-guide",
+    title: "Kitchen Wrapping Near Me — How to Find the Right Installer",
+    description:
+      "How to find a reliable local kitchen wrapping installer, what questions to ask, and red flags to watch for.",
+    date: "2026-07-01",
+  },
 ] as const;
 
 export type BlogSlug = (typeof blogPosts)[number]["slug"];

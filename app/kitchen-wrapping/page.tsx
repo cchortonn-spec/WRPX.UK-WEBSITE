@@ -225,35 +225,55 @@ export default function KitchenWrappingPage() {
               We cover
             </h2>
             <p className="mt-4 text-muted leading-relaxed">
-              Browse city pages for kitchen vinyl wrapping. Each page includes local pricing ranges,
-              FAQs and service details.
+              Browse city pages for kitchen wrapping. Each page includes local pricing,
+              FAQs, postcode coverage and area-specific detail.
             </p>
             <div className="mt-4 flex flex-wrap gap-3 text-sm">
-              <Link href="/locations/sheffield/kitchen-vinyl-wrapping" className="text-accent hover:underline">
-                Sheffield
-              </Link>
-              <Link href="/locations/leeds/kitchen-vinyl-wrapping" className="text-accent hover:underline">
-                Leeds
-              </Link>
-              <Link href="/locations/doncaster/kitchen-vinyl-wrapping" className="text-accent hover:underline">
-                Doncaster
-              </Link>
-              <Link href="/locations/rotherham/kitchen-vinyl-wrapping" className="text-accent hover:underline">
-                Rotherham
-              </Link>
-              <Link href="/locations/barnsley/kitchen-vinyl-wrapping" className="text-accent hover:underline">
-                Barnsley
-              </Link>
-              <Link href="/locations/huddersfield/kitchen-vinyl-wrapping" className="text-accent hover:underline">
-                Huddersfield
-              </Link>
-              <Link href="/locations/chesterfield/kitchen-vinyl-wrapping" className="text-accent hover:underline">
-                Chesterfield
-              </Link>
-              <Link href="/locations/nottingham/kitchen-vinyl-wrapping" className="text-accent hover:underline">
-                Nottingham
-              </Link>
+              <Link href="/kitchen-wrapping-sheffield/" className="text-accent hover:underline">Sheffield</Link>
+              <Link href="/kitchen-wrapping-leeds/" className="text-accent hover:underline">Leeds</Link>
+              <Link href="/kitchen-wrapping-doncaster/" className="text-accent hover:underline">Doncaster</Link>
+              <Link href="/kitchen-wrapping-rotherham/" className="text-accent hover:underline">Rotherham</Link>
+              <Link href="/kitchen-wrapping-barnsley/" className="text-accent hover:underline">Barnsley</Link>
+              <Link href="/kitchen-wrapping-huddersfield/" className="text-accent hover:underline">Huddersfield</Link>
+              <Link href="/kitchen-wrapping-chesterfield/" className="text-accent hover:underline">Chesterfield</Link>
+              <Link href="/kitchen-wrapping-wakefield/" className="text-accent hover:underline">Wakefield</Link>
+              <Link href="/kitchen-wrapping-york/" className="text-accent hover:underline">York</Link>
+              <Link href="/kitchen-wrapping-bradford/" className="text-accent hover:underline">Bradford</Link>
+              <Link href="/kitchen-wrapping-nottingham/" className="text-accent hover:underline">Nottingham</Link>
+              <Link href="/kitchen-wrapping-manchester/" className="text-accent hover:underline">Manchester</Link>
             </div>
+          </div>
+
+          <div className="card-float p-8">
+            <h2 className="text-xl font-semibold text-foreground">
+              Related services
+            </h2>
+            <ul className="mt-4 space-y-3 text-muted">
+              <li>
+                <Link href="/kitchen-door-wrapping/" className="text-accent hover:underline">
+                  Kitchen door wrapping
+                </Link>{" "}
+                — individual doors or full sets from £45 per door
+              </li>
+              <li>
+                <Link href="/worktop-wrapping/" className="text-accent hover:underline">
+                  Worktop wrapping
+                </Link>{" "}
+                — marble, stone and wood-effect heat-resistant vinyl from £250
+              </li>
+              <li>
+                <Link href="/bathroom-cabinet-wrapping/" className="text-accent hover:underline">
+                  Bathroom cabinet wrapping
+                </Link>{" "}
+                — moisture-resistant vinyl for vanity units and bathroom furniture
+              </li>
+              <li>
+                <Link href="/bedroom-wardrobe-wrapping/" className="text-accent hover:underline">
+                  Bedroom wardrobe wrapping
+                </Link>{" "}
+                — fitted wardrobes and bedroom storage refreshed
+              </li>
+            </ul>
           </div>
 
           <div className="text-center pt-4">
