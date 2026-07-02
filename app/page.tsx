@@ -376,6 +376,21 @@ export default function HomePage() {
                 {item.label}
               </Link>
             ))}
+            {[
+              { label: "Wakefield", href: "/kitchen-wrapping-wakefield/" },
+              { label: "York", href: "/kitchen-wrapping-york/" },
+              { label: "Bradford", href: "/kitchen-wrapping-bradford/" },
+              { label: "Nottingham", href: "/kitchen-wrapping-nottingham/" },
+              { label: "Manchester", href: "/kitchen-wrapping-manchester/" },
+            ].map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="card-float px-6 py-5 text-center text-foreground transition hover:border-accent hover:text-accent"
+              >
+                {item.label}
+              </Link>
+            ))}
           </div>
         </div>
       </section>
