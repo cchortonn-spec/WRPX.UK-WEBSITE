@@ -26,6 +26,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "contact",
     "privacy",
     "white-label-graphics-installation",
+    "locations",
   ];
   const locations = [
     ...siteConfig.areas.map((city) => `kitchen-wrapping-${city.toLowerCase()}`),
@@ -34,6 +35,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "kitchen-wrapping-nottingham",
     "kitchen-wrapping-bradford",
     "kitchen-wrapping-manchester",
+  ];
+  const worktopLocations = [
+    "worktop-wrapping-sheffield",
+    "worktop-wrapping-doncaster",
+    "worktop-wrapping-barnsley",
+    "worktop-wrapping-rotherham",
+    "worktop-wrapping-leeds",
+    "worktop-wrapping-chesterfield",
+    "worktop-wrapping-huddersfield",
   ];
   const commercialLocations = [
     "commercial-installation",
@@ -116,6 +126,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const paths = [
     ...core,
     ...locations,
+    ...worktopLocations,
     ...commercialLocations,
     ...windowFilm,
     ...newServicePages,
@@ -143,6 +154,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       : path === "blog" ? 0.85
       : path.startsWith("blog/") ? 0.75
       : path.startsWith("locations/") ? 0.7
+      : path.startsWith("worktop-wrapping-") ? 0.8
       : 0.8,
   }));
 }

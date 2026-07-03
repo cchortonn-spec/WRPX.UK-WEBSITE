@@ -4,16 +4,16 @@ import { siteConfig } from "@/lib/site-config";
 import { getServiceSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "Kitchen Door Wrapping | Vinyl Wrap Kitchen Doors | South Yorkshire | WRPX",
+  title: "Kitchen Door Wrapping South Yorkshire | From £45 Per Door | WRPX",
   description:
-    "Kitchen door wrapping South Yorkshire — individual or full sets of kitchen doors wrapped in premium vinyl. From £45 per door. 5-year guarantee. Free survey, fixed quote.",
+    "Kitchen door wrapping South Yorkshire — individual doors or full sets in any colour or finish. Matt, gloss, woodgrain, marble. From £45 per door. Free survey, 5-year guarantee.",
   alternates: { canonical: "https://www.wrpx.co.uk/kitchen-door-wrapping/" },
 };
 
 export default function KitchenDoorWrappingPage() {
   const serviceSchema = getServiceSchema(
     "Kitchen Door Wrapping",
-    "Professional kitchen door vinyl wrapping in South Yorkshire. Individual doors or full sets wrapped in premium 3M and CoverStyl vinyl from £45 per door."
+    "Professional kitchen door vinyl wrapping service covering individual doors and full kitchens. Matt, gloss, woodgrain and stone finishes. South Yorkshire."
   );
 
   const faqSchema = {
@@ -25,15 +25,15 @@ export default function KitchenDoorWrappingPage() {
         name: "How much does kitchen door wrapping cost?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Kitchen door wrapping starts from around £45 per door depending on size and finish. A standard full kitchen of 10–12 doors typically falls between £450 and £700 for doors only. We provide a fixed price after a free survey.",
+          text: "Kitchen door wrapping starts from around £45 per door. A full kitchen (10–12 standard doors) typically falls between £550 and £900 depending on door size, profile complexity and finish. Drawer fronts are usually £20–£35 each. We give a fixed price after the free survey.",
         },
       },
       {
         "@type": "Question",
-        name: "Can I just wrap some kitchen doors rather than all of them?",
+        name: "Can you wrap any colour or finish on kitchen doors?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Yes — we can wrap individual doors or a partial set. The main consideration is matching the finish across all doors so the result looks deliberate rather than mismatched. We'll advise at survey.",
+          text: "Yes. Our vinyl range covers hundreds of finishes including soft-touch matt, gloss, satin, woodgrain (oak, walnut, light oak, ash), marble effect, concrete, stone, and solid colours. If you have a specific look in mind, send us a photo and we'll source the closest match.",
         },
       },
       {
@@ -41,23 +41,39 @@ export default function KitchenDoorWrappingPage() {
         name: "How long does kitchen door wrapping take?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "A full set of 10–12 kitchen doors can usually be wrapped in one day. Smaller sets take less time. Doors are removed, wrapped and rehung — your kitchen stays usable.",
+          text: "Individual doors take a few hours. A full kitchen (10–14 doors) is usually completed in one day. Larger kitchens with complex profiles may take two days. Your kitchen stays functional throughout — we work systematically.",
         },
       },
       {
         "@type": "Question",
-        name: "What finishes are available for kitchen door wrapping?",
+        name: "Can I wrap just one or two doors rather than the whole kitchen?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Matt, gloss, woodgrain (oak, walnut, light oak), marble effect, stone effect, concrete effect and solid colours in hundreds of shades. We bring physical samples to every survey.",
+          text: "Yes. We wrap individual doors and drawer fronts. Some clients wrap a single damaged door to match existing units, others do a feature door or island in a contrasting finish. There's no minimum order.",
         },
       },
       {
         "@type": "Question",
-        name: "Does vinyl wrapping work on all types of kitchen doors?",
+        name: "How long do wrapped kitchen doors last?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Most door types are suitable — flat slab, shaker-style, simple routed profiles. Highly ornate or curved doors with deep profiles are assessed at survey. We'll tell you if a door isn't suitable before any money changes hands.",
+          text: "With correct preparation and commercial-grade vinyl, wrapped kitchen doors last 7–10+ years. We back every job with a 5-year guarantee on material defects, colour stability and adhesion.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What door materials can you wrap?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "We wrap solid wood doors, MDF, melamine-faced chipboard, vinyl-wrapped MDF and smooth-painted doors. We don't wrap heavily textured, heavily routed or badly damaged doors. We check suitability at the free survey and tell you straight.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Will the vinyl peel or bubble?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Not with proper preparation. We degrease, abrade and prime surfaces before any film is applied. Surface preparation is where a wrap succeeds or fails — we don't cut corners on it. Our 5-year guarantee covers adhesion failure.",
         },
       },
     ],
@@ -77,218 +93,258 @@ export default function KitchenDoorWrappingPage() {
       <section className="border-b border-border bg-card py-12 md:py-16">
         <div className="container mx-auto max-w-3xl px-4">
           <h1 className="text-3xl font-bold tracking-tight text-foreground">
-            Kitchen Door Wrapping — South Yorkshire Specialist
+            Kitchen Door Wrapping — Any Colour, Any Finish, From £45 Per Door
           </h1>
           <p className="mt-4 text-muted leading-relaxed">
-            Kitchen door wrapping is one of the most cost-effective ways to transform the look
-            of your kitchen without touching the carcasses, layout or worktops. A new finish
-            on your doors — whether that&apos;s a contemporary anthracite grey matt, a warm
-            woodgrain, or a high-gloss white — changes the entire character of the room.
+            Kitchen door wrapping is the most targeted way to refresh your kitchen. If your carcasses
+            are solid but the doors look dated, you wrap the doors — not the whole kitchen. Individual
+            doors, drawer fronts, end panels and plinths. Any colour. Any finish. One to three days.
           </p>
           <p className="mt-4 text-muted leading-relaxed">
-            WRPX wraps individual kitchen doors and full sets across South Yorkshire.
-            From £45 per door. {siteConfig.guaranteeYears}-year guarantee on materials and
-            workmanship. Free survey, fixed quote before any work starts.
+            New kitchen doors from suppliers typically cost £80–£200 per door, require measuring,
+            ordering, waiting and refitting. Wrapping costs from £45 per door, done on-site, finished
+            same day. No layout change, no new hinges, no waiting weeks for delivery.
           </p>
           <div className="mt-6 rounded-lg border-l-4 border-accent bg-background p-4">
             <p className="font-semibold text-foreground">
-              From £45 per door · 5-year guarantee · Free survey
+              {siteConfig.guaranteeYears}-year guarantee on material defects, colour stability and adhesion.
             </p>
           </div>
         </div>
       </section>
 
-      <section className="px-4 py-16">
-        <div className="container mx-auto max-w-3xl space-y-8">
-          <div className="card-float p-8">
-            <h2 className="text-xl font-semibold text-foreground">
-              What is kitchen door wrapping?
-            </h2>
-            <p className="mt-4 text-muted leading-relaxed">
-              Kitchen door wrapping means applying a premium vinyl film to the surface of your
-              existing doors — front, back and edges. The film is heat-bonded and trimmed for
-              a factory finish. Done properly, with correct surface preparation, it&apos;s
-              indistinguishable from a new door and will last for years.
-            </p>
-            <p className="mt-4 text-muted leading-relaxed">
-              The process for each door: removed from its hinges, cleaned and degreased,
-              lightly abraded, the film applied and heat-set, then trimmed and rehung. We take
-              the doors to our workspace or wrap them in-situ depending on the door profile
-              and job requirements.
-            </p>
-          </div>
+      <section className="py-12">
+        <div className="container mx-auto max-w-3xl px-4">
+          <h2 className="text-xl font-semibold text-foreground">What we wrap — door by door</h2>
+          <ul className="mt-4 list-inside list-disc space-y-2 text-muted">
+            <li><strong>Cabinet doors</strong> — all standard sizes and profiles</li>
+            <li><strong>Drawer fronts</strong> — single, double and triple drawers</li>
+            <li><strong>End panels</strong> — side panels that face into the room</li>
+            <li><strong>Plinths and kickboards</strong></li>
+            <li><strong>Cornice and pelmet</strong></li>
+            <li><strong>Island doors and panels</strong> — both sides if required</li>
+            <li><strong>Integrated appliance doors</strong> — fridge, dishwasher, bin fronts</li>
+          </ul>
+        </div>
+      </section>
 
-          <div className="card-float p-8">
-            <h2 className="text-xl font-semibold text-foreground">
-              Kitchen door wrapping vs replacing doors
-            </h2>
-            <p className="mt-4 text-muted leading-relaxed">
-              Replacing kitchen doors costs considerably more than wrapping — new replacement
-              doors range from £60 to £250+ per door before fitting. Wrapped doors using
-              premium vinyl achieve the same visual result at a fraction of the cost, often
-              with a better match to your existing carcass dimensions (important in older
-              or non-standard kitchens where sourcing exact replacements is difficult).
-            </p>
-            <p className="mt-4 text-muted leading-relaxed">
-              Wrapping is also the greener option — the existing door goes nowhere.
-            </p>
-          </div>
-
-          <div className="card-float p-8">
-            <h2 className="text-xl font-semibold text-foreground">
-              Which doors can be wrapped?
-            </h2>
-            <p className="mt-4 text-muted leading-relaxed">
-              Most kitchen doors are suitable for vinyl wrapping:
-            </p>
-            <ul className="mt-4 list-inside list-disc space-y-2 text-muted">
-              <li>Flat slab doors (melamine, painted MDF, vinyl-wrapped MDF)</li>
-              <li>Simple shaker-style doors with flat or shallow routed profile</li>
-              <li>Solid wood doors with stable, flat surfaces</li>
-              <li>Drawer fronts (same material and process as doors)</li>
-            </ul>
-            <p className="mt-4 text-muted leading-relaxed">
-              Doors we don&apos;t wrap: highly ornate carved profiles, deep-routed raised panels,
-              glass-fronted doors, doors with existing damage that wrapping would trap rather
-              than fix. We assess every door at the survey and tell you straight.
-            </p>
-          </div>
-
-          <div className="card-float p-8">
-            <h2 className="text-xl font-semibold text-foreground">
-              Finishes available
-            </h2>
-            <p className="mt-4 text-muted leading-relaxed">
-              We use films from 3M, CoverStyl, Avery Dennison and Hexis — hundreds of
-              finishes across:
-            </p>
-            <ul className="mt-4 list-inside list-disc space-y-1 text-muted">
-              <li>Matt — soft-touch, contemporary, forgiving on fingerprints</li>
-              <li>Gloss — high-shine, brightens smaller kitchens</li>
-              <li>Woodgrain — oak, light oak, walnut, pine, driftwood</li>
-              <li>Marble effect — Calacatta, grey veined, white marble</li>
-              <li>Stone and concrete effect — warm tones and industrial greys</li>
-              <li>Solid colours — hundreds of shades in matt or gloss</li>
-            </ul>
-            <p className="mt-4 text-muted leading-relaxed">
-              We bring physical film samples to every survey. See your chosen finish in your
-              own kitchen light before you commit. See more in our{" "}
-              <Link href="/architectural-vinyl-finishes/" className="text-accent hover:underline">
-                architectural vinyl finishes sample guide
-              </Link>
-              .
-            </p>
-          </div>
-
-          <div className="card-float p-8">
-            <h2 className="text-xl font-semibold text-foreground">
-              Kitchen door wrapping cost
-            </h2>
-            <p className="mt-4 text-muted leading-relaxed">
-              Door wrapping is priced per door based on size, finish and complexity:
-            </p>
-            <ul className="mt-4 list-inside list-disc space-y-2 text-muted">
-              <li>Standard door: from £45</li>
-              <li>Drawer front: from £25</li>
-              <li>Full kitchen (10–12 doors + drawers): typically £450–£700</li>
-              <li>Worktops can be added to the same visit (from £250)</li>
-            </ul>
-            <p className="mt-4 text-muted leading-relaxed">
-              We give a fixed price after the free survey — not a rough guide that changes
-              once we&apos;re on site. See our full{" "}
-              <Link href="/kitchen-wrapping-cost/" className="text-accent hover:underline">
-                kitchen wrapping cost guide
-              </Link>
-              .
-            </p>
-          </div>
-
-          <div className="card-float p-8">
-            <h2 className="text-xl font-semibold text-foreground">
-              Can I get just some doors wrapped?
-            </h2>
-            <p className="mt-4 text-muted leading-relaxed">
-              Yes — we can wrap individual doors or a partial set. The main consideration is
-              finish matching: if you&apos;re wrapping some doors to match existing ones, the vinyl
-              needs to be a very close match or we need to re-wrap the full set for consistency.
-              We&apos;ll advise honestly at survey on whether a partial wrap makes visual sense
-              for your kitchen.
-            </p>
-            <p className="mt-4 text-muted leading-relaxed">
-              Some clients wrap a single damaged door to match the rest. Others do a feature
-              door in a contrasting finish — upper units in white gloss, lower units in a
-              woodgrain, for example. All doable.
-            </p>
-          </div>
-
-          <div className="card-float p-8">
-            <h2 className="text-xl font-semibold text-foreground">
-              Frequently asked questions
-            </h2>
-            <div className="mt-4 space-y-6">
-              <div>
-                <h3 className="font-semibold text-foreground">How much does kitchen door wrapping cost?</h3>
-                <p className="mt-2 text-muted leading-relaxed">
-                  From £45 per door. A full kitchen of 10–12 doors typically falls between £450 and
-                  £700. Fixed price after a free survey.
-                </p>
+      <section className="border-y border-border bg-card py-12">
+        <div className="container mx-auto max-w-3xl px-4">
+          <h2 className="text-xl font-semibold text-foreground">Finishes — kitchen door wrapping</h2>
+          <p className="mt-4 text-muted">Popular finishes from our South Yorkshire clients:</p>
+          <div className="mt-4 grid gap-4 sm:grid-cols-2">
+            {[
+              { label: "Soft-touch anthracite grey matt", note: "Most requested in 2025–26. Works with stone-effect worktops." },
+              { label: "Gloss white", note: "Classic, brightens smaller kitchens, easy to clean." },
+              { label: "Light oak woodgrain", note: "Warm, natural look. Pairs well with any worktop colour." },
+              { label: "Sage green matt", note: "Trending. Pairs with brass hardware and marble worktops." },
+              { label: "Calacatta marble-effect panel", note: "Feature island or breakfast bar panels." },
+              { label: "Dark walnut woodgrain", note: "Bold, warm finish for statement kitchens." },
+            ].map((item) => (
+              <div key={item.label} className="rounded-lg border border-border p-4">
+                <p className="font-medium text-foreground">{item.label}</p>
+                <p className="mt-1 text-sm text-muted">{item.note}</p>
               </div>
-              <div>
-                <h3 className="font-semibold text-foreground">How long does it take to wrap kitchen doors?</h3>
-                <p className="mt-2 text-muted leading-relaxed">
-                  A full set of 10–12 doors is typically wrapped in one day. Smaller sets take less.
-                  Your kitchen stays accessible throughout.
-                </p>
-              </div>
-              <div>
-                <h3 className="font-semibold text-foreground">How long does kitchen door wrap last?</h3>
-                <p className="mt-2 text-muted leading-relaxed">
-                  With correct prep and premium film, 7–10+ years in normal residential use. We back
-                  every job with a {siteConfig.guaranteeYears}-year guarantee on materials and workmanship.
-                </p>
-              </div>
-              <div>
-                <h3 className="font-semibold text-foreground">Do you cover South Yorkshire for door wrapping?</h3>
-                <p className="mt-2 text-muted leading-relaxed">
-                  Yes — Sheffield, Doncaster, Barnsley, Rotherham, Leeds, Huddersfield, Chesterfield,
-                  Wakefield, York, Bradford and surrounding areas. Book a free survey to confirm your postcode.
-                </p>
-              </div>
+            ))}
+          </div>
+          <p className="mt-6 text-muted">
+            We bring physical vinyl samples to every survey. Hundreds more finishes available.
+            See our{" "}
+            <Link href="/architectural-vinyl-finishes/" className="text-accent hover:underline">
+              architectural vinyl finishes guide
+            </Link>{" "}
+            for the full range.
+          </p>
+        </div>
+      </section>
+
+      <section className="py-12">
+        <div className="container mx-auto max-w-3xl px-4">
+          <h2 className="text-xl font-semibold text-foreground">
+            Kitchen door wrapping — pricing guide
+          </h2>
+          <div className="mt-4 overflow-x-auto">
+            <table className="w-full text-sm text-muted">
+              <thead>
+                <tr className="border-b border-border">
+                  <th className="py-2 pr-4 text-left font-semibold text-foreground">Item</th>
+                  <th className="py-2 text-left font-semibold text-foreground">Typical price</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-border">
+                  <td className="py-3 pr-4">Single standard cabinet door</td>
+                  <td className="py-3">from £45</td>
+                </tr>
+                <tr className="border-b border-border">
+                  <td className="py-3 pr-4">Drawer front (standard)</td>
+                  <td className="py-3">from £20</td>
+                </tr>
+                <tr className="border-b border-border">
+                  <td className="py-3 pr-4">End panel / side panel</td>
+                  <td className="py-3">from £55</td>
+                </tr>
+                <tr className="border-b border-border">
+                  <td className="py-3 pr-4">Full kitchen (10–12 doors, drawers, plinths)</td>
+                  <td className="py-3">from £550</td>
+                </tr>
+                <tr>
+                  <td className="py-3 pr-4">Larger kitchen (14–18 doors + drawers)</td>
+                  <td className="py-3">from £750</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="mt-4 text-sm text-muted">
+            Fixed price confirmed after the free survey. See our full{" "}
+            <Link href="/kitchen-wrapping-cost/" className="text-accent hover:underline">
+              kitchen wrapping cost guide
+            </Link>{" "}
+            for a detailed breakdown including worktops.
+          </p>
+        </div>
+      </section>
+
+      <section className="border-y border-border bg-card py-12">
+        <div className="container mx-auto max-w-3xl px-4">
+          <h2 className="text-xl font-semibold text-foreground">
+            The process — kitchen door wrapping
+          </h2>
+          <ol className="mt-4 list-inside list-decimal space-y-3 text-muted">
+            <li>
+              <strong>Free survey</strong> — we visit your kitchen, assess door condition and
+              material, measure accurately and give you an honest suitability report. No obligation.
+            </li>
+            <li>
+              <strong>Fixed quote</strong> — confirmed in writing per door / per kitchen. The price
+              doesn&apos;t change unless the scope changes.
+            </li>
+            <li>
+              <strong>Door removal and surface prep</strong> — doors removed from hinges, cleaned,
+              degreased and lightly abraded. Prep is what makes the difference.
+            </li>
+            <li>
+              <strong>Wrapping</strong> — film applied by hand in sections, edges folded, all
+              profiles covered. Most doors are wrapped in our workshop or on-site depending
+              on complexity.
+            </li>
+            <li>
+              <strong>Reinstallation and inspection</strong> — doors rehung, hardware refitted,
+              full walkround with you to check every door and seam.
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section className="py-12">
+        <div className="container mx-auto max-w-3xl px-4">
+          <h2 className="text-xl font-semibold text-foreground">
+            Frequently asked questions — kitchen door wrapping
+          </h2>
+          <div className="mt-4 space-y-6">
+            <div>
+              <h3 className="font-semibold text-foreground">How much does kitchen door wrapping cost?</h3>
+              <p className="mt-2 text-muted leading-relaxed">
+                From £45 per door. A full kitchen (10–12 doors) typically falls between £550 and £900.
+                Fixed price after the free survey.
+              </p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-foreground">Can you match any colour I want?</h3>
+              <p className="mt-2 text-muted leading-relaxed">
+                We can usually match or closely replicate any colour in matt, satin or gloss. Send
+                us a photo or paint code and we&apos;ll find the closest equivalent in our vinyl range.
+              </p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-foreground">Can I just do one damaged door?</h3>
+              <p className="mt-2 text-muted leading-relaxed">
+                Yes. There&apos;s no minimum. Some clients wrap a single damaged or faded door to match
+                the rest of the kitchen.
+              </p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-foreground">How long do wrapped doors last?</h3>
+              <p className="mt-2 text-muted leading-relaxed">
+                7–10+ years with correct preparation. We back every job with a {siteConfig.guaranteeYears}-year
+                guarantee on material defects, colour and adhesion.
+              </p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-foreground">Will the wrap peel or bubble?</h3>
+              <p className="mt-2 text-muted leading-relaxed">
+                Not with proper prep. We degrease, abrade and prime before any film goes down — this
+                is the step that determines whether a wrap lasts 5 years or 5 months. Our guarantee
+                covers adhesion failure.
+              </p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-foreground">What door materials work best?</h3>
+              <p className="mt-2 text-muted leading-relaxed">
+                Solid wood, MDF, melamine and smooth-painted doors all wrap well. Very heavily textured
+                doors or profiles with deep grooves aren&apos;t always suitable — we check at the survey
+                and tell you straight before any money changes hands.
+              </p>
             </div>
           </div>
+        </div>
+      </section>
 
-          <div className="card-float p-8">
-            <h2 className="text-xl font-semibold text-foreground">
-              Related services
+      <section className="border-y border-border bg-card py-12">
+        <div className="container mx-auto max-w-3xl px-4">
+          <h2 className="text-xl font-semibold text-foreground">
+            Kitchen door wrapping by city
+          </h2>
+          <p className="mt-4 text-muted">
+            We cover South Yorkshire and the wider North. See your local page for area-specific
+            pricing and FAQs.
+          </p>
+          <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-3 text-sm">
+            {siteConfig.areas.map((city) => (
+              <Link
+                key={city}
+                href={`/kitchen-wrapping-${city.toLowerCase()}/`}
+                className="rounded-lg border border-border p-3 text-center text-foreground transition hover:border-accent hover:text-accent"
+              >
+                {city}
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-10">
+        <div className="container mx-auto max-w-3xl px-4">
+          <div className="card-float p-6">
+            <h2 className="text-lg font-semibold text-foreground">
+              Also considering a full kitchen wrap?
             </h2>
-            <ul className="mt-4 space-y-3 text-muted">
-              <li>
-                <Link href="/kitchen-wrapping/" className="text-accent hover:underline">
-                  Full kitchen wrapping
-                </Link>{" "}
-                — doors, frames, carcasses and worktops in one visit
-              </li>
-              <li>
-                <Link href="/worktop-wrapping/" className="text-accent hover:underline">
-                  Worktop wrapping
-                </Link>{" "}
-                — transform your countertops in marble, stone or wood-effect vinyl
-              </li>
-              <li>
-                <Link href="/furniture-wrapping/" className="text-accent hover:underline">
-                  Furniture wrapping
-                </Link>{" "}
-                — wardrobes, bedroom and bathroom units in the same visit
-              </li>
-            </ul>
+            <p className="mt-3 text-muted">
+              Adding worktops to your door wrap keeps labour costs low — one visit, complete
+              transformation. See our full{" "}
+              <Link href="/kitchen-wrapping/" className="text-accent hover:underline">
+                kitchen wrapping service
+              </Link>{" "}
+              page for everything included.
+            </p>
           </div>
+        </div>
+      </section>
 
-          <div className="text-center pt-4">
-            <Link href="/kitchen-wrapping-quote/" className="btn-primary inline-block">
-              Get a Free Door Wrapping Quote
-            </Link>
-            <p className="mt-4 text-muted text-sm">Or call 07398 395417</p>
-          </div>
+      <section className="py-12">
+        <div className="container mx-auto max-w-3xl px-4 text-center space-y-4">
+          <h2 className="text-2xl font-semibold text-foreground">
+            Ready to wrap your kitchen doors?
+          </h2>
+          <p className="text-muted leading-relaxed">
+            Free survey. Fixed quote before work starts. {siteConfig.guaranteeYears}-year guarantee on every job.
+          </p>
+          <Link href="/kitchen-wrapping-quote/" className="btn-primary inline-block">
+            Get a Free Quote
+          </Link>
+          <p className="text-muted">
+            Or call <strong>{siteConfig.phone}</strong>
+          </p>
         </div>
       </section>
     </div>

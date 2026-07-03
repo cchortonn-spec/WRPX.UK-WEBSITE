@@ -100,6 +100,27 @@ export const blogPosts = [
       "How to find a reliable local kitchen wrapping installer, what questions to ask, and red flags to watch for.",
     date: "2026-07-01",
   },
+  {
+    slug: "worktop-wrapping-cost",
+    title: "Worktop Wrapping Cost Guide 2026 — What to Expect",
+    description:
+      "How much does worktop wrapping cost in 2026? Detailed price breakdown by kitchen size, what affects the quote, and how wrapping compares to replacement.",
+    date: "2026-07-01",
+  },
+  {
+    slug: "grey-kitchen-wrap-ideas",
+    title: "Grey Kitchen Wrap Ideas 2026 — Shades, Finishes & How to Choose",
+    description:
+      "From soft dove grey to dark anthracite — a guide to grey kitchen wrapping, which shades work where, how to pair with worktops, and two-tone ideas.",
+    date: "2026-07-02",
+  },
+  {
+    slug: "kitchen-wrapping-rental-properties",
+    title: "Kitchen Wrapping for Rental Properties — A Landlord's Guide",
+    description:
+      "Why South Yorkshire landlords choose vinyl kitchen wrapping between tenancies. Cost, speed, durability and which finishes work best for rental kitchens.",
+    date: "2026-07-03",
+  },
 ] as const;
 
 export type BlogSlug = (typeof blogPosts)[number]["slug"];
