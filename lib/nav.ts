@@ -6,6 +6,9 @@ export const nav = {
   /** Dropdown: services */
   services: [
     { label: "Kitchen Wrapping", href: `${base}/kitchen-wrapping/` },
+    { label: "Kitchen Island Wrapping", href: `${base}/kitchen-island-wrapping/` },
+    { label: "Splashback Wrapping", href: `${base}/splashback-wrapping/` },
+    { label: "Appliance Wrapping", href: `${base}/appliance-wrapping/` },
     { label: "Kitchen Wrapping Quote", href: `${base}/kitchen-wrapping-quote/` },
     { label: "Cost Guide", href: `${base}/kitchen-wrapping-cost/` },
     { label: "Worktop Wrapping", href: `${base}/worktop-wrapping/` },
