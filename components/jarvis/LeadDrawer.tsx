@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useState } from "react";
 import { LeadPhotoGrid } from "@/components/jarvis/LeadPhotoGrid";
+import { LeadMessagesPanel } from "@/components/jarvis/LeadMessagesPanel";
 import { StagePill } from "@/components/jarvis/StagePill";
 import {
   JOB_TYPES,
@@ -51,6 +52,7 @@ export function LeadDrawer({ leadId, onClose, onUpdated }: LeadDrawerProps) {
   const [taskTitle, setTaskTitle] = useState("");
   const [isSavingNote, setIsSavingNote] = useState(false);
   const [isSavingTask, setIsSavingTask] = useState(false);
+  const [activeTab, setActiveTab] = useState<"details" | "messages">("details");
 
   const loadLead = useCallback(async () => {
     const response = await fetch(`/api/jarvis/leads/${leadId}/`, {
@@ -173,11 +175,39 @@ export function LeadDrawer({ leadId, onClose, onUpdated }: LeadDrawerProps) {
           </button>
         </div>
 
+        <div className="jarvis-drawer-tabs">
+          <button
+            type="button"
+            className={`jarvis-drawer-tab ${
+              activeTab === "details" ? "jarvis-drawer-tab-active" : ""
+            }`}
+            onClick={() => setActiveTab("details")}
+          >
+            Details
+          </button>
+          <button
+            type="button"
+            className={`jarvis-drawer-tab ${
+              activeTab === "messages" ? "jarvis-drawer-tab-active" : ""
+            }`}
+            onClick={() => setActiveTab("messages")}
+          >
+            Messages
+          </button>
+        </div>
+
         <div className="jarvis-drawer-body">
           {isLoading ? (
             <p className="jarvis-muted">Loading...</p>
           ) : error && !lead ? (
             <p className="jarvis-error">{error}</p>
+          ) : lead && activeTab === "messages" ? (
+            <LeadMessagesPanel
+              leadId={leadId}
+              leadName={lead.name}
+              leadPhone={lead.phone}
+              leadEmail={lead.email}
+            />
           ) : lead ? (
             <>
               <section>

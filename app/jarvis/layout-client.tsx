@@ -8,6 +8,8 @@ const PAGE_TITLES: Record<string, string> = {
   "/jarvis/": "Home",
   "/jarvis/leads": "Leads",
   "/jarvis/leads/": "Leads",
+  "/jarvis/inbox": "Inbox",
+  "/jarvis/inbox/": "Inbox",
 };
 
 export function JarvisLayoutClient({

@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 const NAV_ITEMS = [
   { href: "/jarvis", label: "Home", enabled: true },
   { href: "/jarvis/leads", label: "Leads", enabled: true },
-  { href: "/jarvis/inbox", label: "Inbox", enabled: false },
+  { href: "/jarvis/inbox", label: "Inbox", enabled: true },
   { href: "/jarvis/projects", label: "Projects", enabled: false },
   { href: "/jarvis/quotes", label: "Quotes", enabled: false },
   { href: "/jarvis/invoices", label: "Invoices", enabled: false },

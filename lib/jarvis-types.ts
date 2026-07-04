@@ -393,6 +393,76 @@ export type FollowUpAction =
   | "mark_sent"
   | "clear";
 
+export const CONVERSATION_CHANNELS = [
+  "whatsapp",
+  "email",
+  "sms",
+  "facebook",
+  "manual",
+] as const;
+
+export type ConversationChannel = (typeof CONVERSATION_CHANNELS)[number];
+
+export const CONVERSATION_STATUSES = ["open", "archived"] as const;
+
+export type ConversationStatus = (typeof CONVERSATION_STATUSES)[number];
+
+export const MESSAGE_DIRECTIONS = ["inbound", "outbound"] as const;
+
+export type MessageDirection = (typeof MESSAGE_DIRECTIONS)[number];
+
+export const MESSAGE_STATUSES = [
+  "pending",
+  "sent",
+  "delivered",
+  "read",
+  "failed",
+] as const;
+
+export type MessageStatus = (typeof MESSAGE_STATUSES)[number];
+
+export const CHANNEL_LABELS: Record<ConversationChannel, string> = {
+  whatsapp: "WhatsApp",
+  email: "Email",
+  sms: "SMS",
+  facebook: "Facebook",
+  manual: "Manual",
+};
+
+export type JarvisConversation = {
+  id: string;
+  lead_id: string | null;
+  contact_name: string;
+  contact_phone: string | null;
+  contact_email: string | null;
+  channel: ConversationChannel;
+  external_thread_id: string | null;
+  last_message_at: string | null;
+  last_message_preview: string | null;
+  unread_count: number;
+  status: ConversationStatus;
+  created_at: string;
+  updated_at: string;
+};
+
+export type JarvisMessage = {
+  id: string;
+  conversation_id: string;
+  direction: MessageDirection;
+  body: string | null;
+  status: MessageStatus;
+  media_url: string | null;
+  media_type: string | null;
+  external_message_id: string | null;
+  sent_by_user_id: string | null;
+  created_at: string;
+};
+
+export type JarvisConversationDetail = JarvisConversation & {
+  messages: JarvisMessage[];
+  lead: JarvisLead | null;
+};
+
 export function formatCurrency(amount: number | null | undefined) {
   if (amount == null) return null;
   return new Intl.NumberFormat("en-GB", {
