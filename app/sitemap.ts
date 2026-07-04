@@ -41,6 +41,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "commercial-installation-huddersfield",
     "commercial-installation-york",
     "commercial-installation-nottingham",
+    "vehicle-wrap-installation",
+    "sign-company-installation-partner",
+    "sheffield-nottingham-corridor-installation",
   ];
   const windowFilm = [
     "window-film",
