@@ -44,6 +44,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "vehicle-wrap-installation",
     "sign-company-installation-partner",
     "sheffield-nottingham-corridor-installation",
+    "print-company-installation-partner",
+    "marketing-agency-installation-partner",
+    "multi-site-rollout-installation",
   ];
   const windowFilm = [
     "window-film",

@@ -72,6 +72,13 @@ export const blogPosts = [
       "Two-tone kitchens, marble islands, bold colour choices and woodgrain finishes. Popular kitchen island wrap ideas for 2026 with costs and advice.",
     date: "2026-07-04",
   },
+  {
+    slug: "why-sign-companies-use-subcontract-installers",
+    title: "Why Sign Companies Use Subcontract Installers — and How to Choose One",
+    description:
+      "Most sign companies subcontract installation at some point. Here's why the model works, what goes wrong when the wrong installer is chosen, and what to look for in a reliable subcontract installation partner.",
+    date: "2026-07-04",
+  },
 ] as const;
 
 export type BlogSlug = (typeof blogPosts)[number]["slug"];

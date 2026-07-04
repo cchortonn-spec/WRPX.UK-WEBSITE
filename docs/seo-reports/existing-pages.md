@@ -62,13 +62,21 @@ Cross-reference slug + service + region against the lists below. If a match exis
 | `/commercial/wall-wraps/` | Service: Wall wraps |
 | `/commercial/floor-graphics/` | Service: Floor graphics |
 
-### New B2B Pages (added 2026-07-04)
+### New B2B Pages (added 2026-07-04, Run 1)
 
 | Slug | Title / Purpose |
 |---|---|
 | `/vehicle-wrap-installation/` | Vehicle wrap subcontract for trade/print companies |
 | `/sign-company-installation-partner/` | Sign company & print house installation partner |
 | `/sheffield-nottingham-corridor-installation/` | M1 corridor combined geographic page |
+
+### New B2B Pages (added 2026-07-04, Run 2)
+
+| Slug | Title / Purpose |
+|---|---|
+| `/print-company-installation-partner/` | Dedicated installation partner page for large-format print houses |
+| `/marketing-agency-installation-partner/` | White-label installation partner for marketing agencies |
+| `/multi-site-rollout-installation/` | Multi-site rollout installation for brand campaigns & retail programmes |
 
 ---
 
@@ -108,6 +116,9 @@ Cross-reference slug + service + region against the lists below. If a match exis
 | `/blog/kitchen-wrapping-ideas-2026/` | |
 | `/blog/commercial-vinyl-installer-background-matters/` | |
 | `/blog/window-graphics-wall-wraps-floor-vinyls-commercial-guide/` | |
+| `/blog/kitchen-wrapping-vs-kitchen-spraying/` | |
+| `/blog/kitchen-island-wrapping-ideas/` | |
+| `/blog/why-sign-companies-use-subcontract-installers/` | B2B content — sign company subcontract guide |
 
 ---
 
@@ -129,4 +140,4 @@ Cross-reference slug + service + region against the lists below. If a match exis
 
 ---
 
-_Last updated by automation run on 2026-07-04_
+_Last updated by automation run on 2026-07-04 (Run 2)_
