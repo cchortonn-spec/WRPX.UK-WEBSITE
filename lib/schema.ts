@@ -4,16 +4,98 @@ export function getLocalBusinessSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
+    "@id": `${siteConfig.domain}/#business`,
     name: siteConfig.name,
     description:
-      "Kitchen wrapping and commercial graphics & signage installation specialist serving South Yorkshire including Sheffield, Doncaster, Barnsley, Rotherham, Leeds, Huddersfield and Chesterfield.",
+      "Kitchen wrapping and commercial vinyl installation specialist. Serving Sheffield, Doncaster, Barnsley, Rotherham, Leeds, Huddersfield, Chesterfield and all South Yorkshire. Kitchen doors, worktops, splashbacks, bedroom furniture, bathroom units, appliances and commercial graphics. 7+ years experience, 5-year guarantee.",
     url: siteConfig.domain,
     telephone: siteConfig.phoneE164,
     email: siteConfig.email,
     priceRange: "££",
+    foundingDate: "2018",
+    image: `${siteConfig.domain}/images/gallery/kitchen-wrap-full-kitchen-south-yorkshire.jpg`,
+    knowsAbout: [
+      "Kitchen Vinyl Wrapping",
+      "Worktop Wrapping",
+      "Furniture Wrapping",
+      "Kitchen Island Wrapping",
+      "Splashback Wrapping",
+      "Appliance Wrapping",
+      "Window Film Installation",
+      "Architectural Vinyl Film",
+      "Commercial Vinyl Graphics",
+      "Wall Wraps",
+      "Floor Graphics",
+    ],
     hasOfferCatalog: {
       "@type": "OfferCatalog",
-      name: "Kitchen Wrapping Services",
+      name: "Vinyl Wrapping & Commercial Graphics Services",
+      itemListElement: [
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Kitchen Wrapping",
+            description: "Full kitchen vinyl wrapping — doors, drawer fronts, worktops and frames in premium architectural vinyl.",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Kitchen Island Wrapping",
+            description: "Kitchen island vinyl wrapping in marble, stone, woodgrain and solid colour finishes.",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Worktop Wrapping",
+            description: "Heat-resistant vinyl wrapping for kitchen worktops in marble, stone and wood-effect finishes.",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Splashback Wrapping",
+            description: "Vinyl over existing tiles or glass splashbacks — no retiling required.",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Furniture & Bedroom Wrapping",
+            description: "Wardrobes, bedroom and bathroom units wrapped in premium vinyl.",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Appliance Wrapping",
+            description: "Fridge freezers, cooker hoods, dishwashers and other appliances wrapped in vinyl.",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Window Film Installation",
+            description: "Frosted, privacy, solar control, one-way mirror and decorative window film installation.",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Commercial Vinyl Graphics",
+            description: "Window graphics, wall wraps, floor graphics and signage installation for retail, commercial and hospitality.",
+          },
+        },
+      ],
     },
     areaServed: siteConfig.areaServed,
     address: {
@@ -21,7 +103,12 @@ export function getLocalBusinessSchema() {
       addressRegion: "South Yorkshire",
       addressCountry: "GB",
     },
-    // Update ratingValue and reviewCount when you have 4–5+ real Google reviews
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: "53.3811",
+      longitude: "-1.4701",
+    },
+    // Update ratingValue and reviewCount when you have verified Google reviews
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: "5",

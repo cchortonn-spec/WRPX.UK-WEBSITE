@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { siteConfig } from "@/lib/site-config";
@@ -7,6 +8,30 @@ import { HomeHero } from "@/components/HomeHero";
 import { HeroTrustBar } from "@/components/HeroTrustBar";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { WrpxTrustPanel } from "@/components/WrpxTrustPanel";
+
+export const metadata: Metadata = {
+  title: "Kitchen Wrapping Sheffield & South Yorkshire | Vinyl Wrap Specialist | WRPX",
+  description:
+    "WRPX — kitchen wrapping specialist covering Sheffield, Doncaster, Barnsley, Rotherham, Leeds, Huddersfield & Chesterfield. Doors, worktops, islands, splashbacks, furniture. 7+ years, 5-year guarantee. Free survey.",
+  alternates: {
+    canonical: "https://www.wrpx.co.uk/",
+  },
+  openGraph: {
+    title: "Kitchen Wrapping Sheffield & South Yorkshire | WRPX",
+    description:
+      "Kitchen wrapping specialist — Sheffield, Doncaster, Barnsley, Rotherham, Leeds, Huddersfield & Chesterfield. Doors, worktops, islands, splashbacks. 5-year guarantee. Free survey.",
+    url: "https://www.wrpx.co.uk/",
+    type: "website",
+    images: [
+      {
+        url: "https://www.wrpx.co.uk/images/gallery/kitchen-wrap-full-kitchen-south-yorkshire.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Kitchen wrapping South Yorkshire — WRPX",
+      },
+    ],
+  },
+};
 
 const galleryImages = [
   { src: "/images/home/kitchen-home-new-02.png", alt: "Wrapped kitchen with light wall units and tiled splashback" },
@@ -80,6 +105,50 @@ export default function HomePage() {
               </Link>
               .
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Specialist kitchen services */}
+      <section className="reveal px-4 pb-10">
+        <div className="container mx-auto max-w-4xl">
+          <div className="card-float p-8 md:p-10">
+            <h2 className="text-2xl font-semibold text-foreground md:text-3xl">
+              Specialist kitchen wrapping services
+            </h2>
+            <p className="mt-4 text-muted leading-relaxed">
+              Beyond full kitchen wraps — we also cover kitchen islands, splashbacks and appliances,
+              so every surface can be transformed in one visit.
+            </p>
+            <div className="mt-6 grid gap-3 sm:grid-cols-3">
+              <Link
+                href="/kitchen-island-wrapping/"
+                className="rounded-lg border border-border p-4 hover:border-accent transition-colors"
+              >
+                <p className="font-semibold text-foreground text-sm">Kitchen Island Wrapping</p>
+                <p className="mt-1 text-xs text-muted">
+                  Marble, stone, bold colour or woodgrain — transform your island in a day.
+                </p>
+              </Link>
+              <Link
+                href="/splashback-wrapping/"
+                className="rounded-lg border border-border p-4 hover:border-accent transition-colors"
+              >
+                <p className="font-semibold text-foreground text-sm">Splashback Wrapping</p>
+                <p className="mt-1 text-xs text-muted">
+                  Wrap over existing tiles or glass — no retiling, no mess.
+                </p>
+              </Link>
+              <Link
+                href="/appliance-wrapping/"
+                className="rounded-lg border border-border p-4 hover:border-accent transition-colors"
+              >
+                <p className="font-semibold text-foreground text-sm">Appliance Wrapping</p>
+                <p className="mt-1 text-xs text-muted">
+                  Match your fridge, dishwasher and cooker hood to your wrapped kitchen.
+                </p>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
