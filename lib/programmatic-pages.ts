@@ -56,7 +56,18 @@ export type ProgrammaticPageData = {
   breadcrumb: Array<{ label: string; href: string }>;
 };
 
-export const releasedCitySlugs = ["sheffield"] as const;
+export const releasedCitySlugs = [
+  "sheffield",
+  "doncaster",
+  "rotherham",
+  "barnsley",
+  "leeds",
+  "huddersfield",
+  "chesterfield",
+  "wakefield",
+  "bradford",
+  "nottingham",
+] as const;
 
 export const cities: City[] = [
   {

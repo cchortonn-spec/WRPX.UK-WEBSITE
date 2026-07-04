@@ -61,8 +61,51 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "window-film/window-film-chesterfield",
     "window-film/window-film-huddersfield",
   ];
+  const newServicePages = [
+    "kitchen-island-wrapping",
+    "splashback-wrapping",
+    "appliance-wrapping",
+  ];
+
+  const furnitureLocations = siteConfig.areas.map((city) =>
+    `furniture-wrapping-${city.toLowerCase()}`
+  );
+
+  const programmaticCities = [
+    "sheffield",
+    "doncaster",
+    "rotherham",
+    "barnsley",
+    "leeds",
+    "huddersfield",
+    "chesterfield",
+    "wakefield",
+    "bradford",
+    "nottingham",
+  ];
+  const programmaticServices = [
+    "kitchen-vinyl-wrapping",
+    "worktop-vinyl-wrapping",
+    "cupboard-door-wrapping",
+    "window-film-installation",
+    "commercial-vinyl-graphics",
+    "architectural-vinyl-film",
+  ];
+  const programmaticPaths = programmaticCities.flatMap((city) =>
+    programmaticServices.map((service) => `locations/${city}/${service}`)
+  );
+
   const blogPaths = blogPosts.map((post) => `blog/${post.slug}`);
-  const paths = [...core, ...locations, ...commercialLocations, ...windowFilm, ...blogPaths];
+  const paths = [
+    ...core,
+    ...locations,
+    ...commercialLocations,
+    ...windowFilm,
+    ...newServicePages,
+    ...furnitureLocations,
+    ...programmaticPaths,
+    ...blogPaths,
+  ];
 
   return paths.map((path) => ({
     url: path ? `${base}/${path}/` : `${base}/`,

@@ -58,6 +58,20 @@ export const blogPosts = [
       "Planning retail graphics installation for the first time? A practical guide to window graphics, wall wraps, floor graphics and shop front applications.",
     date: "2026-03-02",
   },
+  {
+    slug: "kitchen-wrapping-vs-kitchen-spraying",
+    title: "Kitchen Wrapping vs Kitchen Spraying — Which Is Better?",
+    description:
+      "An honest comparison of vinyl wrapping and spray painting for kitchen cabinets. Durability, finish range, drying time and cost — which should you choose?",
+    date: "2026-07-04",
+  },
+  {
+    slug: "kitchen-island-wrapping-ideas",
+    title: "Kitchen Island Wrapping Ideas — Colours, Finishes & Inspiration",
+    description:
+      "Two-tone kitchens, marble islands, bold colour choices and woodgrain finishes. Popular kitchen island wrap ideas for 2026 with costs and advice.",
+    date: "2026-07-04",
+  },
 ] as const;
 
 export type BlogSlug = (typeof blogPosts)[number]["slug"];
