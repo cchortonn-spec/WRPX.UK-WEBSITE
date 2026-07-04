@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# CodeSpring — commit project link only (credentials stay in ~/.codespring/)
+.codespring/*
+!.codespring/config.json
