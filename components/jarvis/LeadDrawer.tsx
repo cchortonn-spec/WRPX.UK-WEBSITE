@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
+import { ConfirmDeleteDialog } from "@/components/jarvis/ConfirmDeleteDialog";
 import { LeadPhotoGrid } from "@/components/jarvis/LeadPhotoGrid";
 import { LeadMessagesPanel } from "@/components/jarvis/LeadMessagesPanel";
 import { StagePill } from "@/components/jarvis/StagePill";
@@ -32,6 +33,7 @@ type LeadDrawerProps = {
   leadId: string;
   onClose: () => void;
   onUpdated: () => void;
+  onDeleted?: () => void;
 };
 
 function formatDate(value: string) {
@@ -44,7 +46,7 @@ function formatDate(value: string) {
   });
 }
 
-export function LeadDrawer({ leadId, onClose, onUpdated }: LeadDrawerProps) {
+export function LeadDrawer({ leadId, onClose, onUpdated, onDeleted }: LeadDrawerProps) {
   const [lead, setLead] = useState<JarvisLeadDetail | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState("");
@@ -142,6 +144,17 @@ export function LeadDrawer({ leadId, onClose, onUpdated }: LeadDrawerProps) {
     });
     await loadLead();
     onUpdated();
+  }
+
+  async function handleDeleteLead() {
+    const response = await fetch(`/api/jarvis/leads/${leadId}/`, {
+      method: "DELETE",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ confirm: "DELETE" }),
+    });
+    if (!response.ok) throw new Error();
+    onDeleted?.();
+    onClose();
   }
 
   const followUpBadge = lead ? getFollowUpBadge(lead) : null;
@@ -508,6 +521,19 @@ export function LeadDrawer({ leadId, onClose, onUpdated }: LeadDrawerProps) {
                   </div>
                   <button type="submit" className="jarvis-button jarvis-button-secondary" disabled={isSavingNote}>{isSavingNote ? "Saving..." : "Add note"}</button>
                 </form>
+              </section>
+
+              <section className="jarvis-danger-zone">
+                <p className="jarvis-drawer-section-title">Delete customer</p>
+                <p className="jarvis-muted">
+                  Permanently remove this lead, including notes and photos. Linked
+                  inbox conversations will stay but will no longer be tied to this lead.
+                </p>
+                <ConfirmDeleteDialog
+                  itemLabel={lead.name}
+                  description="This customer record and all related notes and photos will be removed from Jarvis."
+                  onConfirm={handleDeleteLead}
+                />
               </section>
 
               {error ? <p className="jarvis-error">{error}</p> : null}

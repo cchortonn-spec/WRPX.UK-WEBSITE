@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
+import { ConfirmDeleteDialog } from "@/components/jarvis/ConfirmDeleteDialog";
 import {
   CHANNEL_LABELS,
   type JarvisConversationDetail,
@@ -11,6 +12,7 @@ type ConversationThreadProps = {
   conversationId: string;
   compact?: boolean;
   onUpdated?: () => void;
+  onDeleted?: () => void;
 };
 
 function formatMessageTime(value: string) {
@@ -88,6 +90,7 @@ export function ConversationThread({
   conversationId,
   compact = false,
   onUpdated,
+  onDeleted,
 }: ConversationThreadProps) {
   const [conversation, setConversation] =
     useState<JarvisConversationDetail | null>(null);
@@ -95,6 +98,15 @@ export function ConversationThread({
   const [error, setError] = useState("");
   const [draft, setDraft] = useState("");
   const [isSending, setIsSending] = useState(false);
+  const [templates, setTemplates] = useState<
+    Array<{
+      id: string;
+      label: string;
+      description: string;
+      parameterLabels: string[];
+    }>
+  >([]);
+  const [selectedTemplateId, setSelectedTemplateId] = useState("");
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
   const loadConversation = useCallback(async () => {
@@ -116,6 +128,49 @@ export function ConversationThread({
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [conversation?.messages]);
+
+  useEffect(() => {
+    if (conversation?.channel !== "whatsapp") return;
+    fetch("/api/jarvis/whatsapp/templates/", { cache: "no-store" })
+      .then((response) => (response.ok ? response.json() : null))
+      .then((data) => {
+        if (data?.templates) {
+          setTemplates(data.templates);
+        }
+      })
+      .catch(() => {
+        // Templates are optional — freeform WhatsApp still works in 24h window
+      });
+  }, [conversation?.channel]);
+
+  async function handleSendTemplate() {
+    if (!selectedTemplateId || isSending) return;
+
+    setIsSending(true);
+    try {
+      const response = await fetch(
+        `/api/jarvis/conversations/${conversationId}/messages/`,
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            template_id: selectedTemplateId,
+            template_params: [
+              conversation?.contact_name.trim().split(/\s+/)[0] || "there",
+            ],
+          }),
+        }
+      );
+      if (!response.ok) throw new Error();
+      setSelectedTemplateId("");
+      await loadConversation();
+      onUpdated?.();
+    } catch {
+      setError("Could not send template.");
+    } finally {
+      setIsSending(false);
+    }
+  }
 
   async function handleSend(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -140,6 +195,16 @@ export function ConversationThread({
     } finally {
       setIsSending(false);
     }
+  }
+
+  async function handleDeleteConversation() {
+    const response = await fetch(`/api/jarvis/conversations/${conversationId}/`, {
+      method: "DELETE",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ confirm: "DELETE" }),
+    });
+    if (!response.ok) throw new Error();
+    onDeleted?.();
   }
 
   if (isLoading) {
@@ -169,6 +234,11 @@ export function ConversationThread({
             {conversation.lead ? ` · Lead: ${conversation.lead.name}` : ""}
           </p>
         </div>
+        <ConfirmDeleteDialog
+          itemLabel={`conversation with ${conversation.contact_name}`}
+          description="All messages in this thread will be removed from Jarvis. The customer can still message you on WhatsApp."
+          onConfirm={handleDeleteConversation}
+        />
       </header>
 
       <div className="jarvis-thread-messages">
@@ -183,6 +253,45 @@ export function ConversationThread({
         )}
         <div ref={messagesEndRef} />
       </div>
+
+      {conversation.channel === "whatsapp" && templates.length > 0 ? (
+        <div className="jarvis-thread-templates">
+          <label htmlFor={`${conversationId}-template`} className="jarvis-label">
+            Send approved template
+          </label>
+          <div className="jarvis-thread-template-row">
+            <select
+              id={`${conversationId}-template`}
+              className="jarvis-select"
+              value={selectedTemplateId}
+              onChange={(event) => setSelectedTemplateId(event.target.value)}
+            >
+              <option value="">Choose a template...</option>
+              {templates.map((template) => (
+                <option key={template.id} value={template.id}>
+                  {template.label}
+                </option>
+              ))}
+            </select>
+            <button
+              type="button"
+              className="jarvis-button jarvis-button-secondary"
+              disabled={isSending || !selectedTemplateId}
+              onClick={handleSendTemplate}
+            >
+              {isSending ? "Sending..." : "Send template"}
+            </button>
+          </div>
+          {selectedTemplateId ? (
+            <p className="jarvis-muted">
+              {
+                templates.find((template) => template.id === selectedTemplateId)
+                  ?.description
+              }
+            </p>
+          ) : null}
+        </div>
+      ) : null}
 
       <form onSubmit={handleSend} className="jarvis-thread-compose">
         <textarea

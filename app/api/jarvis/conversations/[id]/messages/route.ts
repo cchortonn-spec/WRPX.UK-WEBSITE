@@ -6,12 +6,17 @@ import {
   jarvisUnauthorized,
 } from "@/lib/jarvis-clerk-auth";
 import { canEditLead } from "@/lib/jarvis-permissions";
+import { touchLeadFromOutboundMessage } from "@/lib/jarvis-lead-from-channel";
 import type { JarvisMessage } from "@/lib/jarvis-types";
 import { getSupabaseAdmin } from "@/lib/supabase";
 import {
   normalizeWhatsAppPhone,
   sendWhatsAppTextMessage,
 } from "@/lib/whatsapp-cloud";
+import {
+  getWhatsAppTemplateById,
+  sendWhatsAppTemplateMessage,
+} from "@/lib/whatsapp-templates";
 
 export const runtime = "nodejs";
 
@@ -33,14 +38,27 @@ export async function POST(request: Request, context: RouteContext) {
     const { id } = await context.params;
     const body = await request.json();
     const messageBody = typeof body.body === "string" ? body.body.trim() : "";
+    const templateId =
+      typeof body.template_id === "string" ? body.template_id.trim() : "";
+    const templateParams = Array.isArray(body.template_params)
+      ? body.template_params.map((value: unknown) => String(value ?? "").trim())
+      : [];
     const mediaUrl =
       typeof body.media_url === "string" ? body.media_url.trim() : null;
     const mediaType =
       typeof body.media_type === "string" ? body.media_type.trim() : null;
 
-    if (!messageBody && !mediaUrl) {
+    if (!messageBody && !mediaUrl && !templateId) {
       return NextResponse.json(
-        { error: "Message text or media is required" },
+        { error: "Message text, template, or media is required" },
+        { status: 400 }
+      );
+    }
+
+    const template = templateId ? getWhatsAppTemplateById(templateId) : null;
+    if (templateId && !template) {
+      return NextResponse.json(
+        { error: "Unknown or unconfigured WhatsApp template" },
         { status: 400 }
       );
     }
@@ -61,7 +79,9 @@ export async function POST(request: Request, context: RouteContext) {
     }
 
     const now = new Date().toISOString();
-    const preview = messageBody || (mediaUrl ? "[Media]" : "");
+    const preview = template
+      ? `[Template: ${template.label}]`
+      : messageBody || (mediaUrl ? "[Media]" : "");
 
     // Save the message first — always, regardless of delivery outcome
     const { data: message, error } = await supabase
@@ -69,7 +89,7 @@ export async function POST(request: Request, context: RouteContext) {
       .insert({
         conversation_id: id,
         direction: "outbound",
-        body: messageBody || null,
+        body: template ? preview : messageBody || null,
         status: "pending",
         media_url: mediaUrl,
         media_type: mediaType,
@@ -96,34 +116,49 @@ export async function POST(request: Request, context: RouteContext) {
       .eq("id", id);
 
     if (conversation.lead_id) {
-      await supabase
-        .from("jarvis_leads")
-        .update({
-          last_contacted_at: now,
-          updated_at: now,
-        })
-        .eq("id", conversation.lead_id);
+      await touchLeadFromOutboundMessage(
+        supabase,
+        conversation.lead_id,
+        now
+      );
     }
 
     // ── WhatsApp delivery ────────────────────────────────────────────────────
-    // Only attempt live delivery for WhatsApp conversations with a text body.
-    // If the send fails, we mark the message as failed in the DB but still
-    // return the saved message to the client so it appears in the thread.
     if (
       conversation.channel === "whatsapp" &&
-      messageBody &&
       conversation.contact_phone
     ) {
       const normalised = normalizeWhatsAppPhone(conversation.contact_phone);
 
-      if (normalised) {
+      if (normalised && template) {
+        try {
+          const params =
+            templateParams.length > 0
+              ? templateParams
+              : [conversation.contact_name.trim().split(/\s+/)[0] || "there"];
+          const { messageId } = await sendWhatsAppTemplateMessage(
+            normalised,
+            template.templateName,
+            template.languageCode,
+            params
+          );
+          await supabase
+            .from("jarvis_messages")
+            .update({ external_message_id: messageId, status: "sent" })
+            .eq("id", message.id);
+        } catch (sendError) {
+          console.error("WhatsApp template send error:", sendError);
+          await supabase
+            .from("jarvis_messages")
+            .update({ status: "failed" })
+            .eq("id", message.id);
+        }
+      } else if (normalised && messageBody) {
         try {
           const { messageId } = await sendWhatsAppTextMessage(
             normalised,
             messageBody
           );
-          // Update with the WhatsApp message ID — delivery receipts will
-          // come back via the webhook and update status to delivered/read.
           await supabase
             .from("jarvis_messages")
             .update({ external_message_id: messageId, status: "sent" })
@@ -135,7 +170,7 @@ export async function POST(request: Request, context: RouteContext) {
             .update({ status: "failed" })
             .eq("id", message.id);
         }
-      } else {
+      } else if (!normalised) {
         console.warn(
           "WhatsApp send skipped — could not normalise phone:",
           conversation.contact_phone
@@ -159,7 +194,11 @@ export async function POST(request: Request, context: RouteContext) {
       entityType: "conversation",
       entityId: id,
       summary: `Sent message to ${conversation.contact_name}`,
-      metadata: { lead_id: conversation.lead_id, channel: conversation.channel },
+      metadata: {
+        lead_id: conversation.lead_id,
+        channel: conversation.channel,
+        template_id: template?.id ?? null,
+      },
     });
 
     // Re-fetch the message so the returned status is accurate

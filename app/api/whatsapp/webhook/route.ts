@@ -1,4 +1,9 @@
 import { createHmac } from "crypto";
+import {
+  ensureLeadFromChannel,
+  linkConversationToLead,
+  touchLeadFromInboundMessage,
+} from "@/lib/jarvis-lead-from-channel";
 import { getSupabaseAdmin } from "@/lib/supabase";
 
 export const runtime = "nodejs";
@@ -163,15 +168,15 @@ async function handleInboundMessage(
   // Find conversation by sender phone number
   let { data: conversation } = await supabase
     .from("jarvis_conversations")
-    .select("id, unread_count")
+    .select("id, unread_count, lead_id")
     .eq("channel", "whatsapp")
     .eq("external_thread_id", fromPhone)
     .maybeSingle();
 
+  const contactName = extractContactName(value, fromPhone);
+
   // Auto-create a conversation if this is the first message from this number
   if (!conversation) {
-    const contactName = extractContactName(value, fromPhone);
-
     const { data: newConv, error: createError } = await supabase
       .from("jarvis_conversations")
       .insert({
@@ -184,7 +189,7 @@ async function handleInboundMessage(
         unread_count: 1,
         updated_at: timestamp,
       })
-      .select("id, unread_count")
+      .select("id, unread_count, lead_id")
       .single();
 
     if (createError || !newConv) {
@@ -207,6 +212,26 @@ async function handleInboundMessage(
         updated_at: timestamp,
       })
       .eq("id", conversation.id);
+  }
+
+  let leadId = conversation.lead_id as string | null;
+  if (!leadId) {
+    try {
+      const { leadId: ensuredLeadId } = await ensureLeadFromChannel(supabase, {
+        name: contactName,
+        phone: fromPhone,
+        source: "whatsapp",
+        status: "new_lead",
+      });
+      leadId = ensuredLeadId;
+      await linkConversationToLead(supabase, conversation.id, leadId);
+    } catch (leadError) {
+      console.error("WhatsApp webhook: could not ensure lead", leadError);
+    }
+  }
+
+  if (leadId) {
+    await touchLeadFromInboundMessage(supabase, leadId, timestamp);
   }
 
   // Save the inbound message

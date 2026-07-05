@@ -11,6 +11,10 @@ const nextConfig: NextConfig = {
         source: "/api/whatsapp/webhook",
         destination: "/api/whatsapp/webhook/",
       },
+      {
+        source: "/api/meta/leadgen/webhook",
+        destination: "/api/meta/leadgen/webhook/",
+      },
     ];
   },
   async redirects() {

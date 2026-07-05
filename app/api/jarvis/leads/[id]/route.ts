@@ -6,6 +6,7 @@ import {
   jarvisUnauthorized,
 } from "@/lib/jarvis-clerk-auth";
 import { applyFollowUpAction } from "@/lib/jarvis-lead-update";
+import { requireDeleteConfirmation } from "@/lib/jarvis-delete";
 import { getLeadInsights } from "@/lib/jarvis-lead-insights";
 import { canEditLead, canViewFinancials } from "@/lib/jarvis-permissions";
 import {
@@ -241,6 +242,74 @@ export async function PATCH(request: Request, context: RouteContext) {
     return NextResponse.json({ lead: data });
   } catch (error) {
     console.error("Jarvis lead PATCH error:", error);
+    return NextResponse.json({ error: "Server error" }, { status: 500 });
+  }
+}
+
+export async function DELETE(request: Request, context: RouteContext) {
+  const session = await getJarvisSession();
+  if (!session) {
+    return jarvisUnauthorized();
+  }
+
+  if (!canEditLead(session.user)) {
+    return jarvisForbidden();
+  }
+
+  try {
+    const body = await request.json().catch(() => null);
+    const confirmationError = requireDeleteConfirmation(body);
+    if (confirmationError) return confirmationError;
+
+    const { id } = await context.params;
+    const supabase = getSupabaseAdmin();
+
+    const { data: lead } = await supabase
+      .from("jarvis_leads")
+      .select("id, name")
+      .eq("id", id)
+      .maybeSingle();
+
+    if (!lead) {
+      return NextResponse.json({ error: "Lead not found" }, { status: 404 });
+    }
+
+    const { data: photos } = await supabase
+      .from("jarvis_lead_photos")
+      .select("storage_path")
+      .eq("lead_id", id);
+
+    if (photos?.length) {
+      const { deleteLeadPhotoFromCloudinary } = await import(
+        "@/lib/cloudinary-upload"
+      );
+      await Promise.all(
+        photos.map((photo) =>
+          deleteLeadPhotoFromCloudinary(photo.storage_path).catch((error) => {
+            console.error("Lead delete photo cleanup error:", error);
+          })
+        )
+      );
+    }
+
+    const { error } = await supabase.from("jarvis_leads").delete().eq("id", id);
+
+    if (error) {
+      console.error("Jarvis lead delete error:", error);
+      return NextResponse.json({ error: "Could not delete lead" }, { status: 500 });
+    }
+
+    await logJarvisAudit({
+      actor: session.user,
+      action: "lead_deleted",
+      entityType: "lead",
+      entityId: id,
+      summary: `Deleted lead ${lead.name}`,
+    });
+
+    return NextResponse.json({ ok: true });
+  } catch (error) {
+    console.error("Jarvis lead DELETE error:", error);
     return NextResponse.json({ error: "Server error" }, { status: 500 });
   }
 }

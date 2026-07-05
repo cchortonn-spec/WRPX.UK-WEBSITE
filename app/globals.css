@@ -1926,6 +1926,96 @@ a[href^="tel"]:hover {
   gap: 0.75rem;
 }
 
+.jarvis-button-danger {
+  background: rgba(255, 90, 90, 0.12);
+  color: var(--jarvis-danger);
+  border: 1px solid rgba(255, 90, 90, 0.35);
+}
+
+.jarvis-button-danger:hover:not(:disabled) {
+  background: rgba(255, 90, 90, 0.2);
+  border-color: rgba(255, 90, 90, 0.55);
+}
+
+.jarvis-delete-trigger,
+.jarvis-delete-trigger-compact {
+  background: transparent;
+  border: 1px solid rgba(255, 90, 90, 0.25);
+  color: var(--jarvis-danger);
+  border-radius: var(--jarvis-radius);
+  cursor: pointer;
+  font-size: 0.75rem;
+  font-weight: 500;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.jarvis-delete-trigger {
+  min-height: var(--jarvis-control-height);
+  padding: 0.55rem 1rem;
+}
+
+.jarvis-delete-trigger-compact {
+  padding: 0.25rem 0.55rem;
+  align-self: flex-end;
+  flex-shrink: 0;
+}
+
+.jarvis-delete-trigger:hover,
+.jarvis-delete-trigger-compact:hover {
+  background: rgba(255, 90, 90, 0.1);
+  border-color: rgba(255, 90, 90, 0.45);
+}
+
+.jarvis-delete-panel {
+  margin-top: 0.75rem;
+  padding: 1rem;
+  border-radius: var(--jarvis-radius);
+  border: 1px solid rgba(255, 90, 90, 0.25);
+  background: rgba(255, 90, 90, 0.06);
+}
+
+.jarvis-delete-panel-compact {
+  margin-top: 0.35rem;
+  padding: 0.75rem;
+  width: 100%;
+}
+
+.jarvis-delete-panel-danger {
+  border-color: rgba(255, 90, 90, 0.45);
+  background: rgba(255, 90, 90, 0.1);
+}
+
+.jarvis-delete-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--jarvis-text);
+  margin-bottom: 0.35rem;
+}
+
+.jarvis-delete-description,
+.jarvis-delete-note {
+  font-size: 0.82rem;
+  color: var(--jarvis-text-secondary);
+  line-height: 1.45;
+}
+
+.jarvis-delete-note {
+  margin-top: 0.35rem;
+  margin-bottom: 0.75rem;
+  color: var(--jarvis-danger);
+}
+
+.jarvis-delete-input {
+  margin: 0.75rem 0;
+  max-width: 16rem;
+}
+
+.jarvis-danger-zone {
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(255, 90, 90, 0.2);
+}
+
 .jarvis-form-flush {
   margin-top: 0;
 }
@@ -2898,6 +2988,10 @@ a[href^="tel"]:hover {
 }
 
 .jarvis-thread-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
   padding: 1rem 1.25rem;
   border-bottom: 1px solid var(--jarvis-border);
 }
@@ -2991,6 +3085,24 @@ a[href^="tel"]:hover {
   gap: 0.75rem;
   padding: 1rem 1.25rem;
   border-top: 1px solid var(--jarvis-border);
+}
+
+.jarvis-thread-templates {
+  padding: 0 1.25rem 0.75rem;
+  border-top: 1px solid var(--jarvis-border);
+}
+
+.jarvis-thread-template-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  margin-top: 0.35rem;
+}
+
+.jarvis-thread-template-row .jarvis-select {
+  flex: 1;
+  min-width: 12rem;
 }
 
 .jarvis-thread-input {

@@ -1,8 +1,12 @@
 import { NextResponse } from "next/server";
+import { logJarvisAudit } from "@/lib/jarvis-audit";
 import {
   getJarvisSession,
+  jarvisForbidden,
   jarvisUnauthorized,
 } from "@/lib/jarvis-clerk-auth";
+import { requireDeleteConfirmation } from "@/lib/jarvis-delete";
+import { canEditLead } from "@/lib/jarvis-permissions";
 import type {
   JarvisConversation,
   JarvisConversationDetail,
@@ -80,6 +84,66 @@ export async function GET(_request: Request, context: RouteContext) {
     return NextResponse.json({ conversation: detail });
   } catch (error) {
     console.error("Jarvis conversation GET error:", error);
+    return NextResponse.json({ error: "Server error" }, { status: 500 });
+  }
+}
+
+export async function DELETE(request: Request, context: RouteContext) {
+  const session = await getJarvisSession();
+  if (!session) {
+    return jarvisUnauthorized();
+  }
+
+  if (!canEditLead(session.user)) {
+    return jarvisForbidden();
+  }
+
+  try {
+    const body = await request.json().catch(() => null);
+    const confirmationError = requireDeleteConfirmation(body);
+    if (confirmationError) return confirmationError;
+
+    const { id } = await context.params;
+    const supabase = getSupabaseAdmin();
+
+    const { data: conversation } = await supabase
+      .from("jarvis_conversations")
+      .select("id, contact_name, channel")
+      .eq("id", id)
+      .maybeSingle();
+
+    if (!conversation) {
+      return NextResponse.json(
+        { error: "Conversation not found" },
+        { status: 404 }
+      );
+    }
+
+    const { error } = await supabase
+      .from("jarvis_conversations")
+      .delete()
+      .eq("id", id);
+
+    if (error) {
+      console.error("Jarvis conversation delete error:", error);
+      return NextResponse.json(
+        { error: "Could not delete conversation" },
+        { status: 500 }
+      );
+    }
+
+    await logJarvisAudit({
+      actor: session.user,
+      action: "conversation_deleted",
+      entityType: "conversation",
+      entityId: id,
+      summary: `Deleted conversation with ${conversation.contact_name}`,
+      metadata: { channel: conversation.channel },
+    });
+
+    return NextResponse.json({ ok: true });
+  } catch (error) {
+    console.error("Jarvis conversation DELETE error:", error);
     return NextResponse.json({ error: "Server error" }, { status: 500 });
   }
 }

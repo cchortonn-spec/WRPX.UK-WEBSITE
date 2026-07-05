@@ -1,5 +1,5 @@
-const WHATSAPP_API_VERSION = "v20.0";
-const WHATSAPP_API_BASE = `https://graph.facebook.com/${WHATSAPP_API_VERSION}`;
+export const WHATSAPP_API_VERSION = "v20.0";
+export const WHATSAPP_API_BASE = `https://graph.facebook.com/${WHATSAPP_API_VERSION}`;
 
 /**
  * Normalise any UK phone number input to the WhatsApp Cloud API format —

@@ -243,6 +243,7 @@ export type JarvisLead = {
   lead_temperature: LeadTemperature;
   ai_summary: string | null;
   ai_next_action: string | null;
+  external_lead_id?: string | null;
   last_customer_message_at: string | null;
   last_follow_up_at: string | null;
   created_at: string;

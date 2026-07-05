@@ -234,6 +234,7 @@ export default function JarvisLeadsClient() {
           leadId={selectedLeadId}
           onClose={() => setSelectedLeadId(null)}
           onUpdated={() => void loadLeads()}
+          onDeleted={() => void loadLeads()}
         />
       ) : null}
     </>

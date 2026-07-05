@@ -277,6 +277,10 @@ export default function JarvisInboxClient() {
               <ConversationThread
                 conversationId={selectedId}
                 onUpdated={loadConversations}
+                onDeleted={() => {
+                  setSelectedId(null);
+                  void loadConversations();
+                }}
               />
             </>
           ) : (
