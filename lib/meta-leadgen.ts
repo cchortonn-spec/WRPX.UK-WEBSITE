@@ -24,16 +24,12 @@ export type ParsedMetaLead = {
 export function parseLeadgenWebhookValue(
   value: Record<string, unknown>
 ): MetaLeadgenPayload | null {
-  const leadgenId = value.leadgen_id;
-  const pageId = value.page_id;
-  const formId = value.form_id;
+  const leadgenId = stringifyMetaId(value.leadgen_id);
+  const pageId = stringifyMetaId(value.page_id);
+  const formId = stringifyMetaId(value.form_id);
   const createdTime = value.created_time;
 
-  if (
-    typeof leadgenId !== "string" ||
-    typeof pageId !== "string" ||
-    typeof formId !== "string"
-  ) {
+  if (!leadgenId || !pageId || !formId) {
     return null;
   }
 
@@ -46,6 +42,16 @@ export function parseLeadgenWebhookValue(
         ? createdTime
         : Number(createdTime) || Date.now() / 1000,
   };
+}
+
+function stringifyMetaId(value: unknown): string | null {
+  if (typeof value === "string" && value.trim()) {
+    return value.trim();
+  }
+  if (typeof value === "number" && Number.isFinite(value)) {
+    return String(value);
+  }
+  return null;
 }
 
 export async function fetchMetaLeadgenDetails(

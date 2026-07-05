@@ -78,11 +78,15 @@ export async function POST(request: Request) {
         if (change?.field === "leadgen") {
           const value = change?.value;
           if (value && typeof value === "object") {
-            const ok = await processMetaLeadgenEvent(
-              supabase,
-              value as Record<string, unknown>
-            );
-            if (ok) leadgenCount += 1;
+            try {
+              const ok = await processMetaLeadgenEvent(
+                supabase,
+                value as Record<string, unknown>
+              );
+              if (ok) leadgenCount += 1;
+            } catch (error) {
+              console.error("WhatsApp webhook: leadgen processing failed", error);
+            }
           }
           continue;
         }

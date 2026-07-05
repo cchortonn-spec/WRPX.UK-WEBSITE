@@ -54,16 +54,33 @@ export async function POST(request: Request) {
         const value = change?.value;
         if (!value || typeof value !== "object") continue;
 
-        const ok = await processMetaLeadgenEvent(
-          supabase,
-          value as Record<string, unknown>
-        );
-        if (ok) processed += 1;
+        try {
+          const ok = await processMetaLeadgenEvent(
+            supabase,
+            value as Record<string, unknown>
+          );
+          if (ok) {
+            processed += 1;
+          } else {
+            console.warn(
+              "Meta leadgen webhook: could not parse leadgen payload",
+              JSON.stringify(value)
+            );
+          }
+        } catch (error) {
+          console.error(
+            "Meta leadgen webhook: failed to process lead",
+            error,
+            JSON.stringify(value)
+          );
+        }
       }
     }
 
     if (processed > 0) {
       console.info(`Meta leadgen webhook: processed ${processed} lead(s)`);
+    } else if (entries.length > 0) {
+      console.info("Meta leadgen webhook: received payload but no leads processed");
     }
   } catch (error) {
     console.error("Meta leadgen webhook processing error:", error);
