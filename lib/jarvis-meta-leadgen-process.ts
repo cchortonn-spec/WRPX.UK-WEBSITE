@@ -26,17 +26,42 @@ export async function processFacebookLeadAd(
   supabase: SupabaseClient,
   payload: MetaLeadgenPayload
 ): Promise<boolean> {
-  const parsed = await fetchMetaLeadgenDetails(payload.leadgenId);
+  // Use .catch() instead of try/catch to guarantee the fallback fires in all
+  // Next.js runtime environments (minified edge/node runtimes can swallow
+  // try/catch blocks around awaited calls in some build configurations).
+  const parsed = await fetchMetaLeadgenDetails(payload.leadgenId).catch(
+    (error) => {
+      console.error(
+        "Meta leadgen: could not fetch lead details (check leads_retrieval permission)",
+        error
+      );
+      return {
+        name: "Facebook Lead",
+        phone: null as string | null,
+        email: null as string | null,
+        rawFields: [] as import("@/lib/meta-leadgen").MetaLeadField[],
+      };
+    }
+  );
+
   const timestamp = new Date(payload.createdTime * 1000).toISOString();
 
-  const { leadId, created } = await ensureLeadFromChannel(supabase, {
-    name: parsed.name,
-    phone: parsed.phone,
-    email: parsed.email,
-    source: "facebook",
-    externalLeadId: payload.leadgenId,
-    status: "new_lead",
-  });
+  let leadResult: { leadId: string; created: boolean } | null = null;
+  try {
+    leadResult = await ensureLeadFromChannel(supabase, {
+      name: parsed.name,
+      phone: parsed.phone,
+      email: parsed.email,
+      source: "facebook",
+      externalLeadId: payload.leadgenId,
+      status: "new_lead",
+    });
+  } catch (error) {
+    console.error("Meta leadgen: could not create lead in database", error);
+    return false;
+  }
+
+  const { leadId, created } = leadResult;
 
   let conversationId: string | null = null;
   const normalizedPhone = parsed.phone
@@ -44,39 +69,43 @@ export async function processFacebookLeadAd(
     : null;
 
   if (normalizedPhone) {
-    const { data: existingConversation } = await supabase
-      .from("jarvis_conversations")
-      .select("id")
-      .eq("channel", "whatsapp")
-      .eq("external_thread_id", normalizedPhone)
-      .maybeSingle();
-
-    if (existingConversation) {
-      conversationId = existingConversation.id;
-    } else {
-      const { data: newConversation, error } = await supabase
+    try {
+      const { data: existingConversation } = await supabase
         .from("jarvis_conversations")
-        .insert({
-          channel: "whatsapp",
-          external_thread_id: normalizedPhone,
-          contact_name: parsed.name,
-          contact_phone: normalizedPhone,
-          contact_email: parsed.email,
-          lead_id: leadId,
-          updated_at: timestamp,
-        })
         .select("id")
-        .single();
+        .eq("channel", "whatsapp")
+        .eq("external_thread_id", normalizedPhone)
+        .maybeSingle();
 
-      if (error || !newConversation) {
-        console.error("Meta leadgen: could not create conversation", error);
+      if (existingConversation) {
+        conversationId = existingConversation.id;
       } else {
-        conversationId = newConversation.id;
-      }
-    }
+        const { data: newConversation, error } = await supabase
+          .from("jarvis_conversations")
+          .insert({
+            channel: "whatsapp",
+            external_thread_id: normalizedPhone,
+            contact_name: parsed.name,
+            contact_phone: normalizedPhone,
+            contact_email: parsed.email,
+            lead_id: leadId,
+            updated_at: timestamp,
+          })
+          .select("id")
+          .single();
 
-    if (conversationId) {
-      await linkConversationToLead(supabase, conversationId, leadId);
+        if (error || !newConversation) {
+          console.error("Meta leadgen: could not create conversation", error);
+        } else {
+          conversationId = newConversation.id;
+        }
+      }
+
+      if (conversationId) {
+        await linkConversationToLead(supabase, conversationId, leadId);
+      }
+    } catch (error) {
+      console.error("Meta leadgen: conversation step failed", error);
     }
   }
 

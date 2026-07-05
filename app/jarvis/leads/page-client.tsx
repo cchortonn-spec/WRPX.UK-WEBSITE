@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
+import { FacebookLeadSetupPanel } from "@/components/jarvis/FacebookLeadSetupPanel";
 import { LeadDrawer } from "@/components/jarvis/LeadDrawer";
 import { LeadPipeline } from "@/components/jarvis/LeadPipeline";
 import { MobileQuickAdd } from "@/components/jarvis/MobileQuickAdd";
@@ -162,7 +163,10 @@ export default function JarvisLeadsClient() {
           </div>
 
           {leads.length === 0 ? (
-            <p className="jarvis-empty">No leads yet. Add your first lead to get started.</p>
+            <div className="jarvis-empty-stack">
+              <FacebookLeadSetupPanel />
+              <p className="jarvis-empty">No leads yet. Add your first lead to get started.</p>
+            </div>
           ) : (
             <>
               <div className="jarvis-table-wrap jarvis-desktop-only">

@@ -3100,9 +3100,45 @@ a[href^="tel"]:hover {
   margin-top: 0.35rem;
 }
 
-.jarvis-thread-template-row .jarvis-select {
+.jarvis-setup-panel {
+  margin: 1rem 1.25rem 0;
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--jarvis-border);
+  border-radius: var(--jarvis-radius);
+  background: var(--jarvis-surface);
+}
+
+.jarvis-setup-panel-success {
+  border-color: var(--jarvis-accent);
+}
+
+.jarvis-setup-panel-title {
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+}
+
+.jarvis-setup-steps {
+  margin: 0.75rem 0 0.75rem 1.25rem;
+  color: var(--jarvis-muted);
+}
+
+.jarvis-setup-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  margin-top: 0.75rem;
+}
+
+.jarvis-setup-row .jarvis-input {
   flex: 1;
   min-width: 12rem;
+}
+
+.jarvis-empty-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
 }
 
 .jarvis-thread-input {
