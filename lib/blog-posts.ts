@@ -72,6 +72,13 @@ export const blogPosts = [
       "Two-tone kitchens, marble islands, bold colour choices and woodgrain finishes. Popular kitchen island wrap ideas for 2026 with costs and advice.",
     date: "2026-07-04",
   },
+  {
+    slug: "how-to-brief-an-installation-subcontractor",
+    title: "How to Brief an Installation Subcontractor — A Guide for Sign Companies and Print Firms",
+    description:
+      "What to include in a brief when subcontracting vinyl installation — material spec, site conditions, white-label requirements, photo documentation and snagging procedure.",
+    date: "2026-07-05",
+  },
 ] as const;
 
 export type BlogSlug = (typeof blogPosts)[number]["slug"];

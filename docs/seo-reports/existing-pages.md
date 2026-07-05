@@ -70,6 +70,14 @@ Cross-reference slug + service + region against the lists below. If a match exis
 | `/sign-company-installation-partner/` | Sign company & print house installation partner |
 | `/sheffield-nottingham-corridor-installation/` | M1 corridor combined geographic page |
 
+### New B2B Pages (added 2026-07-05)
+
+| Slug | Title / Purpose |
+|---|---|
+| `/subcontract-vinyl-installation-yorkshire/` | Yorkshire-wide subcontract hub — top of funnel aggregation page |
+| `/subcontract-vinyl-installer-sheffield/` | Sheffield-specific subcontract/partner page |
+| `/subcontract-vinyl-installer-doncaster/` | Doncaster-specific subcontract/partner page |
+
 ---
 
 ## Window Film Pages
@@ -108,6 +116,7 @@ Cross-reference slug + service + region against the lists below. If a match exis
 | `/blog/kitchen-wrapping-ideas-2026/` | |
 | `/blog/commercial-vinyl-installer-background-matters/` | |
 | `/blog/window-graphics-wall-wraps-floor-vinyls-commercial-guide/` | |
+| `/blog/how-to-brief-an-installation-subcontractor/` | B2B educational — briefing guide for sign/print companies (added 2026-07-05) |
 
 ---
 
@@ -129,4 +138,4 @@ Cross-reference slug + service + region against the lists below. If a match exis
 
 ---
 
-_Last updated by automation run on 2026-07-04_
+_Last updated by automation run on 2026-07-05_

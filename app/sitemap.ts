@@ -44,6 +44,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "vehicle-wrap-installation",
     "sign-company-installation-partner",
     "sheffield-nottingham-corridor-installation",
+    "subcontract-vinyl-installation-yorkshire",
+    "subcontract-vinyl-installer-sheffield",
+    "subcontract-vinyl-installer-doncaster",
   ];
   const windowFilm = [
     "window-film",
