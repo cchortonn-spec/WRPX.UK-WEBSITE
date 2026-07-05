@@ -4,6 +4,7 @@ import {
   linkConversationToLead,
   touchLeadFromInboundMessage,
 } from "@/lib/jarvis-lead-from-channel";
+import { processMetaLeadgenEvent } from "@/lib/jarvis-meta-leadgen-process";
 import { getSupabaseAdmin } from "@/lib/supabase";
 
 export const runtime = "nodejs";
@@ -67,11 +68,25 @@ export async function POST(request: Request) {
     const entries = payload?.entry ?? [];
     let inboundCount = 0;
     let statusCount = 0;
+    let leadgenCount = 0;
 
     for (const entry of entries) {
       const changes = entry?.changes ?? [];
 
       for (const change of changes) {
+        // Facebook Lead Ads — same callback URL as WhatsApp when Meta only allows one webhook
+        if (change?.field === "leadgen") {
+          const value = change?.value;
+          if (value && typeof value === "object") {
+            const ok = await processMetaLeadgenEvent(
+              supabase,
+              value as Record<string, unknown>
+            );
+            if (ok) leadgenCount += 1;
+          }
+          continue;
+        }
+
         if (change?.field !== "messages") continue;
 
         const value = change?.value;
@@ -93,9 +108,9 @@ export async function POST(request: Request) {
       }
     }
 
-    if (inboundCount > 0 || statusCount > 0) {
+    if (inboundCount > 0 || statusCount > 0 || leadgenCount > 0) {
       console.info(
-        `WhatsApp webhook: processed ${inboundCount} inbound message(s), ${statusCount} status update(s)`
+        `WhatsApp webhook: processed ${inboundCount} inbound message(s), ${statusCount} status update(s), ${leadgenCount} leadgen event(s)`
       );
     }
   } catch (error) {
