@@ -1,6 +1,4 @@
 import { createHmac } from "crypto";
-import { NextResponse } from "next/server";
-import { normalizeWhatsAppPhone } from "@/lib/whatsapp-cloud";
 import { getSupabaseAdmin } from "@/lib/supabase";
 
 export const runtime = "nodejs";
@@ -62,6 +60,8 @@ export async function POST(request: Request) {
 
     // Meta wraps everything in entry[].changes[]
     const entries = payload?.entry ?? [];
+    let inboundCount = 0;
+    let statusCount = 0;
 
     for (const entry of entries) {
       const changes = entry?.changes ?? [];
@@ -75,15 +75,23 @@ export async function POST(request: Request) {
         // ── Inbound text/media messages ──────────────────────────────────
         const messages: WebhookMessage[] = value?.messages ?? [];
         for (const msg of messages) {
-          await handleInboundMessage(supabase, msg, value);
+          const saved = await handleInboundMessage(supabase, msg, value);
+          if (saved) inboundCount += 1;
         }
 
         // ── Delivery / read status receipts ──────────────────────────────
         const statuses: WebhookStatus[] = value?.statuses ?? [];
         for (const statusUpdate of statuses) {
           await handleStatusUpdate(supabase, statusUpdate);
+          statusCount += 1;
         }
       }
+    }
+
+    if (inboundCount > 0 || statusCount > 0) {
+      console.info(
+        `WhatsApp webhook: processed ${inboundCount} inbound message(s), ${statusCount} status update(s)`
+      );
     }
   } catch (error) {
     // Log but always return 200 so Meta doesn't retry endlessly
@@ -120,7 +128,7 @@ async function handleInboundMessage(
   supabase: SupabaseClient,
   msg: WebhookMessage,
   value: Record<string, unknown>
-) {
+): Promise<boolean> {
   const fromPhone = msg.from; // already in international format e.g. 447398395417
   const externalId = msg.id;
   const timestamp = new Date(Number(msg.timestamp) * 1000).toISOString();
@@ -150,7 +158,7 @@ async function handleInboundMessage(
     .eq("external_message_id", externalId)
     .maybeSingle();
 
-  if (existing) return;
+  if (existing) return false;
 
   // Find conversation by sender phone number
   let { data: conversation } = await supabase
@@ -184,7 +192,7 @@ async function handleInboundMessage(
         "WhatsApp webhook: could not create conversation",
         createError
       );
-      return;
+      return false;
     }
 
     conversation = newConv;
@@ -202,7 +210,7 @@ async function handleInboundMessage(
   }
 
   // Save the inbound message
-  await supabase.from("jarvis_messages").insert({
+  const { error: insertError } = await supabase.from("jarvis_messages").insert({
     conversation_id: conversation.id,
     direction: "inbound",
     body,
@@ -212,6 +220,16 @@ async function handleInboundMessage(
     external_message_id: externalId,
     created_at: timestamp,
   });
+
+  if (insertError) {
+    console.error("WhatsApp webhook: could not save message", insertError);
+    return false;
+  }
+
+  console.info(
+    `WhatsApp webhook: saved inbound message ${externalId} from ${fromPhone}`
+  );
+  return true;
 }
 
 // ─── Status update handler ───────────────────────────────────────────────────
