@@ -86,6 +86,14 @@ Cross-reference slug + service + region against the lists below. If a match exis
 | `/subcontract-vinyl-installer-sheffield/` | Sheffield-specific subcontract/partner page |
 | `/subcontract-vinyl-installer-doncaster/` | Doncaster-specific subcontract/partner page |
 
+### B2B Pages (added 2026-07-06)
+
+| Slug | Title / Purpose |
+|---|---|
+| `/subcontract-vinyl-installer-leeds/` | Leeds-specific B2B subcontract installer |
+| `/subcontract-vinyl-installer-rotherham/` | Rotherham B2B subcontract installer |
+| `/fleet-wrap-installation-yorkshire/` | Fleet wrap installation (fleet managers + leasing companies) |
+
 ---
 
 ## Window Film Pages
@@ -126,8 +134,13 @@ Cross-reference slug + service + region against the lists below. If a match exis
 | `/blog/window-graphics-wall-wraps-floor-vinyls-commercial-guide/` | |
 | `/blog/kitchen-wrapping-vs-kitchen-spraying/` | |
 | `/blog/kitchen-island-wrapping-ideas/` | |
+| `/blog/how-long-does-kitchen-wrapping-last/` | |
+| `/blog/wardrobe-vinyl-wrap-guide/` | |
+| `/blog/bathroom-cabinet-vinyl-wrap/` | |
+| `/blog/kitchen-wrapping-near-me-guide/` | |
 | `/blog/why-sign-companies-use-subcontract-installers/` | B2B content — sign company subcontract guide |
 | `/blog/how-to-brief-an-installation-subcontractor/` | B2B educational — briefing guide for sign/print companies (added 2026-07-05) |
+| `/blog/subcontract-installation-checklist-for-sign-companies/` | **Added 2026-07-06** |
 
 ---
 
@@ -149,4 +162,4 @@ Cross-reference slug + service + region against the lists below. If a match exis
 
 ---
 
-_Last updated by automation run on 2026-07-05_
+_Last updated by automation run on 2026-07-06_
