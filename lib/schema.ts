@@ -67,6 +67,30 @@ export function getLocalBusinessSchema() {
           "@type": "Offer",
           itemOffered: {
             "@type": "Service",
+            name: "Kitchen Door Wrapping",
+            description: "Kitchen door and drawer front vinyl wrapping in any colour or finish.",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Bathroom Cabinet Wrapping",
+            description: "Bathroom vanity and cabinet vinyl wrapping with moisture-resistant film.",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Bedroom Wardrobe Wrapping",
+            description: "Bedroom wardrobe and furniture vinyl wrapping in any finish.",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
             name: "Furniture & Bedroom Wrapping",
             description: "Wardrobes, bedroom and bathroom units wrapped in premium vinyl.",
           },
@@ -97,7 +121,16 @@ export function getLocalBusinessSchema() {
         },
       ],
     },
-    areaServed: siteConfig.areaServed,
+    areaServed: [
+      ...siteConfig.areaServed,
+      "Wakefield",
+      "York",
+      "Bradford",
+      "Nottingham",
+      "Manchester",
+      "West Yorkshire",
+      "Greater Manchester",
+    ],
     address: {
       "@type": "PostalAddress",
       addressRegion: "South Yorkshire",
@@ -108,7 +141,6 @@ export function getLocalBusinessSchema() {
       latitude: "53.3811",
       longitude: "-1.4701",
     },
-    // Update ratingValue and reviewCount when you have verified Google reviews
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: "5",

@@ -1,6 +1,7 @@
 import { MetadataRoute } from "next";
 import { siteConfig } from "@/lib/site-config";
 import { blogPosts } from "@/lib/blog-posts";
+import { getAllPageCombinations } from "@/lib/programmatic-pages";
 
 const base = siteConfig.domain;
 
@@ -10,6 +11,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "kitchen-wrapping",
     "kitchen-wrapping-quote",
     "kitchen-wrapping-cost",
+    "kitchen-door-wrapping",
+    "bathroom-cabinet-wrapping",
+    "bedroom-wardrobe-wrapping",
     "worktop-wrapping",
     "furniture-wrapping",
     "architectural-vinyl-film",
@@ -23,9 +27,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "privacy",
     "white-label-graphics-installation",
   ];
-  const locations = siteConfig.areas.map((city) =>
-    `kitchen-wrapping-${city.toLowerCase()}`
-  );
+  const locations = [
+    ...siteConfig.areas.map((city) => `kitchen-wrapping-${city.toLowerCase()}`),
+    "kitchen-wrapping-wakefield",
+    "kitchen-wrapping-york",
+    "kitchen-wrapping-nottingham",
+    "kitchen-wrapping-bradford",
+    "kitchen-wrapping-manchester",
+  ];
   const commercialLocations = [
     "commercial-installation",
     "commercial/window-graphics",
@@ -63,6 +72,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "window-film/window-film-leeds",
     "window-film/window-film-chesterfield",
     "window-film/window-film-huddersfield",
+    "window-film/window-film-york",
+    "window-film/window-film-nottingham",
+    "window-film/window-film-wakefield",
+    "window-film/window-film-bradford",
+    "window-film/window-film-manchester",
   ];
   const newServicePages = [
     "kitchen-island-wrapping",
@@ -110,10 +124,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...blogPaths,
   ];
 
+  const highPriorityPaths = new Set([
+    "kitchen-wrapping",
+    "kitchen-wrapping-cost",
+    "kitchen-door-wrapping",
+    "window-film",
+    "worktop-wrapping",
+    "bathroom-cabinet-wrapping",
+    "bedroom-wardrobe-wrapping",
+  ]);
+
   return paths.map((path) => ({
     url: path ? `${base}/${path}/` : `${base}/`,
     lastModified: new Date(),
     changeFrequency: "monthly" as const,
-    priority: path === "" ? 1 : path === "kitchen-wrapping" || path === "kitchen-wrapping-cost" || path === "window-film" ? 0.9 : path === "blog" ? 0.85 : 0.8,
+    priority: path === "" ? 1
+      : highPriorityPaths.has(path) ? 0.9
+      : path === "blog" ? 0.85
+      : path.startsWith("blog/") ? 0.75
+      : path.startsWith("locations/") ? 0.7
+      : 0.8,
   }));
 }
