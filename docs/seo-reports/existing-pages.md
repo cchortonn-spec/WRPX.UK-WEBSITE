@@ -70,6 +70,25 @@ Cross-reference slug + service + region against the lists below. If a match exis
 | `/sign-company-installation-partner/` | Sign company & print house installation partner |
 | `/sheffield-nottingham-corridor-installation/` | M1 corridor combined geographic page |
 
+### B2B Pages (PRs open — not yet in main as of 2026-07-06)
+
+| Slug | Branch | PR |
+|---|---|---|
+| `/print-company-installation-partner/` | cursor/wrpx-daily-seo-automation-750c | PR #5 |
+| `/marketing-agency-installation-partner/` | cursor/wrpx-daily-seo-automation-750c | PR #5 |
+| `/multi-site-rollout-installation/` | cursor/wrpx-daily-seo-automation-750c | PR #5 |
+| `/subcontract-vinyl-installation-yorkshire/` | cursor/wrpx-daily-seo-automation-ae3d | PR #6 |
+| `/subcontract-vinyl-installer-sheffield/` | cursor/wrpx-daily-seo-automation-ae3d | PR #6 |
+| `/subcontract-vinyl-installer-doncaster/` | cursor/wrpx-daily-seo-automation-ae3d | PR #6 |
+
+### B2B Pages (added 2026-07-06 — this run)
+
+| Slug | Title / Purpose |
+|---|---|
+| `/subcontract-vinyl-installer-leeds/` | Leeds-specific B2B subcontract installer |
+| `/subcontract-vinyl-installer-rotherham/` | Rotherham B2B subcontract installer |
+| `/fleet-wrap-installation-yorkshire/` | Fleet wrap installation (fleet managers + leasing companies) |
+
 ---
 
 ## Window Film Pages
@@ -108,6 +127,15 @@ Cross-reference slug + service + region against the lists below. If a match exis
 | `/blog/kitchen-wrapping-ideas-2026/` | |
 | `/blog/commercial-vinyl-installer-background-matters/` | |
 | `/blog/window-graphics-wall-wraps-floor-vinyls-commercial-guide/` | |
+| `/blog/kitchen-wrapping-vs-kitchen-spraying/` | |
+| `/blog/kitchen-island-wrapping-ideas/` | |
+| `/blog/how-long-does-kitchen-wrapping-last/` | |
+| `/blog/wardrobe-vinyl-wrap-guide/` | |
+| `/blog/bathroom-cabinet-vinyl-wrap/` | |
+| `/blog/kitchen-wrapping-near-me-guide/` | |
+| `/blog/why-sign-companies-use-subcontract-installers/` | PR #5 (open) |
+| `/blog/how-to-brief-an-installation-subcontractor/` | PR #6 (open) |
+| `/blog/subcontract-installation-checklist-for-sign-companies/` | **Added 2026-07-06** |
 
 ---
 
@@ -129,4 +157,4 @@ Cross-reference slug + service + region against the lists below. If a match exis
 
 ---
 
-_Last updated by automation run on 2026-07-04_
+_Last updated by automation run on 2026-07-06_

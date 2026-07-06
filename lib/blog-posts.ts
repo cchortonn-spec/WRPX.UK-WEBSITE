@@ -100,6 +100,13 @@ export const blogPosts = [
       "How to find a reliable local kitchen wrapping installer, what questions to ask, and red flags to watch for.",
     date: "2026-07-01",
   },
+  {
+    slug: "subcontract-installation-checklist-for-sign-companies",
+    title: "Subcontract Installation Checklist for Sign Companies — What to Ask Before You Book",
+    description:
+      "Seven questions every sign company should ask before booking a subcontract vinyl installer. Covers materials, documentation, white-label, surface preparation and what happens when things go wrong.",
+    date: "2026-07-06",
+  },
 ] as const;
 
 export type BlogSlug = (typeof blogPosts)[number]["slug"];
