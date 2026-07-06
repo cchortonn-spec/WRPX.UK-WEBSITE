@@ -121,6 +121,13 @@ export const blogPosts = [
       "Why South Yorkshire landlords choose vinyl kitchen wrapping between tenancies. Cost, speed, durability and which finishes work best for rental kitchens.",
     date: "2026-07-03",
   },
+  {
+    slug: "why-sign-companies-use-subcontract-installers",
+    title: "Why Sign Companies Use Subcontract Installers — and How to Choose One",
+    description:
+      "Most sign companies subcontract installation at some point. Here's why the model works, what goes wrong when the wrong installer is chosen, and what to look for in a reliable subcontract installation partner.",
+    date: "2026-07-04",
+  },
 ] as const;
 
 export type BlogSlug = (typeof blogPosts)[number]["slug"];
