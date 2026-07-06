@@ -66,6 +66,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "print-company-installation-partner",
     "marketing-agency-installation-partner",
     "multi-site-rollout-installation",
+    "subcontract-vinyl-installation-yorkshire",
+    "subcontract-vinyl-installer-sheffield",
+    "subcontract-vinyl-installer-doncaster",
   ];
   const windowFilm = [
     "window-film",

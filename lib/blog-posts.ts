@@ -128,6 +128,13 @@ export const blogPosts = [
       "Most sign companies subcontract installation at some point. Here's why the model works, what goes wrong when the wrong installer is chosen, and what to look for in a reliable subcontract installation partner.",
     date: "2026-07-04",
   },
+  {
+    slug: "how-to-brief-an-installation-subcontractor",
+    title: "How to Brief an Installation Subcontractor — A Guide for Sign Companies and Print Firms",
+    description:
+      "What to include in a brief when subcontracting vinyl installation — material spec, site conditions, white-label requirements, photo documentation and snagging procedure.",
+    date: "2026-07-05",
+  },
 ] as const;
 
 export type BlogSlug = (typeof blogPosts)[number]["slug"];

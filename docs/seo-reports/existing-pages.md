@@ -78,6 +78,14 @@ Cross-reference slug + service + region against the lists below. If a match exis
 | `/marketing-agency-installation-partner/` | White-label installation partner for marketing agencies |
 | `/multi-site-rollout-installation/` | Multi-site rollout installation for brand campaigns & retail programmes |
 
+### New B2B Pages (added 2026-07-05)
+
+| Slug | Title / Purpose |
+|---|---|
+| `/subcontract-vinyl-installation-yorkshire/` | Yorkshire-wide subcontract hub — top of funnel aggregation page |
+| `/subcontract-vinyl-installer-sheffield/` | Sheffield-specific subcontract/partner page |
+| `/subcontract-vinyl-installer-doncaster/` | Doncaster-specific subcontract/partner page |
+
 ---
 
 ## Window Film Pages
@@ -119,6 +127,7 @@ Cross-reference slug + service + region against the lists below. If a match exis
 | `/blog/kitchen-wrapping-vs-kitchen-spraying/` | |
 | `/blog/kitchen-island-wrapping-ideas/` | |
 | `/blog/why-sign-companies-use-subcontract-installers/` | B2B content — sign company subcontract guide |
+| `/blog/how-to-brief-an-installation-subcontractor/` | B2B educational — briefing guide for sign/print companies (added 2026-07-05) |
 
 ---
 
@@ -140,4 +149,4 @@ Cross-reference slug + service + region against the lists below. If a match exis
 
 ---
 
-_Last updated by automation run on 2026-07-04 (Run 2)_
+_Last updated by automation run on 2026-07-05_
