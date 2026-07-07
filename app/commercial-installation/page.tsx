@@ -482,6 +482,49 @@ export default function CommercialInstallationPage() {
         </div>
       </section>
 
+      {/* B2B resource blog links */}
+      <section className="border-y border-border bg-card px-4 py-12">
+        <div className="container mx-auto max-w-4xl">
+          <h2 className="text-xl font-semibold text-foreground">
+            Guides for sign companies, print firms &amp; agencies
+          </h2>
+          <p className="mt-3 text-muted leading-relaxed">
+            Planning a subcontract arrangement or a multi-site rollout? These guides cover the key
+            decisions — from choosing an installation partner to briefing them correctly.
+          </p>
+          <div className="mt-6 grid gap-4 sm:grid-cols-2">
+            <Link
+              href="/blog/why-sign-companies-use-subcontract-installers/"
+              className="card-float block bg-background p-5 hover:border-accent/60"
+            >
+              <p className="font-semibold text-foreground">Why sign companies use subcontract installers</p>
+              <p className="mt-1 text-sm text-muted">The model explained — and how to choose the right partner.</p>
+            </Link>
+            <Link
+              href="/blog/how-to-brief-an-installation-subcontractor/"
+              className="card-float block bg-background p-5 hover:border-accent/60"
+            >
+              <p className="font-semibold text-foreground">How to brief an installation subcontractor</p>
+              <p className="mt-1 text-sm text-muted">What to include in the brief so nothing is left to assumption.</p>
+            </Link>
+            <Link
+              href="/blog/subcontract-installation-checklist-for-sign-companies/"
+              className="card-float block bg-background p-5 hover:border-accent/60"
+            >
+              <p className="font-semibold text-foreground">Subcontract installation checklist</p>
+              <p className="mt-1 text-sm text-muted">Seven questions to ask before you put an installer on a job.</p>
+            </Link>
+            <Link
+              href="/blog/multi-site-rollout-planning-guide-for-agencies/"
+              className="card-float block bg-background p-5 hover:border-accent/60"
+            >
+              <p className="font-semibold text-foreground">Multi-site rollout planning guide</p>
+              <p className="mt-1 text-sm text-muted">Survey, scheduling, QA and snagging — how to run a programme without losing control.</p>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Final CTA */}
       <section className="px-4 py-20">
         <div className="container mx-auto max-w-3xl">

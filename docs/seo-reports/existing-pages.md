@@ -94,6 +94,13 @@ Cross-reference slug + service + region against the lists below. If a match exis
 | `/subcontract-vinyl-installer-rotherham/` | Rotherham B2B subcontract installer |
 | `/fleet-wrap-installation-yorkshire/` | Fleet wrap installation (fleet managers + leasing companies) |
 
+### B2B Pages (added 2026-07-07)
+
+| Slug | Title / Purpose |
+|---|---|
+| `/subcontract-vinyl-installer-barnsley/` | Barnsley-specific B2B subcontract installer — completes core South Yorkshire city set |
+| `/subcontract-vinyl-installer-nottingham/` | Nottingham standalone subcontract page — M1 corridor city coverage |
+
 ---
 
 ## Window Film Pages
@@ -141,6 +148,7 @@ Cross-reference slug + service + region against the lists below. If a match exis
 | `/blog/why-sign-companies-use-subcontract-installers/` | B2B content — sign company subcontract guide |
 | `/blog/how-to-brief-an-installation-subcontractor/` | B2B educational — briefing guide for sign/print companies (added 2026-07-05) |
 | `/blog/subcontract-installation-checklist-for-sign-companies/` | **Added 2026-07-06** |
+| `/blog/multi-site-rollout-planning-guide-for-agencies/` | **Added 2026-07-07** — multi-site rollout planning for agencies and brand managers |
 
 ---
 
@@ -162,4 +170,4 @@ Cross-reference slug + service + region against the lists below. If a match exis
 
 ---
 
-_Last updated by automation run on 2026-07-06_
+_Last updated by automation run on 2026-07-07_
