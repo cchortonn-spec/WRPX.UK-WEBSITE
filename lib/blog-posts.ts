@@ -142,6 +142,13 @@ export const blogPosts = [
       "Seven questions every sign company should ask before booking a subcontract vinyl installer. Covers materials, documentation, white-label, surface preparation and what happens when things go wrong.",
     date: "2026-07-06",
   },
+  {
+    slug: "multi-site-rollout-planning-guide-for-agencies",
+    title: "Multi-Site Rollout Planning Guide for Agencies — How to Manage a Graphics Installation Programme",
+    description:
+      "How to plan and manage a multi-site vinyl graphics rollout — site surveys, scheduling, subcontractor coordination, QA documentation and what can go wrong. A practical guide for marketing agencies and retail brand managers.",
+    date: "2026-07-07",
+  },
 ] as const;
 
 export type BlogSlug = (typeof blogPosts)[number]["slug"];

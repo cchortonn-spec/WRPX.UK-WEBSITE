@@ -71,6 +71,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "subcontract-vinyl-installer-doncaster",
     "subcontract-vinyl-installer-leeds",
     "subcontract-vinyl-installer-rotherham",
+    "subcontract-vinyl-installer-barnsley",
+    "subcontract-vinyl-installer-nottingham",
     "fleet-wrap-installation-yorkshire",
   ];
   const windowFilm = [
