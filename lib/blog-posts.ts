@@ -149,6 +149,13 @@ export const blogPosts = [
       "How to plan and manage a multi-site vinyl graphics rollout — site surveys, scheduling, subcontractor coordination, QA documentation and what can go wrong. A practical guide for marketing agencies and retail brand managers.",
     date: "2026-07-07",
   },
+  {
+    slug: "how-to-brief-a-fleet-wrap-installation",
+    title: "How to Brief a Fleet Wrap Installation — A Guide for Fleet Managers & Leasing Companies",
+    description:
+      "What fleet managers and leasing companies need to include in a fleet wrap installation brief — vehicle specs, scheduling, white-label requirements, handover documentation and what goes wrong when the brief is incomplete.",
+    date: "2026-07-09",
+  },
 ] as const;
 
 export type BlogSlug = (typeof blogPosts)[number]["slug"];
