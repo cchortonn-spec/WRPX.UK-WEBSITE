@@ -100,6 +100,9 @@ export default function CommercialInstallationYorkPage() {
             arrangement with consistent standards across all sites.
           </p>
           <div className="mt-6 flex flex-wrap gap-3 text-sm">
+            <Link href="/subcontract-vinyl-installer-york/" className="text-accent hover:underline">
+              York subcontract installation
+            </Link>
             <Link href="/subcontract-vinyl-installation-yorkshire/" className="text-accent hover:underline">
               Yorkshire-wide subcontract hub
             </Link>

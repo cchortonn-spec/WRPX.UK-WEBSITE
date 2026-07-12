@@ -121,13 +121,20 @@ Cross-reference slug + service + region against the lists below. If a match exis
 | `/subcontract-vinyl-installer-huddersfield/` | Huddersfield B2B subcontract installer — West Yorkshire / M62 corridor city page |
 | `/window-graphics-installation-yorkshire/` | Yorkshire window graphics subcontract service page — distinct from shop-front-graphics-installation |
 
-### B2B Pages (added 2026-07-12)
+### B2B Pages (added 2026-07-12, Run 8)
 
 | Slug | Title / Purpose |
 |---|---|
 | `/subcontract-vinyl-installer-chesterfield/` | Chesterfield B2B subcontract installer — M1 corridor, SY-adjacent, Sheffield–Derbyshire bridge |
 | `/subcontract-vinyl-installer-bradford/` | Bradford B2B subcontract installer — West Yorkshire gap (Leeds + Bradford + Huddersfield triangle) |
 | `/wall-wrap-installation-yorkshire/` | Standalone B2B wall wrap installation service page for Yorkshire — distinct from /commercial/wall-wraps/ |
+
+### B2B Pages (added 2026-07-12, Run 9)
+
+| Slug | Title / Purpose |
+|---|---|
+| `/subcontract-vinyl-installer-york/` | York B2B subcontract installer — final city in Yorkshire subcontract city set; North Yorkshire coverage |
+| `/floor-vinyl-installation-yorkshire/` | Standalone B2B floor vinyl installation service page — completes trio with wall wrap + window graphics |
 
 ---
 
@@ -178,11 +185,9 @@ Cross-reference slug + service + region against the lists below. If a match exis
 | `/blog/subcontract-installation-checklist-for-sign-companies/` | **Added 2026-07-06** |
 | `/blog/multi-site-rollout-planning-guide-for-agencies/` | **Added 2026-07-07** — multi-site rollout planning for agencies and brand managers |
 | `/blog/protecting-client-relationships-with-subcontract-installers/` | **Added 2026-07-12** — white-label, documentation and quality markers for sign/print buyers |
-
 | `/blog/window-graphics-installation-guide-for-sign-companies/` | **Added 2026-07-08** — sign company guide to subcontracting window graphics installation |
-
-
 | `/blog/how-to-brief-a-fleet-wrap-installation/` | **Added 2026-07-09** — fleet wrap installation briefing guide for fleet managers and leasing companies |
+| `/blog/floor-vinyl-installation-guide-for-sign-companies/` | **Added 2026-07-12** — substrate assessment, anti-slip compliance, briefing guide for sign companies subcontracting floor vinyl installation |
 
 
 ---

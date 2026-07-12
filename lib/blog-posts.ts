@@ -170,6 +170,13 @@ export const blogPosts = [
       "When you subcontract vinyl installation, your installer is representing your business on site. Here's how to choose one who works cleanly behind you — white-label, documentation, what happens when things go wrong.",
     date: "2026-07-12",
   },
+  {
+    slug: "floor-vinyl-installation-guide-for-sign-companies",
+    title: "Floor Vinyl Installation: A Guide for Sign Companies",
+    description:
+      "How sign companies should approach subcontracting floor vinyl installation — substrate assessment, anti-slip compliance, material spec, site logistics and what to look for in a trade installation partner.",
+    date: "2026-07-12",
+  },
 ] as const;
 
 export type BlogSlug = (typeof blogPosts)[number]["slug"];
