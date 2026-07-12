@@ -121,6 +121,13 @@ Cross-reference slug + service + region against the lists below. If a match exis
 | `/subcontract-vinyl-installer-huddersfield/` | Huddersfield B2B subcontract installer — West Yorkshire / M62 corridor city page |
 | `/window-graphics-installation-yorkshire/` | Yorkshire window graphics subcontract service page — distinct from shop-front-graphics-installation |
 
+### B2B Pages (added 2026-07-12)
+
+| Slug | Title / Purpose |
+|---|---|
+| `/subcontract-vinyl-installer-chesterfield/` | Chesterfield B2B subcontract installer — M1 corridor, SY-adjacent, Sheffield–Derbyshire bridge |
+| `/subcontract-vinyl-installer-bradford/` | Bradford B2B subcontract installer — West Yorkshire gap (Leeds + Bradford + Huddersfield triangle) |
+| `/wall-wrap-installation-yorkshire/` | Standalone B2B wall wrap installation service page for Yorkshire — distinct from /commercial/wall-wraps/ |
 
 ---
 
@@ -170,6 +177,7 @@ Cross-reference slug + service + region against the lists below. If a match exis
 | `/blog/how-to-brief-an-installation-subcontractor/` | B2B educational — briefing guide for sign/print companies (added 2026-07-05) |
 | `/blog/subcontract-installation-checklist-for-sign-companies/` | **Added 2026-07-06** |
 | `/blog/multi-site-rollout-planning-guide-for-agencies/` | **Added 2026-07-07** — multi-site rollout planning for agencies and brand managers |
+| `/blog/protecting-client-relationships-with-subcontract-installers/` | **Added 2026-07-12** — white-label, documentation and quality markers for sign/print buyers |
 
 | `/blog/window-graphics-installation-guide-for-sign-companies/` | **Added 2026-07-08** — sign company guide to subcontracting window graphics installation |
 
@@ -198,8 +206,7 @@ Cross-reference slug + service + region against the lists below. If a match exis
 ---
 
 
-_Last updated by automation run on 2026-07-08_
 
 
-_Last updated by automation run on 2026-07-09_
 
+_Last updated by automation run on 2026-07-12_
