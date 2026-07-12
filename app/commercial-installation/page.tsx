@@ -188,6 +188,10 @@ export default function CommercialInstallationPage() {
                 <Link href="/commercial/floor-graphics/" className="text-accent hover:underline">
                   View floor graphics service
                 </Link>
+                {" · "}
+                <Link href="/floor-vinyl-installation-yorkshire/" className="text-accent hover:underline">
+                  Floor vinyl installation Yorkshire (subcontract)
+                </Link>
               </p>
             </div>
 

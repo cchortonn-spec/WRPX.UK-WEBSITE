@@ -101,6 +101,41 @@ Cross-reference slug + service + region against the lists below. If a match exis
 | `/subcontract-vinyl-installer-barnsley/` | Barnsley-specific B2B subcontract installer — completes core South Yorkshire city set |
 | `/subcontract-vinyl-installer-nottingham/` | Nottingham standalone subcontract page — M1 corridor city coverage |
 
+
+### B2B Pages (added 2026-07-08)
+
+| Slug | Title / Purpose |
+|---|---|
+| `/subcontract-vinyl-installer-wakefield/` | Wakefield B2B subcontract installer — West Yorkshire / M1 corridor extension |
+| `/shop-front-graphics-installation/` | Shop front & fascia vinyl installation for sign/print companies — confirmed keyword gap, no local competitor page |
+
+### Technical improvements (2026-07-08)
+- `/commercial-installation-doncaster/` — subcontract partner section added (follows Sheffield/Leeds pattern)
+- `/commercial-installation-rotherham/` — subcontract partner section added (follows Sheffield/Leeds pattern)
+
+
+### B2B Pages (added 2026-07-09)
+
+| Slug | Title / Purpose |
+|---|---|
+| `/subcontract-vinyl-installer-huddersfield/` | Huddersfield B2B subcontract installer — West Yorkshire / M62 corridor city page |
+| `/window-graphics-installation-yorkshire/` | Yorkshire window graphics subcontract service page — distinct from shop-front-graphics-installation |
+
+### B2B Pages (added 2026-07-12, Run 8)
+
+| Slug | Title / Purpose |
+|---|---|
+| `/subcontract-vinyl-installer-chesterfield/` | Chesterfield B2B subcontract installer — M1 corridor, SY-adjacent, Sheffield–Derbyshire bridge |
+| `/subcontract-vinyl-installer-bradford/` | Bradford B2B subcontract installer — West Yorkshire gap (Leeds + Bradford + Huddersfield triangle) |
+| `/wall-wrap-installation-yorkshire/` | Standalone B2B wall wrap installation service page for Yorkshire — distinct from /commercial/wall-wraps/ |
+
+### B2B Pages (added 2026-07-12, Run 9)
+
+| Slug | Title / Purpose |
+|---|---|
+| `/subcontract-vinyl-installer-york/` | York B2B subcontract installer — final city in Yorkshire subcontract city set; North Yorkshire coverage |
+| `/floor-vinyl-installation-yorkshire/` | Standalone B2B floor vinyl installation service page — completes trio with wall wrap + window graphics |
+
 ---
 
 ## Window Film Pages
@@ -149,6 +184,11 @@ Cross-reference slug + service + region against the lists below. If a match exis
 | `/blog/how-to-brief-an-installation-subcontractor/` | B2B educational — briefing guide for sign/print companies (added 2026-07-05) |
 | `/blog/subcontract-installation-checklist-for-sign-companies/` | **Added 2026-07-06** |
 | `/blog/multi-site-rollout-planning-guide-for-agencies/` | **Added 2026-07-07** — multi-site rollout planning for agencies and brand managers |
+| `/blog/protecting-client-relationships-with-subcontract-installers/` | **Added 2026-07-12** — white-label, documentation and quality markers for sign/print buyers |
+| `/blog/window-graphics-installation-guide-for-sign-companies/` | **Added 2026-07-08** — sign company guide to subcontracting window graphics installation |
+| `/blog/how-to-brief-a-fleet-wrap-installation/` | **Added 2026-07-09** — fleet wrap installation briefing guide for fleet managers and leasing companies |
+| `/blog/floor-vinyl-installation-guide-for-sign-companies/` | **Added 2026-07-12** — substrate assessment, anti-slip compliance, briefing guide for sign companies subcontracting floor vinyl installation |
+
 
 ---
 
@@ -170,4 +210,8 @@ Cross-reference slug + service + region against the lists below. If a match exis
 
 ---
 
-_Last updated by automation run on 2026-07-07_
+
+
+
+
+_Last updated by automation run on 2026-07-12_

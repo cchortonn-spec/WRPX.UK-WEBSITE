@@ -149,6 +149,34 @@ export const blogPosts = [
       "How to plan and manage a multi-site vinyl graphics rollout — site surveys, scheduling, subcontractor coordination, QA documentation and what can go wrong. A practical guide for marketing agencies and retail brand managers.",
     date: "2026-07-07",
   },
+  {
+    slug: "window-graphics-installation-guide-for-sign-companies",
+    title: "Window Graphics Installation: A Guide for Sign Companies",
+    description:
+      "How sign companies should approach subcontracting window graphics installation — material prep, site logistics, white-label working and what to look for in a trade installation partner.",
+    date: "2026-07-08",
+  },
+  {
+    slug: "how-to-brief-a-fleet-wrap-installation",
+    title: "How to Brief a Fleet Wrap Installation — A Guide for Fleet Managers & Leasing Companies",
+    description:
+      "What fleet managers and leasing companies need to include in a fleet wrap installation brief — vehicle specs, scheduling, white-label requirements, handover documentation and what goes wrong when the brief is incomplete.",
+    date: "2026-07-09",
+  },
+  {
+    slug: "protecting-client-relationships-with-subcontract-installers",
+    title: "Protecting Your Client Relationships When You Subcontract Installation",
+    description:
+      "When you subcontract vinyl installation, your installer is representing your business on site. Here's how to choose one who works cleanly behind you — white-label, documentation, what happens when things go wrong.",
+    date: "2026-07-12",
+  },
+  {
+    slug: "floor-vinyl-installation-guide-for-sign-companies",
+    title: "Floor Vinyl Installation: A Guide for Sign Companies",
+    description:
+      "How sign companies should approach subcontracting floor vinyl installation — substrate assessment, anti-slip compliance, material spec, site logistics and what to look for in a trade installation partner.",
+    date: "2026-07-12",
+  },
 ] as const;
 
 export type BlogSlug = (typeof blogPosts)[number]["slug"];

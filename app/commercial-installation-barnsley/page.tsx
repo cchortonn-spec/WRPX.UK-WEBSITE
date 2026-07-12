@@ -83,7 +83,37 @@ export default function CommercialInstallationBarnsleyPage() {
         </div>
       </section>
 
-      <section className="px-4 pb-12">
+      <section className="border-y border-border bg-card px-4 py-12">
+        <div className="container mx-auto max-w-3xl">
+          <h2 className="text-xl font-semibold text-foreground">
+            Available as a subcontract installation partner in Barnsley
+          </h2>
+          <p className="mt-4 text-muted leading-relaxed">
+            WRPX is available as a white-label subcontract installer for sign companies, print management
+            firms and marketing agencies with Barnsley jobs to cover. We attend under your instructions,
+            install what you supply and deliver a photo sign-off pack — your client never knows we were
+            involved.
+          </p>
+          <p className="mt-4 text-muted leading-relaxed">
+            Barnsley sits at the northern edge of our South Yorkshire core territory — alongside Sheffield,
+            Rotherham and Doncaster. If your programme covers multiple South Yorkshire cities, WRPX can
+            handle the full area under one subcontract arrangement.
+          </p>
+          <div className="mt-6 flex flex-wrap gap-3 text-sm">
+            <Link href="/subcontract-vinyl-installer-barnsley/" className="text-accent hover:underline">
+              Barnsley subcontract installation detail
+            </Link>
+            <Link href="/sign-company-installation-partner/" className="text-accent hover:underline">
+              Sign company installation partner
+            </Link>
+            <Link href="/white-label-graphics-installation/" className="text-accent hover:underline">
+              White-label installation
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="px-4 pb-12 pt-10">
         <div className="container mx-auto max-w-3xl">
           <div className="card-float p-6">
             <h2 className="text-lg font-semibold text-foreground">More commercial areas</h2>
