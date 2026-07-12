@@ -149,6 +149,13 @@ export const blogPosts = [
       "How to plan and manage a multi-site vinyl graphics rollout — site surveys, scheduling, subcontractor coordination, QA documentation and what can go wrong. A practical guide for marketing agencies and retail brand managers.",
     date: "2026-07-07",
   },
+  {
+    slug: "window-graphics-installation-guide-for-sign-companies",
+    title: "Window Graphics Installation: A Guide for Sign Companies",
+    description:
+      "How sign companies should approach subcontracting window graphics installation — material prep, site logistics, white-label working and what to look for in a trade installation partner.",
+    date: "2026-07-08",
+  },
 ] as const;
 
 export type BlogSlug = (typeof blogPosts)[number]["slug"];

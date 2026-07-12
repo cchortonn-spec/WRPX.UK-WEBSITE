@@ -71,6 +71,37 @@ export default function CommercialInstallationRotherhamPage() {
         </div>
       </section>
 
+      <section className="border-y border-border bg-card px-4 py-12">
+        <div className="container mx-auto max-w-3xl">
+          <h2 className="text-xl font-semibold text-foreground">
+            Available as a subcontract installation partner in Rotherham
+          </h2>
+          <p className="mt-4 text-muted leading-relaxed">
+            WRPX is available as a white-label subcontract installer for sign companies, print management
+            firms and marketing agencies with Rotherham jobs to cover. We attend under your instructions,
+            install what you supply and deliver a photo sign-off pack — your client never knows we were
+            involved.
+          </p>
+          <p className="mt-4 text-muted leading-relaxed">
+            Rotherham is directly adjacent to Sheffield — our home territory — which means same-day or
+            next-day scheduling for Rotherham sites with no additional travel cost. For sign companies
+            managing South Yorkshire programmes covering Sheffield and Rotherham together, one subcontract
+            arrangement covers both.
+          </p>
+          <div className="mt-6 flex flex-wrap gap-3 text-sm">
+            <Link href="/subcontract-vinyl-installer-rotherham/" className="text-accent hover:underline">
+              Rotherham subcontract installation detail
+            </Link>
+            <Link href="/sign-company-installation-partner/" className="text-accent hover:underline">
+              Sign company installation partner
+            </Link>
+            <Link href="/white-label-graphics-installation/" className="text-accent hover:underline">
+              White-label installation
+            </Link>
+          </div>
+        </div>
+      </section>
+
       <section className="px-4 py-12">
         <div className="container mx-auto max-w-3xl text-center">
           <h2 className="text-xl font-semibold text-foreground">

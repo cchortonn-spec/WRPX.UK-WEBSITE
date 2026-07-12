@@ -73,7 +73,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "subcontract-vinyl-installer-rotherham",
     "subcontract-vinyl-installer-barnsley",
     "subcontract-vinyl-installer-nottingham",
+    "subcontract-vinyl-installer-wakefield",
     "fleet-wrap-installation-yorkshire",
+    "shop-front-graphics-installation",
   ];
   const windowFilm = [
     "window-film",
