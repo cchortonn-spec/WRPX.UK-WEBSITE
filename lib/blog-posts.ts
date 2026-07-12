@@ -150,11 +150,20 @@ export const blogPosts = [
     date: "2026-07-07",
   },
   {
+
     slug: "window-graphics-installation-guide-for-sign-companies",
     title: "Window Graphics Installation: A Guide for Sign Companies",
     description:
       "How sign companies should approach subcontracting window graphics installation — material prep, site logistics, white-label working and what to look for in a trade installation partner.",
     date: "2026-07-08",
+
+
+    slug: "how-to-brief-a-fleet-wrap-installation",
+    title: "How to Brief a Fleet Wrap Installation — A Guide for Fleet Managers & Leasing Companies",
+    description:
+      "What fleet managers and leasing companies need to include in a fleet wrap installation brief — vehicle specs, scheduling, white-label requirements, handover documentation and what goes wrong when the brief is incomplete.",
+    date: "2026-07-09",
+
   },
 ] as const;
 

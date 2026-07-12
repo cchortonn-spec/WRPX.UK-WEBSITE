@@ -82,7 +82,37 @@ export default function CommercialInstallationNottinghamPage() {
         </div>
       </section>
 
-      <section className="px-4 pb-12">
+      <section className="border-y border-border bg-card px-4 py-12">
+        <div className="container mx-auto max-w-3xl">
+          <h2 className="text-xl font-semibold text-foreground">
+            Available as a subcontract installation partner in Nottingham
+          </h2>
+          <p className="mt-4 text-muted leading-relaxed">
+            WRPX is available as a white-label subcontract installer for sign companies, print management
+            firms and marketing agencies with Nottingham jobs to cover. We attend under your instructions,
+            install what you supply and deliver a photo sign-off pack — your client never knows we were
+            involved.
+          </p>
+          <p className="mt-4 text-muted leading-relaxed">
+            Nottingham is the southern anchor of our M1 corridor operating area — directly connected to
+            Sheffield and the full South Yorkshire network. For programmes running from Nottingham to Leeds,
+            WRPX handles the full corridor under one subcontract arrangement.
+          </p>
+          <div className="mt-6 flex flex-wrap gap-3 text-sm">
+            <Link href="/subcontract-vinyl-installer-nottingham/" className="text-accent hover:underline">
+              Nottingham subcontract installation detail
+            </Link>
+            <Link href="/sheffield-nottingham-corridor-installation/" className="text-accent hover:underline">
+              Sheffield–Nottingham corridor page
+            </Link>
+            <Link href="/white-label-graphics-installation/" className="text-accent hover:underline">
+              White-label installation
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="px-4 pb-12 pt-10">
         <div className="container mx-auto max-w-3xl">
           <div className="card-float p-6">
             <h2 className="text-lg font-semibold text-foreground">More commercial areas</h2>
