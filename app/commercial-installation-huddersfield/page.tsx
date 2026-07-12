@@ -82,6 +82,37 @@ export default function CommercialInstallationHuddersfieldPage() {
         </div>
       </section>
 
+      <section className="border-y border-border bg-card px-4 py-12">
+        <div className="container mx-auto max-w-3xl">
+          <h2 className="text-xl font-semibold text-foreground">
+            Available as a subcontract installation partner in Huddersfield
+          </h2>
+          <p className="mt-4 text-muted leading-relaxed">
+            WRPX is available as a white-label subcontract installer for sign companies, print management
+            firms and marketing agencies with Huddersfield or Kirklees jobs to cover. We attend under your
+            instructions, install what you supply and deliver a photo sign-off pack — your client never
+            knows we were involved.
+          </p>
+          <p className="mt-4 text-muted leading-relaxed">
+            Huddersfield sits on the M62 between Leeds and Manchester — on our West Yorkshire circuit alongside
+            Leeds and Bradford. If your programme spans multiple West Yorkshire cities, we can handle
+            Huddersfield as part of the same subcontract arrangement, with consistent standards and no
+            need to coordinate separate installers for each city.
+          </p>
+          <div className="mt-6 flex flex-wrap gap-3 text-sm">
+            <Link href="/subcontract-vinyl-installation-yorkshire/" className="text-accent hover:underline">
+              Yorkshire-wide subcontract hub
+            </Link>
+            <Link href="/sign-company-installation-partner/" className="text-accent hover:underline">
+              Sign company installation partner
+            </Link>
+            <Link href="/white-label-graphics-installation/" className="text-accent hover:underline">
+              White-label installation
+            </Link>
+          </div>
+        </div>
+      </section>
+
       <section className="px-4 pb-12">
         <div className="container mx-auto max-w-3xl">
           <div className="card-float p-6">
