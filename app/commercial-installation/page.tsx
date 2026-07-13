@@ -230,6 +230,23 @@ export default function CommercialInstallationPage() {
               </p>
             </div>
 
+            <div className="card-float p-8">
+              <h3 className="text-lg font-semibold text-foreground">
+                Exhibition &amp; Event Graphics
+              </h3>
+              <p className="mt-3 text-muted leading-relaxed">
+                Shell scheme panel graphics, custom stand surface vinyl, floor graphics and vehicle
+                livery for trade shows, exhibitions and brand activations. Installation-only service
+                for event designers, agencies and print companies — you supply the graphics, we install
+                them at the venue to your brief and the build schedule.
+              </p>
+              <p className="mt-3">
+                <Link href="/exhibition-graphics-installation/" className="text-accent hover:underline">
+                  Exhibition graphics installation detail
+                </Link>
+              </p>
+            </div>
+
             <div className="card-float p-8 md:col-span-2">
               <h3 className="text-lg font-semibold text-foreground">
                 Multi-Site Rollout Installation

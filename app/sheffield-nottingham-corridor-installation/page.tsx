@@ -268,6 +268,24 @@ export default function SheffieldNottinghamCorridorPage() {
             </Link>
           </div>
           <p className="mt-6 text-muted leading-relaxed">
+            Subcontract city pages — for sign companies and print firms needing an install partner
+            on the M1 corridor:
+          </p>
+          <div className="mt-3 flex flex-wrap gap-4 text-sm">
+            <Link href="/subcontract-vinyl-installer-chesterfield/" className="text-accent hover:underline">
+              Chesterfield subcontract installer
+            </Link>
+            <Link href="/subcontract-vinyl-installer-nottingham/" className="text-accent hover:underline">
+              Nottingham subcontract installer
+            </Link>
+            <Link href="/subcontract-vinyl-installer-mansfield/" className="text-accent hover:underline">
+              Mansfield subcontract installer
+            </Link>
+            <Link href="/subcontract-vinyl-installer-derby/" className="text-accent hover:underline">
+              Derby subcontract installer
+            </Link>
+          </div>
+          <p className="mt-6 text-muted leading-relaxed">
             For the full service overview — all services, all sectors, coverage map and subcontract
             detail:
           </p>

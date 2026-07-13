@@ -1,6 +1,6 @@
 # Existing Pages — WRPX.co.uk
 
-Last updated: 2026-07-04
+Last updated: 2026-07-13
 
 Use this file to run the duplicate-check before creating any new page (§3 of the automation spec).
 Cross-reference slug + service + region against the lists below. If a match exists (even approximate), flag as update candidate rather than creating a new page.
@@ -136,6 +136,19 @@ Cross-reference slug + service + region against the lists below. If a match exis
 | `/subcontract-vinyl-installer-york/` | York B2B subcontract installer — final city in Yorkshire subcontract city set; North Yorkshire coverage |
 | `/floor-vinyl-installation-yorkshire/` | Standalone B2B floor vinyl installation service page — completes trio with wall wrap + window graphics |
 
+### B2B Pages (added 2026-07-13, Run 10)
+
+| Slug | Title / Purpose |
+|---|---|
+| `/subcontract-vinyl-installer-derby/` | Derby B2B subcontract installer — M1 corridor south extension from Nottingham; Derbyshire coverage |
+| `/subcontract-vinyl-installer-mansfield/` | Mansfield B2B subcontract installer — Nottinghamshire mid-corridor; sits between Chesterfield and Nottingham |
+| `/exhibition-graphics-installation/` | Exhibition and trade show graphics installation — new niche, distinct buyer persona (event companies, agencies, print houses supplying exhibition graphics); no local competitor page |
+
+### Technical improvements (2026-07-13)
+- `/commercial-installation/` — Exhibition & Event Graphics service card added (links to /exhibition-graphics-installation/)
+- `/sheffield-nottingham-corridor-installation/` — Added Mansfield and Derby subcontract installer links in city links section
+- `/subcontract-vinyl-installation-yorkshire/` — Added Mansfield and Derby subcontract installer links in coverage section
+
 ---
 
 ## Window Film Pages
@@ -188,6 +201,7 @@ Cross-reference slug + service + region against the lists below. If a match exis
 | `/blog/window-graphics-installation-guide-for-sign-companies/` | **Added 2026-07-08** — sign company guide to subcontracting window graphics installation |
 | `/blog/how-to-brief-a-fleet-wrap-installation/` | **Added 2026-07-09** — fleet wrap installation briefing guide for fleet managers and leasing companies |
 | `/blog/floor-vinyl-installation-guide-for-sign-companies/` | **Added 2026-07-12** — substrate assessment, anti-slip compliance, briefing guide for sign companies subcontracting floor vinyl installation |
+| `/blog/exhibition-graphics-installation-for-event-companies/` | **Added 2026-07-13** — surface types, shell scheme specs, venue rules, briefing guide for event companies and agencies subcontracting exhibition graphics installation |
 
 
 ---

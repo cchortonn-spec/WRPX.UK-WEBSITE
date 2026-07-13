@@ -177,6 +177,13 @@ export const blogPosts = [
       "How sign companies should approach subcontracting floor vinyl installation — substrate assessment, anti-slip compliance, material spec, site logistics and what to look for in a trade installation partner.",
     date: "2026-07-12",
   },
+  {
+    slug: "exhibition-graphics-installation-for-event-companies",
+    title: "Exhibition Graphics Installation: What Event Companies Need to Know",
+    description:
+      "A practical guide for event designers, agencies and print companies subcontracting exhibition graphics installation — surface types, shell scheme specs, venue rules, briefing installers and what goes wrong.",
+    date: "2026-07-13",
+  },
 ] as const;
 
 export type BlogSlug = (typeof blogPosts)[number]["slug"];
