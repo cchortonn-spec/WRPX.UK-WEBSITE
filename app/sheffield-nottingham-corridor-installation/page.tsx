@@ -266,6 +266,9 @@ export default function SheffieldNottinghamCorridorPage() {
             <Link href="/commercial-installation-nottingham/" className="text-accent hover:underline">
               Nottingham commercial installation
             </Link>
+            <Link href="/subcontract-vinyl-installer-lincoln/" className="text-accent hover:underline">
+              Subcontract installer — Lincoln
+            </Link>
           </div>
           <p className="mt-6 text-muted leading-relaxed">
             For the full service overview — all services, all sectors, coverage map and subcontract
