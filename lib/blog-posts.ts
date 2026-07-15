@@ -184,6 +184,13 @@ export const blogPosts = [
       "A practical guide for event designers, agencies and print companies subcontracting exhibition graphics installation — surface types, shell scheme specs, venue rules, briefing installers and what goes wrong.",
     date: "2026-07-13",
   },
+  {
+    slug: "subcontract-installation-for-retail-fitout",
+    title: "Subcontracting Vinyl Installation on Retail Fit-Out Projects — A Guide for Shop Fitters & Retail Designers",
+    description:
+      "How shop fitters and retail design firms should approach subcontracting vinyl graphics installation on fit-out projects — programme integration, white-label working, surface prep, briefing your installer and what separates a reliable installation trade partner from one who creates snagging problems.",
+    date: "2026-07-14",
+  },
 ] as const;
 
 export type BlogSlug = (typeof blogPosts)[number]["slug"];

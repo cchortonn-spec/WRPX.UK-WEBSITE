@@ -86,6 +86,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "window-graphics-installation-yorkshire",
     "wall-wrap-installation-yorkshire",
     "exhibition-graphics-installation",
+    "subcontract-vinyl-installer-harrogate",
+    "subcontract-vinyl-installer-lincoln",
+    "retail-fitout-graphics-installation",
+    "wayfinding-graphics-installation",
   ];
   const windowFilm = [
     "window-film",

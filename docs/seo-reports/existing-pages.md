@@ -228,4 +228,16 @@ Cross-reference slug + service + region against the lists below. If a match exis
 
 
 
-_Last updated by automation run on 2026-07-12_
+### New B2B Pages (added 2026-07-14, Run 11)
+
+| Slug | Title / Purpose |
+|---|---|
+| `/subcontract-vinyl-installer-harrogate/` | Harrogate B2B subcontract city page (North Yorkshire; spa/conference economy) |
+| `/subcontract-vinyl-installer-lincoln/` | Lincoln B2B subcontract city page (Lincolnshire; east M1 corridor extension) |
+| `/retail-fitout-graphics-installation/` | Retail fit-out graphics installation service page (shop fitters, retail design firms, brand rollouts) |
+| `/wayfinding-graphics-installation/` | Wayfinding vinyl graphics installation service page (hospitals, business parks, large commercial) |
+| `/blog/subcontract-installation-for-retail-fitout/` | B2B guide for shop fitters on integrating vinyl installation into retail fit-out programmes |
+
+---
+
+_Last updated by automation run on 2026-07-14_

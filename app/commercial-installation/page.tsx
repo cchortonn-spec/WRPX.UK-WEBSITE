@@ -542,6 +542,21 @@ export default function CommercialInstallationPage() {
               <p className="font-semibold text-foreground">Multi-site rollout planning guide</p>
               <p className="mt-1 text-sm text-muted">Survey, scheduling, QA and snagging — how to run a programme without losing control.</p>
             </Link>
+            <Link
+              href="/blog/subcontract-installation-for-retail-fitout/"
+              className="card-float block bg-background p-5 hover:border-accent/60"
+            >
+              <p className="font-semibold text-foreground">Subcontracting vinyl on retail fit-out projects</p>
+              <p className="mt-1 text-sm text-muted">How shop fitters and retail design firms should integrate vinyl installation into a fit-out programme.</p>
+            </Link>
+          </div>
+          <div className="mt-6 flex flex-wrap gap-3 text-sm">
+            <Link href="/retail-fitout-graphics-installation/" className="text-accent hover:underline">
+              Retail fit-out graphics installation
+            </Link>
+            <Link href="/wayfinding-graphics-installation/" className="text-accent hover:underline">
+              Wayfinding graphics installation
+            </Link>
           </div>
         </div>
       </section>
