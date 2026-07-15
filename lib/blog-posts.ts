@@ -191,6 +191,13 @@ export const blogPosts = [
       "How shop fitters and retail design firms should approach subcontracting vinyl graphics installation on fit-out projects — programme integration, white-label working, surface prep, briefing your installer and what separates a reliable installation trade partner from one who creates snagging problems.",
     date: "2026-07-14",
   },
+  {
+    slug: "healthcare-vinyl-graphics-for-nhs-contractors",
+    title: "Healthcare Vinyl Graphics for NHS Contractors — How to Specify and Subcontract Installation",
+    description:
+      "A practical guide for sign companies, fit-out contractors and NHS supply-chain partners subcontracting vinyl installation in clinical environments — substrate issues, infection-control protocols, access windows, briefing your installer and what separates reliable healthcare installation from standard commercial work.",
+    date: "2026-07-15",
+  },
 ] as const;
 
 export type BlogSlug = (typeof blogPosts)[number]["slug"];

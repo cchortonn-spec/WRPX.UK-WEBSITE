@@ -557,6 +557,9 @@ export default function CommercialInstallationPage() {
             <Link href="/wayfinding-graphics-installation/" className="text-accent hover:underline">
               Wayfinding graphics installation
             </Link>
+            <Link href="/healthcare-graphics-installation/" className="text-accent hover:underline">
+              Healthcare &amp; NHS graphics installation
+            </Link>
           </div>
         </div>
       </section>

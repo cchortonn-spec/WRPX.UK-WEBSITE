@@ -238,6 +238,21 @@ Cross-reference slug + service + region against the lists below. If a match exis
 | `/wayfinding-graphics-installation/` | Wayfinding vinyl graphics installation service page (hospitals, business parks, large commercial) |
 | `/blog/subcontract-installation-for-retail-fitout/` | B2B guide for shop fitters on integrating vinyl installation into retail fit-out programmes |
 
+### New B2B Pages (added 2026-07-15, Run 12)
+
+| Slug | Title / Purpose |
+|---|---|
+| `/subcontract-vinyl-installer-newark/` | Newark on Trent B2B subcontract city page (A1 corridor; between Mansfield and Lincoln) |
+| `/subcontract-vinyl-installer-grimsby/` | Grimsby B2B subcontract city page (Lincolnshire coast; east extension beyond Lincoln) |
+| `/healthcare-graphics-installation/` | Healthcare & NHS patient environment graphics installation service page (new niche; no local competitor) |
+| `/blog/healthcare-vinyl-graphics-for-nhs-contractors/` | B2B blog: specifying healthcare vinyl for NHS/clinical environments; briefing a healthcare installation subcontractor |
+
+### Technical improvements (2026-07-15)
+- BreadcrumbList schema added to: Sheffield, Doncaster, Leeds, Rotherham, Barnsley subcontract city pages (previously missing)
+- `/commercial-installation/` — healthcare-graphics-installation link added
+- `/sheffield-nottingham-corridor-installation/` — Newark and Grimsby subcontract links added
+- `/subcontract-vinyl-installation-yorkshire/` — Newark and Grimsby subcontract links added
+
 ---
 
-_Last updated by automation run on 2026-07-14_
+_Last updated by automation run on 2026-07-15_

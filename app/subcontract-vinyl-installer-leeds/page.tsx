@@ -17,6 +17,17 @@ const serviceSchema = getServiceSchema(
   "Professional subcontract vinyl installation for sign companies, print management firms and marketing agencies across Leeds and West Yorkshire. WRPX installs what you supply — white-label, documented, consistent."
 );
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.wrpx.co.uk/" },
+    { "@type": "ListItem", position: 2, name: "Commercial Installation", item: "https://www.wrpx.co.uk/commercial-installation/" },
+    { "@type": "ListItem", position: 3, name: "Yorkshire Subcontract Hub", item: "https://www.wrpx.co.uk/subcontract-vinyl-installation-yorkshire/" },
+    { "@type": "ListItem", position: 4, name: "Subcontract Installer Leeds", item: "https://www.wrpx.co.uk/subcontract-vinyl-installer-leeds/" },
+  ],
+};
+
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -70,6 +81,10 @@ export default function SubcontractVinylInstallerLeedsPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <script
         type="application/ld+json"
