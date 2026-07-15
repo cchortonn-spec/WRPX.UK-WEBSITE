@@ -78,11 +78,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "subcontract-vinyl-installer-chesterfield",
     "subcontract-vinyl-installer-bradford",
     "subcontract-vinyl-installer-york",
+    "subcontract-vinyl-installer-derby",
+    "subcontract-vinyl-installer-mansfield",
     "fleet-wrap-installation-yorkshire",
     "floor-vinyl-installation-yorkshire",
     "shop-front-graphics-installation",
     "window-graphics-installation-yorkshire",
     "wall-wrap-installation-yorkshire",
+    "exhibition-graphics-installation",
   ];
   const windowFilm = [
     "window-film",
