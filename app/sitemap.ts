@@ -92,7 +92,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "wayfinding-graphics-installation",
     "subcontract-vinyl-installer-newark",
     "subcontract-vinyl-installer-grimsby",
+    "subcontract-vinyl-installer-hull",
     "healthcare-graphics-installation",
+    "education-graphics-installation",
   ];
   const windowFilm = [
     "window-film",

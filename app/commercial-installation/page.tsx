@@ -560,6 +560,9 @@ export default function CommercialInstallationPage() {
             <Link href="/healthcare-graphics-installation/" className="text-accent hover:underline">
               Healthcare &amp; NHS graphics installation
             </Link>
+            <Link href="/education-graphics-installation/" className="text-accent hover:underline">
+              Education graphics installation
+            </Link>
           </div>
         </div>
       </section>

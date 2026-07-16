@@ -17,6 +17,17 @@ const serviceSchema = getServiceSchema(
   "Professional subcontract vinyl installation for sign companies and print management firms across Nottingham and the East Midlands. White-label available. WRPX covers the Sheffield–Nottingham M1 corridor."
 );
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.wrpx.co.uk/" },
+    { "@type": "ListItem", position: 2, name: "Commercial Installation", item: "https://www.wrpx.co.uk/commercial-installation/" },
+    { "@type": "ListItem", position: 3, name: "Sheffield–Nottingham Corridor", item: "https://www.wrpx.co.uk/sheffield-nottingham-corridor-installation/" },
+    { "@type": "ListItem", position: 4, name: "Subcontract Installer Nottingham", item: "https://www.wrpx.co.uk/subcontract-vinyl-installer-nottingham/" },
+  ],
+};
+
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -62,6 +73,10 @@ export default function SubcontractVinylInstallerNottinghamPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <script
         type="application/ld+json"
