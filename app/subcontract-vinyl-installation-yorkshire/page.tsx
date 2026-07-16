@@ -406,7 +406,7 @@ export default function SubcontractVinylInstallationYorkshirePage() {
             <p className="mt-4 text-muted">
               <strong className="text-foreground">
                 Sheffield · Rotherham · Barnsley · Doncaster · Leeds · Huddersfield · Wakefield ·
-                Chesterfield · Nottingham · Derby · Lincoln
+                Chesterfield · Nottingham · Derby · Lincoln · Grimsby · Hull
               </strong>{" "}
               and surrounding towns and retail parks along the M1.
             </p>
@@ -464,6 +464,12 @@ export default function SubcontractVinylInstallationYorkshirePage() {
                 className="text-accent hover:underline"
               >
                 Subcontract installer — Grimsby
+              </Link>
+              <Link
+                href="/subcontract-vinyl-installer-hull/"
+                className="text-accent hover:underline"
+              >
+                Subcontract installer — Hull
               </Link>
               <Link
                 href="/sheffield-nottingham-corridor-installation/"

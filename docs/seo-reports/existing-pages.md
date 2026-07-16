@@ -255,4 +255,19 @@ Cross-reference slug + service + region against the lists below. If a match exis
 
 ---
 
-_Last updated by automation run on 2026-07-15_
+### New B2B Pages (added 2026-07-16, Run 13)
+
+| Slug | Title / Purpose |
+|---|---|
+| `/subcontract-vinyl-installer-hull/` | Hull B2B subcontract city page (Humber/East Yorkshire; port logistics and retail; extends east beyond Grimsby) |
+| `/education-graphics-installation/` | Education sector vinyl graphics installation (schools, colleges, universities; NEW niche; no local competitor page) |
+| `/blog/education-vinyl-graphics-for-schools-and-universities/` | B2B guide for sign companies on subcontracting vinyl installation in education environments (term-time access, safeguarding, substrate challenges) |
+
+### Technical improvements (2026-07-16)
+- BreadcrumbList schema added to 6 subcontract city pages previously missing it: Wakefield, Huddersfield, Bradford, York, Nottingham, Chesterfield. All 17 subcontract city pages now have complete BreadcrumbList schema.
+- `/commercial-installation/` — education-graphics-installation link added
+- `/subcontract-vinyl-installation-yorkshire/` — Hull subcontract link added; coverage text updated to include Hull
+
+---
+
+_Last updated by automation run on 2026-07-16_

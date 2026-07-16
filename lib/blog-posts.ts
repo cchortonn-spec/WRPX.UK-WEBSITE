@@ -198,6 +198,13 @@ export const blogPosts = [
       "A practical guide for sign companies, fit-out contractors and NHS supply-chain partners subcontracting vinyl installation in clinical environments — substrate issues, infection-control protocols, access windows, briefing your installer and what separates reliable healthcare installation from standard commercial work.",
     date: "2026-07-15",
   },
+  {
+    slug: "education-vinyl-graphics-for-schools-and-universities",
+    title: "Education Vinyl Graphics for Schools and Universities — Briefing a Subcontract Installer",
+    description:
+      "A practical guide for sign companies, fit-out contractors and print firms subcontracting vinyl installation in schools, colleges and universities — term-time access windows, safeguarding on site, substrate challenges in older buildings, briefing the installer and what separates reliable education installation from standard commercial work.",
+    date: "2026-07-16",
+  },
 ] as const;
 
 export type BlogSlug = (typeof blogPosts)[number]["slug"];
