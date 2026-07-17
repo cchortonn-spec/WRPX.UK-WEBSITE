@@ -95,6 +95,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "subcontract-vinyl-installer-hull",
     "healthcare-graphics-installation",
     "education-graphics-installation",
+    "subcontract-vinyl-installer-scunthorpe",
+    "hospitality-graphics-installation",
   ];
   const windowFilm = [
     "window-film",

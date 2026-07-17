@@ -288,6 +288,9 @@ export default function SubcontractVinylInstallerGrimsbyPage() {
               <Link href="/subcontract-vinyl-installer-newark/" className="text-accent hover:underline">
                 Newark subcontract
               </Link>
+              <Link href="/subcontract-vinyl-installer-scunthorpe/" className="text-accent hover:underline">
+                Scunthorpe subcontract
+              </Link>
               <Link href="/commercial-installation/" className="text-accent hover:underline">
                 Commercial installation overview
               </Link>

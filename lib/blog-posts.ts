@@ -205,6 +205,13 @@ export const blogPosts = [
       "A practical guide for sign companies, fit-out contractors and print firms subcontracting vinyl installation in schools, colleges and universities — term-time access windows, safeguarding on site, substrate challenges in older buildings, briefing the installer and what separates reliable education installation from standard commercial work.",
     date: "2026-07-16",
   },
+  {
+    slug: "hospitality-vinyl-graphics-for-fit-out-contractors",
+    title: "Hospitality Vinyl Graphics for Fit-Out Contractors — Briefing a Subcontract Installer",
+    description:
+      "A practical guide for fit-out contractors, sign companies and brand rollout managers subcontracting vinyl installation in hotels, restaurants, bars and leisure venues — opening-day pressure, out-of-hours access, substrate challenges, COSHH in kitchen areas and how to brief your installer.",
+    date: "2026-07-17",
+  },
 ] as const;
 
 export type BlogSlug = (typeof blogPosts)[number]["slug"];
