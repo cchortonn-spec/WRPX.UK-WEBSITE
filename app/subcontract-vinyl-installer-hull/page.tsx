@@ -314,6 +314,9 @@ export default function SubcontractVinylInstallerHullPage() {
               <Link href="/subcontract-vinyl-installer-grimsby/" className="text-accent hover:underline">
                 Grimsby subcontract
               </Link>
+              <Link href="/subcontract-vinyl-installer-scunthorpe/" className="text-accent hover:underline">
+                Scunthorpe subcontract
+              </Link>
               <Link href="/subcontract-vinyl-installer-leeds/" className="text-accent hover:underline">
                 Leeds subcontract
               </Link>

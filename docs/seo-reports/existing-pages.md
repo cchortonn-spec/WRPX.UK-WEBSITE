@@ -270,4 +270,19 @@ Cross-reference slug + service + region against the lists below. If a match exis
 
 ---
 
-_Last updated by automation run on 2026-07-16_
+### New B2B Pages (added 2026-07-17, Run 14)
+
+| Slug | Title / Purpose |
+|---|---|
+| `/subcontract-vinyl-installer-scunthorpe/` | Scunthorpe B2B subcontract city page (south Humber bank; steel/industrial/logistics; completes Humber coverage alongside Hull and Grimsby) |
+| `/hospitality-graphics-installation/` | Hospitality sector vinyl graphics installation (hotels, restaurants, bars, leisure venues; fit-out contractors, sign companies, brand rollout managers; NEW niche; no local competitor page) |
+| `/blog/hospitality-vinyl-graphics-for-fit-out-contractors/` | B2B guide for fit-out contractors: opening-day pressure, out-of-hours access, substrate variety in hospitality, COSHH in kitchen areas, multi-site chain rollouts |
+
+### Technical improvements (2026-07-17)
+- `/commercial-installation/` — hospitality-graphics-installation link added
+- `/subcontract-vinyl-installer-grimsby/` — Scunthorpe subcontract link added to coverage section
+- `/subcontract-vinyl-installer-hull/` — Scunthorpe subcontract link added to coverage section
+
+---
+
+_Last updated by automation run on 2026-07-17_
