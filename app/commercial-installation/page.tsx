@@ -566,6 +566,9 @@ export default function CommercialInstallationPage() {
             <Link href="/hospitality-graphics-installation/" className="text-accent hover:underline">
               Hospitality graphics installation
             </Link>
+            <Link href="/sports-leisure-graphics-installation/" className="text-accent hover:underline">
+              Sports &amp; leisure graphics installation
+            </Link>
           </div>
         </div>
       </section>

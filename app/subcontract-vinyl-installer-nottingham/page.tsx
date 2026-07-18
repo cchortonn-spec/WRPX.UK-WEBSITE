@@ -293,6 +293,9 @@ export default function SubcontractVinylInstallerNottinghamPage() {
             <Link href="/sign-company-installation-partner/" className="text-accent hover:underline">
               Sign company partners
             </Link>
+            <Link href="/subcontract-vinyl-installer-leicester/" className="text-accent hover:underline">
+              Leicester subcontract installer
+            </Link>
           </div>
         </div>
       </section>

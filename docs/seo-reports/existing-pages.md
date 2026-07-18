@@ -285,4 +285,20 @@ Cross-reference slug + service + region against the lists below. If a match exis
 
 ---
 
-_Last updated by automation run on 2026-07-17_
+### New B2B Pages (added 2026-07-18, Run 15)
+
+| Slug | Title / Purpose |
+|---|---|
+| `/sports-leisure-graphics-installation/` | Sports & leisure sector vinyl graphics installation (gyms, sports centres, stadiums, leisure parks; anti-slip floors, gym branding, multi-site gym chain rollouts; NEW niche; no local competitor page) |
+| `/subcontract-vinyl-installer-leicester/` | Leicester B2B subcontract city page (East Midlands; M1 south of Nottingham; Highcross, Fosse Park, De Montfort & Leicester university estates; extends East Midlands coverage south) |
+| `/blog/sports-venue-vinyl-graphics-for-fit-out-contractors/` | B2B guide for fit-out contractors: anti-slip compliance in wet zones, rubber/resin floor substrates, gym branding finish standards, stadium access windows, multi-site gym chain rollout consistency |
+
+### Technical improvements (2026-07-18)
+- `/commercial-installation/` — sports-leisure-graphics-installation link added to niche pages section
+- `/sheffield-nottingham-corridor-installation/` — Leicester subcontract installer link added to city links section
+- `/subcontract-vinyl-installer-nottingham/` — Leicester subcontract installer link added to coverage section
+- Sitemap updated with 3 new routes (sports-leisure-graphics-installation, subcontract-vinyl-installer-leicester, blog)
+
+---
+
+_Last updated by automation run on 2026-07-18_
