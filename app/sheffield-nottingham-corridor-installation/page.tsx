@@ -293,6 +293,9 @@ export default function SheffieldNottinghamCorridorPage() {
             <Link href="/subcontract-vinyl-installer-grimsby/" className="text-accent hover:underline">
               Grimsby subcontract installer
             </Link>
+            <Link href="/subcontract-vinyl-installer-leicester/" className="text-accent hover:underline">
+              Leicester subcontract installer
+            </Link>
           </div>
           <p className="mt-6 text-muted leading-relaxed">
             For the full service overview — all services, all sectors, coverage map and subcontract

@@ -212,6 +212,13 @@ export const blogPosts = [
       "A practical guide for fit-out contractors, sign companies and brand rollout managers subcontracting vinyl installation in hotels, restaurants, bars and leisure venues — opening-day pressure, out-of-hours access, substrate challenges, COSHH in kitchen areas and how to brief your installer.",
     date: "2026-07-17",
   },
+  {
+    slug: "sports-venue-vinyl-graphics-for-fit-out-contractors",
+    title: "Sports Venue Vinyl Graphics for Fit-Out Contractors — Briefing a Subcontract Installer",
+    description:
+      "A practical guide for fit-out contractors, sign companies and brand managers subcontracting vinyl installation in gyms, sports centres, leisure parks and stadiums — anti-slip compliance, substrate challenges in wet zones, access constraints and how to brief your installer.",
+    date: "2026-07-18",
+  },
 ] as const;
 
 export type BlogSlug = (typeof blogPosts)[number]["slug"];
