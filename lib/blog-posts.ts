@@ -219,6 +219,13 @@ export const blogPosts = [
       "A practical guide for fit-out contractors, sign companies and brand managers subcontracting vinyl installation in gyms, sports centres, leisure parks and stadiums — anti-slip compliance, substrate challenges in wet zones, access constraints and how to brief your installer.",
     date: "2026-07-18",
   },
+  {
+    slug: "office-vinyl-graphics-for-fit-out-contractors",
+    title: "Office Vinyl Graphics for Fit-Out Contractors — Briefing a Subcontract Installer",
+    description:
+      "A practical guide for fit-out contractors, interior designers and sign companies subcontracting vinyl installation in offices, corporate HQs and co-working spaces — glass partition compliance, out-of-hours access, substrate challenges and how to brief your installer.",
+    date: "2026-07-19",
+  },
 ] as const;
 
 export type BlogSlug = (typeof blogPosts)[number]["slug"];

@@ -99,6 +99,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "hospitality-graphics-installation",
     "sports-leisure-graphics-installation",
     "subcontract-vinyl-installer-leicester",
+    "subcontract-vinyl-installer-loughborough",
+    "office-graphics-installation",
   ];
   const windowFilm = [
     "window-film",
