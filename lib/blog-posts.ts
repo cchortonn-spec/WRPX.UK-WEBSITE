@@ -226,6 +226,13 @@ export const blogPosts = [
       "A practical guide for fit-out contractors, interior designers and sign companies subcontracting vinyl installation in offices, corporate HQs and co-working spaces — glass partition compliance, out-of-hours access, substrate challenges and how to brief your installer.",
     date: "2026-07-19",
   },
+  {
+    slug: "nhs-vinyl-graphics-for-healthcare-contractors",
+    title: "NHS Vinyl Graphics for Healthcare Contractors — Briefing a Subcontract Installer",
+    description:
+      "A practical guide for sign companies, fit-out contractors and print firms subcontracting vinyl installation in NHS hospitals, primary care premises and healthcare estates — infection control requirements, procurement frameworks, wayfinding specification, out-of-hours access and how to brief an NHS-experienced installer.",
+    date: "2026-07-20",
+  },
 ] as const;
 
 export type BlogSlug = (typeof blogPosts)[number]["slug"];

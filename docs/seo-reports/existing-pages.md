@@ -301,4 +301,38 @@ Cross-reference slug + service + region against the lists below. If a match exis
 
 ---
 
-_Last updated by automation run on 2026-07-18_
+### New B2B Pages (added 2026-07-19, Run 16)
+
+| Slug | Title / Purpose |
+|---|---|
+| `/subcontract-vinyl-installer-loughborough/` | Loughborough B2B subcontract city page (M1 East Midlands corridor between Leicester and Nottingham; Loughborough University; Charnwood) |
+| `/office-graphics-installation/` | Office & corporate niche vinyl graphics installation (glass partition manifestation, feature walls, meeting room graphics, wayfinding, out-of-hours, white-label) |
+| `/blog/office-vinyl-graphics-for-fit-out-contractors/` | B2B guide for fit-out contractors: glass partition Building Regulations, acoustic panel substrates, out-of-hours office access, security-sensitive offices |
+
+### Technical improvements (2026-07-19)
+- `/commercial-installation/` — office-graphics-installation link added to niche pages section
+- `/sheffield-nottingham-corridor-installation/` — Loughborough subcontract link added to city links section
+- `/subcontract-vinyl-installer-leicester/` — Loughborough subcontract link added to coverage section
+- `/subcontract-vinyl-installer-nottingham/` — Loughborough subcontract link added to coverage section
+- Sitemap updated with 2 new routes (subcontract-vinyl-installer-loughborough, office-graphics-installation)
+
+---
+
+### New B2B Pages (added 2026-07-20, Run 17)
+
+| Slug | Title / Purpose |
+|---|---|
+| `/nhs-procurement-vinyl-installation/` | NHS procurement framework specialist page (sign companies/fit-out contractors on NHS Trust contracts, CCS frameworks, PFI estates; infection control, out-of-hours, wayfinding specification; HIGH VALUE B2B) |
+| `/subcontract-vinyl-installer-coventry/` | Coventry B2B subcontract city page (M1/M6 West Midlands gateway; Coventry University; University of Warwick; automotive sector; extends corridor beyond Loughborough/Leicester) |
+| `/blog/nhs-vinyl-graphics-for-healthcare-contractors/` | B2B guide for healthcare contractors: NHS procurement frameworks, IPC requirements, contractor management systems, NHS wayfinding specification, out-of-hours NHS access logistics |
+
+### Technical improvements (2026-07-20)
+- `/healthcare-graphics-installation/` — nhs-procurement-vinyl-installation link added to coverage links section
+- `/subcontract-vinyl-installer-leicester/` — Coventry subcontract link added to coverage section
+- `/subcontract-vinyl-installer-loughborough/` — Coventry subcontract link added to coverage section
+- Sitemap updated with 2 new routes (nhs-procurement-vinyl-installation, subcontract-vinyl-installer-coventry)
+- blog-posts.ts updated with NHS blog post
+
+---
+
+_Last updated by automation run on 2026-07-20_

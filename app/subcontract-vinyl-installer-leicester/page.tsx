@@ -345,6 +345,9 @@ export default function SubcontractVinylInstallerLeicesterPage() {
               <Link href="/subcontract-vinyl-installer-derby/" className="text-accent hover:underline">
                 Derby subcontract
               </Link>
+              <Link href="/subcontract-vinyl-installer-coventry/" className="text-accent hover:underline">
+                Coventry subcontract
+              </Link>
               <Link href="/sheffield-nottingham-corridor-installation/" className="text-accent hover:underline">
                 Sheffield–Nottingham corridor
               </Link>
