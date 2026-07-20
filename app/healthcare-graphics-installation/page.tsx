@@ -342,6 +342,9 @@ export default function HealthcareGraphicsInstallationPage() {
               <Link href="/commercial-installation/" className="text-accent hover:underline">
                 Commercial installation overview
               </Link>
+              <Link href="/nhs-procurement-vinyl-installation/" className="text-accent hover:underline">
+                NHS procurement vinyl installation
+              </Link>
               <Link href="/wayfinding-graphics-installation/" className="text-accent hover:underline">
                 Wayfinding graphics installation
               </Link>
