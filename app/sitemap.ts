@@ -103,6 +103,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "office-graphics-installation",
     "subcontract-vinyl-installer-coventry",
     "nhs-procurement-vinyl-installation",
+    "subcontract-vinyl-installer-birmingham",
+    "subcontract-vinyl-installer-stoke-on-trent",
+    "education-framework-vinyl-installation",
   ];
   const windowFilm = [
     "window-film",

@@ -425,8 +425,8 @@ export default function EducationGraphicsInstallationPage() {
               <Link href="/contact/" className="btn-primary inline-block">
                 Contact WRPX
               </Link>
-              <Link href="/commercial-installation/" className="text-accent hover:underline">
-                Commercial installation overview
+              <Link href="/education-framework-vinyl-installation/" className="text-accent hover:underline">
+                Multi-academy trust programmes
               </Link>
             </div>
           </div>
