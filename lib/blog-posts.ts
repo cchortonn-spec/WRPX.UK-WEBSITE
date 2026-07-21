@@ -233,6 +233,13 @@ export const blogPosts = [
       "A practical guide for sign companies, fit-out contractors and print firms subcontracting vinyl installation in NHS hospitals, primary care premises and healthcare estates — infection control requirements, procurement frameworks, wayfinding specification, out-of-hours access and how to brief an NHS-experienced installer.",
     date: "2026-07-20",
   },
+  {
+    slug: "mat-graphics-programmes-subcontract-installer",
+    title: "Multi-Academy Trust Graphics Programmes — Briefing a Subcontract Installer",
+    description:
+      "A practical guide for sign companies, print suppliers and education graphics firms subcontracting vinyl installation across multi-academy trust programmes — substrate variation, DBS requirements, term-time scheduling, programme planning and how to brief your installer across multiple academy sites.",
+    date: "2026-07-21",
+  },
 ] as const;
 
 export type BlogSlug = (typeof blogPosts)[number]["slug"];

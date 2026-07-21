@@ -335,4 +335,21 @@ Cross-reference slug + service + region against the lists below. If a match exis
 
 ---
 
-_Last updated by automation run on 2026-07-20_
+### New B2B Pages (added 2026-07-21, Run 18)
+
+| Slug | Title / Purpose |
+|---|---|
+| `/subcontract-vinyl-installer-birmingham/` | Birmingham B2B subcontract city page (M6 West Midlands corridor; UK's second city; NEC; Bullring; Solihull; Black Country; natural next step after Coventry on M6) |
+| `/subcontract-vinyl-installer-stoke-on-trent/` | Stoke-on-Trent B2B subcontract city page (M6 midpoint between Yorkshire and Birmingham; Festival Park; Keele University; A500 industrial corridor; distinct from M1 corridor) |
+| `/education-framework-vinyl-installation/` | Multi-academy trust (MAT) vinyl installation framework page — DBS-checked installers, multi-site scheduling, trust-wide consistent standards; companion to education-graphics-installation; HIGH VALUE niche |
+| `/blog/mat-graphics-programmes-subcontract-installer/` | B2B blog: MAT graphics programme briefing guide — substrate variation across academies, DBS requirements, term-time/holiday scheduling, access failure process, documentation standard |
+
+### Technical improvements (2026-07-21)
+- `/subcontract-vinyl-installer-coventry/` — Birmingham subcontract link added to corridor coverage section
+- `/education-graphics-installation/` — education-framework-vinyl-installation link added to CTA section
+- Sitemap updated with 3 new routes (subcontract-vinyl-installer-birmingham, subcontract-vinyl-installer-stoke-on-trent, education-framework-vinyl-installation)
+- blog-posts.ts updated with MAT blog post
+
+---
+
+_Last updated by automation run on 2026-07-21_
