@@ -240,6 +240,13 @@ export const blogPosts = [
       "A practical guide for sign companies, print suppliers and education graphics firms subcontracting vinyl installation across multi-academy trust programmes — substrate variation, DBS requirements, term-time scheduling, programme planning and how to brief your installer across multiple academy sites.",
     date: "2026-07-21",
   },
+  {
+    slug: "property-management-vinyl-graphics-for-fm-contractors",
+    title: "Property Management Vinyl Graphics for FM Contractors — Briefing a Subcontract Installer",
+    description:
+      "A practical guide for property management companies, FM contractors and commercial landlords subcontracting vinyl installation across managed commercial portfolios — occupied building access, substrate variation, reactive vs planned work, documentation requirements and how to brief an FM-experienced installer.",
+    date: "2026-07-22",
+  },
 ] as const;
 
 export type BlogSlug = (typeof blogPosts)[number]["slug"];
