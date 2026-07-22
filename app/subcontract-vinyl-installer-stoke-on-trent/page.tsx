@@ -358,6 +358,9 @@ export default function SubcontractVinylInstallerStokePage() {
               <Link href="/subcontract-vinyl-installer-birmingham/" className="text-accent hover:underline">
                 Birmingham subcontract
               </Link>
+              <Link href="/subcontract-vinyl-installer-wolverhampton/" className="text-accent hover:underline">
+                Wolverhampton &amp; Black Country subcontract
+              </Link>
               <Link href="/subcontract-vinyl-installer-derby/" className="text-accent hover:underline">
                 Derby subcontract
               </Link>

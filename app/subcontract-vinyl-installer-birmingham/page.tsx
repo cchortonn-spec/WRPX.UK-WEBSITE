@@ -358,6 +358,9 @@ export default function SubcontractVinylInstallerBirminghamPage() {
               and the wider West Midlands and M6/M1 corridor.
             </p>
             <div className="mt-6 flex flex-wrap gap-3 text-sm">
+              <Link href="/subcontract-vinyl-installer-wolverhampton/" className="text-accent hover:underline">
+                Wolverhampton &amp; Black Country subcontract
+              </Link>
               <Link href="/subcontract-vinyl-installer-coventry/" className="text-accent hover:underline">
                 Coventry subcontract
               </Link>
