@@ -309,10 +309,10 @@ export default function SubcontractVinylInstallerWolverhamptonPage() {
           <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {[
               { city: "Birmingham", slug: "subcontract-vinyl-installer-birmingham", detail: "15–20 min via M6/M5" },
+              { city: "Telford & Shrewsbury", slug: "subcontract-vinyl-installer-telford", detail: "20–25 min via M54 west" },
               { city: "Stoke-on-Trent", slug: "subcontract-vinyl-installer-stoke-on-trent", detail: "45 min via M6 north" },
               { city: "Coventry", slug: "subcontract-vinyl-installer-coventry", detail: "35 min via M6/A45" },
               { city: "Leicester", slug: "subcontract-vinyl-installer-leicester", detail: "60 min via M69/M1" },
-              { city: "Nottingham", slug: "subcontract-vinyl-installer-nottingham", detail: "80 min via M6/M1" },
               { city: "Sheffield", slug: "subcontract-vinyl-installer-sheffield", detail: "Home base · 90 min via M6/M1" },
             ].map(({ city, slug, detail }) => (
               <Link
@@ -457,6 +457,10 @@ export default function SubcontractVinylInstallerWolverhamptonPage() {
           <div className="mt-8 flex flex-wrap justify-center gap-3 text-sm text-muted">
             <Link href="/subcontract-vinyl-installer-birmingham/" className="hover:text-accent hover:underline">
               Birmingham subcontract
+            </Link>
+            <span>·</span>
+            <Link href="/subcontract-vinyl-installer-telford/" className="hover:text-accent hover:underline">
+              Telford &amp; Shrewsbury subcontract
             </Link>
             <span>·</span>
             <Link href="/subcontract-vinyl-installer-stoke-on-trent/" className="hover:text-accent hover:underline">

@@ -108,6 +108,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "subcontract-vinyl-installer-wolverhampton",
     "education-framework-vinyl-installation",
     "property-management-vinyl-installation",
+    "subcontract-vinyl-installer-telford",
+    "local-authority-vinyl-installation",
   ];
   const windowFilm = [
     "window-film",

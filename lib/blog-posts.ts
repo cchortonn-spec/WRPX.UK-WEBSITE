@@ -247,6 +247,13 @@ export const blogPosts = [
       "A practical guide for property management companies, FM contractors and commercial landlords subcontracting vinyl installation across managed commercial portfolios — occupied building access, substrate variation, reactive vs planned work, documentation requirements and how to brief an FM-experienced installer.",
     date: "2026-07-22",
   },
+  {
+    slug: "wolverhampton-black-country-subcontract-installation-guide",
+    title: "Wolverhampton & Black Country Subcontract Installation — A Guide for Sign Companies and Print Houses",
+    description:
+      "A practical guide for sign companies, print houses and brand managers subcontracting vinyl installation across Wolverhampton, the Black Country and the West Midlands — what makes this region commercially distinct, how multi-city Midlands programmes work, and how to brief a subcontract installer for the WV and DY postcode zone.",
+    date: "2026-07-24",
+  },
 ] as const;
 
 export type BlogSlug = (typeof blogPosts)[number]["slug"];
