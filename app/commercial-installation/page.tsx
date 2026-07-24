@@ -572,6 +572,9 @@ export default function CommercialInstallationPage() {
             <Link href="/office-graphics-installation/" className="text-accent hover:underline">
               Office &amp; corporate graphics installation
             </Link>
+            <Link href="/local-authority-vinyl-installation/" className="text-accent hover:underline">
+              Local authority &amp; public sector installation
+            </Link>
           </div>
         </div>
       </section>

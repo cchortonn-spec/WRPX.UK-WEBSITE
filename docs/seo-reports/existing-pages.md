@@ -352,4 +352,36 @@ Cross-reference slug + service + region against the lists below. If a match exis
 
 ---
 
-_Last updated by automation run on 2026-07-21_
+### New B2B Pages (added 2026-07-22, Run 19)
+
+| Slug | Title / Purpose |
+|---|---|
+| `/subcontract-vinyl-installer-wolverhampton/` | Wolverhampton & Black Country B2B subcontract city page (M6/M54 junction; i54 South Staffordshire business park; Merry Hill/Brierley Hill retail; Mander Centre; WV/DY postcode zone) |
+| `/property-management-vinyl-installation/` | Property management & FM vinyl installation niche page (occupied building access; RAMS/permit-to-work; reactive vs planned programmes; portfolio geographic coverage; documentation for managed property records) |
+| `/blog/property-management-vinyl-graphics-for-fm-contractors/` | B2B guide: FM vinyl installation — occupied building constraints, RAMS/permit-to-work, substrate variation across mixed-age portfolios, reactive vs planned work, documentation requirements |
+
+### Technical improvements (2026-07-22)
+- `/subcontract-vinyl-installer-birmingham/` — Wolverhampton link added
+- `/subcontract-vinyl-installer-stoke-on-trent/` — Wolverhampton link added
+- Sitemap updated with 2 new routes
+- blog-posts.ts updated with FM blog post
+
+---
+
+### New B2B Pages (added 2026-07-24, Run 20)
+
+| Slug | Title / Purpose |
+|---|---|
+| `/subcontract-vinyl-installer-telford/` | Telford & Shrewsbury B2B subcontract city page (M54 west of Wolverhampton; Stafford Park; Hortonwood Industrial Estate; Halesfield; Telford Shopping Centre; Shrewsbury; TF/SY postcode zone) |
+| `/local-authority-vinyl-installation/` | Local authority & housing association vinyl installation niche page (council buildings, civic centres, leisure centres, libraries, social housing estates; public sector procurement; RAMS; multi-authority corridor coverage) |
+| `/blog/wolverhampton-black-country-subcontract-installation-guide/` | B2B guide: Wolverhampton & Black Country subcontract — what makes the region commercially distinct, i54 business park, Merry Hill, Black Country commercial belt, multi-city West Midlands programmes, briefing a subcontract installer |
+
+### Technical improvements (2026-07-24)
+- `/subcontract-vinyl-installer-wolverhampton/` — Telford subcontract link added to corridor city links and CTA footer links
+- `/commercial-installation/` — local-authority-vinyl-installation link added to niche pages section
+- Sitemap updated with 2 new routes (subcontract-vinyl-installer-telford, local-authority-vinyl-installation)
+- blog-posts.ts updated with Wolverhampton/Black Country blog post
+
+---
+
+_Last updated by automation run on 2026-07-24_
