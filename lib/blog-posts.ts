@@ -254,6 +254,13 @@ export const blogPosts = [
       "A practical guide for sign companies, print houses and brand managers subcontracting vinyl installation across Wolverhampton, the Black Country and the West Midlands — what makes this region commercially distinct, how multi-city Midlands programmes work, and how to brief a subcontract installer for the WV and DY postcode zone.",
     date: "2026-07-24",
   },
+  {
+    slug: "local-authority-graphics-procurement-guide",
+    title: "Local Authority Graphics Procurement — How Sign Companies and FM Firms Work Within Council Frameworks",
+    description:
+      "A practical guide for sign companies, FM contractors and print managers working on local authority and housing association graphics contracts — how councils procure, how frameworks work, what RAMS and site access look like, and how to brief a subcontract installer for public sector programmes.",
+    date: "2026-07-25",
+  },
 ] as const;
 
 export type BlogSlug = (typeof blogPosts)[number]["slug"];

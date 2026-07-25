@@ -471,6 +471,10 @@ export default function SubcontractVinylInstallerWolverhamptonPage() {
               Coventry subcontract
             </Link>
             <span>·</span>
+            <Link href="/subcontract-vinyl-installer-manchester/" className="hover:text-accent hover:underline">
+              Manchester subcontract
+            </Link>
+            <span>·</span>
             <Link href="/subcontract-vinyl-installation-yorkshire/" className="hover:text-accent hover:underline">
               Yorkshire hub
             </Link>

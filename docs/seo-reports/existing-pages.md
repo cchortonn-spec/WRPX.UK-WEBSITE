@@ -384,4 +384,22 @@ Cross-reference slug + service + region against the lists below. If a match exis
 
 ---
 
-_Last updated by automation run on 2026-07-24_
+### New B2B Pages (added 2026-07-25, Run 21)
+
+| Slug | Title / Purpose |
+|---|---|
+| `/subcontract-vinyl-installer-manchester/` | Manchester B2B subcontract city page (M60/M62 hub; Trafford Park; MediaCityUK/Salford Quays; Spinningfields; Northern Quarter; Manchester Arndale; Trafford Centre; Stockport; all 10 Greater Manchester boroughs; M/OL/SK/BL/WN postcode zones; trans-Pennine corridor anchor) |
+| `/subcontract-vinyl-installer-preston/` | Preston & Lancashire B2B subcontract city page (M6 north corridor; Capitol Centre; Fishergate; UCLan; Bamber Bridge; Cuerden Valley; Walton Summit; Royal Preston Hospital; BAE Systems Samlesbury; PR postcode zone; M55 to Blackpool; M65 to Burnley/Blackburn) |
+| `/blog/local-authority-graphics-procurement-guide/` | B2B guide: local authority graphics procurement — how councils buy (frameworks: YPO, ESPO, LHC; below-threshold spot purchase; mini-competition; OJEU); building types (civic, leisure, library, social housing); RAMS and permit-to-work; housing associations; multi-authority corridor scheduling |
+
+### Technical improvements (2026-07-25)
+- `/subcontract-vinyl-installer-telford/` — Manchester subcontract link added to CTA footer corridor links
+- `/subcontract-vinyl-installer-wolverhampton/` — Manchester subcontract link added to CTA footer corridor links
+- `/commercial-installation/` — Manchester and Preston subcontract city page links added to niche pages section
+- `/subcontract-vinyl-installation-yorkshire/` — Manchester and Preston links added to city link grid
+- Sitemap updated with 2 new routes (subcontract-vinyl-installer-manchester, subcontract-vinyl-installer-preston)
+- blog-posts.ts updated with local authority procurement guide
+
+---
+
+_Last updated by automation run on 2026-07-25_
