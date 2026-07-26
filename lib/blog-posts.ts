@@ -261,6 +261,13 @@ export const blogPosts = [
       "A practical guide for sign companies, FM contractors and print managers working on local authority and housing association graphics contracts — how councils procure, how frameworks work, what RAMS and site access look like, and how to brief a subcontract installer for public sector programmes.",
     date: "2026-07-25",
   },
+  {
+    slug: "manchester-subcontract-installation-guide",
+    title: "Manchester Subcontract Installation — A Guide for Sign Companies and Print Houses",
+    description:
+      "A practical guide for sign companies, print houses and brand managers subcontracting vinyl installation across Greater Manchester — Trafford Park specifics, MediaCityUK installation environment, trans-Pennine corridor briefing, M60 borough planning and how to brief a subcontract installer for North West programmes.",
+    date: "2026-07-26",
+  },
 ] as const;
 
 export type BlogSlug = (typeof blogPosts)[number]["slug"];

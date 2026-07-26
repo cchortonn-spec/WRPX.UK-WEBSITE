@@ -512,6 +512,9 @@ export default function NhsProcurementVinylInstallationPage() {
               <Link href="/healthcare-graphics-installation/" className="text-accent hover:underline">
                 Healthcare graphics installation
               </Link>
+              <Link href="/local-authority-vinyl-installation/" className="text-accent hover:underline">
+                Local authority installation
+              </Link>
             </div>
           </div>
         </div>

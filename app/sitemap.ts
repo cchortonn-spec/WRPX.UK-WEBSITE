@@ -112,6 +112,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "local-authority-vinyl-installation",
     "subcontract-vinyl-installer-manchester",
     "subcontract-vinyl-installer-preston",
+    "subcontract-vinyl-installer-warrington",
+    "subcontract-vinyl-installer-lancaster",
   ];
   const windowFilm = [
     "window-film",
