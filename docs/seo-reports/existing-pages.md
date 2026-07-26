@@ -1,6 +1,6 @@
 # Existing Pages — WRPX.co.uk
 
-Last updated: 2026-07-13
+Last updated: 2026-07-26
 
 Use this file to run the duplicate-check before creating any new page (§3 of the automation spec).
 Cross-reference slug + service + region against the lists below. If a match exists (even approximate), flag as update candidate rather than creating a new page.
@@ -402,4 +402,21 @@ Cross-reference slug + service + region against the lists below. If a match exis
 
 ---
 
-_Last updated by automation run on 2026-07-25_
+### New B2B Pages (added 2026-07-26, Run 22)
+
+| Slug | Title / Purpose |
+|---|---|
+| `/subcontract-vinyl-installer-warrington/` | Warrington & Cheshire B2B subcontract city page (M62/M6 junction; Birchwood Business Park; Omega Industrial Park; Gemini Retail Park; Golden Square; Stockton Heath; Mersey Gateway corridor; Runcorn/Widnes; WA postcode zone; Liverpool–Manchester bridge) |
+| `/subcontract-vinyl-installer-lancaster/` | Lancaster & north Lancashire B2B subcontract city page (M6 north from Preston; Lancaster University Bailrigg; Lancaster city centre; St Nicholas Arcades; Royal Infirmary; Morecambe/Eden Project; Carnforth; White Lund Industrial Estate; LA postcode zone) |
+| `/blog/manchester-subcontract-installation-guide/` | B2B guide: Manchester subcontract installation — Trafford Park specifics, MediaCityUK installation environment, M60 borough planning, trans-Pennine corridor briefing, NHS and education estate, how to brief a Manchester subcontract installer |
+
+### Technical improvements (2026-07-26)
+- `/subcontract-vinyl-installer-manchester/` — Warrington and Lancaster corridor links added
+- `/subcontract-vinyl-installer-preston/` — Warrington and Lancaster corridor links added
+- `/nhs-procurement-vinyl-installation/` — Local authority vinyl installation cross-link added to CTA section
+- Sitemap updated with 2 new routes (subcontract-vinyl-installer-warrington, subcontract-vinyl-installer-lancaster)
+- blog-posts.ts updated with Manchester subcontract installation guide
+
+---
+
+_Last updated by automation run on 2026-07-26_
