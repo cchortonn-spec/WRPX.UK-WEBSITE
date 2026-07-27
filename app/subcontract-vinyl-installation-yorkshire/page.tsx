@@ -484,6 +484,18 @@ export default function SubcontractVinylInstallationYorkshirePage() {
                 Subcontract installer — Preston
               </Link>
               <Link
+                href="/subcontract-vinyl-installer-liverpool/"
+                className="text-accent hover:underline"
+              >
+                Subcontract installer — Liverpool
+              </Link>
+              <Link
+                href="/subcontract-vinyl-installer-blackpool/"
+                className="text-accent hover:underline"
+              >
+                Subcontract installer — Blackpool
+              </Link>
+              <Link
                 href="/sheffield-nottingham-corridor-installation/"
                 className="text-accent hover:underline"
               >

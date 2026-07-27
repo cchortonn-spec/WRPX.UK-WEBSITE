@@ -268,6 +268,13 @@ export const blogPosts = [
       "A practical guide for sign companies, print houses and brand managers subcontracting vinyl installation across Greater Manchester — Trafford Park specifics, MediaCityUK installation environment, trans-Pennine corridor briefing, M60 borough planning and how to brief a subcontract installer for North West programmes.",
     date: "2026-07-26",
   },
+  {
+    slug: "warrington-subcontract-installation-guide",
+    title: "Warrington Subcontract Installation — A Guide for Sign Companies and Print Houses",
+    description:
+      "A practical guide for sign companies, print houses and brand managers subcontracting vinyl installation across Warrington and Cheshire — Birchwood nuclear and defence sector specifics, Omega logistics park, M62/M6 corridor planning, Liverpool–Manchester bridge geography and how to brief a subcontract installer for North West programmes.",
+    date: "2026-07-27",
+  },
 ] as const;
 
 export type BlogSlug = (typeof blogPosts)[number]["slug"];
