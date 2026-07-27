@@ -329,6 +329,15 @@ export default function SubcontractVinylInstallerWarringtonPage() {
               one WRPX subcontract with a single point of contact, consistent photo documentation
               and one invoice.
             </p>
+            <p className="mt-4 text-muted leading-relaxed">
+              For a detailed briefing guide on Warrington&apos;s commercial zones, Birchwood access
+              protocols, the Omega logistics district and how to plan multi-city North West
+              programmes through the M62/M6 corridor, see our{" "}
+              <Link href="/blog/warrington-subcontract-installation-guide/" className="text-accent hover:underline">
+                Warrington subcontract installation guide
+              </Link>
+              .
+            </p>
           </div>
         </div>
       </section>
@@ -499,8 +508,14 @@ export default function SubcontractVinylInstallerWarringtonPage() {
             Also covering across the corridor
           </h2>
           <div className="flex flex-wrap gap-3">
+            <Link href="/subcontract-vinyl-installer-liverpool/" className="card-float px-4 py-2 text-sm text-accent hover:underline">
+              Liverpool
+            </Link>
             <Link href="/subcontract-vinyl-installer-manchester/" className="card-float px-4 py-2 text-sm text-accent hover:underline">
               Manchester
+            </Link>
+            <Link href="/subcontract-vinyl-installer-blackpool/" className="card-float px-4 py-2 text-sm text-accent hover:underline">
+              Blackpool
             </Link>
             <Link href="/subcontract-vinyl-installer-preston/" className="card-float px-4 py-2 text-sm text-accent hover:underline">
               Preston
@@ -517,14 +532,8 @@ export default function SubcontractVinylInstallerWarringtonPage() {
             <Link href="/subcontract-vinyl-installer-huddersfield/" className="card-float px-4 py-2 text-sm text-accent hover:underline">
               Huddersfield
             </Link>
-            <Link href="/subcontract-vinyl-installer-wakefield/" className="card-float px-4 py-2 text-sm text-accent hover:underline">
-              Wakefield
-            </Link>
             <Link href="/subcontract-vinyl-installer-hull/" className="card-float px-4 py-2 text-sm text-accent hover:underline">
               Hull
-            </Link>
-            <Link href="/subcontract-vinyl-installer-doncaster/" className="card-float px-4 py-2 text-sm text-accent hover:underline">
-              Doncaster
             </Link>
           </div>
           <p className="mt-6 text-sm text-muted">

@@ -1,6 +1,6 @@
 # Existing Pages — WRPX.co.uk
 
-Last updated: 2026-07-26
+Last updated: 2026-07-27
 
 Use this file to run the duplicate-check before creating any new page (§3 of the automation spec).
 Cross-reference slug + service + region against the lists below. If a match exists (even approximate), flag as update candidate rather than creating a new page.
@@ -419,4 +419,23 @@ Cross-reference slug + service + region against the lists below. If a match exis
 
 ---
 
-_Last updated by automation run on 2026-07-26_
+### New B2B Pages (added 2026-07-27, Run 23)
+
+| Slug | Title / Purpose |
+|---|---|
+| `/subcontract-vinyl-installer-liverpool/` | Liverpool & Merseyside B2B subcontract city page (M62 west from Warrington; L postcode zone; Liverpool ONE; Albert Dock/waterfront; Baltic Triangle; Knowledge Quarter; University of Liverpool; Liverpool John Moores; Royal Liverpool University Hospital; Knowsley/outer Merseyside; Birkenhead/Wirral via Mersey Tunnels; CH postcode; BreadcrumbList + FAQPage schema) |
+| `/subcontract-vinyl-installer-blackpool/` | Blackpool & Fylde Coast B2B subcontract city page (M55 from Preston; FY postcode zone; Golden Mile/Promenade; Pleasure Beach; Winter Gardens; Blackpool Business Park off M55 J4; Lytham St Annes; Cleveleys; Fleetwood; seasonal access; BreadcrumbList + FAQPage schema) |
+| `/blog/warrington-subcontract-installation-guide/` | B2B guide: Warrington subcontract installation — Birchwood nuclear/defence/aerospace access protocols, Omega Industrial Park logistics district, Golden Square town centre, Stockton Heath south Warrington, Mersey Gateway corridor (Runcorn WA7/Widnes WA8), M62/M6 corridor geography, Manchester vs Warrington day planning, Preston M6 north connection, briefing checklist |
+
+### Technical improvements (2026-07-27)
+- `/subcontract-vinyl-installer-warrington/` — Liverpool and Blackpool added to corridor links; Warrington installation guide blog link added to corridor section
+- `/subcontract-vinyl-installer-preston/` — Blackpool added to corridor links
+- `/subcontract-vinyl-installer-lancaster/` — Blackpool and Liverpool added to corridor links
+- `/commercial-installation/` — Liverpool and Blackpool subcontract links added to niche pages section
+- `/subcontract-vinyl-installation-yorkshire/` — Liverpool and Blackpool added to city link grid
+- Sitemap updated with 2 new routes (subcontract-vinyl-installer-liverpool, subcontract-vinyl-installer-blackpool)
+- blog-posts.ts updated with warrington-subcontract-installation-guide
+
+---
+
+_Last updated by automation run on 2026-07-27_
