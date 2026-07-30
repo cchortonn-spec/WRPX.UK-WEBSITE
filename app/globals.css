@@ -1058,34 +1058,37 @@ a[href^="tel"]:hover {
   position: relative;
 }
 
-/* Homepage header — clear/white frosted glass (like frosted window film).
-   Light mist + blur only — no dark overlay, no bottom divider line. */
+/* Homepage header — frosted window film.
+   Heavy blur + milky white mist so anything behind (hero or scrolled content)
+   looks soft/frosted — not crystal clear. No bottom divider. */
 .site-header-over-hero {
-  background: rgba(255, 255, 255, 0.14) !important;
-  background-color: rgba(255, 255, 255, 0.14) !important;
+  background: rgba(255, 255, 255, 0.32) !important;
+  background-color: rgba(255, 255, 255, 0.32) !important;
   border-bottom: none !important;
   box-shadow: none !important;
-  backdrop-filter: blur(18px) saturate(1.2) !important;
-  -webkit-backdrop-filter: blur(18px) saturate(1.2) !important;
+  /* Strong blur = frosted glass; content scrolling underneath softens */
+  backdrop-filter: blur(48px) saturate(1.35) brightness(1.05) !important;
+  -webkit-backdrop-filter: blur(48px) saturate(1.35) brightness(1.05) !important;
 }
 
 .site-header-over-hero .text-muted {
-  color: rgba(255, 255, 255, 0.92);
-  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.35);
+  color: rgba(255, 255, 255, 0.95);
+  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.45);
 }
 
 .site-header-over-hero .text-muted:hover,
 .site-header-over-hero .text-foreground,
 .site-header-over-hero button.text-foreground {
   color: #ffffff;
+  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.45);
 }
 
-/* Hamburger bars stay visible through the frost */
+/* Hamburger bars stay readable on the frost */
 .site-header-over-hero button .bg-current {
   background-color: #ffffff;
 }
 
-/* Keep mobile drawer readable when header sits over the hero photo */
+/* Keep mobile drawer readable when open */
 .site-header-over-hero .border-t.bg-card {
   background: #0c0c0c;
   border-top-color: rgba(255, 255, 255, 0.12);
