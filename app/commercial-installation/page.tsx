@@ -587,6 +587,12 @@ export default function CommercialInstallationPage() {
             <Link href="/subcontract-vinyl-installer-blackpool/" className="text-accent hover:underline">
               Subcontract installer Blackpool &amp; Fylde Coast
             </Link>
+            <Link href="/subcontract-vinyl-installer-chester/" className="text-accent hover:underline">
+              Subcontract installer Chester &amp; Cheshire West
+            </Link>
+            <Link href="/subcontract-vinyl-installer-wigan/" className="text-accent hover:underline">
+              Subcontract installer Wigan &amp; West Lancashire
+            </Link>
           </div>
         </div>
       </section>

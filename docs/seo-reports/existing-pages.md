@@ -438,4 +438,23 @@ Cross-reference slug + service + region against the lists below. If a match exis
 
 ---
 
-_Last updated by automation run on 2026-07-27_
+### New B2B Pages (added 2026-07-30, Run 24)
+
+| Slug | Title / Purpose |
+|---|---|
+| `/subcontract-vinyl-installer-chester/` | Chester & Cheshire West B2B subcontract city page (M53 from Liverpool; CH postcode; historic walled city; The Rows two-level retail galleries; Chester Business Park A55 south; Cheshire Oaks Designer Outlet Ellesmere Port M53; University of Chester multi-site; Countess of Chester Hospital; Chester Zoo; BreadcrumbList + FAQPage schema) |
+| `/subcontract-vinyl-installer-wigan/` | Wigan & West Lancashire B2B subcontract city page (M6 junction 25–26; WN postcode; Wigan town centre; Grand Arcade; Robin Park retail/DW Stadium; Leigh WN7; Ashton-in-Makerfield WN4; Standish WN6; Wigan logistics belt; M6 bridge between Warrington and Preston; BreadcrumbList + FAQPage schema) |
+| `/blog/liverpool-subcontract-installation-guide/` | B2B guide: Liverpool subcontract installation — Albert Dock waterfront heritage installation specifics, Baltic Triangle creative district (exposed brick substrate briefing), Knowledge Quarter university/NHS access (DBS, IPC, term-time), Wirral via Mersey Tunnels (tunnel congestion, CH41–CH48), Knowsley Business Park / outer Merseyside (M57 belt), M62 corridor multi-city programme planning, how to brief effectively |
+
+### Technical improvements (2026-07-30)
+- `/subcontract-vinyl-installer-liverpool/` — Chester and Wigan added to corridor links; Liverpool installation guide blog link added
+- `/subcontract-vinyl-installer-warrington/` — Chester and Wigan added to corridor links
+- `/subcontract-vinyl-installer-manchester/` — Wigan and Liverpool added to corridor links
+- `/commercial-installation/` — Chester and Wigan subcontract links added
+- `/subcontract-vinyl-installation-yorkshire/` — Chester and Wigan added to city link grid
+- Sitemap updated with 2 new routes (subcontract-vinyl-installer-chester, subcontract-vinyl-installer-wigan)
+- blog-posts.ts updated with liverpool-subcontract-installation-guide
+
+---
+
+_Last updated by automation run on 2026-07-30_

@@ -535,6 +535,12 @@ export default function SubcontractVinylInstallerWarringtonPage() {
             <Link href="/subcontract-vinyl-installer-hull/" className="card-float px-4 py-2 text-sm text-accent hover:underline">
               Hull
             </Link>
+            <Link href="/subcontract-vinyl-installer-chester/" className="card-float px-4 py-2 text-sm text-accent hover:underline">
+              Chester
+            </Link>
+            <Link href="/subcontract-vinyl-installer-wigan/" className="card-float px-4 py-2 text-sm text-accent hover:underline">
+              Wigan
+            </Link>
           </div>
           <p className="mt-6 text-sm text-muted">
             View all coverage:{" "}
