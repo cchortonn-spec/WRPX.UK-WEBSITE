@@ -3,11 +3,11 @@ import Link from "next/link";
 import Image from "next/image";
 import { siteConfig } from "@/lib/site-config";
 import { nav } from "@/lib/nav";
-import { testimonials } from "@/lib/testimonials";
 import { HomeHero } from "@/components/HomeHero";
 import { HeroTrustBar } from "@/components/HeroTrustBar";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { WrpxTrustPanel } from "@/components/WrpxTrustPanel";
+import { GoogleReviewsBar } from "@/components/GoogleReviewsBar";
 
 export const metadata: Metadata = {
   title: "Kitchen Wrapping Sheffield & South Yorkshire | Vinyl Wrap Specialist | WRPX",
@@ -338,25 +338,8 @@ export default function HomePage() {
 
       <div className="section-sep" aria-hidden="true" />
 
-      {/* Testimonials — 3 floating cards */}
-      <section className="reveal px-4 py-20">
-        <div className="container mx-auto max-w-5xl">
-          <h2 className="section-heading mb-12 text-2xl font-semibold text-foreground md:text-3xl">
-            What customers say
-          </h2>
-          <div className="grid gap-8 sm:grid-cols-3">
-            {testimonials.map((t, i) => (
-              <div key={i} className="card-float p-6 md:p-8">
-                <p className="text-white/70">★★★★★</p>
-                <p className="mt-4 italic text-card-foreground">
-                  {t.quote}
-                </p>
-                <p className="mt-3 text-sm text-muted">— {t.name}, {t.area}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* Google reviews — pearl glass panel */}
+      <GoogleReviewsBar />
 
       <div className="section-sep" aria-hidden="true" />
 

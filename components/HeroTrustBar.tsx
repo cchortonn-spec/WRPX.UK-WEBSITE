@@ -1,3 +1,5 @@
+import { googleReviews } from "@/lib/google-reviews";
+
 export function HeroTrustBar() {
   return (
     <section className="hero-trust-bar" aria-label="Why choose WRPX">
@@ -9,13 +11,21 @@ export function HeroTrustBar() {
           <div>
             <h2 className="hero-trust-title">5-Star Rated</h2>
             <p className="hero-trust-text">
-              Hundreds of happy customers across South Yorkshire.
+              Happy customers across South Yorkshire — read our Google reviews.
             </p>
             <div className="hero-trust-stars" aria-label="5 out of 5 stars">
               {Array.from({ length: 5 }).map((_, index) => (
                 <StarIcon key={index} filled />
               ))}
             </div>
+            <a
+              href={googleReviews.profileUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hero-trust-google-link"
+            >
+              See Google reviews →
+            </a>
           </div>
         </div>
 
