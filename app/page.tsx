@@ -24,22 +24,22 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://www.wrpx.co.uk/images/gallery/kitchen-wrap-full-kitchen-south-yorkshire.jpg",
+        url: "https://www.wrpx.co.uk/images/Kitchen-navy-marble-doncaster/navy-marble-kitchen-wrap-doncaster-after-01.jpeg",
         width: 1200,
-        height: 630,
-        alt: "Kitchen wrapping South Yorkshire — WRPX",
+        height: 1600,
+        alt: "Navy wood-effect kitchen wrap with white marble worktop — Doncaster, WRPX",
       },
     ],
   },
 };
 
 const galleryImages = [
+  { src: "/images/Kitchen-navy-marble-doncaster/navy-marble-kitchen-wrap-doncaster-after-01.jpeg", alt: "Navy wood-effect kitchen wrap Doncaster with white marble high-gloss worktop" },
+  { src: "/images/Kitchen-navy-marble-doncaster/navy-marble-kitchen-wrap-doncaster-worktop-detail-01.jpeg", alt: "White marble high-gloss worktop wrap close-up — Doncaster kitchen" },
   { src: "/images/home/kitchen-home-new-02.png", alt: "Wrapped kitchen with light wall units and tiled splashback" },
   { src: "/images/home/kitchen-home-new-04.png", alt: "Kitchen worktop and cabinet doors after vinyl wrapping" },
   { src: "/images/home/kitchen-home-new-01.png", alt: "Modern grey kitchen wrap finish in South Yorkshire" },
   { src: "/images/home/kitchen-home-new-05.png", alt: "Close-up of wrapped kitchen cabinets and stone-style counters" },
-  { src: "/images/home/kitchen-home-new-03.png", alt: "Kitchen transformation with refreshed wrapped doors and drawers" },
-  { src: "/images/home/kitchen-home-new-06.png", alt: "Full kitchen wrap result with updated cabinet surfaces" },
 ];
 
 export default function HomePage() {

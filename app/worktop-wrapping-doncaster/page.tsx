@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
@@ -96,6 +97,23 @@ export default function WorktopWrappingDoncasterPage() {
             <li><strong>Light oak wood grain</strong> — warm tone that pairs well with dark cabinets</li>
             <li><strong>Matt black or anthracite</strong> — statement finish, increasingly requested</li>
           </ul>
+          <figure className="card-float mt-8 overflow-hidden">
+            <div className="relative aspect-[3/4] sm:aspect-[4/3]">
+              <Image
+                src="/images/Kitchen-navy-marble-doncaster/navy-marble-kitchen-wrap-doncaster-worktop-detail-01.jpeg"
+                alt="White marble high-gloss worktop wrap Doncaster — Calacatta-style vinyl finish close-up"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 768px"
+              />
+            </div>
+            <figcaption className="border-t border-border bg-card p-4 text-sm text-muted">
+              <span className="font-medium text-foreground">White marble worktop wrap, Doncaster</span>
+              <span className="mt-1 block">
+                High-gloss Calacatta-style vinyl — one of the most requested finishes locally.
+              </span>
+            </figcaption>
+          </figure>
         </div>
       </section>
 

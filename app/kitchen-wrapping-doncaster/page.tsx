@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Kitchen Wrapping Doncaster | 5-Year Guarantee | Free Survey",
@@ -93,6 +94,51 @@ export default function KitchenWrappingDoncasterPage() {
             <p className="font-semibold text-foreground">
               5-year guarantee on materials and workmanship. Named on every job.
             </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-12">
+        <div className="container mx-auto max-w-3xl px-4">
+          <h2 className="text-xl font-semibold text-foreground">
+            Recent Doncaster project — navy wood-effect &amp; white marble
+          </h2>
+          <p className="mt-3 text-muted leading-relaxed">
+            A full kitchen wrap in Doncaster: navy wood-effect doors and drawer fronts,
+            with a high-gloss white marble worktop and splashback. Same cabinets —
+            completely different look.
+          </p>
+          <div className="mt-6 grid gap-4 sm:grid-cols-2">
+            <figure className="card-float overflow-hidden">
+              <div className="relative aspect-[3/4]">
+                <Image
+                  src="/images/Kitchen-navy-marble-doncaster/navy-marble-kitchen-wrap-doncaster-before-01.jpeg"
+                  alt="Kitchen wrap Doncaster before — grey gloss kitchen before navy marble wrap"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 640px) 100vw, 50vw"
+                />
+              </div>
+              <figcaption className="border-t border-border bg-card p-3 text-sm text-muted">
+                <span className="font-medium text-foreground">Before</span>
+                <span className="mt-1 block">Grey gloss kitchen, Doncaster</span>
+              </figcaption>
+            </figure>
+            <figure className="card-float overflow-hidden">
+              <div className="relative aspect-[3/4]">
+                <Image
+                  src="/images/Kitchen-navy-marble-doncaster/navy-marble-kitchen-wrap-doncaster-after-01.jpeg"
+                  alt="Navy wood-effect kitchen wrap Doncaster — white marble worktop after"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 640px) 100vw, 50vw"
+                />
+              </div>
+              <figcaption className="border-t border-border bg-card p-3 text-sm text-muted">
+                <span className="font-medium text-foreground">After</span>
+                <span className="mt-1 block">Navy wood-effect + white marble, Doncaster</span>
+              </figcaption>
+            </figure>
           </div>
         </div>
       </section>
