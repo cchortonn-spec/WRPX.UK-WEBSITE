@@ -1058,19 +1058,20 @@ a[href^="tel"]:hover {
   position: relative;
 }
 
-/* Homepage header — frosted glass over the hero photo (desktop + mobile).
-   Soft dark tint + blur so logo/menu stay readable while the kitchen shows through. */
+/* Homepage header — clear/white frosted glass (like frosted window film).
+   Light mist + blur only — no dark overlay, no bottom divider line. */
 .site-header-over-hero {
-  background: rgba(5, 5, 5, 0.42) !important;
-  background-color: rgba(5, 5, 5, 0.42) !important;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+  background: rgba(255, 255, 255, 0.14) !important;
+  background-color: rgba(255, 255, 255, 0.14) !important;
+  border-bottom: none !important;
   box-shadow: none !important;
-  backdrop-filter: blur(14px) saturate(1.15) !important;
-  -webkit-backdrop-filter: blur(14px) saturate(1.15) !important;
+  backdrop-filter: blur(18px) saturate(1.2) !important;
+  -webkit-backdrop-filter: blur(18px) saturate(1.2) !important;
 }
 
 .site-header-over-hero .text-muted {
-  color: rgba(255, 255, 255, 0.88);
+  color: rgba(255, 255, 255, 0.92);
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.35);
 }
 
 .site-header-over-hero .text-muted:hover,
@@ -1079,7 +1080,7 @@ a[href^="tel"]:hover {
   color: #ffffff;
 }
 
-/* Hamburger bars stay visible on the frosted bar */
+/* Hamburger bars stay visible through the frost */
 .site-header-over-hero button .bg-current {
   background-color: #ffffff;
 }
