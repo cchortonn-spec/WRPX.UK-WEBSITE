@@ -1058,19 +1058,19 @@ a[href^="tel"]:hover {
   position: relative;
 }
 
-/* Full-bleed hero — photo spans under transparent header (Washington feel).
-   No solid coloured nav box. Important: do NOT also apply Tailwind bg-* classes. */
+/* Homepage header — frosted glass over the hero photo (desktop + mobile).
+   Soft dark tint + blur so logo/menu stay readable while the kitchen shows through. */
 .site-header-over-hero {
-  background: transparent !important;
-  background-color: transparent !important;
-  border-bottom: 1px solid transparent !important;
+  background: rgba(5, 5, 5, 0.42) !important;
+  background-color: rgba(5, 5, 5, 0.42) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
   box-shadow: none !important;
-  backdrop-filter: none !important;
-  -webkit-backdrop-filter: none !important;
+  backdrop-filter: blur(14px) saturate(1.15) !important;
+  -webkit-backdrop-filter: blur(14px) saturate(1.15) !important;
 }
 
 .site-header-over-hero .text-muted {
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(255, 255, 255, 0.88);
 }
 
 .site-header-over-hero .text-muted:hover,
@@ -1079,7 +1079,7 @@ a[href^="tel"]:hover {
   color: #ffffff;
 }
 
-/* Hamburger bars stay visible on the photo */
+/* Hamburger bars stay visible on the frosted bar */
 .site-header-over-hero button .bg-current {
   background-color: #ffffff;
 }
