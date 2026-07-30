@@ -16,6 +16,14 @@ export const immersiveHeroImage = {
   height: 576,
 } as const;
 
+/** Portrait crop for phones — used only below the md breakpoint. */
+export const immersiveHeroImageMobile = {
+  src: "/images/hero-immersive-kitchen-mobile.jpg",
+  alt: "Modern dark kitchen with light stone island — mobile view",
+  width: 576,
+  height: 1024,
+} as const;
+
 export const heroImages = {
   before: {
     src: "/images/hero-before-2.png",

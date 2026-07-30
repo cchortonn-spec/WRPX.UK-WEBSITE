@@ -78,9 +78,11 @@ export function Header() {
 
   return (
     <header
-      className={`sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80${
-        overHero && !mobileOpen ? " site-header-over-hero" : ""
-      }`}
+      className={
+        overHero && !mobileOpen
+          ? "site-header-over-hero sticky top-0 z-50 w-full"
+          : "sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80"
+      }
     >
       <div className="container mx-auto flex min-h-20 max-w-6xl items-center justify-between gap-4 px-4 py-3 md:min-h-28">
         <Link href="/" className="logo-link flex shrink-0 items-center transition-colors duration-200 hover:text-accent-pink active:text-accent-pink">

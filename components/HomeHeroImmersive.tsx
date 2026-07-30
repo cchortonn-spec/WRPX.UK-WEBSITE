@@ -1,13 +1,16 @@
 import Image from "next/image";
 import Link from "next/link";
 import { siteConfig } from "@/lib/site-config";
-import { immersiveHeroImage } from "@/lib/hero-config";
+import {
+  immersiveHeroImage,
+  immersiveHeroImageMobile,
+} from "@/lib/hero-config";
 import { HeroLocationRotator } from "@/components/HeroLocationRotator";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 
 /**
  * Full-bleed photo hero (Washington-style): image spans under the header.
- * Light 20% dark overlay for readability. Menu stays normal (no solid nav box).
+ * Landscape on desktop, portrait on mobile. 20% dark overlay for readability.
  */
 export function HomeHeroImmersive() {
   return (
@@ -19,7 +22,16 @@ export function HomeHeroImmersive() {
           fill
           priority
           quality={95}
-          className="immersive-hero-image"
+          className="immersive-hero-image immersive-hero-image-desktop"
+          sizes="100vw"
+        />
+        <Image
+          src={immersiveHeroImageMobile.src}
+          alt={immersiveHeroImageMobile.alt}
+          fill
+          priority
+          quality={95}
+          className="immersive-hero-image immersive-hero-image-mobile"
           sizes="100vw"
         />
         <div className="immersive-hero-scrim" aria-hidden="true" />
