@@ -10,10 +10,10 @@ import { siteConfig } from "./site-config";
 export const useImmersiveHero = true;
 
 export const immersiveHeroImage = {
-  src: "/images/hero-after-2.png",
-  alt: "Modern kitchen after vinyl wrapping — South Yorkshire",
-  width: 1672,
-  height: 941,
+  src: "/images/hero-immersive-kitchen-v2.jpg",
+  alt: "Modern dark kitchen with light stone island and warm under-cabinet lighting",
+  width: 1024,
+  height: 576,
 } as const;
 
 export const heroImages = {

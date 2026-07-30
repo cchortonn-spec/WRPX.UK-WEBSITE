@@ -1058,44 +1058,67 @@ a[href^="tel"]:hover {
   position: relative;
 }
 
-/* Layered Washington-style hero — split copy + overlapping photo + trust bar.
-   Menu/header stays unchanged (no solid nav box). */
+/* Full-bleed hero — photo spans under transparent header (Washington feel).
+   No solid coloured nav box. */
+.site-header-over-hero {
+  background: transparent;
+  border-bottom-color: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
+.site-header-over-hero .text-muted {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.site-header-over-hero .text-muted:hover,
+.site-header-over-hero .text-foreground {
+  color: #ffffff;
+}
+
+/* Keep mobile drawer readable when header sits over the hero photo */
+.site-header-over-hero .border-t.bg-card {
+  background: #0c0c0c;
+  border-top-color: rgba(255, 255, 255, 0.12);
+}
+
 .immersive-hero {
   position: relative;
+  /* Pull up under the sticky header so the photo fills header + hero */
+  margin-top: -5.5rem;
+  min-height: min(92vh, 54rem);
+  display: flex;
+  align-items: flex-end;
   overflow: hidden;
-  background: #0c0c0c;
-  isolation: isolate;
+  background: #050505;
 }
 
-.immersive-hero-blueprint {
+.immersive-hero-media {
   position: absolute;
   inset: 0;
-  z-index: 0;
-  pointer-events: none;
-  opacity: 0.09;
-  background-image:
-    linear-gradient(rgba(255, 255, 255, 0.35) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.35) 1px, transparent 1px);
-  background-size: 48px 48px;
-  mask-image: radial-gradient(ellipse 70% 60% at 20% 40%, #000 20%, transparent 75%);
 }
 
-.immersive-hero-grid {
+.immersive-hero-image {
+  /* cover crops edges but never stretches/distorts */
+  object-fit: cover;
+  /* Bias left: darker cabinetry wall is the natural text area */
+  object-position: left center;
+}
+
+.immersive-hero-scrim {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.immersive-hero-content {
   position: relative;
   z-index: 1;
-  display: grid;
-  gap: 1.75rem;
+  width: 100%;
   max-width: 72rem;
   margin: 0 auto;
-  padding: 2.25rem 1.25rem 1.5rem;
-  align-items: end;
-}
-
-.immersive-hero-copy {
-  position: relative;
-  z-index: 2;
-  max-width: 34rem;
-  padding-bottom: 0.5rem;
+  padding: 7.5rem 1.25rem 2.75rem;
 }
 
 .immersive-hero-eyebrow {
@@ -1104,27 +1127,32 @@ a[href^="tel"]:hover {
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.65);
+  text-shadow: 0 1px 12px rgba(0, 0, 0, 0.55);
 }
 
 .immersive-hero-title {
   margin: 0;
-  font-size: clamp(2.1rem, 5.5vw, 3.65rem);
+  max-width: 14ch;
+  font-size: clamp(2.25rem, 6.5vw, 4.1rem);
   font-weight: 700;
-  line-height: 1.08;
+  line-height: 1.05;
   letter-spacing: -0.03em;
   color: #ffffff;
+  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.55);
 }
 
 .immersive-hero-subtitle {
-  margin: 1.1rem 0 0;
-  font-size: 1.02rem;
-  line-height: 1.6;
-  color: rgba(255, 255, 255, 0.72);
+  margin: 1.15rem 0 0;
+  max-width: 34rem;
+  font-size: clamp(1rem, 2.2vw, 1.15rem);
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.88);
+  text-shadow: 0 1px 14px rgba(0, 0, 0, 0.55);
 }
 
 .immersive-hero-actions {
-  margin-top: 1.5rem;
+  margin-top: 1.6rem;
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
@@ -1134,144 +1162,79 @@ a[href^="tel"]:hover {
 .immersive-hero-gallery {
   min-width: 10.5rem;
   justify-content: center;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.35);
 }
 
-.immersive-hero-visual {
-  position: relative;
-  z-index: 1;
-  min-height: 18rem;
-}
-
-.immersive-hero-photo {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  background: #111;
-  box-shadow:
-    0 24px 60px rgba(0, 0, 0, 0.55),
-    0 0 0 1px rgba(255, 255, 255, 0.04);
-}
-
-.immersive-hero-photo-img {
-  object-fit: cover;
-  object-position: center center;
-}
-
-.immersive-hero-inset {
-  position: absolute;
-  left: 0.85rem;
-  bottom: -1.35rem;
-  z-index: 3;
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  max-width: min(100%, 17rem);
-  padding: 0.45rem 0.75rem 0.45rem 0.45rem;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  background: rgba(12, 12, 12, 0.92);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.45);
-}
-
-.immersive-hero-inset-media {
-  position: relative;
-  width: 3.4rem;
-  height: 3.4rem;
-  flex-shrink: 0;
-  overflow: hidden;
-  background: #1a1a1a;
-}
-
-.immersive-hero-inset-text {
-  margin: 0;
-  font-size: 0.78rem;
-  line-height: 1.35;
-  color: rgba(255, 255, 255, 0.8);
-}
-
-.immersive-hero-bar {
-  position: relative;
-  z-index: 2;
-  display: grid;
-  gap: 1rem;
-  max-width: 72rem;
-  margin: 1.75rem auto 0;
-  padding: 1.15rem 1.25rem 1.35rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  background: #141414;
-}
-
-.immersive-hero-bar-item {
-  display: flex;
-  flex-direction: column;
-  gap: 0.2rem;
-}
-
-.immersive-hero-bar-label {
-  font-size: 0.68rem;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.45);
-}
-
-.immersive-hero-bar-value {
-  font-size: 0.95rem;
-  font-weight: 600;
+/* Secondary CTA — solid enough to read on the photo */
+.immersive-hero .btn-hero-secondary {
+  background: rgba(5, 5, 5, 0.72);
+  border-color: rgba(255, 255, 255, 0.85);
   color: #ffffff;
-  text-decoration: none;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
 }
 
-.immersive-hero-bar-link {
+.immersive-hero .btn-hero-secondary:hover {
+  background: rgba(5, 5, 5, 0.9);
+  border-color: #ffffff;
+}
+
+/* City/location rotator — pink so the changing word stands out */
+.immersive-hero .home-hero-accent,
+.immersive-hero .home-hero-location-text {
   color: var(--accent);
+  font-weight: 700;
 }
 
-.immersive-hero-bar-link:hover {
-  text-decoration: underline;
+@media (min-width: 768px) {
+  .immersive-hero {
+    margin-top: -7.5rem;
+  }
+
+  .immersive-hero-content {
+    padding: 9.5rem 1.75rem 3.5rem;
+  }
 }
 
-@media (min-width: 900px) {
-  .immersive-hero-grid {
-    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
-    gap: 2rem;
-    padding: 3rem 1.75rem 2rem;
-    min-height: 28rem;
+/* Mobile: keep text readable, stack buttons, show kitchen island */
+@media (max-width: 767px) {
+  .immersive-hero {
+    margin-top: -5.5rem;
+    min-height: min(85vh, 38rem);
+    align-items: flex-end;
   }
 
-  .immersive-hero-visual {
-    min-height: 24rem;
+  .immersive-hero-image {
+    object-position: 35% center;
   }
 
-  .immersive-hero-photo {
-    position: absolute;
-    top: -1.5rem;
-    right: 0;
-    bottom: -2.75rem;
+  .immersive-hero-content {
+    padding: 6.5rem 1.15rem 2rem;
+  }
+
+  .immersive-hero-title {
+    max-width: none;
+    font-size: clamp(1.85rem, 8.5vw, 2.5rem);
+  }
+
+  .immersive-hero-subtitle {
+    font-size: 0.98rem;
+  }
+
+  .immersive-hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .immersive-hero-whatsapp,
+  .immersive-hero-gallery {
     width: 100%;
-    height: auto;
-    aspect-ratio: auto;
-    /* Overlaps the trust bar for layered depth */
+    min-width: 0;
   }
 
-  .immersive-hero-inset {
-    left: 1rem;
-    bottom: -1.1rem;
-  }
-
-  .immersive-hero-bar {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 1.5rem;
-    margin-top: 0;
-    padding: 1.35rem 1.75rem 1.5rem;
-  }
-}
-
-@media (max-width: 899px) {
-  .immersive-hero-photo {
-    margin-bottom: 1.5rem;
+  .immersive-hero .home-hero-location {
+    min-width: 0;
+    display: inline;
   }
 }
 
@@ -1402,8 +1365,8 @@ a[href^="tel"]:hover {
 }
 
 .home-hero-accent {
-  color: #ffffff;
-  font-weight: 600;
+  color: var(--accent);
+  font-weight: 700;
 }
 
 .home-hero-actions {

@@ -2,9 +2,11 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { nav } from "@/lib/nav";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { useState } from "react";
+import { useImmersiveHero } from "@/lib/hero-config";
 
 function Dropdown({
   label,
@@ -61,6 +63,8 @@ function Dropdown({
 }
 
 export function Header() {
+  const pathname = usePathname();
+  const overHero = pathname === "/" && useImmersiveHero;
   const [servicesOpen, setServicesOpen] = useState(false);
   const [aboutOpen, setAboutOpen] = useState(false);
   const [locationsOpen, setLocationsOpen] = useState(false);
@@ -73,7 +77,11 @@ export function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80">
+    <header
+      className={`sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80${
+        overHero && !mobileOpen ? " site-header-over-hero" : ""
+      }`}
+    >
       <div className="container mx-auto flex min-h-20 max-w-6xl items-center justify-between gap-4 px-4 py-3 md:min-h-28">
         <Link href="/" className="logo-link flex shrink-0 items-center transition-colors duration-200 hover:text-accent-pink active:text-accent-pink">
           <Image
