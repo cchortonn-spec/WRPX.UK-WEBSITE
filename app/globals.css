@@ -1,18 +1,19 @@
 @import "tailwindcss";
 
-/* WRPX brand: black main, white, accent lime #ccff02 — subtle pink #df1591 */
+/* WRPX brand: matt black, white, rare soft pink accent #d40082 */
 :root {
   --background: #050505;
   --foreground: #fafafa;
-  --muted: #8a8a8a;
-  --accent: #ccff02;
-  --accent-foreground: #050505;
-  --accent-pink: #df1591;
+  --muted: #9a9a9a;
+  --accent: #d40082;
+  --accent-foreground: #ffffff;
+  --accent-pink: #d40082;
   --card: #0a0a0a;
   --card-foreground: #fafafa;
   --border: #2a2a2a;
   --surface: rgba(255, 255, 255, 0.04);
   --surface-raised: rgba(255, 255, 255, 0.07);
+  --surface-band: #111111;
 }
 
 @theme inline {
@@ -30,19 +31,19 @@
 }
 
 html {
-  background: transparent;
+  background: var(--background);
   min-height: 100%;
 }
 
 body {
-  background: transparent;
+  background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans), system-ui, sans-serif;
   position: relative;
   min-height: 100vh;
 }
 
-/* Fixed background layer — stays still on scroll for depth effect. Image: public/sitebackground.png */
+/* Fixed matt black base — no wood, no pink wash */
 body::before {
   content: "";
   position: fixed;
@@ -50,14 +51,10 @@ body::before {
   min-height: 100vh;
   z-index: -1;
   pointer-events: none;
-  background-color: #2e2e2e;
-  background-image: url("/sitebackground.png");
-  background-repeat: repeat;
-  background-size: auto;
-  filter: contrast(1.02) brightness(1.7);
+  background: linear-gradient(180deg, #050505 0%, #080808 100%);
 }
 
-/* Primary CTA button style */
+/* Primary CTA — pink used sparingly here */
 .btn-primary {
   background-color: var(--accent);
   color: var(--accent-foreground);
@@ -67,7 +64,7 @@ body::before {
   transition: opacity 0.15s, transform 0.1s;
 }
 .btn-primary:hover {
-  opacity: 0.95;
+  opacity: 0.92;
   transform: translateY(-1px);
 }
 
@@ -80,43 +77,64 @@ body::before {
   transition: border-color 0.15s, background 0.15s;
 }
 .btn-secondary:hover {
-  border-color: var(--accent);
-  background: rgba(204, 255, 2, 0.08);
+  border-color: rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.04);
 }
 
-/* Floating card — glass surface with subtle lift on hover */
+/* Pink text CTA — use next to WhatsApp so colours don't clash */
+.btn-accent-text {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.375rem;
+  border: 1px solid rgba(212, 0, 130, 0.35);
+  background: transparent;
+  color: var(--accent);
+  font-weight: 600;
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+}
+.btn-accent-text:hover {
+  background: rgba(212, 0, 130, 0.08);
+  border-color: rgba(212, 0, 130, 0.55);
+  color: #ff4db8;
+}
+
+/* Small pink accents — ticks, bullets, step numbers (not headings) */
+.accent-tick {
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+/* Floating card — stealth charcoal glass (neutral hover, no pink glow) */
 .card-float {
   border-radius: 1rem;
-  border: 1px solid rgba(255, 255, 255, 0.09);
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(18, 18, 18, 0.72);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
   box-shadow:
-    0 1px 0 rgba(255, 255, 255, 0.06) inset,
-    0 4px 20px rgba(0, 0, 0, 0.35);
+    0 1px 0 rgba(255, 255, 255, 0.05) inset,
+    0 4px 20px rgba(0, 0, 0, 0.45);
   transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s, background 0.2s;
 }
 .card-float:hover {
-  border-color: rgba(255, 255, 255, 0.14);
-  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(255, 255, 255, 0.16);
+  background: rgba(22, 22, 22, 0.85);
   box-shadow:
-    0 1px 0 rgba(255, 255, 255, 0.08) inset,
-    0 8px 28px rgba(0, 0, 0, 0.4);
+    0 1px 0 rgba(255, 255, 255, 0.06) inset,
+    0 8px 28px rgba(0, 0, 0, 0.5);
   transform: translateY(-2px);
 }
 
-/* Homepage alternating section bands */
+/* Homepage alternating section bands — matt charcoal */
 .home-section-alt {
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.04) 0%,
-    rgba(255, 255, 255, 0.02) 100%
-  );
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  background: var(--surface-band);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
-/* Homepage section heading with subtle underline */
+/* Homepage section heading — soft white underline */
 .section-heading {
   position: relative;
   display: inline-block;
@@ -126,16 +144,16 @@ body::before {
 .section-heading::after {
   content: "";
   display: block;
-  width: 3rem;
+  width: 2.5rem;
   height: 2px;
   margin: 0.75rem auto 0;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(212, 0, 130, 0.45);
   border-radius: 1px;
 }
 
-/* Subtle inline links — white by default, lime on hover */
+/* Subtle inline links — soft pink only on hover */
 .link-subtle {
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.85);
   text-decoration: underline;
   text-underline-offset: 3px;
   transition: color 0.15s;
@@ -159,16 +177,17 @@ body::before {
   animation: fadeUp 0.55s ease both;
 }
 
-/* Soft radial divider between sections */
+/* Soft hairline divider — used sparingly */
 .section-sep {
   height: 1px;
   background: radial-gradient(
     ellipse at center,
-    rgba(255, 255, 255, 0.08) 0%,
+    rgba(255, 255, 255, 0.06) 0%,
     transparent 70%
   );
   margin: 0 auto;
-  max-width: 48rem;
+  max-width: 40rem;
+  opacity: 0.7;
 }
 
 /* WRPX trust panel — branded van / local specialist */
@@ -177,7 +196,7 @@ body::before {
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: rgba(255, 255, 255, 0.55);
 }
 
 .wrpx-trust-heading {
@@ -347,11 +366,11 @@ body::before {
   align-items: center;
   justify-content: center;
   border-radius: 9999px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(212, 0, 130, 0.4);
   background: transparent;
   font-size: 1.125rem;
   font-weight: 700;
-  color: var(--foreground);
+  color: var(--accent);
 }
 
 /* Logo turns pink on hover (desktop) and tap/click (mobile) */
@@ -592,7 +611,7 @@ a[href^="tel"]:hover {
 
 .quote-option-card-active {
   border-color: var(--accent);
-  box-shadow: 0 0 0 1px rgba(204, 255, 2, 0.2);
+  box-shadow: 0 0 0 1px rgba(212, 0, 130, 0.2);
 }
 
 @media (max-width: 640px) {
@@ -684,7 +703,7 @@ a[href^="tel"]:hover {
 .dashboard-input:focus {
   outline: none;
   border-color: var(--accent);
-  box-shadow: 0 0 0 1px rgba(204, 255, 2, 0.25);
+  box-shadow: 0 0 0 1px rgba(212, 0, 130, 0.25);
 }
 
 .dashboard-login-form {
@@ -951,7 +970,7 @@ a[href^="tel"]:hover {
 }
 
 .dashboard-pill-accent {
-  background: rgba(204, 255, 2, 0.12);
+  background: rgba(212, 0, 130, 0.12);
   color: var(--accent);
 }
 
@@ -959,7 +978,7 @@ a[href^="tel"]:hover {
   display: inline-flex;
   padding: 0.2rem 0.55rem;
   border-radius: 999px;
-  background: rgba(223, 21, 145, 0.12);
+  background: rgba(212, 0, 130, 0.12);
   color: #ff9fd0;
   font-size: 0.78rem;
   font-weight: 600;
@@ -1036,12 +1055,267 @@ a[href^="tel"]:hover {
 /* Homepage hero + before/after slider */
 .home-hero {
   background: #050505;
+  position: relative;
+}
+
+/* Layered Washington-style hero — split copy + overlapping photo + trust bar.
+   Menu/header stays unchanged (no solid nav box). */
+.immersive-hero {
+  position: relative;
+  overflow: hidden;
+  background: #0c0c0c;
+  isolation: isolate;
+}
+
+.immersive-hero-blueprint {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.09;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.35) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.35) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(ellipse 70% 60% at 20% 40%, #000 20%, transparent 75%);
+}
+
+.immersive-hero-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 1.75rem;
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 2.25rem 1.25rem 1.5rem;
+  align-items: end;
+}
+
+.immersive-hero-copy {
+  position: relative;
+  z-index: 2;
+  max-width: 34rem;
+  padding-bottom: 0.5rem;
+}
+
+.immersive-hero-eyebrow {
+  margin: 0 0 0.85rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.immersive-hero-title {
+  margin: 0;
+  font-size: clamp(2.1rem, 5.5vw, 3.65rem);
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+  color: #ffffff;
+}
+
+.immersive-hero-subtitle {
+  margin: 1.1rem 0 0;
+  font-size: 1.02rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.immersive-hero-actions {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.immersive-hero-whatsapp,
+.immersive-hero-gallery {
+  min-width: 10.5rem;
+  justify-content: center;
+}
+
+.immersive-hero-visual {
+  position: relative;
+  z-index: 1;
+  min-height: 18rem;
+}
+
+.immersive-hero-photo {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #111;
+  box-shadow:
+    0 24px 60px rgba(0, 0, 0, 0.55),
+    0 0 0 1px rgba(255, 255, 255, 0.04);
+}
+
+.immersive-hero-photo-img {
+  object-fit: cover;
+  object-position: center center;
+}
+
+.immersive-hero-inset {
+  position: absolute;
+  left: 0.85rem;
+  bottom: -1.35rem;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  max-width: min(100%, 17rem);
+  padding: 0.45rem 0.75rem 0.45rem 0.45rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(12, 12, 12, 0.92);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.45);
+}
+
+.immersive-hero-inset-media {
+  position: relative;
+  width: 3.4rem;
+  height: 3.4rem;
+  flex-shrink: 0;
+  overflow: hidden;
+  background: #1a1a1a;
+}
+
+.immersive-hero-inset-text {
+  margin: 0;
+  font-size: 0.78rem;
+  line-height: 1.35;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.immersive-hero-bar {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  gap: 1rem;
+  max-width: 72rem;
+  margin: 1.75rem auto 0;
+  padding: 1.15rem 1.25rem 1.35rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  background: #141414;
+}
+
+.immersive-hero-bar-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.immersive-hero-bar-label {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.immersive-hero-bar-value {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.immersive-hero-bar-link {
+  color: var(--accent);
+}
+
+.immersive-hero-bar-link:hover {
+  text-decoration: underline;
+}
+
+@media (min-width: 900px) {
+  .immersive-hero-grid {
+    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+    gap: 2rem;
+    padding: 3rem 1.75rem 2rem;
+    min-height: 28rem;
+  }
+
+  .immersive-hero-visual {
+    min-height: 24rem;
+  }
+
+  .immersive-hero-photo {
+    position: absolute;
+    top: -1.5rem;
+    right: 0;
+    bottom: -2.75rem;
+    width: 100%;
+    height: auto;
+    aspect-ratio: auto;
+    /* Overlaps the trust bar for layered depth */
+  }
+
+  .immersive-hero-inset {
+    left: 1rem;
+    bottom: -1.1rem;
+  }
+
+  .immersive-hero-bar {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+    margin-top: 0;
+    padding: 1.35rem 1.75rem 1.5rem;
+  }
+}
+
+@media (max-width: 899px) {
+  .immersive-hero-photo {
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* Mid-page before/after slider (no overlay copy) */
+.before-after-showcase {
+  padding: 3rem 1rem;
+  background: #050505;
+}
+
+.before-after-showcase-inner {
+  max-width: 72rem;
+  margin: 0 auto;
+}
+
+.before-after-showcase-heading {
+  margin-bottom: 1.25rem;
+  text-align: center;
+}
+
+.before-after-showcase-lead {
+  margin: 0.65rem auto 0;
+  max-width: 28rem;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+.before-after-showcase-slider {
+  border-radius: 1rem;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: #080808;
+}
+
+@media (min-width: 768px) {
+  .before-after-showcase {
+    padding: 3.5rem 1.5rem;
+  }
 }
 
 .home-hero-inner {
   position: relative;
   width: 100%;
   isolation: isolate;
+  z-index: 1;
 }
 
 .home-hero-media {
@@ -1128,7 +1402,7 @@ a[href^="tel"]:hover {
 }
 
 .home-hero-accent {
-  color: var(--accent);
+  color: #ffffff;
   font-weight: 600;
 }
 
@@ -1159,7 +1433,7 @@ a[href^="tel"]:hover {
   gap: 0.55rem;
   padding: 0.75rem 1.25rem;
   border-radius: 0.5rem;
-  border: 2px solid var(--accent);
+  border: 2px solid rgba(255, 255, 255, 0.55);
   background: transparent;
   color: var(--foreground);
   font-weight: 600;
@@ -1168,7 +1442,8 @@ a[href^="tel"]:hover {
 }
 
 .btn-hero-secondary:hover {
-  background: rgba(204, 255, 2, 0.1);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.8);
   transform: translateY(-1px);
 }
 
@@ -1244,8 +1519,8 @@ a[href^="tel"]:hover {
 
 .slider-label-after {
   right: 1rem;
-  background: var(--accent);
-  color: var(--accent-foreground);
+  background: rgba(255, 255, 255, 0.92);
+  color: #050505;
 }
 
 .before-after-slider-divider {
@@ -1259,9 +1534,9 @@ a[href^="tel"]:hover {
 }
 
 .before-after-slider-divider line {
-  stroke: var(--accent);
-  stroke-width: 4px;
-  filter: drop-shadow(0 0 10px rgba(204, 255, 2, 0.65));
+  stroke: #ffffff;
+  stroke-width: 3px;
+  filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.55));
 }
 
 .before-after-slider-handle {
@@ -1275,22 +1550,22 @@ a[href^="tel"]:hover {
   height: 3rem;
   margin-top: -1.5rem;
   margin-left: -1.5rem;
-  border: 3px solid var(--accent);
+  border: 3px solid #ffffff;
   border-radius: 9999px;
   background: #050505;
   color: #fff;
   cursor: ew-resize;
   box-shadow:
-    0 0 0 4px rgba(204, 255, 2, 0.15),
+    0 0 0 3px rgba(255, 255, 255, 0.12),
     0 6px 24px rgba(0, 0, 0, 0.55);
   transition: box-shadow 0.15s, border-color 0.15s;
 }
 
 .before-after-slider-handle:hover,
 .before-after-slider-handle:focus-visible {
-  border-color: #e5ff4d;
+  border-color: #ffffff;
   box-shadow:
-    0 0 0 6px rgba(204, 255, 2, 0.22),
+    0 0 0 5px rgba(255, 255, 255, 0.18),
     0 8px 28px rgba(0, 0, 0, 0.6);
   outline: none;
 }
@@ -1329,9 +1604,9 @@ a[href^="tel"]:hover {
   width: 2.75rem;
   height: 2.75rem;
   flex-shrink: 0;
-  border: 2px solid var(--accent);
+  border: 2px solid rgba(255, 255, 255, 0.35);
   border-radius: 9999px;
-  color: var(--accent);
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .hero-trust-title {
@@ -1351,7 +1626,7 @@ a[href^="tel"]:hover {
   display: flex;
   gap: 0.2rem;
   margin-top: 0.5rem;
-  color: var(--accent);
+  color: #f5c518;
 }
 
 @media (min-width: 640px) {
@@ -1362,40 +1637,45 @@ a[href^="tel"]:hover {
   }
 }
 
-/* Google reviews — pearl / iOS clear glass */
+/* Google reviews — charcoal glass */
 .google-reviews-section {
-  padding: 4rem 1rem;
+  padding: 3rem 1rem;
+  position: relative;
 }
 
 .google-reviews-panel {
+  position: relative;
+  z-index: 1;
   max-width: 64rem;
   margin: 0 auto;
   border-radius: 1.5rem;
-  border: 1px solid rgba(255, 255, 255, 0.22);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   background:
     linear-gradient(
       145deg,
-      rgba(255, 255, 255, 0.18) 0%,
-      rgba(255, 255, 255, 0.06) 45%,
-      rgba(255, 255, 255, 0.1) 100%
+      rgba(28, 28, 28, 0.92) 0%,
+      rgba(14, 14, 14, 0.88) 100%
     );
-  backdrop-filter: blur(24px) saturate(1.35);
-  -webkit-backdrop-filter: blur(24px) saturate(1.35);
+  backdrop-filter: blur(20px) saturate(1.2);
+  -webkit-backdrop-filter: blur(20px) saturate(1.2);
   box-shadow:
-    0 1px 0 rgba(255, 255, 255, 0.35) inset,
-    0 -1px 0 rgba(255, 255, 255, 0.06) inset,
-    0 12px 40px rgba(0, 0, 0, 0.35);
+    0 1px 0 rgba(255, 255, 255, 0.08) inset,
+    0 12px 40px rgba(0, 0, 0, 0.45);
   overflow: hidden;
   transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
 }
 
 .google-reviews-panel:hover {
-  border-color: rgba(255, 255, 255, 0.32);
+  border-color: rgba(255, 255, 255, 0.2);
   box-shadow:
-    0 1px 0 rgba(255, 255, 255, 0.4) inset,
-    0 -1px 0 rgba(255, 255, 255, 0.08) inset,
-    0 16px 48px rgba(0, 0, 0, 0.4);
+    0 1px 0 rgba(255, 255, 255, 0.1) inset,
+    0 16px 48px rgba(0, 0, 0, 0.5);
   transform: translateY(-2px);
+}
+
+/* Final homepage CTA — no pink bloom */
+.home-cta-glow {
+  position: relative;
 }
 
 .google-reviews-status {
@@ -1417,7 +1697,7 @@ a[href^="tel"]:hover {
 }
 
 .google-reviews-status:focus-visible {
-  box-shadow: inset 0 0 0 2px rgba(204, 255, 2, 0.55);
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.45);
 }
 
 .google-reviews-g {
@@ -1523,7 +1803,7 @@ a[href^="tel"]:hover {
 }
 
 .google-reviews-chip:focus-visible {
-  box-shadow: 0 0 0 2px rgba(204, 255, 2, 0.45);
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.4);
 }
 
 .google-reviews-chip-stars {
@@ -1563,14 +1843,14 @@ a[href^="tel"]:hover {
   margin-top: 0.65rem;
   font-size: 0.8rem;
   font-weight: 600;
-  color: var(--accent);
+  color: rgba(255, 255, 255, 0.75);
   text-decoration: none;
-  transition: opacity 0.15s;
+  transition: color 0.15s;
 }
 
 .hero-trust-google-link:hover,
 .hero-trust-google-link:focus-visible {
-  opacity: 0.85;
+  color: var(--accent);
   outline: none;
   text-decoration: underline;
 }

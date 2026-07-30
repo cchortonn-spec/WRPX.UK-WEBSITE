@@ -5,7 +5,12 @@
  * profileUrl: link that opens your Google Business reviews.
  * reviewCount: set to your real Google count (or null to hide the number).
  */
-export const googleReviews = {
+export const googleReviews: {
+  profileUrl: string;
+  rating: number;
+  reviewCount: number | null;
+  reviews: ReadonlyArray<{ name: string; quote: string }>;
+} = {
   profileUrl: "https://share.google/dKrZsbcEILvSQeRVQ",
   rating: 5,
   reviewCount: 4,
@@ -31,4 +36,4 @@ export const googleReviews = {
         "Connor did a brilliant job with my kitchen — he turned it into a brand new kitchen. Very polite and professional. I love my new kitchen, thank you!",
     },
   ],
-} as const;
+};
