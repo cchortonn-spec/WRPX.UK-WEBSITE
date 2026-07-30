@@ -80,8 +80,16 @@ export function Header() {
     <header
       className={
         overHero && !mobileOpen
-          ? "site-header-over-hero sticky top-0 z-50 w-full"
+          ? "site-header-over-hero backdrop-blur-xl backdrop-saturate-150"
           : "sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80"
+      }
+      style={
+        overHero && !mobileOpen
+          ? {
+              WebkitBackdropFilter: "blur(40px) saturate(1.8)",
+              backdropFilter: "blur(40px) saturate(1.8)",
+            }
+          : undefined
       }
     >
       <div className="container mx-auto flex min-h-20 max-w-6xl items-center justify-between gap-4 px-4 py-3 md:min-h-28">
