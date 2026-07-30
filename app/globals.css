@@ -1059,16 +1059,15 @@ a[href^="tel"]:hover {
 }
 
 /* Homepage header — frosted window film.
-   Heavy blur + milky white mist so anything behind (hero or scrolled content)
-   looks soft/frosted — not crystal clear. No bottom divider. */
+   Heavy blur so anything behind looks soft/frosted (not crystal clear).
+   Keep the white mist light — frost comes from blur, not opacity. No bottom divider. */
 .site-header-over-hero {
-  background: rgba(255, 255, 255, 0.32) !important;
-  background-color: rgba(255, 255, 255, 0.32) !important;
+  background: rgba(255, 255, 255, 0.12) !important;
+  background-color: rgba(255, 255, 255, 0.12) !important;
   border-bottom: none !important;
   box-shadow: none !important;
-  /* Strong blur = frosted glass; content scrolling underneath softens */
-  backdrop-filter: blur(48px) saturate(1.35) brightness(1.05) !important;
-  -webkit-backdrop-filter: blur(48px) saturate(1.35) brightness(1.05) !important;
+  backdrop-filter: blur(80px) saturate(1.2) !important;
+  -webkit-backdrop-filter: blur(80px) saturate(1.2) !important;
 }
 
 .site-header-over-hero .text-muted {
