@@ -482,6 +482,9 @@ export default function SubcontractVinylInstallerPrestonPage() {
             <Link href="/subcontract-vinyl-installer-blackpool/" className="card-float px-4 py-2 text-sm text-accent hover:underline">
               Blackpool
             </Link>
+            <Link href="/subcontract-vinyl-installer-burnley/" className="card-float px-4 py-2 text-sm text-accent hover:underline">
+              Burnley &amp; East Lancashire
+            </Link>
           </div>
           <p className="mt-6 text-sm text-muted">
             View all coverage:{" "}

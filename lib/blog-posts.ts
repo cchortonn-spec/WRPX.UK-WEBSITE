@@ -282,6 +282,13 @@ export const blogPosts = [
       "A practical guide for sign companies, print houses and brand managers subcontracting vinyl installation across Liverpool and Merseyside — Albert Dock waterfront heritage installation specifics, Baltic Triangle creative district briefing, Knowledge Quarter university and NHS access, Wirral via Mersey Tunnels, Knowsley Business Park outer Merseyside and how to brief a subcontract installer for North West programmes.",
     date: "2026-07-30",
   },
+  {
+    slug: "chester-subcontract-installation-guide",
+    title: "Chester Subcontract Installation — A Guide for Sign Companies and Print Houses",
+    description:
+      "A practical guide for sign companies, print houses and brand managers subcontracting vinyl installation across Chester and Cheshire West — conservation area and listed building constraints in the walled city, The Rows two-level access briefing, Cheshire Oaks retail rollout logistics, Chester Business Park and the CH postcode zone.",
+    date: "2026-07-31",
+  },
 ] as const;
 
 export type BlogSlug = (typeof blogPosts)[number]["slug"];

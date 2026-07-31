@@ -457,4 +457,24 @@ Cross-reference slug + service + region against the lists below. If a match exis
 
 ---
 
-_Last updated by automation run on 2026-07-30_
+### New B2B Pages (added 2026-07-31, Run 25)
+
+| Slug | Title / Purpose |
+|---|---|
+| `/subcontract-vinyl-installer-bolton/` | Bolton & Greater Manchester North B2B subcontract city page (M61 from Wigan/Manchester; BL postcode; Middlebrook Retail Park Horwich M61 j6; Crompton Place/Market Place town centre; University of Bolton; Bolton One health/tech campus; Bury BL9 15min east via A58; Horwich/Westhoughton industrial; M61 bridge between M6 Wigan/Chorley and M60 Manchester; BreadcrumbList + FAQPage schema) |
+| `/subcontract-vinyl-installer-burnley/` | Burnley & East Lancashire B2B subcontract city page (M65 east from Preston/Blackburn; BB postcode zone; Burnley Bridge Business Park M65 j11; Charter Walk; St James Street; Blackburn BB1–BB2; The Mall Blackburn 70+ stores; Darwen BB3; Accrington BB5; Nelson BB9 Pendle Shopping; Colne BB8; M65 20-mile corridor Blackburn to Colne; A646 trans-Pennine Burnley–Halifax; A666 Bolton–Blackburn south; BreadcrumbList + FAQPage schema) |
+| `/blog/chester-subcontract-installation-guide/` | B2B guide: Chester subcontract installation — walled city vs modern commercial zone distinction; The Rows two-level gallery access (gallery level vs street level, surface types, historic glazing); conservation area and listed building constraints (what requires consent, what does not); Cheshire Oaks M53 j10 operating hours/access/brand standards briefing; Chester Business Park modern commercial stock; Wrexham/North Wales border zone context; how to brief effectively (building description checklist); M53/M56/M62 corridor geography |
+
+### Technical improvements (2026-07-31)
+- `/subcontract-vinyl-installer-wigan/` — Bolton added to corridor links
+- `/subcontract-vinyl-installer-manchester/` — Bolton added to corridor links
+- `/subcontract-vinyl-installer-preston/` — Burnley & East Lancashire added to corridor links
+- `/subcontract-vinyl-installer-chester/` — Chester installation guide blog link added to corridor section
+- `/commercial-installation/` — Bolton and Burnley subcontract links added
+- `/subcontract-vinyl-installation-yorkshire/` — Bolton and Burnley added to city link grid
+- Sitemap updated with 2 new routes (subcontract-vinyl-installer-bolton, subcontract-vinyl-installer-burnley)
+- blog-posts.ts updated with chester-subcontract-installation-guide
+
+---
+
+_Last updated by automation run on 2026-07-31_
