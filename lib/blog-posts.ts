@@ -289,6 +289,13 @@ export const blogPosts = [
       "A practical guide for sign companies, print houses and brand managers subcontracting vinyl installation across Chester and Cheshire West — conservation area and listed building constraints in the walled city, The Rows two-level access briefing, Cheshire Oaks retail rollout logistics, Chester Business Park and the CH postcode zone.",
     date: "2026-07-31",
   },
+  {
+    slug: "bolton-east-lancashire-installation-guide",
+    title: "Bolton & East Lancashire Subcontract Installation — A Guide for Sign Companies and Print Houses",
+    description:
+      "A practical guide for sign companies, print houses and brand managers subcontracting vinyl installation across Bolton, Burnley and the East Lancashire corridor — M61/M65/A666 motorway planning, Middlebrook Retail Park briefing, mill-conversion substrate considerations and multi-city North West programme logistics.",
+    date: "2026-08-01",
+  },
 ] as const;
 
 export type BlogSlug = (typeof blogPosts)[number]["slug"];

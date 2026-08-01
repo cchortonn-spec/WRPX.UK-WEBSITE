@@ -477,4 +477,23 @@ Cross-reference slug + service + region against the lists below. If a match exis
 
 ---
 
-_Last updated by automation run on 2026-07-31_
+## Run 26 additions (2026-08-01)
+
+| Slug | Title / Purpose |
+|---|---|
+| `/subcontract-vinyl-installer-kendal/` | Kendal & South Cumbria B2B subcontract city page (M6 j36-37; LA8/LA9 postcode zone; Kendal town centre Georgian/Victorian limestone buildings; Kendal Business Park/Shap Road Industrial Estate; Barrow-in-Furness LA14 BAE Systems Submarines; Ulverston LA12 A590 corridor; Windermere/Bowness LA23 Lake District gateway resort; Carnforth LA5/LA6 north Lancashire border; BreadcrumbList + FAQPage schema) |
+| `/subcontract-vinyl-installer-middlesbrough/` | Middlesbrough & Teesside B2B subcontract city page (A1(M) north from Doncaster, A66 Darlington junction, A19 into Teesside; TS1–TS25 and DL1 postcode zone; Middlesbrough town centre Cleveland Centre/Captain Cook Square; Stockton-on-Tees High Street/Teesdale Business Park; Teesside University TS1; Darlington Morton Park DL1; Teesworks freeport TS10/TS11; Hartlepool Marina TS24; BreadcrumbList + FAQPage schema) |
+| `/blog/bolton-east-lancashire-installation-guide/` | B2B guide: Bolton & East Lancashire subcontract installation — M61/M65/A666 arc as single programme (driving times: Bolton–Manchester 20min, Bolton–Blackburn 20min A666, Blackburn–Burnley 15min M65); Bolton two zones: Middlebrook Retail Park M61 j6 (modern, out-of-hours access) vs Bolton town centre Crompton Place/Market Place (pedestrianised, centre management); East Lancashire mill-conversion substrate briefing (exposed brick, metal frames, original floors — confirm before material production); Burnley Bridge Business Park M65 j11; Blackburn The Mall BB1/BB2; Accrington Market Hall BB5; Nelson/Colne M65 eastern terminus; A666 Darwen corridor; A646 trans-Pennine Burnley–Halifax–Bradford; multi-city corridor logic (Manchester + Bolton + Blackburn in one day; Bolton + Wigan; Bolton + Preston) |
+
+### Technical improvements (2026-08-01)
+- `/subcontract-vinyl-installer-lancaster/` — Kendal & South Cumbria added to corridor links
+- `/subcontract-vinyl-installer-york/` — Middlesbrough & Teesside added to corridor links
+- `/subcontract-vinyl-installer-harrogate/` — Middlesbrough & Teesside added to corridor links
+- `/subcontract-vinyl-installer-bolton/` — Bolton & East Lancashire installation guide blog link added
+- `/subcontract-vinyl-installer-burnley/` — Bolton & East Lancashire installation guide blog link added
+- Sitemap updated with 2 new routes (subcontract-vinyl-installer-kendal, subcontract-vinyl-installer-middlesbrough)
+- blog-posts.ts updated with bolton-east-lancashire-installation-guide
+
+---
+
+_Last updated by automation run on 2026-08-01_

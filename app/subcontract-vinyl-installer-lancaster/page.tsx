@@ -523,6 +523,9 @@ export default function SubcontractVinylInstallerLancasterPage() {
             <Link href="/subcontract-vinyl-installer-liverpool/" className="card-float px-4 py-2 text-sm text-accent hover:underline">
               Liverpool
             </Link>
+            <Link href="/subcontract-vinyl-installer-kendal/" className="card-float px-4 py-2 text-sm text-accent hover:underline">
+              Kendal &amp; South Cumbria
+            </Link>
           </div>
           <p className="mt-6 text-sm text-muted">
             View all coverage:{" "}

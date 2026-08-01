@@ -531,6 +531,10 @@ export default function SubcontractVinylInstallerBoltonPage() {
             ·{" "}
             <Link href="/commercial-installation/" className="text-accent hover:underline">
               Commercial installation overview
+            </Link>{" "}
+            ·{" "}
+            <Link href="/blog/bolton-east-lancashire-installation-guide/" className="text-accent hover:underline">
+              Bolton &amp; East Lancashire installation guide
             </Link>
           </p>
         </div>
