@@ -120,6 +120,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "subcontract-vinyl-installer-wigan",
     "subcontract-vinyl-installer-bolton",
     "subcontract-vinyl-installer-burnley",
+    "subcontract-vinyl-installer-kendal",
+    "subcontract-vinyl-installer-middlesbrough",
   ];
   const windowFilm = [
     "window-film",
