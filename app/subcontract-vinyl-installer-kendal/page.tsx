@@ -516,6 +516,9 @@ export default function SubcontractVinylInstallerKendalPage() {
             Also covering across the corridor
           </h2>
           <div className="flex flex-wrap gap-3">
+            <Link href="/subcontract-vinyl-installer-carlisle/" className="card-float px-4 py-2 text-sm text-accent hover:underline">
+              Carlisle &amp; Cumbria
+            </Link>
             <Link href="/subcontract-vinyl-installer-lancaster/" className="card-float px-4 py-2 text-sm text-accent hover:underline">
               Lancaster
             </Link>

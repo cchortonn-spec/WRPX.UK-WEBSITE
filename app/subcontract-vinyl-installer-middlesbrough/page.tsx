@@ -501,6 +501,9 @@ export default function SubcontractVinylInstallerMiddlesbroughPage() {
             Also covering across the corridor
           </h2>
           <div className="flex flex-wrap gap-3">
+            <Link href="/subcontract-vinyl-installer-newcastle/" className="card-float px-4 py-2 text-sm text-accent hover:underline">
+              Newcastle &amp; North East
+            </Link>
             <Link href="/subcontract-vinyl-installer-york/" className="card-float px-4 py-2 text-sm text-accent hover:underline">
               York
             </Link>
