@@ -496,4 +496,22 @@ Cross-reference slug + service + region against the lists below. If a match exis
 
 ---
 
-_Last updated by automation run on 2026-08-01_
+---
+
+## Run 27 additions (2026-08-02)
+
+| Slug | Title / Purpose |
+|---|---|
+| `/subcontract-vinyl-installer-carlisle/` | Carlisle & Cumbria B2B subcontract city page (M6 j43-44; CA postcode zone; Carlisle city centre Georgian/Victorian sandstone English Street/Scotch Street/The Lanes; Kingstown Retail Park CA3 north; Willowholme/Kingmoor Industrial Estates; Penrith CA10/CA11 M6 j40 25min south; Cumberland Infirmary NHS CA2; University of Cumbria multi-campus; natural M6 terminus beyond Kendal; Scotland/Gretna gateway; BreadcrumbList + FAQPage schema) |
+| `/subcontract-vinyl-installer-newcastle/` | Newcastle & North East B2B subcontract city page (A1(M) north from Doncaster/Darlington/Durham; NE postcode zone; Grainger Town Victorian sandstone period frontages Grey Street/Grainger Street — surface confirmation note; Eldon Square/Northumberland Street modern retail core — pedestrianised access; MetroCentre Gateshead NE11 Europe's largest indoor shopping complex — contractor management/out-of-hours access; Team Valley Business Park NE11 Europe's largest planned business park; Sunderland SR1/SR2 city centre + Washington NE37/NE38 Nissan corridor 25min south; Durham DH1 A1(M) midpoint 20min south; Newcastle University/Northumbria University NE1/NE2; Newcastle upon Tyne Hospitals NHS — RVI/Freeman/GNCH; A19 south 50min to Middlesbrough; A69 west 75min to Carlisle M6 connection; BreadcrumbList + FAQPage schema) |
+| `/blog/newcastle-north-east-subcontract-installation-guide/` | B2B guide: Newcastle & North East subcontract installation — North East as one A1(M)/A19 corridor (Newcastle–Gateshead 10min, Newcastle–Sunderland 25min A19/A690, Newcastle–Durham 20min A1(M), Newcastle–Middlesbrough 50min A19); Grainger Town two-zone analysis (Victorian sandstone — interior window graphics vs external fascia surface confirmation); MetroCentre Gateshead briefing (contractor management system, access timing 0600–0900 or after 2200, service yard zones); Team Valley corporate office estate briefing; Sunderland city centre (The Bridges managed centre) vs Washington New Town/Nissan corridor; Durham three-zone analysis (Prince Bishops Place, University estate DBS/term-time, Arnison Centre out-of-town); how to brief Newcastle or North East subcontract effectively |
+
+### Technical improvements (2026-08-02)
+- `/subcontract-vinyl-installer-kendal/` — Carlisle & Cumbria added to corridor links
+- `/subcontract-vinyl-installer-middlesbrough/` — Newcastle & North East added to corridor links
+- Sitemap updated with 2 new routes (subcontract-vinyl-installer-carlisle, subcontract-vinyl-installer-newcastle)
+- blog-posts.ts updated with newcastle-north-east-subcontract-installation-guide
+
+---
+
+_Last updated by automation run on 2026-08-02_

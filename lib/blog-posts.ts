@@ -296,6 +296,13 @@ export const blogPosts = [
       "A practical guide for sign companies, print houses and brand managers subcontracting vinyl installation across Bolton, Burnley and the East Lancashire corridor — M61/M65/A666 motorway planning, Middlebrook Retail Park briefing, mill-conversion substrate considerations and multi-city North West programme logistics.",
     date: "2026-08-01",
   },
+  {
+    slug: "newcastle-north-east-subcontract-installation-guide",
+    title: "Newcastle & North East Subcontract Installation — A Guide for Sign Companies and Print Houses",
+    description:
+      "A practical guide for sign companies, print houses and brand managers subcontracting vinyl installation across Newcastle, Gateshead, Sunderland and the North East — Grainger Town period frontage briefing, MetroCentre access logistics, Team Valley corporate estate, A1(M)/A19 corridor programme planning and how to brief a subcontract installer for North East programmes.",
+    date: "2026-08-02",
+  },
 ] as const;
 
 export type BlogSlug = (typeof blogPosts)[number]["slug"];
