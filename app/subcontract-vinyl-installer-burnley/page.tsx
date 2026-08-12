@@ -521,6 +521,9 @@ export default function SubcontractVinylInstallerBurnleyPage() {
             <Link href="/subcontract-vinyl-installer-huddersfield/" className="card-float px-4 py-2 text-sm text-accent hover:underline">
               Huddersfield
             </Link>
+            <Link href="/subcontract-vinyl-installer-halifax/" className="card-float px-4 py-2 text-sm text-accent hover:underline">
+              Halifax &amp; Calderdale
+            </Link>
           </div>
           <p className="mt-6 text-sm text-muted">
             View all coverage:{" "}

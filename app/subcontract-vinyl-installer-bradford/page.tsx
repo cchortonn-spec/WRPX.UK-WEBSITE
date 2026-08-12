@@ -274,6 +274,9 @@ export default function SubcontractVinylInstallerBradfordPage() {
               <Link href="/sign-company-installation-partner/" className="text-accent hover:underline">
                 Sign company partners
               </Link>
+              <Link href="/subcontract-vinyl-installer-halifax/" className="text-accent hover:underline">
+                Halifax &amp; Calderdale
+              </Link>
             </div>
           </div>
         </div>

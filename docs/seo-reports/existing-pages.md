@@ -514,4 +514,25 @@ Cross-reference slug + service + region against the lists below. If a match exis
 
 ---
 
-_Last updated by automation run on 2026-08-02_
+---
+
+## Run 28 additions (2026-08-12)
+
+| Slug | Title / Purpose |
+|---|---|
+| `/subcontract-vinyl-installer-rochdale/` | Rochdale & Oldham B2B subcontract city page (M62 j20 from South Yorkshire via Huddersfield; OL postcode zone — OL1–OL4 Oldham, OL10–OL16 Rochdale; Rochdale Exchange shopping centre OL16; Yorkshire Street/The Butts town centre mix of Victorian commercial and modern retail; Grade I listed Town Hall (Waterhouse 1871) on The Esplanade — period stone context; Oldham town centre Spindles Town Square/Old Town Hall/Metrolink terminus OL1; Kingsway Business Park OL9 west Oldham — modern commercial and light industrial; Heywood Distribution Park OL10 between Rochdale and Bury; Middleton Arena OL11; Shaw OL2/Royton OL2; Bury BL9 8min south-west via A58; M60 orbital connects to Manchester and Bolton; BreadcrumbList + FAQPage schema) |
+| `/subcontract-vinyl-installer-halifax/` | Halifax & Calderdale B2B subcontract city page (M62 j24 Ainley Top or A629 direct from Sheffield; HX postcode zone — HX1–HX3 Halifax, HX5 Elland, HX6 Sowerby Bridge, HX7 Hebden Bridge, OL14 Todmorden; The Piece Hall Grade I listed 1779 cloth hall — listed building context for external installations, interior window graphics more straightforward; Dean Clough HX3 Victorian carpet mill complex converted to offices/studios/hospitality — mill surfaces brick/steel/original flooring, substrate confirmation required; Halifax town centre Borough Market/Westgate Arcade/Princess Arcade OL1; Brighouse HD6 M62 j25 commercial/industrial zone; Sowerby Bridge HX6 and Elland HX5 Calder Valley; Hebden Bridge HX7 11 miles west on A646 — independent retail/arts/hospitality character; Todmorden OL14 trans-Pennine gateway to Burnley BB11; A646 west = Burnley 30min, Blackburn 45min on M65; A629 south = Huddersfield 25min; Bradford 10 miles via A641; BreadcrumbList + FAQPage schema) |
+| `/blog/huddersfield-transpennine-installation-guide/` | B2B guide: Huddersfield & trans-Pennine corridor — M62/A629/A646 arc as single programme (Huddersfield–Halifax 25min A629; Halifax–Rochdale 30min A58; Rochdale–Oldham 15min A671; Halifax–Burnley 30min A646); Huddersfield two-zone analysis (HD1 town centre Kingsgate managed/Market Street period vs out-of-town Shorehead ring road modern commercial); Huddersfield mill buildings substrate briefing (gritstone exterior surface variation; interior brick painted vs raw; original flooring; original glazing systems — Colne Valley textile mill context); Halifax Piece Hall briefing (interior window graphics vs external colonnade/courtyard — listed building context, consent status in brief); Dean Clough briefing (modern-refurbished suites vs original-character mill suites — brick, timber floor, cast-iron columns); Rochdale town centre briefing (Exchange managed centre vs Victorian commercial Yorkshire Street vs Grade I Town Hall civic zone); Oldham briefing (Spindles Town Square, Kingsway Business Park OL9, Heywood OL10 distribution); multi-city day logic (Huddersfield + Halifax; Halifax + Rochdale; Huddersfield + Rochdale M62; Halifax + Burnley A646; full two-day arc HD/HX/OL/BL) |
+
+### Technical improvements (2026-08-12)
+- `/subcontract-vinyl-installer-burnley/` — Halifax & Calderdale added to corridor links
+- `/subcontract-vinyl-installer-manchester/` — Rochdale & Oldham added to corridor links
+- `/subcontract-vinyl-installer-bolton/` — Rochdale & Oldham added to corridor links
+- `/subcontract-vinyl-installer-huddersfield/` — Halifax & Calderdale, Rochdale & Oldham added to corridor links
+- `/subcontract-vinyl-installer-bradford/` — Halifax & Calderdale added to corridor links
+- Sitemap updated with 2 new routes (subcontract-vinyl-installer-rochdale, subcontract-vinyl-installer-halifax)
+- blog-posts.ts updated with huddersfield-transpennine-installation-guide
+
+---
+
+_Last updated by automation run on 2026-08-12_
