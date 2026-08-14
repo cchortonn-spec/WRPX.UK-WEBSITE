@@ -310,6 +310,13 @@ export const blogPosts = [
       "A practical guide for sign companies, print houses and brand managers subcontracting vinyl installation across Huddersfield, Halifax, Rochdale and the M62/A629 trans-Pennine corridor — mill-building substrate briefing, two-zone Huddersfield analysis, Halifax Piece Hall heritage access, Rochdale/Oldham OL postcode planning and multi-city day logic for the trans-Pennine arc.",
     date: "2026-08-12",
   },
+  {
+    slug: "stockport-greater-manchester-south-installation-guide",
+    title: "Stockport & Greater Manchester South Subcontract Installation — A Guide for Sign Companies and Print Houses",
+    description:
+      "A practical guide for sign companies, print houses and brand managers subcontracting vinyl installation across Stockport, Macclesfield, Wilmslow, the SK postcode zone and the Manchester Airport commercial corridor — M60 south planning, Merseyway access briefing, Cheadle Royal Business Park, SK postcode arc logistics and how to brief a subcontract installer for Greater Manchester south programmes.",
+    date: "2026-08-14",
+  },
 ] as const;
 
 export type BlogSlug = (typeof blogPosts)[number]["slug"];

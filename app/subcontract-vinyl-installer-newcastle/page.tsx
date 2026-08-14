@@ -528,6 +528,9 @@ export default function SubcontractVinylInstallerNewcastlePage() {
             <Link href="/subcontract-vinyl-installer-middlesbrough/" className="card-float px-4 py-2 text-sm text-accent hover:underline">
               Middlesbrough &amp; Teesside
             </Link>
+            <Link href="/subcontract-vinyl-installer-sunderland/" className="card-float px-4 py-2 text-sm text-accent hover:underline">
+              Sunderland &amp; Wearside
+            </Link>
             <Link href="/subcontract-vinyl-installer-york/" className="card-float px-4 py-2 text-sm text-accent hover:underline">
               York
             </Link>
