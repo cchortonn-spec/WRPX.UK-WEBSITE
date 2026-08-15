@@ -128,6 +128,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "subcontract-vinyl-installer-halifax",
     "subcontract-vinyl-installer-stockport",
     "subcontract-vinyl-installer-sunderland",
+    "subcontract-vinyl-installer-darlington",
+    "subcontract-vinyl-installer-gateshead",
+    "subcontract-vinyl-installer-blackburn",
   ];
   const windowFilm = [
     "window-film",

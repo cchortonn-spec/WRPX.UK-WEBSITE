@@ -317,6 +317,13 @@ export const blogPosts = [
       "A practical guide for sign companies, print houses and brand managers subcontracting vinyl installation across Stockport, Macclesfield, Wilmslow, the SK postcode zone and the Manchester Airport commercial corridor — M60 south planning, Merseyway access briefing, Cheadle Royal Business Park, SK postcode arc logistics and how to brief a subcontract installer for Greater Manchester south programmes.",
     date: "2026-08-14",
   },
+  {
+    slug: "darlington-teesside-a1m-installation-guide",
+    title: "Darlington & Teesside Subcontract Installation — A Guide for Sign Companies and Print Houses",
+    description:
+      "A practical guide for sign companies, print houses and brand managers subcontracting vinyl installation across Darlington, Stockton-on-Tees, Middlesbrough and the A1(M) Teesside corridor — Lingfield Point briefing, Aycliffe Business Park logistics, Tees Valley retail zone analysis and multi-city DL/TS programme planning.",
+    date: "2026-08-15",
+  },
 ] as const;
 
 export type BlogSlug = (typeof blogPosts)[number]["slug"];
