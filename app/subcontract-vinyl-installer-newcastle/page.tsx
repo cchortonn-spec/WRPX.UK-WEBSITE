@@ -525,11 +525,17 @@ export default function SubcontractVinylInstallerNewcastlePage() {
             Also covering across the corridor
           </h2>
           <div className="flex flex-wrap gap-3">
-            <Link href="/subcontract-vinyl-installer-middlesbrough/" className="card-float px-4 py-2 text-sm text-accent hover:underline">
-              Middlesbrough &amp; Teesside
+            <Link href="/subcontract-vinyl-installer-gateshead/" className="card-float px-4 py-2 text-sm text-accent hover:underline">
+              Gateshead &amp; MetroCentre
             </Link>
             <Link href="/subcontract-vinyl-installer-sunderland/" className="card-float px-4 py-2 text-sm text-accent hover:underline">
               Sunderland &amp; Wearside
+            </Link>
+            <Link href="/subcontract-vinyl-installer-darlington/" className="card-float px-4 py-2 text-sm text-accent hover:underline">
+              Darlington &amp; County Durham South
+            </Link>
+            <Link href="/subcontract-vinyl-installer-middlesbrough/" className="card-float px-4 py-2 text-sm text-accent hover:underline">
+              Middlesbrough &amp; Teesside
             </Link>
             <Link href="/subcontract-vinyl-installer-york/" className="card-float px-4 py-2 text-sm text-accent hover:underline">
               York

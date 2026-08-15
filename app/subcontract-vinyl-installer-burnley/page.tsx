@@ -497,6 +497,9 @@ export default function SubcontractVinylInstallerBurnleyPage() {
             Also covering across the corridor
           </h2>
           <div className="flex flex-wrap gap-3">
+            <Link href="/subcontract-vinyl-installer-blackburn/" className="card-float px-4 py-2 text-sm text-accent hover:underline">
+              Blackburn &amp; East Lancashire
+            </Link>
             <Link href="/subcontract-vinyl-installer-preston/" className="card-float px-4 py-2 text-sm text-accent hover:underline">
               Preston
             </Link>
