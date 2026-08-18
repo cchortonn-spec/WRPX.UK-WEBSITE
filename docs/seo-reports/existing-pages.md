@@ -535,4 +535,19 @@ Cross-reference slug + service + region against the lists below. If a match exis
 
 ---
 
-_Last updated by automation run on 2026-08-12_
+---
+
+## Run 31 additions (2026-08-18)
+
+| Slug | Title / Purpose |
+|---|---|
+| `/architectural-wrap-hotels/` | Hotel interior vinyl wrapping — surfaces, furniture and fit-out (commercial decision-maker tone; kitchenettes, bedroom furniture, reception desks, corridor doors, bar/restaurant interiors; void/operational scheduling; white-label subcontract; Service + BreadcrumbList + FAQPage schema) |
+| `/architectural-wrap-student-accommodation/` | Student accommodation vinyl wrapping — kitchen doors, communal furniture, reception areas, corridor doors (void-period programme tone; FM contractor/accommodation operator/university; Leeds, Sheffield, Nottingham, Derby, Leicester coverage; Service + BreadcrumbList + FAQPage schema) |
+| `/window-film/hotel-window-film/` | Hotel window film — frosted privacy film for en-suites, solar control for glazed lobbies/dining (hotel operator/fit-out PM tone; room-by-room scheduling; out-of-hours; white-label; FAQPage + BreadcrumbList schema) |
+| `/window-film/office-solar-film/` | Solar control window film for offices — heat, glare and UV through existing commercial glazing (commercial decision-maker tone; open-plan, meeting rooms, reception atria, business parks; FAQPage + BreadcrumbList schema) |
+| `/christmas-window-graphics/` | Christmas window graphics installer — printed window graphics, cut vinyl, perforated vinyl, frosted festive film, hoarding panel graphics; seasonal subcontract for print/sign companies and agencies; multi-site rollout; Yorkshire and East Midlands coverage; book-now urgency for November slots (Service + BreadcrumbList + FAQPage schema) |
+
+### Technical improvements (2026-08-18)
+- Sitemap updated with 5 new routes: architectural-wrap-hotels, architectural-wrap-student-accommodation, window-film/hotel-window-film, window-film/office-solar-film, christmas-window-graphics
+
+_Last updated by automation run on 2026-08-18_
