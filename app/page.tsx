@@ -6,6 +6,7 @@ import { nav } from "@/lib/nav";
 import { useImmersiveHero } from "@/lib/hero-config";
 import { HomeHero } from "@/components/HomeHero";
 import { BeforeAfterShowcase } from "@/components/BeforeAfterShowcase";
+import { VideoReels } from "@/components/VideoReels";
 import { HeroTrustBar } from "@/components/HeroTrustBar";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { WrpxTrustPanel } from "@/components/WrpxTrustPanel";
@@ -49,6 +50,7 @@ export default function HomePage() {
     <div>
       <HomeHero />
       <HeroTrustBar />
+      <VideoReels />
       {useImmersiveHero ? <BeforeAfterShowcase /> : null}
       <WrpxTrustPanel variant="featured" />
 

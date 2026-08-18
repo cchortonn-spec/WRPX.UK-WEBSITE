@@ -51,14 +51,14 @@ export function QuoteForm() {
       </div>
       <div>
         <label htmlFor="quote-desc" className="mb-1 block text-sm text-muted">
-          Brief description of your kitchen
+          Brief description of your project
         </label>
         <textarea
           id="quote-desc"
           name="description"
           rows={3}
           className="w-full rounded border border-border bg-background px-3 py-2 text-foreground placeholder:text-muted focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
-          placeholder="e.g. 10 doors, laminate worktops, want dark grey finish"
+          placeholder="e.g. kitchen doors, shop front graphics, vehicle wrap — what needs doing"
         />
       </div>
       <div>
@@ -78,7 +78,7 @@ export function QuoteForm() {
       </div>
       <p className="text-xs text-muted">
         No obligation. No hard sell. We&apos;ll tell you honestly if wrapping
-        isn&apos;t right for your kitchen.
+        isn&apos;t right for your job.
       </p>
       <button type="submit" className="btn-primary w-full">
         Send Enquiry

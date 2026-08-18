@@ -26,19 +26,19 @@ const quoteTypeCards = [
     id: "complete" as const,
     title: "Complete Kitchen Wrap",
     desc: "Doors, drawers, panels, plinths, trims, worktops and upstands.",
-    image: "/images/quote-icons/complete-kitchen-wrap.png",
+    image: "/images/home/kitchen-home-new-02.png",
   },
   {
     id: "cabinet" as const,
     title: "Kitchen Cabinet Wrap",
     desc: "Doors, drawers, panels, plinths and trims.",
-    image: "/images/quote-icons/kitchen-cabinet-wrap.png",
+    image: "/images/home/kitchen-home-new-04.png",
   },
   {
     id: "worktop" as const,
     title: "Worktop Wrap",
     desc: "Worktops and upstands only. Splashback quoted separately.",
-    image: "/images/quote-icons/worktop-wrap.png",
+    image: "/images/Marble-worktop-potefract/marble-effect-worktop-wrap-pontefract-01.jpeg",
   },
 ];
 
@@ -46,22 +46,22 @@ const doorStyleCards = [
   {
     id: "j-pull" as const,
     label: "J Pull Doors & Drawers",
-    image: "/images/door-styles/j-pull-doors-drawers.png",
+    image: "/images/door-styles/j-pull-bright.png",
   },
   {
     id: "shaker" as const,
     label: "Shaker Doors & Drawers",
-    image: "/images/door-styles/shaker-doors-drawers.png",
+    image: "/images/door-styles/shaker-bright.png",
   },
   {
     id: "flat" as const,
     label: "Flat Doors & Drawers",
-    image: "/images/door-styles/flat-doors-drawers.png",
+    image: "/images/door-styles/flat-bright.png",
   },
   {
     id: "other" as const,
     label: "Other",
-    image: "/images/door-styles/other-doors-drawers.png",
+    image: "/images/door-styles/other-bright.png",
   },
 ];
 
@@ -179,7 +179,7 @@ export function KitchenWrappingQuoteWizard() {
         })}
       </ol>
 
-      <div className="mt-6 rounded-xl border border-border bg-card p-4 md:p-6">
+      <div className="quote-wizard-panel mt-6 p-4 md:p-6">
         {step === 1 && (
           <>
             <h2 className="text-2xl font-semibold text-foreground">
@@ -196,8 +196,14 @@ export function KitchenWrappingQuoteWizard() {
                     quoteType === item.id ? "quote-option-card-active" : ""
                   }`}
                 >
-                  <div className="relative h-40 w-full overflow-hidden rounded-lg">
-                    <Image src={item.image} alt={item.title} fill className="object-cover" />
+                  <div className="relative h-44 w-full overflow-hidden rounded-lg">
+                    <Image
+                      src={item.image}
+                      alt={item.title}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                    />
                   </div>
                   <h3 className="mt-3 text-lg font-semibold text-foreground">{item.title}</h3>
                   <p className="mt-1 text-sm text-muted">{item.desc}</p>
@@ -229,18 +235,16 @@ export function KitchenWrappingQuoteWizard() {
                         doorStyle === item.id ? "quote-option-card-active" : ""
                       } h-full`}
                     >
-                      <div className="relative aspect-[4/5] w-full overflow-hidden rounded-md bg-black/40 p-2">
+                      <div className="quote-style-photo relative aspect-[4/5] w-full overflow-hidden">
                         <Image
                           src={item.image}
                           alt={item.label}
                           fill
-                          className="object-contain"
+                          className="object-cover object-center"
                           sizes="(max-width: 1024px) 50vw, 25vw"
                         />
+                        <span className="quote-style-caption">{item.label}</span>
                       </div>
-                      <span className="mt-3 block text-center text-sm font-medium leading-snug text-foreground">
-                        {item.label}
-                      </span>
                     </button>
                   ))}
                 </div>
@@ -264,7 +268,7 @@ export function KitchenWrappingQuoteWizard() {
                       min={1}
                       value={doors}
                       onChange={(e) => setDoors(e.target.value)}
-                      className="mt-1 w-full rounded border border-border bg-background px-3 py-2 text-foreground"
+                      className="quote-input"
                       placeholder="e.g. 12"
                     />
                   </label>
@@ -275,7 +279,7 @@ export function KitchenWrappingQuoteWizard() {
                       min={0}
                       value={drawers}
                       onChange={(e) => setDrawers(e.target.value)}
-                      className="mt-1 w-full rounded border border-border bg-background px-3 py-2 text-foreground"
+                      className="quote-input"
                       placeholder="e.g. 5"
                     />
                   </label>
@@ -291,7 +295,7 @@ export function KitchenWrappingQuoteWizard() {
                     step={0.1}
                     value={worktopMetres}
                     onChange={(e) => setWorktopMetres(e.target.value)}
-                    className="mt-1 w-full rounded border border-border bg-background px-3 py-2 text-foreground"
+                    className="quote-input"
                     placeholder="e.g. 4.8"
                   />
                 </label>
@@ -308,7 +312,7 @@ export function KitchenWrappingQuoteWizard() {
             <p className="mt-2 text-sm text-muted">
               Include wide room shots and close-ups of any damaged areas.
             </p>
-            <label className="mt-5 block cursor-pointer rounded-xl border border-dashed border-border bg-background p-8 text-center">
+              <label className="quote-upload mt-5 block cursor-pointer p-8 text-center">
               <span className="block text-lg font-medium text-foreground">
                 Drag and drop or click to upload
               </span>
@@ -347,7 +351,7 @@ export function KitchenWrappingQuoteWizard() {
                   type="text"
                   value={contact.firstName}
                   onChange={(e) => setContact({ ...contact, firstName: e.target.value })}
-                  className="mt-1 w-full rounded border border-border bg-background px-3 py-2 text-foreground"
+                  className="quote-input"
                 />
               </label>
               <label className="text-sm text-muted">
@@ -356,7 +360,7 @@ export function KitchenWrappingQuoteWizard() {
                   type="text"
                   value={contact.lastName}
                   onChange={(e) => setContact({ ...contact, lastName: e.target.value })}
-                  className="mt-1 w-full rounded border border-border bg-background px-3 py-2 text-foreground"
+                  className="quote-input"
                 />
               </label>
               <label className="text-sm text-muted sm:col-span-2">
@@ -365,7 +369,7 @@ export function KitchenWrappingQuoteWizard() {
                   type="email"
                   value={contact.email}
                   onChange={(e) => setContact({ ...contact, email: e.target.value })}
-                  className="mt-1 w-full rounded border border-border bg-background px-3 py-2 text-foreground"
+                  className="quote-input"
                 />
               </label>
               <label className="text-sm text-muted">
@@ -374,7 +378,7 @@ export function KitchenWrappingQuoteWizard() {
                   type="tel"
                   value={contact.mobile}
                   onChange={(e) => setContact({ ...contact, mobile: e.target.value })}
-                  className="mt-1 w-full rounded border border-border bg-background px-3 py-2 text-foreground"
+                  className="quote-input"
                 />
               </label>
               <label className="text-sm text-muted">
@@ -383,7 +387,7 @@ export function KitchenWrappingQuoteWizard() {
                   type="text"
                   value={contact.city}
                   onChange={(e) => setContact({ ...contact, city: e.target.value })}
-                  className="mt-1 w-full rounded border border-border bg-background px-3 py-2 text-foreground"
+                  className="quote-input"
                 />
               </label>
             </div>

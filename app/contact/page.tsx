@@ -5,9 +5,9 @@ import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { WrpxTrustPanel } from "@/components/WrpxTrustPanel";
 
 export const metadata: Metadata = {
-  title: "Free Kitchen Wrap Quote | South Yorkshire & Surrounding Areas",
+  title: "Free Quote | South Yorkshire & Surrounding Areas",
   description:
-    "Free kitchen wrapping quote — no obligation. Sheffield, Doncaster, Barnsley, Rotherham, Leeds, Huddersfield, Chesterfield. Get in touch.",
+    "Free vinyl wrapping and installation quote — no obligation. Kitchens, commercial graphics, vehicle wraps and more. Sheffield, Doncaster, Barnsley, Rotherham, Leeds, Huddersfield, Chesterfield. Get in touch.",
   alternates: { canonical: "https://www.wrpx.co.uk/contact/" },
 };
 
@@ -17,7 +17,7 @@ export default function ContactPage() {
       <section className="border-b border-border bg-card py-12 md:py-16">
         <div className="container mx-auto max-w-3xl px-4">
           <h1 className="text-3xl font-bold tracking-tight text-foreground">
-            Free Kitchen Wrap Quote
+            Get a Free Quote
           </h1>
           <p className="mt-4 text-muted">
             Fill in the form below, call us on{" "}

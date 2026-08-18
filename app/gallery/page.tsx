@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { siteConfig } from "@/lib/site-config";
+import { VideoReels } from "@/components/VideoReels";
 
 export const metadata: Metadata = {
   title: "Kitchen Wrap Before & After Gallery | South Yorkshire Projects",
@@ -172,6 +173,8 @@ export default function GalleryPage() {
           </p>
         </div>
       </section>
+
+      <VideoReels />
 
       <section className="border-b border-border py-6">
         <div className="container mx-auto max-w-5xl px-4">

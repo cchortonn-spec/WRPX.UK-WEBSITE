@@ -1,8 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { getServiceSchema } from "@/lib/schema";
+import { siteConfig } from "@/lib/site-config";
 import { KitchenWrappingQuoteWizard } from "@/components/KitchenWrappingQuoteWizard";
 import { WrpxTrustPanel } from "@/components/WrpxTrustPanel";
+import { HeroTrustBar } from "@/components/HeroTrustBar";
+import { WhatsAppButton } from "@/components/WhatsAppButton";
 
 export const metadata: Metadata = {
   title: "Kitchen Wrapping Quote South Yorkshire | WRPX",
@@ -10,6 +14,29 @@ export const metadata: Metadata = {
     "Kitchen wrapping quote South Yorkshire. Get a kitchen makeover without replacement, free survey and fixed price from WRPX. Sheffield, Doncaster, Barnsley, Rotherham.",
   alternates: { canonical: "https://www.wrpx.co.uk/kitchen-wrapping-quote/" },
 };
+
+const quoteTips = [
+  {
+    num: 1,
+    title: "Take wide shots and close-ups",
+    body: "A full-room photo plus close-ups of doors, drawers, corners and any damaged areas help us quote accurately first time.",
+  },
+  {
+    num: 2,
+    title: "Count doors and drawers",
+    body: "Count every door and drawer front you want wrapping, including corner units, larder doors and appliance doors if they are being wrapped.",
+  },
+  {
+    num: 3,
+    title: "Measure worktops including the sink and hob",
+    body: "Run a tape along the full worktop length, including around the sink and hob. Round up to the nearest 10cm if you are unsure.",
+  },
+  {
+    num: 4,
+    title: "Do not worry about small chips or wear",
+    body: "Light wear, faded doors and small chips are usually fine. We will tell you honestly if a surface needs extra prep or is not suitable.",
+  },
+] as const;
 
 export default function KitchenWrappingQuotePage() {
   const serviceSchema = getServiceSchema(
@@ -59,23 +86,32 @@ export default function KitchenWrappingQuotePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
-      <section className="border-b border-border bg-card py-12 md:py-16">
-        <div className="container mx-auto max-w-5xl px-4">
-          <p className="text-sm font-semibold uppercase tracking-wide text-accent">
-            Kitchen Wrapping Quote - South Yorkshire
-          </p>
-          <h1 className="mt-3 text-3xl font-bold tracking-tight text-foreground md:text-4xl">
-            Get Your Kitchen Wrapping Quote
-          </h1>
-          <p className="mt-4 leading-relaxed text-muted">
-            Complete the step-by-step form below for a fast kitchen wrapping quote.
-            It takes around 2 minutes and helps us price your job accurately first
-            time.
+      <section className="quote-hero">
+        <div className="quote-hero-media">
+          <Image
+            src="/images/Marble-worktop-potefract/marble-effect-worktop-wrap-pontefract-01.jpeg"
+            alt="Bright marble-effect kitchen wrap with light cabinets — Pontefract, WRPX"
+            fill
+            priority
+            className="object-cover object-center"
+            sizes="100vw"
+          />
+          <div className="quote-hero-scrim" aria-hidden="true" />
+        </div>
+        <div className="quote-hero-content">
+          <p className="quote-hero-eyebrow">Kitchen wrapping quote · South Yorkshire</p>
+          <h1 className="quote-hero-title">Get your kitchen wrapping quote</h1>
+          <p className="quote-hero-subtitle">
+            Tell us about your doors, drawers and worktops. It takes around 2 minutes
+            and helps us price your job accurately first time — no obligation, no
+            pressure.
           </p>
         </div>
       </section>
 
-      <section className="px-4 py-8 md:py-12">
+      <HeroTrustBar />
+
+      <section className="reveal px-4 py-10 md:py-14">
         <div className="container mx-auto max-w-5xl">
           <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,22rem)] lg:items-start">
             <KitchenWrappingQuoteWizard />
@@ -84,7 +120,26 @@ export default function KitchenWrappingQuotePage() {
         </div>
       </section>
 
-      <section className="px-4 pb-14 pt-4 md:pb-20">
+      <section className="home-section-alt reveal px-4 py-14">
+        <div className="container mx-auto max-w-5xl">
+          <h2 className="section-heading mb-8 text-2xl font-semibold text-foreground md:text-3xl">
+            Tips for a fast, accurate quote
+          </h2>
+          <div className="grid gap-5 sm:grid-cols-2">
+            {quoteTips.map((tip) => (
+              <div key={tip.num} className="card-float flex gap-4 p-6 md:p-7">
+                <span className="step-badge">{tip.num}</span>
+                <div>
+                  <h3 className="font-semibold text-foreground">{tip.title}</h3>
+                  <p className="mt-2 text-sm text-muted">{tip.body}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="reveal px-4 py-14">
         <div className="container mx-auto max-w-5xl space-y-6">
           <article className="card-float p-6 md:p-8">
             <h2 className="text-xl font-semibold text-foreground">
@@ -106,15 +161,15 @@ export default function KitchenWrappingQuotePage() {
             </p>
             <p className="mt-3 text-sm text-muted">
               For service details, see our{" "}
-              <Link href="/kitchen-wrapping/" className="text-accent hover:underline">
+              <Link href="/kitchen-wrapping/" className="link-subtle">
                 kitchen wrapping page
               </Link>{" "}
               and{" "}
-              <Link href="/kitchen-wrapping-cost/" className="text-accent hover:underline">
+              <Link href="/kitchen-wrapping-cost/" className="link-subtle">
                 kitchen wrapping cost guide
               </Link>
               . You can also preview finish options on our{" "}
-              <Link href="/architectural-vinyl-finishes/" className="text-accent hover:underline">
+              <Link href="/architectural-vinyl-finishes/" className="link-subtle">
                 architectural vinyl finishes page
               </Link>
               .
@@ -134,6 +189,27 @@ export default function KitchenWrappingQuotePage() {
               ))}
             </ul>
           </article>
+        </div>
+      </section>
+
+      <section className="home-cta-glow reveal px-4 py-16">
+        <div className="container mx-auto max-w-3xl">
+          <div className="card-float p-10 text-center md:p-14">
+            <h2 className="text-2xl font-semibold text-foreground md:text-3xl">
+              Prefer to talk it through?
+            </h2>
+            <p className="mt-4 text-muted">
+              {siteConfig.yearsInBusiness}+ years in the vinyl wrapping industry.
+              Free survey, no obligation. WhatsApp us a photo or book a visit and we
+              will take it from there.
+            </p>
+            <div className="mt-8 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center sm:justify-center">
+              <WhatsAppButton className="w-full justify-center sm:w-auto" />
+              <Link href="/contact/" className="btn-accent-text w-full text-center sm:w-auto">
+                Book Your Free Survey
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
     </div>
