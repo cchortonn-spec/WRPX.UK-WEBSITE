@@ -155,11 +155,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "window-film/window-film-wakefield",
     "window-film/window-film-bradford",
     "window-film/window-film-manchester",
+    "window-film/hotel-window-film",
+    "window-film/office-solar-film",
   ];
   const newServicePages = [
     "kitchen-island-wrapping",
     "splashback-wrapping",
     "appliance-wrapping",
+    "architectural-wrap-hotels",
+    "architectural-wrap-student-accommodation",
+    "christmas-window-graphics",
   ];
 
   const furnitureLocations = siteConfig.areas.map((city) =>
