@@ -118,6 +118,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "subcontract-vinyl-installer-blackpool",
     "subcontract-vinyl-installer-chester",
     "subcontract-vinyl-installer-wigan",
+    "subcontract-vinyl-installer-bolton",
+    "subcontract-vinyl-installer-burnley",
+    "subcontract-vinyl-installer-kendal",
+    "subcontract-vinyl-installer-middlesbrough",
+    "subcontract-vinyl-installer-carlisle",
+    "subcontract-vinyl-installer-newcastle",
+    "subcontract-vinyl-installer-rochdale",
+    "subcontract-vinyl-installer-halifax",
+    "subcontract-vinyl-installer-stockport",
+    "subcontract-vinyl-installer-sunderland",
+    "subcontract-vinyl-installer-darlington",
+    "subcontract-vinyl-installer-gateshead",
+    "subcontract-vinyl-installer-blackburn",
   ];
   const windowFilm = [
     "window-film",
@@ -142,11 +155,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "window-film/window-film-wakefield",
     "window-film/window-film-bradford",
     "window-film/window-film-manchester",
+    "window-film/hotel-window-film",
+    "window-film/office-solar-film",
   ];
   const newServicePages = [
     "kitchen-island-wrapping",
     "splashback-wrapping",
     "appliance-wrapping",
+    "architectural-wrap-hotels",
+    "architectural-wrap-student-accommodation",
+    "christmas-window-graphics",
   ];
 
   const furnitureLocations = siteConfig.areas.map((city) =>

@@ -457,4 +457,97 @@ Cross-reference slug + service + region against the lists below. If a match exis
 
 ---
 
-_Last updated by automation run on 2026-07-30_
+### New B2B Pages (added 2026-07-31, Run 25)
+
+| Slug | Title / Purpose |
+|---|---|
+| `/subcontract-vinyl-installer-bolton/` | Bolton & Greater Manchester North B2B subcontract city page (M61 from Wigan/Manchester; BL postcode; Middlebrook Retail Park Horwich M61 j6; Crompton Place/Market Place town centre; University of Bolton; Bolton One health/tech campus; Bury BL9 15min east via A58; Horwich/Westhoughton industrial; M61 bridge between M6 Wigan/Chorley and M60 Manchester; BreadcrumbList + FAQPage schema) |
+| `/subcontract-vinyl-installer-burnley/` | Burnley & East Lancashire B2B subcontract city page (M65 east from Preston/Blackburn; BB postcode zone; Burnley Bridge Business Park M65 j11; Charter Walk; St James Street; Blackburn BB1–BB2; The Mall Blackburn 70+ stores; Darwen BB3; Accrington BB5; Nelson BB9 Pendle Shopping; Colne BB8; M65 20-mile corridor Blackburn to Colne; A646 trans-Pennine Burnley–Halifax; A666 Bolton–Blackburn south; BreadcrumbList + FAQPage schema) |
+| `/blog/chester-subcontract-installation-guide/` | B2B guide: Chester subcontract installation — walled city vs modern commercial zone distinction; The Rows two-level gallery access (gallery level vs street level, surface types, historic glazing); conservation area and listed building constraints (what requires consent, what does not); Cheshire Oaks M53 j10 operating hours/access/brand standards briefing; Chester Business Park modern commercial stock; Wrexham/North Wales border zone context; how to brief effectively (building description checklist); M53/M56/M62 corridor geography |
+
+### Technical improvements (2026-07-31)
+- `/subcontract-vinyl-installer-wigan/` — Bolton added to corridor links
+- `/subcontract-vinyl-installer-manchester/` — Bolton added to corridor links
+- `/subcontract-vinyl-installer-preston/` — Burnley & East Lancashire added to corridor links
+- `/subcontract-vinyl-installer-chester/` — Chester installation guide blog link added to corridor section
+- `/commercial-installation/` — Bolton and Burnley subcontract links added
+- `/subcontract-vinyl-installation-yorkshire/` — Bolton and Burnley added to city link grid
+- Sitemap updated with 2 new routes (subcontract-vinyl-installer-bolton, subcontract-vinyl-installer-burnley)
+- blog-posts.ts updated with chester-subcontract-installation-guide
+
+---
+
+## Run 26 additions (2026-08-01)
+
+| Slug | Title / Purpose |
+|---|---|
+| `/subcontract-vinyl-installer-kendal/` | Kendal & South Cumbria B2B subcontract city page (M6 j36-37; LA8/LA9 postcode zone; Kendal town centre Georgian/Victorian limestone buildings; Kendal Business Park/Shap Road Industrial Estate; Barrow-in-Furness LA14 BAE Systems Submarines; Ulverston LA12 A590 corridor; Windermere/Bowness LA23 Lake District gateway resort; Carnforth LA5/LA6 north Lancashire border; BreadcrumbList + FAQPage schema) |
+| `/subcontract-vinyl-installer-middlesbrough/` | Middlesbrough & Teesside B2B subcontract city page (A1(M) north from Doncaster, A66 Darlington junction, A19 into Teesside; TS1–TS25 and DL1 postcode zone; Middlesbrough town centre Cleveland Centre/Captain Cook Square; Stockton-on-Tees High Street/Teesdale Business Park; Teesside University TS1; Darlington Morton Park DL1; Teesworks freeport TS10/TS11; Hartlepool Marina TS24; BreadcrumbList + FAQPage schema) |
+| `/blog/bolton-east-lancashire-installation-guide/` | B2B guide: Bolton & East Lancashire subcontract installation — M61/M65/A666 arc as single programme (driving times: Bolton–Manchester 20min, Bolton–Blackburn 20min A666, Blackburn–Burnley 15min M65); Bolton two zones: Middlebrook Retail Park M61 j6 (modern, out-of-hours access) vs Bolton town centre Crompton Place/Market Place (pedestrianised, centre management); East Lancashire mill-conversion substrate briefing (exposed brick, metal frames, original floors — confirm before material production); Burnley Bridge Business Park M65 j11; Blackburn The Mall BB1/BB2; Accrington Market Hall BB5; Nelson/Colne M65 eastern terminus; A666 Darwen corridor; A646 trans-Pennine Burnley–Halifax–Bradford; multi-city corridor logic (Manchester + Bolton + Blackburn in one day; Bolton + Wigan; Bolton + Preston) |
+
+### Technical improvements (2026-08-01)
+- `/subcontract-vinyl-installer-lancaster/` — Kendal & South Cumbria added to corridor links
+- `/subcontract-vinyl-installer-york/` — Middlesbrough & Teesside added to corridor links
+- `/subcontract-vinyl-installer-harrogate/` — Middlesbrough & Teesside added to corridor links
+- `/subcontract-vinyl-installer-bolton/` — Bolton & East Lancashire installation guide blog link added
+- `/subcontract-vinyl-installer-burnley/` — Bolton & East Lancashire installation guide blog link added
+- Sitemap updated with 2 new routes (subcontract-vinyl-installer-kendal, subcontract-vinyl-installer-middlesbrough)
+- blog-posts.ts updated with bolton-east-lancashire-installation-guide
+
+---
+
+---
+
+## Run 27 additions (2026-08-02)
+
+| Slug | Title / Purpose |
+|---|---|
+| `/subcontract-vinyl-installer-carlisle/` | Carlisle & Cumbria B2B subcontract city page (M6 j43-44; CA postcode zone; Carlisle city centre Georgian/Victorian sandstone English Street/Scotch Street/The Lanes; Kingstown Retail Park CA3 north; Willowholme/Kingmoor Industrial Estates; Penrith CA10/CA11 M6 j40 25min south; Cumberland Infirmary NHS CA2; University of Cumbria multi-campus; natural M6 terminus beyond Kendal; Scotland/Gretna gateway; BreadcrumbList + FAQPage schema) |
+| `/subcontract-vinyl-installer-newcastle/` | Newcastle & North East B2B subcontract city page (A1(M) north from Doncaster/Darlington/Durham; NE postcode zone; Grainger Town Victorian sandstone period frontages Grey Street/Grainger Street — surface confirmation note; Eldon Square/Northumberland Street modern retail core — pedestrianised access; MetroCentre Gateshead NE11 Europe's largest indoor shopping complex — contractor management/out-of-hours access; Team Valley Business Park NE11 Europe's largest planned business park; Sunderland SR1/SR2 city centre + Washington NE37/NE38 Nissan corridor 25min south; Durham DH1 A1(M) midpoint 20min south; Newcastle University/Northumbria University NE1/NE2; Newcastle upon Tyne Hospitals NHS — RVI/Freeman/GNCH; A19 south 50min to Middlesbrough; A69 west 75min to Carlisle M6 connection; BreadcrumbList + FAQPage schema) |
+| `/blog/newcastle-north-east-subcontract-installation-guide/` | B2B guide: Newcastle & North East subcontract installation — North East as one A1(M)/A19 corridor (Newcastle–Gateshead 10min, Newcastle–Sunderland 25min A19/A690, Newcastle–Durham 20min A1(M), Newcastle–Middlesbrough 50min A19); Grainger Town two-zone analysis (Victorian sandstone — interior window graphics vs external fascia surface confirmation); MetroCentre Gateshead briefing (contractor management system, access timing 0600–0900 or after 2200, service yard zones); Team Valley corporate office estate briefing; Sunderland city centre (The Bridges managed centre) vs Washington New Town/Nissan corridor; Durham three-zone analysis (Prince Bishops Place, University estate DBS/term-time, Arnison Centre out-of-town); how to brief Newcastle or North East subcontract effectively |
+
+### Technical improvements (2026-08-02)
+- `/subcontract-vinyl-installer-kendal/` — Carlisle & Cumbria added to corridor links
+- `/subcontract-vinyl-installer-middlesbrough/` — Newcastle & North East added to corridor links
+- Sitemap updated with 2 new routes (subcontract-vinyl-installer-carlisle, subcontract-vinyl-installer-newcastle)
+- blog-posts.ts updated with newcastle-north-east-subcontract-installation-guide
+
+---
+
+---
+
+## Run 28 additions (2026-08-12)
+
+| Slug | Title / Purpose |
+|---|---|
+| `/subcontract-vinyl-installer-rochdale/` | Rochdale & Oldham B2B subcontract city page (M62 j20 from South Yorkshire via Huddersfield; OL postcode zone — OL1–OL4 Oldham, OL10–OL16 Rochdale; Rochdale Exchange shopping centre OL16; Yorkshire Street/The Butts town centre mix of Victorian commercial and modern retail; Grade I listed Town Hall (Waterhouse 1871) on The Esplanade — period stone context; Oldham town centre Spindles Town Square/Old Town Hall/Metrolink terminus OL1; Kingsway Business Park OL9 west Oldham — modern commercial and light industrial; Heywood Distribution Park OL10 between Rochdale and Bury; Middleton Arena OL11; Shaw OL2/Royton OL2; Bury BL9 8min south-west via A58; M60 orbital connects to Manchester and Bolton; BreadcrumbList + FAQPage schema) |
+| `/subcontract-vinyl-installer-halifax/` | Halifax & Calderdale B2B subcontract city page (M62 j24 Ainley Top or A629 direct from Sheffield; HX postcode zone — HX1–HX3 Halifax, HX5 Elland, HX6 Sowerby Bridge, HX7 Hebden Bridge, OL14 Todmorden; The Piece Hall Grade I listed 1779 cloth hall — listed building context for external installations, interior window graphics more straightforward; Dean Clough HX3 Victorian carpet mill complex converted to offices/studios/hospitality — mill surfaces brick/steel/original flooring, substrate confirmation required; Halifax town centre Borough Market/Westgate Arcade/Princess Arcade OL1; Brighouse HD6 M62 j25 commercial/industrial zone; Sowerby Bridge HX6 and Elland HX5 Calder Valley; Hebden Bridge HX7 11 miles west on A646 — independent retail/arts/hospitality character; Todmorden OL14 trans-Pennine gateway to Burnley BB11; A646 west = Burnley 30min, Blackburn 45min on M65; A629 south = Huddersfield 25min; Bradford 10 miles via A641; BreadcrumbList + FAQPage schema) |
+| `/blog/huddersfield-transpennine-installation-guide/` | B2B guide: Huddersfield & trans-Pennine corridor — M62/A629/A646 arc as single programme (Huddersfield–Halifax 25min A629; Halifax–Rochdale 30min A58; Rochdale–Oldham 15min A671; Halifax–Burnley 30min A646); Huddersfield two-zone analysis (HD1 town centre Kingsgate managed/Market Street period vs out-of-town Shorehead ring road modern commercial); Huddersfield mill buildings substrate briefing (gritstone exterior surface variation; interior brick painted vs raw; original flooring; original glazing systems — Colne Valley textile mill context); Halifax Piece Hall briefing (interior window graphics vs external colonnade/courtyard — listed building context, consent status in brief); Dean Clough briefing (modern-refurbished suites vs original-character mill suites — brick, timber floor, cast-iron columns); Rochdale town centre briefing (Exchange managed centre vs Victorian commercial Yorkshire Street vs Grade I Town Hall civic zone); Oldham briefing (Spindles Town Square, Kingsway Business Park OL9, Heywood OL10 distribution); multi-city day logic (Huddersfield + Halifax; Halifax + Rochdale; Huddersfield + Rochdale M62; Halifax + Burnley A646; full two-day arc HD/HX/OL/BL) |
+
+### Technical improvements (2026-08-12)
+- `/subcontract-vinyl-installer-burnley/` — Halifax & Calderdale added to corridor links
+- `/subcontract-vinyl-installer-manchester/` — Rochdale & Oldham added to corridor links
+- `/subcontract-vinyl-installer-bolton/` — Rochdale & Oldham added to corridor links
+- `/subcontract-vinyl-installer-huddersfield/` — Halifax & Calderdale, Rochdale & Oldham added to corridor links
+- `/subcontract-vinyl-installer-bradford/` — Halifax & Calderdale added to corridor links
+- Sitemap updated with 2 new routes (subcontract-vinyl-installer-rochdale, subcontract-vinyl-installer-halifax)
+- blog-posts.ts updated with huddersfield-transpennine-installation-guide
+
+---
+
+---
+
+## Run 31 additions (2026-08-18)
+
+| Slug | Title / Purpose |
+|---|---|
+| `/architectural-wrap-hotels/` | Hotel interior vinyl wrapping — surfaces, furniture and fit-out (commercial decision-maker tone; kitchenettes, bedroom furniture, reception desks, corridor doors, bar/restaurant interiors; void/operational scheduling; white-label subcontract; Service + BreadcrumbList + FAQPage schema) |
+| `/architectural-wrap-student-accommodation/` | Student accommodation vinyl wrapping — kitchen doors, communal furniture, reception areas, corridor doors (void-period programme tone; FM contractor/accommodation operator/university; Leeds, Sheffield, Nottingham, Derby, Leicester coverage; Service + BreadcrumbList + FAQPage schema) |
+| `/window-film/hotel-window-film/` | Hotel window film — frosted privacy film for en-suites, solar control for glazed lobbies/dining (hotel operator/fit-out PM tone; room-by-room scheduling; out-of-hours; white-label; FAQPage + BreadcrumbList schema) |
+| `/window-film/office-solar-film/` | Solar control window film for offices — heat, glare and UV through existing commercial glazing (commercial decision-maker tone; open-plan, meeting rooms, reception atria, business parks; FAQPage + BreadcrumbList schema) |
+| `/christmas-window-graphics/` | Christmas window graphics installer — printed window graphics, cut vinyl, perforated vinyl, frosted festive film, hoarding panel graphics; seasonal subcontract for print/sign companies and agencies; multi-site rollout; Yorkshire and East Midlands coverage; book-now urgency for November slots (Service + BreadcrumbList + FAQPage schema) |
+
+### Technical improvements (2026-08-18)
+- Sitemap updated with 5 new routes: architectural-wrap-hotels, architectural-wrap-student-accommodation, window-film/hotel-window-film, window-film/office-solar-film, christmas-window-graphics
+
+_Last updated by automation run on 2026-08-18_

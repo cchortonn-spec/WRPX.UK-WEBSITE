@@ -543,6 +543,15 @@ export default function SubcontractVinylInstallerManchesterPage() {
             <Link href="/subcontract-vinyl-installer-liverpool/" className="card-float px-4 py-2 text-sm text-accent hover:underline">
               Liverpool
             </Link>
+            <Link href="/subcontract-vinyl-installer-bolton/" className="card-float px-4 py-2 text-sm text-accent hover:underline">
+              Bolton
+            </Link>
+            <Link href="/subcontract-vinyl-installer-rochdale/" className="card-float px-4 py-2 text-sm text-accent hover:underline">
+              Rochdale &amp; Oldham
+            </Link>
+            <Link href="/subcontract-vinyl-installer-stockport/" className="card-float px-4 py-2 text-sm text-accent hover:underline">
+              Stockport &amp; Greater Manchester South
+            </Link>
           </div>
           <p className="mt-6 text-sm text-muted">
             View all coverage:{" "}

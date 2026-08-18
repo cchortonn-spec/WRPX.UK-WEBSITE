@@ -282,6 +282,48 @@ export const blogPosts = [
       "A practical guide for sign companies, print houses and brand managers subcontracting vinyl installation across Liverpool and Merseyside — Albert Dock waterfront heritage installation specifics, Baltic Triangle creative district briefing, Knowledge Quarter university and NHS access, Wirral via Mersey Tunnels, Knowsley Business Park outer Merseyside and how to brief a subcontract installer for North West programmes.",
     date: "2026-07-30",
   },
+  {
+    slug: "chester-subcontract-installation-guide",
+    title: "Chester Subcontract Installation — A Guide for Sign Companies and Print Houses",
+    description:
+      "A practical guide for sign companies, print houses and brand managers subcontracting vinyl installation across Chester and Cheshire West — conservation area and listed building constraints in the walled city, The Rows two-level access briefing, Cheshire Oaks retail rollout logistics, Chester Business Park and the CH postcode zone.",
+    date: "2026-07-31",
+  },
+  {
+    slug: "bolton-east-lancashire-installation-guide",
+    title: "Bolton & East Lancashire Subcontract Installation — A Guide for Sign Companies and Print Houses",
+    description:
+      "A practical guide for sign companies, print houses and brand managers subcontracting vinyl installation across Bolton, Burnley and the East Lancashire corridor — M61/M65/A666 motorway planning, Middlebrook Retail Park briefing, mill-conversion substrate considerations and multi-city North West programme logistics.",
+    date: "2026-08-01",
+  },
+  {
+    slug: "newcastle-north-east-subcontract-installation-guide",
+    title: "Newcastle & North East Subcontract Installation — A Guide for Sign Companies and Print Houses",
+    description:
+      "A practical guide for sign companies, print houses and brand managers subcontracting vinyl installation across Newcastle, Gateshead, Sunderland and the North East — Grainger Town period frontage briefing, MetroCentre access logistics, Team Valley corporate estate, A1(M)/A19 corridor programme planning and how to brief a subcontract installer for North East programmes.",
+    date: "2026-08-02",
+  },
+  {
+    slug: "huddersfield-transpennine-installation-guide",
+    title: "Huddersfield & Trans-Pennine Subcontract Installation — A Guide for Sign Companies and Print Houses",
+    description:
+      "A practical guide for sign companies, print houses and brand managers subcontracting vinyl installation across Huddersfield, Halifax, Rochdale and the M62/A629 trans-Pennine corridor — mill-building substrate briefing, two-zone Huddersfield analysis, Halifax Piece Hall heritage access, Rochdale/Oldham OL postcode planning and multi-city day logic for the trans-Pennine arc.",
+    date: "2026-08-12",
+  },
+  {
+    slug: "stockport-greater-manchester-south-installation-guide",
+    title: "Stockport & Greater Manchester South Subcontract Installation — A Guide for Sign Companies and Print Houses",
+    description:
+      "A practical guide for sign companies, print houses and brand managers subcontracting vinyl installation across Stockport, Macclesfield, Wilmslow, the SK postcode zone and the Manchester Airport commercial corridor — M60 south planning, Merseyway access briefing, Cheadle Royal Business Park, SK postcode arc logistics and how to brief a subcontract installer for Greater Manchester south programmes.",
+    date: "2026-08-14",
+  },
+  {
+    slug: "darlington-teesside-a1m-installation-guide",
+    title: "Darlington & Teesside Subcontract Installation — A Guide for Sign Companies and Print Houses",
+    description:
+      "A practical guide for sign companies, print houses and brand managers subcontracting vinyl installation across Darlington, Stockton-on-Tees, Middlesbrough and the A1(M) Teesside corridor — Lingfield Point briefing, Aycliffe Business Park logistics, Tees Valley retail zone analysis and multi-city DL/TS programme planning.",
+    date: "2026-08-15",
+  },
 ] as const;
 
 export type BlogSlug = (typeof blogPosts)[number]["slug"];

@@ -533,6 +533,10 @@ export default function SubcontractVinylInstallerChesterPage() {
             ·{" "}
             <Link href="/commercial-installation/" className="text-accent hover:underline">
               Commercial installation overview
+            </Link>{" "}
+            ·{" "}
+            <Link href="/blog/chester-subcontract-installation-guide/" className="text-accent hover:underline">
+              Chester installation guide (conservation area briefing)
             </Link>
           </p>
         </div>
