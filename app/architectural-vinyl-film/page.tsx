@@ -181,6 +181,43 @@ export default function ArchitecturalVinylFilmPage() {
         </div>
       </section>
 
+      <section className="bg-card px-4 py-14">
+        <div className="container mx-auto max-w-5xl">
+          <h2 className="mb-8 text-2xl font-semibold text-foreground md:text-3xl">
+            Commercial architectural wrapping — by sector
+          </h2>
+          <p className="mb-8 text-muted leading-relaxed">
+            Commercial architectural wrapping covers a wide range of sectors — each with different surfaces, scheduling requirements and audiences. Browse by sector:
+          </p>
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            <Link href="/architectural-wrap-hotels/" className="card-float p-5 hover:border-accent/60 transition-colors">
+              <h3 className="font-semibold text-foreground">Hotels</h3>
+              <p className="mt-2 text-sm text-muted">Bedroom furniture, reception desks and corridor panels for hotel refurbishments. Phased installation around guests.</p>
+            </Link>
+            <Link href="/architectural-wrap-student-accommodation/" className="card-float p-5 hover:border-accent/60 transition-colors">
+              <h3 className="font-semibold text-foreground">Student Accommodation</h3>
+              <p className="mt-2 text-sm text-muted">Void-period kitchen and furniture wrapping for student accommodation operators and PBSA developers.</p>
+            </Link>
+            <Link href="/architectural-wrap-offices/" className="card-float p-5 hover:border-accent/60 transition-colors">
+              <h3 className="font-semibold text-foreground">Offices</h3>
+              <p className="mt-2 text-sm text-muted">Reception desks, breakout kitchen surfaces and meeting room panels. Evening and weekend installation.</p>
+            </Link>
+            <Link href="/architectural-wrap-education/" className="card-float p-5 hover:border-accent/60 transition-colors">
+              <h3 className="font-semibold text-foreground">Education</h3>
+              <p className="mt-2 text-sm text-muted">Schools, colleges and universities. DBS-checked, holiday-period scheduling, FM contractor white-label.</p>
+            </Link>
+            <Link href="/architectural-wrap-restaurants/" className="card-float p-5 hover:border-accent/60 transition-colors">
+              <h3 className="font-semibold text-foreground">Restaurants &amp; Bars</h3>
+              <p className="mt-2 text-sm text-muted">Counter fascias, bar fronts, booth panels. Overnight installation — no closure required.</p>
+            </Link>
+            <Link href="/architectural-wrap-retail/" className="card-float p-5 hover:border-accent/60 transition-colors">
+              <h3 className="font-semibold text-foreground">Retail</h3>
+              <p className="mt-2 text-sm text-muted">Shop-front panels, counter fascias, gondola ends, display plinths and fitting room panels. Multi-site programmes.</p>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       <section className="px-4 py-14">
         <div className="container mx-auto max-w-4xl">
           <div className="card-float p-8 md:p-10">

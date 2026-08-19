@@ -224,6 +224,44 @@ export default function WindowFilmHubPage() {
         </div>
       </section>
 
+      {/* Industry-specific verticals */}
+      <section className="bg-card px-4 py-16">
+        <div className="container mx-auto max-w-5xl">
+          <h2 className="mb-10 text-center text-2xl font-semibold text-foreground md:text-3xl">
+            Window film by sector
+          </h2>
+          <p className="mb-8 text-center text-muted">
+            Different buildings have different glazing requirements. Browse by sector for application-specific guidance.
+          </p>
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            <Link href="/window-film/hotel-window-film/" className="card-float p-5 hover:border-accent/60 transition-colors">
+              <h3 className="font-semibold text-foreground">Hotels</h3>
+              <p className="mt-2 text-sm text-muted">Frosted privacy film, solar control and decorative film for hotel bedrooms, meeting rooms and public areas.</p>
+            </Link>
+            <Link href="/window-film/office-solar-film/" className="card-float p-5 hover:border-accent/60 transition-colors">
+              <h3 className="font-semibold text-foreground">Offices — solar control</h3>
+              <p className="mt-2 text-sm text-muted">Heat and glare reduction for south-facing offices and large glazed areas. Installed outside working hours.</p>
+            </Link>
+            <Link href="/window-film/frosted-office-film/" className="card-float p-5 hover:border-accent/60 transition-colors">
+              <h3 className="font-semibold text-foreground">Offices — frosted &amp; privacy</h3>
+              <p className="mt-2 text-sm text-muted">Meeting room privacy film, partition glass frosting, DDA manifestation and branded etched-effect glass.</p>
+            </Link>
+            <Link href="/window-film/school-window-film/" className="card-float p-5 hover:border-accent/60 transition-colors">
+              <h3 className="font-semibold text-foreground">Schools &amp; Universities</h3>
+              <p className="mt-2 text-sm text-muted">Safety manifestation, frosted privacy and solar control for education premises. Holiday-period scheduling.</p>
+            </Link>
+            <Link href="/window-film/restaurant-window-film/" className="card-float p-5 hover:border-accent/60 transition-colors">
+              <h3 className="font-semibold text-foreground">Restaurants &amp; Bars</h3>
+              <p className="mt-2 text-sm text-muted">Frosted street-facing privacy, decorative branding film and solar control for hospitality glazing.</p>
+            </Link>
+            <Link href="/window-film/retail-window-film/" className="card-float p-5 hover:border-accent/60 transition-colors">
+              <h3 className="font-semibold text-foreground">Retail</h3>
+              <p className="mt-2 text-sm text-muted">Fitting room privacy film, shop-front decorative and branded film, DDA manifestation and solar control.</p>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Benefits strip */}
       <section className="border-y border-border bg-muted/30 px-4 py-8">
         <div className="container mx-auto max-w-4xl">

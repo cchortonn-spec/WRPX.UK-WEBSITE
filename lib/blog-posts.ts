@@ -324,6 +324,13 @@ export const blogPosts = [
       "A practical guide for sign companies, print houses and brand managers subcontracting vinyl installation across Darlington, Stockton-on-Tees, Middlesbrough and the A1(M) Teesside corridor — Lingfield Point briefing, Aycliffe Business Park logistics, Tees Valley retail zone analysis and multi-city DL/TS programme planning.",
     date: "2026-08-15",
   },
+  {
+    slug: "christmas-graphics-installation-guide-for-print-companies",
+    title: "Christmas Graphics Installation for Print Companies — How to Plan the Christmas Season",
+    description:
+      "A practical guide for print companies, sign companies and agencies planning Christmas graphics installation programmes. How to line up subcontract installation capacity now, what goes wrong when you leave it late, and how to brief a reliable Christmas installer.",
+    date: "2026-08-19",
+  },
 ] as const;
 
 export type BlogSlug = (typeof blogPosts)[number]["slug"];

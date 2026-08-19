@@ -159,6 +159,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "window-film/office-solar-film",
     "window-film/school-window-film",
     "window-film/restaurant-window-film",
+    "window-film/retail-window-film",
+    "window-film/frosted-office-film",
   ];
   const newServicePages = [
     "kitchen-island-wrapping",
@@ -169,6 +171,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "architectural-wrap-offices",
     "architectural-wrap-education",
     "architectural-wrap-restaurants",
+    "architectural-wrap-retail",
     "christmas-window-graphics",
     "christmas-subcontract-installer",
   ];
