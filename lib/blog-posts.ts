@@ -331,6 +331,13 @@ export const blogPosts = [
       "A practical guide for print companies, sign companies and agencies planning Christmas graphics installation programmes. How to line up subcontract installation capacity now, what goes wrong when you leave it late, and how to brief a reliable Christmas installer.",
     date: "2026-08-19",
   },
+  {
+    slug: "christmas-window-graphics-for-shopping-centres",
+    title: "Christmas Window Graphics for Shopping Centres — Planning Your Seasonal Programme",
+    description:
+      "A practical guide for shopping centre estate managers, property managers and retail brand teams planning Christmas graphics installation. Multi-unit scheduling, overnight access, subcontract installation across South Yorkshire and the Midlands.",
+    date: "2026-08-20",
+  },
 ] as const;
 
 export type BlogSlug = (typeof blogPosts)[number]["slug"];

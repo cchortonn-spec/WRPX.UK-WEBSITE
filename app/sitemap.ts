@@ -161,6 +161,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "window-film/restaurant-window-film",
     "window-film/retail-window-film",
     "window-film/frosted-office-film",
+    "window-film/healthcare-window-film",
+    "window-film/student-accommodation-window-film",
   ];
   const newServicePages = [
     "kitchen-island-wrapping",

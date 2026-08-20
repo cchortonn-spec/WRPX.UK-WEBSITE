@@ -208,6 +208,12 @@ export default function MultiSiteRolloutPlanningGuidePage() {
               <Link href="/blog/how-to-brief-an-installation-subcontractor/" className="text-accent hover:underline">
                 How to brief an installation subcontractor
               </Link>
+              <Link href="/architectural-vinyl-film/" className="text-accent hover:underline">
+                Architectural vinyl wrapping services
+              </Link>
+              <Link href="/window-film/" className="text-accent hover:underline">
+                Window film services
+              </Link>
             </div>
           </div>
         </div>

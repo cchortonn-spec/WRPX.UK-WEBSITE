@@ -1,6 +1,6 @@
 # Existing Pages — WRPX.co.uk
 
-Last updated: 2026-07-27
+Last updated: 2026-08-20 (Run 34)
 
 Use this file to run the duplicate-check before creating any new page (§3 of the automation spec).
 Cross-reference slug + service + region against the lists below. If a match exists (even approximate), flag as update candidate rather than creating a new page.
@@ -550,4 +550,30 @@ Cross-reference slug + service + region against the lists below. If a match exis
 ### Technical improvements (2026-08-18)
 - Sitemap updated with 5 new routes: architectural-wrap-hotels, architectural-wrap-student-accommodation, window-film/hotel-window-film, window-film/office-solar-film, christmas-window-graphics
 
-_Last updated by automation run on 2026-08-18_
+## Run 33 additions (2026-08-19)
+
+| Slug | Title / Purpose |
+|---|---|
+| `/architectural-wrap-retail/` | Retail interior vinyl wrapping — shop-front panels, counter fascias, gondola ends, fitting rooms; multi-site; overnight; white-label for fit-out contractors and brand managers |
+| `/window-film/retail-window-film/` | Window film for retail — fitting room privacy, shop-front decorative/branded, solar control, DDA manifestation |
+| `/window-film/frosted-office-film/` | Frosted/privacy film for offices — meeting rooms, glass partitions, DDA manifestation, branded etched-effect, one-way mirror |
+| `/blog/christmas-graphics-installation-guide-for-print-companies/` | B2B blog: August planning guide for print companies/agencies — November capacity, multi-site retail/shopping centre programmes |
+
+### Hub upgrades (2026-08-19)
+- `/architectural-vinyl-film/` hub — added commercial verticals grid
+- `/window-film/` hub — added industry-specific sector grid
+
+## Run 34 additions (2026-08-20)
+
+| Slug | Title / Purpose |
+|---|---|
+| `/window-film/healthcare-window-film/` | Window film for healthcare — patient privacy film, DDA manifestation (BS 8300), solar control; NHS, GP surgeries, care homes, private clinics; infection-control aware; out-of-hours; white-label for NHS estates contractors |
+| `/window-film/student-accommodation-window-film/` | Window film for student accommodation — privacy film for overlooked bedrooms, solar control for overheating south-facing blocks, DDA manifestation for glazed corridors; PBSA developers, university estates, FM contractors; summer programme scheduling |
+| `/blog/christmas-window-graphics-for-shopping-centres/` | Christmas blog: shopping centre estate managers, property managers, print companies with centre clients; multi-unit scheduling, overnight access, hoarding graphics, August planning urgency |
+
+### Updates (2026-08-20)
+- `/` (homepage) — added commercial verticals grid (6 architectural wrap sectors) and window film for business section (3 verticals)
+- `/window-film/` hub — added healthcare and student accommodation to sector grid
+- 9 B2B blog posts updated with internal links to architectural wrap and window film vertical pages
+
+_Last updated by automation run on 2026-08-20_

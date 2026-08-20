@@ -380,6 +380,12 @@ export default function MatGraphicsProgrammesSubcontractInstallerPage() {
               <Link href="/commercial-installation/" className="text-accent hover:underline">
                 Commercial installation overview
               </Link>
+              <Link href="/architectural-wrap-education/" className="text-accent hover:underline">
+                Architectural vinyl wrap for schools &amp; universities
+              </Link>
+              <Link href="/window-film/school-window-film/" className="text-accent hover:underline">
+                Window film for schools &amp; universities
+              </Link>
             </div>
           </div>
         </div>

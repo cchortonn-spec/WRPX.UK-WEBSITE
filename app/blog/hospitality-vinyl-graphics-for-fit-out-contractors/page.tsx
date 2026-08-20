@@ -309,6 +309,20 @@ export default function HospitalityVinylGraphicsForFitOutContractorsPage() {
               </Link>
               .
             </p>
+            <div className="mt-4 flex flex-wrap gap-3 text-sm">
+              <Link href="/architectural-wrap-hotels/" className="text-accent hover:underline">
+                Architectural vinyl wrap for hotels
+              </Link>
+              <Link href="/architectural-wrap-restaurants/" className="text-accent hover:underline">
+                Architectural vinyl wrap for restaurants
+              </Link>
+              <Link href="/window-film/hotel-window-film/" className="text-accent hover:underline">
+                Window film for hotels
+              </Link>
+              <Link href="/window-film/restaurant-window-film/" className="text-accent hover:underline">
+                Window film for restaurants
+              </Link>
+            </div>
           </div>
         </div>
       </article>

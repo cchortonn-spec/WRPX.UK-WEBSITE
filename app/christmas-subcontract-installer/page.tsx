@@ -343,6 +343,14 @@ export default function ChristmasSubcontractInstallerPage() {
               <h3 className="font-semibold text-foreground">Window graphics installation Yorkshire</h3>
               <p className="mt-2 text-sm text-muted">Window graphics installation across Yorkshire and the Midlands for trade and direct clients.</p>
             </Link>
+            <Link href="/blog/christmas-graphics-installation-guide-for-print-companies/" className="card-float p-5 hover:border-accent/60 transition-colors">
+              <h3 className="font-semibold text-foreground">Christmas planning guide for print companies</h3>
+              <p className="mt-2 text-sm text-muted">Why August is the time to confirm your Christmas installation capacity — not October.</p>
+            </Link>
+            <Link href="/blog/christmas-window-graphics-for-shopping-centres/" className="card-float p-5 hover:border-accent/60 transition-colors">
+              <h3 className="font-semibold text-foreground">Christmas graphics for shopping centres</h3>
+              <p className="mt-2 text-sm text-muted">Multi-unit, overnight access, hoarding graphics — planning a shopping centre Christmas programme.</p>
+            </Link>
           </div>
         </div>
       </section>
