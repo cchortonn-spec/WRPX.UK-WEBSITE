@@ -307,6 +307,11 @@ export default function HealthcareVinylGraphicsForNHSContractorsPage() {
                   Protecting client relationships with subcontract installers
                 </Link>
               </li>
+              <li>
+                <Link href="/window-film/healthcare-window-film/" className="text-accent hover:underline">
+                  Window film for healthcare environments
+                </Link>
+              </li>
             </ul>
           </div>
 

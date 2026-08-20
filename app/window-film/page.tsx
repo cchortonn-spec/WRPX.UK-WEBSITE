@@ -258,6 +258,14 @@ export default function WindowFilmHubPage() {
               <h3 className="font-semibold text-foreground">Retail</h3>
               <p className="mt-2 text-sm text-muted">Fitting room privacy film, shop-front decorative and branded film, DDA manifestation and solar control.</p>
             </Link>
+            <Link href="/window-film/healthcare-window-film/" className="card-float p-5 hover:border-accent/60 transition-colors">
+              <h3 className="font-semibold text-foreground">Healthcare</h3>
+              <p className="mt-2 text-sm text-muted">Patient privacy film, DDA manifestation for glazed partitions and solar control — NHS, GP surgeries, care homes.</p>
+            </Link>
+            <Link href="/window-film/student-accommodation-window-film/" className="card-float p-5 hover:border-accent/60 transition-colors">
+              <h3 className="font-semibold text-foreground">Student accommodation</h3>
+              <p className="mt-2 text-sm text-muted">Privacy film for overlooked bedrooms, solar control for overheating south-facing blocks, DDA manifestation.</p>
+            </Link>
           </div>
         </div>
       </section>

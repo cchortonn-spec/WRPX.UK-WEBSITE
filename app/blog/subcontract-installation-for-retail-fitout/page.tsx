@@ -273,6 +273,12 @@ export default function SubcontractInstallationForRetailFitoutPage() {
               <Link href="/multi-site-rollout-installation/" className="text-accent hover:underline">
                 Multi-site rollout installation
               </Link>
+              <Link href="/architectural-wrap-retail/" className="text-accent hover:underline">
+                Architectural vinyl wrap for retail
+              </Link>
+              <Link href="/window-film/retail-window-film/" className="text-accent hover:underline">
+                Window film for retail
+              </Link>
               <Link href="/contact/" className="text-accent hover:underline">
                 Get in touch
               </Link>

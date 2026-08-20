@@ -331,6 +331,21 @@ export default function WindowGraphicsInstallationGuideForSignCompaniesPage() {
                 Multi-site rollout planning guide for agencies
               </Link>
             </li>
+            <li>
+              <Link href="/window-film/frosted-window-film/" className="text-accent hover:underline">
+                Frosted &amp; privacy window film service
+              </Link>
+            </li>
+            <li>
+              <Link href="/window-film/glass-manifestation/" className="text-accent hover:underline">
+                Glass manifestation (DDA / Building Regs)
+              </Link>
+            </li>
+            <li>
+              <Link href="/window-film/commercial-window-film/" className="text-accent hover:underline">
+                Commercial window film services
+              </Link>
+            </li>
           </ul>
         </div>
       </section>
