@@ -577,3 +577,19 @@ Cross-reference slug + service + region against the lists below. If a match exis
 - 9 B2B blog posts updated with internal links to architectural wrap and window film vertical pages
 
 _Last updated by automation run on 2026-08-20_
+
+## Run 35 additions (2026-08-21)
+
+| Slug | Title / Purpose |
+|---|---|
+| `/window-film/care-home-window-film/` | Window film for care homes — resident privacy film for bedroom/bathroom windows, solar control for south-facing lounges/day rooms, DDA manifestation; care home managers, group operators, FM contractors; distinct from /healthcare-window-film/ (different buyer, different spaces, direct procurement vs estates framework); FAQPage + BreadcrumbList schema |
+| `/architectural-wrap-care-homes/` | Vinyl wrapping for care home interiors — bedroom furniture (wardrobe panels, bedside cabinets, drawer fronts), communal lounge panels, nurses' station counters, corridor doors; resident-sensitive scheduling (room-by-room, care staff co-ordination); CQC-ready surfaces; no fumes; group estate programmes; ServiceSchema + BreadcrumbList + FAQPage schema |
+| `/blog/window-film-for-student-accommodation-overheating/` | Blog post: PBSA overheating guide — TM59 methodology, TSER/VLT specification guidance, occupied-building scheduling for university estates teams, PBSA developers, FM contractors |
+| `/hoarding-graphics-installation/` | Hoarding graphics installation service page — construction site hoardings, temporary hoarding systems (Kwik-Klik), retail fit-out hoarding, event hoarding, multi-site programmes; white-label for sign companies, print management, project managers; ServiceSchema + BreadcrumbList + FAQPage schema |
+| `/subcontract-vinyl-installer-hartlepool/` | Subcontract vinyl installer Hartlepool — TS24-TS26 postcodes; Hartlepool town centre, Marina, Wynyard Business Park (TS22), Billingham (TS23); A1(M) J60 → A689 / A19 corridor links; white-label; combines with Middlesbrough/Darlington/Sunderland; ServiceSchema + BreadcrumbList + FAQPage schema |
+
+### Hub updates (2026-08-21)
+- `/window-film/` hub — added "Care homes" card to sector grid (now 9 sectors)
+- `/architectural-vinyl-film/` hub — added "Care homes" card to commercial verticals grid
+
+_Last updated by automation run on 2026-08-21_

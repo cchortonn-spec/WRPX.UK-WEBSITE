@@ -163,6 +163,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "window-film/frosted-office-film",
     "window-film/healthcare-window-film",
     "window-film/student-accommodation-window-film",
+    "window-film/care-home-window-film",
   ];
   const newServicePages = [
     "kitchen-island-wrapping",
@@ -174,8 +175,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "architectural-wrap-education",
     "architectural-wrap-restaurants",
     "architectural-wrap-retail",
+    "architectural-wrap-care-homes",
     "christmas-window-graphics",
     "christmas-subcontract-installer",
+    "hoarding-graphics-installation",
+    "subcontract-vinyl-installer-hartlepool",
   ];
 
   const furnitureLocations = siteConfig.areas.map((city) =>

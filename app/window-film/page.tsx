@@ -266,6 +266,10 @@ export default function WindowFilmHubPage() {
               <h3 className="font-semibold text-foreground">Student accommodation</h3>
               <p className="mt-2 text-sm text-muted">Privacy film for overlooked bedrooms, solar control for overheating south-facing blocks, DDA manifestation.</p>
             </Link>
+            <Link href="/window-film/care-home-window-film/" className="card-float p-5 hover:border-accent/60 transition-colors">
+              <h3 className="font-semibold text-foreground">Care homes</h3>
+              <p className="mt-2 text-sm text-muted">Resident privacy film for bedroom windows, solar control for lounges and day rooms, DDA manifestation.</p>
+            </Link>
           </div>
         </div>
       </section>
