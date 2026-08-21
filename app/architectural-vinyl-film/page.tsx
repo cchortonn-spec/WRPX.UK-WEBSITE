@@ -214,6 +214,10 @@ export default function ArchitecturalVinylFilmPage() {
               <h3 className="font-semibold text-foreground">Retail</h3>
               <p className="mt-2 text-sm text-muted">Shop-front panels, counter fascias, gondola ends, display plinths and fitting room panels. Multi-site programmes.</p>
             </Link>
+            <Link href="/architectural-wrap-care-homes/" className="card-float p-5 hover:border-accent/60 transition-colors">
+              <h3 className="font-semibold text-foreground">Care homes</h3>
+              <p className="mt-2 text-sm text-muted">Bedroom furniture, communal lounge panels, nurses&apos; station counters and corridor doors — no construction, no replacement.</p>
+            </Link>
           </div>
         </div>
       </section>

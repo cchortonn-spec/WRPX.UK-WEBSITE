@@ -338,6 +338,13 @@ export const blogPosts = [
       "A practical guide for shopping centre estate managers, property managers and retail brand teams planning Christmas graphics installation. Multi-unit scheduling, overnight access, subcontract installation across South Yorkshire and the Midlands.",
     date: "2026-08-20",
   },
+  {
+    slug: "window-film-for-student-accommodation-overheating",
+    title: "Window Film for Student Accommodation Overheating — PBSA Solar Control Guide",
+    description:
+      "How solar control window film solves overheating in purpose-built student accommodation (PBSA). Practical guide for university estates teams, PBSA developers and FM contractors — glazed bedroom blocks, south-facing facades and scheduling installation in occupied buildings.",
+    date: "2026-08-21",
+  },
 ] as const;
 
 export type BlogSlug = (typeof blogPosts)[number]["slug"];
