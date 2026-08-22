@@ -343,6 +343,12 @@ export default function NhsVinylGraphicsForHealthcareContractorsPage() {
               <Link href="/architectural-vinyl-film/" className="text-accent hover:underline">
                 Architectural vinyl wrapping
               </Link>
+              <Link href="/architectural-wrap-care-homes/" className="text-accent hover:underline">
+                Vinyl wrapping for care homes
+              </Link>
+              <Link href="/window-film/care-home-window-film/" className="text-accent hover:underline">
+                Window film for care homes
+              </Link>
             </div>
           </div>
         </div>

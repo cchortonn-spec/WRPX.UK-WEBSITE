@@ -593,3 +593,18 @@ _Last updated by automation run on 2026-08-20_
 - `/architectural-vinyl-film/` hub — added "Care homes" card to commercial verticals grid
 
 _Last updated by automation run on 2026-08-21_
+
+## Run 36 additions (2026-08-22)
+
+| Slug | Title / Purpose |
+|---|---|
+| `/subcontract-vinyl-installer-durham/` | Subcontract vinyl installer County Durham — DH1 (Durham City, Aykley Heads), DH2-DH3 (Chester-le-Street), DH4 (Seaham), DH5 (Houghton-le-Spring), DH6 (Peterlee, Spennymoor), DH7 (Meadowfield), DH8-DH9 (Stanley, Consett); A1(M) J61/J62 from South Yorkshire; white-label; combines with Sunderland/Gateshead/Hartlepool/Darlington; ServiceSchema + BreadcrumbList + FAQPage schema |
+| `/christmas-hotel-graphics/` | Christmas hotel graphics installation — window vinyl, frosted seasonal film, lobby wall graphics, function room vinyl, corridor/lift lobby graphics; targets hotel operations managers, hotel FM contractors, hotel Christmas decoration suppliers, hospitality print companies; white-label installation; multi-hotel rollout capability; ServiceSchema + BreadcrumbList + FAQPage schema |
+| `/blog/care-home-vinyl-wrap-refurbishment-guide/` | Blog post: how to scope, brief and schedule a care home vinyl wrap refurbishment — surface types (bedroom furniture, doors, counters, communal areas), resident scheduling approach, CQC documentation, group programme procurement; targets care home property managers, group FM teams, fit-out contractors |
+| `/blog/hoarding-graphics-installation-guide-for-sign-companies/` | Blog post: hoarding graphics installation guide for sign companies — construction site hoardings, Kwik-Klik/temporary hoarding systems, substrate types and vinyl selection, CDM obligations, retail fit-out hoarding, multi-site programmes; targets sign companies, print management firms, project managers |
+
+### Internal linking updates (2026-08-22)
+- `/blog/nhs-vinyl-graphics-for-healthcare-contractors/` — added links to /architectural-wrap-care-homes/ and /window-film/care-home-window-film/ in footer link cluster
+- `/blog/healthcare-vinyl-graphics-for-nhs-contractors/` — added links to /architectural-wrap-care-homes/ and /window-film/care-home-window-film/ in existing link list
+
+_Last updated by automation run on 2026-08-22_

@@ -345,6 +345,20 @@ export const blogPosts = [
       "How solar control window film solves overheating in purpose-built student accommodation (PBSA). Practical guide for university estates teams, PBSA developers and FM contractors — glazed bedroom blocks, south-facing facades and scheduling installation in occupied buildings.",
     date: "2026-08-21",
   },
+  {
+    slug: "care-home-vinyl-wrap-refurbishment-guide",
+    title: "Care Home Vinyl Wrap Refurbishment — How to Brief the Job",
+    description:
+      "A practical guide for care home property managers and group FM teams planning a vinyl wrap refurbishment in an occupied care home. Surfaces, resident scheduling, CQC documentation, procurement and how to brief a specialist installer.",
+    date: "2026-08-22",
+  },
+  {
+    slug: "hoarding-graphics-installation-guide-for-sign-companies",
+    title: "Hoarding Graphics Installation Guide for Sign Companies — Briefing a Subcontract Installer",
+    description:
+      "A practical guide for sign companies, print management firms and project managers briefing a subcontract hoarding installer. Construction site hoardings, Kwik-Klik temporary systems, substrate types, CDM obligations and multi-site scheduling.",
+    date: "2026-08-22",
+  },
 ] as const;
 
 export type BlogSlug = (typeof blogPosts)[number]["slug"];
