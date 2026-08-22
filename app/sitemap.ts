@@ -180,6 +180,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "christmas-subcontract-installer",
     "hoarding-graphics-installation",
     "subcontract-vinyl-installer-hartlepool",
+    "subcontract-vinyl-installer-durham",
+    "christmas-hotel-graphics",
   ];
 
   const furnitureLocations = siteConfig.areas.map((city) =>
