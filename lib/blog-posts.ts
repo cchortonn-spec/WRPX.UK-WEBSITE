@@ -359,6 +359,20 @@ export const blogPosts = [
       "A practical guide for sign companies, print management firms and project managers briefing a subcontract hoarding installer. Construction site hoardings, Kwik-Klik temporary systems, substrate types, CDM obligations and multi-site scheduling.",
     date: "2026-08-22",
   },
+  {
+    slug: "county-durham-subcontract-installation-guide",
+    title: "County Durham Subcontract Installation — A Guide for Sign Companies and Print Houses",
+    description:
+      "A practical guide for sign companies, print houses and brand managers subcontracting vinyl installation across County Durham — Durham City DH1, Chester-le-Street DH2-DH3, Seaham DH4, Houghton-le-Spring DH5, Peterlee DH6, Bishop Auckland DL14 and Newton Aycliffe DL5. A1(M) corridor planning, Durham University access briefing, Aycliffe Business Park logistics and multi-city NE programme planning.",
+    date: "2026-08-23",
+  },
+  {
+    slug: "window-film-for-hospitality-hotels-restaurants",
+    title: "Window Film for Hotels and Restaurants — A Hospitality Specification Guide",
+    description:
+      "A practical guide for hotel FM contractors, hospitality fit-out companies and hotel operations managers specifying window film in hotels and restaurants. Solar control, frosted privacy film, decorative film, glass manifestation — how each product works in hospitality environments, what to specify for different building types, and how to brief a window film installer.",
+    date: "2026-08-23",
+  },
 ] as const;
 
 export type BlogSlug = (typeof blogPosts)[number]["slug"];

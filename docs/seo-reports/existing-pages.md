@@ -1,6 +1,6 @@
 # Existing Pages — WRPX.co.uk
 
-Last updated: 2026-08-20 (Run 34)
+Last updated: 2026-08-23 (Run 37)
 
 Use this file to run the duplicate-check before creating any new page (§3 of the automation spec).
 Cross-reference slug + service + region against the lists below. If a match exists (even approximate), flag as update candidate rather than creating a new page.
@@ -608,3 +608,18 @@ _Last updated by automation run on 2026-08-21_
 - `/blog/healthcare-vinyl-graphics-for-nhs-contractors/` — added links to /architectural-wrap-care-homes/ and /window-film/care-home-window-film/ in existing link list
 
 _Last updated by automation run on 2026-08-22_
+
+## Run 37 additions (2026-08-23)
+
+| Slug | Title / Purpose |
+|---|---|
+| `/christmas-university-graphics/` | Christmas university graphics installation — window vinyl, wall graphics, seasonal window film and multi-building campus installations for universities, students' unions, student accommodation and campus venues; targets university FM contractors, students' union events officers, university accommodation management, PBSA operators, print companies/decoration suppliers with university accounts; white-label; ServiceSchema + BreadcrumbList + FAQPage schema |
+| `/subcontract-vinyl-installer-bishop-auckland/` | Subcontract vinyl installer Bishop Auckland — DL14 (Bishop Auckland town centre, Tindale Crescent, Vinovia retail park, Auckland Castle estate), DL5 (Newton Aycliffe, Aycliffe Business Park), DL4 (Shildon), DL15 (Crook/Willington), DL16 (Spennymoor); A1(M) via Scotch Corner J53 and A688; DL south corridor day plan; connects to Darlington/Durham/Middlesbrough; ServiceSchema + BreadcrumbList + FAQPage schema |
+| `/blog/county-durham-subcontract-installation-guide/` | Blog post: County Durham subcontract installation guide for sign companies — five zone breakdown (Durham City DH1, Chester-le-Street DH2-DH3, east Durham coast DH4-DH6, mid/west Durham DH7-DH9, south Durham DL14-DL16); Durham University access briefing; Aycliffe Business Park logistics; A1(M)/A19 corridor planning; how to brief a subcontract installer; supports /subcontract-vinyl-installer-durham/ and /subcontract-vinyl-installer-bishop-auckland/ |
+| `/blog/window-film-for-hospitality-hotels-restaurants/` | Blog post: window film for hotels and restaurants — hospitality specification guide for hotel FM contractors and fit-out companies; solar control film (TSER/VLT specification for bedrooms, restaurants, lobbies, function rooms); frosted/privacy film (bedroom lower-band, en-suite, partitions); decorative film (branded etched effects, seasonal); glass manifestation (Part M compliance); one-way mirror film; installation logistics for occupied hotels; how to brief an installer; supports /window-film/hotel-window-film/ and /window-film/restaurant-window-film/ |
+
+### Internal linking updates (2026-08-23)
+- `/christmas-window-graphics/` — added cards for /christmas-hotel-graphics/ and /christmas-university-graphics/ in related services section
+- `/christmas-subcontract-installer/` — added cards for /christmas-hotel-graphics/ and /christmas-university-graphics/ in related services section
+
+_Last updated by automation run on 2026-08-23_

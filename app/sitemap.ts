@@ -182,6 +182,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "subcontract-vinyl-installer-hartlepool",
     "subcontract-vinyl-installer-durham",
     "christmas-hotel-graphics",
+    "christmas-university-graphics",
+    "subcontract-vinyl-installer-bishop-auckland",
   ];
 
   const furnitureLocations = siteConfig.areas.map((city) =>
