@@ -327,6 +327,14 @@ export default function ChristmasSubcontractInstallerPage() {
             Related services
           </h2>
           <div className="grid gap-4 sm:grid-cols-2">
+            <Link href="/christmas-hotel-graphics/" className="card-float p-5 hover:border-accent/60 transition-colors">
+              <h3 className="font-semibold text-foreground">Christmas hotel graphics</h3>
+              <p className="mt-2 text-sm text-muted">White-label seasonal installation for hotels — window vinyl, lobby graphics and function room vinyl.</p>
+            </Link>
+            <Link href="/christmas-university-graphics/" className="card-float p-5 hover:border-accent/60 transition-colors">
+              <h3 className="font-semibold text-foreground">Christmas university graphics</h3>
+              <p className="mt-2 text-sm text-muted">Campus Christmas graphics for students&apos; unions, student accommodation and university venues.</p>
+            </Link>
             <Link href="/christmas-window-graphics/" className="card-float p-5 hover:border-accent/60 transition-colors">
               <h3 className="font-semibold text-foreground">Christmas window graphics</h3>
               <p className="mt-2 text-sm text-muted">Christmas graphics installation for retailers and hospitality venues — direct enquiries welcome.</p>
