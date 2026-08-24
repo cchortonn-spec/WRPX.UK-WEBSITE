@@ -164,6 +164,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "window-film/healthcare-window-film",
     "window-film/student-accommodation-window-film",
     "window-film/care-home-window-film",
+    "window-film/solar-control-film-sheffield",
   ];
   const newServicePages = [
     "kitchen-island-wrapping",
@@ -184,6 +185,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "christmas-hotel-graphics",
     "christmas-university-graphics",
     "subcontract-vinyl-installer-bishop-auckland",
+    "architectural-wrap-hotels-sheffield",
+    "architectural-wrap-offices-sheffield",
+    "subcontract-vinyl-installer-accrington",
   ];
 
   const furnitureLocations = siteConfig.areas.map((city) =>

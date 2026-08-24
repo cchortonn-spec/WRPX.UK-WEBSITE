@@ -373,6 +373,20 @@ export const blogPosts = [
       "A practical guide for hotel FM contractors, hospitality fit-out companies and hotel operations managers specifying window film in hotels and restaurants. Solar control, frosted privacy film, decorative film, glass manifestation — how each product works in hospitality environments, what to specify for different building types, and how to brief a window film installer.",
     date: "2026-08-23",
   },
+  {
+    slug: "christmas-university-graphics-guide-for-print-companies",
+    title: "Christmas University Graphics — A Guide for Print Companies and Decoration Suppliers",
+    description:
+      "A practical guide for print companies and decoration suppliers with university and students' union accounts. How to plan Christmas graphics installation across university campuses — students' union bars, accommodation communal areas, campus cafes and multi-building rollouts. Why December slots book out early and how to lock in installation capacity now.",
+    date: "2026-08-24",
+  },
+  {
+    slug: "window-film-for-office-buildings",
+    title: "Window Film for Office Buildings — A Specification Guide for FM Contractors",
+    description:
+      "A practical guide for office FM contractors, commercial fit-out companies and property managers specifying window film in office buildings. Solar control film, frosted privacy film, glass manifestation and one-way mirror film — what each product does in an office environment, where it works, how to specify it and how to brief a window film installer.",
+    date: "2026-08-24",
+  },
 ] as const;
 
 export type BlogSlug = (typeof blogPosts)[number]["slug"];
