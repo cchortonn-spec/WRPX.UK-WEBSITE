@@ -370,6 +370,10 @@ export default function SubcontractVinylInstallerDurhamPage() {
               <h3 className="font-semibold text-foreground">Darlington</h3>
               <p className="mt-2 text-sm text-muted">DL1–DL5 — 35 min south via A167/A1(M)</p>
             </Link>
+            <Link href="/subcontract-vinyl-installer-bishop-auckland/" className="card-float p-5 hover:border-accent/60 transition-colors">
+              <h3 className="font-semibold text-foreground">Bishop Auckland</h3>
+              <p className="mt-2 text-sm text-muted">DL14 — 20 min south-west via A689</p>
+            </Link>
             <Link href="/subcontract-vinyl-installer-middlesbrough/" className="card-float p-5 hover:border-accent/60 transition-colors">
               <h3 className="font-semibold text-foreground">Middlesbrough</h3>
               <p className="mt-2 text-sm text-muted">TS1–TS6 — 50 min south via A167 / A19</p>
