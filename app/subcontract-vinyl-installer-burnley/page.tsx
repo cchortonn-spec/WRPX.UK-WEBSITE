@@ -540,6 +540,10 @@ export default function SubcontractVinylInstallerBurnleyPage() {
             ·{" "}
             <Link href="/blog/bolton-east-lancashire-installation-guide/" className="text-accent hover:underline">
               Bolton &amp; East Lancashire installation guide
+            </Link>{" "}
+            ·{" "}
+            <Link href="/subcontract-vinyl-installer-nelson/" className="text-accent hover:underline">
+              Nelson BB9
             </Link>
           </p>
         </div>

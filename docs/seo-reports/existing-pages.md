@@ -623,3 +623,40 @@ _Last updated by automation run on 2026-08-22_
 - `/christmas-subcontract-installer/` — added cards for /christmas-hotel-graphics/ and /christmas-university-graphics/ in related services section
 
 _Last updated by automation run on 2026-08-23_
+
+## Run 38 additions (2026-08-24)
+
+| Slug | Title / Purpose |
+|---|---|
+| `/architectural-wrap-hotels-sheffield/` | Hotel interior vinyl wrapping Sheffield — S1, Kelham Island, Victoria Quays, Ecclesall Road; guest kitchenettes, bedroom furniture, reception desks, corridor doors, communal areas; breadcrumb to /architectural-wrap-hotels/ hub |
+| `/architectural-wrap-offices-sheffield/` | Office architectural vinyl wrap Sheffield — St Paul's Quarter, Kelham Island, Digital Campus, Sheffield business parks; breakout kitchens, reception desks, meeting room furniture, partition panels; breadcrumb to /architectural-wrap-offices/ hub |
+| `/window-film/solar-control-film-sheffield/` | Solar control window film Sheffield — S1 offices, Kelham Island mill glazing, Sheffield schools, residential; breadcrumb to /window-film/solar-control-film/ hub |
+| `/subcontract-vinyl-installer-accrington/` | Subcontract vinyl installer Accrington BB5 — Church Street Arndale, Oswaldtwistle Mills, Clayton-le-Moors industrial, Great Harwood BB6; M65 J7-8; M62/M66/M65 route from South Yorkshire |
+| `/blog/christmas-university-graphics-guide-for-print-companies/` | Blog post: Christmas university graphics guide — print companies and decoration suppliers with university/SU accounts; academic calendar access, DBS, multi-building scheduling, December capacity urgency |
+| `/blog/window-film-for-office-buildings/` | Blog post: window film for office buildings — FM contractors, commercial fit-out; solar control, frosted privacy, Part M manifestation, one-way mirror; full specification guide |
+
+### Internal linking updates (2026-08-24)
+- `/subcontract-vinyl-installer-durham/` — added Bishop Auckland (DL14, 20 min south-west via A689) to nearby cities grid
+
+_Last updated by automation run on 2026-08-24_
+
+## Run 39 additions (2026-08-25)
+
+| Slug | Title / Purpose |
+|---|---|
+| `/architectural-wrap-hotels-leeds/` | Hotel interior vinyl wrapping Leeds — LS1/LS2 city centre, Granary Wharf, Clarence Dock, South Bank, Headingley; guest kitchenettes, bedroom furniture, reception desks, corridor doors, communal areas; breadcrumb to /architectural-wrap-hotels/ hub |
+| `/architectural-wrap-offices-leeds/` | Office architectural vinyl wrap Leeds — Wellington Place, Granary Wharf, South Bank, Holbeck Urban Village, Thorpe Park, White Rose; breakout kitchens, reception desks, meeting room furniture, partition panels; breadcrumb to /architectural-wrap-offices/ hub |
+| `/architectural-wrap-hotels-nottingham/` | Hotel interior vinyl wrapping Nottingham — NG1 city centre, Lace Market, Castle Quarter, NG7; guest kitchenettes, bedroom furniture, reception desks, corridor doors; breadcrumb to /architectural-wrap-hotels/ hub |
+| `/window-film/solar-control-film-leeds/` | Solar control window film Leeds — Wellington Place offices, Holbeck Urban Village mill glazing, Granary Wharf waterfront, Leeds schools/universities, residential; breadcrumb to /window-film/solar-control-film/ hub |
+| `/window-film/frosted-film-sheffield/` | Frosted window film Sheffield — office glass partitions, meeting room manifestation, shopfront privacy film, residential bathroom windows; Part M compliance; different angle to solar-control-film-sheffield page |
+| `/subcontract-vinyl-installer-nelson/` | Subcontract vinyl installer Nelson BB9 — Market Street town centre, Brierfield business park, Barrowford BB9 (Pendle Village Mill), Colne BB8; M65 J12-13; east end of Burnley—Nelson—Colne day plan |
+| `/blog/hotel-architectural-wrap-guide-for-fit-out-companies/` | Blog post: hotel architectural vinyl wrap guide for fit-out companies — what surfaces work, programme integration, film specification, how to brief a specialist installer; targets hotel fit-out contractors, interior designers, hotel FM teams |
+| `/blog/office-architectural-wrap-specification-guide/` | Blog post: office architectural vinyl wrap specification guide for fit-out contractors — surfaces, programme sequencing, film specification, access scheduling, brief format; targets office fit-out contractors, interior designers, commercial FM teams |
+
+### Internal linking updates (2026-08-25)
+- `/architectural-wrap-hotels/` — added city pages section with links to Sheffield, Leeds and Nottingham city sub-pages
+- `/architectural-wrap-offices/` — added city pages section with links to Sheffield and Leeds city sub-pages
+- `/subcontract-vinyl-installer-accrington/` — added Nelson BB9 link in nearby cities section
+- `/subcontract-vinyl-installer-burnley/` — added Nelson BB9 link in footer link cluster
+
+_Last updated by automation run on 2026-08-25_
