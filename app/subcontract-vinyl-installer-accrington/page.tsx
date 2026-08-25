@@ -371,6 +371,10 @@ export default function SubcontractVinylInstallerAccringtonPage() {
               <h3 className="font-semibold text-foreground">Preston</h3>
               <p className="mt-2 text-sm text-muted">PR1–PR2 — 30 min north-west via M65/M6</p>
             </Link>
+            <Link href="/subcontract-vinyl-installer-nelson/" className="card-float p-5 hover:border-accent/60 transition-colors">
+              <h3 className="font-semibold text-foreground">Nelson</h3>
+              <p className="mt-2 text-sm text-muted">BB9 — 20 min east via M65 (beyond Burnley)</p>
+            </Link>
             <Link href="/subcontract-vinyl-installation-yorkshire/" className="card-float p-5 hover:border-accent/60 transition-colors">
               <h3 className="font-semibold text-foreground">Yorkshire Subcontract Hub</h3>
               <p className="mt-2 text-sm text-muted">Full UK coverage map and all city pages</p>

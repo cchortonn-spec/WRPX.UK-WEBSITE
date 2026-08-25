@@ -188,6 +188,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "architectural-wrap-hotels-sheffield",
     "architectural-wrap-offices-sheffield",
     "subcontract-vinyl-installer-accrington",
+    "architectural-wrap-hotels-leeds",
+    "architectural-wrap-offices-leeds",
+    "architectural-wrap-hotels-nottingham",
+    "window-film/solar-control-film-leeds",
+    "window-film/frosted-film-sheffield",
+    "subcontract-vinyl-installer-nelson",
   ];
 
   const furnitureLocations = siteConfig.areas.map((city) =>

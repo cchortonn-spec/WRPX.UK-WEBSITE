@@ -387,6 +387,20 @@ export const blogPosts = [
       "A practical guide for office FM contractors, commercial fit-out companies and property managers specifying window film in office buildings. Solar control film, frosted privacy film, glass manifestation and one-way mirror film — what each product does in an office environment, where it works, how to specify it and how to brief a window film installer.",
     date: "2026-08-24",
   },
+  {
+    slug: "hotel-architectural-wrap-guide-for-fit-out-companies",
+    title: "Hotel Architectural Vinyl Wrap — A Guide for Fit-Out Companies",
+    description:
+      "A practical guide for hotel fit-out contractors, interior designers and hotel FM teams specifying architectural vinyl wrapping in hotel refurbishments. How to brief the job, what surfaces work, programme logistics and how to work with a specialist wrapping subcontractor.",
+    date: "2026-08-25",
+  },
+  {
+    slug: "office-architectural-wrap-specification-guide",
+    title: "Office Architectural Vinyl Wrap — Specification Guide for Fit-Out Contractors",
+    description:
+      "A practical guide for office fit-out contractors, interior designers and commercial FM teams specifying architectural vinyl wrapping in office refurbishments. What surfaces work, how to integrate wrapping into a fit-out programme, film specification and how to brief a specialist installer.",
+    date: "2026-08-25",
+  },
 ] as const;
 
 export type BlogSlug = (typeof blogPosts)[number]["slug"];
