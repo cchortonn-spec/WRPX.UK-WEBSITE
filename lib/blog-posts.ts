@@ -401,6 +401,13 @@ export const blogPosts = [
       "A practical guide for office fit-out contractors, interior designers and commercial FM teams specifying architectural vinyl wrapping in office refurbishments. What surfaces work, how to integrate wrapping into a fit-out programme, film specification and how to brief a specialist installer.",
     date: "2026-08-25",
   },
+  {
+    slug: "student-accommodation-architectural-wrap-guide",
+    title: "Student Accommodation Architectural Wrap — A Guide for PBSA Operators",
+    description:
+      "A practical guide for PBSA developers, university accommodation managers and FM contractors on specifying architectural vinyl wrapping in student accommodation void programmes. Bedroom furniture, communal kitchens, corridor doors, academic calendar scheduling and how to brief a specialist installer.",
+    date: "2026-08-26",
+  },
 ] as const;
 
 export type BlogSlug = (typeof blogPosts)[number]["slug"];
