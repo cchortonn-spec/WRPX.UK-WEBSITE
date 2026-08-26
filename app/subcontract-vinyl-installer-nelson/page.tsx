@@ -351,6 +351,10 @@ export default function SubcontractVinylInstallerNelsonPage() {
             Nearby subcontract coverage
           </h2>
           <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+            <Link href="/subcontract-vinyl-installer-colne/" className="card-float p-5 hover:border-accent/60 transition-colors">
+              <h3 className="font-semibold text-foreground">Colne</h3>
+              <p className="mt-2 text-sm text-muted">BB8 — 5 min east at M65 terminus</p>
+            </Link>
             <Link href="/subcontract-vinyl-installer-burnley/" className="card-float p-5 hover:border-accent/60 transition-colors">
               <h3 className="font-semibold text-foreground">Burnley</h3>
               <p className="mt-2 text-sm text-muted">BB11–BB12 — 5 min west via M65</p>
@@ -370,10 +374,6 @@ export default function SubcontractVinylInstallerNelsonPage() {
             <Link href="/subcontract-vinyl-installer-bradford/" className="card-float p-5 hover:border-accent/60 transition-colors">
               <h3 className="font-semibold text-foreground">Bradford</h3>
               <p className="mt-2 text-sm text-muted">BD1–BD5 — 35 min east via M65/M606</p>
-            </Link>
-            <Link href="/subcontract-vinyl-installation-yorkshire/" className="card-float p-5 hover:border-accent/60 transition-colors">
-              <h3 className="font-semibold text-foreground">Yorkshire Subcontract Hub</h3>
-              <p className="mt-2 text-sm text-muted">Full UK coverage map and all city pages</p>
             </Link>
           </div>
         </div>

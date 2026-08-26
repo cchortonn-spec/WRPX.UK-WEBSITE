@@ -194,6 +194,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "window-film/solar-control-film-leeds",
     "window-film/frosted-film-sheffield",
     "subcontract-vinyl-installer-nelson",
+    "architectural-wrap-offices-nottingham",
+    "window-film/frosted-film-leeds",
+    "window-film/solar-control-film-nottingham",
+    "subcontract-vinyl-installer-colne",
   ];
 
   const furnitureLocations = siteConfig.areas.map((city) =>

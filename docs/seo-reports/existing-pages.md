@@ -660,3 +660,19 @@ _Last updated by automation run on 2026-08-24_
 - `/subcontract-vinyl-installer-burnley/` — added Nelson BB9 link in footer link cluster
 
 _Last updated by automation run on 2026-08-25_
+
+## Run 40 additions (2026-08-26)
+
+| Slug | Title / Purpose |
+|---|---|
+| `/architectural-wrap-offices-nottingham/` | Office architectural wrap Nottingham — NG1, Lace Market, Canal Quarter, Nottingham Business Park; breadcrumb to /architectural-wrap-offices/ hub |
+| `/window-film/frosted-film-leeds/` | Frosted/privacy window film Leeds — office glass partitions, meeting room manifestation, shopfronts, residential; breadcrumb to /window-film/frosted-window-film/ hub |
+| `/window-film/solar-control-film-nottingham/` | Solar control film Nottingham — NG1 offices, Lace Market, student accommodation, hotels, retail; breadcrumb to /window-film/solar-control-film/ hub |
+| `/subcontract-vinyl-installer-colne/` | Subcontract vinyl installer Colne BB8 — Albert Road town centre, Boundary Mill, Earby BD23, Nelson BB9; M65 terminus; breadcrumb to /subcontract-vinyl-installation-yorkshire/ |
+| `/blog/student-accommodation-architectural-wrap-guide/` | Blog post: PBSA architectural wrap guide — bedroom furniture, communal kitchens, corridor doors, void-period scheduling, multi-building programmes; targets PBSA operators, university estates, FM contractors |
+
+### Internal linking updates (2026-08-26)
+- `/architectural-wrap-offices/` — added Nottingham card to city pages grid (Sheffield + Leeds + Nottingham)
+- `/subcontract-vinyl-installer-nelson/` — added Colne BB8 link to nearby cities grid
+
+_Last updated by automation run on 2026-08-26_
