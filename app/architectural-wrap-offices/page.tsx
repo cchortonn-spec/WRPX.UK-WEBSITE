@@ -332,6 +332,10 @@ export default function ArchitecturalWrapOfficesPage() {
               <h3 className="font-semibold text-foreground">Nottingham</h3>
               <p className="mt-2 text-sm text-muted">Office architectural wrap across Nottingham, Lace Market and Nottinghamshire.</p>
             </Link>
+            <Link href="/architectural-wrap-offices-manchester/" className="card-float p-5 hover:border-accent/60 transition-colors">
+              <h3 className="font-semibold text-foreground">Manchester</h3>
+              <p className="mt-2 text-sm text-muted">Office architectural wrap across Manchester, Spinningfields and Greater Manchester.</p>
+            </Link>
           </div>
         </div>
       </section>

@@ -312,6 +312,10 @@ export default function ArchitecturalWrapHotelsPage() {
               <h3 className="font-semibold text-foreground">Nottingham</h3>
               <p className="mt-2 text-sm text-muted">Hotel interior wrapping across Nottingham and the East Midlands.</p>
             </Link>
+            <Link href="/architectural-wrap-hotels-manchester/" className="card-float p-5 hover:border-accent/60 transition-colors">
+              <h3 className="font-semibold text-foreground">Manchester</h3>
+              <p className="mt-2 text-sm text-muted">Hotel interior wrapping across Manchester, Northern Quarter and Greater Manchester.</p>
+            </Link>
           </div>
         </div>
       </section>
