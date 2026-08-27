@@ -408,6 +408,13 @@ export const blogPosts = [
       "A practical guide for PBSA developers, university accommodation managers and FM contractors on specifying architectural vinyl wrapping in student accommodation void programmes. Bedroom furniture, communal kitchens, corridor doors, academic calendar scheduling and how to brief a specialist installer.",
     date: "2026-08-26",
   },
+  {
+    slug: "restaurant-architectural-wrap-guide",
+    title: "Restaurant Architectural Vinyl Wrap — Specification Guide for Hospitality Fit-Out Contractors",
+    description:
+      "A practical guide for hospitality fit-out contractors, restaurant designers and interior refurbishment teams specifying architectural vinyl wrapping in restaurant and café refurbishments. Which surfaces to specify, how wrapping fits into an F&B fit-out programme, film selection for food environments and how to brief a specialist installer.",
+    date: "2026-08-27",
+  },
 ] as const;
 
 export type BlogSlug = (typeof blogPosts)[number]["slug"];
