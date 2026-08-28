@@ -415,6 +415,13 @@ export const blogPosts = [
       "A practical guide for hospitality fit-out contractors, restaurant designers and interior refurbishment teams specifying architectural vinyl wrapping in restaurant and café refurbishments. Which surfaces to specify, how wrapping fits into an F&B fit-out programme, film selection for food environments and how to brief a specialist installer.",
     date: "2026-08-27",
   },
+  {
+    slug: "retail-architectural-wrap-guide",
+    title: "Retail Architectural Vinyl Wrap — Specification Guide for Retail Fit-Out Contractors",
+    description:
+      "A practical guide for retail fit-out contractors, brand rollout managers and visual merchandising teams specifying architectural vinyl wrapping in retail refurbishments. Which surfaces to wrap, film specification for retail environments, multi-site rollout planning and how to brief a specialist installer.",
+    date: "2026-08-28",
+  },
 ] as const;
 
 export type BlogSlug = (typeof blogPosts)[number]["slug"];

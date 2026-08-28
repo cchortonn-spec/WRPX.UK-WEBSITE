@@ -288,8 +288,23 @@ export default function ArchitecturalWrapRetailPage() {
         </div>
       </section>
 
-      {/* Related */}
+      {/* City pages */}
       <section className="px-4 py-16">
+        <div className="container mx-auto max-w-4xl">
+          <h2 className="mb-8 text-2xl font-semibold text-foreground md:text-3xl">
+            Retail wrapping by city
+          </h2>
+          <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+            <Link href="/architectural-wrap-retail-sheffield/" className="card-float p-5 hover:border-accent/60 transition-colors">
+              <h3 className="font-semibold text-foreground">Sheffield</h3>
+              <p className="mt-2 text-sm text-muted">Retail interior wrapping across Sheffield, Meadowhall and Crystal Peaks.</p>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Related */}
+      <section className="bg-card px-4 py-16">
         <div className="container mx-auto max-w-4xl">
           <h2 className="mb-8 text-2xl font-semibold text-foreground md:text-3xl">
             Related services
