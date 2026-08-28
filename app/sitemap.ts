@@ -203,6 +203,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "window-film/frosted-film-nottingham",
     "window-film/frosted-film-manchester",
     "subcontract-vinyl-installer-skipton",
+    "architectural-wrap-restaurants-sheffield",
+    "architectural-wrap-restaurants-leeds",
+    "architectural-wrap-retail-sheffield",
+    "window-film/solar-control-film-manchester",
+    "subcontract-vinyl-installer-keighley",
+    "christmas-retail-graphics",
   ];
 
   const furnitureLocations = siteConfig.areas.map((city) =>
