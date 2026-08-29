@@ -209,6 +209,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "window-film/solar-control-film-manchester",
     "subcontract-vinyl-installer-keighley",
     "christmas-retail-graphics",
+    "architectural-wrap-restaurants-nottingham",
+    "architectural-wrap-restaurants-manchester",
+    "architectural-wrap-retail-leeds",
+    "window-film/solar-control-film-derby",
+    "subcontract-vinyl-installer-barnoldswick",
   ];
 
   const furnitureLocations = siteConfig.areas.map((city) =>
