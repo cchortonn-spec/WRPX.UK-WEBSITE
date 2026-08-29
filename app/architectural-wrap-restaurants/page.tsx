@@ -276,6 +276,14 @@ export default function ArchitecturalWrapRestaurantsPage() {
               <h3 className="font-semibold text-foreground">Leeds</h3>
               <p className="mt-2 text-sm text-muted">Restaurant and bar wrapping across Leeds, Granary Wharf and Headingley.</p>
             </Link>
+            <Link href="/architectural-wrap-restaurants-nottingham/" className="card-float p-5 hover:border-accent/60 transition-colors">
+              <h3 className="font-semibold text-foreground">Nottingham</h3>
+              <p className="mt-2 text-sm text-muted">Restaurant and bar wrapping across Nottingham, the Lace Market and Hockley.</p>
+            </Link>
+            <Link href="/architectural-wrap-restaurants-manchester/" className="card-float p-5 hover:border-accent/60 transition-colors">
+              <h3 className="font-semibold text-foreground">Manchester</h3>
+              <p className="mt-2 text-sm text-muted">Restaurant and bar wrapping across Manchester, Northern Quarter, Ancoats and Didsbury.</p>
+            </Link>
           </div>
         </div>
       </section>

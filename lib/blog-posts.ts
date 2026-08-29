@@ -422,6 +422,13 @@ export const blogPosts = [
       "A practical guide for retail fit-out contractors, brand rollout managers and visual merchandising teams specifying architectural vinyl wrapping in retail refurbishments. Which surfaces to wrap, film specification for retail environments, multi-site rollout planning and how to brief a specialist installer.",
     date: "2026-08-28",
   },
+  {
+    slug: "christmas-retail-graphics-guide-for-sign-companies",
+    title: "Christmas Retail Graphics — Installation Guide for Sign Companies and Print Houses",
+    description:
+      "A practical guide for sign companies and print houses planning Christmas retail graphics installation programmes. How to scope, schedule and deliver seasonal retail rollouts — from artwork sign-off timelines to overnight shopping centre protocols.",
+    date: "2026-08-29",
+  },
 ] as const;
 
 export type BlogSlug = (typeof blogPosts)[number]["slug"];

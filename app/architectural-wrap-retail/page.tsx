@@ -299,6 +299,10 @@ export default function ArchitecturalWrapRetailPage() {
               <h3 className="font-semibold text-foreground">Sheffield</h3>
               <p className="mt-2 text-sm text-muted">Retail interior wrapping across Sheffield, Meadowhall and Crystal Peaks.</p>
             </Link>
+            <Link href="/architectural-wrap-retail-leeds/" className="card-float p-5 hover:border-accent/60 transition-colors">
+              <h3 className="font-semibold text-foreground">Leeds</h3>
+              <p className="mt-2 text-sm text-muted">Retail interior wrapping across Leeds, Trinity Leeds, Victoria Gate and White Rose.</p>
+            </Link>
           </div>
         </div>
       </section>
