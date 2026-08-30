@@ -303,6 +303,14 @@ export default function ArchitecturalWrapRetailPage() {
               <h3 className="font-semibold text-foreground">Leeds</h3>
               <p className="mt-2 text-sm text-muted">Retail interior wrapping across Leeds, Trinity Leeds, Victoria Gate and White Rose.</p>
             </Link>
+            <Link href="/architectural-wrap-retail-nottingham/" className="card-float p-5 hover:border-accent/60 transition-colors">
+              <h3 className="font-semibold text-foreground">Nottingham</h3>
+              <p className="mt-2 text-sm text-muted">Retail interior wrapping across Nottingham, Victoria Centre, Intu Broadmarsh and Cornerhouse.</p>
+            </Link>
+            <Link href="/architectural-wrap-retail-manchester/" className="card-float p-5 hover:border-accent/60 transition-colors">
+              <h3 className="font-semibold text-foreground">Manchester</h3>
+              <p className="mt-2 text-sm text-muted">Retail interior wrapping across Manchester Arndale, Trafford Centre, NOMA and Spinningfields.</p>
+            </Link>
           </div>
         </div>
       </section>
