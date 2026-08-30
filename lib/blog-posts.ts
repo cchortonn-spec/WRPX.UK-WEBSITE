@@ -429,6 +429,13 @@ export const blogPosts = [
       "A practical guide for sign companies and print houses planning Christmas retail graphics installation programmes. How to scope, schedule and deliver seasonal retail rollouts — from artwork sign-off timelines to overnight shopping centre protocols.",
     date: "2026-08-29",
   },
+  {
+    slug: "solar-control-film-guide-for-facilities-managers",
+    title: "Solar Control Film — A Specification Guide for Facilities Managers",
+    description:
+      "A practical guide for FM contractors, commercial property managers and fit-out companies specifying solar control window film in commercial buildings. What solar film does, how to specify it, where it works best, how to brief an installer, and what to expect from an installation programme.",
+    date: "2026-08-30",
+  },
 ] as const;
 
 export type BlogSlug = (typeof blogPosts)[number]["slug"];

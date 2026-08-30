@@ -338,7 +338,7 @@ export default function FrostedWindowFilmPage() {
           <h2 className="mb-8 text-2xl font-semibold text-foreground md:text-3xl">
             Frosted film by city
           </h2>
-          <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-4">
+          <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
             <Link href="/window-film/frosted-film-sheffield/" className="card-float p-5 hover:border-accent/60 transition-colors">
               <h3 className="font-semibold text-foreground">Sheffield</h3>
               <p className="mt-2 text-sm text-muted">Frosted and privacy film across Sheffield and South Yorkshire.</p>
@@ -354,6 +354,10 @@ export default function FrostedWindowFilmPage() {
             <Link href="/window-film/frosted-film-manchester/" className="card-float p-5 hover:border-accent/60 transition-colors">
               <h3 className="font-semibold text-foreground">Manchester</h3>
               <p className="mt-2 text-sm text-muted">Frosted and privacy film across Manchester and Greater Manchester.</p>
+            </Link>
+            <Link href="/window-film/frosted-film-derby/" className="card-float p-5 hover:border-accent/60 transition-colors">
+              <h3 className="font-semibold text-foreground">Derby</h3>
+              <p className="mt-2 text-sm text-muted">Frosted and privacy film across Derby and Derbyshire.</p>
             </Link>
           </div>
         </div>

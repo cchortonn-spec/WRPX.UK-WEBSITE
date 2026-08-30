@@ -676,3 +676,54 @@ _Last updated by automation run on 2026-08-25_
 - `/subcontract-vinyl-installer-nelson/` — added Colne BB8 link to nearby cities grid
 
 _Last updated by automation run on 2026-08-26_
+
+## Run 41 additions (2026-08-27)
+| `/architectural-wrap-hotels-manchester/` | Hotel interior vinyl wrapping Manchester — M4 Piccadilly, M3 Spinningfields, M1, M50 Salford Quays; breadcrumb to /architectural-wrap-hotels/ hub |
+| `/architectural-wrap-offices-manchester/` | Office architectural vinyl wrap Manchester — M1, M3, M4, M50; breadcrumb to /architectural-wrap-offices/ hub |
+| `/window-film/frosted-film-nottingham/` | Frosted/privacy window film Nottingham — NG1 offices, Lace Market, Hockley, Beeston NG9; breadcrumb to /window-film/frosted-window-film/ hub |
+| `/window-film/frosted-film-manchester/` | Frosted/privacy window film Manchester — city centre offices, Northern Quarter, Spinningfields; breadcrumb to /window-film/frosted-window-film/ hub |
+| `/subcontract-vinyl-installer-skipton/` | Subcontract vinyl installer Skipton BD23 — Canal Basin, High Street, Coach Street, A65/A59; breadcrumb to /subcontract-vinyl-installation-yorkshire/ |
+| `/blog/restaurant-architectural-wrap-guide/` | Blog post: restaurant/F&B architectural wrap guide — hospitality fit-out contractors |
+
+_Last updated by automation run on 2026-08-27_
+
+## Run 42 additions (2026-08-28)
+| `/architectural-wrap-restaurants-sheffield/` | Restaurant interior vinyl wrapping Sheffield — S1, Kelham Island, Ecclesall Road, Division Street; breadcrumb to /architectural-wrap-restaurants/ hub |
+| `/architectural-wrap-restaurants-leeds/` | Restaurant interior vinyl wrapping Leeds — LS1 city centre, Granary Wharf, Kirkgate, South Bank; breadcrumb to /architectural-wrap-restaurants/ hub |
+| `/architectural-wrap-retail-sheffield/` | Retail interior vinyl wrapping Sheffield — Meadowhall, Crystal Peaks, Orchard Square, Fargate; breadcrumb to /architectural-wrap-retail/ hub |
+| `/window-film/solar-control-film-manchester/` | Solar control film Manchester — M1/M3/M4 offices, Spinningfields, Northern Quarter, Salford Quays; breadcrumb to /window-film/solar-control-film/ hub |
+| `/subcontract-vinyl-installer-keighley/` | Subcontract vinyl installer Keighley BD21 — Bradford Road, Airedale, Dalton Lane industrial; breadcrumb to /subcontract-vinyl-installation-yorkshire/ |
+| `/blog/retail-architectural-wrap-guide/` | Blog post: retail architectural wrap specification guide for retail fit-out contractors |
+| `/christmas-retail-graphics/` | Christmas retail graphics installation — seasonal rollout specialist page for retail chains, shopping centres, brand agencies |
+
+_Last updated by automation run on 2026-08-28_
+
+## Run 43 additions (2026-08-29)
+| `/architectural-wrap-restaurants-nottingham/` | Restaurant interior vinyl wrapping Nottingham — Lace Market NG1, Hockley NG1, West Bridgford NG2, Beeston NG9; breadcrumb to /architectural-wrap-restaurants/ hub |
+| `/architectural-wrap-restaurants-manchester/` | Restaurant interior vinyl wrapping Manchester — Northern Quarter M4, Spinningfields M3, Ancoats M4, Didsbury M20, Chorlton M21; breadcrumb to /architectural-wrap-restaurants/ hub |
+| `/architectural-wrap-retail-leeds/` | Retail interior vinyl wrapping Leeds — Trinity Leeds, Victoria Gate, White Rose LS11, Leeds LS1 city core; breadcrumb to /architectural-wrap-retail/ hub |
+| `/window-film/solar-control-film-derby/` | Solar control film Derby — DE1 city centre, Pride Park DE24, Intu Derby, University of Derby DE22, Mickleover DE3; breadcrumb to /window-film/solar-control-film/ hub |
+| `/subcontract-vinyl-installer-barnoldswick/` | Subcontract vinyl installer Barnoldswick BB18 — Rolls-Royce corridor, Earby BB18, Kelbrook BB18, Salterforth; A56 between Colne and Clitheroe |
+| `/blog/christmas-retail-graphics-guide-for-sign-companies/` | Blog post: Christmas retail graphics installation guide for sign companies and print houses |
+
+### Hub updates (Run 43)
+- `/architectural-wrap-restaurants/` — city grid: Sheffield + Leeds + Nottingham + Manchester
+- `/architectural-wrap-retail/` — city grid: Sheffield + Leeds
+- `/window-film/solar-control-film/` — city grid: Sheffield + Leeds + Nottingham + Manchester + Derby
+
+_Last updated by automation run on 2026-08-29_
+
+## Run 44 additions (2026-08-30)
+| Slug | Title / Purpose |
+|---|---|
+| `/architectural-wrap-retail-nottingham/` | Retail interior vinyl wrapping Nottingham — Victoria Centre, Intu Broadmarsh, Cornerhouse NG1, Castle Quarter, Hockley, Lace Market, Beeston NG9; breadcrumb to /architectural-wrap-retail/ hub. **First-mover** retail wrap city page for Nottingham. |
+| `/architectural-wrap-retail-manchester/` | Retail interior vinyl wrapping Manchester — Arndale M4, Trafford Centre M17, NOMA M4, Spinningfields M3, Northern Quarter M1; breadcrumb to /architectural-wrap-retail/ hub. **First-mover** retail wrap city page for Manchester. |
+| `/window-film/frosted-film-derby/` | Frosted/privacy window film Derby — DE1 offices, Friar Gate, Pride Park DE24, Intu Derby, University of Derby DE22, Mickleover DE3; breadcrumb to /window-film/frosted-window-film/ hub. Natural pair with solar-control-film-derby. |
+| `/subcontract-vinyl-installer-ilkley/` | Subcontract vinyl installer Ilkley LS29 — The Grove retail, Ben Rhydding LS29, Burley-in-Wharfedale LS29, Menston LS29, Addingham LS29; A65 Wharfe Valley corridor between Skipton and Leeds. |
+| `/blog/solar-control-film-guide-for-facilities-managers/` | Blog post: solar control film FM specification guide — 2,000+ words; product types, specification process, sectors (offices, hotels, schools, retail, atria), programme management; targets FM contractors, commercial property managers, fit-out companies. |
+
+### Hub updates (Run 44)
+- `/architectural-wrap-retail/` — city grid extended: Sheffield + Leeds + **Nottingham** + **Manchester**
+- `/window-film/frosted-window-film/` — city grid extended: Sheffield + Leeds + Nottingham + Manchester + **Derby**
+
+_Last updated by automation run on 2026-08-30_
