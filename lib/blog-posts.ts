@@ -436,6 +436,13 @@ export const blogPosts = [
       "A practical guide for FM contractors, commercial property managers and fit-out companies specifying solar control window film in commercial buildings. What solar film does, how to specify it, where it works best, how to brief an installer, and what to expect from an installation programme.",
     date: "2026-08-30",
   },
+  {
+    slug: "frosted-film-specification-guide-for-facilities-managers",
+    title: "Frosted Window Film — A Specification Guide for Facilities Managers",
+    description:
+      "A practical guide for FM contractors, commercial property managers and fit-out companies specifying frosted and privacy window film in commercial buildings. Privacy film types, Part M manifestation, how to specify, where to use each product, and what to expect from an installation programme.",
+    date: "2026-08-31",
+  },
 ] as const;
 
 export type BlogSlug = (typeof blogPosts)[number]["slug"];
