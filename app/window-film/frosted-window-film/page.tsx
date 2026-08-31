@@ -359,6 +359,10 @@ export default function FrostedWindowFilmPage() {
               <h3 className="font-semibold text-foreground">Derby</h3>
               <p className="mt-2 text-sm text-muted">Frosted and privacy film across Derby and Derbyshire.</p>
             </Link>
+            <Link href="/window-film/frosted-film-leicester/" className="card-float p-5 hover:border-accent/60 transition-colors">
+              <h3 className="font-semibold text-foreground">Leicester</h3>
+              <p className="mt-2 text-sm text-muted">Frosted and privacy film across Leicester and Leicestershire.</p>
+            </Link>
           </div>
         </div>
       </section>

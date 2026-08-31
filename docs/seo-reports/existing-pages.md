@@ -727,3 +727,18 @@ _Last updated by automation run on 2026-08-29_
 - `/window-film/frosted-window-film/` — city grid extended: Sheffield + Leeds + Nottingham + Manchester + **Derby**
 
 _Last updated by automation run on 2026-08-30_
+
+## Run 45 additions (2026-08-31)
+| Slug | Title / Purpose |
+|---|---|
+| `/architectural-wrap-retail-derby/` | Retail interior vinyl wrapping Derby — Intu Derby on Victoria Street, St Peter's Quarter DE1, Cathedral Quarter, Sadler Gate, Pride Park DE24, Kingsway Retail Park; breadcrumb to /architectural-wrap-retail/ hub. Completes Derby vertical cluster (solar film + frosted film + retail wrap all in Derby). |
+| `/window-film/frosted-film-leicester/` | Frosted/privacy window film Leicester — LE1 city centre, De Montfort University LE1/LE2, University of Leicester LE1, Highcross, Braunstone Gate LE3, Oadby LE2; breadcrumb to /window-film/frosted-window-film/ hub. First East Midlands frosted city page beyond Nottingham/Derby. |
+| `/subcontract-vinyl-installer-otley/` | Subcontract vinyl installer Otley LS21 — Market Place, Boroughgate, Pool-in-Wharfedale LS21, Burley-in-Wharfedale LS21, Guiseley LS20; A65/A659 Wharfe Valley corridor; 5 miles east of Ilkley. |
+| `/subcontract-vinyl-installer-clitheroe/` | Subcontract vinyl installer Clitheroe BB7 — Castle Street, Moor Lane, Whalley BB7, Great Harwood BB6, Longridge PR3; A59 Ribble Valley corridor; 15 miles north of Barnoldswick. |
+| `/blog/frosted-film-specification-guide-for-facilities-managers/` | Blog post: frosted film FM specification guide — 2,500+ words; film types (plain frosted, etched-effect, cut-to-shape, one-way, decorative vinyl), Part M manifestation, specification process, where film delivers value (offices, hotels, healthcare, schools, retail), programme management; targets FM contractors, commercial property managers, fit-out companies. |
+
+### Hub updates (Run 45)
+- `/architectural-wrap-retail/` — city grid extended: Sheffield + Leeds + Nottingham + Manchester + **Derby**
+- `/window-film/frosted-window-film/` — city grid extended: Sheffield + Leeds + Nottingham + Manchester + Derby + **Leicester**
+
+_Last updated by automation run on 2026-08-31_

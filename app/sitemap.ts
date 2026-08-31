@@ -218,6 +218,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "architectural-wrap-retail-manchester",
     "window-film/frosted-film-derby",
     "subcontract-vinyl-installer-ilkley",
+    "architectural-wrap-retail-derby",
+    "window-film/frosted-film-leicester",
+    "subcontract-vinyl-installer-otley",
+    "subcontract-vinyl-installer-clitheroe",
   ];
 
   const furnitureLocations = siteConfig.areas.map((city) =>
