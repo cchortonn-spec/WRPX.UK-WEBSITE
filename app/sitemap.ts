@@ -222,6 +222,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "window-film/frosted-film-leicester",
     "subcontract-vinyl-installer-otley",
     "subcontract-vinyl-installer-clitheroe",
+    "architectural-wrap-retail-leicester",
+    "window-film/solar-control-film-leicester",
+    "subcontract-vinyl-installer-wetherby",
+    "subcontract-vinyl-installer-settle",
   ];
 
   const furnitureLocations = siteConfig.areas.map((city) =>

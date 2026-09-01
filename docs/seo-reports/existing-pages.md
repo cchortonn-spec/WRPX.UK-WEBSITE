@@ -742,3 +742,22 @@ _Last updated by automation run on 2026-08-30_
 - `/window-film/frosted-window-film/` — city grid extended: Sheffield + Leeds + Nottingham + Manchester + Derby + **Leicester**
 
 _Last updated by automation run on 2026-08-31_
+
+## Run 46 additions (2026-09-01)
+| Slug | Title / Purpose |
+|---|---|
+| `/architectural-wrap-retail-leicester/` | Retail interior vinyl wrapping Leicester — Highcross LE1, the Lanes LE1, Fosse Park LE3, Braunstone Gate LE3, Gallowtree Gate, Oadby LE2; breadcrumb to /architectural-wrap-retail/ hub. Completes Leicester vertical cluster (frosted film + retail wrap both in Leicester). **First-mover.** |
+| `/window-film/solar-control-film-leicester/` | Solar control window film Leicester — LE1 offices, De Montfort University LE1/LE2, University of Leicester LE1, Grove Park LE19, Meridian Business Park LE19, Highcross; breadcrumb to /window-film/solar-control-film/ hub. Natural pair with frosted-film-leicester. **First-mover.** |
+| `/subcontract-vinyl-installer-wetherby/` | Subcontract vinyl installer Wetherby LS22 — Market Place, A1(M) J44/J46, Collingham LS22, Boston Spa LS23, Linton LS22; midpoint between Leeds (12 miles) and Harrogate (8 miles). **First-mover.** |
+| `/subcontract-vinyl-installer-settle/` | Subcontract vinyl installer Settle BD24 — Market Place, Giggleswick BD24, Langcliffe BD24, Hellifield BD23; A65 Ribble Valley corridor; 15 miles west of Skipton; Yorkshire Dales gateway. **First-mover.** |
+| `/blog/architectural-wrap-specification-guide-for-hotel-fit-out/` | Blog post: hotel architectural vinyl wrap specification guide for fit-out companies — 3,000+ words; what surfaces work (bedroom kitchenettes, wardrobe units, reception desks, corridor doors, bar fronts, communal areas), film specification, programming a live hotel, multi-hotel estate programmes, cost benchmarks, how to brief a subcontractor; targets hotel fit-out contractors, interior designers, hotel FM teams. |
+
+### Hub updates (Run 46)
+- `/architectural-wrap-retail/` — city grid extended: Sheffield + Leeds + Nottingham + Manchester + Derby + **Leicester**
+- `/window-film/solar-control-film/` — city grid extended: Sheffield + Leeds + Nottingham + Manchester + Derby + **Leicester**
+
+### Internal linking updates (Run 46)
+- `/subcontract-vinyl-installer-otley/` — added Wetherby LS22 to nearby cities grid
+- `/subcontract-vinyl-installer-skipton/` — added Settle BD24 to nearby cities grid
+
+_Last updated by automation run on 2026-09-01_
