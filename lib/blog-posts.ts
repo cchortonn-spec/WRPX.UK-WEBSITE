@@ -443,6 +443,13 @@ export const blogPosts = [
       "A practical guide for FM contractors, commercial property managers and fit-out companies specifying frosted and privacy window film in commercial buildings. Privacy film types, Part M manifestation, how to specify, where to use each product, and what to expect from an installation programme.",
     date: "2026-08-31",
   },
+  {
+    slug: "architectural-wrap-specification-guide-for-hotel-fit-out",
+    title: "Architectural Vinyl Wrap — A Specification Guide for Hotel Fit-Out Companies",
+    description:
+      "A practical guide for hotel fit-out contractors, interior designers and hotel FM teams specifying architectural vinyl wrapping in hotel refurbishments. What surfaces work, how to programme the installation, how to specify the right film, and how to brief a specialist wrapping subcontractor.",
+    date: "2026-09-01",
+  },
 ] as const;
 
 export type BlogSlug = (typeof blogPosts)[number]["slug"];

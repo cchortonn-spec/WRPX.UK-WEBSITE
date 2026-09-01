@@ -100,8 +100,8 @@ const faqItems = [
 
 const nearbyPages = [
   { href: "/subcontract-vinyl-installer-ilkley/", city: "Ilkley", postcode: "LS29", desc: "Ilkley spa town, The Grove, Ben Rhydding — 5 miles west via A65" },
+  { href: "/subcontract-vinyl-installer-wetherby/", city: "Wetherby", postcode: "LS22", desc: "Wetherby Market Place, A1(M) corridor, Boston Spa — 7 miles east via B6164" },
   { href: "/subcontract-vinyl-installer-harrogate/", city: "Harrogate", postcode: "HG1", desc: "Harrogate spa town, Montpellier Quarter, Royal Baths — 10 miles north-east via A59" },
-  { href: "/subcontract-vinyl-installer-bradford/", city: "Bradford", postcode: "BD1", desc: "Bradford city centre, Little Germany, Manningham — 7 miles south via A6038" },
   { href: "/subcontract-vinyl-installer-leeds/", city: "Leeds", postcode: "LS1", desc: "Leeds city centre, Trinity Leeds, Victoria Gate — 10 miles south via A660" },
 ];
 

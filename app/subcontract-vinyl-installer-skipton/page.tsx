@@ -99,10 +99,10 @@ const faqItems = [
 ];
 
 const nearbyPages = [
+  { href: "/subcontract-vinyl-installer-settle/", city: "Settle", postcode: "BD24", desc: "Settle Market Place, Giggleswick, Ribble Valley gateway — 15 miles west via A65" },
   { href: "/subcontract-vinyl-installer-bradford/", city: "Bradford", postcode: "BD1–BD5", desc: "Bradford city centre, Little Germany, Broadway" },
   { href: "/subcontract-vinyl-installer-colne/", city: "Colne", postcode: "BB8", desc: "Colne town centre, Boundary Mill, M65 terminus — 25 miles west" },
   { href: "/subcontract-vinyl-installer-harrogate/", city: "Harrogate", postcode: "HG1–HG3", desc: "Harrogate spa town, Stray, Knaresborough" },
-  { href: "/subcontract-vinyl-installer-nelson/", city: "Nelson", postcode: "BB9", desc: "Nelson town centre, A65 East Lancashire" },
 ];
 
 export default function SubcontractVinylInstallerSkiptonPage() {

@@ -315,6 +315,10 @@ export default function ArchitecturalWrapRetailPage() {
               <h3 className="font-semibold text-foreground">Derby</h3>
               <p className="mt-2 text-sm text-muted">Retail interior wrapping across Intu Derby, St Peter&apos;s Quarter, Cathedral Quarter and Pride Park.</p>
             </Link>
+            <Link href="/architectural-wrap-retail-leicester/" className="card-float p-5 hover:border-accent/60 transition-colors">
+              <h3 className="font-semibold text-foreground">Leicester</h3>
+              <p className="mt-2 text-sm text-muted">Retail interior wrapping across Highcross, Fosse Park, Braunstone Gate and Leicester city centre.</p>
+            </Link>
           </div>
         </div>
       </section>
