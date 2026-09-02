@@ -450,6 +450,13 @@ export const blogPosts = [
       "A practical guide for hotel fit-out contractors, interior designers and hotel FM teams specifying architectural vinyl wrapping in hotel refurbishments. What surfaces work, how to programme the installation, how to specify the right film, and how to brief a specialist wrapping subcontractor.",
     date: "2026-09-01",
   },
+  {
+    slug: "retail-wrap-specification-guide-for-brand-rollout-managers",
+    title: "Retail Vinyl Wrap — A Specification Guide for Brand Rollout Managers",
+    description:
+      "A practical guide for retail brand rollout managers, visual merchandising teams and retail fit-out contractors specifying architectural vinyl wrapping across multi-site programmes. Which surfaces work, how to specify film, how to manage consistency across sites, and how to brief a specialist installer.",
+    date: "2026-09-02",
+  },
 ] as const;
 
 export type BlogSlug = (typeof blogPosts)[number]["slug"];
