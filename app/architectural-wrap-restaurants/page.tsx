@@ -284,6 +284,10 @@ export default function ArchitecturalWrapRestaurantsPage() {
               <h3 className="font-semibold text-foreground">Manchester</h3>
               <p className="mt-2 text-sm text-muted">Restaurant and bar wrapping across Manchester, Northern Quarter, Ancoats and Didsbury.</p>
             </Link>
+            <Link href="/architectural-wrap-restaurants-leicester/" className="card-float p-5 hover:border-accent/60 transition-colors">
+              <h3 className="font-semibold text-foreground">Leicester</h3>
+              <p className="mt-2 text-sm text-muted">Restaurant and bar wrapping across Leicester, Braunstone Gate, Narborough Road and Oadby.</p>
+            </Link>
           </div>
         </div>
       </section>

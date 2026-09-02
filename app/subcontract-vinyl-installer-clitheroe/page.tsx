@@ -103,6 +103,7 @@ const nearbyPages = [
   { href: "/subcontract-vinyl-installer-burnley/", city: "Burnley", postcode: "BB11", desc: "Burnley town centre, Burnley Bridge Business Park — 8 miles south via A671" },
   { href: "/subcontract-vinyl-installer-accrington/", city: "Accrington", postcode: "BB5", desc: "Accrington town centre, Hyndburn — 9 miles south via A680" },
   { href: "/subcontract-vinyl-installer-skipton/", city: "Skipton", postcode: "BD23", desc: "Skipton town centre, Yorkshire Dales gateway — 18 miles east via A59" },
+  { href: "/subcontract-vinyl-installer-garstang/", city: "Garstang", postcode: "PR3", desc: "Garstang town centre, A6 Lancaster corridor — 18 miles west via Longridge/B6243" },
 ];
 
 export default function SubcontractVinylInstallerClitheroePageComponent() {

@@ -761,3 +761,22 @@ _Last updated by automation run on 2026-08-31_
 - `/subcontract-vinyl-installer-skipton/` — added Settle BD24 to nearby cities grid
 
 _Last updated by automation run on 2026-09-01_
+
+## Run 47 additions (2026-09-02)
+| Slug | Title / Purpose |
+|---|---|
+| `/architectural-wrap-restaurants-leicester/` | Restaurant interior vinyl wrapping Leicester — Braunstone Gate LE3, Narborough Road, Oadby LE2, city centre LE1, Wigston LE18; completes restaurants city grid (Sheffield/Leeds/Nottingham/Manchester/Leicester). **First-mover.** |
+| `/architectural-wrap-retail-coventry/` | Retail interior vinyl wrapping Coventry — CV1 West Orchards, Belgrade Plaza, Warwick Road, Arena Retail Park CV6, Coventry University; extends retail city grid into West Midlands. **First-mover.** |
+| `/window-film/frosted-film-coventry/` | Frosted/privacy window film Coventry — CV1 offices, Coventry University campus, Arena Business Park CV6, Westwood Business Park CV4; extends frosted film city grid into West Midlands. **First-mover.** |
+| `/subcontract-vinyl-installer-garstang/` | Subcontract vinyl installer Garstang PR3 — High Street, Market Place, Longridge PR3, Scorton PR3, Bilsborrow PR3; A6 midpoint between Preston (11 miles) and Lancaster (11 miles); natural pair with Clitheroe (18 miles east). **First-mover.** |
+| `/blog/retail-wrap-specification-guide-for-brand-rollout-managers/` | Blog post: retail vinyl wrap specification guide for brand rollout managers — 2,800+ words; surfaces, film spec, multi-site rollout management, cost benchmarks, briefing guide; targets brand managers, visual merchandising teams, retail fit-out contractors. |
+
+### Hub updates (Run 47)
+- `/architectural-wrap-restaurants/` — city grid extended: Sheffield + Leeds + Nottingham + Manchester + **Leicester**
+- `/architectural-wrap-retail/` — city grid extended: Sheffield + Leeds + Nottingham + Manchester + Derby + Leicester + **Coventry**
+- `/window-film/frosted-window-film/` — city grid extended: Sheffield + Leeds + Nottingham + Manchester + Derby + Leicester + **Coventry**
+
+### Internal linking updates (Run 47)
+- `/subcontract-vinyl-installer-clitheroe/` — added Garstang PR3 to nearby cities grid
+
+_Last updated by automation run on 2026-09-02_
