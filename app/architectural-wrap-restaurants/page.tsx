@@ -288,6 +288,10 @@ export default function ArchitecturalWrapRestaurantsPage() {
               <h3 className="font-semibold text-foreground">Leicester</h3>
               <p className="mt-2 text-sm text-muted">Restaurant and bar wrapping across Leicester, Braunstone Gate, Narborough Road and Oadby.</p>
             </Link>
+            <Link href="/architectural-wrap-restaurants-coventry/" className="card-float p-5 hover:border-accent/60 transition-colors">
+              <h3 className="font-semibold text-foreground">Coventry</h3>
+              <p className="mt-2 text-sm text-muted">Restaurant and bar wrapping across Coventry, Belgrade Quarter, Warwick Road and Earlsdon.</p>
+            </Link>
           </div>
         </div>
       </section>
