@@ -780,3 +780,22 @@ _Last updated by automation run on 2026-09-01_
 - `/subcontract-vinyl-installer-clitheroe/` — added Garstang PR3 to nearby cities grid
 
 _Last updated by automation run on 2026-09-02_
+
+## Run 48 additions (2026-09-03)
+| Slug | Title / Purpose |
+|---|---|
+| `/architectural-wrap-restaurants-coventry/` | Restaurant interior vinyl wrapping Coventry — CV1 Belgrade Quarter, Warwick Road, Earlsdon CV5, Spon End CV1; completes restaurants city grid (Sheffield/Leeds/Nottingham/Manchester/Leicester/Coventry). **First-mover.** |
+| `/window-film/solar-control-film-coventry/` | Solar control window film Coventry — CV1 offices, Coventry University, University of Warwick CV4, Arena Business Park CV6, Westwood Business Park CV4, Middlemarch Business Park CV3; extends solar control city grid into West Midlands. Pair with frosted-film-coventry. **First-mover.** |
+| `/architectural-wrap-hotels-leicester/` | Hotel interior vinyl wrapping Leicester — LE1 city centre, Highcross cluster, M1 J21 corridor hotels, Fosse Park LE3, Grove Park LE19, Meridian Business Park LE19; completes Leicester vertical cluster (hotels+restaurants+retail+window film all in Leicester). **First-mover.** |
+| `/subcontract-vinyl-installer-longridge/` | Subcontract vinyl installer Longridge PR3 — Berry Lane, Inglewhite Road, Ribble Valley, Forest of Bowland; 8 miles NE of Preston via B6243, 8 miles east of Garstang via A6/B6243; natural pair with Garstang + Preston corridor. **First-mover.** |
+| `/blog/window-film-for-retail-shopfronts-and-commercial-interiors/` | Blog post: window film for retail shopfronts specification guide — 3,000+ words; solar control film, frosted privacy, manifestation, decorative vinyl; specification process, multi-site retail programmes, cleaning regimes, briefing guide; targets retail fit-out contractors, brand managers, FM teams. |
+
+### Hub updates (Run 48)
+- `/architectural-wrap-restaurants/` — city grid extended: Sheffield + Leeds + Nottingham + Manchester + Leicester + **Coventry**
+- `/architectural-wrap-hotels/` — city grid extended: Sheffield + Leeds + Nottingham + Manchester + **Leicester**
+- `/window-film/solar-control-film/` — city grid extended: Sheffield + Leeds + Nottingham + Manchester + Derby + Leicester + **Coventry**
+
+### Internal linking updates (Run 48)
+- `/subcontract-vinyl-installer-garstang/` — added Longridge PR3 to nearby cities grid
+
+_Last updated by automation run on 2026-09-03_

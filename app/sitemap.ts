@@ -230,6 +230,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "architectural-wrap-retail-coventry",
     "window-film/frosted-film-coventry",
     "subcontract-vinyl-installer-garstang",
+    "architectural-wrap-restaurants-coventry",
+    "window-film/solar-control-film-coventry",
+    "architectural-wrap-hotels-leicester",
+    "subcontract-vinyl-installer-longridge",
   ];
 
   const furnitureLocations = siteConfig.areas.map((city) =>

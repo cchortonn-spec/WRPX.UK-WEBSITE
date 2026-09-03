@@ -457,6 +457,13 @@ export const blogPosts = [
       "A practical guide for retail brand rollout managers, visual merchandising teams and retail fit-out contractors specifying architectural vinyl wrapping across multi-site programmes. Which surfaces work, how to specify film, how to manage consistency across sites, and how to brief a specialist installer.",
     date: "2026-09-02",
   },
+  {
+    slug: "window-film-for-retail-shopfronts-and-commercial-interiors",
+    title: "Window Film for Retail Shopfronts and Commercial Interiors — Specification Guide",
+    description:
+      "A practical guide for retail fit-out contractors, brand managers and FM teams specifying window film across retail shopfronts and commercial interiors. Solar control, frosted privacy, manifestation, decorative film — what to specify and when.",
+    date: "2026-09-03",
+  },
 ] as const;
 
 export type BlogSlug = (typeof blogPosts)[number]["slug"];

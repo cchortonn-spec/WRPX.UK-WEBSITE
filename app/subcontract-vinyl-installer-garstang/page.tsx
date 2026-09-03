@@ -100,6 +100,7 @@ const faqItems = [
 
 const nearbyPages = [
   { href: "/subcontract-vinyl-installer-preston/", city: "Preston", postcode: "PR1", desc: "Preston city centre, Fishergate — 11 miles south via M6 J31/32" },
+  { href: "/subcontract-vinyl-installer-longridge/", city: "Longridge", postcode: "PR3", desc: "Longridge town centre, Berry Lane — 8 miles east via B6243" },
   { href: "/subcontract-vinyl-installer-lancaster/", city: "Lancaster", postcode: "LA1", desc: "Lancaster city centre, Morecambe Bay corridor — 11 miles north via M6 J33/34" },
   { href: "/subcontract-vinyl-installer-clitheroe/", city: "Clitheroe", postcode: "BB7", desc: "Clitheroe town centre, Ribble Valley — 18 miles east via B6243/A59" },
 ];
