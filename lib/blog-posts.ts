@@ -464,6 +464,13 @@ export const blogPosts = [
       "A practical guide for retail fit-out contractors, brand managers and FM teams specifying window film across retail shopfronts and commercial interiors. Solar control, frosted privacy, manifestation, decorative film — what to specify and when.",
     date: "2026-09-03",
   },
+  {
+    slug: "hotel-window-film-specification-guide-for-hotel-fit-out",
+    title: "Hotel Window Film — A Specification Guide for Hotel Fit-Out Contractors",
+    description:
+      "A practical guide for hotel fit-out contractors, interior designers and hotel FM teams specifying window film across hotel projects. Solar control, frosted privacy, decorative film, glass manifestation — what to specify in each area of the hotel and how to brief a commercial installer.",
+    date: "2026-09-04",
+  },
 ] as const;
 
 export type BlogSlug = (typeof blogPosts)[number]["slug"];

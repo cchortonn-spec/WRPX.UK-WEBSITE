@@ -292,6 +292,10 @@ export default function ArchitecturalWrapRestaurantsPage() {
               <h3 className="font-semibold text-foreground">Coventry</h3>
               <p className="mt-2 text-sm text-muted">Restaurant and bar wrapping across Coventry, Belgrade Quarter, Warwick Road and Earlsdon.</p>
             </Link>
+            <Link href="/architectural-wrap-restaurants-birmingham/" className="card-float p-5 hover:border-accent/60 transition-colors">
+              <h3 className="font-semibold text-foreground">Birmingham</h3>
+              <p className="mt-2 text-sm text-muted">Restaurant and bar wrapping across Birmingham, Jewellery Quarter, Digbeth, Brindleyplace and Broad Street.</p>
+            </Link>
           </div>
         </div>
       </section>
