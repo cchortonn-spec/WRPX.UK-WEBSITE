@@ -222,6 +222,10 @@ export default function SolarControlFilmPage() {
               <h3 className="font-semibold text-foreground">Coventry</h3>
               <p className="mt-2 text-sm text-muted">Solar control film across Coventry offices, Coventry University, University of Warwick and Arena Business Park.</p>
             </Link>
+            <Link href="/window-film/solar-control-film-birmingham/" className="card-float p-5 hover:border-accent/60 transition-colors">
+              <h3 className="font-semibold text-foreground">Birmingham</h3>
+              <p className="mt-2 text-sm text-muted">Solar control film across Birmingham offices, hotels, retail and the University of Birmingham.</p>
+            </Link>
           </div>
         </div>
       </section>
