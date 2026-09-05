@@ -323,6 +323,10 @@ export default function ArchitecturalWrapRetailPage() {
               <h3 className="font-semibold text-foreground">Coventry</h3>
               <p className="mt-2 text-sm text-muted">Retail interior wrapping across West Orchards, Belgrade Plaza, Warwick Road and Coventry city centre.</p>
             </Link>
+            <Link href="/architectural-wrap-retail-birmingham/" className="card-float p-5 hover:border-accent/60 transition-colors">
+              <h3 className="font-semibold text-foreground">Birmingham</h3>
+              <p className="mt-2 text-sm text-muted">Retail interior wrapping across Bullring, Grand Central, Selfridges, the Mailbox and Jewellery Quarter.</p>
+            </Link>
           </div>
         </div>
       </section>

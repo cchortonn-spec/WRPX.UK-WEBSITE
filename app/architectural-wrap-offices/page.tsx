@@ -340,6 +340,10 @@ export default function ArchitecturalWrapOfficesPage() {
               <h3 className="font-semibold text-foreground">Leicester</h3>
               <p className="mt-2 text-sm text-muted">Office architectural wrap across Leicester, Meridian Business Park, Grove Park and LE1 city centre.</p>
             </Link>
+            <Link href="/architectural-wrap-offices-birmingham/" className="card-float p-5 hover:border-accent/60 transition-colors">
+              <h3 className="font-semibold text-foreground">Birmingham</h3>
+              <p className="mt-2 text-sm text-muted">Office architectural wrap across Birmingham, Colmore Row, Brindleyplace, Jewellery Quarter and Solihull.</p>
+            </Link>
           </div>
         </div>
       </section>

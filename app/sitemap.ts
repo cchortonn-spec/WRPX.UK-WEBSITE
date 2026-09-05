@@ -239,6 +239,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "window-film/frosted-film-birmingham",
     "window-film/solar-control-film-birmingham",
     "subcontract-vinyl-installer-ripon",
+    "architectural-wrap-offices-birmingham",
+    "architectural-wrap-retail-birmingham",
+    "subcontract-vinyl-installer-knaresborough",
   ];
 
   const furnitureLocations = siteConfig.areas.map((city) =>

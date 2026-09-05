@@ -471,6 +471,13 @@ export const blogPosts = [
       "A practical guide for hotel fit-out contractors, interior designers and hotel FM teams specifying window film across hotel projects. Solar control, frosted privacy, decorative film, glass manifestation — what to specify in each area of the hotel and how to brief a commercial installer.",
     date: "2026-09-04",
   },
+  {
+    slug: "window-film-for-schools-and-universities",
+    title: "Window Film for Schools and Universities — A Specification Guide",
+    description:
+      "A practical guide for school bursars, university facilities managers and education sector FM contractors specifying window film across school and university buildings. Solar control, frosted privacy, manifestation, decorative film — what to specify and how to brief a commercial installer.",
+    date: "2026-09-05",
+  },
 ] as const;
 
 export type BlogSlug = (typeof blogPosts)[number]["slug"];
