@@ -242,6 +242,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "architectural-wrap-offices-birmingham",
     "architectural-wrap-retail-birmingham",
     "subcontract-vinyl-installer-knaresborough",
+    "architectural-wrap-hotels-birmingham",
+    "window-film/hotel-window-film-birmingham",
+    "architectural-wrap-education-sheffield",
+    "subcontract-vinyl-installer-northallerton",
+    "subcontract-vinyl-installer-lytham-st-annes",
+    "blog/office-vinyl-wrap-specification-guide-for-commercial-fit-out",
   ];
 
   const furnitureLocations = siteConfig.areas.map((city) =>

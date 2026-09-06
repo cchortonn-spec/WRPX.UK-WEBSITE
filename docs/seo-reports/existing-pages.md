@@ -799,3 +799,41 @@ _Last updated by automation run on 2026-09-02_
 - `/subcontract-vinyl-installer-garstang/` — added Longridge PR3 to nearby cities grid
 
 _Last updated by automation run on 2026-09-03_
+
+## Run 49 additions (2026-09-04)
+| Slug | Title / Purpose |
+|---|---|
+| `/architectural-wrap-offices-leicester/` | Office interior vinyl wrapping Leicester — LE1 city centre, Highcross, Meridian Business Park LE19, Grove Park LE19; completes Leicester vertical cluster (offices+hotels+restaurants+retail). **First-mover.** |
+| `/architectural-wrap-restaurants-birmingham/` | Restaurant interior vinyl wrapping Birmingham — Jewellery Quarter B1, Digbeth B5, Brindleyplace B1, Mailbox B1, Broad Street B1, Solihull B90; **first Birmingham vertical page.** |
+| `/window-film/frosted-film-birmingham/` | Frosted window film Birmingham — offices, retail, hotels, residential; Jewellery Quarter B1, Colmore Row B3, Brindleyplace B1, Digbeth B5, Mailbox B1, Selfridges B5, Solihull B90. **First-mover.** |
+| `/window-film/solar-control-film-birmingham/` | Solar control film Birmingham — offices, hotels, commercial glazing; Colmore Row B3, Snow Hill B4, NEC B40, M6/M42 corridor. **First-mover.** |
+| `/subcontract-vinyl-installer-ripon/` | Subcontract vinyl installer Ripon HG4 — Market Place, North Street, Westgate BID, A61 corridor; 15 miles south of Northallerton, 13 miles north of Knaresborough. **First-mover.** |
+| `/blog/hotel-window-film-specification-guide-for-hotel-fit-out/` | Blog post: hotel window film spec guide for hotel fit-out contractors. |
+
+## Run 50 additions (2026-09-05)
+| Slug | Title / Purpose |
+|---|---|
+| `/architectural-wrap-offices-birmingham/` | Office interior vinyl wrapping Birmingham — Colmore Row B3, Brindleyplace B1, Jewellery Quarter B1, Mailbox B1, Snow Hill B4, Digbeth B5, Solihull B90; **first-mover.** |
+| `/architectural-wrap-retail-birmingham/` | Retail interior vinyl wrapping Birmingham — Bullring B5, Grand Central B5, Selfridges B5, Mailbox B1, Jewellery Quarter B1, Solihull B91, Merry Hill DY5; **first-mover.** |
+| `/subcontract-vinyl-installer-knaresborough/` | Subcontract vinyl installer Knaresborough HG5 — Market Place, A59 corridor, 3 miles east of Harrogate, 16 miles west of York. **First-mover.** |
+| `/blog/window-film-for-schools-and-universities/` | Blog post: window film for schools and universities — solar control overheating, thermal/low-E winter, frosted privacy, Part M manifestation; targeting school bursars, university FM, education FM contractors. |
+
+### Hub updates (Run 50)
+- `/architectural-wrap-offices/` — city grid adds **Birmingham**
+- `/architectural-wrap-retail/` — city grid adds **Birmingham**
+
+## Run 51 additions (2026-09-06)
+| Slug | Title / Purpose |
+|---|---|
+| `/architectural-wrap-hotels-birmingham/` | Hotel interior vinyl wrapping Birmingham — Grand Hotel B3, Mailbox B1, Jewellery Quarter B1, Brindleyplace B1, NEC B40, Solihull B90; **completes Birmingham vertical cluster (restaurants+offices+retail+hotels); first-mover.** |
+| `/window-film/hotel-window-film-birmingham/` | Hotel window film Birmingham — solar control bedroom glazing, frosted privacy bathrooms, Part M manifestation; NEC B40, Solihull B90, city centre hotels; **first-mover.** |
+| `/architectural-wrap-education-sheffield/` | Vinyl wrapping for schools and universities Sheffield — University of Sheffield S10, Sheffield Hallam S1, Sheffield College, secondary schools and MATs across Sheffield and South Yorkshire; **first city-specific education vertical page; first-mover.** |
+| `/subcontract-vinyl-installer-northallerton/` | Subcontract vinyl installer Northallerton DL7 — High Street, Tesco Extra retail park, A1(M) J50 corridor, North Yorkshire county town; natural A1(M) extension north of Ripon; **first-mover.** |
+| `/subcontract-vinyl-installer-lytham-st-annes/` | Subcontract vinyl installer Lytham St Annes FY8 — Clifton Street, St Annes Square, A584 Fylde coast; natural pairing with Blackpool FY1 7 miles north; **first-mover.** |
+| `/blog/office-vinyl-wrap-specification-guide-for-commercial-fit-out/` | Blog post: FM guide for commissioning office vinyl wrapping in occupied buildings — scheduling around live office (overnight/weekend phasing), cost benchmarks, film spec, surface prioritisation, brief writing; targets facilities managers and workspace managers (not fit-out contractors — that audience served by existing blog). |
+
+### Hub updates (Run 51)
+- `/architectural-wrap-hotels/` — city grid adds **Birmingham**
+- `/architectural-wrap-education/` — city grid section added with Sheffield as first entry
+
+_Last updated by automation run on 2026-09-06_

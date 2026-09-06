@@ -260,6 +260,21 @@ export default function ArchitecturalWrapEducationPage() {
         </div>
       </section>
 
+      {/* City pages */}
+      <section className="bg-card px-4 py-16">
+        <div className="container mx-auto max-w-4xl">
+          <h2 className="mb-8 text-2xl font-semibold text-foreground md:text-3xl">
+            Education wrapping by city
+          </h2>
+          <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+            <Link href="/architectural-wrap-education-sheffield/" className="card-float p-5 hover:border-accent/60 transition-colors">
+              <h3 className="font-semibold text-foreground">Sheffield</h3>
+              <p className="mt-2 text-sm text-muted">Wrapping for Sheffield schools, Sheffield Hallam University, University of Sheffield and South Yorkshire academies.</p>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Related */}
       <section className="px-4 py-16">
         <div className="container mx-auto max-w-4xl">
