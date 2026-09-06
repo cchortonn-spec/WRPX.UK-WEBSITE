@@ -320,6 +320,10 @@ export default function ArchitecturalWrapHotelsPage() {
               <h3 className="font-semibold text-foreground">Leicester</h3>
               <p className="mt-2 text-sm text-muted">Hotel interior wrapping across Leicester, Highcross, M1 J21 corridor and Leicestershire.</p>
             </Link>
+            <Link href="/architectural-wrap-hotels-birmingham/" className="card-float p-5 hover:border-accent/60 transition-colors">
+              <h3 className="font-semibold text-foreground">Birmingham</h3>
+              <p className="mt-2 text-sm text-muted">Hotel interior wrapping across Birmingham city centre, NEC B40, Solihull B90 and the West Midlands.</p>
+            </Link>
           </div>
         </div>
       </section>
