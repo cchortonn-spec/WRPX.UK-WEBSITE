@@ -836,4 +836,18 @@ _Last updated by automation run on 2026-09-03_
 - `/architectural-wrap-hotels/` — city grid adds **Birmingham**
 - `/architectural-wrap-education/` — city grid section added with Sheffield as first entry
 
-_Last updated by automation run on 2026-09-06_
+## Run 52 additions (2026-09-07)
+| Slug | Title / Purpose |
+|---|---|
+| `/architectural-wrap-education-leeds/` | Vinyl wrapping for schools and universities Leeds — University of Leeds LS2, Leeds Beckett LS6, Leeds College of Building, secondary schools and MATs across Leeds and West Yorkshire; **second education city page (after Sheffield); first-mover.** |
+| `/window-film/school-window-film-sheffield/` | Window film for Sheffield schools and universities — solar control for overheating classrooms, frosted privacy film and Part M safety manifestation; University of Sheffield S10, Sheffield Hallam S1, Sheffield College; **first school window film city page; first-mover.** |
+| `/architectural-wrap-hotels-coventry/` | Hotel interior vinyl wrapping Coventry — CV1 city centre, Ricoh Arena CV6, University of Warwick CV4, A45/M6 corridor; **first hotels city page for Coventry; first-mover.** |
+| `/subcontract-vinyl-installer-thirsk/` | Subcontract vinyl installer Thirsk YO7 — Market Place, A61 and A168 corridors, Hambleton district; A1(M) corridor between Ripon (12m south) and Northallerton (12m north); **first-mover.** |
+| `/subcontract-vinyl-installer-kirkham/` | Subcontract vinyl installer Kirkham PR4 — Poulton Street, A583 Fylde corridor, Wesham; central Fylde market town between Preston (8m east), Lytham St Annes (5m south-west) and Blackpool (8m north-west); **first-mover.** |
+| `/blog/vinyl-wrapping-for-academy-trusts-multi-site-schools/` | Blog post: MAT estates director guide — scoping, specifying, programming and managing multi-site vinyl wrapping across academy trust school portfolios; covers DBS requirements, documentation, cost structure, FM white-label delivery; targets estates directors and school business managers. |
+
+### Hub updates (Run 52)
+- `/architectural-wrap-education/` — city grid adds **Leeds**
+- `/architectural-wrap-hotels/` — city grid adds **Coventry**
+
+_Last updated by automation run on 2026-09-07_

@@ -248,6 +248,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "subcontract-vinyl-installer-northallerton",
     "subcontract-vinyl-installer-lytham-st-annes",
     "blog/office-vinyl-wrap-specification-guide-for-commercial-fit-out",
+    "architectural-wrap-education-leeds",
+    "window-film/school-window-film-sheffield",
+    "architectural-wrap-hotels-coventry",
+    "subcontract-vinyl-installer-thirsk",
+    "subcontract-vinyl-installer-kirkham",
+    "blog/vinyl-wrapping-for-academy-trusts-multi-site-schools",
   ];
 
   const furnitureLocations = siteConfig.areas.map((city) =>
