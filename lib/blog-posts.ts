@@ -478,6 +478,13 @@ export const blogPosts = [
       "A practical guide for school bursars, university facilities managers and education sector FM contractors specifying window film across school and university buildings. Solar control, frosted privacy, manifestation, decorative film — what to specify and how to brief a commercial installer.",
     date: "2026-09-05",
   },
+  {
+    slug: "vinyl-wrapping-for-academy-trusts-multi-site-schools",
+    title: "Vinyl Wrapping for Academy Trusts and Multi-Site Schools — A Guide for Estates Directors",
+    description:
+      "A practical guide for academy trust estates directors, school bursars and FM contractors planning multi-site vinyl wrapping programmes across MAT school portfolios. How to scope, specify, programme and manage consistent vinyl wrap refurbishment across multiple school buildings.",
+    date: "2026-09-07",
+  },
 ] as const;
 
 export type BlogSlug = (typeof blogPosts)[number]["slug"];

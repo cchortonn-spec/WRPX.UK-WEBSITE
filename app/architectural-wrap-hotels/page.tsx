@@ -324,6 +324,10 @@ export default function ArchitecturalWrapHotelsPage() {
               <h3 className="font-semibold text-foreground">Birmingham</h3>
               <p className="mt-2 text-sm text-muted">Hotel interior wrapping across Birmingham city centre, NEC B40, Solihull B90 and the West Midlands.</p>
             </Link>
+            <Link href="/architectural-wrap-hotels-coventry/" className="card-float p-5 hover:border-accent/60 transition-colors">
+              <h3 className="font-semibold text-foreground">Coventry</h3>
+              <p className="mt-2 text-sm text-muted">Hotel interior wrapping across Coventry CV1, Ricoh Arena CV6, University of Warwick CV4 and Warwickshire.</p>
+            </Link>
           </div>
         </div>
       </section>
