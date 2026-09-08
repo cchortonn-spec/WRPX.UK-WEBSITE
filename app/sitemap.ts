@@ -254,6 +254,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "subcontract-vinyl-installer-thirsk",
     "subcontract-vinyl-installer-kirkham",
     "blog/vinyl-wrapping-for-academy-trusts-multi-site-schools",
+    "architectural-wrap-education-nottingham",
+    "window-film/school-window-film-leeds",
+    "architectural-wrap-hotels-derby",
+    "subcontract-vinyl-installer-fleetwood",
+    "subcontract-vinyl-installer-richmond",
+    "blog/school-window-film-compliance-guide",
   ];
 
   const furnitureLocations = siteConfig.areas.map((city) =>

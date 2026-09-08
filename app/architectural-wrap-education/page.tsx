@@ -275,6 +275,10 @@ export default function ArchitecturalWrapEducationPage() {
               <h3 className="font-semibold text-foreground">Leeds</h3>
               <p className="mt-2 text-sm text-muted">Wrapping for Leeds schools, University of Leeds, Leeds Beckett University, Leeds College of Building and West Yorkshire MATs.</p>
             </Link>
+            <Link href="/architectural-wrap-education-nottingham/" className="card-float p-5 hover:border-accent/60 transition-colors">
+              <h3 className="font-semibold text-foreground">Nottingham</h3>
+              <p className="mt-2 text-sm text-muted">Wrapping for Nottingham schools, University of Nottingham NG7, Nottingham Trent University NG1 and Nottinghamshire MATs.</p>
+            </Link>
           </div>
         </div>
       </section>

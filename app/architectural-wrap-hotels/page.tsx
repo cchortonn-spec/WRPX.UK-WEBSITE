@@ -328,6 +328,10 @@ export default function ArchitecturalWrapHotelsPage() {
               <h3 className="font-semibold text-foreground">Coventry</h3>
               <p className="mt-2 text-sm text-muted">Hotel interior wrapping across Coventry CV1, Ricoh Arena CV6, University of Warwick CV4 and Warwickshire.</p>
             </Link>
+            <Link href="/architectural-wrap-hotels-derby/" className="card-float p-5 hover:border-accent/60 transition-colors">
+              <h3 className="font-semibold text-foreground">Derby</h3>
+              <p className="mt-2 text-sm text-muted">Hotel interior wrapping across Derby DE1, Pride Park DE24 and the A52/A38 business hotel corridor.</p>
+            </Link>
           </div>
         </div>
       </section>
