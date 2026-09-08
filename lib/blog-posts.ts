@@ -485,6 +485,13 @@ export const blogPosts = [
       "A practical guide for academy trust estates directors, school bursars and FM contractors planning multi-site vinyl wrapping programmes across MAT school portfolios. How to scope, specify, programme and manage consistent vinyl wrap refurbishment across multiple school buildings.",
     date: "2026-09-07",
   },
+  {
+    slug: "school-window-film-compliance-guide",
+    title: "School Window Film Compliance Guide — Part M, Solar Control & Privacy Specification",
+    description:
+      "A practical compliance guide for school bursars, estates managers and FM contractors specifying window film across school and university buildings. Covers Part M manifestation requirements, solar control for overheating classrooms, frosted privacy film for sensitive areas, and structuring a compliant holiday-period programme.",
+    date: "2026-09-08",
+  },
 ] as const;
 
 export type BlogSlug = (typeof blogPosts)[number]["slug"];

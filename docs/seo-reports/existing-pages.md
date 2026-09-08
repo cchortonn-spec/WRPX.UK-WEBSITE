@@ -850,4 +850,19 @@ _Last updated by automation run on 2026-09-03_
 - `/architectural-wrap-education/` — city grid adds **Leeds**
 - `/architectural-wrap-hotels/` — city grid adds **Coventry**
 
-_Last updated by automation run on 2026-09-07_
+## Run 53 additions (2026-09-08)
+| Slug | Title / Purpose |
+|---|---|
+| `/architectural-wrap-education-nottingham/` | Vinyl wrapping for schools and universities Nottingham — University of Nottingham NG7, Nottingham Trent NG1, Nottingham College NG1, secondary schools and MATs across Nottingham and Nottinghamshire; **third education city page (after Sheffield, Leeds); first-mover.** |
+| `/window-film/school-window-film-leeds/` | Window film for Leeds schools and universities — solar control for overheating classrooms, frosted privacy film and Part M safety manifestation; University of Leeds LS2, Leeds Beckett LS6, Leeds College of Building; **second school window film city page (after Sheffield); first-mover.** |
+| `/architectural-wrap-hotels-derby/` | Hotel interior vinyl wrapping Derby — DE1 city centre, Pride Park DE24, A52/A38 business hotel corridor, Chellaston DE73; 30–40 minutes from WRPX South Yorkshire base; **first hotels city page for Derby; first-mover.** |
+| `/subcontract-vinyl-installer-fleetwood/` | Subcontract vinyl installer Fleetwood FY7 — Lord Street town centre, Freeport Fleetwood retail outlet on Wyre Dock, A585 north Fylde coast corridor; northern tip of Fylde peninsula, 8 miles north of Blackpool, 12 miles north-west of Kirkham; **first-mover.** |
+| `/subcontract-vinyl-installer-richmond/` | Subcontract vinyl installer Richmond DL10 — Market Place Georgian town centre, Catterick Garrison DL9 retail/commercial zone, A6108 Swale valley, A1(M) junction 53 at Scotch Corner; 12 miles west of Northallerton, 14 miles west of Darlington; **first-mover.** |
+| `/blog/school-window-film-compliance-guide/` | Blog post: compliance guide for school bursars and estates managers — Part M manifestation requirements, solar control film specification for BB101 overheating, frosted privacy film for sensitive areas, holiday-period scheduling and MAT multi-site programme structure; targets school bursars, estates managers and FM contractors. |
+
+### Hub updates (Run 53)
+- `/architectural-wrap-education/` — city grid adds **Nottingham**
+- `/window-film/school-window-film/` — city grid section added (first time) with Sheffield and Leeds
+- `/architectural-wrap-hotels/` — city grid adds **Derby**
+
+_Last updated by automation run on 2026-09-08_
