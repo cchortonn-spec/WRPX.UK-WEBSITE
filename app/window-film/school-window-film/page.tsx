@@ -262,6 +262,10 @@ export default function SchoolWindowFilmPage() {
               <h3 className="font-semibold text-foreground">Leeds</h3>
               <p className="mt-2 text-sm text-muted">Window film for Leeds and West Yorkshire schools, University of Leeds, Leeds Beckett and Leeds College of Building.</p>
             </Link>
+            <Link href="/window-film/school-window-film-nottingham/" className="card-float p-5 hover:border-accent/60 transition-colors">
+              <h3 className="font-semibold text-foreground">Nottingham</h3>
+              <p className="mt-2 text-sm text-muted">Window film for Nottingham schools and universities — University of Nottingham NG7, Nottingham Trent NG1 and Nottingham College.</p>
+            </Link>
           </div>
         </div>
       </section>
