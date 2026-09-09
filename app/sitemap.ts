@@ -260,6 +260,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "subcontract-vinyl-installer-fleetwood",
     "subcontract-vinyl-installer-richmond",
     "blog/school-window-film-compliance-guide",
+    "window-film/school-window-film-nottingham",
+    "architectural-wrap-education-manchester",
+    "subcontract-vinyl-installer-boroughbridge",
+    "subcontract-vinyl-installer-leyburn",
+    "blog/architectural-wrap-for-education-specification-guide",
   ];
 
   const furnitureLocations = siteConfig.areas.map((city) =>

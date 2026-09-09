@@ -492,6 +492,13 @@ export const blogPosts = [
       "A practical compliance guide for school bursars, estates managers and FM contractors specifying window film across school and university buildings. Covers Part M manifestation requirements, solar control for overheating classrooms, frosted privacy film for sensitive areas, and structuring a compliant holiday-period programme.",
     date: "2026-09-08",
   },
+  {
+    slug: "architectural-wrap-for-education-specification-guide",
+    title: "Architectural Vinyl Wrap for Education — A Specification Guide for Estates Directors",
+    description:
+      "A practical specification guide for academy trust estates directors, school bursars, FM contractors and university facilities managers planning vinyl wrapping programmes across school and university buildings. How to specify surfaces, programme around the academic calendar, manage DBS, multi-site consistency and document sign-off.",
+    date: "2026-09-09",
+  },
 ] as const;
 
 export type BlogSlug = (typeof blogPosts)[number]["slug"];
