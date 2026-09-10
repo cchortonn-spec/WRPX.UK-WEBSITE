@@ -99,6 +99,7 @@ const faqItems = [
 ];
 
 const nearbyPages = [
+  { href: "/subcontract-vinyl-installer-great-harwood/", city: "Great Harwood", postcode: "BB6", desc: "Great Harwood town centre — 8 miles south via B6246" },
   { href: "/subcontract-vinyl-installer-barnoldswick/", city: "Barnoldswick", postcode: "BB18", desc: "Barnoldswick town, Kelbrook, Earby — 15 miles south-west via A59" },
   { href: "/subcontract-vinyl-installer-burnley/", city: "Burnley", postcode: "BB11", desc: "Burnley town centre, Burnley Bridge Business Park — 8 miles south via A671" },
   { href: "/subcontract-vinyl-installer-accrington/", city: "Accrington", postcode: "BB5", desc: "Accrington town centre, Hyndburn — 9 miles south via A680" },
