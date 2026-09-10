@@ -99,6 +99,7 @@ const faqItems = [
 ];
 
 const nearbyPages = [
+  { href: "/subcontract-vinyl-installer-bedale/", city: "Bedale", postcode: "DL8", desc: "Bedale Market Place — 10 miles west via A684" },
   { href: "/subcontract-vinyl-installer-ripon/", city: "Ripon", postcode: "HG4", desc: "Ripon city centre — 15 miles south via A1(M)" },
   { href: "/subcontract-vinyl-installer-knaresborough/", city: "Knaresborough", postcode: "HG5", desc: "Knaresborough town centre — 28 miles south via A1(M)" },
   { href: "/subcontract-vinyl-installer-darlington/", city: "Darlington", postcode: "DL1", desc: "Darlington town centre — 17 miles north via A1(M)" },

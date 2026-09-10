@@ -866,3 +866,23 @@ _Last updated by automation run on 2026-09-03_
 - `/architectural-wrap-hotels/` — city grid adds **Derby**
 
 _Last updated by automation run on 2026-09-08_
+
+## Run 54 additions (2026-09-09)
+| Slug | Title / Purpose |
+|---|---|
+| `/window-film/school-window-film-nottingham/` | School window film Nottingham — University of Nottingham NG7, Nottingham Trent NG1, Nottingham College; Nottinghamshire MATs; third school film city page |
+| `/architectural-wrap-education-manchester/` | Education vinyl wrapping Manchester — University of Manchester M13, Manchester Metropolitan M15, Salford M5; Greater Manchester MATs; fourth education city page |
+| `/subcontract-vinyl-installer-boroughbridge/` | Subcontract Boroughbridge YO51 — A1(M) J48; between Wetherby (J44) and Ripon |
+| `/subcontract-vinyl-installer-leyburn/` | Subcontract Leyburn DL8 — Wensleydale; 8 miles west of Richmond; Middleham equine |
+| `/blog/architectural-wrap-for-education-specification-guide/` | Spec guide for estates directors on architectural vinyl wrap for education |
+
+## Run 55 additions (2026-09-10)
+| Slug | Title / Purpose |
+|---|---|
+| `/window-film/school-window-film-manchester/` | School window film Manchester — University of Manchester M13, Manchester Metropolitan M15, University of Salford M5; all 10 Greater Manchester boroughs; **fourth school film city page; first-mover** |
+| `/architectural-wrap-education-birmingham/` | Education vinyl wrapping Birmingham — University of Birmingham B15, Aston B4, BCU B4, Newman B32; West Midlands MATs; **fifth education city page; first-mover** |
+| `/subcontract-vinyl-installer-bedale/` | Subcontract Bedale DL8 — A684 midpoint between Northallerton (10m east) and Leyburn (10m west); A1(M) J50 Leeming Bar; **first-mover** |
+| `/subcontract-vinyl-installer-great-harwood/` | Subcontract Great Harwood BB6 — between Accrington BB5 (4m south) and Clitheroe BB7 (8m north); fills Ribble Valley gap; **first-mover** |
+| `/blog/vinyl-wrap-for-student-accommodation-specification-guide/` | PBSA specification guide — void period programming, surface spec, multi-block programmes, white-label for FM contractors |
+
+_Last updated by automation run on 2026-09-10_

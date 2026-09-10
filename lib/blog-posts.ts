@@ -499,6 +499,13 @@ export const blogPosts = [
       "A practical specification guide for academy trust estates directors, school bursars, FM contractors and university facilities managers planning vinyl wrapping programmes across school and university buildings. How to specify surfaces, programme around the academic calendar, manage DBS, multi-site consistency and document sign-off.",
     date: "2026-09-09",
   },
+  {
+    slug: "vinyl-wrap-for-student-accommodation-specification-guide",
+    title: "Vinyl Wrap for Student Accommodation — A Specification Guide for PBSA Operators",
+    description:
+      "A practical specification guide for PBSA developers, university estates teams, block managers and FM contractors planning vinyl wrapping programmes across student accommodation buildings. How to specify surfaces, programme around the academic void period, manage multi-block consistency and structure a cost-effective refurbishment programme.",
+    date: "2026-09-10",
+  },
 ] as const;
 
 export type BlogSlug = (typeof blogPosts)[number]["slug"];
