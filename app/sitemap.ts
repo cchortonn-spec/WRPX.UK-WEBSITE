@@ -270,6 +270,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "subcontract-vinyl-installer-bedale",
     "subcontract-vinyl-installer-great-harwood",
     "blog/vinyl-wrap-for-student-accommodation-specification-guide",
+    "window-film/school-window-film-birmingham",
+    "architectural-wrap-education-coventry",
+    "subcontract-vinyl-installer-pateley-bridge",
+    "subcontract-vinyl-installer-masham",
+    "blog/window-film-for-care-homes-specification-guide",
   ];
 
   const furnitureLocations = siteConfig.areas.map((city) =>

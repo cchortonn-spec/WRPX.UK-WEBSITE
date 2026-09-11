@@ -287,6 +287,10 @@ export default function ArchitecturalWrapEducationPage() {
               <h3 className="font-semibold text-foreground">Birmingham</h3>
               <p className="mt-2 text-sm text-muted">Wrapping for Birmingham schools, University of Birmingham B15, Aston University B4, Birmingham City University and West Midlands MATs.</p>
             </Link>
+            <Link href="/architectural-wrap-education-coventry/" className="card-float p-5 hover:border-accent/60 transition-colors">
+              <h3 className="font-semibold text-foreground">Coventry</h3>
+              <p className="mt-2 text-sm text-muted">Wrapping for Coventry schools, University of Warwick CV4, Coventry University CV1 and Coventry and Warwickshire MATs.</p>
+            </Link>
           </div>
         </div>
       </section>
