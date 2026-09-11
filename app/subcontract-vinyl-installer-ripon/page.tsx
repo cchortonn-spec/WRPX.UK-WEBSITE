@@ -100,6 +100,7 @@ const faqItems = [
 
 const nearbyPages = [
   { href: "/subcontract-vinyl-installer-harrogate/", city: "Harrogate", postcode: "HG1", desc: "Harrogate town centre and Stray — 12 miles south via A61" },
+  { href: "/subcontract-vinyl-installer-masham/", city: "Masham", postcode: "HG4", desc: "Wensleydale market town — 12 miles north via A6108" },
   { href: "/subcontract-vinyl-installer-wetherby/", city: "Wetherby", postcode: "LS22", desc: "Wetherby town centre, A1(M) corridor — 15 miles south via A661/A1(M)" },
   { href: "/subcontract-vinyl-installer-york/", city: "York", postcode: "YO1", desc: "York city centre — 24 miles south-east via A59 and A1237" },
 ];

@@ -886,3 +886,14 @@ _Last updated by automation run on 2026-09-08_
 | `/blog/vinyl-wrap-for-student-accommodation-specification-guide/` | PBSA specification guide — void period programming, surface spec, multi-block programmes, white-label for FM contractors |
 
 _Last updated by automation run on 2026-09-10_
+
+## Run 56 additions (2026-09-11)
+| Slug | Title / Purpose |
+|---|---|
+| `/window-film/school-window-film-birmingham/` | School window film Birmingham — University of Birmingham B15, Aston B4, BCU B4; West Midlands secondary schools and MATs; **fifth school film city page; first-mover** |
+| `/architectural-wrap-education-coventry/` | Education vinyl wrapping Coventry — University of Warwick CV4, Coventry University CV1; Coventry and Warwickshire MATs; **sixth education city page; first-mover** |
+| `/subcontract-vinyl-installer-pateley-bridge/` | Subcontract Pateley Bridge HG3 — Nidderdale AONB; 10 miles west of Knaresborough via B6265; fills HG3 gap; **first-mover** |
+| `/subcontract-vinyl-installer-masham/` | Subcontract Masham HG4 — Wensleydale; A6108 midpoint between Ripon (12m south) and Leyburn (14m north); Theakston/Black Sheep brewery context; **first-mover** |
+| `/blog/window-film-for-care-homes-specification-guide/` | Care home window film spec guide — privacy film for bedrooms, solar control for day rooms, Part M manifestation; CQC compliance angle; 2,500+ words |
+
+_Last updated by automation run on 2026-09-11_
