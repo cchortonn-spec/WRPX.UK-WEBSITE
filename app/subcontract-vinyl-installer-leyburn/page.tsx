@@ -101,6 +101,7 @@ const faqItems = [
 const nearbyPages = [
   { href: "/subcontract-vinyl-installer-richmond/", label: "Richmond DL10", desc: "8 miles east via A684" },
   { href: "/subcontract-vinyl-installer-masham/", label: "Masham HG4", desc: "14 miles south via A6108" },
+  { href: "/subcontract-vinyl-installer-hawes/", label: "Hawes DL8", desc: "15 miles west via A684" },
   { href: "/subcontract-vinyl-installer-northallerton/", label: "Northallerton DL7", desc: "20 miles east via A684 and A6136" },
   { href: "/subcontract-vinyl-installer-ripon/", label: "Ripon HG4", desc: "20 miles south-east via A6108 and A61" },
   { href: "/subcontract-vinyl-installer-harrogate/", label: "Harrogate HG1", desc: "30 miles south-east via A61" },

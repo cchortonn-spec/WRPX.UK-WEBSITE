@@ -101,6 +101,7 @@ const faqItems = [
 const nearbyPages = [
   { href: "/subcontract-vinyl-installer-ripon/", label: "Ripon HG4", desc: "12 miles south via A61" },
   { href: "/subcontract-vinyl-installer-northallerton/", label: "Northallerton DL7", desc: "12 miles north via A168" },
+  { href: "/subcontract-vinyl-installer-helmsley/", label: "Helmsley YO62", desc: "12 miles east via A170" },
   { href: "/subcontract-vinyl-installer-knaresborough/", label: "Knaresborough HG5", desc: "22 miles south via A61 and A59" },
   { href: "/subcontract-vinyl-installer-harrogate/", label: "Harrogate HG1", desc: "18 miles south via A61" },
 ];
