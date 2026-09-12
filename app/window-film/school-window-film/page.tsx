@@ -274,6 +274,10 @@ export default function SchoolWindowFilmPage() {
               <h3 className="font-semibold text-foreground">Birmingham</h3>
               <p className="mt-2 text-sm text-muted">Window film for Birmingham schools and universities — University of Birmingham B15, Aston University B4, Birmingham City University and West Midlands MATs.</p>
             </Link>
+            <Link href="/window-film/school-window-film-coventry/" className="card-float p-5 hover:border-accent/60 transition-colors">
+              <h3 className="font-semibold text-foreground">Coventry</h3>
+              <p className="mt-2 text-sm text-muted">Window film for Coventry schools and universities — University of Warwick CV4, Coventry University CV1 and Warwickshire MATs.</p>
+            </Link>
           </div>
         </div>
       </section>

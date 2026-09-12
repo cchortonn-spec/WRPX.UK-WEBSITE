@@ -101,6 +101,7 @@ const faqItems = [
 const nearbyPages = [
   { href: "/subcontract-vinyl-installer-ripon/", label: "Ripon HG4", desc: "12 miles south via A6108" },
   { href: "/subcontract-vinyl-installer-leyburn/", label: "Leyburn DL8", desc: "14 miles north via A6108" },
+  { href: "/subcontract-vinyl-installer-hawes/", label: "Hawes DL8", desc: "29 miles north-west via A6108 and A684" },
   { href: "/subcontract-vinyl-installer-bedale/", label: "Bedale DL8", desc: "18 miles north-east via A6108 and A684" },
   { href: "/subcontract-vinyl-installer-boroughbridge/", label: "Boroughbridge YO51", desc: "22 miles south via A6108 and A1(M)" },
 ];

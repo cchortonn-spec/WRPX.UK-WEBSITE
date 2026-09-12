@@ -234,6 +234,25 @@ export default function HotelWindowFilmPage() {
         </div>
       </section>
 
+      {/* City pages */}
+      <section className="px-4 py-16">
+        <div className="container mx-auto max-w-4xl">
+          <h2 className="mb-8 text-2xl font-semibold text-foreground md:text-3xl">
+            Hotel window film by city
+          </h2>
+          <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+            <Link href="/window-film/hotel-window-film-birmingham/" className="card-float p-5 hover:border-accent/60 transition-colors">
+              <h3 className="font-semibold text-foreground">Birmingham</h3>
+              <p className="mt-2 text-sm text-muted">Solar control, frosted privacy and Part M manifestation for Birmingham hotels — Grand Hotel B3, Mailbox B1, NEC B40 and all Birmingham hotel postcodes.</p>
+            </Link>
+            <Link href="/window-film/hotel-window-film-coventry/" className="card-float p-5 hover:border-accent/60 transition-colors">
+              <h3 className="font-semibold text-foreground">Coventry</h3>
+              <p className="mt-2 text-sm text-muted">Hotel window film for Coventry city centre CV1, the Ricoh Arena CV6, Warwick CV34 and Royal Leamington Spa CV31.</p>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Related */}
       <section className="bg-card px-4 py-16">
         <div className="container mx-auto max-w-4xl">

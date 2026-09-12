@@ -506,6 +506,20 @@ export const blogPosts = [
       "A practical specification guide for PBSA developers, university estates teams, block managers and FM contractors planning vinyl wrapping programmes across student accommodation buildings. How to specify surfaces, programme around the academic void period, manage multi-block consistency and structure a cost-effective refurbishment programme.",
     date: "2026-09-10",
   },
+  {
+    slug: "window-film-for-care-homes-specification-guide",
+    title: "Window Film for Care Homes — Specification Guide for Operators and FM Contractors",
+    description:
+      "A practical specification guide for care home operators, group FM contractors and CQC-registered premises commissioning window film. Covers privacy film for resident bedrooms, solar control for day rooms and lounges, Part M manifestation for glazed corridors, and how to programme installation around care home operations.",
+    date: "2026-09-11",
+  },
+  {
+    slug: "architectural-wrap-for-care-homes-specification-guide",
+    title: "Architectural Vinyl Wrap for Care Homes — Specification Guide for Operators and FM Contractors",
+    description:
+      "A practical specification guide for care home operators, group FM contractors and refurbishment project managers planning vinyl wrapping programmes across CQC-registered premises. Covers kitchen surface wrapping, corridor doors, common room furniture, resident bedroom fittings, and how to programme installation in an occupied care environment.",
+    date: "2026-09-12",
+  },
 ] as const;
 
 export type BlogSlug = (typeof blogPosts)[number]["slug"];
