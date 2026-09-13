@@ -241,6 +241,14 @@ export default function HotelWindowFilmPage() {
             Hotel window film by city
           </h2>
           <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+            <Link href="/window-film/hotel-window-film-sheffield/" className="card-float p-5 hover:border-accent/60 transition-colors">
+              <h3 className="font-semibold text-foreground">Sheffield</h3>
+              <p className="mt-2 text-sm text-muted">Solar control, frosted privacy and Part M manifestation for Sheffield hotels — city centre S1, Park Square, the Arena quarter S9 and all Sheffield hotel postcodes. Local base.</p>
+            </Link>
+            <Link href="/window-film/hotel-window-film-leeds/" className="card-float p-5 hover:border-accent/60 transition-colors">
+              <h3 className="font-semibold text-foreground">Leeds</h3>
+              <p className="mt-2 text-sm text-muted">Hotel window film for Leeds city centre LS1, the First Direct Arena LS2, Headingley LS6 and Leeds Bradford Airport LS19 — 30 minutes from our South Yorkshire base.</p>
+            </Link>
             <Link href="/window-film/hotel-window-film-birmingham/" className="card-float p-5 hover:border-accent/60 transition-colors">
               <h3 className="font-semibold text-foreground">Birmingham</h3>
               <p className="mt-2 text-sm text-muted">Solar control, frosted privacy and Part M manifestation for Birmingham hotels — Grand Hotel B3, Mailbox B1, NEC B40 and all Birmingham hotel postcodes.</p>

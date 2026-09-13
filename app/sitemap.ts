@@ -280,6 +280,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "subcontract-vinyl-installer-helmsley",
     "subcontract-vinyl-installer-hawes",
     "blog/architectural-wrap-for-care-homes-specification-guide",
+    "window-film/hotel-window-film-sheffield",
+    "window-film/hotel-window-film-leeds",
+    "subcontract-vinyl-installer-pickering",
+    "subcontract-vinyl-installer-malton",
+    "blog/hotel-architectural-wrap-and-window-film-specifying-both",
   ];
 
   const furnitureLocations = siteConfig.areas.map((city) =>
