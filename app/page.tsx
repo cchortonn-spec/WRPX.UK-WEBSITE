@@ -100,6 +100,124 @@ export default function HomePage() {
 
           <div className="card-float p-7 md:p-9">
             <h2 className="text-2xl font-semibold text-foreground md:text-3xl">
+              Architectural vinyl wrapping — commercial
+            </h2>
+            <p className="mt-4 text-muted leading-relaxed">
+              We wrap interior surfaces in hotels, offices, student accommodation, restaurants,
+              retail and educational buildings. Counter tops, door panels, reception joinery,
+              fitted furniture — any surface that needs a fresh finish without replacement.
+              White-label and subcontract available for fit-out contractors and brand managers.
+            </p>
+            <div className="mt-5 grid gap-3 sm:grid-cols-3">
+              <Link
+                href="/architectural-wrap-hotels/"
+                className="rounded-lg border border-border p-4 hover:border-white/30 transition-colors"
+              >
+                <p className="font-semibold text-foreground text-sm">Hotels</p>
+                <p className="mt-1 text-xs text-muted">
+                  Bedroom furniture, reception counters, restaurant interiors, corridor panelling.
+                </p>
+              </Link>
+              <Link
+                href="/architectural-wrap-offices/"
+                className="rounded-lg border border-border p-4 hover:border-white/30 transition-colors"
+              >
+                <p className="font-semibold text-foreground text-sm">Offices</p>
+                <p className="mt-1 text-xs text-muted">
+                  Reception desks, meeting room joinery, kitchen units, feature walls.
+                </p>
+              </Link>
+              <Link
+                href="/architectural-wrap-retail/"
+                className="rounded-lg border border-border p-4 hover:border-white/30 transition-colors"
+              >
+                <p className="font-semibold text-foreground text-sm">Retail</p>
+                <p className="mt-1 text-xs text-muted">
+                  Counter fascias, gondola ends, fitting room panels, shop-front surfaces.
+                </p>
+              </Link>
+              <Link
+                href="/architectural-wrap-restaurants/"
+                className="rounded-lg border border-border p-4 hover:border-white/30 transition-colors"
+              >
+                <p className="font-semibold text-foreground text-sm">Restaurants &amp; bars</p>
+                <p className="mt-1 text-xs text-muted">
+                  Bar fronts, seating panels, kitchen pass, decorative surfaces.
+                </p>
+              </Link>
+              <Link
+                href="/architectural-wrap-education/"
+                className="rounded-lg border border-border p-4 hover:border-white/30 transition-colors"
+              >
+                <p className="font-semibold text-foreground text-sm">Schools &amp; universities</p>
+                <p className="mt-1 text-xs text-muted">
+                  Classroom joinery, corridor furniture, canteen surfaces, admin areas.
+                </p>
+              </Link>
+              <Link
+                href="/architectural-wrap-student-accommodation/"
+                className="rounded-lg border border-border p-4 hover:border-white/30 transition-colors"
+              >
+                <p className="font-semibold text-foreground text-sm">Student accommodation</p>
+                <p className="mt-1 text-xs text-muted">
+                  Bedroom units, communal kitchen surfaces, study furniture.
+                </p>
+              </Link>
+            </div>
+            <p className="mt-5 text-sm text-muted">
+              <Link href="/architectural-vinyl-film/" className="link-subtle">
+                Full architectural vinyl wrapping service →
+              </Link>
+            </p>
+          </div>
+
+          <div className="card-float p-7 md:p-9">
+            <h2 className="text-2xl font-semibold text-foreground md:text-3xl">
+              Window film for business
+            </h2>
+            <p className="mt-4 text-muted leading-relaxed">
+              Frosted and privacy film, solar-control / heat-reduction film, glass manifestation
+              (DDA compliance), decorative and branded film. Hotels, offices, schools, restaurants
+              and retail — supply and installation, South Yorkshire and East Midlands.
+            </p>
+            <div className="mt-5 grid gap-3 sm:grid-cols-3">
+              <Link
+                href="/window-film/frosted-office-film/"
+                className="rounded-lg border border-border p-4 hover:border-white/30 transition-colors"
+              >
+                <p className="font-semibold text-foreground text-sm">Frosted office film</p>
+                <p className="mt-1 text-xs text-muted">
+                  Meeting rooms, glass partitions, DDA manifestation, branded etched-effect.
+                </p>
+              </Link>
+              <Link
+                href="/window-film/office-solar-film/"
+                className="rounded-lg border border-border p-4 hover:border-white/30 transition-colors"
+              >
+                <p className="font-semibold text-foreground text-sm">Solar control film</p>
+                <p className="mt-1 text-xs text-muted">
+                  Reduce heat in summer, retain warmth in winter — offices, hotels, schools.
+                </p>
+              </Link>
+              <Link
+                href="/window-film/hotel-window-film/"
+                className="rounded-lg border border-border p-4 hover:border-white/30 transition-colors"
+              >
+                <p className="font-semibold text-foreground text-sm">Hotel window film</p>
+                <p className="mt-1 text-xs text-muted">
+                  Guest privacy, energy reduction, decorative lobby glazing.
+                </p>
+              </Link>
+            </div>
+            <p className="mt-5 text-sm text-muted">
+              <Link href="/window-film/" className="link-subtle">
+                Full window film service →
+              </Link>
+            </p>
+          </div>
+
+          <div className="card-float p-7 md:p-9">
+            <h2 className="text-2xl font-semibold text-foreground md:text-3xl">
               Specialist kitchen wrapping services
             </h2>
             <p className="mt-4 text-muted leading-relaxed">

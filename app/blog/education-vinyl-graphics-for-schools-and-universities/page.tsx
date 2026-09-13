@@ -299,6 +299,21 @@ export default function EducationVinylGraphicsForSchoolsPage() {
                   Sign company installation partner
                 </Link>
               </li>
+              <li>
+                <Link href="/architectural-wrap-education/" className="text-accent hover:underline">
+                  Architectural vinyl wrap for schools &amp; universities
+                </Link>
+              </li>
+              <li>
+                <Link href="/window-film/school-window-film/" className="text-accent hover:underline">
+                  Window film for schools &amp; universities
+                </Link>
+              </li>
+              <li>
+                <Link href="/blog/mat-graphics-programmes-subcontract-installer/" className="text-accent hover:underline">
+                  Multi-academy trust graphics programmes
+                </Link>
+              </li>
             </ul>
           </div>
         </div>

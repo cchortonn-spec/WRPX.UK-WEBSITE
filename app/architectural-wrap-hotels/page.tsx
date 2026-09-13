@@ -293,8 +293,51 @@ export default function ArchitecturalWrapHotelsPage() {
         </div>
       </section>
 
-      {/* Related */}
+      {/* City pages */}
       <section className="px-4 py-16">
+        <div className="container mx-auto max-w-4xl">
+          <h2 className="mb-8 text-2xl font-semibold text-foreground md:text-3xl">
+            Hotel wrapping by city
+          </h2>
+          <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+            <Link href="/architectural-wrap-hotels-sheffield/" className="card-float p-5 hover:border-accent/60 transition-colors">
+              <h3 className="font-semibold text-foreground">Sheffield</h3>
+              <p className="mt-2 text-sm text-muted">Hotel interior wrapping across Sheffield and South Yorkshire.</p>
+            </Link>
+            <Link href="/architectural-wrap-hotels-leeds/" className="card-float p-5 hover:border-accent/60 transition-colors">
+              <h3 className="font-semibold text-foreground">Leeds</h3>
+              <p className="mt-2 text-sm text-muted">Hotel interior wrapping across Leeds, Granary Wharf and West Yorkshire.</p>
+            </Link>
+            <Link href="/architectural-wrap-hotels-nottingham/" className="card-float p-5 hover:border-accent/60 transition-colors">
+              <h3 className="font-semibold text-foreground">Nottingham</h3>
+              <p className="mt-2 text-sm text-muted">Hotel interior wrapping across Nottingham and the East Midlands.</p>
+            </Link>
+            <Link href="/architectural-wrap-hotels-manchester/" className="card-float p-5 hover:border-accent/60 transition-colors">
+              <h3 className="font-semibold text-foreground">Manchester</h3>
+              <p className="mt-2 text-sm text-muted">Hotel interior wrapping across Manchester, Northern Quarter and Greater Manchester.</p>
+            </Link>
+            <Link href="/architectural-wrap-hotels-leicester/" className="card-float p-5 hover:border-accent/60 transition-colors">
+              <h3 className="font-semibold text-foreground">Leicester</h3>
+              <p className="mt-2 text-sm text-muted">Hotel interior wrapping across Leicester, Highcross, M1 J21 corridor and Leicestershire.</p>
+            </Link>
+            <Link href="/architectural-wrap-hotels-birmingham/" className="card-float p-5 hover:border-accent/60 transition-colors">
+              <h3 className="font-semibold text-foreground">Birmingham</h3>
+              <p className="mt-2 text-sm text-muted">Hotel interior wrapping across Birmingham city centre, NEC B40, Solihull B90 and the West Midlands.</p>
+            </Link>
+            <Link href="/architectural-wrap-hotels-coventry/" className="card-float p-5 hover:border-accent/60 transition-colors">
+              <h3 className="font-semibold text-foreground">Coventry</h3>
+              <p className="mt-2 text-sm text-muted">Hotel interior wrapping across Coventry CV1, Ricoh Arena CV6, University of Warwick CV4 and Warwickshire.</p>
+            </Link>
+            <Link href="/architectural-wrap-hotels-derby/" className="card-float p-5 hover:border-accent/60 transition-colors">
+              <h3 className="font-semibold text-foreground">Derby</h3>
+              <p className="mt-2 text-sm text-muted">Hotel interior wrapping across Derby DE1, Pride Park DE24 and the A52/A38 business hotel corridor.</p>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Related */}
+      <section className="bg-card px-4 py-16">
         <div className="container mx-auto max-w-4xl">
           <h2 className="mb-8 text-2xl font-semibold text-foreground md:text-3xl">
             Related services

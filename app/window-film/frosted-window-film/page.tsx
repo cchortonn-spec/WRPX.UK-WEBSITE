@@ -332,6 +332,49 @@ export default function FrostedWindowFilmPage() {
         </div>
       </section>
 
+      {/* City pages */}
+      <section className="bg-card px-4 py-16">
+        <div className="container mx-auto max-w-4xl">
+          <h2 className="mb-8 text-2xl font-semibold text-foreground md:text-3xl">
+            Frosted film by city
+          </h2>
+          <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+            <Link href="/window-film/frosted-film-sheffield/" className="card-float p-5 hover:border-accent/60 transition-colors">
+              <h3 className="font-semibold text-foreground">Sheffield</h3>
+              <p className="mt-2 text-sm text-muted">Frosted and privacy film across Sheffield and South Yorkshire.</p>
+            </Link>
+            <Link href="/window-film/frosted-film-leeds/" className="card-float p-5 hover:border-accent/60 transition-colors">
+              <h3 className="font-semibold text-foreground">Leeds</h3>
+              <p className="mt-2 text-sm text-muted">Frosted and privacy film across Leeds and West Yorkshire.</p>
+            </Link>
+            <Link href="/window-film/frosted-film-nottingham/" className="card-float p-5 hover:border-accent/60 transition-colors">
+              <h3 className="font-semibold text-foreground">Nottingham</h3>
+              <p className="mt-2 text-sm text-muted">Frosted and privacy film across Nottingham and Nottinghamshire.</p>
+            </Link>
+            <Link href="/window-film/frosted-film-manchester/" className="card-float p-5 hover:border-accent/60 transition-colors">
+              <h3 className="font-semibold text-foreground">Manchester</h3>
+              <p className="mt-2 text-sm text-muted">Frosted and privacy film across Manchester and Greater Manchester.</p>
+            </Link>
+            <Link href="/window-film/frosted-film-derby/" className="card-float p-5 hover:border-accent/60 transition-colors">
+              <h3 className="font-semibold text-foreground">Derby</h3>
+              <p className="mt-2 text-sm text-muted">Frosted and privacy film across Derby and Derbyshire.</p>
+            </Link>
+            <Link href="/window-film/frosted-film-leicester/" className="card-float p-5 hover:border-accent/60 transition-colors">
+              <h3 className="font-semibold text-foreground">Leicester</h3>
+              <p className="mt-2 text-sm text-muted">Frosted and privacy film across Leicester and Leicestershire.</p>
+            </Link>
+            <Link href="/window-film/frosted-film-coventry/" className="card-float p-5 hover:border-accent/60 transition-colors">
+              <h3 className="font-semibold text-foreground">Coventry</h3>
+              <p className="mt-2 text-sm text-muted">Frosted and privacy film across Coventry and Warwickshire.</p>
+            </Link>
+            <Link href="/window-film/frosted-film-birmingham/" className="card-float p-5 hover:border-accent/60 transition-colors">
+              <h3 className="font-semibold text-foreground">Birmingham</h3>
+              <p className="mt-2 text-sm text-muted">Frosted and privacy film across Birmingham and the West Midlands.</p>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Final CTA */}
       <section className="px-4 py-20">
         <div className="container mx-auto max-w-3xl">

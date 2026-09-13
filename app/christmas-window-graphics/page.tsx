@@ -276,6 +276,14 @@ export default function ChristmasWindowGraphicsPage() {
             Related services
           </h2>
           <div className="grid gap-4 sm:grid-cols-2">
+            <Link href="/christmas-hotel-graphics/" className="card-float p-5 hover:border-accent/60 transition-colors">
+              <h3 className="font-semibold text-foreground">Christmas hotel graphics</h3>
+              <p className="mt-2 text-sm text-muted">Seasonal window vinyl, lobby graphics and festive wall vinyl for hotels and hospitality venues.</p>
+            </Link>
+            <Link href="/christmas-university-graphics/" className="card-float p-5 hover:border-accent/60 transition-colors">
+              <h3 className="font-semibold text-foreground">Christmas university graphics</h3>
+              <p className="mt-2 text-sm text-muted">Campus window graphics, student union seasonal vinyl and university Christmas programmes.</p>
+            </Link>
             <Link href="/multi-site-rollout-installation/" className="card-float p-5 hover:border-accent/60 transition-colors">
               <h3 className="font-semibold text-foreground">Multi-site rollout installation</h3>
               <p className="mt-2 text-sm text-muted">Consistent installation across multiple locations — retail, hospitality and commercial.</p>

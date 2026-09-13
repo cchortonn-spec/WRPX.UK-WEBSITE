@@ -287,6 +287,18 @@ export default function SportsVenueVinylGraphicsForFitOutContractorsPage() {
               >
                 Contact WRPX
               </Link>
+              <Link
+                href="/window-film/frosted-window-film/"
+                className="text-accent hover:underline"
+              >
+                Frosted &amp; privacy window film
+              </Link>
+              <Link
+                href="/architectural-vinyl-film/"
+                className="text-accent hover:underline"
+              >
+                Architectural vinyl wrapping
+              </Link>
             </div>
           </div>
         </div>

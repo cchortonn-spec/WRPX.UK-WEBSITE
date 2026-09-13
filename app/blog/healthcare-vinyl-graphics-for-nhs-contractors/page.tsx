@@ -307,6 +307,21 @@ export default function HealthcareVinylGraphicsForNHSContractorsPage() {
                   Protecting client relationships with subcontract installers
                 </Link>
               </li>
+              <li>
+                <Link href="/window-film/healthcare-window-film/" className="text-accent hover:underline">
+                  Window film for healthcare environments
+                </Link>
+              </li>
+              <li>
+                <Link href="/architectural-wrap-care-homes/" className="text-accent hover:underline">
+                  Vinyl wrapping for care homes
+                </Link>
+              </li>
+              <li>
+                <Link href="/window-film/care-home-window-film/" className="text-accent hover:underline">
+                  Window film for care homes
+                </Link>
+              </li>
             </ul>
           </div>
 

@@ -324,6 +324,202 @@ export const blogPosts = [
       "A practical guide for sign companies, print houses and brand managers subcontracting vinyl installation across Darlington, Stockton-on-Tees, Middlesbrough and the A1(M) Teesside corridor — Lingfield Point briefing, Aycliffe Business Park logistics, Tees Valley retail zone analysis and multi-city DL/TS programme planning.",
     date: "2026-08-15",
   },
+  {
+    slug: "christmas-graphics-installation-guide-for-print-companies",
+    title: "Christmas Graphics Installation for Print Companies — How to Plan the Christmas Season",
+    description:
+      "A practical guide for print companies, sign companies and agencies planning Christmas graphics installation programmes. How to line up subcontract installation capacity now, what goes wrong when you leave it late, and how to brief a reliable Christmas installer.",
+    date: "2026-08-19",
+  },
+  {
+    slug: "christmas-window-graphics-for-shopping-centres",
+    title: "Christmas Window Graphics for Shopping Centres — Planning Your Seasonal Programme",
+    description:
+      "A practical guide for shopping centre estate managers, property managers and retail brand teams planning Christmas graphics installation. Multi-unit scheduling, overnight access, subcontract installation across South Yorkshire and the Midlands.",
+    date: "2026-08-20",
+  },
+  {
+    slug: "window-film-for-student-accommodation-overheating",
+    title: "Window Film for Student Accommodation Overheating — PBSA Solar Control Guide",
+    description:
+      "How solar control window film solves overheating in purpose-built student accommodation (PBSA). Practical guide for university estates teams, PBSA developers and FM contractors — glazed bedroom blocks, south-facing facades and scheduling installation in occupied buildings.",
+    date: "2026-08-21",
+  },
+  {
+    slug: "care-home-vinyl-wrap-refurbishment-guide",
+    title: "Care Home Vinyl Wrap Refurbishment — How to Brief the Job",
+    description:
+      "A practical guide for care home property managers and group FM teams planning a vinyl wrap refurbishment in an occupied care home. Surfaces, resident scheduling, CQC documentation, procurement and how to brief a specialist installer.",
+    date: "2026-08-22",
+  },
+  {
+    slug: "hoarding-graphics-installation-guide-for-sign-companies",
+    title: "Hoarding Graphics Installation Guide for Sign Companies — Briefing a Subcontract Installer",
+    description:
+      "A practical guide for sign companies, print management firms and project managers briefing a subcontract hoarding installer. Construction site hoardings, Kwik-Klik temporary systems, substrate types, CDM obligations and multi-site scheduling.",
+    date: "2026-08-22",
+  },
+  {
+    slug: "county-durham-subcontract-installation-guide",
+    title: "County Durham Subcontract Installation — A Guide for Sign Companies and Print Houses",
+    description:
+      "A practical guide for sign companies, print houses and brand managers subcontracting vinyl installation across County Durham — Durham City DH1, Chester-le-Street DH2-DH3, Seaham DH4, Houghton-le-Spring DH5, Peterlee DH6, Bishop Auckland DL14 and Newton Aycliffe DL5. A1(M) corridor planning, Durham University access briefing, Aycliffe Business Park logistics and multi-city NE programme planning.",
+    date: "2026-08-23",
+  },
+  {
+    slug: "window-film-for-hospitality-hotels-restaurants",
+    title: "Window Film for Hotels and Restaurants — A Hospitality Specification Guide",
+    description:
+      "A practical guide for hotel FM contractors, hospitality fit-out companies and hotel operations managers specifying window film in hotels and restaurants. Solar control, frosted privacy film, decorative film, glass manifestation — how each product works in hospitality environments, what to specify for different building types, and how to brief a window film installer.",
+    date: "2026-08-23",
+  },
+  {
+    slug: "christmas-university-graphics-guide-for-print-companies",
+    title: "Christmas University Graphics — A Guide for Print Companies and Decoration Suppliers",
+    description:
+      "A practical guide for print companies and decoration suppliers with university and students' union accounts. How to plan Christmas graphics installation across university campuses — students' union bars, accommodation communal areas, campus cafes and multi-building rollouts. Why December slots book out early and how to lock in installation capacity now.",
+    date: "2026-08-24",
+  },
+  {
+    slug: "window-film-for-office-buildings",
+    title: "Window Film for Office Buildings — A Specification Guide for FM Contractors",
+    description:
+      "A practical guide for office FM contractors, commercial fit-out companies and property managers specifying window film in office buildings. Solar control film, frosted privacy film, glass manifestation and one-way mirror film — what each product does in an office environment, where it works, how to specify it and how to brief a window film installer.",
+    date: "2026-08-24",
+  },
+  {
+    slug: "hotel-architectural-wrap-guide-for-fit-out-companies",
+    title: "Hotel Architectural Vinyl Wrap — A Guide for Fit-Out Companies",
+    description:
+      "A practical guide for hotel fit-out contractors, interior designers and hotel FM teams specifying architectural vinyl wrapping in hotel refurbishments. How to brief the job, what surfaces work, programme logistics and how to work with a specialist wrapping subcontractor.",
+    date: "2026-08-25",
+  },
+  {
+    slug: "office-architectural-wrap-specification-guide",
+    title: "Office Architectural Vinyl Wrap — Specification Guide for Fit-Out Contractors",
+    description:
+      "A practical guide for office fit-out contractors, interior designers and commercial FM teams specifying architectural vinyl wrapping in office refurbishments. What surfaces work, how to integrate wrapping into a fit-out programme, film specification and how to brief a specialist installer.",
+    date: "2026-08-25",
+  },
+  {
+    slug: "student-accommodation-architectural-wrap-guide",
+    title: "Student Accommodation Architectural Wrap — A Guide for PBSA Operators",
+    description:
+      "A practical guide for PBSA developers, university accommodation managers and FM contractors on specifying architectural vinyl wrapping in student accommodation void programmes. Bedroom furniture, communal kitchens, corridor doors, academic calendar scheduling and how to brief a specialist installer.",
+    date: "2026-08-26",
+  },
+  {
+    slug: "restaurant-architectural-wrap-guide",
+    title: "Restaurant Architectural Vinyl Wrap — Specification Guide for Hospitality Fit-Out Contractors",
+    description:
+      "A practical guide for hospitality fit-out contractors, restaurant designers and interior refurbishment teams specifying architectural vinyl wrapping in restaurant and café refurbishments. Which surfaces to specify, how wrapping fits into an F&B fit-out programme, film selection for food environments and how to brief a specialist installer.",
+    date: "2026-08-27",
+  },
+  {
+    slug: "retail-architectural-wrap-guide",
+    title: "Retail Architectural Vinyl Wrap — Specification Guide for Retail Fit-Out Contractors",
+    description:
+      "A practical guide for retail fit-out contractors, brand rollout managers and visual merchandising teams specifying architectural vinyl wrapping in retail refurbishments. Which surfaces to wrap, film specification for retail environments, multi-site rollout planning and how to brief a specialist installer.",
+    date: "2026-08-28",
+  },
+  {
+    slug: "christmas-retail-graphics-guide-for-sign-companies",
+    title: "Christmas Retail Graphics — Installation Guide for Sign Companies and Print Houses",
+    description:
+      "A practical guide for sign companies and print houses planning Christmas retail graphics installation programmes. How to scope, schedule and deliver seasonal retail rollouts — from artwork sign-off timelines to overnight shopping centre protocols.",
+    date: "2026-08-29",
+  },
+  {
+    slug: "solar-control-film-guide-for-facilities-managers",
+    title: "Solar Control Film — A Specification Guide for Facilities Managers",
+    description:
+      "A practical guide for FM contractors, commercial property managers and fit-out companies specifying solar control window film in commercial buildings. What solar film does, how to specify it, where it works best, how to brief an installer, and what to expect from an installation programme.",
+    date: "2026-08-30",
+  },
+  {
+    slug: "frosted-film-specification-guide-for-facilities-managers",
+    title: "Frosted Window Film — A Specification Guide for Facilities Managers",
+    description:
+      "A practical guide for FM contractors, commercial property managers and fit-out companies specifying frosted and privacy window film in commercial buildings. Privacy film types, Part M manifestation, how to specify, where to use each product, and what to expect from an installation programme.",
+    date: "2026-08-31",
+  },
+  {
+    slug: "architectural-wrap-specification-guide-for-hotel-fit-out",
+    title: "Architectural Vinyl Wrap — A Specification Guide for Hotel Fit-Out Companies",
+    description:
+      "A practical guide for hotel fit-out contractors, interior designers and hotel FM teams specifying architectural vinyl wrapping in hotel refurbishments. What surfaces work, how to programme the installation, how to specify the right film, and how to brief a specialist wrapping subcontractor.",
+    date: "2026-09-01",
+  },
+  {
+    slug: "retail-wrap-specification-guide-for-brand-rollout-managers",
+    title: "Retail Vinyl Wrap — A Specification Guide for Brand Rollout Managers",
+    description:
+      "A practical guide for retail brand rollout managers, visual merchandising teams and retail fit-out contractors specifying architectural vinyl wrapping across multi-site programmes. Which surfaces work, how to specify film, how to manage consistency across sites, and how to brief a specialist installer.",
+    date: "2026-09-02",
+  },
+  {
+    slug: "window-film-for-retail-shopfronts-and-commercial-interiors",
+    title: "Window Film for Retail Shopfronts and Commercial Interiors — Specification Guide",
+    description:
+      "A practical guide for retail fit-out contractors, brand managers and FM teams specifying window film across retail shopfronts and commercial interiors. Solar control, frosted privacy, manifestation, decorative film — what to specify and when.",
+    date: "2026-09-03",
+  },
+  {
+    slug: "hotel-window-film-specification-guide-for-hotel-fit-out",
+    title: "Hotel Window Film — A Specification Guide for Hotel Fit-Out Contractors",
+    description:
+      "A practical guide for hotel fit-out contractors, interior designers and hotel FM teams specifying window film across hotel projects. Solar control, frosted privacy, decorative film, glass manifestation — what to specify in each area of the hotel and how to brief a commercial installer.",
+    date: "2026-09-04",
+  },
+  {
+    slug: "window-film-for-schools-and-universities",
+    title: "Window Film for Schools and Universities — A Specification Guide",
+    description:
+      "A practical guide for school bursars, university facilities managers and education sector FM contractors specifying window film across school and university buildings. Solar control, frosted privacy, manifestation, decorative film — what to specify and how to brief a commercial installer.",
+    date: "2026-09-05",
+  },
+  {
+    slug: "vinyl-wrapping-for-academy-trusts-multi-site-schools",
+    title: "Vinyl Wrapping for Academy Trusts and Multi-Site Schools — A Guide for Estates Directors",
+    description:
+      "A practical guide for academy trust estates directors, school bursars and FM contractors planning multi-site vinyl wrapping programmes across MAT school portfolios. How to scope, specify, programme and manage consistent vinyl wrap refurbishment across multiple school buildings.",
+    date: "2026-09-07",
+  },
+  {
+    slug: "school-window-film-compliance-guide",
+    title: "School Window Film Compliance Guide — Part M, Solar Control & Privacy Specification",
+    description:
+      "A practical compliance guide for school bursars, estates managers and FM contractors specifying window film across school and university buildings. Covers Part M manifestation requirements, solar control for overheating classrooms, frosted privacy film for sensitive areas, and structuring a compliant holiday-period programme.",
+    date: "2026-09-08",
+  },
+  {
+    slug: "architectural-wrap-for-education-specification-guide",
+    title: "Architectural Vinyl Wrap for Education — A Specification Guide for Estates Directors",
+    description:
+      "A practical specification guide for academy trust estates directors, school bursars, FM contractors and university facilities managers planning vinyl wrapping programmes across school and university buildings. How to specify surfaces, programme around the academic calendar, manage DBS, multi-site consistency and document sign-off.",
+    date: "2026-09-09",
+  },
+  {
+    slug: "vinyl-wrap-for-student-accommodation-specification-guide",
+    title: "Vinyl Wrap for Student Accommodation — A Specification Guide for PBSA Operators",
+    description:
+      "A practical specification guide for PBSA developers, university estates teams, block managers and FM contractors planning vinyl wrapping programmes across student accommodation buildings. How to specify surfaces, programme around the academic void period, manage multi-block consistency and structure a cost-effective refurbishment programme.",
+    date: "2026-09-10",
+  },
+  {
+    slug: "window-film-for-care-homes-specification-guide",
+    title: "Window Film for Care Homes — Specification Guide for Operators and FM Contractors",
+    description:
+      "A practical specification guide for care home operators, group FM contractors and CQC-registered premises commissioning window film. Covers privacy film for resident bedrooms, solar control for day rooms and lounges, Part M manifestation for glazed corridors, and how to programme installation around care home operations.",
+    date: "2026-09-11",
+  },
+  {
+    slug: "architectural-wrap-for-care-homes-specification-guide",
+    title: "Architectural Vinyl Wrap for Care Homes — Specification Guide for Operators and FM Contractors",
+    description:
+      "A practical specification guide for care home operators, group FM contractors and refurbishment project managers planning vinyl wrapping programmes across CQC-registered premises. Covers kitchen surface wrapping, corridor doors, common room furniture, resident bedroom fittings, and how to programme installation in an occupied care environment.",
+    date: "2026-09-12",
+  },
 ] as const;
 
 export type BlogSlug = (typeof blogPosts)[number]["slug"];

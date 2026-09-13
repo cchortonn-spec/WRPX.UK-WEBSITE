@@ -187,6 +187,49 @@ export default function SolarControlFilmPage() {
         </div>
       </section>
 
+      {/* City pages */}
+      <section className="bg-card px-4 py-16">
+        <div className="container mx-auto max-w-4xl">
+          <h2 className="mb-8 text-2xl font-semibold text-foreground md:text-3xl">
+            Solar control film by city
+          </h2>
+          <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-4">
+            <Link href="/window-film/solar-control-film-sheffield/" className="card-float p-5 hover:border-accent/60 transition-colors">
+              <h3 className="font-semibold text-foreground">Sheffield</h3>
+              <p className="mt-2 text-sm text-muted">Solar control film across Sheffield offices, hotels and retail.</p>
+            </Link>
+            <Link href="/window-film/solar-control-film-leeds/" className="card-float p-5 hover:border-accent/60 transition-colors">
+              <h3 className="font-semibold text-foreground">Leeds</h3>
+              <p className="mt-2 text-sm text-muted">Solar control film across Leeds city centre and West Yorkshire.</p>
+            </Link>
+            <Link href="/window-film/solar-control-film-nottingham/" className="card-float p-5 hover:border-accent/60 transition-colors">
+              <h3 className="font-semibold text-foreground">Nottingham</h3>
+              <p className="mt-2 text-sm text-muted">Solar control film across Nottingham offices, hotels and student accommodation.</p>
+            </Link>
+            <Link href="/window-film/solar-control-film-manchester/" className="card-float p-5 hover:border-accent/60 transition-colors">
+              <h3 className="font-semibold text-foreground">Manchester</h3>
+              <p className="mt-2 text-sm text-muted">Solar control film across Manchester, Spinningfields and MediaCityUK Salford.</p>
+            </Link>
+            <Link href="/window-film/solar-control-film-derby/" className="card-float p-5 hover:border-accent/60 transition-colors">
+              <h3 className="font-semibold text-foreground">Derby</h3>
+              <p className="mt-2 text-sm text-muted">Solar control film across Derby, Pride Park and the M1 corridor into Derbyshire.</p>
+            </Link>
+            <Link href="/window-film/solar-control-film-leicester/" className="card-float p-5 hover:border-accent/60 transition-colors">
+              <h3 className="font-semibold text-foreground">Leicester</h3>
+              <p className="mt-2 text-sm text-muted">Solar control film across Leicester offices, De Montfort University, University of Leicester and Highcross.</p>
+            </Link>
+            <Link href="/window-film/solar-control-film-coventry/" className="card-float p-5 hover:border-accent/60 transition-colors">
+              <h3 className="font-semibold text-foreground">Coventry</h3>
+              <p className="mt-2 text-sm text-muted">Solar control film across Coventry offices, Coventry University, University of Warwick and Arena Business Park.</p>
+            </Link>
+            <Link href="/window-film/solar-control-film-birmingham/" className="card-float p-5 hover:border-accent/60 transition-colors">
+              <h3 className="font-semibold text-foreground">Birmingham</h3>
+              <p className="mt-2 text-sm text-muted">Solar control film across Birmingham offices, hotels, retail and the University of Birmingham.</p>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Final CTA */}
       <section className="px-4 py-20">
         <div className="container mx-auto max-w-3xl">
