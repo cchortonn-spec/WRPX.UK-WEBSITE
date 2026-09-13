@@ -520,6 +520,13 @@ export const blogPosts = [
       "A practical specification guide for care home operators, group FM contractors and refurbishment project managers planning vinyl wrapping programmes across CQC-registered premises. Covers kitchen surface wrapping, corridor doors, common room furniture, resident bedroom fittings, and how to programme installation in an occupied care environment.",
     date: "2026-09-12",
   },
+  {
+    slug: "hotel-architectural-wrap-and-window-film-specifying-both",
+    title: "Hotel Architectural Wrap and Window Film — Specifying Both on the Same Project",
+    description:
+      "A practical guide for hotel fit-out contractors, interior designers and FM teams on specifying vinyl wrapping and window film together on hotel refurbishment projects. What surfaces each covers, how the trades interact, how to sequence installation, and why using a single installer for both simplifies project management.",
+    date: "2026-09-13",
+  },
 ] as const;
 
 export type BlogSlug = (typeof blogPosts)[number]["slug"];

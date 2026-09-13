@@ -100,9 +100,9 @@ const faqItems = [
 
 const nearbyPages = [
   { href: "/subcontract-vinyl-installer-thirsk/", label: "Thirsk YO7", desc: "12 miles west via A170" },
+  { href: "/subcontract-vinyl-installer-pickering/", label: "Pickering YO18", desc: "12 miles east via A170" },
   { href: "/subcontract-vinyl-installer-northallerton/", label: "Northallerton DL7", desc: "20 miles north-west via A170 and A168" },
   { href: "/subcontract-vinyl-installer-york/", label: "York YO1", desc: "25 miles south via A64 and A1036" },
-  { href: "/subcontract-vinyl-installer-ripon/", label: "Ripon HG4", desc: "18 miles south-west via A61" },
 ];
 
 export default function SubcontractVinylInstallerHelmsley() {
