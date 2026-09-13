@@ -46,9 +46,7 @@ const REELS: Reel[] = [
   },
 ];
 
-const PLAY_RETRY_DELAYS_MS = [0, 250, 750, 1500];
-
-function prepareForInlinePlay(video: HTMLVideoElement, muted: boolean) {
+function prepareMutedInline(video: HTMLVideoElement, muted: boolean) {
   video.muted = muted;
   video.defaultMuted = muted;
   if (muted) {
@@ -61,187 +59,136 @@ function prepareForInlinePlay(video: HTMLVideoElement, muted: boolean) {
   video.setAttribute("webkit-playsinline", "");
 }
 
-async function tryPlay(video: HTMLVideoElement, muted: boolean): Promise<boolean> {
-  prepareForInlinePlay(video, muted);
-  try {
-    await video.play();
-    return true;
-  } catch {
-    return false;
-  }
-}
-
-function waitForCanPlay(video: HTMLVideoElement, timeoutMs = 8000): Promise<void> {
-  if (video.readyState >= HTMLMediaElement.HAVE_FUTURE_DATA) {
-    return Promise.resolve();
-  }
-
-  return new Promise((resolve) => {
-    let settled = false;
-    const finish = () => {
-      if (settled) return;
-      settled = true;
-      video.removeEventListener("loadeddata", finish);
-      video.removeEventListener("canplay", finish);
-      window.clearTimeout(timer);
-      resolve();
-    };
-
-    const timer = window.setTimeout(finish, timeoutMs);
-    video.addEventListener("loadeddata", finish);
-    video.addEventListener("canplay", finish);
-  });
-}
-
 /**
  * Single vertical (9:16) reel card.
- * Plays muted + looped automatically once it's on screen, and pauses
- * once it scrolls away (saves battery/data and avoids a wall of moving
- * video). Tap the sound button to toggle sound.
+ * Only the active (most visible) card plays — phones reliably decode one
+ * video at a time. Neighbours preload so swipe feels instant. Tap the
+ * sound button to toggle mute.
  */
-function ReelCard({ reel, index }: { reel: Reel; index: number }) {
+function ReelCard({
+  reel,
+  index,
+  isActive,
+  shouldLoad,
+  onActivate,
+}: {
+  reel: Reel;
+  index: number;
+  isActive: boolean;
+  shouldLoad: boolean;
+  onActivate: (index: number) => void;
+}) {
   const videoRef = useRef<HTMLVideoElement>(null);
-  const cardRef = useRef<HTMLDivElement>(null);
   const [muted, setMuted] = useState(true);
-  const [shouldLoad, setShouldLoad] = useState(index < 2);
   const mutedRef = useRef(true);
-  const wantPlayingRef = useRef(false);
-  const playGenerationRef = useRef(0);
-  const errorRetriesRef = useRef(0);
+  const activeRef = useRef(isActive);
 
   useEffect(() => {
     mutedRef.current = muted;
   }, [muted]);
 
   useEffect(() => {
-    const video = videoRef.current;
-    if (!video) return;
-    prepareForInlinePlay(video, true);
-  }, []);
+    activeRef.current = isActive;
+  }, [isActive]);
 
   useEffect(() => {
-    const card = cardRef.current;
-    if (!card) return;
-
-    const preloadObserver = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting || entry.intersectionRatio > 0) {
-          setShouldLoad(true);
-        }
-      },
-      { rootMargin: "200px 120px", threshold: 0 }
-    );
-
-    preloadObserver.observe(card);
-    return () => preloadObserver.disconnect();
+    const video = videoRef.current;
+    if (!video) return;
+    prepareMutedInline(video, true);
   }, []);
 
+  // Play only while this card is the active (most visible) reel.
   useEffect(() => {
     const video = videoRef.current;
     if (!video || !shouldLoad) return;
 
     let cancelled = false;
 
-    const playWithRetries = async () => {
-      const generation = ++playGenerationRef.current;
-      prepareForInlinePlay(video, mutedRef.current);
+    const pauseNow = () => {
+      video.pause();
+    };
 
-      if (video.preload !== "auto") {
-        video.preload = "auto";
-      }
-      // Only force a reload when the element has no usable network activity yet.
-      // Calling load() while buffering can abort an in-progress fetch on iOS.
-      if (
-        video.readyState < HTMLMediaElement.HAVE_CURRENT_DATA &&
-        (video.networkState === HTMLMediaElement.NETWORK_EMPTY ||
-          video.networkState === HTMLMediaElement.NETWORK_NO_SOURCE)
-      ) {
-        try {
-          video.load();
-        } catch {
-          /* ignore */
-        }
-      }
+    const playNow = async () => {
+      prepareMutedInline(video, mutedRef.current);
+
       if (video.readyState < HTMLMediaElement.HAVE_CURRENT_DATA) {
-        await waitForCanPlay(video);
+        await new Promise<void>((resolve) => {
+          let done = false;
+          const finish = () => {
+            if (done) return;
+            done = true;
+            video.removeEventListener("loadeddata", finish);
+            video.removeEventListener("canplay", finish);
+            window.clearTimeout(timer);
+            resolve();
+          };
+          const timer = window.setTimeout(finish, 6000);
+          video.addEventListener("loadeddata", finish);
+          video.addEventListener("canplay", finish);
+        });
       }
 
-      for (const delay of PLAY_RETRY_DELAYS_MS) {
-        if (cancelled || !wantPlayingRef.current || generation !== playGenerationRef.current) {
-          return;
-        }
-        if (delay > 0) {
-          await new Promise((resolve) => window.setTimeout(resolve, delay));
-        }
-        if (cancelled || !wantPlayingRef.current || generation !== playGenerationRef.current) {
-          return;
-        }
-        if (video.paused === false) return;
-        const ok = await tryPlay(video, mutedRef.current);
-        if (ok) {
-          errorRetriesRef.current = 0;
-          return;
-        }
-      }
-    };
+      if (cancelled || !activeRef.current) return;
 
-    const onVisibility = (visible: boolean) => {
-      wantPlayingRef.current = visible;
-      if (visible) {
-        void playWithRetries();
-      } else {
-        playGenerationRef.current += 1;
-        video.pause();
-      }
-    };
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        onVisibility(entry.isIntersecting);
-      },
-      { threshold: 0.25 }
-    );
-
-    const onError = () => {
-      if (cancelled || errorRetriesRef.current >= 1) return;
-      errorRetriesRef.current += 1;
       try {
-        video.load();
+        await video.play();
       } catch {
-        /* ignore */
-      }
-      if (wantPlayingRef.current) {
-        void playWithRetries();
+        // Autoplay can be blocked once; retry shortly (still muted).
+        await new Promise((r) => window.setTimeout(r, 400));
+        if (cancelled || !activeRef.current) return;
+        prepareMutedInline(video, mutedRef.current);
+        await video.play().catch(() => {});
       }
     };
 
-    video.addEventListener("error", onError);
-    observer.observe(video);
+    if (isActive) {
+      void playNow();
+    } else {
+      pauseNow();
+    }
+
+    const onVisibility = () => {
+      if (document.hidden) {
+        pauseNow();
+      } else if (activeRef.current) {
+        void playNow();
+      }
+    };
+
+    document.addEventListener("visibilitychange", onVisibility);
 
     return () => {
       cancelled = true;
-      playGenerationRef.current += 1;
-      observer.disconnect();
-      video.removeEventListener("error", onError);
-      video.pause();
+      document.removeEventListener("visibilitychange", onVisibility);
+      // Don't pause on dependency churn while still active — only when
+      // leaving the effect because shouldLoad flipped or unmounting.
     };
-  }, [shouldLoad]);
+  }, [isActive, shouldLoad]);
+
+  // Pause when this card stops being active (separate so Strict Mode
+  // remounts don't kill a just-started play on the active card).
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+    if (!isActive) {
+      video.pause();
+    }
+  }, [isActive]);
 
   const toggleSound = () => {
     const video = videoRef.current;
     if (!video) return;
-    const next = !muted;
-    mutedRef.current = next;
-    prepareForInlinePlay(video, next);
-    if (!next) {
-      // User gesture — unmuting should also kick playback if autoplay was blocked.
-      void video.play().catch(() => {});
-    }
-    setMuted(next);
+    const nextMuted = !muted;
+    mutedRef.current = nextMuted;
+    prepareMutedInline(video, nextMuted);
+    onActivate(index);
+    // User gesture — kick playback even if autoplay was blocked earlier.
+    void video.play().catch(() => {});
+    setMuted(nextMuted);
   };
 
   return (
-    <div className="reel-card" ref={cardRef}>
+    <div className="reel-card" data-reel-index={index}>
       <video
         ref={videoRef}
         className="reel-card-video"
@@ -250,7 +197,7 @@ function ReelCard({ reel, index }: { reel: Reel; index: number }) {
         muted={muted}
         loop
         playsInline
-        preload={shouldLoad ? (index < 2 ? "auto" : "metadata") : "none"}
+        preload={shouldLoad ? (isActive ? "auto" : "metadata") : "none"}
         aria-label={`${reel.label} — video ${index + 1}`}
       />
       <button
@@ -271,6 +218,103 @@ function ReelCard({ reel, index }: { reel: Reel; index: number }) {
  * as its own section, not stretched into a wide banner.
  */
 export function VideoReels() {
+  const trackRef = useRef<HTMLDivElement>(null);
+  const ratiosRef = useRef<Map<number, number>>(new Map());
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [loadedIndexes, setLoadedIndexes] = useState<Set<number>>(
+    () => new Set([0, 1])
+  );
+
+  useEffect(() => {
+    const track = trackRef.current;
+    if (!track) return;
+
+    const cards = Array.from(
+      track.querySelectorAll<HTMLElement>("[data-reel-index]")
+    );
+
+    const pickActive = () => {
+      const viewportMid = window.innerWidth / 2;
+      let bestIndex = 0;
+      let bestRatio = -1;
+      let bestDist = Number.POSITIVE_INFINITY;
+
+      for (const card of cards) {
+        const index = Number(card.dataset.reelIndex);
+        const ratio = ratiosRef.current.get(index) ?? 0;
+        const rect = card.getBoundingClientRect();
+        const center = (rect.left + rect.right) / 2;
+        const dist = Math.abs(center - viewportMid);
+
+        if (ratio > bestRatio + 0.02 || (Math.abs(ratio - bestRatio) <= 0.02 && dist < bestDist)) {
+          bestRatio = ratio;
+          bestDist = dist;
+          bestIndex = index;
+        }
+      }
+
+      // Need a meaningful amount on screen before claiming a winner.
+      if (bestRatio < 0.15) return;
+
+      setActiveIndex(bestIndex);
+      setLoadedIndexes((prev) => {
+        const next = new Set(prev);
+        next.add(bestIndex);
+        if (bestIndex > 0) next.add(bestIndex - 1);
+        if (bestIndex < REELS.length - 1) next.add(bestIndex + 1);
+        return next;
+      });
+    };
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          const el = entry.target as HTMLElement;
+          const index = Number(el.dataset.reelIndex);
+          if (Number.isNaN(index)) continue;
+          ratiosRef.current.set(index, entry.intersectionRatio);
+        }
+        pickActive();
+      },
+      {
+        threshold: [0, 0.1, 0.2, 0.35, 0.5, 0.65, 0.8, 1],
+        rootMargin: "0px",
+      }
+    );
+
+    for (const card of cards) {
+      observer.observe(card);
+    }
+
+    // Horizontal scroll inside the track also changes which card wins.
+    const onScroll = () => {
+      for (const card of cards) {
+        const index = Number(card.dataset.reelIndex);
+        const rect = card.getBoundingClientRect();
+        const visibleWidth = Math.min(rect.right, window.innerWidth) - Math.max(rect.left, 0);
+        const visibleHeight = Math.min(rect.bottom, window.innerHeight) - Math.max(rect.top, 0);
+        const area = rect.width * rect.height;
+        const ratio =
+          area > 0 && visibleWidth > 0 && visibleHeight > 0
+            ? (visibleWidth * visibleHeight) / area
+            : 0;
+        ratiosRef.current.set(index, Math.max(0, Math.min(1, ratio)));
+      }
+      pickActive();
+    };
+
+    track.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
+    // Initial pick after layout.
+    onScroll();
+
+    return () => {
+      observer.disconnect();
+      track.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
+    };
+  }, []);
+
   return (
     <section className="video-reels reveal" aria-label="Kitchen wrapping video reels">
       <div className="video-reels-inner">
@@ -282,9 +326,25 @@ export function VideoReels() {
             Real jobs, filmed on site. Tap a video to turn the sound on.
           </p>
         </div>
-        <div className="video-reels-track">
+        <div className="video-reels-track" ref={trackRef}>
           {REELS.map((reel, index) => (
-            <ReelCard key={reel.src} reel={reel} index={index} />
+            <ReelCard
+              key={reel.src}
+              reel={reel}
+              index={index}
+              isActive={index === activeIndex}
+              shouldLoad={loadedIndexes.has(index)}
+              onActivate={(i) => {
+                setActiveIndex(i);
+                setLoadedIndexes((prev) => {
+                  const next = new Set(prev);
+                  next.add(i);
+                  if (i > 0) next.add(i - 1);
+                  if (i < REELS.length - 1) next.add(i + 1);
+                  return next;
+                });
+              }}
+            />
           ))}
         </div>
       </div>
