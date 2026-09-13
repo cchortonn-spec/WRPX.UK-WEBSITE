@@ -4018,3 +4018,368 @@ a[href^="tel"]:hover {
     margin: 0.75rem 0 0 0.75rem;
   }
 }
+
+/* —— Kitchen wrapping training landing (Godfather offer page) —— */
+.training-hero {
+  position: relative;
+  min-height: min(78vh, 38rem);
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  background: #050505;
+}
+
+.training-hero-media {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.training-hero-image {
+  object-fit: cover;
+  object-position: center 40%;
+}
+
+.training-hero-image-mobile {
+  display: none;
+}
+
+.training-hero-scrim {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(5, 5, 5, 0.4) 0%,
+      rgba(5, 5, 5, 0.25) 40%,
+      rgba(5, 5, 5, 0.82) 100%
+    ),
+    linear-gradient(
+      90deg,
+      rgba(5, 5, 5, 0.55) 0%,
+      rgba(5, 5, 5, 0.2) 50%,
+      rgba(5, 5, 5, 0.15) 100%
+    );
+}
+
+.training-hero-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 44rem;
+  margin: 0 auto 0 0;
+  padding: 5rem 1.25rem 2.5rem;
+}
+
+.training-hero-eyebrow {
+  margin: 0 0 0.85rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  text-shadow: 0 1px 12px rgba(0, 0, 0, 0.8);
+}
+
+.training-hero-title {
+  margin: 0;
+  font-size: clamp(1.85rem, 5vw, 3.1rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: #ffffff;
+  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.7);
+}
+
+.training-hero-subtitle {
+  margin: 1rem 0 0;
+  max-width: 34rem;
+  font-size: clamp(0.95rem, 2vw, 1.1rem);
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0 1px 14px rgba(0, 0, 0, 0.7);
+}
+
+.training-hero-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.training-hero-call {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-color: rgba(255, 255, 255, 0.35);
+  color: #ffffff;
+}
+
+.training-hero-call:hover {
+  border-color: rgba(255, 255, 255, 0.65);
+}
+
+.training-hero-proof {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem 1.35rem;
+  list-style: none;
+  margin: 1.35rem 0 0;
+  padding: 1.1rem 0 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.training-hero-proof li {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+@media (min-width: 640px) {
+  .training-hero-actions {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .training-hero-content {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .training-hero-image-mobile {
+    display: none;
+  }
+
+  .training-hero-image-desktop {
+    display: block;
+  }
+}
+
+@media (max-width: 767px) {
+  .training-hero {
+    min-height: min(85vh, 36rem);
+  }
+
+  .training-hero-image-desktop {
+    display: none;
+  }
+
+  .training-hero-image-mobile {
+    display: block;
+  }
+
+  .training-hero-image-mobile {
+    object-position: center 30%;
+  }
+}
+
+.training-section {
+  padding: 3.5rem 1rem;
+}
+
+.training-section-alt {
+  background: var(--surface-band);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.training-eyebrow {
+  margin: 0 0 0.65rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.training-offer-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.training-offer-row {
+  display: flex;
+  gap: 1rem;
+  padding: 1.25rem 1.35rem;
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  background: var(--card);
+}
+
+.training-offer-row-premium {
+  border-color: rgba(212, 0, 130, 0.28);
+  background: linear-gradient(
+    135deg,
+    rgba(212, 0, 130, 0.06) 0%,
+    var(--card) 55%
+  );
+}
+
+.training-offer-num,
+.training-offer-check {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--accent-foreground);
+  background: var(--accent);
+}
+
+.training-offer-check {
+  background: transparent;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+}
+
+.training-offer-premiums-label {
+  margin: 0.75rem 0 0.25rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--foreground);
+}
+
+.training-price-callout {
+  text-align: center;
+  padding: 2rem 1.5rem;
+  border: 2px solid rgba(212, 0, 130, 0.45);
+  border-radius: 0.875rem;
+  background: var(--card);
+}
+
+@media (min-width: 768px) {
+  .training-price-callout {
+    padding: 2.5rem 2.5rem;
+  }
+}
+
+.training-guarantee,
+.training-scarcity {
+  padding: 1.5rem 1.5rem;
+  border-radius: 0.75rem;
+  border: 1px solid var(--border);
+  background: var(--card);
+}
+
+.training-guarantee {
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
+.training-scarcity {
+  border-color: rgba(212, 0, 130, 0.35);
+}
+
+.training-day-teaser {
+  display: flex;
+  gap: 0.85rem;
+  align-items: flex-start;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.training-day-teaser:last-child {
+  border-bottom: none;
+}
+
+.training-day-badge {
+  flex-shrink: 0;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  padding-top: 0.15rem;
+}
+
+.training-close {
+  text-align: center;
+  padding: 2.5rem 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 0.875rem;
+  background: var(--card);
+}
+
+.training-hub-cta {
+  padding: 1.75rem 1.5rem;
+  border: 2px solid rgba(212, 0, 130, 0.4);
+  border-radius: 0.875rem;
+  background: var(--card);
+}
+
+@media (min-width: 768px) {
+  .training-hub-cta {
+    padding: 2rem 2rem;
+  }
+}
+
+.training-photo {
+  margin: 0;
+}
+
+.training-photo-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  border: 1px solid var(--border);
+  background: #0a0a0a;
+}
+
+.training-photo-caption {
+  margin-top: 0.65rem;
+  font-size: 0.8rem;
+  color: var(--muted);
+  line-height: 1.4;
+}
+
+.training-photo-grid {
+  display: grid;
+  gap: 0.85rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) {
+  .training-photo-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.training-photo-grid-item {
+  margin: 0;
+}
+
+.training-photo-grid-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  border: 1px solid var(--border);
+  background: #0a0a0a;
+}
+
+.training-desire-split {
+  display: grid;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .training-desire-split {
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 2rem;
+  }
+}

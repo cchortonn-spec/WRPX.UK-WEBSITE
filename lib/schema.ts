@@ -165,3 +165,62 @@ export function getServiceSchema(serviceName: string, description: string) {
     },
   };
 }
+
+export function getCourseSchema(options: {
+  name: string;
+  description: string;
+  url: string;
+  price: number;
+  durationDays: number;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    name: options.name,
+    description: options.description,
+    url: options.url,
+    provider: {
+      "@type": "Organization",
+      name: siteConfig.name,
+      url: siteConfig.domain,
+      telephone: siteConfig.phoneE164,
+    },
+    offers: {
+      "@type": "Offer",
+      price: options.price,
+      priceCurrency: "GBP",
+      availability: "https://schema.org/InStock",
+      url: options.url,
+    },
+    hasCourseInstance: {
+      "@type": "CourseInstance",
+      courseMode: "onsite",
+      duration: `P${options.durationDays}D`,
+      location: {
+        "@type": "Place",
+        address: {
+          "@type": "PostalAddress",
+          addressRegion: "South Yorkshire",
+          addressCountry: "GB",
+        },
+      },
+    },
+  };
+}
+
+export function getFaqPageSchema(
+  faqs: ReadonlyArray<{ q: string; a: string }>
+) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.q,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.a,
+      },
+    })),
+  };
+}

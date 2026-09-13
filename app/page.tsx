@@ -343,6 +343,30 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Training teaser */}
+      <section className="home-section-alt reveal px-4 py-14">
+        <div className="container mx-auto max-w-3xl">
+          <div className="card-float border border-accent/30 p-8 text-center md:p-10">
+            <p className="text-xs font-semibold uppercase tracking-widest text-accent">
+              Want to learn this yourself?
+            </p>
+            <h2 className="mt-3 text-2xl font-semibold text-foreground md:text-3xl">
+              5-day kitchen wrapping training + business launch
+            </h2>
+            <p className="mt-4 text-muted leading-relaxed">
+              Train on a real WRPX install. Walk away with branding, a website,
+              12 months of local SEO and ongoing support — {siteConfig.yearsInBusiness}+ years
+              experience behind you.
+            </p>
+            <div className="mt-6">
+              <Link href="/kitchen-wrapping-training/" className="btn-primary inline-block">
+                Explore training
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Final CTA */}
       <section className="home-cta-glow reveal px-4 py-16">
         <div className="container mx-auto max-w-3xl">

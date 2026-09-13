@@ -165,6 +165,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "architectural-wrap-hotels",
     "architectural-wrap-student-accommodation",
     "christmas-window-graphics",
+    "kitchen-wrapping-training",
+    "kitchen-wrapping-training-cost",
+    "kitchen-wrapping-training-course",
+    "become-a-kitchen-wrapper",
   ];
 
   const furnitureLocations = siteConfig.areas.map((city) =>
@@ -216,6 +220,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "worktop-wrapping",
     "bathroom-cabinet-wrapping",
     "bedroom-wardrobe-wrapping",
+    "kitchen-wrapping-training",
   ]);
 
   return paths.map((path) => ({

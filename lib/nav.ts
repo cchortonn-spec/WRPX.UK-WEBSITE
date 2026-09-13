@@ -33,6 +33,7 @@ export const nav = {
     { label: "FAQ", href: `${base}/faq/` },
     { label: "Blog", href: `${base}/blog/` },
     { label: "About", href: `${base}/about/` },
+    { label: "Kitchen Wrapping Training", href: `${base}/kitchen-wrapping-training/` },
   ] as const,
   locations: siteConfig.areas.map((city) => ({
     label: city,

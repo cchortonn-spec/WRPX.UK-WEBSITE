@@ -244,6 +244,36 @@ export default function KitchenWrappingPage() {
             </div>
           </div>
 
+          <div className="card-float border-2 border-accent/30 p-8">
+            <p className="text-xs font-semibold uppercase tracking-widest text-accent">
+              Want to learn this yourself?
+            </p>
+            <h2 className="mt-2 text-xl font-semibold text-foreground">
+              5-day kitchen wrapping training + business launch
+            </h2>
+            <p className="mt-4 text-muted leading-relaxed">
+              Join us on a real install — not a classroom. Walk away with
+              branding, a website, 12 months of local SEO, supplier setup and
+              ongoing support. {siteConfig.yearsInBusiness}+ years experience,
+              one investment.
+            </p>
+            <p className="mt-4">
+              <Link
+                href="/kitchen-wrapping-training/"
+                className="text-accent hover:underline"
+              >
+                Explore kitchen wrapping training
+              </Link>
+              {" · "}
+              <Link
+                href="/become-a-kitchen-wrapper/"
+                className="text-accent hover:underline"
+              >
+                Become a kitchen wrapper
+              </Link>
+            </p>
+          </div>
+
           <div className="card-float p-8">
             <h2 className="text-xl font-semibold text-foreground">
               Related services
