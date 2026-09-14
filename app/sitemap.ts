@@ -289,6 +289,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "subcontract-vinyl-installer-pickering",
     "subcontract-vinyl-installer-malton",
     "blog/hotel-architectural-wrap-and-window-film-specifying-both",
+    "kitchen-wrapping-training-sheffield",
+    "window-film/hotel-window-film-nottingham",
+    "window-film/hotel-window-film-manchester",
+    "subcontract-vinyl-installer-scarborough",
+    "subcontract-vinyl-installer-whitby",
   ];
 
   const furnitureLocations = siteConfig.areas.map((city) =>
