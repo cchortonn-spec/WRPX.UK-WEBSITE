@@ -294,6 +294,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "window-film/hotel-window-film-manchester",
     "subcontract-vinyl-installer-scarborough",
     "subcontract-vinyl-installer-whitby",
+    "kitchen-wrapping-training-leeds",
+    "window-film/hotel-window-film-derby",
+    "subcontract-vinyl-installer-bridlington",
   ];
 
   const furnitureLocations = siteConfig.areas.map((city) =>
