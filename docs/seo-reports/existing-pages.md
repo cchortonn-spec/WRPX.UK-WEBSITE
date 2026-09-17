@@ -897,3 +897,56 @@ _Last updated by automation run on 2026-09-10_
 | `/blog/window-film-for-care-homes-specification-guide/` | Care home window film spec guide — privacy film for bedrooms, solar control for day rooms, Part M manifestation; CQC compliance angle; 2,500+ words |
 
 _Last updated by automation run on 2026-09-11_
+
+## Run 57 additions (2026-09-12)
+| Slug | Title / Purpose |
+|---|---|
+| `/window-film/school-window-film-coventry/` | School window film Coventry — University of Warwick CV4, Coventry University CV1; Coventry and Warwickshire MATs; sixth school film city page |
+| `/window-film/hotel-window-film-coventry/` | Hotel window film Coventry — CV1 city centre, Ricoh Arena CV6, University of Warwick CV4; first hotel film city page for Coventry |
+| `/subcontract-vinyl-installer-helmsley/` | Subcontract Helmsley YO62 — North York Moors gateway; A170 corridor; 15m from Thirsk; tourism and rural estate market |
+| `/subcontract-vinyl-installer-hawes/` | Subcontract Hawes DL8 — Wensleydale; A684; 15m from Leyburn; Dales rural and tourism market |
+| `/blog/architectural-wrap-for-care-homes-specification-guide/` | Care home architectural wrap spec guide — kitchen units, corridor doors, common room furniture, resident bedroom fittings |
+
+## Run 58 additions (2026-09-13)
+| Slug | Title / Purpose |
+|---|---|
+| `/window-film/hotel-window-film-sheffield/` | Hotel window film Sheffield — S1 city centre, Kelham Island S3, business hotels; first hotel film Sheffield page |
+| `/window-film/hotel-window-film-leeds/` | Hotel window film Leeds — LS1 city centre, Leeds Bradford airport corridor; second hotel film city page |
+| `/subcontract-vinyl-installer-pickering/` | Subcontract Pickering YO18 — North York Moors; A170 Vale of Pickering; gateway to Fylingdales and coast |
+| `/subcontract-vinyl-installer-malton/` | Subcontract Malton YO17 — North Yorkshire market town; A64 York–Scarborough corridor; Ryedale district |
+| `/blog/hotel-architectural-wrap-and-window-film-specifying-both/` | Blog: specifying vinyl wrap and window film together on hotel refurb projects |
+
+## Run 59 additions (2026-09-14)
+| Slug | Title / Purpose |
+|---|---|
+| `/kitchen-wrapping-training-sheffield/` | Training location page — Sheffield/South Yorkshire; first training city page; A1(M)/M1 access; local market context |
+| `/window-film/hotel-window-film-nottingham/` | Hotel window film Nottingham — Lace Market NG1, city centre NG1, Nottingham Trent NG1, University of Nottingham nearby; third hotel film city page |
+| `/window-film/hotel-window-film-manchester/` | Hotel window film Manchester — Northern Quarter M4, Deansgate M3, NOMA M60; fourth hotel film city page |
+| `/subcontract-vinyl-installer-scarborough/` | Subcontract Scarborough YO11 — North Yorkshire coast; A64 corridor; tourist economy; East Riding/NYM gateway |
+| `/subcontract-vinyl-installer-whitby/` | Subcontract Whitby YO21 — North Yorkshire coast; A171; tourism economy; 15m from Scarborough |
+
+## Run 60 additions (2026-09-15)
+| Slug | Title / Purpose |
+|---|---|
+| `/kitchen-wrapping-training-leeds/` | Training location page — Leeds/West Yorkshire; second training city page; M621→M1 30min; large suburban housing market |
+| `/window-film/hotel-window-film-derby/` | Hotel window film Derby — Pride Park DE24, city centre DE1, A52/A38 business hotel corridor; fifth hotel film city page |
+| `/subcontract-vinyl-installer-bridlington/` | Subcontract Bridlington YO15 — East Yorkshire coast; A614 from Driffield; 15m from Driffield |
+| `/blog/restaurant-window-film-and-architectural-wrap-specifying-both/` | Blog: specifying window film and vinyl wrap together on restaurant projects |
+
+## Run 61 additions (2026-09-16)
+| Slug | Title / Purpose |
+|---|---|
+| `/kitchen-wrapping-training-manchester/` | Training location page — Manchester/North West; third training city page; M60→M1 ~1hr; Greater Manchester M1-M35 housing stock; **first-mover on Manchester kitchen wrapping training search** |
+| `/window-film/restaurant-window-film-sheffield/` | Restaurant window film Sheffield — **first restaurant film city page**; S1/Kelham Island S3/Ecclesall Road S11/Sharrow Vale; frosted privacy + solar control + branding + manifestation; overnight scheduling |
+| `/subcontract-vinyl-installer-driffield/` | Subcontract Driffield YO25 — East Riding inland; A614 M62→Driffield corridor; 15m to Bridlington, 12m to Beverley; agricultural/Wolds market |
+| `/blog/solar-control-film-for-listed-buildings-and-conservation-areas/` | Blog: solar film for listed buildings and conservation areas — VLT/reflectance/neutrality spec; planning/listed building consent; Georgian/Victorian/mill buildings |
+
+## Run 62 additions (2026-09-17)
+| Slug | Title / Purpose |
+|---|---|
+| `/kitchen-wrapping-training-birmingham/` | Training location page — Birmingham/West Midlands; fourth training city page; M6→M1 ~1hr15min; large housing stock B1–B45 + Solihull + Black Country + Coventry; **first-mover on Birmingham kitchen wrapping training search** |
+| `/window-film/restaurant-window-film-leeds/` | Restaurant window film Leeds — **second restaurant film city page**; LS1 Call Lane/Greek Street/Headrow, The Calls LS2, Chapel Allerton LS7, Headingley LS6; frosted privacy + solar control + branding + manifestation; overnight scheduling |
+| `/subcontract-vinyl-installer-beverley/` | Subcontract Beverley HU17 — East Yorkshire market town; A164 from M62; 12m from Driffield, 9m from Hull; premium town centre commercial market; **first-mover** |
+| `/blog/vinyl-wrapping-for-school-canteens-and-education-serveries/` | Blog: school canteen and education servery vinyl wrap spec guide — food-safe film spec, edge sealing, academic calendar programming, multi-site academy trust rollout; genuinely distinct from existing education blog |
+
+_Last updated by automation run on 2026-09-17_

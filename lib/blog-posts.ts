@@ -534,6 +534,13 @@ export const blogPosts = [
       "A practical guide for restaurant fit-out contractors, FF&E specifiers and design-and-build firms on specifying vinyl wrapping and window film together on restaurant refurbishment and new opening projects. What surfaces each covers, how the trades interact, how to sequence installation, and why using a single installer simplifies the programme.",
     date: "2026-09-15",
   },
+  {
+    slug: "vinyl-wrapping-for-school-canteens-and-education-serveries",
+    title: "Vinyl Wrapping for School Canteens and Education Serveries — A Specification Guide",
+    description:
+      "A practical guide for school bursars, academy trust estates teams and catering facilities managers on specifying vinyl wrapping for school canteens, servery counters, kitchen unit fronts and dining room furniture. Covers surface suitability, food-safe considerations, programming around the academic calendar and multi-site rollout.",
+    date: "2026-09-17",
+  },
 ] as const;
 
 export type BlogSlug = (typeof blogPosts)[number]["slug"];

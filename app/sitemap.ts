@@ -301,6 +301,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "window-film/restaurant-window-film-sheffield",
     "subcontract-vinyl-installer-driffield",
     "blog/solar-control-film-for-listed-buildings-and-conservation-areas",
+    "kitchen-wrapping-training-birmingham",
+    "window-film/restaurant-window-film-leeds",
+    "subcontract-vinyl-installer-beverley",
+    "blog/vinyl-wrapping-for-school-canteens-and-education-serveries",
   ];
 
   const furnitureLocations = siteConfig.areas.map((city) =>
