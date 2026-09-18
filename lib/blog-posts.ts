@@ -541,6 +541,13 @@ export const blogPosts = [
       "A practical guide for school bursars, academy trust estates teams and catering facilities managers on specifying vinyl wrapping for school canteens, servery counters, kitchen unit fronts and dining room furniture. Covers surface suitability, food-safe considerations, programming around the academic calendar and multi-site rollout.",
     date: "2026-09-17",
   },
+  {
+    slug: "vinyl-wrapping-for-hotel-bathrooms-and-wet-areas",
+    title: "Vinyl Wrapping for Hotel Bathrooms and Wet Areas — A Specification Guide",
+    description:
+      "A practical specification guide for hotel fit-out managers, property management companies and interior contractors on applying vinyl wrapping in hotel bathrooms, en-suite shower rooms, wet rooms and spa changing areas. Covers film selection, surface suitability, humidity management, sealing and programming for minimal room-out-of-service time.",
+    date: "2026-09-18",
+  },
 ] as const;
 
 export type BlogSlug = (typeof blogPosts)[number]["slug"];
