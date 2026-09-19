@@ -309,6 +309,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "window-film/restaurant-window-film-nottingham",
     "subcontract-vinyl-installer-selby",
     "blog/vinyl-wrapping-for-hotel-bathrooms-and-wet-areas",
+    "kitchen-wrapping-training-coventry",
+    "window-film/restaurant-window-film-manchester",
+    "architectural-wrap-offices-coventry",
+    "subcontract-vinyl-installer-pocklington",
   ];
 
   const furnitureLocations = siteConfig.areas.map((city) =>
