@@ -313,6 +313,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "window-film/restaurant-window-film-manchester",
     "architectural-wrap-offices-coventry",
     "subcontract-vinyl-installer-pocklington",
+    "kitchen-wrapping-training-bradford",
+    "window-film/restaurant-window-film-birmingham",
+    "architectural-wrap-offices-derby",
+    "subcontract-vinyl-installer-goole",
   ];
 
   const furnitureLocations = siteConfig.areas.map((city) =>

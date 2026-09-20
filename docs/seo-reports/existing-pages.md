@@ -949,4 +949,28 @@ _Last updated by automation run on 2026-09-11_
 | `/subcontract-vinyl-installer-beverley/` | Subcontract Beverley HU17 — East Yorkshire market town; A164 from M62; 12m from Driffield, 9m from Hull; premium town centre commercial market; **first-mover** |
 | `/blog/vinyl-wrapping-for-school-canteens-and-education-serveries/` | Blog: school canteen and education servery vinyl wrap spec guide — food-safe film spec, edge sealing, academic calendar programming, multi-site academy trust rollout; genuinely distinct from existing education blog |
 
-_Last updated by automation run on 2026-09-17_
+## Run 63 additions (2026-09-18)
+| Slug | Title / Purpose |
+|---|---|
+| `/kitchen-wrapping-training-nottingham/` | Training location page — Nottingham/East Midlands; fifth training city page; M1 J26→Nottingham ~30min; large housing stock NG1–NG16 + Gedling/Rushcliffe; **first-mover on Nottingham kitchen wrapping training search** |
+| `/window-film/restaurant-window-film-nottingham/` | Restaurant window film Nottingham — **third restaurant film city page**; Lace Market NG1, Hockley, Sneinton Market, West Bridgford NG2; frosted privacy + solar control + branding + manifestation; overnight scheduling |
+| `/subcontract-vinyl-installer-selby/` | Subcontract Selby YO8 — Lower Ouse Valley; A63/A1(M) corridor; 13m from York; market town; **first-mover** |
+| `/blog/vinyl-wrapping-for-hotel-bathrooms-and-wet-areas/` | Blog: cast vs calendered film spec for hotel wet areas; edge sealing mandatory; substrate testing; **first-mover** |
+
+## Run 64 additions (2026-09-19)
+| Slug | Title / Purpose |
+|---|---|
+| `/kitchen-wrapping-training-coventry/` | Training location page — Coventry/West Midlands; sixth training city page; M6→M1 ~90min; Earlsdon CV5/Radford CV6/Friargate CV1; Kenilworth/Leamington/Rugby/Nuneaton catchment; **first-mover on Coventry kitchen wrapping training search** |
+| `/window-film/restaurant-window-film-manchester/` | Restaurant window film Manchester — **fourth restaurant film city page**; Northern Quarter M4, Ancoats M4, Deansgate M3, Spinningfields M3, Didsbury M20, Chorlton M21; **first-mover on Manchester restaurant window film** |
+| `/architectural-wrap-offices-coventry/` | Office vinyl wrapping Coventry — Friargate CV1, Belgrade Quarter CV1, Binley Business Park CV3, M69/M1 approach; white-label for fit-out contractors; **completes Offices × City matrix for core cities (pre-Derby)** |
+| `/subcontract-vinyl-installer-pocklington/` | Subcontract Pocklington YO42 — A1079 York–Beverley midpoint; Market Weighton YO43 nearby; agricultural/rural estate niche; **first-mover** |
+
+## Run 65 additions (2026-09-20)
+| Slug | Title / Purpose |
+|---|---|
+| `/kitchen-wrapping-training-bradford/` | Training location page — Bradford/West Yorkshire; seventh training city page; M606→M1 only 30–35min (closest major city to training base); 540,000+ population; Manningham BD8/Great Horton BD7/Heaton BD9 Victorian stock; city centre regeneration; **first-mover on Bradford kitchen wrapping training search** |
+| `/window-film/restaurant-window-film-birmingham/` | Restaurant window film Birmingham — **fifth restaurant film city page (completes major cities)**; Digbeth B5, Jewellery Quarter B1, Broad Street B1, Brindleyplace B1, Moseley B13, Harborne B17, Edgbaston B15; **first-mover on Birmingham restaurant window film** |
+| `/architectural-wrap-offices-derby/` | Office vinyl wrapping Derby — DE1 city centre, Friar Gate DE1 (Georgian offices), Pride Park DE24 (Rolls-Royce/Toyota/Alstom), Raynesway DE21, Spondon DE21; **COMPLETES Offices × City matrix for all 8 tracked cities (Sheffield/Leeds/Nottingham/Manchester/Leicester/Birmingham/Coventry/Derby)**; **first-mover** |
+| `/subcontract-vinyl-installer-goole/` | Subcontract Goole DN14 — M62 J36; Port of Goole (UK's largest inland port) logistics/warehouse graphics niche; Selby 13m west, Howden 9m east; 40–50min from South Yorkshire; **first-mover** |
+
+_Last updated by automation run on 2026-09-20_
