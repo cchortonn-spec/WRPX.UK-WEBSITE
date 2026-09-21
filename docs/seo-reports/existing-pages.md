@@ -973,4 +973,12 @@ _Last updated by automation run on 2026-09-11_
 | `/architectural-wrap-offices-derby/` | Office vinyl wrapping Derby — DE1 city centre, Friar Gate DE1 (Georgian offices), Pride Park DE24 (Rolls-Royce/Toyota/Alstom), Raynesway DE21, Spondon DE21; **COMPLETES Offices × City matrix for all 8 tracked cities (Sheffield/Leeds/Nottingham/Manchester/Leicester/Birmingham/Coventry/Derby)**; **first-mover** |
 | `/subcontract-vinyl-installer-goole/` | Subcontract Goole DN14 — M62 J36; Port of Goole (UK's largest inland port) logistics/warehouse graphics niche; Selby 13m west, Howden 9m east; 40–50min from South Yorkshire; **first-mover** |
 
-_Last updated by automation run on 2026-09-20_
+## Run 66 additions (2026-09-21)
+| Slug | Title / Purpose |
+|---|---|
+| `/kitchen-wrapping-training-derby/` | Training location page — Derby/East Midlands; eighth training city page; A38→M1 ~45min; 260,000+ city population + wider DE/NG10 catchment 350,000+; Normanton DE23/Alvaston DE24/Spondon DE21 Victorian terraces; Rolls-Royce/Toyota/Alstom dual-income demographic; **first-mover on Derby kitchen wrapping training search** |
+| `/window-film/restaurant-window-film-derby/` | Restaurant window film Derby — **sixth restaurant film city page**; Cathedral Quarter DE1, Sadler Gate, Iron Gate, Friar Gate DE1, Normanton Road DE23, Pride Park DE24 corporate dining; frosted privacy + solar control + branding + manifestation; **first-mover on Derby restaurant window film** |
+| `/architectural-wrap-restaurants-derby/` | Restaurant interior vinyl wrapping Derby — counters, bar fronts, booths, kitchen pass surrounds and fitted furniture; Cathedral Quarter DE1, Normanton Road DE23, Pride Park DE24; **first-mover on Derby restaurant wrap** |
+| `/subcontract-vinyl-installer-howden/` | Subcontract Howden DN14 — A614 midpoint between Goole (9m west) and Beverley (20m east); Howden Enterprise Park; East Riding corridor staging; **first-mover** |
+
+_Last updated by automation run on 2026-09-21_
