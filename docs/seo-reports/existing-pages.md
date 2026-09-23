@@ -982,3 +982,21 @@ _Last updated by automation run on 2026-09-11_
 | `/subcontract-vinyl-installer-howden/` | Subcontract Howden DN14 — A614 midpoint between Goole (9m west) and Beverley (20m east); Howden Enterprise Park; East Riding corridor staging; **first-mover** |
 
 _Last updated by automation run on 2026-09-21_
+
+## Run 67 additions (2026-09-22)
+| Slug | Title / Purpose |
+|---|---|
+| `/kitchen-wrapping-training-leicester/` | Training location page — Leicester/East Midlands; ninth training city page; M1 J21→Leicester ~55min; Golden Mile LE4 Victorian terraces; Belgrave/North Evington LE5; Clarendon Park LE2; University of Leicester/DMU/Next HQ; **first-mover** |
+| `/window-film/restaurant-window-film-leicester/` | Restaurant window film Leicester — **seventh restaurant film city page**; Belgrave Road LE4 Golden Mile; Cultural Quarter LE1; Narborough Road LE3; Clarendon Park LE2 Queens Road; **first-mover** |
+| `/architectural-wrap-education-derby/` | Education vinyl wrapping Derby — University of Derby DE1 Kedleston Road/Markeaton Street; Derby College Wilmorton DE21/Broomfield DE22; Derby MATs; holiday scheduling; **first-mover for Derby education** |
+| `/subcontract-vinyl-installer-tadcaster/` | Subcontract Tadcaster LS24 — A63 Selby east/Leeds west; A64 York NE; A1(M) J43; Molson Coors + Sam Smith's; Tadcaster Business Park; **first-mover** |
+
+## Run 68 additions (2026-09-23)
+| Slug | Title / Purpose |
+|---|---|
+| `/kitchen-wrapping-training-wolverhampton/` | Training location page — Wolverhampton/Black Country; tenth training city page; M54→M6→M1 ~1hr20min; WV1/WV3/WV6/WV10/WV11 + Black Country (Dudley DY1, Walsall WS1, Willenhall WV12); Wolverhampton University; 700,000+ combined catchment; **first-mover on Wolverhampton kitchen wrapping training search** |
+| `/window-film/restaurant-window-film-coventry/` | Restaurant window film Coventry — **eighth restaurant film city page (completes major cities)**; Earlsdon CV5 Albany Road; Cathedral Quarter CV1; Foleshill Road CV6; Belgrade Quarter CV1; Spon End CV1; **first-mover on Coventry restaurant window film** |
+| `/architectural-wrap-education-leicester/` | Education vinyl wrapping Leicester — University of Leicester LE1, De Montfort University LE1/LE2, Leicester College City/St Margaret's/Freemen's Park; Gateway College LE5; Leicestershire MATs (Discovery Schools, Avanti, STAR, Lionheart, Diocese of Leicester); **eighth education city page; first-mover** |
+| `/subcontract-vinyl-installer-sherburn-in-elmet/` | Subcontract Sherburn-in-Elmet LS25 — A63 Leeds–Hull corridor; Sherburn Enterprise Park LS25; A1(M) J42 via A162; 8m from Tadcaster (west), 10m from Selby (east), 10m from Wetherby (NW); Garforth LS25 + Kippax LS25 within zone; **first-mover** |
+
+_Last updated by automation run on 2026-09-23_
