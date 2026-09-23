@@ -325,6 +325,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "window-film/restaurant-window-film-leicester",
     "architectural-wrap-education-derby",
     "subcontract-vinyl-installer-tadcaster",
+    "kitchen-wrapping-training-wolverhampton",
+    "window-film/restaurant-window-film-coventry",
+    "architectural-wrap-education-leicester",
+    "subcontract-vinyl-installer-sherburn-in-elmet",
   ];
 
   const furnitureLocations = siteConfig.areas.map((city) =>
