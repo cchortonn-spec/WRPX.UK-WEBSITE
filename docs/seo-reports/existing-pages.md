@@ -1000,3 +1000,13 @@ _Last updated by automation run on 2026-09-21_
 | `/subcontract-vinyl-installer-sherburn-in-elmet/` | Subcontract Sherburn-in-Elmet LS25 — A63 Leeds–Hull corridor; Sherburn Enterprise Park LS25; A1(M) J42 via A162; 8m from Tadcaster (west), 10m from Selby (east), 10m from Wetherby (NW); Garforth LS25 + Kippax LS25 within zone; **first-mover** |
 
 _Last updated by automation run on 2026-09-23_
+
+## Run 69 additions (2026-09-24)
+| Slug | Title / Purpose |
+|---|---|
+| `/kitchen-wrapping-training-london/` | Training location page — London/Greater London; eleventh training city page; M1 south ~2hrs30min or direct train St Pancras→Sheffield ~2hrs05min; 8M+ population; Victorian/Edwardian terrace stock across N/E/SE/SW/W postcodes; **first-mover on London kitchen wrapping training search** |
+| `/window-film/school-window-film-leicester/` | School window film Leicester — University of Leicester LE1, De Montfort University LE1/LE2, Leicester College City/St Margaret's/Freemen's Park, Gateway College LE5; Leicestershire MATs (Discovery Schools, Avanti, STAR, Lionheart, Diocese); **seventh school film city page; first-mover** |
+| `/architectural-wrap-student-accommodation-sheffield/` | Student accommodation vinyl wrap Sheffield — University of Sheffield (Endcliffe Village S11, Ranmoor Village S10, Tapton Hall S10, Sorby House S3), Sheffield Hallam Collegiate Halls S10; Unite/iQ/Student Roost/Empiric/Yugo PBSA portfolio; **first city-specific student accommodation wrap page; first-mover** |
+| `/subcontract-vinyl-installer-market-weighton/` | Subcontract Market Weighton YO43 — A1079 York–Beverley corridor; 9m west of Pocklington, 12m east of Beverley (HU17), 14m north of Driffield (YO25), 12m south of Howden (DN14); **first-mover** |
+
+_Last updated by automation run on 2026-09-24_
