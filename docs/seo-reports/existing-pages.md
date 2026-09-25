@@ -1010,3 +1010,13 @@ _Last updated by automation run on 2026-09-23_
 | `/subcontract-vinyl-installer-market-weighton/` | Subcontract Market Weighton YO43 — A1079 York–Beverley corridor; 9m west of Pocklington, 12m east of Beverley (HU17), 14m north of Driffield (YO25), 12m south of Howden (DN14); **first-mover** |
 
 _Last updated by automation run on 2026-09-24_
+
+## Run 70 additions (2026-09-25)
+| Slug | Title / Purpose |
+|---|---|
+| `/kitchen-wrapping-training-near-me/` | Training near-me national intent page — explains WRPX is in South Yorkshire, accessible UK-wide; travel times grid by region (Yorkshire, NW, East Midlands, West Midlands, NE, South/London); links to all 11 city training pages; daily commute vs stay-over guidance; **first-mover on UK national near-me training search intent** |
+| `/window-film/hotel-window-film-leicester/` | Hotel window film Leicester — city centre LE1; Cultural Quarter/New Walk Conservation Area boutique hotels; Birstall LE4 M1 J21a cluster; Narborough Road LE19 south-west corridor; King Power Stadium/Mattioli Woods Welford Road event demand; **eighth hotel film city page; completes Leicester hotel film gap** |
+| `/window-film/school-window-film-derby/` | School window film Derby — University of Derby DE1 (Kedleston Road/Markeaton Street); Derby College Wilmorton DE21/Broomfield DE22; DE1/DE21/DE22/DE23/DE24/DE3 city postcodes; Derbyshire MATs (Bemrose, Archway, White Peak, Pathfinder); **eighth school film city page; completes all 8 major cities** |
+| `/architectural-wrap-student-accommodation-leeds/` | Student accommodation vinyl wrap Leeds — University of Leeds LS2/LS6 (Bodington/Charles Morris/Devonshire/Henry Price halls); Leeds Beckett LS1/LS6 (Opal 1/Opal 2/Kirkstall Brewery); Leeds Arts University LS6; Leeds Trinity LS18; Unite/iQ/Student Roost/Empiric/Yugo PBSA portfolio; 30min from South Yorkshire; **second city for student accommodation wrap sub-vertical; first-mover for Leeds** |
+
+_Last updated by automation run on 2026-09-25_
