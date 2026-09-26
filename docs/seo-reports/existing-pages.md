@@ -1020,3 +1020,13 @@ _Last updated by automation run on 2026-09-24_
 | `/architectural-wrap-student-accommodation-leeds/` | Student accommodation vinyl wrap Leeds — University of Leeds LS2/LS6 (Bodington/Charles Morris/Devonshire/Henry Price halls); Leeds Beckett LS1/LS6 (Opal 1/Opal 2/Kirkstall Brewery); Leeds Arts University LS6; Leeds Trinity LS18; Unite/iQ/Student Roost/Empiric/Yugo PBSA portfolio; 30min from South Yorkshire; **second city for student accommodation wrap sub-vertical; first-mover for Leeds** |
 
 _Last updated by automation run on 2026-09-25_
+
+## Run 71 additions (2026-09-26)
+| Slug | Title / Purpose |
+|---|---|
+| `/kitchen-wrapping-training-liverpool/` | Training location page — Liverpool/Merseyside; seventeenth training cluster page; M62 east ~1hr20min from Liverpool city centre; L4/L5/L6/L7/L8/L15/L17/L18/L19 Victorian/Edwardian terrace stock; Wirral CH + Sefton + Knowsley extension market; **first-mover on Liverpool kitchen wrapping training search** |
+| `/architectural-wrap-student-accommodation-manchester/` | Student accommodation vinyl wrap Manchester — University of Manchester (40k students, Fallowfield M13/M14, Owens Park 2000+ beds, Oak House/Whitworth Park/Weston Hall); Manchester Met (37k students, All Saints M15/Birley M14); University of Salford M5/MediaCity; Unite/iQ/Student Roost/Liberty Living/Yugo/Empiric PBSA; 50–60min from South Yorkshire; **third city for student accommodation wrap sub-vertical; first-mover for Manchester** |
+| `/window-film/retail-window-film-sheffield/` | Retail window film Sheffield — Fargate S1, the Moor S1, Pinstone Street, Heart of the City II, Meadowhall S9 (280+ units, Oasis/Atrium/High Street/Arcade); Ecclesall Road S11; Woodseats S8, Hillsborough S6, Crystal Peaks S20; frosted privacy/solar control/DDA manifestation/branded/anti-glare/promotional film; **first city page in retail window film series; first-mover** |
+| `/architectural-wrap-care-homes-sheffield/` | Care home vinyl wrapping Sheffield — Sheffield postcode coverage S1–S12/S17–S20 + Rotherham/Barnsley/Doncaster/Chesterfield; bedroom wardrobe/bedside/nurses' station/lounge/corridor/dining surfaces; no fumes/no noise/same-day room reuse; RAMS documentation; CQC-registered home experience; **first city page in care homes wrap sub-vertical; first-mover** |
+
+_Last updated by automation run on 2026-09-26_
