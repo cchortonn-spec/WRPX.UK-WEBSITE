@@ -341,6 +341,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "architectural-wrap-student-accommodation-manchester",
     "window-film/retail-window-film-sheffield",
     "architectural-wrap-care-homes-sheffield",
+    "kitchen-wrapping-training-stoke-on-trent",
+    "architectural-wrap-student-accommodation-nottingham",
+    "window-film/retail-window-film-leeds",
+    "architectural-wrap-care-homes-leeds",
   ];
 
   const furnitureLocations = siteConfig.areas.map((city) =>
