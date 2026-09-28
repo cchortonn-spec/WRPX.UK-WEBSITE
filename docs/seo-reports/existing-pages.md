@@ -1030,3 +1030,23 @@ _Last updated by automation run on 2026-09-25_
 | `/architectural-wrap-care-homes-sheffield/` | Care home vinyl wrapping Sheffield — Sheffield postcode coverage S1–S12/S17–S20 + Rotherham/Barnsley/Doncaster/Chesterfield; bedroom wardrobe/bedside/nurses' station/lounge/corridor/dining surfaces; no fumes/no noise/same-day room reuse; RAMS documentation; CQC-registered home experience; **first city page in care homes wrap sub-vertical; first-mover** |
 
 _Last updated by automation run on 2026-09-26_
+
+## Run 72 additions (2026-09-27)
+| Slug | Title / Purpose |
+|---|---|
+| `/kitchen-wrapping-training-stoke-on-trent/` | Training location page — Stoke-on-Trent/Staffordshire; eighteenth training cluster page; A50 east ~1hr30min from Stoke via Uttoxeter/Derby/M1 J24; ST1–ST7 Potteries towns Victorian terrace stock; Newcastle-under-Lyme ST5/Stafford ST17/Stone ST15; **first-mover on Stoke kitchen wrapping training search** |
+| `/architectural-wrap-student-accommodation-nottingham/` | Student accommodation vinyl wrap Nottingham — NTU (32k students, City Campus NG1/NG2, Clifton NG11); University of Nottingham (35k students, University Park NG7, Jubilee NG8); Broadgate Park 2200+ beds NG7; Unite/iQ/Student Roost/Collegiate/Prestige/Empiric PBSA; 35–45min from South Yorkshire via M1; **fourth city for student accommodation wrap sub-vertical; first-mover for Nottingham** |
+| `/window-film/retail-window-film-leeds/` | Retail window film Leeds — Trinity Leeds 1.3M sqft/Victoria Gate/Merrion Centre LS2/White Rose LS11/Briggate LS1; frosted/solar control/DDA manifestation/branded/anti-glare; trading-hours install; **second retail window film city page** |
+| `/architectural-wrap-care-homes-leeds/` | Care home vinyl wrapping Leeds — all Leeds LS postcodes; Chapel Allerton LS7/LS8/Moortown LS17/Roundhay LS8/Armley LS12/Bramley LS13/Garforth LS25/Morley LS27; wardrobe/bedside/nurses' station/dining/lounge/corridor; RAMS documentation; same-day room use; **second care homes city page** |
+
+_Last updated by automation run on 2026-09-27_
+
+## Run 73 additions (2026-09-28)
+| Slug | Title / Purpose |
+|---|---|
+| `/kitchen-wrapping-training-bristol/` | Training location page — Bristol/South West England; nineteenth training cluster page; M4 east + M1 north ~2hrs from Bristol city centre; BS postcodes Victorian/Edwardian terrace stock (Clifton BS8, Redland BS6, Bedminster BS3, Southville BS3, Eastside BS5); Bath BA1/BA2 + Weston-super-Mare/Clevedon/Portishead extension market; strong renovation culture; undersupplied in online search; **first-mover on Bristol kitchen wrapping training search** |
+| `/architectural-wrap-student-accommodation-birmingham/` | Student accommodation vinyl wrap Birmingham — University of Birmingham (38k students, Edgbaston B15); Aston University (16k, B4); Birmingham City University (28k, B4/B5); UCB + Newman; Selly Oak/Bournbrook B29 dense PBSA zone; Unite/iQ/Student Roost/Collegiate/Empiric; 1hr20min from South Yorkshire via M1/M42; **fifth city for student accommodation wrap sub-vertical; first-mover for Birmingham** |
+| `/window-film/retail-window-film-nottingham/` | Retail window film Nottingham — Victoria Centre (100+ units, glazed atrium); Clumber Street NG1; Bridlesmith Gate premium independent retail; Lace Market NG1 creative quarter; Broadmarsh NG1 redevelopment area; Castle Marina/Riverside retail parks; NG1–NG10 postcodes; 35–45min from South Yorkshire; **third retail window film city page; first-mover for Nottingham** |
+| `/architectural-wrap-care-homes-nottingham/` | Care home vinyl wrapping Nottingham — Arnold NG5/Mapperley NG3/Carlton NG4 care home clusters; West Bridgford NG2; Beeston NG9/Clifton NG11/Hucknall NG15; wider Nottinghamshire (Newark/Mansfield/Retford/Worksop); bedroom wardrobe/bedside/nurses' station/dining/lounge/corridor; RAMS documentation; same-day room use; 35–45min from South Yorkshire; **third care homes city page; first-mover for Nottingham** |
+
+_Last updated by automation run on 2026-09-28_
