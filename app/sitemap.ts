@@ -357,6 +357,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "architectural-wrap-student-accommodation-coventry",
     "window-film/retail-window-film-birmingham",
     "architectural-wrap-care-homes-birmingham",
+    "kitchen-wrapping-training-glasgow",
+    "architectural-wrap-care-homes-coventry",
+    "window-film/retail-window-film-leicester",
+    "architectural-wrap-student-accommodation-derby",
   ];
 
   const furnitureLocations = siteConfig.areas.map((city) =>
