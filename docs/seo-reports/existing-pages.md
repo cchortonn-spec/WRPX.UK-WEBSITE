@@ -1060,3 +1060,23 @@ _Last updated by automation run on 2026-09-28_
 | `/architectural-wrap-care-homes-manchester/` | Care home vinyl wrapping Manchester — all M postcodes; south Manchester clusters (Didsbury M20, Withington M20, Chorlton M21, Whalley Range M16, Stretford M32, Sale M33, Altrincham WA14); Salford M28/M30/M38/Eccles M30/Worsley M28; Stockport SK1/SK2/SK4; Oldham OL1/OL8; Bury BL8/BL9; Rochdale OL11/OL16; Bolton BL1/BL3; Wigan WN1; bedroom wardrobe/bedside/nurses' station/dining/lounge/corridor; RAMS documentation; same-day room use; ~1hr from South Yorkshire via M1/M62; **fourth care homes city page; first-mover for Manchester** |
 
 _Last updated by automation run on 2026-09-29_
+
+## Run 75 additions (2026-09-30)
+| Slug | Title / Purpose |
+|---|---|
+| `/kitchen-wrapping-training-newcastle/` | Training location page — Newcastle upon Tyne/North East England; twenty-first training cluster page; A1(M) south ~1hr30min from Newcastle; NE1–NE40 postcodes; Tyne & Wear; Gateshead NE8/NE9; Sunderland SR1–SR6; Washington NE37/NE38; County Durham DH; Darlington DL1; **first-mover on Newcastle/North East kitchen wrapping training search** |
+| `/architectural-wrap-student-accommodation-coventry/` | Student accommodation vinyl wrap Coventry — Coventry University (27k students, CV1 city centre); University of Warwick (25k students, CV4 Canley/Westwood); Earlsdon CV5; Chapelfields CV5; Unite/iQ/Fresh/Student Roost/Vita/Collegiate; ~1hr via M1/M6; **seventh city; first-mover for Coventry PBSA wrap** |
+| `/window-film/retail-window-film-birmingham/` | Retail window film Birmingham — Bullring B5/Grand Central B2/Mailbox B1/Great Western Arcade B2/Selfridges B5/Merry Hill DY5/Fort Shopping Park B24/Star City B7/Touchwood Solihull B91/Sutton Coldfield B72/Kings Heath B14/Harborne B17; frosted/solar control/DDA manifestation/branded; trading-hours install; **fifth retail window film city page; first-mover for Birmingham** |
+| `/architectural-wrap-care-homes-birmingham/` | Care home vinyl wrapping Birmingham — Edgbaston B15/B16; Selly Oak B29 near QE hospital; Moseley B13; Kings Heath B14; Hall Green B28; Shirley B90; Solihull B91; Harborne B17; Northfield B31; Sutton Coldfield B72–B75; Erdington B23/B24; Handsworth B21; Sandwell/Dudley DY/Wolverhampton WV/Walsall WS; ~1hr from South Yorkshire via M1/M6; **fifth care homes city page; first-mover for Birmingham** |
+
+_Last updated by automation run on 2026-09-30_
+
+## Run 76 additions (2026-10-01)
+| Slug | Title / Purpose |
+|---|---|
+| `/kitchen-wrapping-training-glasgow/` | Training location page — Glasgow/Central Belt Scotland; twenty-second training cluster page; M74 south + M6 + M1 ~3hr30min from Glasgow; G1–G53 postcodes; Greater Glasgow 1.8m population; Paisley PA1/PA2; East Kilbride G74/G75; Rutherglen G73; Hamilton ML3; Motherwell ML1; Lanarkshire; Victorian tenement stock (West End G11/G12, Partick, Dennistoun G31, southside G41/G42/G43); suburban owner-occupied (Bearsden G61, Milngavie G62, Newton Mearns G77, Giffnock G46); Scotland most underserved UK region for kitchen wrapping training online; stay-over format recommended; **first Scotland training page; first-mover on Glasgow kitchen wrapping training search** |
+| `/architectural-wrap-care-homes-coventry/` | Care home vinyl wrapping Coventry — all CV postcodes; Earlsdon CV5/Chapelfields CV5 established care home clusters; Cheylesmore CV3; Stoke CV2; UHCW hospital anchor at Walsgrave CV2; Kenilworth CV8/Leamington Spa CV31/CV32/Warwick CV34/Rugby CV21/CV22; bedroom wardrobe/bedside/nurses' station/dining/lounge/corridor; RAMS documentation; same-day room use; ~1hr from South Yorkshire via M1/M6; **sixth care homes city page; first-mover for Coventry** |
+| `/window-film/retail-window-film-leicester/` | Retail window film Leicester — Highcross LE1 (120+ stores)/Haymarket LE1/Gallowtree Gate LE1/Granby Street LE1/Clock Tower LE1/Fosse Park LE3/Beaumont Shopping Centre LE4/Meridian Leisure Park LE19/Everards Meadows LE19/Oadby LE2/Wigston LE18/Hinckley LE10/Loughborough LE11; frosted/solar control/DDA manifestation/branded; trading-hours install; ~1hr15min from South Yorkshire via M1; **sixth retail window film city page; first-mover for Leicester** |
+| `/architectural-wrap-student-accommodation-derby/` | Student accommodation vinyl wrap Derby — University of Derby (20k students, Markeaton Street campus DE22, city centre DE1, Kedleston Road DE22); Cathedral Quarter DE1 PBSA zone; Student Roost/Unite; DE1/DE22/DE23/DE24 postcodes; <45min from South Yorkshire via A38; **eighth city; first-mover for Derby PBSA wrap** |
+
+_Last updated by automation run on 2026-10-01_
