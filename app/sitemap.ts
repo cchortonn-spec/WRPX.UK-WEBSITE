@@ -386,6 +386,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "architectural-wrap-student-accommodation-cardiff",
     "architectural-wrap-care-homes-glasgow",
     "window-film/retail-window-film-glasgow",
+    "window-film/gym-window-film",
+    "architectural-wrap-care-homes-edinburgh",
+    "window-film/retail-window-film-edinburgh",
+    "architectural-wrap-student-accommodation-southampton",
   ];
 
   const furnitureLocations = siteConfig.areas.map((city) =>
