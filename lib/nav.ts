@@ -11,6 +11,7 @@ export const nav = {
     { label: "Appliance Wrapping", href: `${base}/appliance-wrapping/` },
     { label: "Kitchen Door Wrapping", href: `${base}/kitchen-door-wrapping/` },
     { label: "Kitchen Wrapping Quote", href: `${base}/kitchen-wrapping-quote/` },
+    { label: "Wrap Visualiser", href: `${base}/wrap-visualiser/` },
     { label: "Cost Guide", href: `${base}/kitchen-wrapping-cost/` },
     { label: "Worktop Wrapping", href: `${base}/worktop-wrapping/` },
     { label: "Bathroom Cabinet Wrapping", href: `${base}/bathroom-cabinet-wrapping/` },

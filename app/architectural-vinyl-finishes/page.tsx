@@ -234,7 +234,12 @@ export default function ArchitecturalVinylFinishesPage() {
             </h2>
             <p className="mt-3 leading-relaxed text-muted">
               If you are choosing between woodgrain, matt, stone or patterned architectural
-              vinyl, this page gives you a fast shortlist route. Once you have a preferred
+              vinyl, this page gives you a fast shortlist route. You can also place a
+              finish onto a photo of your own kitchen with the{" "}
+              <Link href="/wrap-visualiser/" className="text-accent hover:underline">
+                wrap visualiser
+              </Link>
+              . Once you have a preferred
               look, request a{" "}
               <Link href="/kitchen-wrapping-quote/" className="text-accent hover:underline">
                 kitchen wrapping quote

@@ -9,6 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const core = [
     "",
     "kitchen-wrapping",
+    "wrap-visualiser",
     "kitchen-wrapping-quote",
     "kitchen-wrapping-cost",
     "kitchen-door-wrapping",

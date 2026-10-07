@@ -119,6 +119,10 @@ export default function KitchenWrappingPage() {
               <Link href="/blog/vinyl-wrap-kitchen-finishes/" className="text-accent hover:underline">
                 vinyl wrap kitchen finishes guide
               </Link>
+              . To picture a finish on your own kitchen first, use the{" "}
+              <Link href="/wrap-visualiser/" className="text-accent hover:underline">
+                wrap visualiser
+              </Link>
               .
             </p>
           </div>
