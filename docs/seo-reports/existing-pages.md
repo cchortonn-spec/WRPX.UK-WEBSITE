@@ -897,3 +897,216 @@ _Last updated by automation run on 2026-09-10_
 | `/blog/window-film-for-care-homes-specification-guide/` | Care home window film spec guide — privacy film for bedrooms, solar control for day rooms, Part M manifestation; CQC compliance angle; 2,500+ words |
 
 _Last updated by automation run on 2026-09-11_
+
+## Run 57 additions (2026-09-12)
+| Slug | Title / Purpose |
+|---|---|
+| `/window-film/school-window-film-coventry/` | School window film Coventry — University of Warwick CV4, Coventry University CV1; Coventry and Warwickshire MATs; sixth school film city page |
+| `/window-film/hotel-window-film-coventry/` | Hotel window film Coventry — CV1 city centre, Ricoh Arena CV6, University of Warwick CV4; first hotel film city page for Coventry |
+| `/subcontract-vinyl-installer-helmsley/` | Subcontract Helmsley YO62 — North York Moors gateway; A170 corridor; 15m from Thirsk; tourism and rural estate market |
+| `/subcontract-vinyl-installer-hawes/` | Subcontract Hawes DL8 — Wensleydale; A684; 15m from Leyburn; Dales rural and tourism market |
+| `/blog/architectural-wrap-for-care-homes-specification-guide/` | Care home architectural wrap spec guide — kitchen units, corridor doors, common room furniture, resident bedroom fittings |
+
+## Run 58 additions (2026-09-13)
+| Slug | Title / Purpose |
+|---|---|
+| `/window-film/hotel-window-film-sheffield/` | Hotel window film Sheffield — S1 city centre, Kelham Island S3, business hotels; first hotel film Sheffield page |
+| `/window-film/hotel-window-film-leeds/` | Hotel window film Leeds — LS1 city centre, Leeds Bradford airport corridor; second hotel film city page |
+| `/subcontract-vinyl-installer-pickering/` | Subcontract Pickering YO18 — North York Moors; A170 Vale of Pickering; gateway to Fylingdales and coast |
+| `/subcontract-vinyl-installer-malton/` | Subcontract Malton YO17 — North Yorkshire market town; A64 York–Scarborough corridor; Ryedale district |
+| `/blog/hotel-architectural-wrap-and-window-film-specifying-both/` | Blog: specifying vinyl wrap and window film together on hotel refurb projects |
+
+## Run 59 additions (2026-09-14)
+| Slug | Title / Purpose |
+|---|---|
+| `/kitchen-wrapping-training-sheffield/` | Training location page — Sheffield/South Yorkshire; first training city page; A1(M)/M1 access; local market context |
+| `/window-film/hotel-window-film-nottingham/` | Hotel window film Nottingham — Lace Market NG1, city centre NG1, Nottingham Trent NG1, University of Nottingham nearby; third hotel film city page |
+| `/window-film/hotel-window-film-manchester/` | Hotel window film Manchester — Northern Quarter M4, Deansgate M3, NOMA M60; fourth hotel film city page |
+| `/subcontract-vinyl-installer-scarborough/` | Subcontract Scarborough YO11 — North Yorkshire coast; A64 corridor; tourist economy; East Riding/NYM gateway |
+| `/subcontract-vinyl-installer-whitby/` | Subcontract Whitby YO21 — North Yorkshire coast; A171; tourism economy; 15m from Scarborough |
+
+## Run 60 additions (2026-09-15)
+| Slug | Title / Purpose |
+|---|---|
+| `/kitchen-wrapping-training-leeds/` | Training location page — Leeds/West Yorkshire; second training city page; M621→M1 30min; large suburban housing market |
+| `/window-film/hotel-window-film-derby/` | Hotel window film Derby — Pride Park DE24, city centre DE1, A52/A38 business hotel corridor; fifth hotel film city page |
+| `/subcontract-vinyl-installer-bridlington/` | Subcontract Bridlington YO15 — East Yorkshire coast; A614 from Driffield; 15m from Driffield |
+| `/blog/restaurant-window-film-and-architectural-wrap-specifying-both/` | Blog: specifying window film and vinyl wrap together on restaurant projects |
+
+## Run 61 additions (2026-09-16)
+| Slug | Title / Purpose |
+|---|---|
+| `/kitchen-wrapping-training-manchester/` | Training location page — Manchester/North West; third training city page; M60→M1 ~1hr; Greater Manchester M1-M35 housing stock; **first-mover on Manchester kitchen wrapping training search** |
+| `/window-film/restaurant-window-film-sheffield/` | Restaurant window film Sheffield — **first restaurant film city page**; S1/Kelham Island S3/Ecclesall Road S11/Sharrow Vale; frosted privacy + solar control + branding + manifestation; overnight scheduling |
+| `/subcontract-vinyl-installer-driffield/` | Subcontract Driffield YO25 — East Riding inland; A614 M62→Driffield corridor; 15m to Bridlington, 12m to Beverley; agricultural/Wolds market |
+| `/blog/solar-control-film-for-listed-buildings-and-conservation-areas/` | Blog: solar film for listed buildings and conservation areas — VLT/reflectance/neutrality spec; planning/listed building consent; Georgian/Victorian/mill buildings |
+
+## Run 62 additions (2026-09-17)
+| Slug | Title / Purpose |
+|---|---|
+| `/kitchen-wrapping-training-birmingham/` | Training location page — Birmingham/West Midlands; fourth training city page; M6→M1 ~1hr15min; large housing stock B1–B45 + Solihull + Black Country + Coventry; **first-mover on Birmingham kitchen wrapping training search** |
+| `/window-film/restaurant-window-film-leeds/` | Restaurant window film Leeds — **second restaurant film city page**; LS1 Call Lane/Greek Street/Headrow, The Calls LS2, Chapel Allerton LS7, Headingley LS6; frosted privacy + solar control + branding + manifestation; overnight scheduling |
+| `/subcontract-vinyl-installer-beverley/` | Subcontract Beverley HU17 — East Yorkshire market town; A164 from M62; 12m from Driffield, 9m from Hull; premium town centre commercial market; **first-mover** |
+| `/blog/vinyl-wrapping-for-school-canteens-and-education-serveries/` | Blog: school canteen and education servery vinyl wrap spec guide — food-safe film spec, edge sealing, academic calendar programming, multi-site academy trust rollout; genuinely distinct from existing education blog |
+
+## Run 63 additions (2026-09-18)
+| Slug | Title / Purpose |
+|---|---|
+| `/kitchen-wrapping-training-nottingham/` | Training location page — Nottingham/East Midlands; fifth training city page; M1 J26→Nottingham ~30min; large housing stock NG1–NG16 + Gedling/Rushcliffe; **first-mover on Nottingham kitchen wrapping training search** |
+| `/window-film/restaurant-window-film-nottingham/` | Restaurant window film Nottingham — **third restaurant film city page**; Lace Market NG1, Hockley, Sneinton Market, West Bridgford NG2; frosted privacy + solar control + branding + manifestation; overnight scheduling |
+| `/subcontract-vinyl-installer-selby/` | Subcontract Selby YO8 — Lower Ouse Valley; A63/A1(M) corridor; 13m from York; market town; **first-mover** |
+| `/blog/vinyl-wrapping-for-hotel-bathrooms-and-wet-areas/` | Blog: cast vs calendered film spec for hotel wet areas; edge sealing mandatory; substrate testing; **first-mover** |
+
+## Run 64 additions (2026-09-19)
+| Slug | Title / Purpose |
+|---|---|
+| `/kitchen-wrapping-training-coventry/` | Training location page — Coventry/West Midlands; sixth training city page; M6→M1 ~90min; Earlsdon CV5/Radford CV6/Friargate CV1; Kenilworth/Leamington/Rugby/Nuneaton catchment; **first-mover on Coventry kitchen wrapping training search** |
+| `/window-film/restaurant-window-film-manchester/` | Restaurant window film Manchester — **fourth restaurant film city page**; Northern Quarter M4, Ancoats M4, Deansgate M3, Spinningfields M3, Didsbury M20, Chorlton M21; **first-mover on Manchester restaurant window film** |
+| `/architectural-wrap-offices-coventry/` | Office vinyl wrapping Coventry — Friargate CV1, Belgrade Quarter CV1, Binley Business Park CV3, M69/M1 approach; white-label for fit-out contractors; **completes Offices × City matrix for core cities (pre-Derby)** |
+| `/subcontract-vinyl-installer-pocklington/` | Subcontract Pocklington YO42 — A1079 York–Beverley midpoint; Market Weighton YO43 nearby; agricultural/rural estate niche; **first-mover** |
+
+## Run 65 additions (2026-09-20)
+| Slug | Title / Purpose |
+|---|---|
+| `/kitchen-wrapping-training-bradford/` | Training location page — Bradford/West Yorkshire; seventh training city page; M606→M1 only 30–35min (closest major city to training base); 540,000+ population; Manningham BD8/Great Horton BD7/Heaton BD9 Victorian stock; city centre regeneration; **first-mover on Bradford kitchen wrapping training search** |
+| `/window-film/restaurant-window-film-birmingham/` | Restaurant window film Birmingham — **fifth restaurant film city page (completes major cities)**; Digbeth B5, Jewellery Quarter B1, Broad Street B1, Brindleyplace B1, Moseley B13, Harborne B17, Edgbaston B15; **first-mover on Birmingham restaurant window film** |
+| `/architectural-wrap-offices-derby/` | Office vinyl wrapping Derby — DE1 city centre, Friar Gate DE1 (Georgian offices), Pride Park DE24 (Rolls-Royce/Toyota/Alstom), Raynesway DE21, Spondon DE21; **COMPLETES Offices × City matrix for all 8 tracked cities (Sheffield/Leeds/Nottingham/Manchester/Leicester/Birmingham/Coventry/Derby)**; **first-mover** |
+| `/subcontract-vinyl-installer-goole/` | Subcontract Goole DN14 — M62 J36; Port of Goole (UK's largest inland port) logistics/warehouse graphics niche; Selby 13m west, Howden 9m east; 40–50min from South Yorkshire; **first-mover** |
+
+## Run 66 additions (2026-09-21)
+| Slug | Title / Purpose |
+|---|---|
+| `/kitchen-wrapping-training-derby/` | Training location page — Derby/East Midlands; eighth training city page; A38→M1 ~45min; 260,000+ city population + wider DE/NG10 catchment 350,000+; Normanton DE23/Alvaston DE24/Spondon DE21 Victorian terraces; Rolls-Royce/Toyota/Alstom dual-income demographic; **first-mover on Derby kitchen wrapping training search** |
+| `/window-film/restaurant-window-film-derby/` | Restaurant window film Derby — **sixth restaurant film city page**; Cathedral Quarter DE1, Sadler Gate, Iron Gate, Friar Gate DE1, Normanton Road DE23, Pride Park DE24 corporate dining; frosted privacy + solar control + branding + manifestation; **first-mover on Derby restaurant window film** |
+| `/architectural-wrap-restaurants-derby/` | Restaurant interior vinyl wrapping Derby — counters, bar fronts, booths, kitchen pass surrounds and fitted furniture; Cathedral Quarter DE1, Normanton Road DE23, Pride Park DE24; **first-mover on Derby restaurant wrap** |
+| `/subcontract-vinyl-installer-howden/` | Subcontract Howden DN14 — A614 midpoint between Goole (9m west) and Beverley (20m east); Howden Enterprise Park; East Riding corridor staging; **first-mover** |
+
+_Last updated by automation run on 2026-09-21_
+
+## Run 67 additions (2026-09-22)
+| Slug | Title / Purpose |
+|---|---|
+| `/kitchen-wrapping-training-leicester/` | Training location page — Leicester/East Midlands; ninth training city page; M1 J21→Leicester ~55min; Golden Mile LE4 Victorian terraces; Belgrave/North Evington LE5; Clarendon Park LE2; University of Leicester/DMU/Next HQ; **first-mover** |
+| `/window-film/restaurant-window-film-leicester/` | Restaurant window film Leicester — **seventh restaurant film city page**; Belgrave Road LE4 Golden Mile; Cultural Quarter LE1; Narborough Road LE3; Clarendon Park LE2 Queens Road; **first-mover** |
+| `/architectural-wrap-education-derby/` | Education vinyl wrapping Derby — University of Derby DE1 Kedleston Road/Markeaton Street; Derby College Wilmorton DE21/Broomfield DE22; Derby MATs; holiday scheduling; **first-mover for Derby education** |
+| `/subcontract-vinyl-installer-tadcaster/` | Subcontract Tadcaster LS24 — A63 Selby east/Leeds west; A64 York NE; A1(M) J43; Molson Coors + Sam Smith's; Tadcaster Business Park; **first-mover** |
+
+## Run 68 additions (2026-09-23)
+| Slug | Title / Purpose |
+|---|---|
+| `/kitchen-wrapping-training-wolverhampton/` | Training location page — Wolverhampton/Black Country; tenth training city page; M54→M6→M1 ~1hr20min; WV1/WV3/WV6/WV10/WV11 + Black Country (Dudley DY1, Walsall WS1, Willenhall WV12); Wolverhampton University; 700,000+ combined catchment; **first-mover on Wolverhampton kitchen wrapping training search** |
+| `/window-film/restaurant-window-film-coventry/` | Restaurant window film Coventry — **eighth restaurant film city page (completes major cities)**; Earlsdon CV5 Albany Road; Cathedral Quarter CV1; Foleshill Road CV6; Belgrade Quarter CV1; Spon End CV1; **first-mover on Coventry restaurant window film** |
+| `/architectural-wrap-education-leicester/` | Education vinyl wrapping Leicester — University of Leicester LE1, De Montfort University LE1/LE2, Leicester College City/St Margaret's/Freemen's Park; Gateway College LE5; Leicestershire MATs (Discovery Schools, Avanti, STAR, Lionheart, Diocese of Leicester); **eighth education city page; first-mover** |
+| `/subcontract-vinyl-installer-sherburn-in-elmet/` | Subcontract Sherburn-in-Elmet LS25 — A63 Leeds–Hull corridor; Sherburn Enterprise Park LS25; A1(M) J42 via A162; 8m from Tadcaster (west), 10m from Selby (east), 10m from Wetherby (NW); Garforth LS25 + Kippax LS25 within zone; **first-mover** |
+
+_Last updated by automation run on 2026-09-23_
+
+## Run 69 additions (2026-09-24)
+| Slug | Title / Purpose |
+|---|---|
+| `/kitchen-wrapping-training-london/` | Training location page — London/Greater London; eleventh training city page; M1 south ~2hrs30min or direct train St Pancras→Sheffield ~2hrs05min; 8M+ population; Victorian/Edwardian terrace stock across N/E/SE/SW/W postcodes; **first-mover on London kitchen wrapping training search** |
+| `/window-film/school-window-film-leicester/` | School window film Leicester — University of Leicester LE1, De Montfort University LE1/LE2, Leicester College City/St Margaret's/Freemen's Park, Gateway College LE5; Leicestershire MATs (Discovery Schools, Avanti, STAR, Lionheart, Diocese); **seventh school film city page; first-mover** |
+| `/architectural-wrap-student-accommodation-sheffield/` | Student accommodation vinyl wrap Sheffield — University of Sheffield (Endcliffe Village S11, Ranmoor Village S10, Tapton Hall S10, Sorby House S3), Sheffield Hallam Collegiate Halls S10; Unite/iQ/Student Roost/Empiric/Yugo PBSA portfolio; **first city-specific student accommodation wrap page; first-mover** |
+| `/subcontract-vinyl-installer-market-weighton/` | Subcontract Market Weighton YO43 — A1079 York–Beverley corridor; 9m west of Pocklington, 12m east of Beverley (HU17), 14m north of Driffield (YO25), 12m south of Howden (DN14); **first-mover** |
+
+_Last updated by automation run on 2026-09-24_
+
+## Run 70 additions (2026-09-25)
+| Slug | Title / Purpose |
+|---|---|
+| `/kitchen-wrapping-training-near-me/` | Training near-me national intent page — explains WRPX is in South Yorkshire, accessible UK-wide; travel times grid by region (Yorkshire, NW, East Midlands, West Midlands, NE, South/London); links to all 11 city training pages; daily commute vs stay-over guidance; **first-mover on UK national near-me training search intent** |
+| `/window-film/hotel-window-film-leicester/` | Hotel window film Leicester — city centre LE1; Cultural Quarter/New Walk Conservation Area boutique hotels; Birstall LE4 M1 J21a cluster; Narborough Road LE19 south-west corridor; King Power Stadium/Mattioli Woods Welford Road event demand; **eighth hotel film city page; completes Leicester hotel film gap** |
+| `/window-film/school-window-film-derby/` | School window film Derby — University of Derby DE1 (Kedleston Road/Markeaton Street); Derby College Wilmorton DE21/Broomfield DE22; DE1/DE21/DE22/DE23/DE24/DE3 city postcodes; Derbyshire MATs (Bemrose, Archway, White Peak, Pathfinder); **eighth school film city page; completes all 8 major cities** |
+| `/architectural-wrap-student-accommodation-leeds/` | Student accommodation vinyl wrap Leeds — University of Leeds LS2/LS6 (Bodington/Charles Morris/Devonshire/Henry Price halls); Leeds Beckett LS1/LS6 (Opal 1/Opal 2/Kirkstall Brewery); Leeds Arts University LS6; Leeds Trinity LS18; Unite/iQ/Student Roost/Empiric/Yugo PBSA portfolio; 30min from South Yorkshire; **second city for student accommodation wrap sub-vertical; first-mover for Leeds** |
+
+_Last updated by automation run on 2026-09-25_
+
+## Run 71 additions (2026-09-26)
+| Slug | Title / Purpose |
+|---|---|
+| `/kitchen-wrapping-training-liverpool/` | Training location page — Liverpool/Merseyside; seventeenth training cluster page; M62 east ~1hr20min from Liverpool city centre; L4/L5/L6/L7/L8/L15/L17/L18/L19 Victorian/Edwardian terrace stock; Wirral CH + Sefton + Knowsley extension market; **first-mover on Liverpool kitchen wrapping training search** |
+| `/architectural-wrap-student-accommodation-manchester/` | Student accommodation vinyl wrap Manchester — University of Manchester (40k students, Fallowfield M13/M14, Owens Park 2000+ beds, Oak House/Whitworth Park/Weston Hall); Manchester Met (37k students, All Saints M15/Birley M14); University of Salford M5/MediaCity; Unite/iQ/Student Roost/Liberty Living/Yugo/Empiric PBSA; 50–60min from South Yorkshire; **third city for student accommodation wrap sub-vertical; first-mover for Manchester** |
+| `/window-film/retail-window-film-sheffield/` | Retail window film Sheffield — Fargate S1, the Moor S1, Pinstone Street, Heart of the City II, Meadowhall S9 (280+ units, Oasis/Atrium/High Street/Arcade); Ecclesall Road S11; Woodseats S8, Hillsborough S6, Crystal Peaks S20; frosted privacy/solar control/DDA manifestation/branded/anti-glare/promotional film; **first city page in retail window film series; first-mover** |
+| `/architectural-wrap-care-homes-sheffield/` | Care home vinyl wrapping Sheffield — Sheffield postcode coverage S1–S12/S17–S20 + Rotherham/Barnsley/Doncaster/Chesterfield; bedroom wardrobe/bedside/nurses' station/lounge/corridor/dining surfaces; no fumes/no noise/same-day room reuse; RAMS documentation; CQC-registered home experience; **first city page in care homes wrap sub-vertical; first-mover** |
+
+_Last updated by automation run on 2026-09-26_
+
+## Run 72 additions (2026-09-27)
+| Slug | Title / Purpose |
+|---|---|
+| `/kitchen-wrapping-training-stoke-on-trent/` | Training location page — Stoke-on-Trent/Staffordshire; eighteenth training cluster page; A50 east ~1hr30min from Stoke via Uttoxeter/Derby/M1 J24; ST1–ST7 Potteries towns Victorian terrace stock; Newcastle-under-Lyme ST5/Stafford ST17/Stone ST15; **first-mover on Stoke kitchen wrapping training search** |
+| `/architectural-wrap-student-accommodation-nottingham/` | Student accommodation vinyl wrap Nottingham — NTU (32k students, City Campus NG1/NG2, Clifton NG11); University of Nottingham (35k students, University Park NG7, Jubilee NG8); Broadgate Park 2200+ beds NG7; Unite/iQ/Student Roost/Collegiate/Prestige/Empiric PBSA; 35–45min from South Yorkshire via M1; **fourth city for student accommodation wrap sub-vertical; first-mover for Nottingham** |
+| `/window-film/retail-window-film-leeds/` | Retail window film Leeds — Trinity Leeds 1.3M sqft/Victoria Gate/Merrion Centre LS2/White Rose LS11/Briggate LS1; frosted/solar control/DDA manifestation/branded/anti-glare; trading-hours install; **second retail window film city page** |
+| `/architectural-wrap-care-homes-leeds/` | Care home vinyl wrapping Leeds — all Leeds LS postcodes; Chapel Allerton LS7/LS8/Moortown LS17/Roundhay LS8/Armley LS12/Bramley LS13/Garforth LS25/Morley LS27; wardrobe/bedside/nurses' station/dining/lounge/corridor; RAMS documentation; same-day room use; **second care homes city page** |
+
+_Last updated by automation run on 2026-09-27_
+
+## Run 73 additions (2026-09-28)
+| Slug | Title / Purpose |
+|---|---|
+| `/kitchen-wrapping-training-bristol/` | Training location page — Bristol/South West England; nineteenth training cluster page; M4 east + M1 north ~2hrs from Bristol city centre; BS postcodes Victorian/Edwardian terrace stock (Clifton BS8, Redland BS6, Bedminster BS3, Southville BS3, Eastside BS5); Bath BA1/BA2 + Weston-super-Mare/Clevedon/Portishead extension market; strong renovation culture; undersupplied in online search; **first-mover on Bristol kitchen wrapping training search** |
+| `/architectural-wrap-student-accommodation-birmingham/` | Student accommodation vinyl wrap Birmingham — University of Birmingham (38k students, Edgbaston B15); Aston University (16k, B4); Birmingham City University (28k, B4/B5); UCB + Newman; Selly Oak/Bournbrook B29 dense PBSA zone; Unite/iQ/Student Roost/Collegiate/Empiric; 1hr20min from South Yorkshire via M1/M42; **fifth city for student accommodation wrap sub-vertical; first-mover for Birmingham** |
+| `/window-film/retail-window-film-nottingham/` | Retail window film Nottingham — Victoria Centre (100+ units, glazed atrium); Clumber Street NG1; Bridlesmith Gate premium independent retail; Lace Market NG1 creative quarter; Broadmarsh NG1 redevelopment area; Castle Marina/Riverside retail parks; NG1–NG10 postcodes; 35–45min from South Yorkshire; **third retail window film city page; first-mover for Nottingham** |
+| `/architectural-wrap-care-homes-nottingham/` | Care home vinyl wrapping Nottingham — Arnold NG5/Mapperley NG3/Carlton NG4 care home clusters; West Bridgford NG2; Beeston NG9/Clifton NG11/Hucknall NG15; wider Nottinghamshire (Newark/Mansfield/Retford/Worksop); bedroom wardrobe/bedside/nurses' station/dining/lounge/corridor; RAMS documentation; same-day room use; 35–45min from South Yorkshire; **third care homes city page; first-mover for Nottingham** |
+
+_Last updated by automation run on 2026-09-28_
+
+## Run 74 additions (2026-09-29)
+| Slug | Title / Purpose |
+|---|---|
+| `/kitchen-wrapping-training-northampton/` | Training location page — Northampton/Northamptonshire; twentieth training cluster page; M1 north ~1hr15min from junction 15A/16; NN1–NN18 postcodes; post-war New Town housing estates (Rectory Farm NN3, Semilong NN2, Goldings NN3, Abington NN3, Billing NN3); newer owner-occupied estates (Upton NN5, Kings Heath NN5, Collingtree Park NN4); Kettering/Wellingborough/Daventry/Towcester/Corby extension market; **first-mover on Northampton kitchen wrapping training search** |
+| `/architectural-wrap-student-accommodation-leicester/` | Student accommodation vinyl wrap Leicester — University of Leicester (25k students, LE1/LE2 campus, compact city-centre location); De Montfort University (32k students, LE1/LE2, Newarke area); Loughborough University (18k students, LE11, Burleigh Road/Ashby Road PBSA zone); Unite/iQ/Fresh Student Living/Student Roost/Vita Student/Collegiate; ~1hr from South Yorkshire via M1/M69; **sixth city for student accommodation wrap sub-vertical; first-mover for Leicester** |
+| `/window-film/retail-window-film-manchester/` | Retail window film Manchester — Manchester Arndale M4 (200+ stores); Trafford Centre M17 (200+ stores, 1.9m sqft, Peel Dome/Orient sections); Market Street M1/M4 nationals; King Street M2 premium/luxury; Spinningfields M3; Deansgate M3; Northern Quarter M4 independents; Manchester Fort M9 (Cheetham Hill retail park); Cheetham Hill M8; The Lowry Outlet M50/Salford Quays; Stockport Merseyway SK1; The Rock Bury BL9; The Market Place Bolton BL1; Grand Arcade Wigan WN1; Oldham OL1; **fourth retail window film city page; first-mover for Manchester** |
+| `/architectural-wrap-care-homes-manchester/` | Care home vinyl wrapping Manchester — all M postcodes; south Manchester clusters (Didsbury M20, Withington M20, Chorlton M21, Whalley Range M16, Stretford M32, Sale M33, Altrincham WA14); Salford M28/M30/M38/Eccles M30/Worsley M28; Stockport SK1/SK2/SK4; Oldham OL1/OL8; Bury BL8/BL9; Rochdale OL11/OL16; Bolton BL1/BL3; Wigan WN1; bedroom wardrobe/bedside/nurses' station/dining/lounge/corridor; RAMS documentation; same-day room use; ~1hr from South Yorkshire via M1/M62; **fourth care homes city page; first-mover for Manchester** |
+
+_Last updated by automation run on 2026-09-29_
+
+## Run 75 additions (2026-09-30)
+| Slug | Title / Purpose |
+|---|---|
+| `/kitchen-wrapping-training-newcastle/` | Training location page — Newcastle upon Tyne/North East England; twenty-first training cluster page; A1(M) south ~1hr30min from Newcastle; NE1–NE40 postcodes; Tyne & Wear; Gateshead NE8/NE9; Sunderland SR1–SR6; Washington NE37/NE38; County Durham DH; Darlington DL1; **first-mover on Newcastle/North East kitchen wrapping training search** |
+| `/architectural-wrap-student-accommodation-coventry/` | Student accommodation vinyl wrap Coventry — Coventry University (27k students, CV1 city centre); University of Warwick (25k students, CV4 Canley/Westwood); Earlsdon CV5; Chapelfields CV5; Unite/iQ/Fresh/Student Roost/Vita/Collegiate; ~1hr via M1/M6; **seventh city; first-mover for Coventry PBSA wrap** |
+| `/window-film/retail-window-film-birmingham/` | Retail window film Birmingham — Bullring B5/Grand Central B2/Mailbox B1/Great Western Arcade B2/Selfridges B5/Merry Hill DY5/Fort Shopping Park B24/Star City B7/Touchwood Solihull B91/Sutton Coldfield B72/Kings Heath B14/Harborne B17; frosted/solar control/DDA manifestation/branded; trading-hours install; **fifth retail window film city page; first-mover for Birmingham** |
+| `/architectural-wrap-care-homes-birmingham/` | Care home vinyl wrapping Birmingham — Edgbaston B15/B16; Selly Oak B29 near QE hospital; Moseley B13; Kings Heath B14; Hall Green B28; Shirley B90; Solihull B91; Harborne B17; Northfield B31; Sutton Coldfield B72–B75; Erdington B23/B24; Handsworth B21; Sandwell/Dudley DY/Wolverhampton WV/Walsall WS; ~1hr from South Yorkshire via M1/M6; **fifth care homes city page; first-mover for Birmingham** |
+
+_Last updated by automation run on 2026-09-30_
+
+## Run 76 additions (2026-10-01)
+| Slug | Title / Purpose |
+|---|---|
+| `/kitchen-wrapping-training-glasgow/` | Training location page — Glasgow/Central Belt Scotland; twenty-second training cluster page; M74 south + M6 + M1 ~3hr30min from Glasgow; G1–G53 postcodes; Greater Glasgow 1.8m population; Paisley PA1/PA2; East Kilbride G74/G75; Rutherglen G73; Hamilton ML3; Motherwell ML1; Lanarkshire; Victorian tenement stock (West End G11/G12, Partick, Dennistoun G31, southside G41/G42/G43); suburban owner-occupied (Bearsden G61, Milngavie G62, Newton Mearns G77, Giffnock G46); Scotland most underserved UK region for kitchen wrapping training online; stay-over format recommended; **first Scotland training page; first-mover on Glasgow kitchen wrapping training search** |
+| `/architectural-wrap-care-homes-coventry/` | Care home vinyl wrapping Coventry — all CV postcodes; Earlsdon CV5/Chapelfields CV5 established care home clusters; Cheylesmore CV3; Stoke CV2; UHCW hospital anchor at Walsgrave CV2; Kenilworth CV8/Leamington Spa CV31/CV32/Warwick CV34/Rugby CV21/CV22; bedroom wardrobe/bedside/nurses' station/dining/lounge/corridor; RAMS documentation; same-day room use; ~1hr from South Yorkshire via M1/M6; **sixth care homes city page; first-mover for Coventry** |
+| `/window-film/retail-window-film-leicester/` | Retail window film Leicester — Highcross LE1 (120+ stores)/Haymarket LE1/Gallowtree Gate LE1/Granby Street LE1/Clock Tower LE1/Fosse Park LE3/Beaumont Shopping Centre LE4/Meridian Leisure Park LE19/Everards Meadows LE19/Oadby LE2/Wigston LE18/Hinckley LE10/Loughborough LE11; frosted/solar control/DDA manifestation/branded; trading-hours install; ~1hr15min from South Yorkshire via M1; **sixth retail window film city page; first-mover for Leicester** |
+| `/architectural-wrap-student-accommodation-derby/` | Student accommodation vinyl wrap Derby — University of Derby (20k students, Markeaton Street campus DE22, city centre DE1, Kedleston Road DE22); Cathedral Quarter DE1 PBSA zone; Student Roost/Unite; DE1/DE22/DE23/DE24 postcodes; <45min from South Yorkshire via A38; **eighth city; first-mover for Derby PBSA wrap** |
+
+_Last updated by automation run on 2026-10-01_
+
+## Run 77 additions (2026-10-02)
+| Slug | Title / Purpose |
+|---|---|
+| `/kitchen-wrapping-training-edinburgh/` | Training location page — Edinburgh/Lothians Scotland; twenty-third training cluster page; A1(M) south ~4hrs from Edinburgh; EH1–EH17 postcodes; Greater Edinburgh 550k city + 800k+ wider Lothians; Musselburgh EH21/Dalkeith EH22/Livingston EH54/Broxburn EH52/Bathgate EH48; New Town EH2/EH3 Georgian tenements; Marchmont EH9/Bruntsfield EH10/Morningside EH10 Victorian tenement stock; Corstorphine EH12/Liberton EH16/Portobello EH15 suburban owner-occupied; Edinburgh kitchen wrapping search market currently wide open — no established local operators ranking; stay-over format recommended; **second Scotland training page; first-mover on Edinburgh kitchen wrapping training search** |
+| `/architectural-wrap-care-homes-leicester/` | Care home vinyl wrapping Leicester — all LE postcodes; LE1/LE2 city centre/Knighton/Stoneygate/Oadby care home clusters; LE4 Beaumont Leys/Birstall/Hamilton/Rushey Mead; LE5 Evington/Coleman Road/Thurnby Lodge; wider Leicestershire: Hinckley LE10/Loughborough LE11/Melton Mowbray LE13/Market Harborough LE16/Wigston LE18/Oakham LE15; bedroom wardrobe/bedside/nurses' station/dining/lounge/corridor; RAMS documentation; same-day room use; ~1hr15min from South Yorkshire via M1; **seventh care homes city page; first-mover for Leicester** |
+| `/window-film/retail-window-film-coventry/` | Retail window film Coventry — West Orchards CV1/Upper Precinct CV1/Lower Precinct CV1/Broadgate CV1/Gallagher Retail Park CV6/Arena Retail Park CV6/Central Retail Park CV6; wider Warwickshire: Royal Priors Leamington CV31/Regent Court CV32/Parade CV31/Kenilworth CV8/Warwick CV34/Rugby CV21/Nuneaton CV11; frosted/solar control/DDA manifestation/branded; trading-hours install; ~1hr15min from South Yorkshire via M1/M6; **seventh retail window film city page** |
+| `/architectural-wrap-student-accommodation-newcastle/` | Student accommodation vinyl wrap Newcastle upon Tyne — Newcastle University (25k students, Haymarket NE1, Castle Leazes NE2, Richardson Road NE2); Northumbria University (35k students, NE1 city campus, Coach Lane NE7); combined 60k+ student population; Jesmond NE2/Sandyford NE2/Shieldfield NE2/Quayside NE1 primary PBSA zones; Heaton NE6/Byker NE6; Unite/Unipol/Student Roost/Fresh Student Living; Gateshead NE8/Sunderland SR/South Shields NE33; ~2hrs from South Yorkshire via A1(M) north; multi-day site programmes for larger Newcastle blocks; **ninth city for student accommodation wrap sub-vertical; first-mover for Newcastle PBSA wrap** |
+
+_Last updated by automation run on 2026-10-02_
+
+## Run 78 additions (2026-10-03)
+| Slug | Title / Purpose |
+|---|---|
+| `/kitchen-wrapping-training-cardiff/` | Training location page — Cardiff/South Wales; twenty-fourth training cluster page; M4 east + Severn crossing ~2hr30min from Cardiff; CF10–CF24 postcodes + Newport NP/Barry CF63/Penarth CF64/Pontypridd CF37/Caerphilly CF83/Bridgend CF31/Merthyr CF47; Cardiff 365k population; Victorian/Edwardian terraces in Roath CF24/Canton CF5/Pontcanna CF11; interwar/suburban Rhiwbina CF14/Llanishen CF14/Heath CF14; 1960s–80s estates Llandaff North CF14/Ely CF5/Fairwater CF5/Pentwyn CF23/Llanrumney CF3; South Wales Valleys corridor CF37/CF40/CF42/CF44/CF47 large owner-occupied RTB housing stock; Cardiff kitchen wrapping search market currently wide open — no established local operators; stay-over format recommended; **first Wales training page; first-mover on Cardiff kitchen wrapping training search** |
+| `/architectural-wrap-care-homes-derby/` | Care home vinyl wrapping Derby — all DE postcodes; DE22 Allestree/Darley Abbey/Breadsall northern clusters; DE21 Chaddesden/Oakwood/Spondon eastern clusters; DE23 Littleover/Normanton/Peartree southern; DE3 Mickleover/Mackworth western; wider Derbyshire: DE56 Belper/DE55 Alfreton/DE7 Ilkeston/DE11 Swadlincote/DE4 Matlock/DE6 Ashbourne; bedroom wardrobe/bedside/nurses' station/dining/lounge/corridor; RAMS documentation; same-day room use; <30min from South Yorkshire via A38; **eighth and final care homes city — completes 8-city cohort** |
+| `/window-film/retail-window-film-derby/` | Retail window film Derby — Derbion Shopping Centre DE1 (formerly Westfield/Intu Derby)/Eagle Market DE1/Cornmarket DE1/St Peter's Street DE1/Sadler Gate DE1/Kingsway Retail Park DE22/Meteor Centre DE21/Wyvern Retail Park DE21; wider Derbyshire: Belper DE56/Ilkeston DE7/Swadlincote DE11/Matlock DE4/Ashbourne DE6; frosted/solar control/DDA manifestation/branded; trading-hours install; <30min from South Yorkshire via A38; **eighth and final retail window film city — completes 8-city set** |
+| `/architectural-wrap-student-accommodation-liverpool/` | Student accommodation vinyl wrap Liverpool — University of Liverpool (22k students, Brownlow Hill L3, Smithdown Road L15, Vine Court L7, Carnatic Halls L18); LJMU (25k students, Mount Pleasant L3, Byrom Street L3); Liverpool Hope (8k students, Hope Park L16, creative campus L1); combined 55k student population; L1 Ropewalks/city centre PBSA zone; L3 Mount Pleasant/Brownlow Hill; L7 Edge Hill; L8 Toxteth/Smithdown Road/Princes Park; Unite Students/Student Roost/Liberty Living/Fresh Student Living; Bootle L20/Crosby L23/Birkenhead CH41/Wallasey CH44/St Helens WA9; ~1hr30min from South Yorkshire via M62 west; **tenth city for student accommodation wrap sub-vertical; first-mover for Liverpool PBSA wrap** |
+
+_Last updated by automation run on 2026-10-03_
+
+## Run 79 additions (2026-10-04)
+| Slug | Title / Purpose |
+|---|---|
+| `/kitchen-wrapping-training-swansea/` | Training location page — Swansea/West Wales; twenty-fifth training cluster page; M4 east + Severn crossing ~3hr from Swansea SA1; SA1–SA9 postcodes + Neath SA10/Port Talbot SA12/Llanelli SA14/Gorseinon SA4; Swansea 300k city; Victorian/Edwardian terraces in Uplands SA2/Brynmill SA2/Sandfields SA1; interwar/suburban Sketty SA2/Killay SA2/West Cross SA3; 1960s–80s council estates Morriston SA6/Townhill SA1/Portmead SA5/Clase SA6/Penlan SA5; SA1 dock/marina regeneration area modern apartments; Neath SA10/Port Talbot SA12 valleys with large RTB owner-occupied stock; Swansea kitchen wrapping search market currently wide open — no established local operators; stay-over format recommended; **second Wales training page; first-mover on Swansea kitchen wrapping training search** |
+| `/architectural-wrap-student-accommodation-bristol/` | Student accommodation vinyl wrap Bristol — University of Bristol (27k students, Clifton BS8, Tyndalls Park, Wills Hall BS9, Clifton Hill House BS8, Hiatt Baker BS9, Goldney Hall BS8); UWE Bristol (30k students, Frenchay BS16 main campus, city campus BS1); combined 57k student population; Redland BS6/Cotham BS6 primary student HMO/PBSA zone; city-centre BS1 Harbourside/Broadmead; Clifton BS8/Hotwells BS8; Unite/Student Roost/Liberty Living/Vita Student/Fresh Student Living; Bath BA1/Weston-super-Mare BS23; ~1hr45min–2hrs from South Yorkshire via M1 south; multi-day site programmes for larger Bristol blocks; **eleventh city for student accommodation wrap sub-vertical; first-mover for Bristol PBSA wrap** |
+| `/architectural-wrap-care-homes-liverpool/` | Care home vinyl wrapping Liverpool — all Liverpool L postcodes; L4 Walton/Kirkdale/Anfield/Fazakerley L9/Norris Green L11/Clubmoor L11/Old Swan L13 inner north Liverpool care home density; south Liverpool: Aigburth L17/Mossley Hill L18/Allerton L18/Woolton L25/Garston L19; Merseyside: Bootle L20/Crosby L23/Huyton L36/Prescot L34/Kirkby L33/St Helens WA9/Birkenhead CH41/Wallasey CH44/Southport PR8; bedroom wardrobe/bedside/nurses' station/dining/lounge/corridor; RAMS documentation; same-day room use; ~1hr30min from South Yorkshire via M62 west; **ninth care homes city — expansion beyond original 8-city cohort; first-mover for Liverpool care home wrap** |
+| `/window-film/retail-window-film-liverpool/` | Retail window film Liverpool — Liverpool ONE L1 (170+ units, open-air)/Metquarter L1/St John's Shopping Centre L1/Church Street L1/Bold Street L1/Lord Street L2/Cavern Quarter L1/Edge Lane Retail Park L7/Aintree Retail Park L9/New Strand L20/Huyton L36/Kirkby L33; wider Merseyside: Birkenhead CH41/St Helens WA9/Southport PR8; frosted/solar control/DDA manifestation/branded; trading-hours install; ~1hr30min from South Yorkshire via M62 west; **ninth retail window film city — expansion beyond original 8-city set; first-mover for Liverpool retail window film** |
+
+_Last updated by automation run on 2026-10-04_

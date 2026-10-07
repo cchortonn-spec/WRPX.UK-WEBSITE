@@ -527,6 +527,27 @@ export const blogPosts = [
       "A practical guide for hotel fit-out contractors, interior designers and FM teams on specifying vinyl wrapping and window film together on hotel refurbishment projects. What surfaces each covers, how the trades interact, how to sequence installation, and why using a single installer for both simplifies project management.",
     date: "2026-09-13",
   },
+  {
+    slug: "restaurant-window-film-and-architectural-wrap-specifying-both",
+    title: "Restaurant Window Film and Architectural Wrap — Specifying Both on the Same Project",
+    description:
+      "A practical guide for restaurant fit-out contractors, FF&E specifiers and design-and-build firms on specifying vinyl wrapping and window film together on restaurant refurbishment and new opening projects. What surfaces each covers, how the trades interact, how to sequence installation, and why using a single installer simplifies the programme.",
+    date: "2026-09-15",
+  },
+  {
+    slug: "vinyl-wrapping-for-school-canteens-and-education-serveries",
+    title: "Vinyl Wrapping for School Canteens and Education Serveries — A Specification Guide",
+    description:
+      "A practical guide for school bursars, academy trust estates teams and catering facilities managers on specifying vinyl wrapping for school canteens, servery counters, kitchen unit fronts and dining room furniture. Covers surface suitability, food-safe considerations, programming around the academic calendar and multi-site rollout.",
+    date: "2026-09-17",
+  },
+  {
+    slug: "vinyl-wrapping-for-hotel-bathrooms-and-wet-areas",
+    title: "Vinyl Wrapping for Hotel Bathrooms and Wet Areas — A Specification Guide",
+    description:
+      "A practical specification guide for hotel fit-out managers, property management companies and interior contractors on applying vinyl wrapping in hotel bathrooms, en-suite shower rooms, wet rooms and spa changing areas. Covers film selection, surface suitability, humidity management, sealing and programming for minimal room-out-of-service time.",
+    date: "2026-09-18",
+  },
 ] as const;
 
 export type BlogSlug = (typeof blogPosts)[number]["slug"];

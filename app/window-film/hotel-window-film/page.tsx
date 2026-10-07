@@ -257,6 +257,14 @@ export default function HotelWindowFilmPage() {
               <h3 className="font-semibold text-foreground">Coventry</h3>
               <p className="mt-2 text-sm text-muted">Hotel window film for Coventry city centre CV1, the Ricoh Arena CV6, Warwick CV34 and Royal Leamington Spa CV31.</p>
             </Link>
+            <Link href="/window-film/hotel-window-film-nottingham/" className="card-float p-5 hover:border-accent/60 transition-colors">
+              <h3 className="font-semibold text-foreground">Nottingham</h3>
+              <p className="mt-2 text-sm text-muted">Solar control, frosted privacy and Part M manifestation for Nottingham hotels — Lace Market NG1, Broadmarsh, Canal Quarter, Trent Bridge NG2 and all Nottingham hotel postcodes. 40 minutes from South Yorkshire.</p>
+            </Link>
+            <Link href="/window-film/hotel-window-film-manchester/" className="card-float p-5 hover:border-accent/60 transition-colors">
+              <h3 className="font-semibold text-foreground">Manchester</h3>
+              <p className="mt-2 text-sm text-muted">Hotel window film for Manchester city centre M1 Piccadilly, Deansgate M3, Spinningfields M3, Northern Quarter M4, Ancoats M4 and MediaCityUK M50 — 1 hour from South Yorkshire.</p>
+            </Link>
           </div>
         </div>
       </section>

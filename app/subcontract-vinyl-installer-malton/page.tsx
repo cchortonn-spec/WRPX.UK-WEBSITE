@@ -101,8 +101,8 @@ const faqItems = [
 const nearbyPages = [
   { href: "/subcontract-vinyl-installer-york/", label: "York YO1", desc: "25 miles west via A64" },
   { href: "/subcontract-vinyl-installer-pickering/", label: "Pickering YO18", desc: "15 miles north via A169" },
+  { href: "/subcontract-vinyl-installer-scarborough/", label: "Scarborough YO11", desc: "25 miles east via A64" },
   { href: "/subcontract-vinyl-installer-helmsley/", label: "Helmsley YO62", desc: "20 miles north-west via A170" },
-  { href: "/subcontract-vinyl-installer-harrogate/", label: "Harrogate HG1", desc: "30 miles west via A64 and A661" },
 ];
 
 export default function SubcontractVinylInstallerMalton() {
