@@ -406,6 +406,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "architectural-wrap-care-homes-exeter",
     "architectural-wrap-student-accommodation-reading",
     "window-film/retail-window-film-portsmouth",
+    "window-film/gym-window-film-birmingham",
+    "architectural-wrap-care-homes-reading",
+    "architectural-wrap-student-accommodation-oxford",
+    "window-film/retail-window-film-reading",
   ];
 
   const furnitureLocations = siteConfig.areas.map((city) =>
