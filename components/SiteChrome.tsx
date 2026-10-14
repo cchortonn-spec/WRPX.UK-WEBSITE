@@ -5,6 +5,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { StickyCtaBar } from "@/components/StickyCtaBar";
 import { WhatsAppFloat } from "@/components/WhatsAppFloat";
+import { HalloweenOverlay } from "@/components/HalloweenOverlay";
 
 export function SiteChrome({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
@@ -21,6 +22,7 @@ export function SiteChrome({ children }: { children: React.ReactNode }) {
       <Footer />
       <StickyCtaBar />
       <WhatsAppFloat />
+      <HalloweenOverlay />
     </>
   );
 }

@@ -4671,3 +4671,308 @@ a[href^="tel"]:hover {
     width: 100%;
   }
 }
+
+/* ============================================================
+   Halloween overlay (seasonal)
+   Switch on/off in lib/seasonal-config.ts — or delete this block
+   together with components/HalloweenOverlay.tsx to remove it fully.
+   ============================================================ */
+
+:root {
+  --halloween-orange: #ff7a1a;
+  --halloween-purple: #8b5cf6;
+  --halloween-web: rgba(235, 230, 245, 0.5);
+}
+
+/* Sits above everything (incl. header) but never blocks a click or tap */
+.halloween-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 55;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+/* Faint orange glow from below, purple from above */
+.halloween-glow {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      ellipse 90% 45% at 50% 100%,
+      rgba(255, 122, 26, 0.16) 0%,
+      transparent 70%
+    ),
+    radial-gradient(
+      ellipse 90% 35% at 50% 0%,
+      rgba(139, 92, 246, 0.07) 0%,
+      transparent 70%
+    );
+}
+
+/* Cobwebs — one drawing, flipped into each corner.
+   The wrapper places + flips it; the svg inside sways and shimmers. */
+.halloween-web-wrap {
+  position: absolute;
+  width: clamp(5.5rem, 15vw, 11rem);
+}
+.halloween-web-tl {
+  top: 0;
+  left: 0;
+}
+.halloween-web-tr {
+  top: 0;
+  right: 0;
+  transform: scaleX(-1);
+}
+.halloween-web-bl {
+  bottom: 0;
+  left: 0;
+  transform: scaleY(-1);
+}
+.halloween-web-br {
+  bottom: 0;
+  right: 0;
+  transform: scale(-1, -1);
+}
+
+.halloween-web {
+  display: block;
+  width: 100%;
+  height: auto;
+  color: var(--halloween-web);
+  filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.15));
+  /* Pivot from the corner the web is "pinned" to, like a real web in a breeze */
+  transform-origin: 0 0;
+  will-change: transform, opacity;
+  animation:
+    halloween-web-sway 7s ease-in-out infinite alternate,
+    halloween-web-shimmer 4.5s ease-in-out infinite alternate;
+}
+/* Each corner moves at its own pace so they never sway in sync */
+.halloween-web-tr .halloween-web {
+  animation-duration: 8.5s, 5.5s;
+  animation-delay: -3s, -1s;
+}
+.halloween-web-bl .halloween-web {
+  animation-duration: 6.2s, 4s;
+  animation-delay: -5s, -2.5s;
+}
+.halloween-web-br .halloween-web {
+  animation-duration: 9.5s, 6s;
+  animation-delay: -1.5s, -3.5s;
+}
+
+@keyframes halloween-web-sway {
+  from {
+    transform: rotate(-1.5deg) scale(1);
+  }
+  to {
+    transform: rotate(2deg) scale(1.04);
+  }
+}
+
+@keyframes halloween-web-shimmer {
+  from {
+    opacity: 0.7;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Bats — slow drift across the screen with a gentle flap */
+.halloween-bat {
+  position: absolute;
+  left: 0;
+  color: var(--halloween-orange);
+  opacity: 0.85;
+  will-change: transform;
+  animation-iteration-count: infinite;
+  filter: drop-shadow(0 0 6px rgba(255, 90, 0, 0.6));
+}
+.halloween-bat svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  animation: halloween-flap 0.7s ease-in-out infinite alternate;
+  transform-origin: center;
+}
+/* Each bat has its own route, speed, size, flap rate and start point so they
+   never fly in formation. Negative delays = already mid-flight on page load. */
+
+/* Bat 1 — big, left to right, gentle waves, drifting downward */
+.halloween-bat-1 {
+  top: 16%;
+  width: 4rem;
+  opacity: 0.88;
+  animation-name: halloween-fly-a;
+  animation-timing-function: linear;
+  animation-duration: 41s;
+  animation-delay: -9s;
+}
+.halloween-bat-1 svg {
+  animation-duration: 0.6s;
+}
+
+/* Bat 2 — small, right to left, climbing steeply with a jittery zigzag */
+.halloween-bat-2 {
+  top: 60%;
+  width: 2.8rem;
+  opacity: 0.7;
+  animation-name: halloween-fly-b;
+  animation-timing-function: ease-in-out;
+  animation-duration: 33s;
+  animation-delay: -21s;
+}
+.halloween-bat-2 svg {
+  animation-duration: 0.42s;
+  animation-delay: -0.2s;
+}
+
+/* Bat 3 — medium, left to right, slow swooping dive then climb */
+.halloween-bat-3 {
+  top: 34%;
+  width: 3.4rem;
+  opacity: 0.8;
+  animation-name: halloween-fly-c;
+  animation-timing-function: linear;
+  animation-duration: 57s;
+  animation-delay: -33s;
+}
+.halloween-bat-3 svg {
+  animation-duration: 0.85s;
+  animation-delay: -0.4s;
+}
+
+/* Bat 4 — tiny, right to left near the bottom, erratic with a little hover */
+.halloween-bat-4 {
+  top: 76%;
+  width: 2.4rem;
+  opacity: 0.62;
+  animation-name: halloween-fly-d;
+  animation-timing-function: ease-in-out;
+  animation-duration: 48s;
+  animation-delay: -14s;
+}
+.halloween-bat-4 svg {
+  animation-duration: 0.5s;
+  animation-delay: -0.1s;
+}
+
+@keyframes halloween-fly-a {
+  0% {
+    transform: translate(-12vw, 0) rotate(6deg);
+  }
+  20% {
+    transform: translate(18vw, -4vh) rotate(-4deg);
+  }
+  45% {
+    transform: translate(46vw, 3vh) rotate(8deg);
+  }
+  70% {
+    transform: translate(74vw, 9vh) rotate(-3deg);
+  }
+  100% {
+    transform: translate(112vw, 16vh) rotate(5deg);
+  }
+}
+
+@keyframes halloween-fly-b {
+  0% {
+    transform: translate(112vw, 8vh) rotate(-6deg);
+  }
+  30% {
+    transform: translate(76vw, -6vh) rotate(9deg);
+  }
+  55% {
+    transform: translate(48vw, -22vh) rotate(-7deg);
+  }
+  80% {
+    transform: translate(20vw, -30vh) rotate(8deg);
+  }
+  100% {
+    transform: translate(-12vw, -42vh) rotate(-4deg);
+  }
+}
+
+@keyframes halloween-fly-c {
+  0% {
+    transform: translate(-12vw, 0) rotate(4deg);
+  }
+  25% {
+    transform: translate(20vw, 14vh) rotate(12deg);
+  }
+  45% {
+    transform: translate(42vw, 22vh) rotate(-2deg);
+  }
+  65% {
+    transform: translate(66vw, 4vh) rotate(-10deg);
+  }
+  85% {
+    transform: translate(92vw, -14vh) rotate(-6deg);
+  }
+  100% {
+    transform: translate(112vw, -20vh) rotate(3deg);
+  }
+}
+
+@keyframes halloween-fly-d {
+  0% {
+    transform: translate(112vw, 0) rotate(-5deg);
+  }
+  15% {
+    transform: translate(92vw, -5vh) rotate(8deg);
+  }
+  28% {
+    transform: translate(84vw, 2vh) rotate(-9deg);
+  }
+  40% {
+    transform: translate(62vw, -9vh) rotate(6deg);
+  }
+  52% {
+    transform: translate(58vw, -3vh) rotate(-4deg);
+  }
+  70% {
+    transform: translate(30vw, -12vh) rotate(9deg);
+  }
+  85% {
+    transform: translate(14vw, -4vh) rotate(-7deg);
+  }
+  100% {
+    transform: translate(-12vw, -10vh) rotate(4deg);
+  }
+}
+
+@keyframes halloween-flap {
+  from {
+    transform: scaleY(1);
+  }
+  to {
+    transform: scaleY(0.8);
+  }
+}
+
+/* People who prefer less motion: keep webs + glow but perfectly still, hide the bats */
+@media (prefers-reduced-motion: reduce) {
+  .halloween-bat {
+    display: none;
+  }
+  .halloween-web {
+    animation: none;
+  }
+}
+
+@media (max-width: 640px) {
+  /* Fewer bats on phones so the page stays clean */
+  .halloween-bat-2,
+  .halloween-bat-4 {
+    display: none;
+  }
+}
+
+@media print {
+  .halloween-overlay {
+    display: none;
+  }
+}
