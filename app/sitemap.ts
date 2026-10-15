@@ -418,6 +418,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "architectural-wrap-care-homes-durham",
     "architectural-wrap-student-accommodation-durham",
     "subcontract-window-film-installation-leeds",
+    "window-film/gym-window-film-derby",
+    "subcontract-window-film-installation-sheffield",
+    "architectural-wrap-student-accommodation-york",
+    "architectural-wrap-care-homes-york",
   ];
 
   const furnitureLocations = siteConfig.areas.map((city) =>
