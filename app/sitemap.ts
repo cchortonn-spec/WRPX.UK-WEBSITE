@@ -422,6 +422,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "subcontract-window-film-installation-sheffield",
     "architectural-wrap-student-accommodation-york",
     "architectural-wrap-care-homes-york",
+    "window-film/retail-window-film-york",
+    "window-film/gym-window-film-york",
+    "subcontract-window-film-installation-doncaster",
+    "architectural-wrap-care-homes-middlesbrough",
   ];
 
   const furnitureLocations = siteConfig.areas.map((city) =>
