@@ -426,6 +426,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "window-film/gym-window-film-york",
     "subcontract-window-film-installation-doncaster",
     "architectural-wrap-care-homes-middlesbrough",
+    "architectural-wrap-student-accommodation-middlesbrough",
+    "window-film/gym-window-film-middlesbrough",
+    "window-film/retail-window-film-middlesbrough",
+    "subcontract-window-film-installation-manchester",
   ];
 
   const furnitureLocations = siteConfig.areas.map((city) =>
