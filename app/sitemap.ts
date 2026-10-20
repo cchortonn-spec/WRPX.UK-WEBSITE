@@ -438,6 +438,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "architectural-wrap-care-homes-hull",
     "window-film/gym-window-film-hull",
     "subcontract-window-film-installation-liverpool",
+    "window-film/retail-window-film-stoke-on-trent",
+    "subcontract-window-film-installation-bristol",
+    "architectural-wrap-student-accommodation-wolverhampton",
+    "architectural-wrap-care-homes-wolverhampton",
   ];
 
   const furnitureLocations = siteConfig.areas.map((city) =>
