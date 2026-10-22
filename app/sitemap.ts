@@ -446,6 +446,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "window-film/retail-window-film-doncaster",
     "architectural-wrap-student-accommodation-stoke-on-trent",
     "architectural-wrap-care-homes-wigan",
+    "subcontract-window-film-installation-newcastle",
+    "window-film/gym-window-film-liverpool",
+    "window-film/retail-window-film-wigan",
+    "architectural-wrap-care-homes-bolton",
   ];
 
   const furnitureLocations = siteConfig.areas.map((city) =>
