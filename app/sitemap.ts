@@ -450,6 +450,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "window-film/gym-window-film-liverpool",
     "window-film/retail-window-film-wigan",
     "architectural-wrap-care-homes-bolton",
+    "window-film/gym-window-film-newcastle",
+    "architectural-wrap-student-accommodation-wigan",
+    "window-film/retail-window-film-sunderland",
+    "architectural-wrap-care-homes-sunderland",
   ];
 
   const furnitureLocations = siteConfig.areas.map((city) =>
