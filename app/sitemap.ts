@@ -454,6 +454,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "architectural-wrap-student-accommodation-wigan",
     "window-film/retail-window-film-sunderland",
     "architectural-wrap-care-homes-sunderland",
+    "subcontract-window-film-installation-glasgow",
+    "window-film/gym-window-film-sunderland",
+    "architectural-wrap-student-accommodation-sunderland",
+    "window-film/retail-window-film-bolton",
   ];
 
   const furnitureLocations = siteConfig.areas.map((city) =>
