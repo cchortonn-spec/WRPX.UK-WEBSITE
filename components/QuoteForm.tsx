@@ -1,5 +1,6 @@
 "use client";
 
+import { track } from "@vercel/analytics";
 import { siteConfig } from "@/lib/site-config";
 
 export function QuoteForm() {
@@ -9,6 +10,12 @@ export function QuoteForm() {
       method="get"
       className="space-y-4"
       aria-label="Request a free quote"
+      onSubmit={() => {
+        track("Contact Form Submitted", {
+          path: window.location.pathname,
+          form: "contact",
+        });
+      }}
     >
       <div>
         <label htmlFor="quote-name" className="mb-1 block text-sm text-muted">
