@@ -5,6 +5,7 @@ import { Geist, Geist_Mono, Instrument_Serif } from "next/font/google";
 import "./globals.css";
 import { SiteChrome } from "@/components/SiteChrome";
 import { AnalyticsTracker } from "@/components/AnalyticsTracker";
+import { VercelAnalytics } from "@/components/VercelAnalytics";
 import { getLocalBusinessSchema } from "@/lib/schema";
 import { testimonials } from "@/lib/testimonials";
 
@@ -128,6 +129,7 @@ export default function RootLayout({
         >
           <SiteChrome>{children}</SiteChrome>
           <AnalyticsTracker />
+          <VercelAnalytics />
         </ClerkProvider>
       </body>
     </html>

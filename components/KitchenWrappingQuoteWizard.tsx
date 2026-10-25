@@ -2,6 +2,7 @@
 
 import { FormEvent, useMemo, useState } from "react";
 import Image from "next/image";
+import { track } from "@vercel/analytics";
 
 type QuoteType = "complete" | "cabinet" | "worktop" | "";
 type DoorStyle = "j-pull" | "shaker" | "flat" | "other" | "";
@@ -137,6 +138,10 @@ export function KitchenWrappingQuoteWizard() {
             | null;
           throw new Error(data?.error || "Something went wrong while sending your quote.");
         }
+        track("Quote Form Submitted", {
+          path: window.location.pathname,
+          form: "kitchen-wrapping",
+        });
         setSubmitted(true);
       })
       .catch((error: unknown) => {
