@@ -458,6 +458,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "window-film/gym-window-film-sunderland",
     "architectural-wrap-student-accommodation-sunderland",
     "window-film/retail-window-film-bolton",
+    "subcontract-window-film-installation-cardiff",
+    "window-film/gym-window-film-glasgow",
+    "architectural-wrap-care-homes-chorley",
+    "architectural-wrap-student-accommodation-preston",
   ];
 
   const furnitureLocations = siteConfig.areas.map((city) =>
