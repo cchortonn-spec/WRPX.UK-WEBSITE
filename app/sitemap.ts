@@ -462,6 +462,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "window-film/gym-window-film-glasgow",
     "architectural-wrap-care-homes-chorley",
     "architectural-wrap-student-accommodation-preston",
+    "window-film/gym-window-film-edinburgh",
+    "subcontract-window-film-installation-edinburgh",
+    "architectural-wrap-student-accommodation-chorley",
+    "architectural-wrap-care-homes-lancaster",
   ];
 
   const furnitureLocations = siteConfig.areas.map((city) =>
