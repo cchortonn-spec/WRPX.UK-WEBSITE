@@ -470,6 +470,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "window-film/gym-window-film-cardiff",
     "architectural-wrap-care-homes-swansea",
     "subcontract-window-film-installation-swansea",
+    "window-film/retail-window-film-swansea",
+    "architectural-wrap-student-accommodation-swansea",
+    "window-film/gym-window-film-swansea",
+    "subcontract-window-film-installation-aberdeen",
   ];
 
   const furnitureLocations = siteConfig.areas.map((city) =>
