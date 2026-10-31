@@ -478,6 +478,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "window-film/gym-window-film-aberdeen",
     "architectural-wrap-care-homes-aberdeen",
     "subcontract-window-film-installation-newport",
+    "window-film/retail-window-film-newport",
+    "window-film/gym-window-film-newport",
+    "architectural-wrap-student-accommodation-aberdeen",
+    "architectural-wrap-care-homes-newport",
   ];
 
   const furnitureLocations = siteConfig.areas.map((city) =>
