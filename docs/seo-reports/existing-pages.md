@@ -1314,3 +1314,33 @@ _Last updated by automation run on 2026-10-26_
 | `/subcontract-window-film-installation-swansea/` | Subcontract window film installation Swansea — SA postcodes; Quadrant Shopping Centre SA1 (Swansea's primary covered shopping destination — national multiples/independent traders; centre management protocols/manifestation/frosted fitting rooms/solar-control); Morfa Retail Park SA1 (Swansea's primary large-format out-of-town retail park near Liberty Stadium — national retailers on open-site frontages; south/west-facing glazed elevations — solar-control primary; RAMS/park management protocols); Parc Tawe Retail and Leisure Park SA1 (mixed retail/cinema/leisure adjacent to city centre — national retailers and leisure operators; fit-out subcontract WF demand); SA1 Waterfront and Maritime Quarter (growing commercial office/hotel/mixed-use development — office refurbishment frosted film/solar-control/manifestation); Swansea University Bay Campus SA1 and Singleton Campus SA2 (educational glazing film demand — manifestation/frosted partitions); Swansea Enterprise Park SA7 (business park office/commercial glazing); Mumbles SA3 hospitality/retail; Neath SA11/Port Talbot SA12/Llanelli SA15/Carmarthen SA31 wider South West Wales within reach; Cardiff CF/Newport NP co-ordination possible from same M4 mobilisation; ~3h30m via M4; **14th B2B subcontract window film page; first-mover Swansea B2B WF; FIRST Swansea-specific subcontract WF page; natural South West Wales complement to Cardiff B2B WF (Run 101); extends Pillar 2 to South West Wales; Pillar 2** |
 
 _Last updated by automation run on 2026-10-27_
+
+## Run 104 additions (2026-10-29)
+| Slug | Title / Purpose |
+|---|---|
+| `/window-film/retail-window-film-swansea/` | Retail window film Swansea — SA postcodes; Quadrant Shopping Centre SA1; Morfa Retail Park SA1; Parc Tawe SA1; SA1 Waterfront; ~3h30m via M4; 29th retail WF city; first Swansea retail WF; Pillar 3 |
+| `/architectural-wrap-student-accommodation-swansea/` | Student accommodation vinyl wrap Swansea — SA postcodes; Swansea University Bay Campus SA1 (~22k students); UWTSD SA1; Uplands SA2 and Brynmill SA2 HMO zones; Sketty SA2; ~3h30m via M4; 31st PBSA city; first Swansea PBSA wrap; Pillar 4 |
+| `/window-film/gym-window-film-swansea/` | Gym window film Swansea — SA postcodes; Welsh National Pool SA1; Swansea University Sport Bay Campus SA1; Swansea Leisure Centre SA1; David Lloyd Swansea SA7; PureGym Swansea; Building Regulations-compliant manifestation (Wales); ~3h30m via M4; 19th gym WF city; first Swansea gym WF; Pillar 1 |
+| `/subcontract-window-film-installation-aberdeen/` | Subcontract window film installation Aberdeen — AB postcodes; Union Square AB11; Bon Accord Centre AB25; Union Street AB10; Marischal Square AB10; ~4h via A1(M)/A90; 15th B2B WF page; first Aberdeen B2B WF; Pillar 2 |
+
+_Last updated by automation run on 2026-10-29_
+
+## Run 105 additions (2026-10-30)
+| Slug | Title / Purpose |
+|---|---|
+| `/window-film/retail-window-film-aberdeen/` | Retail window film Aberdeen — AB postcodes; Union Square AB11; Bon Accord Centre AB25; Union Street AB10; Marischal Square AB10; Kittybrewster AB25; ~4h via A1(M)/A90; 30th retail WF city; first Aberdeen retail WF; Scottish Technical Handbooks manifestation; Pillar 3 |
+| `/window-film/gym-window-film-aberdeen/` | Gym window film Aberdeen — AB postcodes; Beach Leisure Centre AB24; Aberdeen Sports Village Linksfield Road AB24; University of Aberdeen AB24; RGU AB10; PureGym Aberdeen; Scottish Technical Handbooks-compliant manifestation; ~4h via A1(M)/A90; 20th gym WF city; first Aberdeen gym WF; Pillar 1 |
+| `/architectural-wrap-care-homes-aberdeen/` | Care home vinyl wrapping Aberdeen — AB postcodes; Aberdeen Royal Infirmary Foresterhill AB25; Care Inspectorate Scotland; Cults/Bieldside/Mannofield AB15 cluster; ~4h via A1(M)/A90; 32nd care homes city; first Aberdeen care home wrap; Pillar 4 |
+| `/subcontract-window-film-installation-newport/` | Subcontract window film installation Newport — NP postcodes; Kingsway Centre NP20; Spytty Retail Park NP19; Queensway Meadows NP20; Royal Gwent Hospital NP20; Cwmbran NP44; ~3h via M4; 16th B2B WF page; first Newport B2B WF; Building Regulations manifestation (Wales); Pillar 2 |
+
+_Last updated by automation run on 2026-10-30_
+
+## Run 106 additions (2026-10-31)
+| Slug | Title / Purpose |
+|---|---|
+| `/window-film/retail-window-film-newport/` | Retail window film Newport — NP postcodes; Kingsway Centre NP20; Friars Walk NP20; Spytty Retail Park NP19; Newport Retail Park NP10; Cwmbran Shopping Centre NP44; Building Regulations-compliant manifestation (Wales); ~3h via M4; 31st retail WF city; first Newport retail WF; Pillar 3 |
+| `/window-film/gym-window-film-newport/` | Gym window film Newport — NP postcodes; Newport Leisure Centre NP20; Newport International Sports Village NP19; Cwmbran Leisure Centre NP44; PureGym Newport; Building Regulations-compliant manifestation (Wales); ~3h via M4; 21st gym WF city; first Newport gym WF; Pillar 1 |
+| `/architectural-wrap-student-accommodation-aberdeen/` | Student accommodation vinyl wrap Aberdeen — AB postcodes; University of Aberdeen King's Campus AB24 (~20k students); Robert Gordon University Garthdee AB15 (~17k students); Hillhead AB24 HMO zone; Old Aberdeen AB24; Rosemount AB25; Froghall AB24; ~4h via A1(M)/A90; 32nd PBSA city; first Aberdeen PBSA wrap; Pillar 4 |
+| `/architectural-wrap-care-homes-newport/` | Care home vinyl wrapping Newport — NP postcodes; Royal Gwent Hospital NP20; Care Inspectorate Wales (CIW); Caerleon NP18; Cwmbran NP44; Rogerstone NP10; ~3h via M4; 33rd care homes city; first Newport care home wrap; Pillar 4 |
+
+_Last updated by automation run on 2026-10-31_
