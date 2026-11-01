@@ -482,6 +482,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "window-film/gym-window-film-newport",
     "architectural-wrap-student-accommodation-aberdeen",
     "architectural-wrap-care-homes-newport",
+    "subcontract-window-film-installation-inverness",
+    "window-film/retail-window-film-inverness",
+    "window-film/gym-window-film-inverness",
+    "architectural-wrap-student-accommodation-lancaster",
   ];
 
   const furnitureLocations = siteConfig.areas.map((city) =>
