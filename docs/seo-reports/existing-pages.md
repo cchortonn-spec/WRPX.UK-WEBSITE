@@ -1344,3 +1344,13 @@ _Last updated by automation run on 2026-10-30_
 | `/architectural-wrap-care-homes-newport/` | Care home vinyl wrapping Newport — NP postcodes; Royal Gwent Hospital NP20; Care Inspectorate Wales (CIW); Caerleon NP18; Cwmbran NP44; Rogerstone NP10; ~3h via M4; 33rd care homes city; first Newport care home wrap; Pillar 4 |
 
 _Last updated by automation run on 2026-10-31_
+
+## Run 107 additions (2026-11-01)
+| Slug | Title / Purpose |
+|---|---|
+| `/subcontract-window-film-installation-inverness/` | Subcontract window film installation Inverness — IV postcodes; Eastgate Centre IV2; Inverness Retail Park IV2; High Street IV1; UHI Inverness IV2; Inverness Leisure Centre IV3; Scottish Technical Handbooks manifestation; ~5h via A1(M)/A9; 17th B2B WF page; FIRST Scottish Highland B2B WF page; Pillar 2 |
+| `/window-film/retail-window-film-inverness/` | Retail window film Inverness — IV postcodes; Eastgate Centre IV2; Inverness Retail Park IV2; High Street IV1; Scottish Technical Handbooks manifestation; ~5h via A1(M)/A9; 32nd retail WF city; FIRST Scottish Highland retail WF page; Pillar 3 |
+| `/window-film/gym-window-film-inverness/` | Gym window film Inverness — IV postcodes; Inverness Leisure Centre Bught Lane IV3; UHI Inverness Campus IV2; city-centre operators IV1; Scottish Technical Handbooks manifestation; ~5h via A1(M)/A9; 22nd gym WF city; FIRST Scottish Highland gym WF page; Pillar 1 |
+| `/architectural-wrap-student-accommodation-lancaster/` | Student accommodation vinyl wrap Lancaster — LA postcodes; Lancaster University Bailrigg LA1 (~15,000 students); Greaves LA1 student HMO zone; Bowerham LA1; Scotforth LA1; ~1h30m via M62/M6; 33rd PBSA city; FIRST Lancaster PBSA wrap page; CQC (England); Pillar 4 |
+
+_Last updated by automation run on 2026-11-01_
