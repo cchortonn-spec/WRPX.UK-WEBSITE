@@ -490,6 +490,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "architectural-wrap-student-accommodation-inverness",
     "window-film/gym-window-film-lancaster",
     "subcontract-window-film-installation-middlesbrough",
+    "window-film/retail-window-film-lancaster",
+    "subcontract-window-film-installation-lancaster",
+    "architectural-wrap-student-accommodation-dundee",
+    "architectural-wrap-care-homes-dundee",
   ];
 
   const furnitureLocations = siteConfig.areas.map((city) =>
