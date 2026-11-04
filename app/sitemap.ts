@@ -494,6 +494,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "subcontract-window-film-installation-lancaster",
     "architectural-wrap-student-accommodation-dundee",
     "architectural-wrap-care-homes-dundee",
+    "window-film/retail-window-film-dundee",
+    "subcontract-window-film-installation-dundee",
+    "window-film/gym-window-film-dundee",
+    "architectural-wrap-care-homes-peterborough",
   ];
 
   const furnitureLocations = siteConfig.areas.map((city) =>

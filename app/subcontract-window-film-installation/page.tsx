@@ -403,6 +403,40 @@ export default function SubcontractWindowFilmPage() {
         </div>
       </section>
 
+      {/* City locations */}
+      <section className="bg-card px-4 py-12">
+        <div className="container mx-auto max-w-5xl">
+          <h2 className="mb-6 text-lg font-semibold text-foreground">Subcontract window film — cities we cover</h2>
+          <div className="grid gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+            {[
+              { href: "/subcontract-window-film-installation-sheffield/", label: "Sheffield" },
+              { href: "/subcontract-window-film-installation-leeds/", label: "Leeds" },
+              { href: "/subcontract-window-film-installation-nottingham/", label: "Nottingham" },
+              { href: "/subcontract-window-film-installation-doncaster/", label: "Doncaster" },
+              { href: "/subcontract-window-film-installation-manchester/", label: "Manchester" },
+              { href: "/subcontract-window-film-installation-birmingham/", label: "Birmingham" },
+              { href: "/subcontract-window-film-installation-liverpool/", label: "Liverpool" },
+              { href: "/subcontract-window-film-installation-bristol/", label: "Bristol" },
+              { href: "/subcontract-window-film-installation-newcastle/", label: "Newcastle" },
+              { href: "/subcontract-window-film-installation-glasgow/", label: "Glasgow" },
+              { href: "/subcontract-window-film-installation-cardiff/", label: "Cardiff" },
+              { href: "/subcontract-window-film-installation-edinburgh/", label: "Edinburgh" },
+              { href: "/subcontract-window-film-installation-swansea/", label: "Swansea" },
+              { href: "/subcontract-window-film-installation-aberdeen/", label: "Aberdeen" },
+              { href: "/subcontract-window-film-installation-newport/", label: "Newport" },
+              { href: "/subcontract-window-film-installation-inverness/", label: "Inverness" },
+              { href: "/subcontract-window-film-installation-middlesbrough/", label: "Middlesbrough" },
+              { href: "/subcontract-window-film-installation-lancaster/", label: "Lancaster" },
+              { href: "/subcontract-window-film-installation-dundee/", label: "Dundee" },
+            ].map(({ href, label }) => (
+              <Link key={href} href={href} className="card-float p-3 hover:border-accent/40 transition-colors">
+                <p className="text-sm font-medium text-foreground">{label}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Related links */}
       <section className="px-4 py-12">
         <div className="container mx-auto max-w-4xl">
