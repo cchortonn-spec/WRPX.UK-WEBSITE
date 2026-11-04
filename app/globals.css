@@ -37,9 +37,19 @@
   --font-mono: var(--font-geist-mono);
 }
 
+/* Page always fits the screen width: no sideways scrolling on phones/foldables.
+   `clip` (not `hidden`) so the sticky header on inner pages keeps working. */
+html,
+body {
+  max-width: 100%;
+  overflow-x: clip;
+}
+
 html {
   background: var(--background);
   min-height: 100%;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 body {
@@ -48,6 +58,7 @@ body {
   font-family: var(--font-sans), system-ui, sans-serif;
   position: relative;
   min-height: 100vh;
+  min-height: 100dvh;
 }
 
 /* Fixed matt black base — no wood, no pink wash */
@@ -56,6 +67,7 @@ body::before {
   position: fixed;
   inset: 0;
   min-height: 100vh;
+  min-height: 100dvh;
   z-index: -1;
   pointer-events: none;
   background: linear-gradient(180deg, #050505 0%, #080808 100%);
@@ -166,6 +178,56 @@ body::before {
   transition: color 0.15s;
 }
 .link-subtle:hover {
+  color: var(--accent);
+}
+
+/* Portfolio gallery category tabs */
+.portfolio-tabs {
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  scrollbar-width: none;
+  margin: 0 -1rem;
+  padding: 0 1rem 0.25rem;
+}
+.portfolio-tabs::-webkit-scrollbar {
+  display: none;
+}
+@media (min-width: 640px) {
+  .portfolio-tabs {
+    flex-wrap: wrap;
+    overflow-x: visible;
+    margin: 0;
+    padding: 0;
+  }
+}
+.portfolio-tab {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 0.5rem;
+  white-space: nowrap;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--card-foreground);
+  font-size: 0.875rem;
+  transition: border-color 0.15s, background 0.15s, color 0.15s;
+}
+.portfolio-tab:hover {
+  border-color: rgba(255, 255, 255, 0.3);
+}
+.portfolio-tab[aria-pressed="true"] {
+  border-color: var(--accent);
+  background: rgba(212, 0, 130, 0.12);
+  color: var(--foreground);
+}
+.portfolio-tab-count {
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+.portfolio-tab[aria-pressed="true"] .portfolio-tab-count {
   color: var(--accent);
 }
 
@@ -548,6 +610,7 @@ a[href^="tel"]:hover {
 .quote-hero {
   position: relative;
   min-height: min(52vh, 28rem);
+  min-height: min(52svh, 28rem);
   display: flex;
   align-items: flex-end;
   overflow: hidden;
@@ -620,6 +683,7 @@ a[href^="tel"]:hover {
 @media (min-width: 768px) {
   .quote-hero {
     min-height: min(48vh, 32rem);
+    min-height: min(48svh, 32rem);
   }
 
   .quote-hero-content {
@@ -816,6 +880,7 @@ a[href^="tel"]:hover {
 @media (max-width: 640px) {
   .quote-hero {
     min-height: min(58vh, 24rem);
+    min-height: min(58svh, 24rem);
   }
 
   .quote-hero-content {
@@ -1319,6 +1384,7 @@ a[href^="tel"]:hover {
   /* Fixed header floats over the photo — no negative-margin pull-up */
   margin-top: 0;
   min-height: min(92vh, 54rem);
+  min-height: min(92svh, 54rem);
   display: flex;
   align-items: flex-end;
   overflow: hidden;
@@ -1444,6 +1510,7 @@ a[href^="tel"]:hover {
   .immersive-hero {
     margin-top: 0;
     min-height: min(92vh, 44rem);
+    min-height: min(92svh, 44rem);
     align-items: flex-end;
   }
 
@@ -4030,6 +4097,7 @@ a[href^="tel"]:hover {
 .training-hero {
   position: relative;
   min-height: min(78vh, 38rem);
+  min-height: min(78svh, 38rem);
   display: flex;
   align-items: flex-end;
   overflow: hidden;
@@ -4172,6 +4240,7 @@ a[href^="tel"]:hover {
 @media (max-width: 767px) {
   .training-hero {
     min-height: min(85vh, 36rem);
+    min-height: min(85svh, 36rem);
   }
 
   .training-hero-image-desktop {
@@ -4673,106 +4742,48 @@ a[href^="tel"]:hover {
 }
 
 /* ============================================================
-   Halloween overlay (seasonal)
+   Bonfire Night overlay (seasonal)
    Switch on/off in lib/seasonal-config.ts — or delete this block
-   together with components/HalloweenOverlay.tsx to remove it fully.
+   together with components/BonfireNightOverlay.tsx to remove it fully.
    ============================================================ */
 
 :root {
-  --halloween-orange: #ff7a1a;
-  --halloween-purple: #8b5cf6;
-  --halloween-web: rgba(235, 230, 245, 0.5);
+  --bonfire-orange: #ff7a1a;
+  --bonfire-red: #ff3b0a;
+  --bonfire-gold: #ffd166;
+  --bonfire-pink: #ff3fae;
+  --bonfire-white: #fff4dc;
 }
 
-/* Sits above everything (incl. header) but never blocks a click or tap */
-.halloween-overlay {
+/* Above page content but below the header, WhatsApp button and mobile CTA bar,
+   so it never covers anything people tap. Clipped so it can't cause sideways scroll. */
+.bonfire-overlay {
   position: fixed;
   inset: 0;
-  z-index: 55;
+  z-index: 30;
   pointer-events: none;
   overflow: hidden;
 }
 
-/* Faint orange glow from below, purple from above */
-.halloween-glow {
+/* Firelight glow from below, gently breathing */
+.bonfire-glow {
   position: absolute;
   inset: 0;
   background:
     radial-gradient(
-      ellipse 90% 45% at 50% 100%,
-      rgba(255, 122, 26, 0.16) 0%,
+      ellipse 85% 40% at 50% 100%,
+      rgba(255, 106, 20, 0.2) 0%,
       transparent 70%
     ),
     radial-gradient(
-      ellipse 90% 35% at 50% 0%,
-      rgba(139, 92, 246, 0.07) 0%,
+      ellipse 60% 30% at 50% 0%,
+      rgba(212, 0, 130, 0.06) 0%,
       transparent 70%
     );
+  animation: bonfire-glow-breathe 4.5s ease-in-out infinite alternate;
 }
 
-/* Cobwebs — one drawing, flipped into each corner.
-   The wrapper places + flips it; the svg inside sways and shimmers. */
-.halloween-web-wrap {
-  position: absolute;
-  width: clamp(5.5rem, 15vw, 11rem);
-}
-.halloween-web-tl {
-  top: 0;
-  left: 0;
-}
-.halloween-web-tr {
-  top: 0;
-  right: 0;
-  transform: scaleX(-1);
-}
-.halloween-web-bl {
-  bottom: 0;
-  left: 0;
-  transform: scaleY(-1);
-}
-.halloween-web-br {
-  bottom: 0;
-  right: 0;
-  transform: scale(-1, -1);
-}
-
-.halloween-web {
-  display: block;
-  width: 100%;
-  height: auto;
-  color: var(--halloween-web);
-  filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.15));
-  /* Pivot from the corner the web is "pinned" to, like a real web in a breeze */
-  transform-origin: 0 0;
-  will-change: transform, opacity;
-  animation:
-    halloween-web-sway 7s ease-in-out infinite alternate,
-    halloween-web-shimmer 4.5s ease-in-out infinite alternate;
-}
-/* Each corner moves at its own pace so they never sway in sync */
-.halloween-web-tr .halloween-web {
-  animation-duration: 8.5s, 5.5s;
-  animation-delay: -3s, -1s;
-}
-.halloween-web-bl .halloween-web {
-  animation-duration: 6.2s, 4s;
-  animation-delay: -5s, -2.5s;
-}
-.halloween-web-br .halloween-web {
-  animation-duration: 9.5s, 6s;
-  animation-delay: -1.5s, -3.5s;
-}
-
-@keyframes halloween-web-sway {
-  from {
-    transform: rotate(-1.5deg) scale(1);
-  }
-  to {
-    transform: rotate(2deg) scale(1.04);
-  }
-}
-
-@keyframes halloween-web-shimmer {
+@keyframes bonfire-glow-breathe {
   from {
     opacity: 0.7;
   }
@@ -4781,198 +4792,408 @@ a[href^="tel"]:hover {
   }
 }
 
-/* Bats — slow drift across the screen with a gentle flap */
-.halloween-bat {
+/* ---------- Fireworks ----------
+   Each burst is a point on screen. A rocket rises to it, flashes, then a ring
+   of sparks flies out and drifts down. Each burst has its own spot, colour,
+   size and timing so they never go off together. */
+.bonfire-burst {
   position: absolute;
-  left: 0;
-  color: var(--halloween-orange);
-  opacity: 0.85;
-  will-change: transform;
-  animation-iteration-count: infinite;
-  filter: drop-shadow(0 0 6px rgba(255, 90, 0, 0.6));
+  width: 0;
+  height: 0;
+  --burst-color: var(--bonfire-gold);
+  --burst-r: 3.25rem;
+  --burst-duration: 7s;
+  --burst-delay: 0s;
+  animation: bonfire-burst-drop var(--burst-duration) ease-in var(--burst-delay)
+    infinite;
 }
-.halloween-bat svg {
+
+/* Kept below ~25% from the top so they don't hide behind the frosted header */
+.bonfire-burst-1 {
+  top: 30%;
+  left: 18%;
+  --burst-color: var(--bonfire-gold);
+  --burst-r: 3.5rem;
+  --burst-duration: 7.5s;
+  --burst-delay: -1s;
+}
+.bonfire-burst-2 {
+  top: 26%;
+  left: 78%;
+  --burst-color: var(--bonfire-pink);
+  --burst-r: 3rem;
+  --burst-duration: 8.5s;
+  --burst-delay: -4.5s;
+}
+.bonfire-burst-3 {
+  top: 44%;
+  left: 52%;
+  --burst-color: var(--bonfire-orange);
+  --burst-r: 2.5rem;
+  --burst-duration: 9.5s;
+  --burst-delay: -7s;
+}
+.bonfire-burst-4 {
+  top: 56%;
+  left: 88%;
+  --burst-color: var(--bonfire-white);
+  --burst-r: 2.25rem;
+  --burst-duration: 11s;
+  --burst-delay: -2.5s;
+}
+
+.bonfire-rocket,
+.bonfire-flash,
+.bonfire-spark {
+  position: absolute;
+  animation-duration: var(--burst-duration);
+  animation-delay: var(--burst-delay);
+  animation-iteration-count: infinite;
+}
+
+.bonfire-rocket {
+  left: -1px;
+  top: 0;
+  width: 2px;
+  height: 1.25rem;
+  border-radius: 2px;
+  background: linear-gradient(180deg, var(--burst-color), transparent);
+  opacity: 0;
+  animation-name: bonfire-rocket-rise;
+  animation-timing-function: ease-out;
+}
+
+.bonfire-flash {
+  left: -0.5rem;
+  top: -0.5rem;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 9999px;
+  background: radial-gradient(circle, #ffffff 0%, var(--burst-color) 40%, transparent 70%);
+  opacity: 0;
+  animation-name: bonfire-flash-pop;
+  animation-timing-function: ease-out;
+}
+
+.bonfire-sparks {
+  position: absolute;
+  inset: 0;
+}
+
+.bonfire-spark {
+  left: -1.5px;
+  top: -5px;
+  width: 3px;
+  height: 10px;
+  border-radius: 9999px;
+  background: var(--burst-color);
+  box-shadow: 0 0 6px var(--burst-color);
+  opacity: 0;
+  --angle: 0deg;
+  --ring: 1;
+  animation-name: bonfire-spark-fly;
+  animation-timing-function: cubic-bezier(0.15, 0.7, 0.3, 1);
+}
+/* Twelve sparks round the circle; every other one on a shorter inner ring */
+.bonfire-spark:nth-child(2n) {
+  --ring: 0.62;
+}
+.bonfire-spark:nth-child(1) { --angle: 0deg; }
+.bonfire-spark:nth-child(2) { --angle: 30deg; }
+.bonfire-spark:nth-child(3) { --angle: 60deg; }
+.bonfire-spark:nth-child(4) { --angle: 90deg; }
+.bonfire-spark:nth-child(5) { --angle: 120deg; }
+.bonfire-spark:nth-child(6) { --angle: 150deg; }
+.bonfire-spark:nth-child(7) { --angle: 180deg; }
+.bonfire-spark:nth-child(8) { --angle: 210deg; }
+.bonfire-spark:nth-child(9) { --angle: 240deg; }
+.bonfire-spark:nth-child(10) { --angle: 270deg; }
+.bonfire-spark:nth-child(11) { --angle: 300deg; }
+.bonfire-spark:nth-child(12) { --angle: 330deg; }
+
+/* Timeline (same % for every part): 0–14% rocket rises, 14% flash,
+   14–32% sparks fly out, 32–46% they fade and fall, then quiet until next loop */
+@keyframes bonfire-rocket-rise {
+  0% {
+    transform: translateY(32vh);
+    opacity: 0;
+  }
+  3% {
+    opacity: 0.9;
+  }
+  13% {
+    transform: translateY(0);
+    opacity: 0.9;
+  }
+  14%,
+  100% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+}
+
+@keyframes bonfire-flash-pop {
+  0%,
+  13% {
+    transform: scale(0.2);
+    opacity: 0;
+  }
+  15% {
+    transform: scale(1.6);
+    opacity: 0.95;
+  }
+  22%,
+  100% {
+    transform: scale(2.4);
+    opacity: 0;
+  }
+}
+
+@keyframes bonfire-spark-fly {
+  0%,
+  13% {
+    transform: rotate(var(--angle)) translateY(0) scaleY(0.2);
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  32% {
+    transform: rotate(var(--angle))
+      translateY(calc(var(--burst-r) * var(--ring) * -1)) scaleY(1);
+    opacity: 0.95;
+  }
+  46%,
+  100% {
+    transform: rotate(var(--angle))
+      translateY(calc(var(--burst-r) * var(--ring) * -1.15)) scaleY(0.35);
+    opacity: 0;
+  }
+}
+
+/* Gravity: the whole burst sinks a little as it fades */
+@keyframes bonfire-burst-drop {
+  0%,
+  30% {
+    transform: translateY(0);
+  }
+  48%,
+  100% {
+    transform: translateY(14px);
+  }
+}
+
+/* ---------- Embers ----------
+   Small glowing dots floating up from the bottom with a gentle sway. */
+.bonfire-embers {
+  position: absolute;
+  inset: 0;
+}
+
+.bonfire-ember {
+  position: absolute;
+  bottom: -0.5rem;
+  left: 50%;
+  width: var(--ember-size, 4px);
+  height: var(--ember-size, 4px);
+  border-radius: 9999px;
+  background: var(--bonfire-gold);
+  box-shadow:
+    0 0 6px var(--bonfire-orange),
+    0 0 12px rgba(255, 106, 20, 0.6);
+  opacity: 0;
+  will-change: transform, opacity;
+  animation: bonfire-ember-rise var(--ember-duration, 9s) ease-out
+    var(--ember-delay, 0s) infinite;
+}
+.bonfire-ember:nth-child(1) {
+  left: 6%;
+  --ember-size: 4px;
+  --ember-drift: 2rem;
+  --ember-duration: 9s;
+  --ember-delay: -1s;
+}
+.bonfire-ember:nth-child(2) {
+  left: 14%;
+  --ember-size: 3px;
+  --ember-drift: -1.5rem;
+  --ember-duration: 11s;
+  --ember-delay: -6s;
+}
+.bonfire-ember:nth-child(3) {
+  left: 24%;
+  --ember-size: 5px;
+  --ember-drift: 1rem;
+  --ember-duration: 8s;
+  --ember-delay: -3s;
+}
+.bonfire-ember:nth-child(4) {
+  left: 37%;
+  --ember-size: 3px;
+  --ember-drift: -2rem;
+  --ember-duration: 12s;
+  --ember-delay: -9s;
+}
+.bonfire-ember:nth-child(5) {
+  left: 48%;
+  --ember-size: 4px;
+  --ember-drift: 1.5rem;
+  --ember-duration: 10s;
+  --ember-delay: -4.5s;
+}
+.bonfire-ember:nth-child(6) {
+  left: 59%;
+  --ember-size: 3px;
+  --ember-drift: -1rem;
+  --ember-duration: 9.5s;
+  --ember-delay: -7.5s;
+}
+.bonfire-ember:nth-child(7) {
+  left: 68%;
+  --ember-size: 5px;
+  --ember-drift: 2.5rem;
+  --ember-duration: 11.5s;
+  --ember-delay: -2s;
+}
+.bonfire-ember:nth-child(8) {
+  left: 77%;
+  --ember-size: 3px;
+  --ember-drift: -1.75rem;
+  --ember-duration: 8.5s;
+  --ember-delay: -5s;
+}
+.bonfire-ember:nth-child(9) {
+  left: 86%;
+  --ember-size: 4px;
+  --ember-drift: 1.25rem;
+  --ember-duration: 10.5s;
+  --ember-delay: -8s;
+}
+.bonfire-ember:nth-child(10) {
+  left: 94%;
+  --ember-size: 3px;
+  --ember-drift: -1.25rem;
+  --ember-duration: 9s;
+  --ember-delay: -0.5s;
+}
+
+@keyframes bonfire-ember-rise {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.95;
+  }
+  50% {
+    transform: translate(var(--ember-drift, 1rem), -30vh) scale(0.85);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate(calc(var(--ember-drift, 1rem) * -0.5), -62vh) scale(0.3);
+    opacity: 0;
+  }
+}
+
+/* ---------- Corner flames ----------
+   The wrapper places + mirrors the flame; the svg inside flickers. */
+.bonfire-flame-wrap {
+  position: absolute;
+  bottom: 0;
+  width: clamp(2.5rem, 7vw, 4.5rem);
+  opacity: 0.9;
+}
+.bonfire-flame-left {
+  left: 0.5rem;
+}
+.bonfire-flame-right {
+  right: 0.5rem;
+  transform: scaleX(-1);
+}
+
+.bonfire-flame {
   display: block;
   width: 100%;
   height: auto;
-  animation: halloween-flap 0.7s ease-in-out infinite alternate;
-  transform-origin: center;
-}
-/* Each bat has its own route, speed, size, flap rate and start point so they
-   never fly in formation. Negative delays = already mid-flight on page load. */
-
-/* Bat 1 — big, left to right, gentle waves, drifting downward */
-.halloween-bat-1 {
-  top: 16%;
-  width: 4rem;
-  opacity: 0.88;
-  animation-name: halloween-fly-a;
-  animation-timing-function: linear;
-  animation-duration: 41s;
-  animation-delay: -9s;
-}
-.halloween-bat-1 svg {
-  animation-duration: 0.6s;
+  overflow: visible;
+  filter: drop-shadow(0 0 10px rgba(255, 106, 20, 0.65));
 }
 
-/* Bat 2 — small, right to left, climbing steeply with a jittery zigzag */
-.halloween-bat-2 {
-  top: 60%;
-  width: 2.8rem;
-  opacity: 0.7;
-  animation-name: halloween-fly-b;
+.bonfire-flame-outer,
+.bonfire-flame-inner {
+  transform-box: fill-box;
+  transform-origin: 50% 100%;
+  will-change: transform;
   animation-timing-function: ease-in-out;
-  animation-duration: 33s;
-  animation-delay: -21s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
-.halloween-bat-2 svg {
-  animation-duration: 0.42s;
+.bonfire-flame-outer {
+  fill: var(--bonfire-orange);
+  animation-name: bonfire-flicker-outer;
+  animation-duration: 0.9s;
+}
+.bonfire-flame-inner {
+  fill: var(--bonfire-gold);
+  animation-name: bonfire-flicker-inner;
+  animation-duration: 0.55s;
+}
+/* Right flame flickers at its own pace so the two never move in sync */
+.bonfire-flame-right .bonfire-flame-outer {
+  animation-duration: 1.15s;
+  animation-delay: -0.4s;
+}
+.bonfire-flame-right .bonfire-flame-inner {
+  animation-duration: 0.7s;
   animation-delay: -0.2s;
 }
 
-/* Bat 3 — medium, left to right, slow swooping dive then climb */
-.halloween-bat-3 {
-  top: 34%;
-  width: 3.4rem;
-  opacity: 0.8;
-  animation-name: halloween-fly-c;
-  animation-timing-function: linear;
-  animation-duration: 57s;
-  animation-delay: -33s;
-}
-.halloween-bat-3 svg {
-  animation-duration: 0.85s;
-  animation-delay: -0.4s;
-}
-
-/* Bat 4 — tiny, right to left near the bottom, erratic with a little hover */
-.halloween-bat-4 {
-  top: 76%;
-  width: 2.4rem;
-  opacity: 0.62;
-  animation-name: halloween-fly-d;
-  animation-timing-function: ease-in-out;
-  animation-duration: 48s;
-  animation-delay: -14s;
-}
-.halloween-bat-4 svg {
-  animation-duration: 0.5s;
-  animation-delay: -0.1s;
-}
-
-@keyframes halloween-fly-a {
+@keyframes bonfire-flicker-outer {
   0% {
-    transform: translate(-12vw, 0) rotate(6deg);
+    transform: scale(1, 1) skewX(0deg);
   }
-  20% {
-    transform: translate(18vw, -4vh) rotate(-4deg);
-  }
-  45% {
-    transform: translate(46vw, 3vh) rotate(8deg);
-  }
-  70% {
-    transform: translate(74vw, 9vh) rotate(-3deg);
+  50% {
+    transform: scale(0.95, 1.07) skewX(-3deg);
   }
   100% {
-    transform: translate(112vw, 16vh) rotate(5deg);
+    transform: scale(1.03, 0.95) skewX(2deg);
   }
 }
 
-@keyframes halloween-fly-b {
+@keyframes bonfire-flicker-inner {
   0% {
-    transform: translate(112vw, 8vh) rotate(-6deg);
-  }
-  30% {
-    transform: translate(76vw, -6vh) rotate(9deg);
-  }
-  55% {
-    transform: translate(48vw, -22vh) rotate(-7deg);
-  }
-  80% {
-    transform: translate(20vw, -30vh) rotate(8deg);
+    transform: scale(1, 1);
   }
   100% {
-    transform: translate(-12vw, -42vh) rotate(-4deg);
+    transform: scale(0.9, 1.12) skewX(3deg);
   }
 }
 
-@keyframes halloween-fly-c {
-  0% {
-    transform: translate(-12vw, 0) rotate(4deg);
-  }
-  25% {
-    transform: translate(20vw, 14vh) rotate(12deg);
-  }
-  45% {
-    transform: translate(42vw, 22vh) rotate(-2deg);
-  }
-  65% {
-    transform: translate(66vw, 4vh) rotate(-10deg);
-  }
-  85% {
-    transform: translate(92vw, -14vh) rotate(-6deg);
-  }
-  100% {
-    transform: translate(112vw, -20vh) rotate(3deg);
-  }
-}
-
-@keyframes halloween-fly-d {
-  0% {
-    transform: translate(112vw, 0) rotate(-5deg);
-  }
-  15% {
-    transform: translate(92vw, -5vh) rotate(8deg);
-  }
-  28% {
-    transform: translate(84vw, 2vh) rotate(-9deg);
-  }
-  40% {
-    transform: translate(62vw, -9vh) rotate(6deg);
-  }
-  52% {
-    transform: translate(58vw, -3vh) rotate(-4deg);
-  }
-  70% {
-    transform: translate(30vw, -12vh) rotate(9deg);
-  }
-  85% {
-    transform: translate(14vw, -4vh) rotate(-7deg);
-  }
-  100% {
-    transform: translate(-12vw, -10vh) rotate(4deg);
-  }
-}
-
-@keyframes halloween-flap {
-  from {
-    transform: scaleY(1);
-  }
-  to {
-    transform: scaleY(0.8);
-  }
-}
-
-/* People who prefer less motion: keep webs + glow but perfectly still, hide the bats */
+/* People who prefer less motion: keep the still glow + flames, hide fireworks and embers */
 @media (prefers-reduced-motion: reduce) {
-  .halloween-bat {
+  .bonfire-burst,
+  .bonfire-embers {
     display: none;
   }
-  .halloween-web {
+  .bonfire-glow,
+  .bonfire-flame-outer,
+  .bonfire-flame-inner {
     animation: none;
   }
 }
 
 @media (max-width: 640px) {
-  /* Fewer bats on phones so the page stays clean */
-  .halloween-bat-2,
-  .halloween-bat-4 {
+  /* Fewer fireworks and embers on phones so the page stays clean */
+  .bonfire-burst-3,
+  .bonfire-burst-4,
+  .bonfire-ember:nth-child(2n) {
     display: none;
   }
 }
 
 @media print {
-  .halloween-overlay {
+  .bonfire-overlay {
     display: none;
   }
 }
+

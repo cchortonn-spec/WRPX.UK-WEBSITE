@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import Script from "next/script";
 import { ClerkProvider } from "@clerk/nextjs";
 import { Geist, Geist_Mono, Instrument_Serif } from "next/font/google";
@@ -48,6 +48,16 @@ export const metadata: Metadata = {
     apple: "/apple-touch-icon.png",
   },
   manifest: "/site.webmanifest",
+};
+
+// Lock the page width to the screen so it re-fits when a phone rotates or folds.
+// Pinch-zoom is still allowed (no maximumScale / userScalable) for accessibility.
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  minimumScale: 1,
+  viewportFit: "cover",
+  themeColor: "#050505",
 };
 
 export default function RootLayout({
@@ -107,7 +117,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${instrumentSerif.variable} min-h-screen antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${instrumentSerif.variable} min-h-dvh antialiased`}
       >
         {/* Google tag (gtag.js) — loads after page is interactive so GA4 receives data */}
         <Script
