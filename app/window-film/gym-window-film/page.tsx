@@ -352,6 +352,45 @@ export default function GymWindowFilmPage() {
         </div>
       </section>
 
+      {/* City locations */}
+      <section className="px-4 py-12">
+        <div className="container mx-auto max-w-5xl">
+          <h2 className="mb-6 text-lg font-semibold text-foreground">Gym window film — cities we cover</h2>
+          <div className="grid gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+            {[
+              { href: "/window-film/gym-window-film-sheffield/", label: "Sheffield" },
+              { href: "/window-film/gym-window-film-leeds/", label: "Leeds" },
+              { href: "/window-film/gym-window-film-manchester/", label: "Manchester" },
+              { href: "/window-film/gym-window-film-birmingham/", label: "Birmingham" },
+              { href: "/window-film/gym-window-film-nottingham/", label: "Nottingham" },
+              { href: "/window-film/gym-window-film-leicester/", label: "Leicester" },
+              { href: "/window-film/gym-window-film-derby/", label: "Derby" },
+              { href: "/window-film/gym-window-film-york/", label: "York" },
+              { href: "/window-film/gym-window-film-middlesbrough/", label: "Middlesbrough" },
+              { href: "/window-film/gym-window-film-doncaster/", label: "Doncaster" },
+              { href: "/window-film/gym-window-film-hull/", label: "Hull" },
+              { href: "/window-film/gym-window-film-bristol/", label: "Bristol" },
+              { href: "/window-film/gym-window-film-liverpool/", label: "Liverpool" },
+              { href: "/window-film/gym-window-film-newcastle/", label: "Newcastle" },
+              { href: "/window-film/gym-window-film-sunderland/", label: "Sunderland" },
+              { href: "/window-film/gym-window-film-glasgow/", label: "Glasgow" },
+              { href: "/window-film/gym-window-film-edinburgh/", label: "Edinburgh" },
+              { href: "/window-film/gym-window-film-cardiff/", label: "Cardiff" },
+              { href: "/window-film/gym-window-film-swansea/", label: "Swansea" },
+              { href: "/window-film/gym-window-film-aberdeen/", label: "Aberdeen" },
+              { href: "/window-film/gym-window-film-newport/", label: "Newport" },
+              { href: "/window-film/gym-window-film-inverness/", label: "Inverness" },
+              { href: "/window-film/gym-window-film-lancaster/", label: "Lancaster" },
+              { href: "/window-film/gym-window-film-dundee/", label: "Dundee" },
+            ].map(({ href, label }) => (
+              <Link key={href} href={href} className="card-float p-3 hover:border-accent/40 transition-colors">
+                <p className="text-sm font-medium text-foreground">{label}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Related links */}
       <section className="bg-card px-4 py-12">
         <div className="container mx-auto max-w-4xl">
