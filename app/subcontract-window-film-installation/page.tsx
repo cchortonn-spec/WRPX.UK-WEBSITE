@@ -428,6 +428,7 @@ export default function SubcontractWindowFilmPage() {
               { href: "/subcontract-window-film-installation-middlesbrough/", label: "Middlesbrough" },
               { href: "/subcontract-window-film-installation-lancaster/", label: "Lancaster" },
               { href: "/subcontract-window-film-installation-dundee/", label: "Dundee" },
+              { href: "/subcontract-window-film-installation-perth/", label: "Perth" },
             ].map(({ href, label }) => (
               <Link key={href} href={href} className="card-float p-3 hover:border-accent/40 transition-colors">
                 <p className="text-sm font-medium text-foreground">{label}</p>

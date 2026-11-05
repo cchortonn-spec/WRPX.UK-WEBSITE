@@ -1354,3 +1354,43 @@ _Last updated by automation run on 2026-10-31_
 | `/architectural-wrap-student-accommodation-lancaster/` | Student accommodation vinyl wrap Lancaster — LA postcodes; Lancaster University Bailrigg LA1 (~15,000 students); Greaves LA1 student HMO zone; Bowerham LA1; Scotforth LA1; ~1h30m via M62/M6; 33rd PBSA city; FIRST Lancaster PBSA wrap page; CQC (England); Pillar 4 |
 
 _Last updated by automation run on 2026-11-01_
+
+## Run 108 additions (2026-11-02)
+| Slug | Title / Purpose |
+|---|---|
+| `/architectural-wrap-care-homes-inverness/` | Care home vinyl wrapping Inverness — IV postcodes; Care Inspectorate Scotland; Raigmore Hospital IV2; ~5h via A1(M)/A9; 34th care homes city; FIRST Inverness care homes wrap; Pillar 4 |
+| `/architectural-wrap-student-accommodation-inverness/` | Student accommodation vinyl wrap Inverness — IV postcodes; UHI Inverness Campus IV2; city-centre HMO stock IV1; ~5h via A1(M)/A9; 34th PBSA city; FIRST Inverness PBSA wrap; Pillar 4 |
+| `/window-film/gym-window-film-lancaster/` | Gym window film Lancaster — LA postcodes; Salt Ayre Leisure Centre LA1; Lancaster University sport LA1; building Regulations manifestation (England); ~1h30m via M62/M6; 23rd gym WF city; FIRST Lancaster gym WF; Pillar 1 |
+| `/subcontract-window-film-installation-middlesbrough/` | Subcontract window film Middlesbrough — TS postcodes; Captain Cook Square TS1; Cleveland Retail Park TS4; Building Regulations manifestation (England); ~1h30m via A1(M); 18th B2B WF page; FIRST Middlesbrough B2B WF; Pillar 2 |
+
+_Last updated by automation run on 2026-11-02_
+
+## Run 109 additions (2026-11-03)
+| Slug | Title / Purpose |
+|---|---|
+| `/window-film/retail-window-film-lancaster/` | Retail window film Lancaster — LA postcodes; St Nicholas Arcades LA1; Marketgate LA1; Lancaster Retail Park LA1; Morecambe Retail Park LA4; Building Regulations manifestation (England); ~1h30m via M62/M6; 33rd retail WF city; FIRST Lancaster retail WF; Pillar 3 |
+| `/subcontract-window-film-installation-lancaster/` | Subcontract window film Lancaster — LA postcodes; St Nicholas Arcades LA1; Lancaster University LA1; Building Regulations manifestation (England); ~1h30m via M62/M6; 19th B2B WF page; FIRST Lancaster B2B WF; Pillar 2 |
+| `/architectural-wrap-student-accommodation-dundee/` | Student accommodation vinyl wrap Dundee — DD postcodes; University of Dundee Nethergate DD1 (~18k students); Abertay University Bell Street DD1 (~5k); West End Perth Road DD2 HMO corridor; Stobswell DD4; Scottish Technical Handbooks; ~3h30m via A1(M)/A90; 35th PBSA city; FIRST Dundee PBSA wrap; Pillar 4 |
+| `/architectural-wrap-care-homes-dundee/` | Care home vinyl wrapping Dundee — DD postcodes; Care Inspectorate Scotland; Ninewells Hospital DD2; ~3h30m via A1(M)/A90; 35th care homes city; FIRST Dundee care homes wrap; Pillar 4 |
+
+_Last updated by automation run on 2026-11-03_
+
+## Run 110 additions (2026-11-04)
+| Slug | Title / Purpose |
+|---|---|
+| `/window-film/retail-window-film-dundee/` | Retail window film Dundee — DD postcodes; Overgate Centre DD1; Wellgate Centre DD1; Gallagher Retail Park DD3; Kingsway Retail Park DD3; Dundee Designer Outlet DD2; Broughty Ferry DD5; Scottish Technical Handbooks manifestation; ~3h30m via A1(M)/A90; 34th retail WF city; FIRST Dundee retail WF; Pillar 3 |
+| `/subcontract-window-film-installation-dundee/` | Subcontract window film Dundee — DD postcodes; Overgate Centre DD1; Wellgate Centre DD1; University of Dundee DD1; Abertay University DD1; Ninewells Hospital DD2; Gallagher Retail Park DD3; Scottish Technical Handbooks manifestation; ~3h30m via A1(M)/A90; 20th B2B WF page; FIRST Dundee B2B WF; Pillar 2 |
+| `/window-film/gym-window-film-dundee/` | Gym window film Dundee — DD postcodes; Dundee Leisure Centre DD4; Lochee Leisure Centre DD2; University of Dundee Sport DD1; Abertay University DD1; PureGym Dundee DD1; Scottish Technical Handbooks manifestation; ~3h30m via A1(M)/A90; 24th gym WF city; FIRST Dundee gym WF; Pillar 1 |
+| `/architectural-wrap-care-homes-peterborough/` | Care home vinyl wrapping Peterborough — PE postcodes; Peterborough City Hospital PE3; Bretton PE3; Hampton PE7; Paston PE4; CQC (England); ~1h30m via A1(M); 36th care homes city; FIRST Peterborough care homes wrap; Pillar 4 |
+
+_Last updated by automation run on 2026-11-04_
+
+## Run 111 additions (2026-11-05)
+| Slug | Title / Purpose |
+|---|---|
+| `/window-film/retail-window-film-perth/` | Retail window film Perth — PH postcodes; St John's Shopping Centre PH1; Broxden Retail Park PH2; Inveralmond Retail Park PH1; King Edward Street/High Street retail core PH1; Scottish Technical Handbooks manifestation; ~3h via A1(M)/M90; 35th retail WF city; FIRST Perth retail WF; Pillar 1/3 |
+| `/subcontract-window-film-installation-perth/` | Subcontract window film Perth — PH postcodes; St John's Shopping Centre PH1; Broxden Retail Park PH2; Dewars Centre PH2; Perth College UHI Crieff Road; Perth Royal Infirmary PH1; Scottish Technical Handbooks manifestation; ~3h via A1(M)/M90; 21st B2B WF page; FIRST Perth B2B WF; Pillar 2 |
+| `/window-film/gym-window-film-perth/` | Gym window film Perth — PH postcodes; Dewars Centre Glover Street PH2; Bell's Sports Centre Hay Street PH1; Perth College UHI sport facilities; PureGym Perth; Scottish Technical Handbooks manifestation; ~3h via A1(M)/M90; 25th gym WF city; FIRST Perth gym WF; Pillar 1 |
+| `/architectural-wrap-student-accommodation-perth/` | Student accommodation vinyl wrap Perth — PH postcodes; Perth College UHI Crieff Road (~8,000 students); city-centre PH1 student zones; North Inch/Kinnoull Hill HMO corridor; Bridgend PH2; Cherrybank PH2; Care Inspectorate Scotland (not CQC); ~3h via A1(M)/M90; 36th PBSA city; FIRST Perth PBSA wrap; Pillar 4 |
+
+_Last updated by automation run on 2026-11-05_

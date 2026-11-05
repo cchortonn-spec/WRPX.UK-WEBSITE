@@ -498,6 +498,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "subcontract-window-film-installation-dundee",
     "window-film/gym-window-film-dundee",
     "architectural-wrap-care-homes-peterborough",
+    "window-film/retail-window-film-perth",
+    "subcontract-window-film-installation-perth",
+    "window-film/gym-window-film-perth",
+    "architectural-wrap-student-accommodation-perth",
   ];
 
   const furnitureLocations = siteConfig.areas.map((city) =>
