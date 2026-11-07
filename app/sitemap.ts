@@ -506,6 +506,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "subcontract-window-film-installation-hull",
     "window-film/gym-window-film-wolverhampton",
     "subcontract-window-film-installation-wolverhampton",
+    "window-film/retail-window-film-wolverhampton",
+    "window-film/gym-window-film-norwich",
+    "subcontract-window-film-installation-norwich",
+    "architectural-wrap-care-homes-norwich",
   ];
 
   const furnitureLocations = siteConfig.areas.map((city) =>
