@@ -1394,3 +1394,27 @@ _Last updated by automation run on 2026-11-04_
 | `/architectural-wrap-student-accommodation-perth/` | Student accommodation vinyl wrap Perth — PH postcodes; Perth College UHI Crieff Road (~8,000 students); city-centre PH1 student zones; North Inch/Kinnoull Hill HMO corridor; Bridgend PH2; Cherrybank PH2; Care Inspectorate Scotland (not CQC); ~3h via A1(M)/M90; 36th PBSA city; FIRST Perth PBSA wrap; Pillar 4 |
 
 _Last updated by automation run on 2026-11-05_
+
+## Run 112 additions (2026-11-06)
+| Slug | Title / Purpose |
+|---|---|
+| `/architectural-wrap-care-homes-perth/` | Care home vinyl wrapping Perth — PH postcodes; Care Inspectorate Scotland; Perth Royal Infirmary PH1; Perth & Kinross Council; ~3h via A1(M)/M90; 37th care homes city; FIRST Perth care homes page; Pillar 4 |
+| `/subcontract-window-film-installation-hull/` | Subcontract window film Hull — HU postcodes; St Stephen's Shopping Centre HU1; Kingswood Retail Park HU7; University of Hull HU6; Building Regulations manifestation (England); ~1h30m via M18/M62; 22nd B2B WF page; FIRST Hull B2B WF page; Pillar 2 |
+| `/window-film/gym-window-film-wolverhampton/` | Gym window film Wolverhampton — WV postcodes; Aldersley Leisure Village WV6; Bilston Leisure Centre WV14; University of Wolverhampton WV1; Building Regulations manifestation (England); ~1h via M1/M6; 26th gym WF city; FIRST Wolverhampton gym WF page; Pillar 1 |
+| `/subcontract-window-film-installation-wolverhampton/` | Subcontract window film Wolverhampton — WV postcodes; University of Wolverhampton WV1; Aldersley Leisure Village WV6; Mander/Wulfrun Centres WV1; Building Regulations manifestation (England); ~1h via M1/M6; 23rd B2B WF page; FIRST Wolverhampton B2B WF page; Pillar 2 |
+
+_Last updated by automation run on 2026-11-06_
+
+## Run 113 additions (2026-11-07)
+| Slug | Title / Purpose |
+|---|---|
+| `/window-film/retail-window-film-wolverhampton/` | Retail window film Wolverhampton — WV postcodes; Mander Centre WV1; Wulfrun Centre WV1; Bilston town centre WV14; Building Regulations manifestation (England); ~1h via M1/M6; 36th retail WF city; FIRST Wolverhampton retail WF page; Pillar 1/3 |
+| `/window-film/gym-window-film-norwich/` | Gym window film Norwich — NR postcodes; Norwich Sports Village NR4; UEA Sportspark NR4; Riverside Leisure NR1; Building Regulations manifestation (England); ~2h30m via A1(M)/A11; 27th gym WF city; FIRST Norwich gym WF page; Pillar 1 |
+| `/subcontract-window-film-installation-norwich/` | Subcontract window film Norwich — NR postcodes; Chapelfield Shopping Centre NR2; Castle Quarter NR1; University of East Anglia NR4; Norwich Sports Village NR4; Building Regulations manifestation (England); ~2h30m via A1(M)/A11; 24th B2B WF page; FIRST Norwich B2B WF page; Pillar 2 |
+| `/architectural-wrap-care-homes-norwich/` | Care home vinyl wrapping Norwich — NR postcodes; CQC (England); Norfolk County Council; Norfolk & Norwich University Hospital NR4; Eaton NR4; Old Catton NR6; Sprowston NR6; Thorpe St Andrew NR7; ~2h30m via A1(M)/A11; 38th care homes city; FIRST Norwich care homes wrap; Pillar 4 |
+
+**Hub maintenance (Run 113):**
+- `/window-film/gym-window-film/` — Wolverhampton link added to city grid (now 27 cities)
+- `/subcontract-window-film-installation/` — Hull + Wolverhampton links added to city grid (now 25 cities)
+
+_Last updated by automation run on 2026-11-07_

@@ -383,6 +383,7 @@ export default function GymWindowFilmPage() {
               { href: "/window-film/gym-window-film-lancaster/", label: "Lancaster" },
               { href: "/window-film/gym-window-film-dundee/", label: "Dundee" },
               { href: "/window-film/gym-window-film-perth/", label: "Perth" },
+              { href: "/window-film/gym-window-film-wolverhampton/", label: "Wolverhampton" },
             ].map(({ href, label }) => (
               <Link key={href} href={href} className="card-float p-3 hover:border-accent/40 transition-colors">
                 <p className="text-sm font-medium text-foreground">{label}</p>
