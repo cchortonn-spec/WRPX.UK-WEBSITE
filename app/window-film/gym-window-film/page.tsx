@@ -2,6 +2,17 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { FaqAccordion } from "@/components/FaqAccordion";
 import { getServiceSchema } from "@/lib/schema";
+import { photosByName } from "@/lib/portfolio";
+import { ProjectPhotos } from "@/components/ProjectPhotos";
+
+const gymPhotos = photosByName(
+  "solar-control-window-film-gym-liverpool-01",
+  "solar-control-window-film-gym-liverpool-03",
+  "solar-control-window-film-gym-liverpool-02",
+  "gym-window-film-doncaster-01",
+  "gym-window-film-doncaster-02",
+  "gym-window-film-doncaster-03",
+);
 
 export const metadata: Metadata = {
   title: "Window Film for Gyms & Leisure Centres | Privacy, Frosted & Solar Control | WRPX",
@@ -141,6 +152,16 @@ export default function GymWindowFilmPage() {
               Window Film Overview
             </Link>
           </div>
+        </div>
+      </section>
+
+      <section className="px-4 pt-16">
+        <div className="container mx-auto max-w-5xl">
+          <ProjectPhotos
+            title="Recent gym installs"
+            intro="Solar control film across the full-height glazing at Trident Gym, Liverpool, and privacy film on a gym frontage in Doncaster."
+            photos={gymPhotos}
+          />
         </div>
       </section>
 

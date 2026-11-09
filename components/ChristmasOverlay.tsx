@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useSeasonActive } from "@/lib/use-season-active";
 
 /**
@@ -52,6 +53,30 @@ export function ChristmasOverlay() {
         )
       )}
     </div>
+  );
+}
+
+/** Clickable "book for Christmas" strip across the top of the header. */
+export function ChristmasBanner() {
+  const active = useSeasonActive("christmas");
+  if (!active) return null;
+
+  return (
+    <Link href="/contact/" className="xmas-banner">
+      <span className="xmas-banner-inner">
+        <span className="xmas-banner-star" aria-hidden="true">
+          ★
+        </span>
+        <span className="xmas-banner-text">
+          <span className="xmas-banner-long">Book now to get your kitchen wrapped for Christmas</span>
+          <span className="xmas-banner-short">Kitchen wrapped for Christmas?</span>
+        </span>
+        <span className="xmas-banner-urgency">Slots are filling fast</span>
+        <span className="xmas-banner-cta">
+          Book now <span aria-hidden="true">→</span>
+        </span>
+      </span>
+    </Link>
   );
 }
 

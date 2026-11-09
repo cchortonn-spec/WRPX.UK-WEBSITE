@@ -1,6 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
+import { photosByName } from "@/lib/portfolio";
+import { ProjectPhotos } from "@/components/ProjectPhotos";
+
+const doncasterPhotos = photosByName(
+  "white-gloss-kitchen-wrap-doncaster-01",
+  "cream-fitted-bedroom-furniture-wrap-doncaster-01",
+  "dressing-table-wrap-doncaster-after-01",
+);
 
 export const metadata: Metadata = {
   title: "Kitchen Wrapping Doncaster | 5-Year Guarantee | Free Survey",
@@ -139,6 +147,13 @@ export default function KitchenWrappingDoncasterPage() {
                 <span className="mt-1 block">Navy wood-effect + white marble, Doncaster</span>
               </figcaption>
             </figure>
+          </div>
+          <div className="mt-8">
+            <ProjectPhotos
+              title="More recent work in Doncaster"
+              intro="White gloss tall kitchen units, plus fitted bedroom furniture and a dressing table wrapped for Doncaster customers."
+              photos={doncasterPhotos}
+            />
           </div>
         </div>
       </section>

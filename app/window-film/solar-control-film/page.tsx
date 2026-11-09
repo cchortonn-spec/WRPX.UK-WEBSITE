@@ -2,6 +2,17 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { FaqAccordion } from "@/components/FaqAccordion";
+import { ProjectPhotos } from "@/components/ProjectPhotos";
+import { photosByName } from "@/lib/portfolio";
+
+const solarPhotos = photosByName(
+  "solar-control-window-film-gym-liverpool-01",
+  "solar-control-window-film-gym-liverpool-04",
+  "solar-control-film-garden-room-rotherham-01",
+  "solar-control-film-garden-room-rotherham-02",
+  "solar-window-film-stone-cottage-sheffield-01",
+  "solar-control-window-film-gym-liverpool-05",
+);
 
 export const metadata: Metadata = {
   title: "Solar Control Window Film South Yorkshire | Conservatories & Offices | WRPX",
@@ -98,8 +109,8 @@ export default function SolarControlFilmPage() {
       {/* Hero */}
       <section className="relative h-[40vh] min-h-[280px] w-full overflow-hidden">
         <Image
-          src="/images/window-film/tinting-1.png"
-          alt="Solar control window film — South Yorkshire"
+          src="/images/gym-solar-film-liverpool/solar-control-window-film-gym-liverpool-01.jpg"
+          alt="Solar control window film on full-height gym windows, Trident Gym Liverpool"
           fill
           className="object-cover"
           priority
@@ -122,6 +133,16 @@ export default function SolarControlFilmPage() {
           <p className="mt-4 text-muted leading-relaxed">
             WRPX installs solar control film across South Yorkshire for homeowners, businesses and commercial clients.
           </p>
+        </div>
+      </section>
+
+      <section className="px-4">
+        <div className="container mx-auto max-w-5xl">
+          <ProjectPhotos
+            title="Recent solar film installs"
+            intro="Full-height gym glazing at Trident Gym, Liverpool, a garden room in Rotherham and a stone cottage in Sheffield."
+            photos={solarPhotos}
+          />
         </div>
       </section>
 

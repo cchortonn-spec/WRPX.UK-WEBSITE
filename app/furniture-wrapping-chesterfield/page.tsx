@@ -1,6 +1,17 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/site-config";
+import { photosByName } from "@/lib/portfolio";
+import { ProjectPhotos } from "@/components/ProjectPhotos";
+
+const localPhotos = photosByName(
+  "white-loft-wardrobe-wrap-chesterfield-01",
+  "white-loft-wardrobe-wrap-chesterfield-02",
+  "white-loft-wardrobe-wrap-chesterfield-03",
+  "oak-effect-bath-panel-wrap-chesterfield-01",
+  "oak-effect-bath-panel-wrap-chesterfield-02",
+  "oak-effect-bath-panel-wrap-chesterfield-03",
+);
 
 export const metadata: Metadata = {
   title: "Furniture Wrapping Chesterfield | Wardrobe & Bedroom Vinyl Wrap | WRPX",
@@ -74,6 +85,16 @@ export default function FurnitureWrappingChesterfieldPage() {
               {siteConfig.guaranteeYears}-year guarantee — written on every job.
             </p>
           </div>
+        </div>
+      </section>
+
+      <section className="pt-12">
+        <div className="container mx-auto max-w-3xl px-4">
+          <ProjectPhotos
+            title="Recent furniture wraps in Chesterfield"
+            intro="White loft wardrobes and drawers under the eaves, and a shaker bath panel wrapped in light oak woodgrain."
+            photos={localPhotos}
+          />
         </div>
       </section>
 

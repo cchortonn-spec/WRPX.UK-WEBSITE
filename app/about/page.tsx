@@ -38,7 +38,7 @@ export default function AboutPage() {
               WRPX Kitchen Wrapping Specialist
             </h2>
             <p className="mt-4 text-muted leading-relaxed">
-              I run WRPX and do the surveys and wrapping myself. No national franchise, no subcontractors — you get one point of contact from first call to final walkround. I&apos;ve been wrapping kitchens, furniture and commercial vinyl for {siteConfig.yearsInBusiness}+ years. If your kitchen is suitable for wrapping I&apos;ll tell you; if it isn&apos;t I&apos;ll say that too. Honest advice, trade-level prep and a {siteConfig.guaranteeYears}-year guarantee on every job.
+              I run WRPX and all of our kitchen wrapping is done in-house. No national franchise — you get one point of contact from first call to final walkround. I&apos;ve been wrapping kitchens, furniture and commercial vinyl for {siteConfig.yearsInBusiness}+ years. If your kitchen is suitable for wrapping I&apos;ll tell you; if it isn&apos;t I&apos;ll say that too. Honest advice, trade-level prep and a {siteConfig.guaranteeYears}-year guarantee on every job.
             </p>
             <p className="mt-4 text-muted leading-relaxed">
               We cover Sheffield, Doncaster, Barnsley, Rotherham, Leeds, Huddersfield and Chesterfield. Free survey, fixed quote, no obligation.
@@ -58,7 +58,7 @@ export default function AboutPage() {
               <li>Domestic and commercial surface wrapping knowledge</li>
               <li>Preparation-first process before any film is applied</li>
               <li>{siteConfig.guaranteeYears}-year named guarantee on eligible jobs</li>
-              <li>Direct accountability: same installer from survey to sign-off</li>
+              <li>Direct accountability: one point of contact from survey to sign-off</li>
             </ul>
             <p className="mt-5 text-muted leading-relaxed">
               We use proven film systems and select finish types based on

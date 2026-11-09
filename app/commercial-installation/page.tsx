@@ -116,6 +116,18 @@ export default function CommercialInstallationPage() {
                 src: "/images/commercial/IMG_8719_Original-93f33c8b-f6d6-498b-9a52-2f13d628a0a1.png",
                 alt: "Branded retail POS island wrapped in vinyl graphics.",
               },
+              {
+                src: "/images/commercial-frosted-glass-film-sheffield/frosted-film-glass-balustrade-decking-sheffield-01.jpg",
+                alt: "Frosted film on glass balustrade panels around lodge decking, commercial job, Sheffield.",
+              },
+              {
+                src: "/images/gym-solar-film-liverpool/solar-control-window-film-gym-liverpool-01.jpg",
+                alt: "Solar control window film on full-height glazing at Trident Gym, Liverpool.",
+              },
+              {
+                src: "/images/window-film-projects/gym-window-film-doncaster-02.jpg",
+                alt: "Mirror-effect privacy film on a gym shop front, Doncaster.",
+              },
             ].map((img) => (
               <div key={img.src} className="card-float overflow-hidden">
                 <div className="relative aspect-[4/3]">

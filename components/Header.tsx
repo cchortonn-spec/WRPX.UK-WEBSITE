@@ -7,7 +7,7 @@ import { nav } from "@/lib/nav";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { useState } from "react";
 import { useImmersiveHero } from "@/lib/hero-config";
-import { ChristmasLights } from "@/components/ChristmasOverlay";
+import { ChristmasBanner, ChristmasLights } from "@/components/ChristmasOverlay";
 
 function Dropdown({
   label,
@@ -93,6 +93,7 @@ export function Header() {
           : undefined
       }
     >
+      <ChristmasBanner />
       <div className="container mx-auto flex min-h-20 max-w-6xl items-center justify-between gap-4 px-4 py-3 md:min-h-28">
         <Link href="/" className="logo-link flex shrink-0 items-center transition-colors duration-200 hover:text-accent-pink active:text-accent-pink">
           <Image

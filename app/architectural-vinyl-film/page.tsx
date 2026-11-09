@@ -231,7 +231,7 @@ export default function ArchitecturalVinylFilmPage() {
             <ul className="mt-5 list-inside list-disc space-y-2 text-muted">
               <li>7+ years of practical vinyl application experience</li>
               <li>Material-led preparation and application standards</li>
-              <li>No franchise handover: same person from survey to finish</li>
+              <li>No franchise handover: one point of contact from survey to finish</li>
               <li>{siteConfig.guaranteeYears}-year guarantee on eligible installs</li>
               <li>Local service across South Yorkshire and nearby areas</li>
             </ul>

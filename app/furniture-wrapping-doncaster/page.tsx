@@ -1,6 +1,17 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/site-config";
+import { photosByName } from "@/lib/portfolio";
+import { ProjectPhotos } from "@/components/ProjectPhotos";
+
+const localPhotos = photosByName(
+  "cream-fitted-bedroom-furniture-wrap-doncaster-01",
+  "cream-fitted-bedroom-furniture-wrap-doncaster-02",
+  "cream-fitted-bedroom-furniture-wrap-doncaster-03",
+  "dressing-table-wrap-doncaster-before-01",
+  "dressing-table-wrap-doncaster-after-01",
+  "dressing-table-wrap-doncaster-after-02",
+);
 
 export const metadata: Metadata = {
   title: "Furniture Wrapping Doncaster | Wardrobe & Bedroom Vinyl Wrap | WRPX",
@@ -82,6 +93,16 @@ export default function FurnitureWrappingDoncasterPage() {
               {siteConfig.guaranteeYears}-year guarantee on materials and workmanship — written on every job.
             </p>
           </div>
+        </div>
+      </section>
+
+      <section className="pt-12">
+        <div className="container mx-auto max-w-3xl px-4">
+          <ProjectPhotos
+            title="Recent furniture wraps in Doncaster"
+            intro="Cream fitted bedroom furniture with over-bed storage and a built-in desk, plus a dressing table taken from oak to a light stone finish."
+            photos={localPhotos}
+          />
         </div>
       </section>
 

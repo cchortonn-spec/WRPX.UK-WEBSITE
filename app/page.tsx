@@ -11,6 +11,7 @@ import { HeroTrustBar } from "@/components/HeroTrustBar";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { WrpxTrustPanel } from "@/components/WrpxTrustPanel";
 import { GoogleReviewsBar } from "@/components/GoogleReviewsBar";
+import { photosByName } from "@/lib/portfolio";
 
 export const metadata: Metadata = {
   title: "Kitchen Wrapping Sheffield & South Yorkshire | Vinyl Wrap Specialist | WRPX",
@@ -44,6 +45,15 @@ const galleryImages = [
   { src: "/images/home/kitchen-home-new-01.png", alt: "Modern grey kitchen wrap finish in South Yorkshire" },
   { src: "/images/home/kitchen-home-new-05.png", alt: "Close-up of wrapped kitchen cabinets and stone-style counters" },
 ];
+
+const recentProjects = photosByName(
+  "frosted-film-glass-balustrade-decking-sheffield-01",
+  "3m-wood-effect-wrapped-dining-table-rotherham-01",
+  "walnut-fitted-wardrobe-wrap-barnsley-01",
+  "3m-wood-effect-wrapped-tv-unit-rotherham-01",
+  "solar-control-window-film-gym-liverpool-01",
+  "dressing-table-wrap-doncaster-after-01",
+);
 
 export default function HomePage() {
   return (
@@ -366,6 +376,42 @@ export default function HomePage() {
           <p className="mt-8 text-center">
             <Link href="/gallery/" className="btn-primary inline-block">
               View full gallery →
+            </Link>
+          </p>
+        </div>
+      </section>
+
+      {/* Recent projects beyond kitchens */}
+      <section className="reveal px-4 py-14">
+        <div className="container mx-auto max-w-6xl">
+          <h2 className="section-heading mb-4 text-2xl font-semibold text-foreground md:text-3xl">
+            Recent projects
+          </h2>
+          <p className="mx-auto mb-8 max-w-2xl text-center text-muted">
+            Not just kitchens. Wardrobes, matching furniture sets, frosted glass and solar film for homes
+            and businesses across Sheffield, Rotherham, Barnsley, Doncaster and Chesterfield.
+          </p>
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {recentProjects.map((photo) => (
+              <figure key={photo.src} className="card-float overflow-hidden">
+                <div className="relative aspect-[4/3]">
+                  <Image
+                    src={photo.src}
+                    alt={photo.alt}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  />
+                </div>
+                <figcaption className="border-t border-border bg-card p-4 text-sm font-medium text-foreground">
+                  {photo.caption}
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+          <p className="mt-8 text-center">
+            <Link href="/gallery/" className="btn-secondary inline-block">
+              See the full portfolio →
             </Link>
           </p>
         </div>

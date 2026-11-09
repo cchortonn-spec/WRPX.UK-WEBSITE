@@ -2,6 +2,17 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/site-config";
 import { getServiceSchema } from "@/lib/schema";
+import { photosByName } from "@/lib/portfolio";
+import { ProjectPhotos } from "@/components/ProjectPhotos";
+
+const wardrobePhotos = photosByName(
+  "walnut-fitted-wardrobe-wrap-barnsley-01",
+  "cream-fitted-bedroom-furniture-wrap-doncaster-01",
+  "white-loft-wardrobe-wrap-chesterfield-01",
+  "oak-loft-wardrobe-wrap-rotherham-01",
+  "walnut-fitted-wardrobe-wrap-barnsley-03",
+  "dressing-table-wrap-doncaster-after-01",
+);
 
 export const metadata: Metadata = {
   title: "Bedroom Wardrobe Wrapping | Vinyl Wrap Wardrobes South Yorkshire | WRPX",
@@ -119,6 +130,12 @@ export default function BedroomWardrobeWrappingPage() {
               and advise on the best approach for your particular furniture.
             </p>
           </div>
+
+          <ProjectPhotos
+            title="Recent wardrobe and bedroom wraps"
+            intro="Walnut, oak, cream and white finishes on fitted wardrobes, loft storage and dressing tables across Barnsley, Doncaster, Rotherham and Chesterfield."
+            photos={wardrobePhotos}
+          />
 
           <div className="card-float p-8">
             <h2 className="text-xl font-semibold text-foreground">

@@ -1,6 +1,17 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/site-config";
+import { photosByName } from "@/lib/portfolio";
+import { ProjectPhotos } from "@/components/ProjectPhotos";
+
+const localPhotos = photosByName(
+  "walnut-fitted-wardrobe-wrap-barnsley-01",
+  "walnut-fitted-wardrobe-wrap-barnsley-02",
+  "walnut-fitted-wardrobe-wrap-barnsley-03",
+  "walnut-fitted-wardrobe-wrap-barnsley-04",
+  "walnut-fitted-wardrobe-wrap-barnsley-05",
+  "walnut-fitted-wardrobe-wrap-barnsley-06",
+);
 
 export const metadata: Metadata = {
   title: "Furniture Wrapping Barnsley | Wardrobe & Bedroom Vinyl Wrap | WRPX",
@@ -74,6 +85,16 @@ export default function FurnitureWrappingBarnsleyPage() {
               {siteConfig.guaranteeYears}-year guarantee — same as every kitchen job we do.
             </p>
           </div>
+        </div>
+      </section>
+
+      <section className="pt-12">
+        <div className="container mx-auto max-w-3xl px-4">
+          <ProjectPhotos
+            title="Recent furniture wraps in Barnsley"
+            intro="A full bedroom set wrapped in matching walnut woodgrain: triple wardrobe, dressing table, drawers and chest of drawers."
+            photos={localPhotos}
+          />
         </div>
       </section>
 

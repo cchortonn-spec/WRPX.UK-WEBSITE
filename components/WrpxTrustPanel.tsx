@@ -12,9 +12,9 @@ type WrpxTrustPanelProps = {
 
 const trustPoints = [
   `South Yorkshire based — ${siteConfig.areas.slice(0, 4).join(", ")} and beyond`,
-  "One installer from survey to sign-off",
+  "One point of contact from survey to sign-off",
   `Fully insured · ${siteConfig.guaranteeYears}-year guarantee`,
-  "No subcontractors, no handoffs",
+  "Kitchen wrapping always done in-house",
 ] as const;
 
 export function WrpxTrustPanel({
@@ -88,7 +88,7 @@ export function WrpxTrustPanel({
           <div className="wrpx-trust-featured-copy">
             <p className="wrpx-trust-eyebrow">Local specialist, not a call centre</p>
             <h2 className="wrpx-trust-heading">
-              The same team surveys, wraps and signs off your job
+              One local specialist from first survey to final sign-off
             </h2>
             <p className="wrpx-trust-lead">
               WRPX is a South Yorkshire vinyl wrapping business — kitchens, furniture,

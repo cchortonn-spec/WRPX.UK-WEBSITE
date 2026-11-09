@@ -2,6 +2,14 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/site-config";
 import { getServiceSchema } from "@/lib/schema";
+import { photosByName } from "@/lib/portfolio";
+import { ProjectPhotos } from "@/components/ProjectPhotos";
+
+const bathroomPhotos = photosByName(
+  "oak-effect-bath-panel-wrap-chesterfield-01",
+  "oak-effect-bath-panel-wrap-chesterfield-02",
+  "oak-effect-bath-panel-wrap-chesterfield-03",
+);
 
 export const metadata: Metadata = {
   title: "Bathroom Cabinet Wrapping | Vinyl Wrap Bathroom Units | South Yorkshire | WRPX",
@@ -110,6 +118,12 @@ export default function BathroomCabinetWrappingPage() {
               wet environment — we&apos;ll tell you before we quote.
             </p>
           </div>
+
+          <ProjectPhotos
+            title="Recent job: oak-effect bath panel"
+            intro="A shaker-style bath panel in Chesterfield, taken off the wall, wrapped in light oak woodgrain and refitted the same day."
+            photos={bathroomPhotos}
+          />
 
           <div className="card-float p-8">
             <h2 className="text-xl font-semibold text-foreground">

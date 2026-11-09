@@ -1,8 +1,10 @@
 "use client";
 
-import { FormEvent, useMemo, useState } from "react";
+import { DragEvent, FormEvent, useEffect, useMemo, useRef, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { track } from "@vercel/analytics";
+import { RESOURCES_HASH } from "@/components/QuoteResources";
 
 type QuoteType = "complete" | "cabinet" | "worktop" | "";
 type DoorStyle = "j-pull" | "shaker" | "flat" | "other" | "";
@@ -15,58 +17,69 @@ type ContactInfo = {
   city: string;
 };
 
-const STEP_TITLES = [
-  "Quote Type",
-  "Kitchen Specs",
-  "Submit Pictures",
-  "Contact Info",
-] as const;
+const STEP_TITLES = ["Your project", "Kitchen details", "Photos", "Your details"] as const;
+const MAX_PHOTOS = 12;
 
 const quoteTypeCards = [
   {
     id: "complete" as const,
-    title: "Complete Kitchen Wrap",
+    title: "Complete kitchen wrap",
     desc: "Doors, drawers, panels, plinths, trims, worktops and upstands.",
+    price: "From £1,099",
+    badge: "Most popular",
     image: "/images/home/kitchen-home-new-02.png",
   },
   {
     id: "cabinet" as const,
-    title: "Kitchen Cabinet Wrap",
+    title: "Cabinets only",
     desc: "Doors, drawers, panels, plinths and trims.",
+    price: "Doors from £45",
+    badge: "",
     image: "/images/home/kitchen-home-new-04.png",
   },
   {
     id: "worktop" as const,
-    title: "Worktop Wrap",
-    desc: "Worktops and upstands only. Splashback quoted separately.",
+    title: "Worktops only",
+    desc: "Worktops and upstands. Splashbacks quoted separately.",
+    price: "From £380",
+    badge: "",
     image: "/images/Marble-worktop-potefract/marble-effect-worktop-wrap-pontefract-01.jpeg",
   },
 ];
 
 const doorStyleCards = [
-  {
-    id: "j-pull" as const,
-    label: "J Pull Doors & Drawers",
-    image: "/images/door-styles/j-pull-bright.png",
-  },
-  {
-    id: "shaker" as const,
-    label: "Shaker Doors & Drawers",
-    image: "/images/door-styles/shaker-bright.png",
-  },
-  {
-    id: "flat" as const,
-    label: "Flat Doors & Drawers",
-    image: "/images/door-styles/flat-bright.png",
-  },
+  { id: "j-pull" as const, label: "J-pull", image: "/images/door-styles/j-pull-bright.png" },
+  { id: "shaker" as const, label: "Shaker", image: "/images/door-styles/shaker-bright.png" },
+  { id: "flat" as const, label: "Flat / slab", image: "/images/door-styles/flat-bright.png" },
   {
     id: "other" as const,
-    label: "Other",
+    label: "Other / not sure",
     image: "/images/door-styles/other-bright.png",
   },
 ];
 
+const photoIdeas = [
+  "The whole room",
+  "Doors & drawers close-up",
+  "Worktops",
+  "Any chips or damage",
+];
+
+/** Scrolls so the element sits just under the sticky header (which is taller while the Christmas banner shows). */
+function scrollBelowHeader(element: HTMLElement | null, onlyIfHidden: boolean) {
+  if (!element) return;
+  const headerBottom = document.querySelector("header")?.getBoundingClientRect().bottom ?? 0;
+  const top = element.getBoundingClientRect().top;
+  if (onlyIfHidden && top >= headerBottom) return;
+  window.scrollTo({ top: window.scrollY + top - headerBottom - 16, behavior: "smooth" });
+}
+
+const plural = (count: number, word: string) => `${count} ${word}${count === 1 ? "" : "s"}`;
+const typeLabel = (id: QuoteType) => quoteTypeCards.find((card) => card.id === id)?.title ?? "";
+const styleLabel = (id: DoorStyle) => doorStyleCards.find((card) => card.id === id)?.label ?? "";
+
 export function KitchenWrappingQuoteWizard() {
+  const topRef = useRef<HTMLDivElement>(null);
   const [step, setStep] = useState(1);
   const [submitted, setSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -78,6 +91,7 @@ export function KitchenWrappingQuoteWizard() {
   const [drawers, setDrawers] = useState("");
   const [worktopMetres, setWorktopMetres] = useState("");
   const [photos, setPhotos] = useState<File[]>([]);
+  const [dragging, setDragging] = useState(false);
   const [contact, setContact] = useState<ContactInfo>({
     firstName: "",
     lastName: "",
@@ -85,6 +99,12 @@ export function KitchenWrappingQuoteWizard() {
     mobile: "",
     city: "",
   });
+
+  const previews = useMemo(() => photos.map((file) => URL.createObjectURL(file)), [photos]);
+  useEffect(() => () => previews.forEach((url) => URL.revokeObjectURL(url)), [previews]);
+
+  const needsDoors = quoteType === "complete" || quoteType === "cabinet";
+  const needsWorktop = quoteType === "complete" || quoteType === "worktop";
 
   const stepIsValid = useMemo(() => {
     if (step === 1) return quoteType !== "";
@@ -107,8 +127,66 @@ export function KitchenWrappingQuoteWizard() {
     return false;
   }, [step, quoteType, worktopMetres, doors, drawers, doorStyle, photos.length, contact]);
 
+  const hint = useMemo(() => {
+    if (stepIsValid) return "";
+    if (step === 1) return "Pick an option to continue";
+    if (step === 2) {
+      if (quoteType === "cabinet" && !doorStyle) return "Choose your door style";
+      if (needsDoors && !(Number(doors) > 0)) return "Add how many doors you have";
+      if (needsWorktop && !(Number(worktopMetres) > 0)) return "Add your worktop length";
+    }
+    if (step === 3) {
+      const left = 2 - photos.length;
+      return `Add ${left} more photo${left === 1 ? "" : "s"}`;
+    }
+    if (step === 4) return "Fill in all your details to send";
+    return "";
+  }, [
+    stepIsValid,
+    step,
+    quoteType,
+    doorStyle,
+    needsDoors,
+    needsWorktop,
+    doors,
+    worktopMetres,
+    photos.length,
+  ]);
+
+  const goTo = (next: number) => {
+    setStep(Math.min(4, Math.max(1, next)));
+    requestAnimationFrame(() => scrollBelowHeader(topRef.current, true));
+  };
+
+  const chooseType = (id: Exclude<QuoteType, "">) => {
+    setQuoteType(id);
+    setTimeout(() => goTo(2), 320);
+  };
+
+  const addPhotos = (files: FileList | null) => {
+    if (!files) return;
+    const incoming = Array.from(files).filter(
+      (file) => file.type.startsWith("image/") || /\.(heic|heif)$/i.test(file.name),
+    );
+    setPhotos((current) => {
+      const seen = new Set(current.map((file) => `${file.name}-${file.size}`));
+      const fresh = incoming.filter((file) => !seen.has(`${file.name}-${file.size}`));
+      return [...current, ...fresh].slice(0, MAX_PHOTOS);
+    });
+  };
+
+  const onDrop = (event: DragEvent<HTMLLabelElement>) => {
+    event.preventDefault();
+    setDragging(false);
+    addPhotos(event.dataTransfer.files);
+  };
+
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    if (step < 4) {
+      if (stepIsValid) goTo(step + 1);
+      return;
+    }
     if (!stepIsValid || isSubmitting) return;
     setSubmitError("");
     setIsSubmitting(true);
@@ -133,9 +211,7 @@ export function KitchenWrappingQuoteWizard() {
     })
       .then(async (response) => {
         if (!response.ok) {
-          const data = (await response.json().catch(() => null)) as
-            | { error?: string }
-            | null;
+          const data = (await response.json().catch(() => null)) as { error?: string } | null;
           throw new Error(data?.error || "Something went wrong while sending your quote.");
         }
         track("Quote Form Submitted", {
@@ -143,12 +219,11 @@ export function KitchenWrappingQuoteWizard() {
           form: "kitchen-wrapping",
         });
         setSubmitted(true);
+        requestAnimationFrame(() => scrollBelowHeader(topRef.current, false));
       })
       .catch((error: unknown) => {
         const message =
-          error instanceof Error
-            ? error.message
-            : "Something went wrong while sending your quote.";
+          error instanceof Error ? error.message : "Something went wrong while sending your quote.";
         setSubmitError(message);
       })
       .finally(() => {
@@ -156,279 +231,624 @@ export function KitchenWrappingQuoteWizard() {
       });
   };
 
-  if (submitted) {
+  return <div ref={topRef}>{submitted ? renderSuccess() : renderForm()}</div>;
+
+  function renderSuccess() {
     return (
-      <div className="quote-shell card-float p-6 md:p-8">
-        <h2 className="text-2xl font-semibold text-foreground">Thanks, quote request received.</h2>
-        <p className="mt-3 text-muted">
-          We have your kitchen wrapping details and photos. Our team will contact you
-          shortly with next steps for your fixed quote.
+      <div className="qw-shell qw-success">
+        <span className="qw-success-tick" aria-hidden="true">
+          <TickIcon />
+        </span>
+        <h2 className="qw-title mt-5">
+          Thanks{contact.firstName ? `, ${contact.firstName.trim()}` : ""} — we&apos;ve got it!
+        </h2>
+        <p className="qw-sub mx-auto max-w-md">
+          Your kitchen details and photos are with our team. Here&apos;s what happens next:
         </p>
+        <ol className="qw-next">
+          <li>
+            <span className="qw-next-num">1</span>
+            We review your photos and measurements
+          </li>
+          <li>
+            <span className="qw-next-num">2</span>
+            We get in touch with your fixed quote
+          </li>
+          <li>
+            <span className="qw-next-num">3</span>
+            Book your free survey — we bring samples
+          </li>
+        </ol>
+        <div className="qw-success-actions">
+          <a href={RESOURCES_HASH} className="kw-btn-primary">
+            Browse sample books
+          </a>
+          <Link href="/wrap-visualiser/" className="kw-btn-ghost">
+            Try the visualiser <span aria-hidden="true">→</span>
+          </Link>
+        </div>
       </div>
     );
   }
 
-  return (
-    <form onSubmit={handleSubmit} className="quote-shell card-float p-4 md:p-6" noValidate>
-      <ol className="quote-stepper">
-        {STEP_TITLES.map((title, idx) => {
-          const stepNumber = idx + 1;
-          const status =
-            stepNumber < step ? "done" : stepNumber === step ? "active" : "todo";
-          return (
-            <li key={title} className={`quote-step ${status}`}>
-              <span className="quote-step-badge">{stepNumber < step ? "✓" : stepNumber}</span>
-              <span className="quote-step-label">{title}</span>
-            </li>
-          );
-        })}
-      </ol>
-
-      <div className="quote-wizard-panel mt-6 p-4 md:p-6">
-        {step === 1 && (
-          <>
-            <h2 className="text-2xl font-semibold text-foreground">
-              What type of quote do you need?
-            </h2>
-            <p className="mt-2 text-sm text-muted">Choose one option to continue.</p>
-            <div className="mt-5 grid gap-4 md:grid-cols-3">
-              {quoteTypeCards.map((item) => (
-                <button
-                  key={item.id}
-                  type="button"
-                  onClick={() => setQuoteType(item.id)}
-                  className={`quote-option-card ${
-                    quoteType === item.id ? "quote-option-card-active" : ""
-                  }`}
-                >
-                  <div className="relative h-44 w-full overflow-hidden rounded-lg">
-                    <Image
-                      src={item.image}
-                      alt={item.title}
-                      fill
-                      className="object-cover"
-                      sizes="(max-width: 768px) 100vw, 33vw"
-                    />
-                  </div>
-                  <h3 className="mt-3 text-lg font-semibold text-foreground">{item.title}</h3>
-                  <p className="mt-1 text-sm text-muted">{item.desc}</p>
-                </button>
-              ))}
-            </div>
-          </>
-        )}
-
-        {step === 2 && (
-          <>
-            <h2 className="text-2xl font-semibold text-foreground">Tell us about your kitchen</h2>
-            <p className="mt-2 text-sm text-muted">
-              Add your measurements so we can produce a realistic quote.
+  function renderForm() {
+    const progress = ((step - 1) / (STEP_TITLES.length - 1)) * 100;
+    return (
+      <form onSubmit={handleSubmit} className="qw-shell" noValidate>
+        <div className="qw-top">
+          <div className="qw-top-row">
+            <p className="qw-step-count">
+              Step <strong>{step}</strong> of {STEP_TITLES.length}
+              <span className="qw-step-name"> · {STEP_TITLES[step - 1]}</span>
             </p>
+            <p className="qw-time">
+              <ClockIcon /> About 2 minutes
+            </p>
+          </div>
+          <div className="qw-progress" aria-hidden="true">
+            <span style={{ width: `${Math.max(progress, 4)}%` }} />
+          </div>
+          <ol className="qw-steps">
+            {STEP_TITLES.map((title, idx) => {
+              const n = idx + 1;
+              const status = n < step ? "done" : n === step ? "active" : "todo";
+              return (
+                <li key={title} className={`qw-step qw-step-${status}`}>
+                  <button
+                    type="button"
+                    disabled={n >= step || isSubmitting}
+                    onClick={() => goTo(n)}
+                    aria-current={n === step ? "step" : undefined}
+                  >
+                    <span className="qw-step-dot">{n < step ? <TickIcon /> : n}</span>
+                    <span className="qw-step-label">{title}</span>
+                  </button>
+                </li>
+              );
+            })}
+          </ol>
+        </div>
 
-            {quoteType !== "worktop" && (
-              <>
-                <h3 className="mt-6 text-lg font-semibold text-foreground">
-                  Style of doors and drawers
-                </h3>
-                <div className="mt-3 grid grid-cols-2 gap-4 lg:grid-cols-4">
-                  {doorStyleCards.map((item) => (
+        <div key={step} className="qw-panel">
+          {step === 1 && (
+            <>
+              <h2 className="qw-title">What would you like wrapped?</h2>
+              <p className="qw-sub">Tap one to get started — you can change it later.</p>
+              <div className="qw-type-grid">
+                {quoteTypeCards.map((item) => {
+                  const active = quoteType === item.id;
+                  return (
                     <button
                       key={item.id}
                       type="button"
-                      onClick={() => setDoorStyle(item.id)}
-                      className={`quote-style-card ${
-                        doorStyle === item.id ? "quote-option-card-active" : ""
-                      } h-full`}
+                      onClick={() => chooseType(item.id)}
+                      className={`qw-type-card${active ? " qw-selected" : ""}`}
+                      aria-pressed={active}
                     >
-                      <div className="quote-style-photo relative aspect-[4/5] w-full overflow-hidden">
+                      <span className="qw-type-image">
                         <Image
                           src={item.image}
-                          alt={item.label}
+                          alt=""
                           fill
-                          className="object-cover object-center"
-                          sizes="(max-width: 1024px) 50vw, 25vw"
+                          className="object-cover"
+                          sizes="(max-width: 768px) 40vw, 260px"
                         />
-                        <span className="quote-style-caption">{item.label}</span>
-                      </div>
+                        {item.badge && <span className="qw-type-badge">{item.badge}</span>}
+                      </span>
+                      <span className="qw-type-body">
+                        <span className="qw-type-title">{item.title}</span>
+                        <span className="qw-type-desc">{item.desc}</span>
+                        <span className="qw-type-price">{item.price}</span>
+                      </span>
+                      <span className="qw-check" aria-hidden="true">
+                        <TickIcon />
+                      </span>
                     </button>
-                  ))}
-                </div>
+                  );
+                })}
+              </div>
+            </>
+          )}
 
-                {doorStyle === "other" && (
-                  <div className="mt-4 rounded-lg border border-accent/50 bg-accent/10 p-3 text-sm text-foreground">
-                    Your door style may need new flat doors before wrapping. We will
-                    include this option in your quote if required.
+          {step === 2 && (
+            <>
+              <h2 className="qw-title">Tell us about your kitchen</h2>
+              <p className="qw-sub">
+                A rough count is fine — we confirm everything at your free survey.
+              </p>
+
+              {needsDoors && (
+                <fieldset className="qw-field-group">
+                  <legend className="qw-label">
+                    Door style
+                    {quoteType === "complete" && <span className="qw-optional">optional</span>}
+                  </legend>
+                  <div className="qw-style-grid">
+                    {doorStyleCards.map((item) => {
+                      const active = doorStyle === item.id;
+                      return (
+                        <button
+                          key={item.id}
+                          type="button"
+                          onClick={() => setDoorStyle(item.id)}
+                          className={`qw-style-card${active ? " qw-selected" : ""}`}
+                          aria-pressed={active}
+                        >
+                          <span className="qw-style-image">
+                            <Image
+                              src={item.image}
+                              alt=""
+                              fill
+                              className="object-cover"
+                              sizes="(max-width: 640px) 45vw, 170px"
+                            />
+                          </span>
+                          <span className="qw-style-label">{item.label}</span>
+                          <span className="qw-check" aria-hidden="true">
+                            <TickIcon />
+                          </span>
+                        </button>
+                      );
+                    })}
                   </div>
-                )}
-              </>
-            )}
+                  {doorStyle === "other" && (
+                    <p className="qw-note">
+                      Some door styles need new flat doors before wrapping. If yours do, we&apos;ll
+                      include that option in your quote.
+                    </p>
+                  )}
+                </fieldset>
+              )}
 
-            <div className="mt-6 grid gap-4 sm:grid-cols-2">
-              {quoteType !== "worktop" && (
-                <>
-                  <label className="text-sm text-muted">
-                    Number of doors
-                    <input
-                      type="number"
-                      min={1}
+              <div className="qw-counts">
+                {needsDoors && (
+                  <>
+                    <NumberStepper
+                      label="Doors"
                       value={doors}
-                      onChange={(e) => setDoors(e.target.value)}
-                      className="quote-input"
-                      placeholder="e.g. 12"
+                      min={1}
+                      onChange={setDoors}
+                      placeholder="12"
                     />
-                  </label>
-                  <label className="text-sm text-muted">
-                    Number of drawers
-                    <input
-                      type="number"
-                      min={0}
+                    <NumberStepper
+                      label="Drawers"
                       value={drawers}
-                      onChange={(e) => setDrawers(e.target.value)}
-                      className="quote-input"
-                      placeholder="e.g. 5"
+                      min={0}
+                      onChange={setDrawers}
+                      placeholder="5"
                     />
+                  </>
+                )}
+                {needsWorktop && (
+                  <label className="qw-count qw-count-wide">
+                    <span className="qw-label">Worktop length</span>
+                    <span className="qw-metres">
+                      <input
+                        type="number"
+                        inputMode="decimal"
+                        min={0.1}
+                        step={0.1}
+                        value={worktopMetres}
+                        onChange={(e) => setWorktopMetres(e.target.value)}
+                        className="qw-input"
+                        placeholder="4.8"
+                      />
+                      <span className="qw-metres-unit">metres</span>
+                    </span>
+                    <span className="qw-help">
+                      Measure the full run, including the sink and hob.
+                    </span>
                   </label>
-                </>
-              )}
+                )}
+              </div>
 
-              {(quoteType === "complete" || quoteType === "worktop") && (
-                <label className="text-sm text-muted sm:col-span-2">
-                  Metres of worktop (include sink and hob length)
-                  <input
-                    type="number"
-                    min={0.1}
-                    step={0.1}
-                    value={worktopMetres}
-                    onChange={(e) => setWorktopMetres(e.target.value)}
-                    className="quote-input"
-                    placeholder="e.g. 4.8"
+              <a href={RESOURCES_HASH} className="qw-inspire">
+                <span className="qw-inspire-swatches" aria-hidden="true">
+                  <span
+                    style={{
+                      backgroundImage:
+                        "url(/images/vinyl-finish-samples/coverstyl/coverstyl-k1-black-mat.jpg)",
+                    }}
                   />
-                </label>
-              )}
-            </div>
-          </>
-        )}
+                  <span
+                    style={{
+                      backgroundImage:
+                        "url(/images/vinyl-finish-samples/coverstyl/coverstyl-nh80-sand-oak.jpg)",
+                    }}
+                  />
+                  <span
+                    style={{
+                      backgroundImage:
+                        "url(/images/vinyl-finish-samples/coverstyl/coverstyl-ne31-statuary-white.jpg)",
+                    }}
+                  />
+                </span>
+                <span>
+                  <strong>Not picked a finish yet?</strong> No problem — browse our sample books
+                </span>
+                <span aria-hidden="true">→</span>
+              </a>
+            </>
+          )}
 
-        {step === 3 && (
-          <>
-            <h2 className="text-2xl font-semibold text-foreground">
-              Upload a minimum of 2 kitchen photos
-            </h2>
-            <p className="mt-2 text-sm text-muted">
-              Include wide room shots and close-ups of any damaged areas.
-            </p>
-              <label className="quote-upload mt-5 block cursor-pointer p-8 text-center">
-              <span className="block text-lg font-medium text-foreground">
-                Drag and drop or click to upload
-              </span>
-              <span className="mt-1 block text-sm text-muted">JPG, PNG or WEBP</span>
-              <input
-                type="file"
-                accept="image/*"
-                multiple
-                className="sr-only"
-                onChange={(e) => setPhotos(Array.from(e.target.files ?? []))}
-              />
-            </label>
-            <p className={`mt-3 text-sm ${photos.length >= 2 ? "text-accent" : "text-muted"}`}>
-              {photos.length} photo{photos.length === 1 ? "" : "s"} selected (minimum 2 required)
-            </p>
-            {photos.length > 0 && (
-              <ul className="mt-3 space-y-1 text-sm text-muted">
-                {photos.map((file) => (
-                  <li key={file.name}>{file.name}</li>
+          {step === 3 && (
+            <>
+              <h2 className="qw-title">Add a few photos</h2>
+              <p className="qw-sub">
+                At least 2 — phone photos are perfect. These help us price it right first time.
+              </p>
+
+              <ul className="qw-ideas">
+                {photoIdeas.map((idea) => (
+                  <li key={idea}>
+                    <CameraIcon /> {idea}
+                  </li>
                 ))}
               </ul>
-            )}
-          </>
-        )}
 
-        {step === 4 && (
-          <>
-            <h2 className="text-2xl font-semibold text-foreground">Enter your contact details</h2>
-            <p className="mt-2 text-sm text-muted">
-              We only use this to send your quote and arrange your survey.
-            </p>
-            <div className="mt-5 grid gap-4 sm:grid-cols-2">
-              <label className="text-sm text-muted">
-                First name
+              <label
+                className={`qw-drop${dragging ? " qw-drop-active" : ""}`}
+                onDragOver={(e) => {
+                  e.preventDefault();
+                  setDragging(true);
+                }}
+                onDragLeave={() => setDragging(false)}
+                onDrop={onDrop}
+              >
+                <span className="qw-drop-icon" aria-hidden="true">
+                  <UploadIcon />
+                </span>
+                <span className="qw-drop-title">
+                  {photos.length ? "Add more photos" : "Tap to add photos"}
+                </span>
+                <span className="qw-drop-text">or drag them here · JPG, PNG, HEIC</span>
                 <input
-                  type="text"
+                  type="file"
+                  accept="image/*"
+                  multiple
+                  className="sr-only"
+                  onChange={(e) => {
+                    addPhotos(e.target.files);
+                    e.target.value = "";
+                  }}
+                />
+              </label>
+
+              <p className={`qw-photo-count${photos.length >= 2 ? " qw-photo-count-ok" : ""}`}>
+                {photos.length >= 2 ? <TickIcon /> : null}
+                {photos.length} photo{photos.length === 1 ? "" : "s"} added
+                {photos.length < 2 ? " · minimum 2" : " · looking good"}
+              </p>
+
+              {photos.length > 0 && (
+                <ul className="qw-thumbs">
+                  {photos.map((file, i) => (
+                    <li key={`${file.name}-${file.size}`} className="qw-thumb">
+                      {/* eslint-disable-next-line @next/next/no-img-element -- local blob previews */}
+                      <img
+                        src={previews[i]}
+                        alt={file.name}
+                        onError={(e) => (e.currentTarget.style.visibility = "hidden")}
+                      />
+                      <span className="qw-thumb-name">{file.name}</span>
+                      <button
+                        type="button"
+                        className="qw-thumb-remove"
+                        onClick={() =>
+                          setPhotos((current) => current.filter((_, idx) => idx !== i))
+                        }
+                        aria-label={`Remove ${file.name}`}
+                      >
+                        <CloseIcon />
+                      </button>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </>
+          )}
+
+          {step === 4 && (
+            <>
+              <h2 className="qw-title">Where should we send your quote?</h2>
+              <p className="qw-sub">
+                Last step — we only use this to send your quote and arrange your survey.
+              </p>
+
+              <div className="qw-summary">
+                <p className="qw-summary-head">Your request</p>
+                <dl>
+                  <div>
+                    <dt>Project</dt>
+                    <dd>{typeLabel(quoteType)}</dd>
+                  </div>
+                  {needsDoors && (
+                  <div>
+                    <dt>Doors &amp; drawers</dt>
+                    <dd>
+                      {plural(Number(doors) || 0, "door")} · {plural(Number(drawers) || 0, "drawer")}
+                    </dd>
+                  </div>
+                )}
+                {needsDoors && doorStyle && (
+                  <div>
+                    <dt>Door style</dt>
+                    <dd>{styleLabel(doorStyle)}</dd>
+                  </div>
+                )}
+                  {needsWorktop && (
+                    <div>
+                      <dt>Worktop</dt>
+                      <dd>{worktopMetres} m</dd>
+                    </div>
+                  )}
+                  <div>
+                    <dt>Photos</dt>
+                    <dd>{photos.length} added</dd>
+                  </div>
+                </dl>
+                <button type="button" className="qw-summary-edit" onClick={() => goTo(1)}>
+                  Edit
+                </button>
+              </div>
+
+              <div className="qw-contact-grid">
+                <Field
+                  label="First name"
+                  autoComplete="given-name"
                   value={contact.firstName}
-                  onChange={(e) => setContact({ ...contact, firstName: e.target.value })}
-                  className="quote-input"
+                  onChange={(v) => setContact({ ...contact, firstName: v })}
                 />
-              </label>
-              <label className="text-sm text-muted">
-                Last name
-                <input
-                  type="text"
+                <Field
+                  label="Last name"
+                  autoComplete="family-name"
                   value={contact.lastName}
-                  onChange={(e) => setContact({ ...contact, lastName: e.target.value })}
-                  className="quote-input"
+                  onChange={(v) => setContact({ ...contact, lastName: v })}
                 />
-              </label>
-              <label className="text-sm text-muted sm:col-span-2">
-                Email address
-                <input
+                <Field
+                  label="Email address"
                   type="email"
+                  autoComplete="email"
                   value={contact.email}
-                  onChange={(e) => setContact({ ...contact, email: e.target.value })}
-                  className="quote-input"
+                  onChange={(v) => setContact({ ...contact, email: v })}
+                  wide
                 />
-              </label>
-              <label className="text-sm text-muted">
-                Mobile number
-                <input
+                <Field
+                  label="Mobile number"
                   type="tel"
+                  autoComplete="tel"
                   value={contact.mobile}
-                  onChange={(e) => setContact({ ...contact, mobile: e.target.value })}
-                  className="quote-input"
+                  onChange={(v) => setContact({ ...contact, mobile: v })}
                 />
-              </label>
-              <label className="text-sm text-muted">
-                City / town
-                <input
-                  type="text"
+                <Field
+                  label="Town / city"
+                  autoComplete="address-level2"
                   value={contact.city}
-                  onChange={(e) => setContact({ ...contact, city: e.target.value })}
-                  className="quote-input"
+                  onChange={(v) => setContact({ ...contact, city: v })}
                 />
-              </label>
-            </div>
-          </>
-        )}
-      </div>
+              </div>
+              <p className="qw-privacy">
+                <LockIcon /> No spam, no pushy sales calls. Just your quote.
+              </p>
+            </>
+          )}
+        </div>
 
-      <div className="mt-5 flex items-center justify-between gap-3">
+        <div className="qw-nav">
+          {step > 1 ? (
+            <button
+              type="button"
+              onClick={() => goTo(step - 1)}
+              disabled={isSubmitting}
+              className="qw-back"
+            >
+              <span aria-hidden="true">←</span> Back
+            </button>
+          ) : (
+            <span />
+          )}
+          <div className="qw-nav-right">
+            {hint && <p className="qw-hint">{hint}</p>}
+            <button
+              type="submit"
+              disabled={!stepIsValid || isSubmitting}
+              className="kw-btn-primary qw-next-btn"
+            >
+              {step < 4 ? (
+                <>
+                  Continue <span aria-hidden="true">→</span>
+                </>
+              ) : isSubmitting ? (
+                "Sending…"
+              ) : (
+                <>
+                  Get my free quote <span aria-hidden="true">→</span>
+                </>
+              )}
+            </button>
+          </div>
+        </div>
+        {submitError && <p className="qw-error">{submitError}</p>}
+      </form>
+    );
+  }
+}
+
+function NumberStepper({
+  label,
+  value,
+  min,
+  onChange,
+  placeholder,
+}: {
+  label: string;
+  value: string;
+  min: number;
+  onChange: (value: string) => void;
+  placeholder: string;
+}) {
+  const current = Number(value) || 0;
+  return (
+    <div className="qw-count">
+      <span className="qw-label">{label}</span>
+      <div className="qw-stepper">
         <button
           type="button"
-          onClick={() => setStep((s) => Math.max(1, s - 1))}
-          disabled={step === 1 || isSubmitting}
-          className="btn-secondary disabled:cursor-not-allowed disabled:opacity-50"
+          onClick={() => onChange(String(Math.max(min, current - 1)))}
+          disabled={value === "" || current <= min}
+          aria-label={`Fewer ${label.toLowerCase()}`}
         >
-          Previous
+          −
         </button>
-        {step < 4 ? (
-          <button
-            type="button"
-            onClick={() => !isSubmitting && stepIsValid && setStep((s) => Math.min(4, s + 1))}
-            disabled={!stepIsValid || isSubmitting}
-            className="btn-primary disabled:cursor-not-allowed disabled:opacity-50"
-          >
-            Next
-          </button>
-        ) : (
-          <button
-            type="submit"
-            disabled={!stepIsValid || isSubmitting}
-            className="btn-primary disabled:opacity-50"
-          >
-            {isSubmitting ? "Sending..." : "Submit quote request"}
-          </button>
-        )}
+        <input
+          type="number"
+          inputMode="numeric"
+          min={min}
+          value={value}
+          onChange={(e) => onChange(e.target.value)}
+          placeholder={placeholder}
+          aria-label={`Number of ${label.toLowerCase()}`}
+        />
+        <button
+          type="button"
+          onClick={() => onChange(String(Math.max(min, current + 1)))}
+          aria-label={`More ${label.toLowerCase()}`}
+        >
+          +
+        </button>
       </div>
-      {submitError && <p className="mt-3 text-sm text-red-400">{submitError}</p>}
-    </form>
+    </div>
+  );
+}
+
+function Field({
+  label,
+  value,
+  onChange,
+  type = "text",
+  autoComplete,
+  wide = false,
+}: {
+  label: string;
+  value: string;
+  onChange: (value: string) => void;
+  type?: string;
+  autoComplete: string;
+  wide?: boolean;
+}) {
+  return (
+    <label className={`qw-field${wide ? " qw-field-wide" : ""}`}>
+      <span className="qw-label">{label}</span>
+      <input
+        type={type}
+        autoComplete={autoComplete}
+        value={value}
+        onChange={(e) => onChange(e.target.value)}
+        className="qw-input"
+      />
+    </label>
+  );
+}
+
+function TickIcon() {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      className="h-full w-full"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="3"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      <path d="m5 12 5 5 9-10" />
+    </svg>
+  );
+}
+
+function CloseIcon() {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      className="h-3.5 w-3.5"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2.5"
+      strokeLinecap="round"
+      aria-hidden="true"
+    >
+      <path d="M6 6l12 12M18 6 6 18" />
+    </svg>
+  );
+}
+
+function ClockIcon() {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      className="h-3.5 w-3.5"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      aria-hidden="true"
+    >
+      <circle cx="12" cy="12" r="9" />
+      <path d="M12 7v5l3 2" />
+    </svg>
+  );
+}
+
+function CameraIcon() {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      className="h-3.5 w-3.5"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      <path d="M4 8h3l2-3h6l2 3h3v11H4z" />
+      <circle cx="12" cy="13" r="3.5" />
+    </svg>
+  );
+}
+
+function UploadIcon() {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      className="h-6 w-6"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      <path d="M12 16V4m0 0-4 4m4-4 4 4M4 16v4h16v-4" />
+    </svg>
+  );
+}
+
+function LockIcon() {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      className="h-3.5 w-3.5"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      <rect x="5" y="11" width="14" height="9" rx="2" />
+      <path d="M8 11V8a4 4 0 0 1 8 0v3" />
+    </svg>
   );
 }

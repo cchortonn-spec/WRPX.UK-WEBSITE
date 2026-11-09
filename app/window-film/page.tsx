@@ -2,6 +2,17 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { FaqAccordion } from "@/components/FaqAccordion";
+import { ProjectPhotos } from "@/components/ProjectPhotos";
+import { photosByName } from "@/lib/portfolio";
+
+const windowFilmPhotos = photosByName(
+  "frosted-film-glass-balustrade-decking-sheffield-03",
+  "solar-control-window-film-gym-liverpool-01",
+  "solar-control-film-garden-room-rotherham-01",
+  "frosted-bathroom-window-film-barnsley-01",
+  "gym-window-film-doncaster-01",
+  "frosted-film-glass-balustrade-decking-sheffield-02",
+);
 
 export const metadata: Metadata = {
   title: "Window Film Installer South Yorkshire | Privacy, Frosted & Solar | WRPX",
@@ -172,8 +183,8 @@ export default function WindowFilmHubPage() {
       {/* Hero */}
       <section className="relative h-[50vh] min-h-[320px] w-full overflow-hidden">
         <Image
-          src="/images/window-film/frosted-3.png"
-          alt="Window film installation South Yorkshire"
+          src="/images/commercial-frosted-glass-film-sheffield/frosted-film-glass-balustrade-decking-sheffield-01.jpg"
+          alt="Frosted window film on glass balustrade panels, commercial installation in Sheffield"
           fill
           className="object-cover"
           priority
@@ -199,6 +210,16 @@ export default function WindowFilmHubPage() {
           <p className="text-muted leading-relaxed">
             Whether you need a bathroom window nobody can see through, an office that stays cool in summer, or a shopfront that looks the part, there&apos;s a window film that solves it. WRPX installs every film type — frosted, mirrored, tinted, solar and manifestation — across South Yorkshire, with the same preparation discipline and premium materials we bring to every job.
           </p>
+        </div>
+      </section>
+
+      <section className="px-4">
+        <div className="container mx-auto max-w-5xl">
+          <ProjectPhotos
+            title="Recent window film projects"
+            intro="Frosted, solar and privacy film for homes, gyms and commercial sites in Sheffield, Rotherham, Barnsley, Doncaster and Liverpool."
+            photos={windowFilmPhotos}
+          />
         </div>
       </section>
 

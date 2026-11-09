@@ -4,6 +4,17 @@ import Image from "next/image";
 import { siteConfig } from "@/lib/site-config";
 import { getServiceSchema } from "@/lib/schema";
 import { faqItems } from "@/lib/faq-data";
+import { photosByName } from "@/lib/portfolio";
+import { ProjectPhotos } from "@/components/ProjectPhotos";
+
+const furniturePhotos = photosByName(
+  "3m-wood-effect-wrapped-dining-table-rotherham-01",
+  "3m-wood-effect-wrapped-tv-unit-rotherham-01",
+  "3m-wood-effect-wrapped-side-table-rotherham-01",
+  "3m-wood-effect-wrapped-dining-table-rotherham-04",
+  "dressing-table-wrap-doncaster-after-01",
+  "walnut-fitted-wardrobe-wrap-barnsley-06",
+);
 
 export const metadata: Metadata = {
   title: "Furniture & Bedroom Wrapping South Yorkshire | Vinyl Wrap Specialist",
@@ -26,8 +37,8 @@ export default function FurnitureWrappingPage() {
       />
       <section className="relative h-[40vh] min-h-[280px] w-full overflow-hidden">
         <Image
-          src="/images/gallery/IMG_8145.webp"
-          alt="Furniture and bedroom wrapping South Yorkshire"
+          src="/images/3m-wrapped-furniture-rotherham/3m-wood-effect-wrapped-dining-table-rotherham-01.jpg"
+          alt="Dining table and TV unit wrapped in matching 3M wood-effect vinyl, Rotherham"
           fill
           className="object-cover"
           priority
@@ -100,24 +111,11 @@ export default function FurnitureWrappingPage() {
             </p>
           </div>
 
-          <div className="card-float p-8">
-            <h2 className="text-xl font-semibold text-foreground">
-              Before & after
-            </h2>
-            <div className="mt-4 relative aspect-[4/3] max-w-md overflow-hidden rounded-lg border border-border">
-              <Image
-                src="/images/gallery/kitchen-cabinet-wrap-south-yorkshire.jpg"
-                alt="Vinyl wrap project South Yorkshire — cabinet and furniture wrap"
-                fill
-                className="object-cover"
-                sizes="448px"
-              />
-            </div>
-            <p className="mt-4 text-sm text-muted">
-              Same quality and process for furniture as for kitchens.{" "}
-              <Link href="/gallery/" className="text-accent hover:underline">View our gallery</Link> for more projects.
-            </p>
-          </div>
+          <ProjectPhotos
+            title="Matching furniture in one 3M finish"
+            intro="A dining table, side tables and TV unit in Rotherham, all wrapped in the same 3M wood-effect film so the whole room matches. Plus dressing tables and chests of drawers refreshed without replacing them."
+            photos={furniturePhotos}
+          />
 
           <div className="card-float p-8">
             <h2 className="text-xl font-semibold text-foreground">

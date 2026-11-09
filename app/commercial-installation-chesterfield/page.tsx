@@ -28,7 +28,7 @@ export default function CommercialInstallationChesterfieldPage() {
           <p className="mt-4 text-muted leading-relaxed">
             Chesterfield also sits at the top of the East Midlands retail corridor — for multi-site programmes
             spanning Sheffield, Chesterfield, Mansfield, Alfreton and Nottingham, WRPX provides consistent
-            coverage from a single team with no handoffs between contractors.
+            coverage with a single point of contact from quote to completion.
           </p>
         </div>
       </section>

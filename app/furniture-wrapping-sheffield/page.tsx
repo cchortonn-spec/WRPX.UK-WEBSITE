@@ -2,6 +2,14 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { siteConfig } from "@/lib/site-config";
+import { photosByName } from "@/lib/portfolio";
+import { ProjectPhotos } from "@/components/ProjectPhotos";
+
+const localPhotos = photosByName(
+  "white-fitted-wardrobe-wrap-sheffield-01",
+  "3m-wood-effect-wrapped-dining-table-rotherham-01",
+  "walnut-fitted-wardrobe-wrap-barnsley-01",
+);
 
 export const metadata: Metadata = {
   title: "Furniture Wrapping Sheffield | Wardrobes, Bedrooms & Bathrooms | WRPX",
@@ -90,6 +98,16 @@ export default function FurnitureWrappingSheffieldPage() {
               {siteConfig.guaranteeYears}-year guarantee on all materials and workmanship. Named on every job.
             </p>
           </div>
+        </div>
+      </section>
+
+      <section className="pt-12">
+        <div className="container mx-auto max-w-3xl px-4">
+          <ProjectPhotos
+            title="Recent furniture wraps in and around Sheffield"
+            intro="A white fitted wardrobe in Sheffield, plus matching furniture sets we've wrapped nearby in Rotherham and Barnsley."
+            photos={localPhotos}
+          />
         </div>
       </section>
 

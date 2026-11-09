@@ -1,6 +1,17 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/site-config";
+import { photosByName } from "@/lib/portfolio";
+import { ProjectPhotos } from "@/components/ProjectPhotos";
+
+const localPhotos = photosByName(
+  "3m-wood-effect-wrapped-dining-table-rotherham-01",
+  "3m-wood-effect-wrapped-tv-unit-rotherham-01",
+  "3m-wood-effect-wrapped-side-table-rotherham-01",
+  "3m-wood-effect-wrapped-dining-table-rotherham-02",
+  "oak-loft-wardrobe-wrap-rotherham-01",
+  "3m-wood-effect-wrapped-dining-table-rotherham-04",
+);
 
 export const metadata: Metadata = {
   title: "Furniture Wrapping Rotherham | Wardrobe & Bedroom Vinyl Wrap | WRPX",
@@ -74,6 +85,16 @@ export default function FurnitureWrappingRotherhamPage() {
               {siteConfig.guaranteeYears}-year guarantee on all materials and workmanship.
             </p>
           </div>
+        </div>
+      </section>
+
+      <section className="pt-12">
+        <div className="container mx-auto max-w-3xl px-4">
+          <ProjectPhotos
+            title="Recent furniture wraps in Rotherham"
+            intro="A dining table, side tables and TV unit all wrapped in the same 3M wood-effect finish so the room matches, plus an oak-effect loft wardrobe."
+            photos={localPhotos}
+          />
         </div>
       </section>
 

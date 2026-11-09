@@ -1,5 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { photosByName } from "@/lib/portfolio";
+import { ProjectPhotos } from "@/components/ProjectPhotos";
+
+const sheffieldPhotos = photosByName(
+  "grey-stone-worktop-wrap-sheffield-01",
+  "grey-stone-worktop-wrap-sheffield-02",
+  "grey-stone-worktop-wrap-sheffield-03",
+);
 
 export const metadata: Metadata = {
   title: "Kitchen Wrapping Sheffield | 5-Year Guarantee | Free Survey",
@@ -106,6 +114,16 @@ export default function KitchenWrappingSheffieldPage() {
               5-year guarantee on materials and workmanship. Named on every job.
             </p>
           </div>
+        </div>
+      </section>
+
+      <section className="pt-12">
+        <div className="container mx-auto max-w-3xl px-4">
+          <ProjectPhotos
+            title="Recent Sheffield project — grey stone worktop wrap"
+            intro="Worktops and a rounded breakfast bar wrapped in grey stone-effect vinyl. No new worktops, no fitters, no mess."
+            photos={sheffieldPhotos}
+          />
         </div>
       </section>
 

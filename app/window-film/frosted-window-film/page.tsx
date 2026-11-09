@@ -2,6 +2,17 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { FaqAccordion } from "@/components/FaqAccordion";
+import { ProjectPhotos } from "@/components/ProjectPhotos";
+import { photosByName } from "@/lib/portfolio";
+
+const frostedPhotos = photosByName(
+  "frosted-film-glass-balustrade-decking-sheffield-01",
+  "frosted-film-glass-balustrade-decking-sheffield-03",
+  "frosted-bathroom-window-film-barnsley-01",
+  "frosted-window-film-barnsley-01",
+  "frosted-privacy-film-garden-room-rotherham-01",
+  "frosted-film-glass-balustrade-decking-sheffield-04",
+);
 
 export const metadata: Metadata = {
   title: "Frosted Window Film Installer South Yorkshire | Bathrooms & Offices | WRPX",
@@ -133,8 +144,8 @@ export default function FrostedWindowFilmPage() {
       {/* Hero */}
       <section className="relative h-[40vh] min-h-[280px] w-full overflow-hidden">
         <Image
-          src="/images/window-film/frosted-3.png"
-          alt="Frosted window film — clean edge finish"
+          src="/images/commercial-frosted-glass-film-sheffield/frosted-film-glass-balustrade-decking-sheffield-01.jpg"
+          alt="Frosted window film on glass balustrade panels around lodge decking, Sheffield"
           fill
           className="object-cover"
           priority
@@ -191,6 +202,16 @@ export default function FrostedWindowFilmPage() {
             <li><strong className="text-foreground">It&apos;s permanent in normal use</strong> — not a temporary static-cling sheet. Proper film, properly installed, lasts 7–10 years.</li>
             <li><strong className="text-foreground">It can be partial</strong> — you can frost the bottom half of a window, leaving the top clear. Common for street-facing ground-floor rooms where you want sky and light but not a view in from the pavement.</li>
           </ul>
+        </div>
+      </section>
+
+      <section className="px-4 pb-4">
+        <div className="container mx-auto max-w-5xl">
+          <ProjectPhotos
+            title="Recent frosted film installs"
+            intro="Frosted film on outdoor glass balustrades for a commercial lodge site in Sheffield, plus bathroom and garden room windows in Barnsley and Rotherham."
+            photos={frostedPhotos}
+          />
         </div>
       </section>
 
