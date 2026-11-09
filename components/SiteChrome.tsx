@@ -5,7 +5,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { StickyCtaBar } from "@/components/StickyCtaBar";
 import { WhatsAppFloat } from "@/components/WhatsAppFloat";
-import { BonfireNightOverlay } from "@/components/BonfireNightOverlay";
+import { ChristmasOverlay } from "@/components/ChristmasOverlay";
 import { ViewportFit } from "@/components/ViewportFit";
 
 export function SiteChrome({ children }: { children: React.ReactNode }) {
@@ -24,7 +24,7 @@ export function SiteChrome({ children }: { children: React.ReactNode }) {
       <Footer />
       <StickyCtaBar />
       <WhatsAppFloat />
-      <BonfireNightOverlay />
+      <ChristmasOverlay />
     </>
   );
 }

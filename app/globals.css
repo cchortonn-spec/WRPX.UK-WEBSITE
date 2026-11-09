@@ -4742,22 +4742,25 @@ a[href^="tel"]:hover {
 }
 
 /* ============================================================
-   Bonfire Night overlay (seasonal)
+   Christmas decorations (seasonal)
    Switch on/off in lib/seasonal-config.ts — or delete this block
-   together with components/BonfireNightOverlay.tsx to remove it fully.
+   together with components/ChristmasOverlay.tsx (and its one line in
+   Header.tsx and SiteChrome.tsx) to remove it fully.
    ============================================================ */
 
 :root {
-  --bonfire-orange: #ff7a1a;
-  --bonfire-red: #ff3b0a;
-  --bonfire-gold: #ffd166;
-  --bonfire-pink: #ff3fae;
-  --bonfire-white: #fff4dc;
+  --xmas-pink: #ff3fae;
+  --xmas-gold: #ffd166;
+  --xmas-white: #fff4dc;
+  --xmas-green: #3ddc84;
+  --xmas-red: #ff4d4d;
+  --xmas-wire: rgba(95, 115, 100, 0.9);
+  --xmas-snow: #f4f8ff;
 }
 
 /* Above page content but below the header, WhatsApp button and mobile CTA bar,
    so it never covers anything people tap. Clipped so it can't cause sideways scroll. */
-.bonfire-overlay {
+.xmas-overlay {
   position: fixed;
   inset: 0;
   z-index: 30;
@@ -4765,434 +4768,195 @@ a[href^="tel"]:hover {
   overflow: hidden;
 }
 
-/* Firelight glow from below, gently breathing */
-.bonfire-glow {
+/* Cold, frosty light from below, a hint of WRPX pink from above */
+.xmas-glow {
   position: absolute;
   inset: 0;
   background:
     radial-gradient(
-      ellipse 85% 40% at 50% 100%,
-      rgba(255, 106, 20, 0.2) 0%,
+      ellipse 90% 28% at 50% 100%,
+      rgba(225, 238, 255, 0.12) 0%,
       transparent 70%
     ),
     radial-gradient(
-      ellipse 60% 30% at 50% 0%,
-      rgba(212, 0, 130, 0.06) 0%,
+      ellipse 70% 30% at 50% 0%,
+      rgba(212, 0, 130, 0.05) 0%,
       transparent 70%
     );
-  animation: bonfire-glow-breathe 4.5s ease-in-out infinite alternate;
 }
 
-@keyframes bonfire-glow-breathe {
-  from {
-    opacity: 0.7;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-/* ---------- Fireworks ----------
-   Each burst is a point on screen. A rocket rises to it, flashes, then a ring
-   of sparks flies out and drifts down. Each burst has its own spot, colour,
-   size and timing so they never go off together. */
-.bonfire-burst {
+/* ---------- Snow ----------
+   Each flake has its own column, size, speed, sway and start point.
+   Negative delays = already falling when the page loads. */
+.xmas-flake {
   position: absolute;
-  width: 0;
-  height: 0;
-  --burst-color: var(--bonfire-gold);
-  --burst-r: 3.25rem;
-  --burst-duration: 7s;
-  --burst-delay: 0s;
-  animation: bonfire-burst-drop var(--burst-duration) ease-in var(--burst-delay)
-    infinite;
-}
-
-/* Kept below ~25% from the top so they don't hide behind the frosted header */
-.bonfire-burst-1 {
-  top: 30%;
-  left: 18%;
-  --burst-color: var(--bonfire-gold);
-  --burst-r: 3.5rem;
-  --burst-duration: 7.5s;
-  --burst-delay: -1s;
-}
-.bonfire-burst-2 {
-  top: 26%;
-  left: 78%;
-  --burst-color: var(--bonfire-pink);
-  --burst-r: 3rem;
-  --burst-duration: 8.5s;
-  --burst-delay: -4.5s;
-}
-.bonfire-burst-3 {
-  top: 44%;
-  left: 52%;
-  --burst-color: var(--bonfire-orange);
-  --burst-r: 2.5rem;
-  --burst-duration: 9.5s;
-  --burst-delay: -7s;
-}
-.bonfire-burst-4 {
-  top: 56%;
-  left: 88%;
-  --burst-color: var(--bonfire-white);
-  --burst-r: 2.25rem;
-  --burst-duration: 11s;
-  --burst-delay: -2.5s;
-}
-
-.bonfire-rocket,
-.bonfire-flash,
-.bonfire-spark {
-  position: absolute;
-  animation-duration: var(--burst-duration);
-  animation-delay: var(--burst-delay);
-  animation-iteration-count: infinite;
-}
-
-.bonfire-rocket {
-  left: -1px;
   top: 0;
-  width: 2px;
-  height: 1.25rem;
-  border-radius: 2px;
-  background: linear-gradient(180deg, var(--burst-color), transparent);
-  opacity: 0;
-  animation-name: bonfire-rocket-rise;
-  animation-timing-function: ease-out;
-}
-
-.bonfire-flash {
-  left: -0.5rem;
-  top: -0.5rem;
-  width: 1rem;
-  height: 1rem;
+  left: var(--flake-x, 50%);
+  width: var(--flake-size, 6px);
+  height: var(--flake-size, 6px);
   border-radius: 9999px;
-  background: radial-gradient(circle, #ffffff 0%, var(--burst-color) 40%, transparent 70%);
-  opacity: 0;
-  animation-name: bonfire-flash-pop;
-  animation-timing-function: ease-out;
-}
-
-.bonfire-sparks {
-  position: absolute;
-  inset: 0;
-}
-
-.bonfire-spark {
-  left: -1.5px;
-  top: -5px;
-  width: 3px;
-  height: 10px;
-  border-radius: 9999px;
-  background: var(--burst-color);
-  box-shadow: 0 0 6px var(--burst-color);
-  opacity: 0;
-  --angle: 0deg;
-  --ring: 1;
-  animation-name: bonfire-spark-fly;
-  animation-timing-function: cubic-bezier(0.15, 0.7, 0.3, 1);
-}
-/* Twelve sparks round the circle; every other one on a shorter inner ring */
-.bonfire-spark:nth-child(2n) {
-  --ring: 0.62;
-}
-.bonfire-spark:nth-child(1) { --angle: 0deg; }
-.bonfire-spark:nth-child(2) { --angle: 30deg; }
-.bonfire-spark:nth-child(3) { --angle: 60deg; }
-.bonfire-spark:nth-child(4) { --angle: 90deg; }
-.bonfire-spark:nth-child(5) { --angle: 120deg; }
-.bonfire-spark:nth-child(6) { --angle: 150deg; }
-.bonfire-spark:nth-child(7) { --angle: 180deg; }
-.bonfire-spark:nth-child(8) { --angle: 210deg; }
-.bonfire-spark:nth-child(9) { --angle: 240deg; }
-.bonfire-spark:nth-child(10) { --angle: 270deg; }
-.bonfire-spark:nth-child(11) { --angle: 300deg; }
-.bonfire-spark:nth-child(12) { --angle: 330deg; }
-
-/* Timeline (same % for every part): 0–14% rocket rises, 14% flash,
-   14–32% sparks fly out, 32–46% they fade and fall, then quiet until next loop */
-@keyframes bonfire-rocket-rise {
-  0% {
-    transform: translateY(32vh);
-    opacity: 0;
-  }
-  3% {
-    opacity: 0.9;
-  }
-  13% {
-    transform: translateY(0);
-    opacity: 0.9;
-  }
-  14%,
-  100% {
-    transform: translateY(0);
-    opacity: 0;
-  }
-}
-
-@keyframes bonfire-flash-pop {
-  0%,
-  13% {
-    transform: scale(0.2);
-    opacity: 0;
-  }
-  15% {
-    transform: scale(1.6);
-    opacity: 0.95;
-  }
-  22%,
-  100% {
-    transform: scale(2.4);
-    opacity: 0;
-  }
-}
-
-@keyframes bonfire-spark-fly {
-  0%,
-  13% {
-    transform: rotate(var(--angle)) translateY(0) scaleY(0.2);
-    opacity: 0;
-  }
-  15% {
-    opacity: 1;
-  }
-  32% {
-    transform: rotate(var(--angle))
-      translateY(calc(var(--burst-r) * var(--ring) * -1)) scaleY(1);
-    opacity: 0.95;
-  }
-  46%,
-  100% {
-    transform: rotate(var(--angle))
-      translateY(calc(var(--burst-r) * var(--ring) * -1.15)) scaleY(0.35);
-    opacity: 0;
-  }
-}
-
-/* Gravity: the whole burst sinks a little as it fades */
-@keyframes bonfire-burst-drop {
-  0%,
-  30% {
-    transform: translateY(0);
-  }
-  48%,
-  100% {
-    transform: translateY(14px);
-  }
-}
-
-/* ---------- Embers ----------
-   Small glowing dots floating up from the bottom with a gentle sway. */
-.bonfire-embers {
-  position: absolute;
-  inset: 0;
-}
-
-.bonfire-ember {
-  position: absolute;
-  bottom: -0.5rem;
-  left: 50%;
-  width: var(--ember-size, 4px);
-  height: var(--ember-size, 4px);
-  border-radius: 9999px;
-  background: var(--bonfire-gold);
-  box-shadow:
-    0 0 6px var(--bonfire-orange),
-    0 0 12px rgba(255, 106, 20, 0.6);
+  background: var(--xmas-snow);
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.7);
   opacity: 0;
   will-change: transform, opacity;
-  animation: bonfire-ember-rise var(--ember-duration, 9s) ease-out
-    var(--ember-delay, 0s) infinite;
-}
-.bonfire-ember:nth-child(1) {
-  left: 6%;
-  --ember-size: 4px;
-  --ember-drift: 2rem;
-  --ember-duration: 9s;
-  --ember-delay: -1s;
-}
-.bonfire-ember:nth-child(2) {
-  left: 14%;
-  --ember-size: 3px;
-  --ember-drift: -1.5rem;
-  --ember-duration: 11s;
-  --ember-delay: -6s;
-}
-.bonfire-ember:nth-child(3) {
-  left: 24%;
-  --ember-size: 5px;
-  --ember-drift: 1rem;
-  --ember-duration: 8s;
-  --ember-delay: -3s;
-}
-.bonfire-ember:nth-child(4) {
-  left: 37%;
-  --ember-size: 3px;
-  --ember-drift: -2rem;
-  --ember-duration: 12s;
-  --ember-delay: -9s;
-}
-.bonfire-ember:nth-child(5) {
-  left: 48%;
-  --ember-size: 4px;
-  --ember-drift: 1.5rem;
-  --ember-duration: 10s;
-  --ember-delay: -4.5s;
-}
-.bonfire-ember:nth-child(6) {
-  left: 59%;
-  --ember-size: 3px;
-  --ember-drift: -1rem;
-  --ember-duration: 9.5s;
-  --ember-delay: -7.5s;
-}
-.bonfire-ember:nth-child(7) {
-  left: 68%;
-  --ember-size: 5px;
-  --ember-drift: 2.5rem;
-  --ember-duration: 11.5s;
-  --ember-delay: -2s;
-}
-.bonfire-ember:nth-child(8) {
-  left: 77%;
-  --ember-size: 3px;
-  --ember-drift: -1.75rem;
-  --ember-duration: 8.5s;
-  --ember-delay: -5s;
-}
-.bonfire-ember:nth-child(9) {
-  left: 86%;
-  --ember-size: 4px;
-  --ember-drift: 1.25rem;
-  --ember-duration: 10.5s;
-  --ember-delay: -8s;
-}
-.bonfire-ember:nth-child(10) {
-  left: 94%;
-  --ember-size: 3px;
-  --ember-drift: -1.25rem;
-  --ember-duration: 9s;
-  --ember-delay: -0.5s;
+  animation: xmas-fall var(--flake-duration, 14s) linear
+    var(--flake-delay, 0s) infinite;
 }
 
-@keyframes bonfire-ember-rise {
-  0% {
-    transform: translate(0, 0) scale(1);
-    opacity: 0;
-  }
-  10% {
-    opacity: 0.95;
-  }
-  50% {
-    transform: translate(var(--ember-drift, 1rem), -30vh) scale(0.85);
-    opacity: 0.8;
-  }
-  100% {
-    transform: translate(calc(var(--ember-drift, 1rem) * -0.5), -62vh) scale(0.3);
-    opacity: 0;
-  }
+.xmas-flake-crystal {
+  width: var(--flake-size, 14px);
+  height: var(--flake-size, 14px);
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
+  color: var(--xmas-snow);
+  filter: drop-shadow(0 0 3px rgba(255, 255, 255, 0.8));
 }
-
-/* ---------- Corner flames ----------
-   The wrapper places + mirrors the flame; the svg inside flickers. */
-.bonfire-flame-wrap {
-  position: absolute;
-  bottom: 0;
-  width: clamp(2.5rem, 7vw, 4.5rem);
-  opacity: 0.9;
-}
-.bonfire-flame-left {
-  left: 0.5rem;
-}
-.bonfire-flame-right {
-  right: 0.5rem;
-  transform: scaleX(-1);
-}
-
-.bonfire-flame {
+.xmas-flake-crystal svg {
   display: block;
   width: 100%;
-  height: auto;
-  overflow: visible;
-  filter: drop-shadow(0 0 10px rgba(255, 106, 20, 0.65));
+  height: 100%;
 }
 
-.bonfire-flame-outer,
-.bonfire-flame-inner {
-  transform-box: fill-box;
-  transform-origin: 50% 100%;
-  will-change: transform;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-}
-.bonfire-flame-outer {
-  fill: var(--bonfire-orange);
-  animation-name: bonfire-flicker-outer;
-  animation-duration: 0.9s;
-}
-.bonfire-flame-inner {
-  fill: var(--bonfire-gold);
-  animation-name: bonfire-flicker-inner;
-  animation-duration: 0.55s;
-}
-/* Right flame flickers at its own pace so the two never move in sync */
-.bonfire-flame-right .bonfire-flame-outer {
-  animation-duration: 1.15s;
-  animation-delay: -0.4s;
-}
-.bonfire-flame-right .bonfire-flame-inner {
-  animation-duration: 0.7s;
-  animation-delay: -0.2s;
-}
+.xmas-flake:nth-child(2) { --flake-x: 4%; --flake-size: 7px; --flake-duration: 13s; --flake-delay: -2s; --flake-drift: 1.5rem; --flake-opacity: 0.85; }
+.xmas-flake:nth-child(3) { --flake-x: 10%; --flake-size: 6px; --flake-duration: 17s; --flake-delay: -9s; --flake-drift: -1rem; --flake-opacity: 0.7; }
+.xmas-flake:nth-child(4) { --flake-x: 16%; --flake-size: 20px; --flake-duration: 19s; --flake-delay: -5s; --flake-drift: 2rem; --flake-opacity: 0.8; }
+.xmas-flake:nth-child(5) { --flake-x: 22%; --flake-size: 8px; --flake-duration: 12s; --flake-delay: -7s; --flake-drift: -1.5rem; --flake-opacity: 0.9; }
+.xmas-flake:nth-child(6) { --flake-x: 28%; --flake-size: 5px; --flake-duration: 16s; --flake-delay: -12s; --flake-drift: 1rem; --flake-opacity: 0.6; }
+.xmas-flake:nth-child(7) { --flake-x: 34%; --flake-size: 17px; --flake-duration: 21s; --flake-delay: -15s; --flake-drift: -2rem; --flake-opacity: 0.75; }
+.xmas-flake:nth-child(8) { --flake-x: 40%; --flake-size: 7px; --flake-duration: 14s; --flake-delay: -3s; --flake-drift: 1.25rem; --flake-opacity: 0.85; }
+.xmas-flake:nth-child(9) { --flake-x: 46%; --flake-size: 6px; --flake-duration: 18s; --flake-delay: -10s; --flake-drift: -1.25rem; --flake-opacity: 0.65; }
+.xmas-flake:nth-child(10) { --flake-x: 52%; --flake-size: 21px; --flake-duration: 20s; --flake-delay: -1s; --flake-drift: 1.75rem; --flake-opacity: 0.8; }
+.xmas-flake:nth-child(11) { --flake-x: 58%; --flake-size: 8px; --flake-duration: 13s; --flake-delay: -6s; --flake-drift: -1rem; --flake-opacity: 0.9; }
+.xmas-flake:nth-child(12) { --flake-x: 64%; --flake-size: 5px; --flake-duration: 15s; --flake-delay: -13s; --flake-drift: 1.5rem; --flake-opacity: 0.6; }
+.xmas-flake:nth-child(13) { --flake-x: 70%; --flake-size: 18px; --flake-duration: 22s; --flake-delay: -8s; --flake-drift: -1.75rem; --flake-opacity: 0.75; }
+.xmas-flake:nth-child(14) { --flake-x: 76%; --flake-size: 7px; --flake-duration: 12s; --flake-delay: -4s; --flake-drift: 1rem; --flake-opacity: 0.85; }
+.xmas-flake:nth-child(15) { --flake-x: 82%; --flake-size: 6px; --flake-duration: 17s; --flake-delay: -11s; --flake-drift: -1.5rem; --flake-opacity: 0.7; }
+.xmas-flake:nth-child(16) { --flake-x: 88%; --flake-size: 19px; --flake-duration: 19s; --flake-delay: -16s; --flake-drift: 1.25rem; --flake-opacity: 0.8; }
+.xmas-flake:nth-child(17) { --flake-x: 93%; --flake-size: 8px; --flake-duration: 14s; --flake-delay: -9.5s; --flake-drift: -1rem; --flake-opacity: 0.9; }
+.xmas-flake:nth-child(18) { --flake-x: 97%; --flake-size: 5px; --flake-duration: 16s; --flake-delay: -0.5s; --flake-drift: 0.75rem; --flake-opacity: 0.6; }
+.xmas-flake:nth-child(19) { --flake-x: 50%; --flake-size: 20px; --flake-duration: 23s; --flake-delay: -18s; --flake-drift: -1.25rem; --flake-opacity: 0.75; }
 
-@keyframes bonfire-flicker-outer {
+@keyframes xmas-fall {
   0% {
-    transform: scale(1, 1) skewX(0deg);
+    transform: translate(0, -10vh) rotate(0deg);
+    opacity: 0;
+  }
+  8% {
+    opacity: var(--flake-opacity, 0.8);
+  }
+  25% {
+    transform: translate(var(--flake-drift, 1rem), 20vh) rotate(90deg);
   }
   50% {
-    transform: scale(0.95, 1.07) skewX(-3deg);
+    transform: translate(calc(var(--flake-drift, 1rem) * -0.6), 48vh) rotate(180deg);
+  }
+  75% {
+    transform: translate(var(--flake-drift, 1rem), 76vh) rotate(270deg);
+  }
+  92% {
+    opacity: var(--flake-opacity, 0.8);
   }
   100% {
-    transform: scale(1.03, 0.95) skewX(2deg);
+    transform: translate(0, 108vh) rotate(360deg);
+    opacity: 0;
   }
 }
 
-@keyframes bonfire-flicker-inner {
-  0% {
-    transform: scale(1, 1);
+/* ---------- Fairy lights ----------
+   A string of bulbs hanging from the bottom edge of the header (sticky or fixed),
+   so it follows the header on every page. Each bulb hangs from its own dip in the wire. */
+.xmas-lights {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 1.9rem;
+  display: flex;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.xmas-light {
+  position: relative;
+  flex: 1 1 0;
+  --bulb: var(--xmas-gold);
+  --twinkle: 2.4s;
+  --twinkle-delay: 0s;
+}
+
+/* The wire: one shallow dip per bulb */
+.xmas-light::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: 0;
+  right: 0;
+  height: 0.6rem;
+  border-bottom: 1.5px solid var(--xmas-wire);
+  border-radius: 0 0 50% 50% / 0 0 100% 100%;
+}
+
+/* The bulb: dark cap on top, coloured glass below, soft glow */
+.xmas-light::after {
+  content: "";
+  position: absolute;
+  top: 0.45rem;
+  left: 50%;
+  width: 9px;
+  height: 14px;
+  margin-left: -4.5px;
+  border-radius: 45% 45% 50% 50% / 35% 35% 65% 65%;
+  background: linear-gradient(180deg, #3a3a3a 0 4px, var(--bulb) 4px);
+  box-shadow: 0 3px 12px 2px var(--bulb);
+  animation: xmas-twinkle var(--twinkle) ease-in-out var(--twinkle-delay) infinite
+    alternate;
+}
+
+.xmas-light:nth-child(5n + 1) { --bulb: var(--xmas-pink); }
+.xmas-light:nth-child(5n + 2) { --bulb: var(--xmas-gold); }
+.xmas-light:nth-child(5n + 3) { --bulb: var(--xmas-white); }
+.xmas-light:nth-child(5n + 4) { --bulb: var(--xmas-green); }
+.xmas-light:nth-child(5n + 5) { --bulb: var(--xmas-red); }
+
+/* Different speeds and start points so they twinkle randomly, not in a wave */
+.xmas-light:nth-child(3n + 1) { --twinkle: 1.9s; --twinkle-delay: -0.6s; }
+.xmas-light:nth-child(3n + 2) { --twinkle: 2.7s; --twinkle-delay: -1.4s; }
+.xmas-light:nth-child(3n + 3) { --twinkle: 2.2s; --twinkle-delay: -0.2s; }
+.xmas-light:nth-child(4n) { --twinkle-delay: -2.1s; }
+
+@keyframes xmas-twinkle {
+  from {
+    opacity: 1;
+    filter: brightness(1.15);
   }
-  100% {
-    transform: scale(0.9, 1.12) skewX(3deg);
+  to {
+    opacity: 0.45;
+    filter: brightness(0.75);
   }
 }
 
-/* People who prefer less motion: keep the still glow + flames, hide fireworks and embers */
+/* People who prefer less motion: no falling snow, lights glow steadily */
 @media (prefers-reduced-motion: reduce) {
-  .bonfire-burst,
-  .bonfire-embers {
+  .xmas-flake {
     display: none;
   }
-  .bonfire-glow,
-  .bonfire-flame-outer,
-  .bonfire-flame-inner {
+  .xmas-light::after {
     animation: none;
   }
 }
 
 @media (max-width: 640px) {
-  /* Fewer fireworks and embers on phones so the page stays clean */
-  .bonfire-burst-3,
-  .bonfire-burst-4,
-  .bonfire-ember:nth-child(2n) {
+  /* Half the snow and half the bulbs on phones so the page stays clean */
+  .xmas-flake:nth-child(2n + 1),
+  .xmas-light:nth-child(2n) {
     display: none;
   }
 }
 
 @media print {
-  .bonfire-overlay {
+  .xmas-overlay,
+  .xmas-lights {
     display: none;
   }
 }

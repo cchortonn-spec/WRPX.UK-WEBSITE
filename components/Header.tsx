@@ -7,6 +7,7 @@ import { nav } from "@/lib/nav";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { useState } from "react";
 import { useImmersiveHero } from "@/lib/hero-config";
+import { ChristmasLights } from "@/components/ChristmasOverlay";
 
 function Dropdown({
   label,
@@ -232,6 +233,7 @@ export function Header() {
           </div>
         </div>
       )}
+      <ChristmasLights />
     </header>
   );
 }
