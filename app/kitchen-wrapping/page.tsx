@@ -435,7 +435,7 @@ export default function KitchenWrappingPage() {
           <p className="mt-8 text-center text-sm text-muted">
             Want the detail? See our{" "}
             <Link href="/kitchen-wrapping-cost/" className="link-subtle">
-              kitchen wrapping cost guide
+              UK kitchen wrapping cost guide
             </Link>{" "}
             for a full breakdown and price table.
           </p>

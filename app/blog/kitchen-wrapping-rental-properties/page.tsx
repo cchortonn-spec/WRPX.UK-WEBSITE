@@ -113,7 +113,12 @@ export default function KitchenWrappingRentalPropertiesPage() {
             </div>
             <p className="mt-4 text-sm">
               Typical wrapping ROI in terms of rental increase: even a £50/month uplift in rent
-              from a refreshed kitchen recovers a £1,200 wrap investment in 24 months.
+              from a refreshed kitchen recovers a £1,200 wrap investment in 24 months. For the
+              current published starting prices, see the{" "}
+              <Link href="/kitchen-wrapping-cost/" className="text-accent hover:underline">
+                kitchen wrapping cost guide
+              </Link>
+              .
             </p>
           </section>
 

@@ -30,6 +30,16 @@ const nextConfig: NextConfig = {
         destination: "https://www.wrpx.co.uk/:path*",
         permanent: true,
       },
+      {
+        source: "/blog/kitchen-wrapping-cost-guide",
+        destination: "/kitchen-wrapping-cost/",
+        statusCode: 301,
+      },
+      {
+        source: "/blog/kitchen-wrapping-cost-guide/",
+        destination: "/kitchen-wrapping-cost/",
+        statusCode: 301,
+      },
     ];
   },
 };

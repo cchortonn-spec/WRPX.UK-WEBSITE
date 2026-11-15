@@ -1434,7 +1434,7 @@ a[href^="tel"]:hover {
 
 .immersive-hero-title {
   margin: 0;
-  max-width: 14ch;
+  max-width: 22ch;
   font-size: clamp(2.25rem, 6.5vw, 4.1rem);
   font-weight: 700;
   line-height: 1.05;

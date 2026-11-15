@@ -40,9 +40,9 @@ export function HomeHeroImmersive() {
       <div className="immersive-hero-content">
         <p className="immersive-hero-eyebrow">WRPX · Kitchen wrapping</p>
         <h1 className="immersive-hero-title">
-          We transform kitchens
+          Kitchen wrapping
           <br />
-          without the rip-out
+          in Sheffield
         </h1>
         <p className="immersive-hero-subtitle">
           Premium vinyl wrapping across <HeroLocationRotator />. Doors, worktops

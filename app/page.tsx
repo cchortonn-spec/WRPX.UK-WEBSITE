@@ -14,16 +14,16 @@ import { GoogleReviewsBar } from "@/components/GoogleReviewsBar";
 import { photosByName } from "@/lib/portfolio";
 
 export const metadata: Metadata = {
-  title: "Kitchen Wrapping Sheffield & South Yorkshire | Vinyl Wrap Specialist | WRPX",
+  title: "Kitchen Wrapping Sheffield, South Yorkshire & UK | WRPX",
   description:
-    "WRPX — kitchen wrapping specialist covering Sheffield, Doncaster, Barnsley, Rotherham, Leeds, Huddersfield & Chesterfield. Doors, worktops, islands, splashbacks, furniture. 7+ years, 5-year guarantee. Free survey.",
+    "Kitchen wrapping in Sheffield and South Yorkshire. Supply and fit across the UK for doors, worktops and furniture. Free survey and a 5-year guarantee.",
   alternates: {
     canonical: "https://www.wrpx.co.uk/",
   },
   openGraph: {
-    title: "Kitchen Wrapping Sheffield & South Yorkshire | WRPX",
+    title: "Kitchen Wrapping Sheffield, South Yorkshire & UK | WRPX",
     description:
-      "Kitchen wrapping specialist — Sheffield, Doncaster, Barnsley, Rotherham, Leeds, Huddersfield & Chesterfield. Doors, worktops, islands, splashbacks. 5-year guarantee. Free survey.",
+      "Kitchen wrapping in Sheffield and South Yorkshire. Supply and fit across the UK for doors, worktops and furniture. Free survey and a 5-year guarantee.",
     url: "https://www.wrpx.co.uk/",
     type: "website",
     images: [

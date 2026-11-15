@@ -3,13 +3,6 @@
  */
 export const blogPosts = [
   {
-    slug: "kitchen-wrapping-cost-guide",
-    title: "Kitchen Wrapping Cost Guide — What to Expect in South Yorkshire",
-    description:
-      "A detailed guide to kitchen wrapping costs: per door, full kitchen, worktops. What affects the price and how to get a fixed quote.",
-    date: "2025-02-20",
-  },
-  {
     slug: "kitchen-wrapping-vs-new-kitchen",
     title: "Kitchen Wrapping vs New Kitchen — Is It Worth It?",
     description:
