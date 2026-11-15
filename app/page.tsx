@@ -47,12 +47,12 @@ const galleryImages = [
 ];
 
 const recentProjects = photosByName(
-  "frosted-film-glass-balustrade-decking-sheffield-01",
-  "3m-wood-effect-wrapped-dining-table-rotherham-01",
-  "walnut-fitted-wardrobe-wrap-barnsley-01",
-  "3m-wood-effect-wrapped-tv-unit-rotherham-01",
-  "solar-control-window-film-gym-liverpool-01",
-  "dressing-table-wrap-doncaster-after-01",
+  "forest-green-kitchen-island-wrap-leeds-after-01",
+  "navy-kitchen-wrap-manchester-01",
+  "post-office-counter-vinyl-wrap-sheffield-after-01",
+  "oak-effect-worktop-wrap-york-after-01",
+  "marble-worktop-splashback-wrap-sheffield-after-02",
+  "stone-effect-dining-table-wrap-waverley-after-01",
 );
 
 export default function HomePage() {
@@ -388,8 +388,8 @@ export default function HomePage() {
             Recent projects
           </h2>
           <p className="mx-auto mb-8 max-w-2xl text-center text-muted">
-            Not just kitchens. Wardrobes, matching furniture sets, frosted glass and solar film for homes
-            and businesses across Sheffield, Rotherham, Barnsley, Doncaster and Chesterfield.
+            Not just kitchens. Worktops, furniture, shop counters, frosted glass and more for homes
+            and businesses across Sheffield, Leeds, York, Manchester, Doncaster and South Yorkshire.
           </p>
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {recentProjects.map((photo) => (

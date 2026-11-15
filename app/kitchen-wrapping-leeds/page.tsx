@@ -1,5 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { photosByName } from "@/lib/portfolio";
+import { ProjectPhotos } from "@/components/ProjectPhotos";
+
+const leedsPhotos = photosByName(
+  "forest-green-kitchen-island-wrap-leeds-after-01",
+  "forest-green-kitchen-island-wrap-leeds-after-02",
+  "forest-green-kitchen-island-wrap-leeds-before-02",
+);
  
 
 export const metadata: Metadata = {
@@ -83,6 +91,16 @@ export default function KitchenWrappingLeedsPage() {
             <li>Bedroom wardrobes and fitted storage</li>
             <li>Bathroom vanity units and home office units</li>
           </ul>
+        </div>
+      </section>
+
+      <section className="pt-12">
+        <div className="container mx-auto max-w-3xl px-4">
+          <ProjectPhotos
+            title="Recent Leeds project — forest green kitchen island"
+            intro="A dark grey kitchen turned forest green, with a fresh white stone-effect top. Wrapped on site, no rip-out."
+            photos={leedsPhotos}
+          />
         </div>
       </section>
 

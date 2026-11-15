@@ -1,5 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { photosByName } from "@/lib/portfolio";
+import { ProjectPhotos } from "@/components/ProjectPhotos";
+
+const manchesterPhotos = photosByName(
+  "navy-kitchen-wrap-manchester-01",
+  "navy-kitchen-wrap-manchester-03",
+  "navy-kitchen-wrap-manchester-02",
+);
 
 export const metadata: Metadata = {
   title: "Kitchen Wrapping Manchester | 5-Year Guarantee | Free Survey | WRPX",
@@ -118,6 +126,16 @@ export default function KitchenWrappingManchesterPage() {
             private developments — all covered. Surface prep is the same regardless of
             property type: cleaning, degreasing, abrasion where required.
           </p>
+        </div>
+      </section>
+
+      <section className="pt-12">
+        <div className="container mx-auto max-w-3xl px-4">
+          <ProjectPhotos
+            title="Recent Manchester project — navy kitchen wrap"
+            intro="A full kitchen wrapped in matt navy. No new kitchen, no rip-out, and the room stayed usable throughout."
+            photos={manchesterPhotos}
+          />
         </div>
       </section>
 

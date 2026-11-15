@@ -2,6 +2,14 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { siteConfig } from "@/lib/site-config";
+import { photosByName } from "@/lib/portfolio";
+import { ProjectPhotos } from "@/components/ProjectPhotos";
+
+const islandPhotos = photosByName(
+  "forest-green-kitchen-island-wrap-leeds-after-01",
+  "forest-green-kitchen-island-wrap-leeds-before-02",
+  "forest-green-kitchen-island-wrap-leeds-in-progress-01",
+);
 
 export const metadata: Metadata = {
   title: "Kitchen Island Wrapping South Yorkshire | Vinyl Wrap Specialist | WRPX",
@@ -126,6 +134,12 @@ export default function KitchenIslandWrappingPage() {
               {siteConfig.guaranteeYears}-year guarantee.
             </p>
           </div>
+
+          <ProjectPhotos
+            title="Recent island wrap — forest green, Leeds"
+            intro="A dark grey island turned forest green with a fresh white stone-effect top. Before, during and after."
+            photos={islandPhotos}
+          />
 
           <div className="card-float p-8">
             <h2 className="text-xl font-semibold text-foreground">

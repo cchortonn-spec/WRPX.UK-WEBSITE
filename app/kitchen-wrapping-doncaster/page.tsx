@@ -5,6 +5,9 @@ import { photosByName } from "@/lib/portfolio";
 import { ProjectPhotos } from "@/components/ProjectPhotos";
 
 const doncasterPhotos = photosByName(
+  "marble-effect-kitchen-wrap-doncaster-01",
+  "marble-effect-kitchen-wrap-doncaster-03",
+  "marble-effect-kitchen-wrap-doncaster-04",
   "white-gloss-kitchen-wrap-doncaster-01",
   "cream-fitted-bedroom-furniture-wrap-doncaster-01",
   "dressing-table-wrap-doncaster-after-01",
@@ -151,7 +154,7 @@ export default function KitchenWrappingDoncasterPage() {
           <div className="mt-8">
             <ProjectPhotos
               title="More recent work in Doncaster"
-              intro="White gloss tall kitchen units, plus fitted bedroom furniture and a dressing table wrapped for Doncaster customers."
+              intro="A marble-effect worktop and splashback kitchen, white gloss tall units, plus fitted bedroom furniture and a dressing table wrapped for Doncaster customers."
               photos={doncasterPhotos}
             />
           </div>

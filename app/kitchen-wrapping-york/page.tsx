@@ -1,5 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { photosByName } from "@/lib/portfolio";
+import { ProjectPhotos } from "@/components/ProjectPhotos";
+
+const yorkPhotos = photosByName(
+  "oak-effect-worktop-wrap-york-after-01",
+  "oak-effect-worktop-wrap-york-after-02",
+  "oak-effect-worktop-wrap-york-before-01",
+);
 
 export const metadata: Metadata = {
   title: "Kitchen Wrapping York | 5-Year Guarantee | Free Survey | WRPX",
@@ -120,6 +128,16 @@ export default function KitchenWrappingYorkPage() {
             same on every job: thorough cleaning, degreasing, abrasion where required,
             and correct priming for the substrate. That&apos;s where a wrap succeeds or fails.
           </p>
+        </div>
+      </section>
+
+      <section className="pt-12">
+        <div className="container mx-auto max-w-3xl px-4">
+          <ProjectPhotos
+            title="Recent York project — oak-effect worktop wrap"
+            intro="Pale worktops and a breakfast bar wrapped in a natural oak effect. No new worktops, no fitters and no mess."
+            photos={yorkPhotos}
+          />
         </div>
       </section>
 

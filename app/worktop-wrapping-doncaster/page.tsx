@@ -2,6 +2,14 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { siteConfig } from "@/lib/site-config";
+import { photosByName } from "@/lib/portfolio";
+import { ProjectPhotos } from "@/components/ProjectPhotos";
+
+const doncasterWorktopPhotos = photosByName(
+  "marble-effect-kitchen-wrap-doncaster-01",
+  "marble-effect-kitchen-wrap-doncaster-03",
+  "marble-effect-kitchen-wrap-doncaster-04",
+);
 
 export const metadata: Metadata = {
   title: "Worktop Wrapping Doncaster | Marble, Stone & Wood Vinyl | WRPX",
@@ -114,6 +122,16 @@ export default function WorktopWrappingDoncasterPage() {
               </span>
             </figcaption>
           </figure>
+        </div>
+      </section>
+
+      <section className="pb-12">
+        <div className="container mx-auto max-w-3xl px-4">
+          <ProjectPhotos
+            title="Recent Doncaster worktop wrap"
+            intro="A marble-effect worktop and splashback wrapped in a Doncaster kitchen — sink, hob and peninsula included."
+            photos={doncasterWorktopPhotos}
+          />
         </div>
       </section>
 

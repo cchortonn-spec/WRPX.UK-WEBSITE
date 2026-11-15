@@ -8,6 +8,9 @@ import { photosByName } from "@/lib/portfolio";
 import { ProjectPhotos } from "@/components/ProjectPhotos";
 
 const furniturePhotos = photosByName(
+  "stone-effect-dining-table-wrap-waverley-after-01",
+  "stone-effect-dining-table-wrap-waverley-after-02",
+  "open-plan-kitchen-dining-wrap-waverley-after-01",
   "3m-wood-effect-wrapped-dining-table-rotherham-01",
   "3m-wood-effect-wrapped-tv-unit-rotherham-01",
   "3m-wood-effect-wrapped-side-table-rotherham-01",
@@ -113,7 +116,7 @@ export default function FurnitureWrappingPage() {
 
           <ProjectPhotos
             title="Matching furniture in one 3M finish"
-            intro="A dining table, side tables and TV unit in Rotherham, all wrapped in the same 3M wood-effect film so the whole room matches. Plus dressing tables and chests of drawers refreshed without replacing them."
+            intro="A dining table wrapped in a light grey stone effect, plus a dining table, side tables and TV unit in Rotherham all wrapped in the same 3M wood-effect film so the whole room matches. Dressing tables and chests of drawers refreshed without replacing them too."
             photos={furniturePhotos}
           />
 

@@ -104,12 +104,12 @@ const finishes = [
 ];
 
 const galleryPhotos = photosByName(
+  "forest-green-kitchen-island-wrap-leeds-after-01",
+  "navy-kitchen-wrap-manchester-01",
+  "marble-worktop-splashback-wrap-sheffield-after-02",
+  "oak-effect-worktop-wrap-york-after-01",
   "navy-marble-kitchen-wrap-doncaster-after-01",
   "black-kitchen-wrap-sheffield-after-02",
-  "marble-effect-worktop-wrap-pontefract-01",
-  "grey-stone-worktop-wrap-sheffield-01",
-  "kitchen-wrap-grey-rotherham-01",
-  "white-gloss-kitchen-wrap-doncaster-01",
 );
 
 const comparison = [

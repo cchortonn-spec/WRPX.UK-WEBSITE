@@ -3,6 +3,12 @@ import Link from "next/link";
 import { photosByName } from "@/lib/portfolio";
 import { ProjectPhotos } from "@/components/ProjectPhotos";
 
+const sheffieldMarblePhotos = photosByName(
+  "marble-worktop-splashback-wrap-sheffield-after-02",
+  "marble-worktop-splashback-wrap-sheffield-after-01",
+  "marble-worktop-splashback-wrap-sheffield-before-01",
+);
+
 const sheffieldPhotos = photosByName(
   "grey-stone-worktop-wrap-sheffield-01",
   "grey-stone-worktop-wrap-sheffield-02",
@@ -123,6 +129,16 @@ export default function KitchenWrappingSheffieldPage() {
             title="Recent Sheffield project — grey stone worktop wrap"
             intro="Worktops and a rounded breakfast bar wrapped in grey stone-effect vinyl. No new worktops, no fitters, no mess."
             photos={sheffieldPhotos}
+          />
+        </div>
+      </section>
+
+      <section className="pt-12">
+        <div className="container mx-auto max-w-3xl px-4">
+          <ProjectPhotos
+            title="Recent Sheffield project — marble-effect worktop, splashback and grey doors"
+            intro="A cream shaker kitchen with a wood-effect worktop and white tiles, finished in soft grey doors with a marble-effect worktop and splashback. Wrapped on site, no rip-out."
+            photos={sheffieldMarblePhotos}
           />
         </div>
       </section>

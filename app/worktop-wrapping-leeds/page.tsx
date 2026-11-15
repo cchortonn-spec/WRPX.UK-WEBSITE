@@ -1,6 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/site-config";
+import { photosByName } from "@/lib/portfolio";
+import { ProjectPhotos } from "@/components/ProjectPhotos";
+
+const leedsWorktopPhotos = photosByName(
+  "forest-green-kitchen-island-wrap-leeds-after-01",
+  "forest-green-kitchen-island-wrap-leeds-after-03",
+  "forest-green-kitchen-island-wrap-leeds-before-06",
+);
 
 export const metadata: Metadata = {
   title: "Worktop Wrapping Leeds | Marble, Stone & Wood Vinyl Countertops | WRPX",
@@ -90,6 +98,16 @@ export default function WorktopWrappingLeedsPage() {
           <p className="mt-4 text-sm text-muted">
             We bring samples to every survey — choose in your own kitchen light.
           </p>
+        </div>
+      </section>
+
+      <section className="pb-12">
+        <div className="container mx-auto max-w-3xl px-4">
+          <ProjectPhotos
+            title="Recent Leeds worktop wrap"
+            intro="A grey worktop and island top wrapped in white stone effect, with the sink cut-out finished neatly."
+            photos={leedsWorktopPhotos}
+          />
         </div>
       </section>
 

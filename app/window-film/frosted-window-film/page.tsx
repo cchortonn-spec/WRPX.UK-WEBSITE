@@ -6,6 +6,9 @@ import { ProjectPhotos } from "@/components/ProjectPhotos";
 import { photosByName } from "@/lib/portfolio";
 
 const frostedPhotos = photosByName(
+  "frosted-window-film-front-door-panels-01",
+  "frosted-window-film-front-door-panels-02",
+  "frosted-window-film-front-door-panels-03",
   "frosted-film-glass-balustrade-decking-sheffield-01",
   "frosted-film-glass-balustrade-decking-sheffield-03",
   "frosted-bathroom-window-film-barnsley-01",

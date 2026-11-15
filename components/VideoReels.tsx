@@ -9,6 +9,32 @@ export type Reel = {
 };
 
 const REELS: Reel[] = [
+  // November 2026 jobs
+  {
+    src: "/videos/navy-kitchen-wrap-manchester.mp4",
+    poster: "/videos/navy-kitchen-wrap-manchester.jpg",
+    label: "Navy kitchen wrap, Manchester",
+  },
+  {
+    src: "/videos/marble-worktop-splashback-wrap-sheffield.mp4",
+    poster: "/videos/marble-worktop-splashback-wrap-sheffield.jpg",
+    label: "Marble-effect worktop and splashback wrap, Sheffield",
+  },
+  {
+    src: "/videos/oak-effect-worktop-wrap-york-reveal.mp4",
+    poster: "/videos/oak-effect-worktop-wrap-york-reveal.jpg",
+    label: "Oak-effect worktop wrap, York",
+  },
+  {
+    src: "/videos/oak-effect-worktop-wrap-york.mp4",
+    poster: "/videos/oak-effect-worktop-wrap-york.jpg",
+    label: "Oak-effect worktop wrap finished, York",
+  },
+  {
+    src: "/videos/forest-green-kitchen-island-wrap-leeds.mp4",
+    poster: "/videos/forest-green-kitchen-island-wrap-leeds.jpg",
+    label: "Kitchen island wrap, Leeds",
+  },
   {
     src: "/videos/kitchen-wrap-reel-01.mp4",
     poster: "/videos/kitchen-wrap-reel-01.jpg",

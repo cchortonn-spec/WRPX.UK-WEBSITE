@@ -3,6 +3,17 @@ import Link from "next/link";
 import Image from "next/image";
 import { siteConfig } from "@/lib/site-config";
 import { getServiceSchema } from "@/lib/schema";
+import { photosByName } from "@/lib/portfolio";
+import { ProjectPhotos } from "@/components/ProjectPhotos";
+
+const worktopPhotos = photosByName(
+  "oak-effect-worktop-wrap-york-after-01",
+  "white-marble-worktop-wrap-sheffield-01",
+  "oak-effect-kitchen-worktop-wrap-waverley-after-01",
+  "marble-effect-kitchen-wrap-doncaster-03",
+  "marble-worktop-splashback-wrap-sheffield-after-04",
+  "forest-green-kitchen-island-wrap-leeds-after-04",
+);
 
 export const metadata: Metadata = {
   title: "Worktop Wrapping South Yorkshire | Stone, Marble & Wood Effect",
@@ -92,6 +103,12 @@ export default function WorktopWrappingPage() {
               We work in your kitchen. Surfaces are cleaned, degreased and lightly prepped. Film is applied in sections; joints are trimmed and sealed. Sink and hob cutouts are wrapped to the edge. No need to remove the worktop. We can do worktops on their own or as part of a full kitchen wrap — doors, frames and worktops in one job. Same {siteConfig.guaranteeYears}-year guarantee on materials and workmanship.
             </p>
           </div>
+
+          <ProjectPhotos
+            title="Recent worktop wraps"
+            intro="Oak, marble and stone-effect worktops wrapped on site in York, Sheffield, Doncaster, Leeds and Waverley. Same worktops, new finish."
+            photos={worktopPhotos}
+          />
 
           <div className="card-float p-8">
             <h2 className="text-xl font-semibold text-foreground">

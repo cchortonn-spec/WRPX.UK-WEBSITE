@@ -105,6 +105,18 @@ export default function CommercialInstallationPage() {
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {[
               {
+                src: "/images/post-office-counter-wrap-sheffield/post-office-counter-vinyl-wrap-sheffield-after-01.jpg",
+                alt: "Post Office counter wrapped in red vinyl with a white Post Office logo, Sheffield.",
+              },
+              {
+                src: "/images/post-office-counter-wrap-sheffield/post-office-counter-vinyl-wrap-sheffield-after-03.jpg",
+                alt: "Red vinyl wrapped retail counter with oval logo beside an oak-effect side panel, Sheffield.",
+              },
+              {
+                src: "/images/post-office-counter-wrap-sheffield/post-office-counter-vinyl-wrap-sheffield-before-01.jpg",
+                alt: "Grey retail counter before vinyl wrapping, Sheffield.",
+              },
+              {
                 src: "/images/commercial/IMG_8615_Original-31d6e701-ed1d-48a9-a9d6-c2e940967861.png",
                 alt: "Full window graphics and shopfront campaign vinyls on a food store.",
               },

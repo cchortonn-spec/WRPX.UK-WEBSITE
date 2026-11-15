@@ -1,6 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/site-config";
+import { photosByName } from "@/lib/portfolio";
+import { ProjectPhotos } from "@/components/ProjectPhotos";
+
+const sheffieldWorktopPhotos = photosByName(
+  "white-marble-worktop-wrap-sheffield-01",
+  "marble-worktop-splashback-wrap-sheffield-after-04",
+  "white-marble-worktop-wrap-sheffield-02",
+);
 
 export const metadata: Metadata = {
   title: "Worktop Wrapping Sheffield | Marble, Stone & Wood Effect Vinyl | WRPX",
@@ -136,6 +144,16 @@ export default function WorktopWrappingSheffieldPage() {
             We bring physical samples to the survey so you choose in your own kitchen lighting, not
             on a screen.
           </p>
+        </div>
+      </section>
+
+      <section className="pb-12">
+        <div className="container mx-auto max-w-3xl px-4">
+          <ProjectPhotos
+            title="Recent Sheffield worktop wraps"
+            intro="White marble-effect worktops and a marble-effect worktop and splashback, wrapped on site in Sheffield kitchens. No new worktops needed."
+            photos={sheffieldWorktopPhotos}
+          />
         </div>
       </section>
 
