@@ -7,7 +7,7 @@ import { SiteChrome } from "@/components/SiteChrome";
 import { AnalyticsTracker } from "@/components/AnalyticsTracker";
 import { VercelAnalytics } from "@/components/VercelAnalytics";
 import { getLocalBusinessSchema } from "@/lib/schema";
-import { testimonials } from "@/lib/testimonials";
+import { googleReviews } from "@/lib/google-reviews";
 
 const GA_MEASUREMENT_ID = "G-4D32FG8MK0";
 
@@ -66,7 +66,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const localBusinessSchema = getLocalBusinessSchema();
-  const reviewSchema = testimonials.map((item) => ({
+  const reviewSchema = googleReviews.reviews.map((item) => ({
     "@type": "Review",
     author: {
       "@type": "Person",
@@ -90,8 +90,8 @@ export default function RootLayout({
     name: "WRPX",
     aggregateRating: {
       "@type": "AggregateRating",
-      ratingValue: "5",
-      reviewCount: String(testimonials.length),
+      ratingValue: String(googleReviews.rating),
+      reviewCount: String(googleReviews.reviewCount ?? googleReviews.reviews.length),
       bestRating: "5",
       worstRating: "1",
     },

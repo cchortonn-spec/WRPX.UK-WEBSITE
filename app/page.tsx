@@ -6,6 +6,7 @@ import { nav } from "@/lib/nav";
 import { useImmersiveHero } from "@/lib/hero-config";
 import { HomeHero } from "@/components/HomeHero";
 import { BeforeAfterShowcase } from "@/components/BeforeAfterShowcase";
+import { BeforeAfterPairs } from "@/components/BeforeAfterPairs";
 import { VideoReels } from "@/components/VideoReels";
 import { HeroTrustBar } from "@/components/HeroTrustBar";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
@@ -36,15 +37,6 @@ export const metadata: Metadata = {
     ],
   },
 };
-
-const galleryImages = [
-  { src: "/images/Kitchen-navy-marble-doncaster/navy-marble-kitchen-wrap-doncaster-after-01.jpeg", alt: "Navy wood-effect kitchen wrap Doncaster with white marble high-gloss worktop" },
-  { src: "/images/Kitchen-navy-marble-doncaster/navy-marble-kitchen-wrap-doncaster-worktop-detail-01.jpeg", alt: "White marble high-gloss worktop wrap close-up — Doncaster kitchen" },
-  { src: "/images/home/kitchen-home-new-02.png", alt: "Wrapped kitchen with light wall units and tiled splashback" },
-  { src: "/images/home/kitchen-home-new-04.png", alt: "Kitchen worktop and cabinet doors after vinyl wrapping" },
-  { src: "/images/home/kitchen-home-new-01.png", alt: "Modern grey kitchen wrap finish in South Yorkshire" },
-  { src: "/images/home/kitchen-home-new-05.png", alt: "Close-up of wrapped kitchen cabinets and stone-style counters" },
-];
 
 const recentProjects = photosByName(
   "forest-green-kitchen-island-wrap-leeds-after-01",
@@ -358,21 +350,7 @@ export default function HomePage() {
           <h2 className="section-heading mb-8 text-2xl font-semibold text-foreground md:text-3xl">
             Before & After
           </h2>
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {galleryImages.map((img, i) => (
-              <div key={i} className="card-float overflow-hidden">
-                <div className="relative aspect-[4/3]">
-                  <Image
-                    src={img.src}
-                    alt={img.alt}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  />
-                </div>
-              </div>
-            ))}
-          </div>
+          <BeforeAfterPairs />
           <p className="mt-8 text-center">
             <Link href="/gallery/" className="btn-primary inline-block">
               View full gallery →
