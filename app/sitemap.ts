@@ -514,6 +514,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "architectural-wrap-student-accommodation-norwich",
     "window-film/gym-window-film-walsall",
     "subcontract-window-film-installation-walsall",
+    "window-film/retail-window-film-walsall",
+    "architectural-wrap-care-homes-walsall",
+    "architectural-wrap-student-accommodation-walsall",
+    "window-film/gym-window-film-ipswich",
   ];
 
   const furnitureLocations = siteConfig.areas.map((city) =>
