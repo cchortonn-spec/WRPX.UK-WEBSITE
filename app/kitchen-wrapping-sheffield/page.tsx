@@ -9,6 +9,12 @@ const sheffieldMarblePhotos = photosByName(
   "marble-worktop-splashback-wrap-sheffield-before-01",
 );
 
+const sheffieldWaverleyPhotos = photosByName(
+  "open-plan-kitchen-dining-wrap-waverley-after-01",
+  "oak-effect-kitchen-worktop-wrap-waverley-after-01",
+  "open-plan-kitchen-dining-wrap-waverley-after-03",
+);
+
 const sheffieldPhotos = photosByName(
   "grey-stone-worktop-wrap-sheffield-01",
   "grey-stone-worktop-wrap-sheffield-02",
@@ -139,6 +145,16 @@ export default function KitchenWrappingSheffieldPage() {
             title="Recent Sheffield project — marble-effect worktop, splashback and grey doors"
             intro="A cream shaker kitchen with a wood-effect worktop and white tiles, finished in soft grey doors with a marble-effect worktop and splashback. Wrapped on site, no rip-out."
             photos={sheffieldMarblePhotos}
+          />
+        </div>
+      </section>
+
+      <section className="pt-12">
+        <div className="container mx-auto max-w-3xl px-4">
+          <ProjectPhotos
+            title="Recent Sheffield project — open-plan kitchen with oak-effect worktops"
+            intro="Cream kitchen units with oak-effect worktops and a matching stone-effect dining table, all wrapped in one visit in Waverley, Sheffield."
+            photos={sheffieldWaverleyPhotos}
           />
         </div>
       </section>

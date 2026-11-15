@@ -1,6 +1,15 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { getServiceSchema } from "@/lib/schema";
+import { photosByName } from "@/lib/portfolio";
+import { ProjectPhotos } from "@/components/ProjectPhotos";
+
+const nottinghamPhotos = photosByName(
+  "frosted-window-film-front-door-panels-01",
+  "frosted-window-film-front-door-panels-02",
+  "frosted-window-film-front-door-panels-03",
+  "frosted-window-film-front-door-panels-04",
+);
 
 export const metadata: Metadata = {
   title: "Frosted Window Film Nottingham | Privacy Film, Glass Manifestation & Decorative Film | WRPX",
@@ -152,6 +161,17 @@ export default function FrostedFilmNottinghamPage() {
               Frosted Film Overview
             </Link>
           </div>
+        </div>
+      </section>
+
+      {/* Recent Nottingham job */}
+      <section className="px-4 py-16">
+        <div className="container mx-auto max-w-3xl">
+          <ProjectPhotos
+            title="Recent Nottingham project — frosted film on front door panels"
+            intro="Frosted film fitted to the tall glass panels either side of a front door in Nottingham. Privacy from the street, with daylight still coming through into the hallway."
+            photos={nottinghamPhotos}
+          />
         </div>
       </section>
 

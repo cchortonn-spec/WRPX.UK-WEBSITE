@@ -6,6 +6,9 @@ import { photosByName } from "@/lib/portfolio";
 import { ProjectPhotos } from "@/components/ProjectPhotos";
 
 const localPhotos = photosByName(
+  "stone-effect-dining-table-wrap-waverley-after-01",
+  "stone-effect-dining-table-wrap-waverley-after-02",
+  "stone-effect-dining-table-wrap-waverley-after-04",
   "white-fitted-wardrobe-wrap-sheffield-01",
   "3m-wood-effect-wrapped-dining-table-rotherham-01",
   "walnut-fitted-wardrobe-wrap-barnsley-01",
@@ -105,7 +108,7 @@ export default function FurnitureWrappingSheffieldPage() {
         <div className="container mx-auto max-w-3xl px-4">
           <ProjectPhotos
             title="Recent furniture wraps in and around Sheffield"
-            intro="A white fitted wardrobe in Sheffield, plus matching furniture sets we've wrapped nearby in Rotherham and Barnsley."
+            intro="A stone-effect dining table in Waverley and a white fitted wardrobe in Sheffield, plus matching furniture sets we've wrapped nearby in Rotherham and Barnsley."
             photos={localPhotos}
           />
         </div>

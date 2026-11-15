@@ -8,6 +8,9 @@ const sheffieldWorktopPhotos = photosByName(
   "white-marble-worktop-wrap-sheffield-01",
   "marble-worktop-splashback-wrap-sheffield-after-04",
   "white-marble-worktop-wrap-sheffield-02",
+  "oak-effect-kitchen-worktop-wrap-waverley-after-01",
+  "oak-effect-kitchen-worktop-wrap-waverley-after-03",
+  "oak-effect-kitchen-worktop-wrap-waverley-after-06",
 );
 
 export const metadata: Metadata = {
@@ -151,7 +154,7 @@ export default function WorktopWrappingSheffieldPage() {
         <div className="container mx-auto max-w-3xl px-4">
           <ProjectPhotos
             title="Recent Sheffield worktop wraps"
-            intro="White marble-effect worktops and a marble-effect worktop and splashback, wrapped on site in Sheffield kitchens. No new worktops needed."
+            intro="White marble-effect worktops, a marble-effect worktop and splashback, and light oak-effect worktops, wrapped on site in Sheffield kitchens. No new worktops needed."
             photos={sheffieldWorktopPhotos}
           />
         </div>
