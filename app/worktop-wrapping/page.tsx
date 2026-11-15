@@ -106,7 +106,7 @@ export default function WorktopWrappingPage() {
 
           <ProjectPhotos
             title="Recent worktop wraps"
-            intro="Oak, marble and stone-effect worktops wrapped on site in York, Sheffield, Doncaster, Leeds and Waverley. Same worktops, new finish."
+            intro="Oak, marble and stone-effect worktops wrapped on site in York, Sheffield, Doncaster and Leeds. Same worktops, new finish."
             photos={worktopPhotos}
           />
 
