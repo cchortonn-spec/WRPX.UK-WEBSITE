@@ -1,4 +1,5 @@
 import { siteConfig } from "./site-config";
+import { googleReviews } from "./google-reviews";
 
 export function getLocalBusinessSchema() {
   return {
@@ -143,8 +144,8 @@ export function getLocalBusinessSchema() {
     },
     aggregateRating: {
       "@type": "AggregateRating",
-      ratingValue: "5",
-      reviewCount: "5",
+      ratingValue: String(googleReviews.rating),
+      reviewCount: String(googleReviews.reviewCount ?? googleReviews.reviews.length),
       bestRating: "5",
     },
   };

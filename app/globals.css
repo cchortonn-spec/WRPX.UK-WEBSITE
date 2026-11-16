@@ -1901,6 +1901,56 @@ a[href^="tel"]:hover {
   color: #050505;
 }
 
+/* Real before / after pairs (home page) */
+.ba-pair {
+  overflow: hidden;
+}
+
+.ba-pair-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+}
+
+.ba-pair-photo {
+  position: relative;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+}
+
+.ba-pair-label {
+  position: absolute;
+  bottom: 0.6rem;
+  left: 0.6rem;
+  z-index: 2;
+  padding: 0.3rem 0.65rem;
+  border-radius: 0.35rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  pointer-events: none;
+}
+
+.ba-pair-label-before {
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+}
+
+.ba-pair-label-after {
+  background: rgba(255, 255, 255, 0.92);
+  color: #050505;
+}
+
+.ba-pair-caption {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 0.9rem 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--foreground, #fff);
+}
+
 .before-after-slider-divider {
   position: absolute;
   inset: 0;
@@ -2206,6 +2256,12 @@ a[href^="tel"]:hover {
   line-height: 1.55;
   color: rgba(250, 250, 250, 0.88);
   font-style: italic;
+  /* Long reviews are shortened on the page (full text stays on Google) */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 6;
+  line-clamp: 6;
+  overflow: hidden;
 }
 
 .google-reviews-chip-author {
