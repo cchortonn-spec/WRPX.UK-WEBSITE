@@ -173,7 +173,7 @@ export default function KitchenIslandWrappingPage() {
                 <span className="text-accent font-bold">→</span>
                 <span>
                   <strong className="text-foreground">
-                    Cost: from around £250–£600.
+                    Cost: from around £300.
                   </strong>{" "}
                   Depending on the island&apos;s size, complexity and finish. A fraction of
                   the cost of a replacement or respray.
@@ -295,6 +295,10 @@ export default function KitchenIslandWrappingPage() {
               <Link href="/kitchen-wrapping/" className="text-accent hover:underline">Kitchen Wrapping</Link>
               {" · "}
               <Link href="/worktop-wrapping/" className="text-accent hover:underline">Worktop Wrapping</Link>
+              {" · "}
+              <Link href="/kitchen-wrapping-cost/" className="text-accent hover:underline">
+                kitchen wrapping prices
+              </Link>
               {" · "}
               <Link href="/splashback-wrapping/" className="text-accent hover:underline">Splashback Wrapping</Link>
               {" · "}

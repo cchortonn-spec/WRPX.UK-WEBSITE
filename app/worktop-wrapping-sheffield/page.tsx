@@ -16,7 +16,7 @@ const sheffieldWorktopPhotos = photosByName(
 export const metadata: Metadata = {
   title: "Worktop Wrapping Sheffield | Marble, Stone & Wood Effect Vinyl | WRPX",
   description:
-    "Worktop wrapping Sheffield — transform countertops with heat-resistant marble, stone and wood-effect vinyl. From £250. WRPX specialist, 5-year guarantee, free survey.",
+    "Worktop wrapping Sheffield — transform countertops with heat-resistant marble, stone and wood-effect vinyl. From £350. WRPX specialist, 5-year guarantee, free survey.",
   alternates: { canonical: "https://www.wrpx.co.uk/worktop-wrapping-sheffield/" },
 };
 
@@ -30,7 +30,7 @@ export default function WorktopWrappingSheffieldPage() {
         name: "How much does worktop wrapping cost in Sheffield?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Worktop wrapping in Sheffield typically starts from around £250 for a standard run. A larger U-shaped kitchen worktop including upstands can range from £400–£600. We give a fixed price after the free survey — no surprises on the day.",
+          text: "Worktop wrapping in Sheffield typically starts from around £350 for a standard run. A larger U-shaped kitchen worktop including upstands can range from £400–£600. We give a fixed price after the free survey — no surprises on the day.",
         },
       },
       {
@@ -194,7 +194,7 @@ export default function WorktopWrappingSheffieldPage() {
               <tbody>
                 <tr className="border-b border-border">
                   <td className="py-3 pr-4">Straight run (2–3m)</td>
-                  <td className="py-3">from £250</td>
+                  <td className="py-3">from £350</td>
                 </tr>
                 <tr className="border-b border-border">
                   <td className="py-3 pr-4">L-shape (4–5m inc. corner)</td>
@@ -280,7 +280,7 @@ export default function WorktopWrappingSheffieldPage() {
                 How much does worktop wrapping cost in Sheffield?
               </h3>
               <p className="mt-2 text-muted leading-relaxed">
-                Worktop wrapping in Sheffield starts from around £250 for a standard straight run.
+                Worktop wrapping in Sheffield starts from around £350 for a standard straight run.
                 L-shaped and U-shaped kitchens range from £350–£600. We give a fixed price after the
                 free survey.
               </p>

@@ -13,7 +13,7 @@ const leedsWorktopPhotos = photosByName(
 export const metadata: Metadata = {
   title: "Worktop Wrapping Leeds | Marble, Stone & Wood Vinyl Countertops | WRPX",
   description:
-    "Worktop wrapping Leeds — transform your countertops in one day. Heat-resistant marble, stone and wood-effect vinyl from £250. Free survey, 5-year guarantee.",
+    "Worktop wrapping Leeds — transform your countertops in one day. Heat-resistant marble, stone and wood-effect vinyl from £350. Free survey, 5-year guarantee.",
   alternates: { canonical: "https://www.wrpx.co.uk/worktop-wrapping-leeds/" },
 };
 
@@ -27,7 +27,7 @@ export default function WorktopWrappingLeedsPage() {
         name: "How much does worktop wrapping cost in Leeds?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Worktop wrapping in Leeds starts from around £250 for a straight run. L-shaped and U-shaped kitchens range from £350–£600. All prices are fixed after the free survey — no hidden charges.",
+          text: "Worktop wrapping in Leeds starts from around £350 for a straight run. L-shaped and U-shaped kitchens range from £350–£600. All prices are fixed after the free survey — no hidden charges.",
         },
       },
       {
@@ -74,7 +74,7 @@ export default function WorktopWrappingLeedsPage() {
           </p>
           <p className="mt-4 text-muted leading-relaxed">
             New laminate worktops in Leeds cost £600–£1,200 before fitting. Stone or quartz starts
-            at £2,000 and takes weeks. Wrapping delivers a comparable result from £250, same day.
+            at £2,000 and takes weeks. Wrapping delivers a comparable result from £350, same day.
           </p>
           <div className="mt-6 rounded-lg border-l-4 border-accent bg-background p-4">
             <p className="font-semibold text-foreground">
@@ -125,7 +125,7 @@ export default function WorktopWrappingLeedsPage() {
               <tbody>
                 <tr className="border-b border-border">
                   <td className="py-3 pr-4">Straight run (2–3m)</td>
-                  <td className="py-3">from £250</td>
+                  <td className="py-3">from £350</td>
                 </tr>
                 <tr className="border-b border-border">
                   <td className="py-3 pr-4">L-shape (4–5m)</td>
@@ -155,7 +155,7 @@ export default function WorktopWrappingLeedsPage() {
           <div className="mt-4 space-y-5">
             <div>
               <h3 className="font-semibold text-foreground">How much in Leeds?</h3>
-              <p className="mt-2 text-muted">From £250. Fixed quote after free survey.</p>
+              <p className="mt-2 text-muted">From £350. Fixed quote after free survey.</p>
             </div>
             <div>
               <h3 className="font-semibold text-foreground">How does it compare to replacing worktops?</h3>

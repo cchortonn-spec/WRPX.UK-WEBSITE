@@ -14,7 +14,7 @@ const doncasterWorktopPhotos = photosByName(
 export const metadata: Metadata = {
   title: "Worktop Wrapping Doncaster | Marble, Stone & Wood Vinyl | WRPX",
   description:
-    "Worktop wrapping Doncaster — transform your countertops with heat-resistant vinyl. Marble, stone, wood-effect finishes. From £250. Free survey, 5-year guarantee.",
+    "Worktop wrapping Doncaster — transform your countertops with heat-resistant vinyl. Marble, stone, wood-effect finishes. From £350. Free survey, 5-year guarantee.",
   alternates: { canonical: "https://www.wrpx.co.uk/worktop-wrapping-doncaster/" },
 };
 
@@ -28,7 +28,7 @@ export default function WorktopWrappingDoncasterPage() {
         name: "How much does worktop wrapping cost in Doncaster?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Worktop wrapping in Doncaster starts from around £250 for a straight run. L-shaped and U-shaped kitchens typically range from £350 to £600. All prices are fixed after the free survey.",
+          text: "Worktop wrapping in Doncaster starts from around £350 for a straight run. L-shaped and U-shaped kitchens typically range from £350 to £600. All prices are fixed after the free survey.",
         },
       },
       {
@@ -151,7 +151,7 @@ export default function WorktopWrappingDoncasterPage() {
               <tbody>
                 <tr className="border-b border-border">
                   <td className="py-3 pr-4">Straight run (2–3m)</td>
-                  <td className="py-3">from £250</td>
+                  <td className="py-3">from £350</td>
                 </tr>
                 <tr className="border-b border-border">
                   <td className="py-3 pr-4">L-shape (4–5m)</td>
@@ -186,7 +186,7 @@ export default function WorktopWrappingDoncasterPage() {
           <div className="mt-4 space-y-6">
             <div>
               <h3 className="font-semibold text-foreground">How much does worktop wrapping cost in Doncaster?</h3>
-              <p className="mt-2 text-muted">From £250 for a straight run. Fixed quote given after the free survey.</p>
+              <p className="mt-2 text-muted">From £350 for a straight run. Fixed quote given after the free survey.</p>
             </div>
             <div>
               <h3 className="font-semibold text-foreground">Is the vinyl heat and waterproof?</h3>

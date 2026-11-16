@@ -190,7 +190,7 @@ export default function KitchenWrappingManchesterPage() {
           <p className="mt-4 text-muted leading-relaxed">
             Most Manchester kitchen wraps fall between <strong>£850 and £1,600</strong> depending
             on door count, finish and whether worktops are included. Worktop-only wraps start from
-            around £250. See our{" "}
+            around £350. See our{" "}
             <Link href="/kitchen-wrapping-cost/" className="text-accent hover:underline">
               kitchen wrapping cost guide
             </Link>{" "}

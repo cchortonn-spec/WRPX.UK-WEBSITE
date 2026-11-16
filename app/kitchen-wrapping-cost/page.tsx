@@ -1,213 +1,273 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import Image from "next/image";
-import { siteConfig } from "@/lib/site-config";
+import Link from "next/link";
 import { FaqAccordion } from "@/components/FaqAccordion";
+import { BeforeAfterSlider } from "@/components/BeforeAfterSlider";
+import { CostPricePicker } from "@/components/CostPricePicker";
+import { CostWrapVideo } from "@/components/CostWrapVideo";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
+import {
+  formatFrom,
+  formatPounds,
+  kitchenPriceGuide,
+  kitchenPricing,
+} from "@/lib/pricing";
+import { siteConfig } from "@/lib/site-config";
+
+const TITLE = "Kitchen Wrapping Cost UK | Prices From £1,100";
+const DESCRIPTION =
+  "How much does kitchen wrapping cost? Full kitchens with worktops from £1,100, Shaker from £1,450, worktops from £350. Supply and fit, free fixed quote.";
+const OG_TITLE = "Kitchen Wrapping Cost UK: Real Prices From £1,100";
+const OG_DESCRIPTION =
+  "Full kitchens with worktops from £1,100, Shaker from £1,450 and worktops from £350. See real before and after jobs and get a free fixed quote.";
+const OG_IMAGE =
+  "/images/Kitchen-navy-marble-doncaster/navy-marble-kitchen-wrap-doncaster-after-01.jpeg";
 
 export const metadata: Metadata = {
-  title: "Kitchen Wrapping Cost UK | Honest Price Guide",
-  description:
-    "Kitchen wrapping cost in the UK. Doors from £45, a full kitchen from £1,099, worktops from £380. Supply and fit, with a fixed quote after a free survey.",
+  title: TITLE,
+  description: DESCRIPTION,
   alternates: { canonical: "https://www.wrpx.co.uk/kitchen-wrapping-cost/" },
   openGraph: {
-    title: "Kitchen Wrapping Cost UK | Honest Price Guide",
-    description:
-      "Kitchen wrapping cost in the UK. Doors from £45, a full kitchen from £1,099, worktops from £380. Supply and fit, with a fixed quote after a free survey.",
+    title: OG_TITLE,
+    description: OG_DESCRIPTION,
     url: "https://www.wrpx.co.uk/kitchen-wrapping-cost/",
     type: "website",
+    images: [
+      {
+        url: `https://www.wrpx.co.uk${OG_IMAGE}`,
+        width: 1200,
+        height: 1600,
+        alt: "Navy kitchen wrap with marble-effect worktops in Doncaster",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: OG_TITLE,
+    description: OG_DESCRIPTION,
   },
 };
 
-const QUOTE_HREF = "/kitchen-wrapping-quote/";
-
-const startingPrices = [
-  {
-    name: "Door wrapping",
-    amount: "£45",
-    unit: "per door",
-    features: [
-      "One door or a full set",
-      "Matt, gloss, woodgrain or marble",
-      "Doors wrapped in our workshop",
-    ],
-  },
-  {
-    name: "Full kitchen",
-    amount: "£1,099",
-    unit: "about 10–12 doors, frames and plinths",
-    features: [
-      "Doors, drawers, carcass faces and end panels",
-      "Plinths, cornice and pelmet",
-      "Usually 1–3 days, no rip-out",
-    ],
-    featured: true,
-  },
-  {
-    name: "Worktops only",
-    amount: "£380",
-    unit: "worktop wrap",
-    features: [
-      "Marble, stone or wood-effect",
-      "Heat- and scratch-resistant finishes",
-      "Supply and fit on the existing top",
-    ],
-  },
-] as const;
-
-const priceRows = [
-  ["Door", "From £45 per door"],
-  ["Full kitchen (about 10–12 doors, frames and plinths)", "From £1,099"],
-  [
-    "Complete kitchen on the quote form (doors, drawers, panels, plinths, trims, worktops and upstands)",
-    "From £1,099",
-  ],
-  ["Worktops", "From £380"],
-  ["Drawer front, priced on its own", null],
-  ["End panel, wrapped on its own", null],
-  ["Splashback", null],
-  ["Extra preparation or repairs", null],
-] as const;
-
-const examples = [
-  {
-    title: "A few doors only",
-    body: "If the carcasses and worktops are fine and you only want some doors refreshed, each door starts from £45. We do not multiply that figure into a package price here, because size, style and finish are confirmed on the survey.",
-  },
-  {
-    title: "A typical full kitchen",
-    body: "A kitchen of about 10 to 12 doors, with frames and plinths, starts from £1,099. That is the published starting price for this size of job. Doors, drawers, carcass faces and end panels are part of that full-kitchen scope.",
-  },
-  {
-    title: "Worktops only",
-    body: "Worktop wrapping starts from £380. People choose this when the doors are already the right colour and the top is dated, stained or the wrong finish. The top stays in place.",
-  },
-  {
-    title: "Doors and worktops together",
-    body: "The quote form has a complete kitchen option — doors, drawers, panels, plinths, trims, worktops and upstands — from £1,099. That is the starting price on the form. A larger kitchen is not automatically the same figure. The survey turns it into one fixed price.",
-  },
-] as const;
-
-const comparisons = [
-  {
-    name: "Kitchen wrap",
-    best: true,
-    rows: [
-      ["Cost", "From £1,099. Usually 70–80% less than a new kitchen."],
-      ["Time", "1–3 days"],
-      ["Disruption", "No rip-out. The kitchen stays in place."],
-      ["Finish", "Matt, gloss, woodgrain, stone and marble effects"],
-      ["Guarantee", `${siteConfig.guaranteeYears}-year guarantee on materials and workmanship`],
-    ],
-  },
-  {
-    name: "New kitchen",
-    rows: [
-      ["Cost", "Typically £5,000–£15,000"],
-      ["Time", "Weeks, including design and lead times"],
-      ["Disruption", "Full rip-out, often with other trades"],
-      ["Finish", "New units and a new layout, if you want one"],
-      ["Guarantee", "Depends on the fitter"],
-    ],
-  },
-  {
-    name: "Paint spraying",
-    rows: [
-      ["Cost", "Often more than wrapping"],
-      ["Time", "Several days, plus curing before normal use"],
-      ["Disruption", "Sanding, masking and paint fumes"],
-      ["Finish", "Usually a solid colour. It can chip, and touch-ups are hard to match."],
-      ["Guarantee", "Depends on the sprayer"],
-    ],
-  },
-] as const;
-
-const faqs = [
-  {
-    q: "How much does it cost to wrap a kitchen in the UK?",
-    a: "A full kitchen of about 10 to 12 doors, including frames and plinths, starts from £1,099. Doors start from £45 each. Worktops start from £380. The quote form’s complete kitchen option, which covers doors, drawers, panels, plinths, trims, worktops and upstands, also starts from £1,099. Your own job is one fixed price after a free survey. The price is for supply and fit.",
-  },
-  {
-    q: "How much does kitchen wrapping cost per door?",
-    a: "Doors start from £45 each. Size, door style and finish can move the fixed price. A full kitchen of about 10 to 12 doors starts from £1,099, which is the published starting point when the whole run is wrapped rather than one or two doors.",
-  },
-  {
-    q: "How much does a vinyl kitchen worktop cost to wrap?",
-    a: "Worktop wrapping starts from £380. Splashbacks are quoted separately. You get one fixed price for the worktop after a free survey, and the existing top stays in place.",
-  },
-  {
-    q: "Is kitchen wrapping cheaper than a new kitchen?",
-    a: "Usually, yes. A new kitchen typically costs £5,000 to £15,000. Wrapping is usually 70 to 80 percent less, because the units stay and only the visible surfaces change. Wrapping does not give you a new layout.",
-  },
-  {
-    q: "Is kitchen wrapping cheaper than painting?",
-    a: "Professional paint spraying is often more than wrapping, once preparation, curing time and how the finish wears are taken into account. Wrapping is supply and fit of branded architectural film, with a 5-year guarantee on materials and workmanship. A typical spraying price has not been published on this site.",
-  },
-  {
-    q: "What is included in a kitchen wrapping price?",
-    a: "Supply and fit of the film, cleaning and the usual preparation, doors wrapped in the workshop, frames and carcass faces wrapped in the kitchen, doors rehung and hardware refitted, and a 5-year guarantee. If a surface needs repair, that is agreed in the fixed quote before any work starts.",
-  },
-  {
-    q: "Do you supply and fit kitchen wraps across the UK?",
-    a: "Yes. WRPX is based in South Yorkshire and supplies and fits kitchen wraps across the UK, including Sheffield, Doncaster, Barnsley, Rotherham, Leeds, Huddersfield and Chesterfield.",
-  },
-  {
-    q: "How long does a kitchen wrap take?",
-    a: "Most kitchens take 1 to 3 days. There is no rip-out. Doors are wrapped in the workshop and frames are wrapped in place, so the kitchen stays where it is.",
-  },
-] as const;
-
-const placeholders = [
-  "Drawer front, when it is priced on its own rather than inside a full kitchen.",
-  "End panel, when it is wrapped on its own rather than as part of a full kitchen.",
-  "Splashback. The quote form says splashbacks are quoted separately, and there is no published starting price.",
-  "The price difference between Cover Styl, LX Hausys, 3M DI-NOC and BENIF. The site only publishes a cheap-film versus premium-film gap of £100–£200 on a typical kitchen.",
-  "Extra preparation or repairs, such as chips, old paint or heavy grease, beyond the preparation already included.",
-  "A worked example for a kitchen larger than about 10 to 12 doors.",
-  "A typical price for professional kitchen paint spraying. The site only says spraying is often more than wrapping.",
-] as const;
-
 const towns = [
   ["Sheffield", "/kitchen-wrapping-sheffield/"],
-  ["Leeds", "/kitchen-wrapping-leeds/"],
   ["Doncaster", "/kitchen-wrapping-doncaster/"],
   ["Rotherham", "/kitchen-wrapping-rotherham/"],
   ["Barnsley", "/kitchen-wrapping-barnsley/"],
-  ["Huddersfield", "/kitchen-wrapping-huddersfield/"],
   ["Chesterfield", "/kitchen-wrapping-chesterfield/"],
-  ["Wakefield", "/kitchen-wrapping-wakefield/"],
-  ["York", "/kitchen-wrapping-york/"],
+  ["Leeds", "/kitchen-wrapping-leeds/"],
   ["Bradford", "/kitchen-wrapping-bradford/"],
-  ["Nottingham", "/kitchen-wrapping-nottingham/"],
+  ["Wakefield", "/kitchen-wrapping-wakefield/"],
+  ["Huddersfield", "/kitchen-wrapping-huddersfield/"],
+  ["York", "/kitchen-wrapping-york/"],
   ["Manchester", "/kitchen-wrapping-manchester/"],
+  ["Nottingham", "/kitchen-wrapping-nottingham/"],
 ] as const;
 
-function PriceToConfirm() {
+const beforeAfterJobs = [
+  {
+    beforeSrc:
+      "/images/Kitchen-navy-marble-doncaster/navy-marble-kitchen-wrap-doncaster-before-01.jpeg",
+    afterSrc:
+      "/images/Kitchen-navy-marble-doncaster/navy-marble-kitchen-wrap-doncaster-after-01.jpeg",
+    beforeAlt: "kitchen in Doncaster ahead of a navy wrap",
+    afterAlt: "navy kitchen wrap with marble-effect worktops in Doncaster",
+    caption: "Doncaster. Navy kitchen wrap with marble-effect worktops and splashback.",
+  },
+  {
+    beforeSrc:
+      "/images/Kitchen-wrap-sheffield-black/black-kitchen-wrap-sheffield-before-01.jpeg",
+    afterSrc:
+      "/images/Kitchen-wrap-sheffield-black/black-kitchen-wrap-sheffield-after-02.jpeg",
+    beforeAlt: "kitchen in Sheffield ahead of a black wrap",
+    afterAlt: "full kitchen wrapped in black in Sheffield",
+    caption: "Sheffield. Full kitchen wrapped in black.",
+  },
+  {
+    beforeSrc:
+      "/images/forest-green-kitchen-wrap-leeds/forest-green-kitchen-island-wrap-leeds-before-01.jpg",
+    afterSrc:
+      "/images/forest-green-kitchen-wrap-leeds/forest-green-kitchen-island-wrap-leeds-after-01.jpg",
+    beforeAlt: "kitchen island in Leeds ahead of wrapping",
+    afterAlt: "kitchen island wrapped in forest green in Leeds",
+    caption: "Leeds. Kitchen island wrapped in forest green.",
+  },
+  {
+    beforeSrc:
+      "/images/marble-worktop-splashback-wrap-sheffield/marble-worktop-splashback-wrap-sheffield-before-01.jpg",
+    afterSrc:
+      "/images/marble-worktop-splashback-wrap-sheffield/marble-worktop-splashback-wrap-sheffield-after-01.jpg",
+    beforeAlt: "worktop and splashback in Sheffield ahead of wrapping",
+    afterAlt: "marble-effect worktop and splashback wrap in Sheffield",
+    caption: "Sheffield. Worktop and splashback wrapped in a marble effect.",
+  },
+] as const;
+
+const finishSwatches = [
+  { src: "/images/vinyl-finish-samples/coverstyl/coverstyl-k1-black-mat.jpg", label: "Black matt" },
+  {
+    src: "/images/vinyl-finish-samples/coverstyl/coverstyl-m9-midnight-blue.jpg",
+    label: "Midnight blue",
+  },
+  {
+    src: "/images/vinyl-finish-samples/coverstyl/coverstyl-nh21-soft-green.jpg",
+    label: "Soft green",
+  },
+  {
+    src: "/images/vinyl-finish-samples/coverstyl/coverstyl-rm26-creamy-white.jpg",
+    label: "Creamy white",
+  },
+  {
+    src: "/images/vinyl-finish-samples/coverstyl/coverstyl-rm06-anthracite-gray.jpg",
+    label: "Anthracite grey",
+  },
+  {
+    src: "/images/vinyl-finish-samples/coverstyl/coverstyl-ne31-statuary-white.jpg",
+    label: "Statuary white marble",
+  },
+  {
+    src: "/images/vinyl-finish-samples/coverstyl/coverstyl-u50-nero-marquina.jpg",
+    label: "Nero Marquina marble",
+  },
+  {
+    src: "/images/vinyl-finish-samples/coverstyl/coverstyl-nh54-gray-cement.jpg",
+    label: "Grey cement",
+  },
+  {
+    src: "/images/vinyl-finish-samples/coverstyl/coverstyl-aa14-original-oak.jpg",
+    label: "Original oak",
+  },
+  {
+    src: "/images/vinyl-finish-samples/coverstyl/coverstyl-nh72-timeless-walnut.jpg",
+    label: "Timeless walnut",
+  },
+] as const;
+
+const sampleBooks = [
+  {
+    cover: "/images/brochure-covers/cover-styl-sample-book-cover.jpg",
+    file: "/docs/vinyl-sample-books/cover-styl-architectural-vinyl-pattern-book.pdf",
+    alt: "Cover Styl architectural vinyl sample book cover",
+    label: "Cover Styl pattern book",
+  },
+  {
+    cover: "/images/brochure-covers/3m-dinoc-sample-book-cover.jpg",
+    file: "/docs/vinyl-sample-books/3m-dinoc-kitchen-wrap-finishes-sample-book.pdf",
+    alt: "3M DI-NOC kitchen wrap finishes sample book cover",
+    label: "3M DI-NOC finishes",
+  },
+  {
+    cover: "/images/brochure-covers/benif-sample-book-cover.jpg",
+    file: "/docs/vinyl-sample-books/benif-kitchen-vinyl-finishes-sample-book-2025.pdf",
+    alt: "Benif kitchen vinyl finishes sample book cover",
+    label: "Benif finishes",
+  },
+] as const;
+
+const costFactors = [
+  {
+    title: "Kitchen size",
+    text: `More units means more material and time. Larger kitchens start from around £${kitchenPricing.largerKitchen.toLocaleString("en-GB")}.`,
+  },
+  {
+    title: "Doors and drawers",
+    text: "Each door and drawer front is wrapped by hand, so the count matters most.",
+  },
+  {
+    title: "Door style",
+    text: "Flat doors are quickest. Shaker doors have more edges, so they cost a little more.",
+  },
+  {
+    title: "Finish and brand",
+    text: "We use Cover Styl, LX Hausys and 3M DI-NOC. Premium finishes cost a little more.",
+  },
+  {
+    title: "Worktop length",
+    text: `Longer runs, corners and upstands add time. Worktops start from around £${kitchenPricing.worktopsOnly.toLocaleString("en-GB")}.`,
+  },
+  {
+    title: "Surface condition",
+    text: `Chips and dents are filled first, from around £${kitchenPricing.doorRepair} per door.`,
+  },
+] as const;
+
+function buildFaqs() {
+  const p = kitchenPricing;
+  return [
+    {
+      q: "How much does it cost to wrap a kitchen?",
+      a: `A full kitchen wrap in the UK starts from around £${p.fullKitchen.toLocaleString("en-GB")}. That covers a typical kitchen of about 10 to 12 doors, including cupboard doors, drawer fronts, frames, plinths and worktops, supplied and fitted. Larger kitchens of 15 to 20 doors start from around £${p.largerKitchen.toLocaleString("en-GB")}. Your exact price depends on size, door style and finish, and you'll get a fixed quote before any work starts.`,
+    },
+    {
+      q: "How much does it cost to wrap a Shaker kitchen?",
+      a: `A Shaker-style kitchen with worktops starts from around £${p.shakerKitchen.toLocaleString("en-GB")} for about 10 to 12 doors. Shaker doors have a raised frame and more edges, so they take longer to wrap neatly than flat doors. If you only want the Shaker doors wrapped, without worktops, prices start from around £${p.shakerDoorsOnly.toLocaleString("en-GB")}.`,
+    },
+    {
+      q: "How much does worktop wrapping cost?",
+      a: `Worktop wrapping starts from around £${p.worktopsOnly}, supply and fit. It's one of the quickest and most affordable ways to change a kitchen, with marble, stone, concrete and wood effects available. The price depends on the length of the worktops, corners, cut-outs and upstands. Splashbacks and upstands on their own start from around £${p.splashback}.`,
+    },
+    {
+      q: "What is the cost to wrap kitchen doors only?",
+      a: `Wrapping the cupboard doors on a full kitchen, without the worktops, starts from around £${p.doorsOnlyFullKitchen} for flat doors (about 10 to 12 doors), or around £${p.shakerDoorsOnly.toLocaleString("en-GB")} for Shaker doors. For smaller jobs, single doors start from £${p.singleDoor}, drawer fronts from £${p.drawerFront} and end panels from £${p.endPanel}. It's a great option if your worktops are already in good shape.`,
+    },
+    {
+      q: "How much does it cost to wrap a kitchen island?",
+      a: `Wrapping a kitchen island, including the sides and top, starts from around £${p.island}. Islands are a popular way to add a contrast colour, such as a deep green or navy, against lighter cabinets. If you're wrapping the rest of the kitchen at the same time, we'll include the island in one fixed quote.`,
+    },
+    {
+      q: "Is wrapping a kitchen cheaper than buying a new one?",
+      a: `Yes, by a long way. A new kitchen typically costs £${p.newKitchenLow.toLocaleString("en-GB")} to £${p.newKitchenHigh.toLocaleString("en-GB")}, while a full kitchen wrap with worktops starts from around £${p.fullKitchen.toLocaleString("en-GB")}. That's about 70 to 80% less. Wrapping keeps your existing cabinets, so there's no rip-out, no building work and far less disruption. It works best when your cabinets are structurally sound.`,
+    },
+    {
+      q: "What affects the price of a kitchen wrap?",
+      a: `The main things are the size of your kitchen, the number of doors and drawers, the door style, the finish you choose, the length of your worktops and the condition of the surfaces. Shaker doors cost a little more than flat doors, and premium finishes such as 3M DI-NOC cost a little more too. Minor repairs start from around £${p.doorRepair} per door.`,
+    },
+    {
+      q: "How long does a kitchen wrap last, and is it guaranteed?",
+      a: "A good quality architectural vinyl, fitted properly, is made to last for many years in a busy kitchen. We use trusted brands like Cover Styl, LX Hausys and 3M DI-NOC, and every kitchen we wrap comes with a 5-year guarantee. Cleaning is simple: a soft cloth and mild soapy water is all it needs.",
+    },
+    {
+      q: "How long does it take to wrap a kitchen?",
+      a: "Most kitchens are wrapped in 1 to 3 days, depending on the size and what's included. Worktops on their own are often quicker. Because we wrap your existing cabinets in place, there's no rip-out and no waiting for new units, and you can usually keep using your kitchen around the work.",
+    },
+    {
+      q: "Do you cover my area?",
+      a: "We're based in South Yorkshire and wrap kitchens across the whole UK. We regularly work in Sheffield, Doncaster, Rotherham, Barnsley, Leeds and the surrounding areas, and travel further for full kitchen projects. Send us your postcode and a few photos, and we'll confirm everything in your fixed quote.",
+    },
+    {
+      q: "How do I get an exact price?",
+      a: "Send a few photos of your kitchen on WhatsApp, or fill in our quick quote form. We'll come back with a fixed price, or arrange a free survey if we need to measure up. The quote is free with no obligation, and the price we give you is the price you pay. There's no VAT to add.",
+    },
+  ] as const;
+}
+
+function CheckIcon() {
   return (
-    <strong className="inline-block rounded border border-dashed border-accent px-2 py-0.5 text-sm font-semibold not-italic text-accent">
-      Price to confirm
-    </strong>
+    <svg
+      className="cost-check-icon"
+      viewBox="0 0 20 20"
+      fill="none"
+      aria-hidden="true"
+    >
+      <path
+        d="M16.7 5.3a1 1 0 0 1 0 1.4l-8 8a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L8 12.6l7.3-7.3a1 1 0 0 1 1.4 0z"
+        fill="currentColor"
+      />
+    </svg>
   );
 }
 
-function QuoteActions() {
+function FactorIcon() {
   return (
-    <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
-      <Link href={QUOTE_HREF} className="btn-primary inline-block text-center">
-        Get a fixed quote
-      </Link>
-      <WhatsAppButton className="justify-center" />
-      <a
-        href={`tel:${siteConfig.phoneE164}`}
-        className="btn-secondary inline-block text-center"
-      >
-        Call {siteConfig.phone}
-      </a>
-    </div>
+    <svg className="cost-factor-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.5" />
+      <path d="M12 7v5l3 2" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+    </svg>
   );
 }
 
 export default function KitchenWrappingCostPage() {
+  const faqs = buildFaqs();
+
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -221,428 +281,757 @@ export default function KitchenWrappingCostPage() {
     })),
   };
 
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "Kitchen wrapping",
+    serviceType: "Kitchen vinyl wrapping (supply and fit)",
+    provider: {
+      "@type": "LocalBusiness",
+      name: "WRPX",
+      url: "https://www.wrpx.co.uk",
+      email: siteConfig.email,
+      telephone: siteConfig.phoneE164,
+    },
+    areaServed: {
+      "@type": "Country",
+      name: "United Kingdom",
+    },
+    offers: [
+      {
+        "@type": "Offer",
+        name: "Full kitchen with worktops",
+        priceCurrency: "GBP",
+        priceSpecification: {
+          "@type": "PriceSpecification",
+          minPrice: kitchenPricing.fullKitchen,
+          priceCurrency: "GBP",
+        },
+      },
+      {
+        "@type": "Offer",
+        name: "Shaker kitchen with worktops",
+        priceCurrency: "GBP",
+        priceSpecification: {
+          "@type": "PriceSpecification",
+          minPrice: kitchenPricing.shakerKitchen,
+          priceCurrency: "GBP",
+        },
+      },
+      {
+        "@type": "Offer",
+        name: "Worktops only",
+        priceCurrency: "GBP",
+        priceSpecification: {
+          "@type": "PriceSpecification",
+          minPrice: kitchenPricing.worktopsOnly,
+          priceCurrency: "GBP",
+        },
+      },
+    ],
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.wrpx.co.uk/" },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Kitchen wrapping",
+        item: "https://www.wrpx.co.uk/kitchen-wrapping/",
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: "Kitchen wrapping cost",
+        item: "https://www.wrpx.co.uk/kitchen-wrapping-cost/",
+      },
+    ],
+  };
+
   return (
-    <div>
+    <div className="cost-page">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
 
-      <section className="border-b border-border bg-card py-12 md:py-16">
-        <div className="container mx-auto max-w-3xl px-4">
-          <p className="text-sm text-muted">
-            <Link href="/" className="hover:text-accent">
-              Home
-            </Link>
-            {" · "}
-            <Link href="/kitchen-wrapping/" className="hover:text-accent">
-              Kitchen wrapping
-            </Link>
-          </p>
-          <h1 className="mt-4 text-3xl font-bold tracking-tight text-foreground md:text-4xl">
-            How much does kitchen wrapping cost in the UK?
-          </h1>
-          <p className="mt-4 text-muted leading-relaxed">
-            A full kitchen of about 10 to 12 doors starts from £1,099. Doors
-            start from £45. Worktops start from £380. WRPX supplies and fits
-            the wrap. We are based in South Yorkshire and cover the whole UK.
-            The figure for your kitchen is fixed after a free survey.
-          </p>
-          <QuoteActions />
-        </div>
-      </section>
-
-      <section className="px-4 py-16" aria-labelledby="starting-prices">
-        <div className="container mx-auto max-w-5xl">
-          <h2 id="starting-prices" className="text-2xl font-semibold text-foreground md:text-3xl">
-            Starting prices
-          </h2>
-          <p className="mt-4 max-w-3xl text-muted leading-relaxed">
-            These are the starting prices published on the kitchen wrapping
-            service and the quote form. They are “from” prices for supply and
-            fit, not a quote for your kitchen. A free survey confirms one fixed
-            price. There is no obligation.
-          </p>
-          <div className="kw-price-grid">
-            {startingPrices.map((price) => (
-              <div
-                key={price.name}
-                className={`kw-price-card${"featured" in price && price.featured ? " kw-price-card-featured" : ""}`}
-              >
-                {"featured" in price && price.featured ? (
-                  <span className="kw-price-badge">Most popular</span>
-                ) : null}
-                <p className="kw-price-name">{price.name}</p>
-                <p className="kw-price-amount">
-                  <span className="kw-price-from">from</span> {price.amount}
-                </p>
-                <p className="kw-price-unit">{price.unit}</p>
-                <ul className="kw-price-features">
-                  {price.features.map((feature) => (
-                    <li key={feature}>
-                      <span className="kw-check" aria-hidden="true">
-                        ✓
-                      </span>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-                <Link href={QUOTE_HREF} className="kw-btn-primary kw-btn-block">
-                  Get a fixed quote <span aria-hidden="true">→</span>
-                </Link>
-              </div>
-            ))}
-          </div>
-          <p className="mt-8 max-w-3xl text-sm text-muted leading-relaxed">
-            On the quote form, a complete kitchen wrap — doors, drawers,
-            panels, plinths, trims, worktops and upstands — also starts from
-            £1,099. That is the starting price for that option. It is not a
-            promise that every kitchen with worktops costs £1,099. A bigger
-            door count, a different finish or repairs are priced on the survey.
-          </p>
-        </div>
-      </section>
-
-      <section className="home-section-alt px-4 py-16">
-        <div className="container mx-auto max-w-3xl">
-          <div className="relative aspect-video overflow-hidden rounded-lg border border-border">
-            <Image
-              src="/images/Kitchen-navy-marble-doncaster/navy-marble-kitchen-wrap-doncaster-after-01.jpeg"
-              alt="Navy wood-effect kitchen wrap with a white marble worktop in Doncaster"
-              fill
-              className="object-cover"
-              sizes="(max-width: 768px) 100vw, 768px"
-            />
-          </div>
-          <p className="mt-3 text-sm text-muted">
-            A full kitchen wrap in Doncaster. The starting prices above are a
-            guide. A kitchen like this is priced properly at the free survey.
-          </p>
-        </div>
-      </section>
-
-      <section className="px-4 py-16" aria-labelledby="what-changes-the-price">
-        <div className="container mx-auto max-w-3xl space-y-10">
-          <div>
-            <h2 id="what-changes-the-price" className="text-2xl font-semibold text-foreground md:text-3xl">
-              What changes the price
-            </h2>
-            <p className="mt-4 text-muted leading-relaxed">
-              Two kitchens with the same number of doors can still come out at
-              different fixed prices. These are the things that move it. Where
-              this site does not yet publish a figure, it is marked{" "}
-              <PriceToConfirm /> and the survey fills it in.
-            </p>
-          </div>
-
-          <div className="card-float p-8">
-            <h3 className="text-xl font-semibold text-foreground">Doors and drawers</h3>
-            <p className="mt-4 text-muted leading-relaxed">
-              The door count is the main driver. More doors means more film and
-              more time. Door size and style matter too. Shaker, J-pull and
-              flat slab doors are all wrapped, and a shaped profile takes more
-              care than a flat one. Doors start from £45 each.
-            </p>
-            <p className="mt-4 text-muted leading-relaxed">
-              Drawer fronts are counted on the survey and are included when you
-              book a full kitchen. A starting price for a drawer front on its
-              own has not been published. <PriceToConfirm />
-            </p>
-          </div>
-
-          <div className="card-float p-8">
-            <h3 className="text-xl font-semibold text-foreground">End panels</h3>
-            <p className="mt-4 text-muted leading-relaxed">
-              End panels, carcass faces, plinths, cornice and pelmet are part
-              of a full kitchen, which starts from £1,099 for about 10 to 12
-              doors. They are the parts people notice once the doors look new,
-              so they are included in that scope rather than left as bare
-              chipboard.
-            </p>
-            <p className="mt-4 text-muted leading-relaxed">
-              If you only want an end panel wrapped, there is no published
-              starting price for that on its own. <PriceToConfirm />
-            </p>
-          </div>
-
-          <div className="card-float p-8">
-            <h3 className="text-xl font-semibold text-foreground">Worktops and splashbacks</h3>
-            <p className="mt-4 text-muted leading-relaxed">
-              Worktop wrapping starts from £380. The length of the run, corners,
-              and the sink and hob cut-outs are what the survey measures. The
-              top is wrapped in place. There is a separate{" "}
-              <Link href="/worktop-wrapping/" className="text-accent hover:underline">
-                worktop wrapping
-              </Link>{" "}
-              page and a{" "}
-              <Link href="/blog/worktop-wrapping-cost/" className="text-accent hover:underline">
-                worktop wrapping cost guide
-              </Link>
-              .
-            </p>
-            <p className="mt-4 text-muted leading-relaxed">
-              Upstands are included in the quote form’s complete kitchen
-              option. Splashbacks are quoted separately, and a splashback
-              starting price has not been published. <PriceToConfirm />
-            </p>
-          </div>
-
-          <div className="card-float p-8">
-            <h3 className="text-xl font-semibold text-foreground">
-              The film: Cover Styl, LX Hausys, 3M DI-NOC and others
-            </h3>
-            <p className="mt-4 text-muted leading-relaxed">
-              The film is a real part of the price. Architectural vinyl is not
-              all the same. Ranges people compare include Cover Styl, LX Hausys
-              and 3M DI-NOC. On a WRPX job we supply and fit branded film. The
-              sample books on the quote page are{" "}
-              <Link href="/architectural-vinyl-finishes/" className="text-accent hover:underline">
-                3M DI-NOC, BENIF and Cover Styl
-              </Link>
-              . We bring physical samples to the survey so you can choose in
-              your own light.
-            </p>
-            <p className="mt-4 text-muted leading-relaxed">
-              A published note on this site puts the material-cost gap between
-              a cheap film and a premium film at £100–£200 on a typical
-              kitchen. That is the difference in the film, not the full job
-              price. A price difference between Cover Styl, LX Hausys, 3M
-              DI-NOC and BENIF has not been published. <PriceToConfirm />
-            </p>
-          </div>
-
-          <div className="card-float p-8">
-            <h3 className="text-xl font-semibold text-foreground">Preparation and repairs</h3>
-            <p className="mt-4 text-muted leading-relaxed">
-              Usual preparation is included: cleaning, degreasing and light
-              sanding where it is needed. That work is why a wrap stays put.
-              Awkward shapes and wrapping the frames in place are part of the
-              job, not an extra.
-            </p>
-            <p className="mt-4 text-muted leading-relaxed">
-              Heavy grease, old paint, chips or damage can need more than that
-              usual preparation. If a door is warped, the veneer is loose, or
-              the paint is flaking, wrapping may not be the right choice and we
-              will say so. Where a repair is sensible, it is included in the
-              fixed quote before work starts. A published price for that extra
-              preparation has not been set. <PriceToConfirm />
-            </p>
-          </div>
-
-          <div className="overflow-x-auto">
-            <table className="w-full min-w-[320px] border-collapse text-left text-sm">
-              <thead>
-                <tr className="border-b border-border">
-                  <th className="py-3 pr-4 font-semibold text-foreground">Item</th>
-                  <th className="py-3 font-semibold text-foreground">Published starting price</th>
-                </tr>
-              </thead>
-              <tbody className="text-muted">
-                {priceRows.map(([item, price]) => (
-                  <tr key={item} className="border-b border-border">
-                    <td className="py-3 pr-4">{item}</td>
-                    <td className="py-3">{price ?? <PriceToConfirm />}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </section>
-
-      <section className="home-section-alt px-4 py-16" aria-labelledby="included">
-        <div className="container mx-auto max-w-3xl">
-          <h2 id="included" className="text-2xl font-semibold text-foreground md:text-3xl">
-            What the price includes
-          </h2>
-          <p className="mt-4 text-muted leading-relaxed">
-            A WRPX kitchen wrap is supply and fit. The quote is for the film
-            and the work to put it on, not for a roll of vinyl on its own.
-          </p>
-          <ul className="mt-6 list-inside list-disc space-y-2 text-muted">
-            <li>Branded architectural film, chosen with you at the survey</li>
-            <li>Cleaning, degreasing and the usual surface preparation</li>
-            <li>Doors removed and wrapped in the workshop</li>
-            <li>Frames and carcass faces wrapped in the kitchen</li>
-            <li>Doors rehung, hardware refitted, and a walkround with you</li>
-            <li>
-              A {siteConfig.guaranteeYears}-year guarantee on materials and workmanship, named on the job
-            </li>
-          </ul>
-          <p className="mt-6 text-muted leading-relaxed">
-            The process is the same wherever the kitchen is: free survey, then
-            a fixed price, then the install. Most jobs take 1 to 3 days. You
-            can read the{" "}
-            <Link href="/kitchen-wrapping/" className="text-accent hover:underline">
-              kitchen wrapping service
-            </Link>{" "}
-            or go straight to the{" "}
-            <Link href={QUOTE_HREF} className="text-accent hover:underline">
-              kitchen wrapping quote form
-            </Link>
-            .
-          </p>
-          <QuoteActions />
-        </div>
-      </section>
-
-      <section className="px-4 py-16" aria-labelledby="compare-options">
-        <div className="container mx-auto max-w-5xl">
-          <h2 id="compare-options" className="text-2xl font-semibold text-foreground md:text-3xl">
-            Wrap, replace or paint
-          </h2>
-          <p className="mt-4 max-w-3xl text-muted leading-relaxed">
-            Wrapping suits a kitchen that is dated but still sound, when you
-            want a new look and you are happy with the layout. Replacement
-            suits units that are falling apart, or a job that needs a new
-            layout. Paint can refresh a solid colour, and it is a different
-            product from a filmed woodgrain or stone effect.
-          </p>
-          <div className="mt-8 grid gap-4 lg:grid-cols-3">
-            {comparisons.map((option) => (
-              <div
-                key={option.name}
-                className={`card-float p-6 ${"best" in option && option.best ? "border-accent/40" : ""}`}
-              >
-                <h3 className="text-lg font-semibold text-foreground">
-                  {option.name}
-                  {"best" in option && option.best ? (
-                    <span className="ml-2 text-xs font-semibold uppercase tracking-wide text-accent">
-                      Best value
-                    </span>
-                  ) : null}
-                </h3>
-                <dl className="mt-4 space-y-3">
-                  {option.rows.map(([label, value]) => (
-                    <div key={label}>
-                      <dt className="text-xs font-semibold uppercase tracking-wide text-muted">
-                        {label}
-                      </dt>
-                      <dd className="mt-1 text-sm text-foreground">{value}</dd>
-                    </div>
-                  ))}
-                </dl>
-              </div>
-            ))}
-          </div>
-          <p className="mt-6 max-w-3xl text-muted leading-relaxed">
-            A typical price for professional paint spraying has not been
-            published. <PriceToConfirm /> Longer comparisons are on the blog:{" "}
-            <Link href="/blog/kitchen-wrapping-vs-new-kitchen/" className="text-accent hover:underline">
-              kitchen wrapping vs a new kitchen
-            </Link>
-            ,{" "}
-            <Link href="/blog/kitchen-wrapping-vs-painting/" className="text-accent hover:underline">
-              wrapping vs painting
-            </Link>{" "}
-            and{" "}
-            <Link href="/blog/kitchen-wrapping-vs-kitchen-spraying/" className="text-accent hover:underline">
-              wrapping vs spraying
-            </Link>
-            .
-          </p>
-        </div>
-      </section>
-
-      <section className="home-section-alt px-4 py-16" aria-labelledby="example-jobs">
-        <div className="container mx-auto max-w-3xl">
-          <h2 id="example-jobs" className="text-2xl font-semibold text-foreground md:text-3xl">
-            Typical jobs
-          </h2>
-          <p className="mt-4 text-muted leading-relaxed">
-            These are examples of the kind of work the starting prices cover.
-            They are not invoices from past jobs. Your fixed price comes from
-            the survey.
-          </p>
-          <div className="mt-8 space-y-4">
-            {examples.map((example) => (
-              <div key={example.title} className="card-float p-6">
-                <h3 className="font-semibold text-foreground">{example.title}</h3>
-                <p className="mt-2 text-muted leading-relaxed">{example.body}</p>
-              </div>
-            ))}
-            <div className="card-float border border-dashed border-accent/50 p-6">
-              <h3 className="font-semibold text-foreground">A larger kitchen</h3>
-              <p className="mt-2 text-muted leading-relaxed">
-                A kitchen with more than about 10 to 12 doors, or a long run of
-                worktop on top of a full wrap, does not have a published worked
-                example yet. <PriceToConfirm /> The survey counts every door,
-                drawer and metre of worktop and gives you one fixed price.
+      {/* 6.1 Hero */}
+      <section className="cost-hero border-b border-border bg-card">
+        <div className="container mx-auto max-w-6xl px-4 py-12 md:py-16">
+          <div className="cost-hero-grid">
+            <div className="cost-hero-copy">
+              <nav className="cost-breadcrumb" aria-label="Breadcrumb">
+                <Link href="/">Home</Link>
+                <span aria-hidden="true"> / </span>
+                <Link href="/kitchen-wrapping/">Kitchen wrapping</Link>
+                <span aria-hidden="true"> / </span>
+                <span>Kitchen wrapping cost</span>
+              </nav>
+              <h1 className="mt-4 text-3xl font-bold tracking-tight text-foreground md:text-4xl lg:text-5xl">
+                How Much Does Kitchen Wrapping Cost in the UK?
+              </h1>
+              <p className="mt-5 text-lg text-muted leading-relaxed md:text-xl">
+                A full kitchen wrap, including cupboard doors and worktops, starts from around{" "}
+                <strong className="text-foreground">
+                  {formatPounds(kitchenPricing.fullKitchen)}
+                </strong>
+                . That&apos;s about 70 to 80% less than a new kitchen, with no rip-out and usually
+                just 1 to 3 days of work.
               </p>
+              <p className="mt-3 text-muted leading-relaxed">
+                Shaker kitchens start from around {formatPounds(kitchenPricing.shakerKitchen)}, and
+                worktops alone from around {formatPounds(kitchenPricing.worktopsOnly)}. Every price
+                is supply and fit, with no VAT to add.
+              </p>
+              <div className="mt-8 flex flex-wrap gap-3">
+                <Link href="/kitchen-wrapping-quote/" className="btn-primary">
+                  Get my fixed quote
+                </Link>
+                <WhatsAppButton variant="outline" label="WhatsApp a photo" />
+              </div>
+              <ul className="cost-trust-row mt-8">
+                {[
+                  "5-year guarantee",
+                  "Usually 1 to 3 days",
+                  "No rip-out, no mess",
+                  "Free survey and fixed quote",
+                ].map((item) => (
+                  <li key={item}>
+                    <CheckIcon />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="cost-hero-media">
+              <div className="cost-hero-photo">
+                <Image
+                  src={OG_IMAGE}
+                  alt="Navy kitchen wrap with marble-effect worktops and splashback in Doncaster"
+                  fill
+                  priority
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 480px"
+                />
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="px-4 py-16" aria-labelledby="other-providers">
-        <div className="container mx-auto max-w-3xl">
-          <h2 id="other-providers" className="text-2xl font-semibold text-foreground md:text-3xl">
-            How this compares with other kitchen wrapping companies
+      {/* 6.2 Prices at a glance */}
+      <section className="px-4 py-16">
+        <div className="container mx-auto max-w-6xl">
+          <h2 className="section-heading text-2xl font-semibold text-foreground md:text-3xl">
+            Kitchen wrapping prices at a glance
           </h2>
-          <p className="mt-4 text-muted leading-relaxed">
-            Kitchen wrapping prices online are hard to compare, because the
-            quotes often leave different things out. A lower headline figure
-            can be film only, or doors only, with frames, preparation and
-            worktops added later. When you line up quotes, check the same list
-            for each company.
+          <p className="mx-auto mt-4 max-w-2xl text-center text-muted leading-relaxed">
+            Three simple starting points. Your fixed quote is based on your actual kitchen, so
+            you&apos;ll know the exact price before any work starts.
           </p>
-          <ul className="mt-6 list-inside list-disc space-y-2 text-muted">
-            <li>Is the film named? Architectural film and a cheap film are not the same product.</li>
-            <li>Is preparation included, or added once someone is in the kitchen?</li>
-            <li>Are the frames, end panels and plinths in the price, or only the doors?</li>
-            <li>Is it supply and fit, or are you being sold film to fit yourself?</li>
-            <li>Is the price fixed after a survey, or a range that can move on the day?</li>
-            <li>Is there a written guarantee, and what does it cover?</li>
-          </ul>
-          <p className="mt-6 text-muted leading-relaxed">
-            WRPX supplies and fits branded film. Usual preparation is included.
-            Frames are wrapped in place, not left unfinished. The price is
-            fixed after a free survey, with a {siteConfig.guaranteeYears}-year
-            guarantee on materials and workmanship. If wrapping is the wrong
-            job, we say so at the survey.
-          </p>
-          <QuoteActions />
+          <div className="cost-price-cards mt-10">
+            <article className="cost-price-card">
+              <div className="cost-price-card-photo">
+                <Image
+                  src="/images/door-styles/shaker-doors-drawers.png"
+                  alt="Shaker-style kitchen door and drawer in a soft sage finish"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 90vw, 320px"
+                />
+              </div>
+              <div className="cost-price-card-body">
+                <h3 className="cost-price-card-title">Shaker kitchen</h3>
+                <p className="cost-price-card-price">
+                  {formatFrom(kitchenPricing.shakerKitchen)}
+                </p>
+                <p className="cost-price-card-sub">About 10 to 12 doors, with worktops</p>
+                <ul>
+                  <li>Shaker doors wrapped with crisp, clean edges</li>
+                  <li>Drawer fronts, frames and plinths</li>
+                  <li>Worktops wrapped to match or contrast</li>
+                  <li>Supply and fit, 5-year guarantee</li>
+                </ul>
+                <Link
+                  href="/kitchen-wrapping-quote/?type=complete&door=shaker"
+                  className="btn-secondary mt-5 inline-block w-full text-center"
+                >
+                  Quote my Shaker kitchen
+                </Link>
+              </div>
+            </article>
+
+            <article className="cost-price-card cost-price-card--featured">
+              <span className="cost-price-pill">Full makeover</span>
+              <div className="cost-price-card-photo">
+                <Image
+                  src="/images/navy-kitchen-wrap-manchester/navy-kitchen-wrap-manchester-01.jpg"
+                  alt="Navy flat-door kitchen wrap in Manchester"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 90vw, 320px"
+                />
+              </div>
+              <div className="cost-price-card-body">
+                <h3 className="cost-price-card-title">Full kitchen</h3>
+                <p className="cost-price-card-price">{formatFrom(kitchenPricing.fullKitchen)}</p>
+                <p className="cost-price-card-sub">About 10 to 12 doors, with worktops</p>
+                <ul>
+                  <li>Cupboard doors and drawer fronts</li>
+                  <li>Frames, end panels and plinths</li>
+                  <li>Worktops wrapped to match or contrast</li>
+                  <li>Supply and fit, 5-year guarantee</li>
+                </ul>
+                <Link
+                  href="/kitchen-wrapping-quote/?type=complete"
+                  className="btn-primary mt-5 inline-block w-full text-center"
+                >
+                  Quote my kitchen
+                </Link>
+              </div>
+            </article>
+
+            <article className="cost-price-card">
+              <div className="cost-price-card-photo">
+                <Image
+                  src="/images/white-marble-worktop-wrap-sheffield/white-marble-worktop-wrap-sheffield-01.jpg"
+                  alt="White marble-effect worktop wrap in Sheffield"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 90vw, 320px"
+                />
+              </div>
+              <div className="cost-price-card-body">
+                <h3 className="cost-price-card-title">Worktops only</h3>
+                <p className="cost-price-card-price">
+                  {formatFrom(kitchenPricing.worktopsOnly)}
+                </p>
+                <p className="cost-price-card-sub">A fast, affordable refresh</p>
+                <ul>
+                  <li>Marble, stone, concrete or wood effects</li>
+                  <li>Edges and upstands finished neatly</li>
+                  <li>Usually done in a day</li>
+                  <li>Supply and fit, 5-year guarantee</li>
+                </ul>
+                <Link
+                  href="/kitchen-wrapping-quote/?type=worktop"
+                  className="btn-secondary mt-5 inline-block w-full text-center"
+                >
+                  Quote my worktops
+                </Link>
+              </div>
+            </article>
+          </div>
         </div>
       </section>
 
-      <section className="home-section-alt px-4 py-16" aria-labelledby="cost-faqs">
+      {/* 6.3 Price guide table */}
+      <section className="border-y border-border bg-card px-4 py-16">
         <div className="container mx-auto max-w-3xl">
-          <h2 id="cost-faqs" className="text-2xl font-semibold text-foreground md:text-3xl">
-            Kitchen wrapping cost questions
+          <h2 className="section-heading text-2xl font-semibold text-foreground md:text-3xl">
+            Kitchen wrapping price guide
+          </h2>
+          <p className="mx-auto mt-4 max-w-2xl text-center text-muted leading-relaxed">
+            Want more detail? Here&apos;s what kitchen wrapping costs for the most common jobs, from
+            a few doors to a full kitchen. All prices are supply and fit.
+          </p>
+          <div className="cost-table mt-8">
+            <div className="cost-table-head">
+              <span>What</span>
+              <span>From around</span>
+            </div>
+            {kitchenPriceGuide.map((row) => (
+              <div key={row.label} className="cost-table-row">
+                <span className="cost-table-label">{row.label}</span>
+                <span className="cost-table-price">
+                  {formatPounds(row.price)}
+                  {row.unit ? ` ${row.unit}` : ""}
+                </span>
+              </div>
+            ))}
+          </div>
+          <p className="mt-6 text-sm text-muted leading-relaxed">
+            These are starting prices to give you a rough idea. Your exact price depends on the
+            size of your kitchen, the number of doors and drawers, the door style, the finish you
+            choose and the condition of the surfaces. You&apos;ll get one fixed price after a free
+            survey or from photos. Premium finishes, such as 3M DI-NOC and some stone and metallic
+            effects, cost a little more. There&apos;s no VAT to add.
+          </p>
+          <p className="mt-4 text-sm">
+            <Link href="/blog/worktop-wrapping-cost/" className="text-accent hover:underline">
+              Just doing worktops? See our worktop wrapping cost guide
+            </Link>
+          </p>
+        </div>
+      </section>
+
+      {/* 6.4 Before and after */}
+      <section className="px-4 py-16">
+        <div className="container mx-auto max-w-6xl">
+          <h2 className="section-heading text-2xl font-semibold text-foreground md:text-3xl">
+            Real kitchens, before and after
+          </h2>
+          <p className="mx-auto mt-4 max-w-2xl text-center text-muted leading-relaxed">
+            Same kitchen, same layout, a completely new look. Drag the slider to see the
+            difference.
+          </p>
+          <div className="mt-10">
+            <BeforeAfterSlider
+              priority={false}
+              beforeSrc={beforeAfterJobs[0].beforeSrc}
+              afterSrc={beforeAfterJobs[0].afterSrc}
+              beforeAlt={beforeAfterJobs[0].beforeAlt}
+              afterAlt={beforeAfterJobs[0].afterAlt}
+              beforeWidth={768}
+              beforeHeight={1024}
+              afterWidth={768}
+              afterHeight={1024}
+            />
+            <p className="mt-3 text-center text-sm text-muted">{beforeAfterJobs[0].caption}</p>
+          </div>
+          <div className="cost-ba-grid mt-8">
+            {beforeAfterJobs.slice(1).map((job) => (
+              <figure key={job.caption} className="cost-ba-item">
+                <BeforeAfterSlider
+                  priority={false}
+                  beforeSrc={job.beforeSrc}
+                  afterSrc={job.afterSrc}
+                  beforeAlt={job.beforeAlt}
+                  afterAlt={job.afterAlt}
+                  beforeWidth={768}
+                  beforeHeight={1024}
+                  afterWidth={768}
+                  afterHeight={1024}
+                />
+                <figcaption className="mt-3 text-sm text-muted">{job.caption}</figcaption>
+              </figure>
+            ))}
+          </div>
+          <p className="mt-8 text-center">
+            <Link href="/gallery/" className="text-accent hover:underline">
+              See more finished kitchens in our gallery
+            </Link>
+          </p>
+        </div>
+      </section>
+
+      {/* 6.5 Find your starting price */}
+      <section className="border-y border-border bg-card px-4 py-16">
+        <div className="container mx-auto max-w-3xl">
+          <h2 className="section-heading text-2xl font-semibold text-foreground md:text-3xl">
+            Find your starting price
+          </h2>
+          <p className="mx-auto mt-4 max-w-2xl text-center text-muted leading-relaxed">
+            Pick the option closest to your kitchen and we&apos;ll show you where prices start.
+          </p>
+          <div className="mt-8">
+            <CostPricePicker />
+          </div>
+        </div>
+      </section>
+
+      {/* 6.6 Comparison */}
+      <section className="px-4 py-16">
+        <div className="container mx-auto max-w-6xl">
+          <h2 className="section-heading text-2xl font-semibold text-foreground md:text-3xl">
+            Wrapping vs a new kitchen vs spraying
+          </h2>
+          <p className="mx-auto mt-4 max-w-2xl text-center text-muted leading-relaxed">
+            Three ways to change how your kitchen looks. Here&apos;s how they compare.
+          </p>
+          <div className="cost-compare-grid mt-10">
+            <article className="cost-compare-card cost-compare-card--best">
+              <span className="cost-price-pill">Best value</span>
+              <h3>Kitchen wrap</h3>
+              <dl>
+                <div>
+                  <dt>Cost</dt>
+                  <dd>{formatFrom(kitchenPricing.fullKitchen)} with worktops</dd>
+                </div>
+                <div>
+                  <dt>Time</dt>
+                  <dd>Usually 1 to 3 days</dd>
+                </div>
+                <div>
+                  <dt>Mess</dt>
+                  <dd>Minimal. No rip-out, no dust, kitchen usable most of the time</dd>
+                </div>
+                <div>
+                  <dt>Finishes</dt>
+                  <dd>Hundreds of colours, woods, marbles and textures</dd>
+                </div>
+                <div>
+                  <dt>Guarantee</dt>
+                  <dd>5 years</dd>
+                </div>
+              </dl>
+            </article>
+            <article className="cost-compare-card">
+              <h3>New kitchen</h3>
+              <dl>
+                <div>
+                  <dt>Cost</dt>
+                  <dd>
+                    Typically {formatPounds(kitchenPricing.newKitchenLow)} to{" "}
+                    {formatPounds(kitchenPricing.newKitchenHigh)}
+                  </dd>
+                </div>
+                <div>
+                  <dt>Time</dt>
+                  <dd>Often several weeks from order to finish</dd>
+                </div>
+                <div>
+                  <dt>Mess</dt>
+                  <dd>Full rip-out, trades and disruption</dd>
+                </div>
+                <div>
+                  <dt>Finishes</dt>
+                  <dd>Wide choice</dd>
+                </div>
+                <div>
+                  <dt>Guarantee</dt>
+                  <dd>Depends on the supplier</dd>
+                </div>
+              </dl>
+            </article>
+            <article className="cost-compare-card">
+              <h3>Spraying</h3>
+              <dl>
+                <div>
+                  <dt>Cost</dt>
+                  <dd>Usually more than wrapping</dd>
+                </div>
+                <div>
+                  <dt>Time</dt>
+                  <dd>Usually longer than wrapping</dd>
+                </div>
+                <div>
+                  <dt>Mess</dt>
+                  <dd>Masking, prep and drying time</dd>
+                </div>
+                <div>
+                  <dt>Finishes</dt>
+                  <dd>Solid colours only</dd>
+                </div>
+                <div>
+                  <dt>Guarantee</dt>
+                  <dd>Depends on the company</dd>
+                </div>
+              </dl>
+            </article>
+          </div>
+          <p className="mt-8 text-center text-muted leading-relaxed">
+            If your cabinets are sound, wrapping gives you the look of a new kitchen for a
+            fraction of the price.
+          </p>
+          <p className="mt-4 flex flex-wrap justify-center gap-x-4 gap-y-2 text-sm">
+            <Link
+              href="/blog/kitchen-wrapping-vs-new-kitchen/"
+              className="text-accent hover:underline"
+            >
+              Kitchen wrapping vs a new kitchen
+            </Link>
+            <Link
+              href="/blog/kitchen-wrapping-vs-painting/"
+              className="text-accent hover:underline"
+            >
+              Kitchen wrapping vs painting
+            </Link>
+            <Link
+              href="/blog/kitchen-wrapping-vs-kitchen-spraying/"
+              className="text-accent hover:underline"
+            >
+              Kitchen wrapping vs spraying
+            </Link>
+          </p>
+        </div>
+      </section>
+
+      {/* 6.7 What affects cost */}
+      <section className="border-y border-border bg-card px-4 py-16">
+        <div className="container mx-auto max-w-6xl">
+          <h2 className="section-heading text-2xl font-semibold text-foreground md:text-3xl">
+            What affects the cost of a kitchen wrap?
+          </h2>
+          <p className="mx-auto mt-4 max-w-2xl text-center text-muted leading-relaxed">
+            Every kitchen is different. These are the things that move the price up or down.
+          </p>
+          <div className="cost-factors mt-10">
+            {costFactors.map((item) => (
+              <div key={item.title} className="cost-factor card-float">
+                <FactorIcon />
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 6.8 Finishes */}
+      <section className="px-4 py-16">
+        <div className="container mx-auto max-w-6xl">
+          <h2 className="section-heading text-2xl font-semibold text-foreground md:text-3xl">
+            Choose your finish
+          </h2>
+          <p className="mx-auto mt-4 max-w-2xl text-center text-muted leading-relaxed">
+            Matt colours, real-looking woods, marbles and concrete. Most finishes are included in
+            our starting prices. Premium ranges cost a little more.
+          </p>
+          <div className="cost-swatches mt-10">
+            {finishSwatches.map((swatch) => (
+              <figure key={swatch.src} className="cost-swatch">
+                <div className="cost-swatch-img">
+                  <Image
+                    src={swatch.src}
+                    alt={`Cover Styl ${swatch.label.toLowerCase()} kitchen wrap finish`}
+                    fill
+                    className="object-cover"
+                    sizes="120px"
+                  />
+                </div>
+                <figcaption>{swatch.label}</figcaption>
+              </figure>
+            ))}
+          </div>
+          <div className="cost-sample-books mt-10">
+            {sampleBooks.map((book) => (
+              <a
+                key={book.file}
+                href={book.file}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="cost-sample-book card-float"
+              >
+                <div className="cost-sample-book-cover">
+                  <Image
+                    src={book.cover}
+                    alt={book.alt}
+                    fill
+                    className="object-cover"
+                    sizes="160px"
+                  />
+                </div>
+                <span>{book.label}</span>
+              </a>
+            ))}
+          </div>
+          <p className="mt-8 text-center">
+            <Link href="/architectural-vinyl-finishes/" className="text-accent hover:underline">
+              Explore all our vinyl finishes
+            </Link>
+          </p>
+        </div>
+      </section>
+
+      {/* 6.9 Video */}
+      <section className="border-y border-border bg-card px-4 py-16">
+        <div className="container mx-auto max-w-3xl text-center">
+          <h2 className="section-heading text-2xl font-semibold text-foreground md:text-3xl">
+            See a kitchen wrap come together
           </h2>
           <div className="mt-8">
-            <FaqAccordion items={faqs.map((item) => ({ q: item.q, a: item.a }))} />
+            <CostWrapVideo
+              src="/videos/navy-kitchen-wrap-manchester.mp4"
+              poster="/videos/navy-kitchen-wrap-manchester.jpg"
+              label="Navy kitchen wrap in Manchester"
+            />
+          </div>
+          <p className="mt-4 text-muted leading-relaxed">
+            A navy kitchen wrap in Manchester. Same cabinets, a whole new look, and no rip-out.
+          </p>
+        </div>
+      </section>
+
+      {/* 6.10 How it works */}
+      <section className="px-4 py-16">
+        <div className="container mx-auto max-w-6xl">
+          <h2 className="section-heading text-2xl font-semibold text-foreground md:text-3xl">
+            How it works
+          </h2>
+          <ol className="cost-steps mt-10">
+            <li>
+              <span className="cost-step-num">1</span>
+              <h3>Send us a few photos</h3>
+              <p>
+                WhatsApp a couple of pictures of your kitchen, or fill in the quote form. It takes
+                two minutes.
+              </p>
+            </li>
+            <li>
+              <span className="cost-step-num">2</span>
+              <h3>Get a fixed quote</h3>
+              <p>
+                We&apos;ll send a clear, fixed price, or book a free survey if we need to measure
+                up. No surprises later.
+              </p>
+            </li>
+            <li>
+              <span className="cost-step-num">3</span>
+              <h3>Pick your finish</h3>
+              <p>
+                Choose from matt colours, woods, marbles and concrete, with samples to help you
+                decide.
+              </p>
+            </li>
+            <li>
+              <span className="cost-step-num">4</span>
+              <h3>We fit it, usually in 1 to 3 days</h3>
+              <p>
+                Your kitchen is transformed in place, with no rip-out, and backed by a 5-year
+                guarantee.
+              </p>
+            </li>
+          </ol>
+          <div className="mt-10 flex flex-wrap justify-center gap-3">
+            <Link href="/kitchen-wrapping-quote/" className="btn-primary">
+              Get my fixed quote
+            </Link>
+            <WhatsAppButton variant="outline" label="WhatsApp a photo" />
           </div>
         </div>
       </section>
 
-      <section className="px-4 py-16" aria-labelledby="prices-to-confirm">
+      {/* 6.11 Choosing a company */}
+      <section className="border-y border-border bg-card px-4 py-16">
         <div className="container mx-auto max-w-3xl">
-          <div className="card-float border border-dashed border-accent/60 p-8">
-            <h2 id="prices-to-confirm" className="text-xl font-semibold text-foreground">
-              Prices to confirm
-            </h2>
-            <p className="mt-4 text-muted leading-relaxed">
-              These items do not have a published starting price yet. Each one
-              is marked <PriceToConfirm /> above. They are included in the
-              fixed quote after the free survey. They are listed here so the
-              missing figures are obvious.
-            </p>
-            <ol className="mt-4 list-inside list-decimal space-y-2 text-muted">
-              {placeholders.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ol>
+          <h2 className="section-heading text-2xl font-semibold text-foreground md:text-3xl">
+            Choosing a kitchen wrapping company
+          </h2>
+          <p className="mx-auto mt-4 max-w-2xl text-center text-muted leading-relaxed">
+            A cheap quote isn&apos;t always the best value. Whoever you choose, check these five
+            things before you book.
+          </p>
+          <ul className="cost-checklist mt-8">
+            <li>
+              <CheckIcon />
+              <div>
+                <strong>The material brand.</strong> Ask which vinyl is used. Architectural films
+                from names like Cover Styl, LX Hausys and 3M DI-NOC are made for kitchens and last.
+              </div>
+            </li>
+            <li>
+              <CheckIcon />
+              <div>
+                <strong>What&apos;s included.</strong> Make sure the price covers doors, drawer
+                fronts, frames, end panels, plinths and worktops if you want them, not just the
+                doors.
+              </div>
+            </li>
+            <li>
+              <CheckIcon />
+              <div>
+                <strong>Prep work.</strong> Good results depend on cleaning, filling and repairing
+                surfaces first. Ask if it&apos;s included.
+              </div>
+            </li>
+            <li>
+              <CheckIcon />
+              <div>
+                <strong>The guarantee.</strong> Find out how long it lasts and what it covers.
+                Ours is 5 years.
+              </div>
+            </li>
+            <li>
+              <CheckIcon />
+              <div>
+                <strong>Real photos.</strong> Ask to see before and after photos of kitchens they
+                have wrapped themselves.
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      {/* 6.12 Internal link strip */}
+      <section className="px-4 py-10">
+        <div className="container mx-auto max-w-3xl text-center text-muted leading-relaxed">
+          Planning your project? Read more about{" "}
+          <Link href="/kitchen-wrapping/" className="text-accent hover:underline">
+            kitchen wrapping
+          </Link>
+          ,{" "}
+          <Link href="/kitchen-door-wrapping/" className="text-accent hover:underline">
+            kitchen door wrapping
+          </Link>
+          ,{" "}
+          <Link href="/worktop-wrapping/" className="text-accent hover:underline">
+            worktop wrapping
+          </Link>{" "}
+          and{" "}
+          <Link href="/kitchen-island-wrapping/" className="text-accent hover:underline">
+            kitchen island wrapping
+          </Link>
+          .
+        </div>
+      </section>
+
+      {/* 6.13 FAQs */}
+      <section className="border-t border-border px-4 py-16">
+        <div className="container mx-auto max-w-3xl">
+          <h2 className="section-heading text-2xl font-semibold text-foreground md:text-3xl">
+            Kitchen wrapping cost FAQs
+          </h2>
+          <div className="mt-8">
+            <FaqAccordion items={[...faqs]} defaultOpenFirst />
           </div>
         </div>
       </section>
 
-      <section className="border-t border-border px-4 py-16">
+      {/* 6.14 Final CTA */}
+      <section className="cost-cta-band">
+        <Image
+          src="/images/navy-kitchen-wrap-manchester/navy-kitchen-wrap-manchester-03.jpg"
+          alt=""
+          fill
+          className="object-cover"
+          sizes="100vw"
+        />
+        <div className="cost-cta-overlay" />
+        <div className="container relative z-10 mx-auto max-w-3xl px-4 py-20 text-center">
+          <h2 className="text-2xl font-semibold text-white md:text-3xl">
+            Get your free fixed quote
+          </h2>
+          <p className="mx-auto mt-4 max-w-xl text-white/85 leading-relaxed">
+            Send us a few photos and we&apos;ll tell you exactly what your kitchen will cost. No
+            pressure, no obligation, and the price we quote is the price you pay.
+          </p>
+          <div className="mt-8 flex flex-wrap justify-center gap-3">
+            <Link href="/kitchen-wrapping-quote/" className="btn-primary">
+              Get my fixed quote
+            </Link>
+            <WhatsAppButton variant="outline" label="WhatsApp a photo" />
+            <a href={`tel:${siteConfig.phoneE164}`} className="btn-secondary">
+              Call {siteConfig.phone}
+            </a>
+          </div>
+          <p className="mt-4 text-sm text-white/70">
+            Or email{" "}
+            <a href={`mailto:${siteConfig.email}`} className="underline hover:text-white">
+              {siteConfig.email}
+            </a>
+          </p>
+        </div>
+      </section>
+
+      {/* 6.16 Near you */}
+      <section className="px-4 py-16">
         <div className="container mx-auto max-w-3xl">
           <h2 className="text-2xl font-semibold text-foreground">Kitchen wrapping near you</h2>
           <p className="mt-4 text-muted leading-relaxed">
-            The prices on this page are the UK starting prices. Local pages
-            cover the same supply-and-fit service in each town.
+            Based in South Yorkshire, covering the whole UK. Local pages for the towns we wrap
+            most often:
           </p>
           <div className="mt-6 flex flex-wrap gap-x-4 gap-y-2 text-sm">
             {towns.map(([label, href]) => (
@@ -650,31 +1039,6 @@ export default function KitchenWrappingCostPage() {
                 {label}
               </Link>
             ))}
-          </div>
-          <p className="mt-8 text-muted leading-relaxed">
-            Related services:{" "}
-            <Link href="/kitchen-door-wrapping/" className="text-accent hover:underline">
-              kitchen door wrapping
-            </Link>
-            ,{" "}
-            <Link href="/worktop-wrapping/" className="text-accent hover:underline">
-              worktop wrapping
-            </Link>{" "}
-            and{" "}
-            <Link href="/kitchen-wrapping/" className="text-accent hover:underline">
-              full kitchen wrapping
-            </Link>
-            .
-          </p>
-          <div className="mt-10 card-float p-8 text-center">
-            <h2 className="text-2xl font-semibold text-foreground">Get a fixed price for your kitchen</h2>
-            <p className="mt-3 text-muted">
-              Use the quote form, WhatsApp or the phone. A free survey, then one
-              fixed price for supply and fit.
-            </p>
-            <div className="flex flex-col items-center">
-              <QuoteActions />
-            </div>
           </div>
         </div>
       </section>

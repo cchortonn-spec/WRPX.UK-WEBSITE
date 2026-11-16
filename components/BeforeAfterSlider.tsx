@@ -10,6 +10,15 @@ const SLIDER_SKEW = 16;
 type BeforeAfterSliderProps = {
   className?: string;
   priority?: boolean;
+  /** Optional override — defaults to the home-page hero before image. */
+  beforeSrc?: string;
+  afterSrc?: string;
+  beforeAlt?: string;
+  afterAlt?: string;
+  beforeWidth?: number;
+  beforeHeight?: number;
+  afterWidth?: number;
+  afterHeight?: number;
 };
 
 function getDiagonalClip(position: number) {
@@ -25,6 +34,14 @@ function getDiagonalClip(position: number) {
 export function BeforeAfterSlider({
   className = "",
   priority = true,
+  beforeSrc = heroImages.before.src,
+  afterSrc = heroImages.after.src,
+  beforeAlt = heroImages.before.alt,
+  afterAlt = heroImages.after.alt,
+  beforeWidth = heroImages.before.width,
+  beforeHeight = heroImages.before.height,
+  afterWidth = heroImages.after.width,
+  afterHeight = heroImages.after.height,
 }: BeforeAfterSliderProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const [position, setPosition] = useState(50);
@@ -99,10 +116,10 @@ export function BeforeAfterSlider({
           <div className="before-after-slider-frame">
             <div className="before-after-slider-layer">
               <Image
-                src={heroImages.before.src}
-                alt={heroImages.before.alt}
-                width={heroImages.before.width}
-                height={heroImages.before.height}
+                src={beforeSrc}
+                alt={beforeAlt}
+                width={beforeWidth}
+                height={beforeHeight}
                 className="before-after-slider-image"
                 sizes="100vw"
                 priority={priority}
@@ -114,10 +131,10 @@ export function BeforeAfterSlider({
               style={{ clipPath }}
             >
               <Image
-                src={heroImages.after.src}
-                alt={heroImages.after.alt}
-                width={heroImages.after.width}
-                height={heroImages.after.height}
+                src={afterSrc}
+                alt={afterAlt}
+                width={afterWidth}
+                height={afterHeight}
                 className="before-after-slider-image"
                 sizes="100vw"
                 priority={priority}

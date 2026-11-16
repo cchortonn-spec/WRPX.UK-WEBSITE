@@ -26,7 +26,7 @@ export default function KitchenWrappingWakefieldPage() {
         name: "How much does kitchen wrapping cost in Wakefield?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Most Wakefield kitchen wraps fall between £850 and £1,500 depending on door count, finish and whether worktops are included. We provide a fixed price after a free survey — no obligation.",
+          text: "Most Wakefield kitchen wraps start from around £1,100 with worktops depending on door count, finish and whether worktops are included. We provide a fixed price after a free survey — no obligation.",
         },
       },
       {
@@ -182,9 +182,9 @@ export default function KitchenWrappingWakefieldPage() {
             What Wakefield kitchen wrapping typically costs
           </h2>
           <p className="mt-4 text-muted leading-relaxed">
-            Most Wakefield kitchen wraps fall between <strong>£850 and £1,500</strong> depending
+            Most Wakefield kitchen wraps start from around <strong>£1,100</strong> with worktops depending
             on door count, finish and whether worktops are included. Worktop-only wraps start from
-            around £250. We give a fixed price after the free survey — not a ballpark that shifts
+            around £350. We give a fixed price after the free survey — not a ballpark that shifts
             once we&apos;re on site. See our{" "}
             <Link href="/kitchen-wrapping-cost/" className="text-accent hover:underline">
               kitchen wrapping cost guide
@@ -229,8 +229,8 @@ export default function KitchenWrappingWakefieldPage() {
             <div>
               <h3 className="font-semibold text-foreground">How much does kitchen wrapping cost in Wakefield?</h3>
               <p className="mt-2 text-muted leading-relaxed">
-                Most Wakefield kitchen wraps fall between £850 and £1,500. Worktop-only wraps
-                start from around £250. All prices are fixed after the free survey.
+                Most Wakefield kitchen wraps start from around £1,100 with worktops. Worktop-only wraps
+                start from around £350. All prices are fixed after the free survey.
               </p>
             </div>
             <div>

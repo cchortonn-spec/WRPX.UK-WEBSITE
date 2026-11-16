@@ -128,8 +128,8 @@ export default function KitchenWrappingChesterfieldPage() {
             What Chesterfield kitchens typically cost
           </h2>
           <p className="mt-4 text-muted leading-relaxed">
-            Most Chesterfield jobs fall between <strong>£850 and £1,400</strong>. Travel included in quote.
-            Worktop-only wraps from around £250. See the{" "}
+            Most Chesterfield jobs start from around <strong>£1,100</strong> with worktops. Travel included in quote.
+            Worktop-only wraps from around £350. See the{" "}
             <Link href="/kitchen-wrapping-cost/" className="text-accent hover:underline">kitchen wrapping cost guide</Link>.
           </p>
           <p className="mt-4 text-muted leading-relaxed">

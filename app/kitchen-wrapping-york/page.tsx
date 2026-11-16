@@ -34,7 +34,7 @@ export default function KitchenWrappingYorkPage() {
         name: "How much does kitchen wrapping cost in York?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Most York kitchen wraps fall between £850 and £1,500 depending on door count, finish and whether worktops are included. We provide a fixed price after a free survey.",
+          text: "Most York kitchen wraps start from around £1,100 with worktops depending on door count, finish and whether worktops are included. We provide a fixed price after a free survey.",
         },
       },
       {
@@ -190,8 +190,8 @@ export default function KitchenWrappingYorkPage() {
             What York kitchen wrapping typically costs
           </h2>
           <p className="mt-4 text-muted leading-relaxed">
-            Most York kitchen wraps fall between <strong>£850 and £1,500</strong>. Worktop-only
-            wraps start from around £250. Fixed price after the free survey — not a rough guide
+            Most York kitchen wraps start from around <strong>£1,100</strong> with worktops. Worktop-only
+            wraps start from around £350. Fixed price after the free survey — not a rough guide
             that shifts. See our{" "}
             <Link href="/kitchen-wrapping-cost/" className="text-accent hover:underline">
               kitchen wrapping cost guide
@@ -232,7 +232,7 @@ export default function KitchenWrappingYorkPage() {
               <h3 className="font-semibold text-foreground">Can you wrap kitchen worktops in York?</h3>
               <p className="mt-2 text-muted leading-relaxed">
                 Yes. Worktop wrapping is a popular standalone or combined service. We use
-                heat-resistant vinyl in marble, stone and wood-effect finishes. Starts from around £250.
+                heat-resistant vinyl in marble, stone and wood-effect finishes. Starts from around £350.
               </p>
             </div>
           </div>
