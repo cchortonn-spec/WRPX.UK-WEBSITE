@@ -7205,6 +7205,9 @@ html.qr-locked {
   --xmas-berry: #c8102e;
   --xmas-berry-deep: #6e0a1a;
   --xmas-gold-deep: #b8860b;
+  /* Canvas snow (same as 3Sixty Roofing) */
+  --snow-rgb: 255, 255, 255;
+  --snow-shade-rgb: 205, 220, 236;
 }
 
 /* Above page content but below the header, WhatsApp button and mobile CTA bar,
@@ -7311,6 +7314,10 @@ html.qr-locked {
     opacity: 0;
   }
 }
+
+/* Homepage hero snow is a canvas (components/HeroSnowBank.tsx) —
+   same approach as 3Sixty Roofing. No extra CSS needed beyond --snow-rgb. */
+
 
 /* ---------- Fairy lights ----------
    A string of bulbs hanging from the bottom edge of the header (sticky or fixed),

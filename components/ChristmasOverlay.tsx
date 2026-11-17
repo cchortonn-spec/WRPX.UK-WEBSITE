@@ -1,12 +1,16 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useSeasonActive } from "@/lib/use-season-active";
 
 /**
  * Seasonal Christmas decorations: falling snow over the page, plus a string
  * of twinkling fairy lights hanging from the header. Purely decorative — they
  * never block clicks (pointer-events: none).
+ *
+ * On the homepage the hero owns the snow (see HeroSnowBank) so this overlay
+ * skips flakes there — otherwise snow would keep running after you scroll past.
  *
  * The date check runs in the visitor's browser (not at build time), so they
  * switch themselves on/off on the dates set in lib/seasonal-config.ts.
@@ -38,20 +42,24 @@ function SnowCrystal() {
 
 export function ChristmasOverlay() {
   const active = useSeasonActive("christmas");
+  const pathname = usePathname();
+  const isHome = pathname === "/" || pathname === "";
   if (!active) return null;
 
   return (
     <div className="xmas-overlay" aria-hidden="true">
       <div className="xmas-glow" />
-      {Array.from({ length: FLAKE_COUNT }).map((_, i) =>
-        i % 3 === 2 ? (
-          <span key={i} className="xmas-flake xmas-flake-crystal">
-            <SnowCrystal />
-          </span>
-        ) : (
-          <span key={i} className="xmas-flake" />
-        )
-      )}
+      {/* Homepage snow lives on the hero and stops once you scroll past it */}
+      {!isHome &&
+        Array.from({ length: FLAKE_COUNT }).map((_, i) =>
+          i % 3 === 2 ? (
+            <span key={i} className="xmas-flake xmas-flake-crystal">
+              <SnowCrystal />
+            </span>
+          ) : (
+            <span key={i} className="xmas-flake" />
+          )
+        )}
     </div>
   );
 }

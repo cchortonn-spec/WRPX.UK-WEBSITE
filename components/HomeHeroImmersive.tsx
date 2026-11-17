@@ -6,6 +6,7 @@ import {
   immersiveHeroImageMobile,
 } from "@/lib/hero-config";
 import { HeroLocationRotator } from "@/components/HeroLocationRotator";
+import { HeroSnowBank } from "@/components/HeroSnowBank";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 
 /**
@@ -14,50 +15,59 @@ import { WhatsAppButton } from "@/components/WhatsAppButton";
  */
 export function HomeHeroImmersive() {
   return (
-    <section className="immersive-hero" aria-label="Kitchen wrapping specialists">
-      <div className="immersive-hero-media">
-        <Image
-          src={immersiveHeroImage.src}
-          alt={immersiveHeroImage.alt}
-          fill
-          priority
-          quality={95}
-          className="immersive-hero-image immersive-hero-image-desktop"
-          sizes="100vw"
-        />
-        <Image
-          src={immersiveHeroImageMobile.src}
-          alt={immersiveHeroImageMobile.alt}
-          fill
-          priority
-          quality={95}
-          className="immersive-hero-image immersive-hero-image-mobile"
-          sizes="100vw"
-        />
-        <div className="immersive-hero-scrim" aria-hidden="true" />
-      </div>
-
-      <div className="immersive-hero-content">
-        <p className="immersive-hero-eyebrow">WRPX · Kitchen wrapping</p>
-        <h1 className="immersive-hero-title">
-          Kitchen wrapping
-          <br />
-          in Sheffield
-        </h1>
-        <p className="immersive-hero-subtitle">
-          Premium vinyl wrapping across <HeroLocationRotator />. Doors, worktops
-          and splashbacks — usually 1–3 days, with a {siteConfig.guaranteeYears}-year
-          guarantee.
-        </p>
-        <div className="immersive-hero-actions">
-          <WhatsAppButton className="immersive-hero-whatsapp" />
-          <Link href="/gallery/" className="btn-hero-secondary immersive-hero-gallery">
-            <GalleryIcon />
-            View Our Work
-          </Link>
+    <>
+      <section
+        id="home-hero"
+        className="immersive-hero"
+        aria-label="Kitchen wrapping specialists"
+      >
+        <div className="immersive-hero-media">
+          <Image
+            src={immersiveHeroImage.src}
+            alt={immersiveHeroImage.alt}
+            fill
+            priority
+            quality={95}
+            className="immersive-hero-image immersive-hero-image-desktop"
+            sizes="100vw"
+          />
+          <Image
+            src={immersiveHeroImageMobile.src}
+            alt={immersiveHeroImageMobile.alt}
+            fill
+            priority
+            quality={95}
+            className="immersive-hero-image immersive-hero-image-mobile"
+            sizes="100vw"
+          />
+          <div className="immersive-hero-scrim" aria-hidden="true" />
         </div>
-      </div>
-    </section>
+
+        <div className="immersive-hero-content">
+          <p className="immersive-hero-eyebrow">WRPX · Kitchen wrapping</p>
+          <h1 className="immersive-hero-title">
+            Kitchen wrapping
+            <br />
+            in Sheffield
+          </h1>
+          <p className="immersive-hero-subtitle">
+            Premium vinyl wrapping across <HeroLocationRotator />. Doors, worktops
+            and splashbacks — usually 1–3 days, with a {siteConfig.guaranteeYears}-year
+            guarantee.
+          </p>
+          <div className="immersive-hero-actions">
+            <WhatsAppButton className="immersive-hero-whatsapp" />
+            <Link href="/gallery/" className="btn-hero-secondary immersive-hero-gallery">
+              <GalleryIcon />
+              View Our Work
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Outside the hero so overflow:hidden can't clip the fixed canvas */}
+      <HeroSnowBank targetId="home-hero" />
+    </>
   );
 }
 
