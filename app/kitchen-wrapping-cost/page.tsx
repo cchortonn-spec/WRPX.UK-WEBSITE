@@ -14,12 +14,12 @@ import {
 } from "@/lib/pricing";
 import { siteConfig } from "@/lib/site-config";
 
-const TITLE = "Kitchen Wrapping Cost UK | Prices From £1,100";
+const TITLE = "Kitchen Wrapping Cost UK | Prices From £1,350";
 const DESCRIPTION =
-  "How much does kitchen wrapping cost? Full kitchens with worktops from £1,100, Shaker from £1,450, worktops from £350. Supply and fit, free fixed quote.";
-const OG_TITLE = "Kitchen Wrapping Cost UK: Real Prices From £1,100";
+  "How much does kitchen wrapping cost? Full kitchens with worktops from £1,350, Shaker from £1,450, worktops from £350. Supply and fit, free fixed quote.";
+const OG_TITLE = "Kitchen Wrapping Cost UK: Real Prices From £1,350";
 const OG_DESCRIPTION =
-  "Full kitchens with worktops from £1,100, Shaker from £1,450 and worktops from £350. See real before and after jobs and get a free fixed quote.";
+  "Full kitchens with worktops from £1,350, Shaker from £1,450 and worktops from £350. See real before and after jobs and get a free fixed quote.";
 const OG_IMAGE =
   "/images/Kitchen-navy-marble-doncaster/navy-marble-kitchen-wrap-doncaster-after-01.jpeg";
 

@@ -7,10 +7,10 @@
  */
 
 export const kitchenPricing = {
-  fullKitchen: 1100,
+  fullKitchen: 1350,
   shakerKitchen: 1450,
   worktopsOnly: 350,
-  doorsOnlyFullKitchen: 850,
+  doorsOnlyFullKitchen: 900,
   shakerDoorsOnly: 1150,
   largerKitchen: 1600,
   island: 300,
@@ -23,11 +23,11 @@ export const kitchenPricing = {
   newKitchenHigh: 15000,
 } as const;
 
-/** "From around £1,100" */
+/** "From around £1,350" */
 export const formatFrom = (n: number) =>
   `From around £${n.toLocaleString("en-GB")}`;
 
-/** "£1,100" */
+/** "£1,350" */
 export const formatPounds = (n: number) => `£${n.toLocaleString("en-GB")}`;
 
 export type PriceGuideRow = {

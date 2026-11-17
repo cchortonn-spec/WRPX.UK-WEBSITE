@@ -23,7 +23,7 @@ const howItWorks = [
 ] as const;
 
 const startingPrices = [
-  { name: "Full kitchen", price: "£1,100" },
+  { name: "Full kitchen", price: "£1,350" },
   { name: "Worktops only", price: "£350" },
   { name: "Per door", price: "£45" },
 ] as const;
@@ -60,7 +60,7 @@ const quoteTips = [
 const faqItems = [
   {
     q: "How much does kitchen wrapping cost in South Yorkshire?",
-    a: "Full kitchens start from £1,100 (around 10–12 doors), worktops only from £350 and individual doors from £45. Your final fixed price depends on door and drawer count, surface condition and finish, and is confirmed after your free survey.",
+    a: "Full kitchens start from £1,350 (around 10–12 doors), worktops only from £350 and individual doors from £45. Your final fixed price depends on door and drawer count, surface condition and finish, and is confirmed after your free survey.",
   },
   {
     q: "Is kitchen wrapping cheaper than fitting a new kitchen?",

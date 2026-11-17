@@ -25,7 +25,7 @@ export default function KitchenDoorWrappingPage() {
         name: "How much does kitchen door wrapping cost?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Kitchen door wrapping starts from around £45 per door depending on size and finish. A standard full kitchen of 10–12 doors doors only for a full kitchen from around £850. We provide a fixed price after a free survey.",
+          text: "Kitchen door wrapping starts from around £45 per door depending on size and finish. Doors only for a full kitchen (about 10–12 doors) from around £900. A full kitchen with worktops starts from around £1,350. We provide a fixed price after a free survey.",
         },
       },
       {
@@ -190,7 +190,7 @@ export default function KitchenDoorWrappingPage() {
             <ul className="mt-4 list-inside list-disc space-y-2 text-muted">
               <li>Standard door: from £45</li>
               <li>Drawer front: from £25</li>
-              <li>Doors only for a full kitchen (10–12 doors): from around £850</li>
+              <li>Doors only for a full kitchen (10–12 doors): from around £900</li>
               <li>Worktops can be added to the same visit (from £350)</li>
             </ul>
             <p className="mt-4 text-muted leading-relaxed">

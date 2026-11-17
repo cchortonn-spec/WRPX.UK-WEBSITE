@@ -15,7 +15,7 @@ import { WhatsAppButton } from "@/components/WhatsAppButton";
 export const metadata: Metadata = {
   title: "Kitchen Wrapping Service South Yorkshire | Doors, Frames & Worktops",
   description:
-    "Kitchen wrapping South Yorkshire — doors, worktops, frames in 1–3 days. From £1,100 full kitchen. Free survey, fixed quote. Sheffield, Leeds, Doncaster & more.",
+    "Kitchen wrapping South Yorkshire — doors, worktops, frames in 1–3 days. From £1,350 full kitchen. Free survey, fixed quote. Sheffield, Leeds, Doncaster & more.",
   alternates: { canonical: "https://www.wrpx.co.uk/kitchen-wrapping/" },
 };
 
@@ -27,7 +27,7 @@ const stats = [
   { value: "70–80%", label: "less than a new kitchen" },
   { value: "1–3 days", label: "typical install, no rip-out" },
   { value: `${siteConfig.guaranteeYears} years`, label: "named guarantee" },
-  { value: "£1,100", label: "full kitchens from" },
+  { value: "£1,350", label: "full kitchens from" },
 ];
 
 const transformations = [
@@ -69,7 +69,7 @@ const prices = [
   },
   {
     name: "Full kitchen",
-    amount: "£1,100",
+    amount: "£1,350",
     unit: "10–12 doors, frames & plinths",
     features: ["Doors, drawers, carcass faces & end panels", "Plinths, cornice and pelmet", "Usually 1–3 days, no rip-out"],
     href: QUOTE_HREF,
@@ -117,7 +117,7 @@ const comparison = [
     name: "Kitchen wrap",
     best: true,
     rows: [
-      ["Cost", "From £1,100 — 70–80% less than new"],
+      ["Cost", "From £1,350 — 70–80% less than new"],
       ["Time", "1–3 days"],
       ["Disruption", "No rip-out — kitchen stays usable"],
       ["Finish", "Scratch, impact & heat resistant"],

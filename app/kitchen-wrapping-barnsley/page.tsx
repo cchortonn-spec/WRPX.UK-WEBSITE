@@ -132,7 +132,7 @@ export default function KitchenWrappingBarnsleyPage() {
         <div className="container mx-auto max-w-3xl px-4">
           <h2 className="text-xl font-semibold text-foreground">What Barnsley kitchens typically cost</h2>
           <p className="mt-4 text-muted leading-relaxed">
-            Most Barnsley jobs start from around <strong>£1,100</strong> with worktops. Worktop-only wraps from around £350. Fixed price
+            Most Barnsley jobs start from around <strong>£1,350</strong> with worktops. Worktop-only wraps from around £350. Fixed price
             after survey. See the{" "}
             <Link href="/kitchen-wrapping-cost/" className="text-accent hover:underline">kitchen wrapping cost guide</Link>{" "}
             for a full breakdown.

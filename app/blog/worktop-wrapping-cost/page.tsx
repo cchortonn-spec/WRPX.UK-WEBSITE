@@ -185,7 +185,7 @@ export default function WorktopWrappingCostPage() {
             </p>
             <p className="mt-4">
               A typical complete kitchen wrap (doors, drawer fronts, plinths and worktops) in South
-              Yorkshire start from around £1,100 with worktops. That&apos;s still 70–80% less than a new kitchen.
+              Yorkshire start from around £1,350 with worktops. That&apos;s still 70–80% less than a new kitchen.
             </p>
           </section>
 
