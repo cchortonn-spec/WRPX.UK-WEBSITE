@@ -94,14 +94,14 @@ export function Header() {
       }
     >
       <ChristmasBanner />
-      <div className="container mx-auto flex min-h-20 max-w-6xl items-center justify-between gap-4 px-4 py-3 md:min-h-28">
+      <div className="site-header-bar container mx-auto flex min-h-20 max-w-6xl items-center justify-between gap-4 px-4 py-3 md:min-h-28">
         <Link href="/" className="logo-link flex shrink-0 items-center transition-colors duration-200 hover:text-accent-pink active:text-accent-pink">
           <Image
             src="/logo.png"
             alt="WRPX"
             width={360}
             height={108}
-            className="h-16 w-auto md:h-24"
+            className="site-header-logo h-16 w-auto md:h-24"
             priority
           />
         </Link>
@@ -109,7 +109,7 @@ export function Header() {
         <button
           type="button"
           onClick={() => setMobileOpen(!mobileOpen)}
-          className="flex flex-col gap-1.5 rounded p-2 text-foreground transition-colors duration-200 hover:text-accent-pink active:text-accent-pink lg:hidden"
+          className="site-header-menu-btn flex flex-col gap-1.5 rounded p-2 text-foreground transition-colors duration-200 hover:text-accent-pink active:text-accent-pink lg:hidden"
           aria-expanded={mobileOpen}
           aria-label="Toggle menu"
         >
