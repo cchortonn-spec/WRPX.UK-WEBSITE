@@ -26,7 +26,7 @@ export default function KitchenWrappingBradfordPage() {
         name: "How much does kitchen wrapping cost in Bradford?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Most Bradford kitchen wraps fall between £850 and £1,500 depending on door count, finish and whether worktops are included. We provide a fixed price after a free survey — no obligation.",
+          text: "Most Bradford kitchen wraps start from around £1,350 with worktops depending on door count, finish and whether worktops are included. We provide a fixed price after a free survey — no obligation.",
         },
       },
       {
@@ -170,8 +170,8 @@ export default function KitchenWrappingBradfordPage() {
             What Bradford kitchen wrapping typically costs
           </h2>
           <p className="mt-4 text-muted leading-relaxed">
-            Most Bradford kitchen wraps fall between <strong>£850 and £1,500</strong>.
-            Worktop-only wraps start from around £250. See our{" "}
+            Most Bradford kitchen wraps start from around <strong>£1,350</strong> with worktops.
+            Worktop-only wraps start from around £350. See our{" "}
             <Link href="/kitchen-wrapping-cost/" className="text-accent hover:underline">
               kitchen wrapping cost guide
             </Link>{" "}

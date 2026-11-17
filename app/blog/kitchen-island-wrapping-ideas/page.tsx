@@ -111,6 +111,11 @@ export default function KitchenIslandWrappingIdeasPage() {
               on the island&apos;s size, number of door fronts, complexity of panels and the finish
               chosen. Combined with a full kitchen wrap, the island is usually included in the total
               job price — more cost-effective than booking separately. Fixed price after free survey.
+              For current full-kitchen starting prices, see the{" "}
+              <Link href="/kitchen-wrapping-cost/" className="text-accent hover:underline">
+                kitchen wrapping cost guide
+              </Link>
+              .
             </p>
 
             <h2>Can I wrap just the island?</h2>

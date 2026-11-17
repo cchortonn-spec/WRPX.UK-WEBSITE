@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { track } from "@vercel/analytics";
 import { RESOURCES_HASH } from "@/components/QuoteResources";
+import { formatFrom, formatPounds, kitchenPricing } from "@/lib/pricing";
 
 type QuoteType = "complete" | "cabinet" | "worktop" | "";
 type DoorStyle = "j-pull" | "shaker" | "flat" | "other" | "";
@@ -25,7 +26,7 @@ const quoteTypeCards = [
     id: "complete" as const,
     title: "Complete kitchen wrap",
     desc: "Doors, drawers, panels, plinths, trims, worktops and upstands.",
-    price: "From £1,099",
+    price: formatFrom(kitchenPricing.fullKitchen),
     badge: "Most popular",
     image: "/images/home/kitchen-home-new-02.png",
   },
@@ -33,7 +34,7 @@ const quoteTypeCards = [
     id: "cabinet" as const,
     title: "Cabinets only",
     desc: "Doors, drawers, panels, plinths and trims.",
-    price: "Doors from £45",
+    price: `Doors from ${formatPounds(kitchenPricing.singleDoor)}`,
     badge: "",
     image: "/images/home/kitchen-home-new-04.png",
   },
@@ -41,7 +42,7 @@ const quoteTypeCards = [
     id: "worktop" as const,
     title: "Worktops only",
     desc: "Worktops and upstands. Splashbacks quoted separately.",
-    price: "From £380",
+    price: formatFrom(kitchenPricing.worktopsOnly),
     badge: "",
     image: "/images/Marble-worktop-potefract/marble-effect-worktop-wrap-pontefract-01.jpeg",
   },
@@ -99,6 +100,20 @@ export function KitchenWrappingQuoteWizard() {
     mobile: "",
     city: "",
   });
+
+  // Pre-select from ?type= and &door= on /kitchen-wrapping-quote/ (cost page links).
+  // Invalid or missing values leave the wizard exactly as before.
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const type = params.get("type");
+    if (type === "complete" || type === "cabinet" || type === "worktop") {
+      setQuoteType(type);
+    }
+    const door = params.get("door");
+    if (door === "shaker" || door === "flat" || door === "j-pull" || door === "other") {
+      setDoorStyle(door);
+    }
+  }, []);
 
   const previews = useMemo(() => photos.map((file) => URL.createObjectURL(file)), [photos]);
   useEffect(() => () => previews.forEach((url) => URL.revokeObjectURL(url)), [previews]);

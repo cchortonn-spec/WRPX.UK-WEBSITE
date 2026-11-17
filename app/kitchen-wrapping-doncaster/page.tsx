@@ -248,8 +248,8 @@ export default function KitchenWrappingDoncasterPage() {
             What Doncaster kitchens typically cost
           </h2>
           <p className="mt-4 text-muted leading-relaxed">
-            Most Doncaster kitchen wraps fall between <strong>£850 and £1,400</strong>.
-            Worktop-only wraps start from around £250. We give a fixed price after
+            Most Doncaster kitchen wraps start from around <strong>£1,350</strong> with worktops.
+            Worktop-only wraps start from around £350. We give a fixed price after
             the free survey - not a rough guide that expands on site. See our{" "}
             <Link href="/kitchen-wrapping-cost/" className="text-accent hover:underline">
               kitchen wrapping cost guide

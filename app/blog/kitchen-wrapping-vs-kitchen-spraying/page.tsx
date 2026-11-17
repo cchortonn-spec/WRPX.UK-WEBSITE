@@ -187,6 +187,10 @@ export default function KitchenWrappingVsSprayingPage() {
               <Link href="/kitchen-wrapping/" className="text-accent hover:underline">
                 Kitchen Wrapping South Yorkshire
               </Link>
+              {" · "}
+              <Link href="/kitchen-wrapping-cost/" className="text-accent hover:underline">
+                Kitchen wrapping cost
+              </Link>
             </p>
           </div>
         </div>

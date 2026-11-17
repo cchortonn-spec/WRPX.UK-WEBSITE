@@ -265,9 +265,9 @@ export default function KitchenWrappingSheffieldPage() {
             What Sheffield kitchens typically cost
           </h2>
           <p className="mt-4 text-muted leading-relaxed">
-            Most Sheffield kitchen wraps fall between <strong>£850 and £1,500</strong>{" "}
+            Most Sheffield kitchen wraps start from around <strong>£1,350</strong> with worktops{" "}
             depending on door count, finish and whether worktops are included.
-            Worktop-only wraps start from around £250.
+            Worktop-only wraps start from around £350.
           </p>
           <p className="mt-4 text-muted leading-relaxed">
             We give a fixed price after the free survey - not a ballpark that

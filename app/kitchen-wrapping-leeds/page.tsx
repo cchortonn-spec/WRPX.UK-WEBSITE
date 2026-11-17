@@ -138,8 +138,8 @@ export default function KitchenWrappingLeedsPage() {
             What Leeds kitchens typically cost
           </h2>
           <p className="mt-4 text-muted leading-relaxed">
-            Most Leeds kitchen wraps fall between <strong>£900 and £1,600</strong> depending on door count, finish and worktops.
-            Travel to LS postcodes is included in the quote. Worktop-only wraps from around £250. See the{" "}
+            Full kitchens with worktops from around <strong>£1,350</strong>. Price depends on door count, finish and worktops.
+            Travel to LS postcodes is included in the quote. Worktop-only wraps from around £350. See the{" "}
             <Link href="/kitchen-wrapping-cost/" className="text-accent hover:underline">kitchen wrapping cost guide</Link>.
           </p>
           <p className="mt-4 text-muted leading-relaxed">

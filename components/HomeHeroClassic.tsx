@@ -16,7 +16,7 @@ export function HomeHeroClassic() {
           <div className="home-hero-scrim" aria-hidden="true" />
         </div>
         <div className="home-hero-copy">
-          <h1 className="home-hero-title">Kitchen Wrapping Specialists</h1>
+          <h1 className="home-hero-title">Kitchen wrapping in Sheffield</h1>
           <p className="home-hero-subtitle">
             Transform your kitchen with our premium wrapping service across{" "}
             <HeroLocationRotator />.

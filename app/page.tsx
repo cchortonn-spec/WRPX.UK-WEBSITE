@@ -15,16 +15,16 @@ import { GoogleReviewsBar } from "@/components/GoogleReviewsBar";
 import { photosByName } from "@/lib/portfolio";
 
 export const metadata: Metadata = {
-  title: "Kitchen Wrapping Sheffield & South Yorkshire | Vinyl Wrap Specialist | WRPX",
+  title: "Kitchen Wrapping Sheffield, South Yorkshire & UK | WRPX",
   description:
-    "WRPX — kitchen wrapping specialist covering Sheffield, Doncaster, Barnsley, Rotherham, Leeds, Huddersfield & Chesterfield. Doors, worktops, islands, splashbacks, furniture. 7+ years, 5-year guarantee. Free survey.",
+    "Kitchen wrapping in Sheffield and South Yorkshire. Supply and fit across the UK for doors, worktops and furniture. Free survey and a 5-year guarantee.",
   alternates: {
     canonical: "https://www.wrpx.co.uk/",
   },
   openGraph: {
-    title: "Kitchen Wrapping Sheffield & South Yorkshire | WRPX",
+    title: "Kitchen Wrapping Sheffield, South Yorkshire & UK | WRPX",
     description:
-      "Kitchen wrapping specialist — Sheffield, Doncaster, Barnsley, Rotherham, Leeds, Huddersfield & Chesterfield. Doors, worktops, islands, splashbacks. 5-year guarantee. Free survey.",
+      "Kitchen wrapping in Sheffield and South Yorkshire. Supply and fit across the UK for doors, worktops and furniture. Free survey and a 5-year guarantee.",
     url: "https://www.wrpx.co.uk/",
     type: "website",
     images: [
@@ -106,7 +106,7 @@ export default function HomePage() {
             </h2>
             <p className="mt-4 text-muted leading-relaxed">
               We wrap interior surfaces in hotels, offices, student accommodation, restaurants,
-              retail and educational buildings. Counter tops, door panels, reception joinery,
+              retail and educational buildings. Counter tops, door panels, reception desks,
               fitted furniture — any surface that needs a fresh finish without replacement.
               White-label and subcontract available for fit-out contractors and brand managers.
             </p>
@@ -126,7 +126,7 @@ export default function HomePage() {
               >
                 <p className="font-semibold text-foreground text-sm">Offices</p>
                 <p className="mt-1 text-xs text-muted">
-                  Reception desks, meeting room joinery, kitchen units, feature walls.
+                  Reception desks, meeting room panels, kitchen units, feature walls.
                 </p>
               </Link>
               <Link
@@ -153,7 +153,7 @@ export default function HomePage() {
               >
                 <p className="font-semibold text-foreground text-sm">Schools &amp; universities</p>
                 <p className="mt-1 text-xs text-muted">
-                  Classroom joinery, corridor furniture, canteen surfaces, admin areas.
+                  Classroom furniture, corridor furniture, canteen surfaces, admin areas.
                 </p>
               </Link>
               <Link

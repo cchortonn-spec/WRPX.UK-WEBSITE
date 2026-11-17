@@ -15,7 +15,7 @@ import { WhatsAppButton } from "@/components/WhatsAppButton";
 export const metadata: Metadata = {
   title: "Kitchen Wrapping Service South Yorkshire | Doors, Frames & Worktops",
   description:
-    "Kitchen wrapping South Yorkshire — doors, worktops, frames in 1–3 days. From £1,099 full kitchen. Free survey, fixed quote. Sheffield, Leeds, Doncaster & more.",
+    "Kitchen wrapping South Yorkshire — doors, worktops, frames in 1–3 days. From £1,350 full kitchen. Free survey, fixed quote. Sheffield, Leeds, Doncaster & more.",
   alternates: { canonical: "https://www.wrpx.co.uk/kitchen-wrapping/" },
 };
 
@@ -27,7 +27,7 @@ const stats = [
   { value: "70–80%", label: "less than a new kitchen" },
   { value: "1–3 days", label: "typical install, no rip-out" },
   { value: `${siteConfig.guaranteeYears} years`, label: "named guarantee" },
-  { value: "£1,099", label: "full kitchens from" },
+  { value: "£1,350", label: "full kitchens from" },
 ];
 
 const transformations = [
@@ -69,7 +69,7 @@ const prices = [
   },
   {
     name: "Full kitchen",
-    amount: "£1,099",
+    amount: "£1,350",
     unit: "10–12 doors, frames & plinths",
     features: ["Doors, drawers, carcass faces & end panels", "Plinths, cornice and pelmet", "Usually 1–3 days, no rip-out"],
     href: QUOTE_HREF,
@@ -78,7 +78,7 @@ const prices = [
   },
   {
     name: "Worktops only",
-    amount: "£380",
+    amount: "£350",
     unit: "worktop wrap",
     features: ["Marble, stone or wood-effect", "Heat- and scratch-resistant finishes", "A fraction of replacement cost"],
     href: "/worktop-wrapping/",
@@ -117,7 +117,7 @@ const comparison = [
     name: "Kitchen wrap",
     best: true,
     rows: [
-      ["Cost", "From £1,099 — 70–80% less than new"],
+      ["Cost", "From £1,350 — 70–80% less than new"],
       ["Time", "1–3 days"],
       ["Disruption", "No rip-out — kitchen stays usable"],
       ["Finish", "Scratch, impact & heat resistant"],
@@ -170,7 +170,7 @@ const cities = [
 
 const relatedServices = [
   { title: "Kitchen door wrapping", body: "Individual doors or full sets from £45 per door", href: "/kitchen-door-wrapping/" },
-  { title: "Worktop wrapping", body: "Marble, stone and wood-effect heat-resistant vinyl from £380", href: "/worktop-wrapping/" },
+  { title: "Worktop wrapping", body: "Marble, stone and wood-effect heat-resistant vinyl from £350", href: "/worktop-wrapping/" },
   { title: "Bathroom cabinet wrapping", body: "Moisture-resistant vinyl for vanity units and bathroom furniture", href: "/bathroom-cabinet-wrapping/" },
   { title: "Bedroom wardrobe wrapping", body: "Fitted wardrobes and bedroom storage refreshed", href: "/bedroom-wardrobe-wrapping/" },
 ];
@@ -435,7 +435,7 @@ export default function KitchenWrappingPage() {
           <p className="mt-8 text-center text-sm text-muted">
             Want the detail? See our{" "}
             <Link href="/kitchen-wrapping-cost/" className="link-subtle">
-              kitchen wrapping cost guide
+              UK kitchen wrapping cost guide
             </Link>{" "}
             for a full breakdown and price table.
           </p>

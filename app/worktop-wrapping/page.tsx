@@ -58,7 +58,11 @@ export default function WorktopWrappingPage() {
               What is worktop wrapping?
             </h2>
             <p className="mt-4 text-muted leading-relaxed">
-              Worktop wrapping means applying a durable vinyl film to your existing countertops. No rip-out, no new units, no plumber. We wrap laminate, solid wood and most flat, sound surfaces. The film is heat-resistant and scratch-resistant, so it stands up to normal kitchen use. You get a new look — marble, stone, wood or solid colour — at a fraction of the cost of replacing worktops.
+              Worktop wrapping means applying a durable vinyl film to your existing countertops. No rip-out, no new units, no plumber. We wrap laminate, solid wood and most flat, sound surfaces. The film is heat-resistant and scratch-resistant, so it stands up to normal kitchen use. You get a new look — marble, stone, wood or solid colour — at a fraction of the cost of replacing worktops. Worktops start from around £350, supply and fit. See our{" "}
+              <Link href="/kitchen-wrapping-cost/" className="text-accent hover:underline">
+                kitchen wrapping cost guide
+              </Link>{" "}
+              for the full price list.
             </p>
           </div>
 

@@ -137,8 +137,8 @@ const stats = [
     label: "Typical install for a kitchen. No rip-out.",
   },
   {
-    value: "From £850",
-    label: "A full kitchen, after a free survey and a fixed quote.",
+    value: "From £1,350",
+    label: "A full kitchen with worktops, after a free survey and a fixed quote.",
   },
   {
     value: "Free survey",

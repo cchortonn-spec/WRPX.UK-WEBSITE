@@ -5,7 +5,7 @@ import { siteConfig } from "@/lib/site-config";
 export const metadata: Metadata = {
   title: "Worktop Wrapping Rotherham | Vinyl Countertop Specialist | WRPX",
   description:
-    "Worktop wrapping Rotherham — heat-resistant vinyl in marble, stone and wood-effect. Transform countertops in one day from £250. Free survey, 5-year guarantee.",
+    "Worktop wrapping Rotherham — heat-resistant vinyl in marble, stone and wood-effect. Transform countertops in one day from £350. Free survey, 5-year guarantee.",
   alternates: { canonical: "https://www.wrpx.co.uk/worktop-wrapping-rotherham/" },
 };
 
@@ -19,7 +19,7 @@ export default function WorktopWrappingRotherhamPage() {
         name: "How much does worktop wrapping cost in Rotherham?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Worktop wrapping in Rotherham starts from around £250 for a straight run, rising to £350–£600 for L-shape or U-shape kitchens. Fixed price confirmed after the free survey.",
+          text: "Worktop wrapping in Rotherham starts from around £350 for a straight run, rising to £350–£600 for L-shape or U-shape kitchens. Fixed price confirmed after the free survey.",
         },
       },
       {
@@ -90,7 +90,7 @@ export default function WorktopWrappingRotherhamPage() {
               <tbody>
                 <tr className="border-b border-border">
                   <td className="py-3 pr-4">Straight run (2–3m)</td>
-                  <td className="py-3">from £250</td>
+                  <td className="py-3">from £350</td>
                 </tr>
                 <tr className="border-b border-border">
                   <td className="py-3 pr-4">L-shape (4–5m)</td>
@@ -115,7 +115,7 @@ export default function WorktopWrappingRotherhamPage() {
           <div className="mt-4 space-y-5">
             <div>
               <h3 className="font-semibold text-foreground">How much does it cost in Rotherham?</h3>
-              <p className="mt-2 text-muted">From £250. Fixed quote after free survey.</p>
+              <p className="mt-2 text-muted">From £350. Fixed quote after free survey.</p>
             </div>
             <div>
               <h3 className="font-semibold text-foreground">Is it heat resistant?</h3>

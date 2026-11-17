@@ -44,7 +44,7 @@ export default function KitchenWrappingRentalPropertiesPage() {
               <li><strong>Replace the kitchen</strong> — £4,000–£12,000+, 2–4 weeks, loss of rental income during works</li>
               <li><strong>New doors only</strong> — £1,500–£3,000 for door supply and fitting, lead times for ordering</li>
               <li><strong>Paint the doors</strong> — £600–£1,500, slow drying, not durable in high-use environments</li>
-              <li><strong>Kitchen wrapping</strong> — £850–£1,500 for a full kitchen, 1–3 days, kitchen functional throughout</li>
+              <li><strong>Kitchen wrapping</strong> — from around £1,350 for a full kitchen with worktops, 1–3 days, kitchen functional throughout</li>
             </ul>
           </section>
 
@@ -94,15 +94,15 @@ export default function KitchenWrappingRentalPropertiesPage() {
                 <tbody>
                   <tr className="border-b border-border">
                     <td className="py-3 pr-4">Doors and drawer fronts only (10–12)</td>
-                    <td className="py-3">£550 – £800</td>
+                    <td className="py-3">from around £900</td>
                   </tr>
                   <tr className="border-b border-border">
                     <td className="py-3 pr-4">Full kitchen incl. plinths and carcass faces</td>
-                    <td className="py-3">£850 – £1,200</td>
+                    <td className="py-3">from around £900</td>
                   </tr>
                   <tr className="border-b border-border">
                     <td className="py-3 pr-4">Full kitchen + worktops</td>
-                    <td className="py-3">£1,100 – £1,800</td>
+                    <td className="py-3">from around £1,350</td>
                   </tr>
                   <tr>
                     <td className="py-3 pr-4">New kitchen (equivalent scope)</td>
@@ -113,7 +113,12 @@ export default function KitchenWrappingRentalPropertiesPage() {
             </div>
             <p className="mt-4 text-sm">
               Typical wrapping ROI in terms of rental increase: even a £50/month uplift in rent
-              from a refreshed kitchen recovers a £1,200 wrap investment in 24 months.
+              from a refreshed kitchen recovers a £1,200 wrap investment in 24 months. For the
+              current published starting prices, see the{" "}
+              <Link href="/kitchen-wrapping-cost/" className="text-accent hover:underline">
+                kitchen wrapping cost guide
+              </Link>
+              .
             </p>
           </section>
 

@@ -5,7 +5,7 @@ import { siteConfig } from "@/lib/site-config";
 export const metadata: Metadata = {
   title: "Worktop Wrapping Chesterfield | Vinyl Countertop Transformation | WRPX",
   description:
-    "Worktop wrapping Chesterfield — marble, stone and wood-effect vinyl applied to existing countertops. From £250. Free survey, 5-year guarantee.",
+    "Worktop wrapping Chesterfield — marble, stone and wood-effect vinyl applied to existing countertops. From £350. Free survey, 5-year guarantee.",
   alternates: { canonical: "https://www.wrpx.co.uk/worktop-wrapping-chesterfield/" },
 };
 
@@ -19,7 +19,7 @@ export default function WorktopWrappingChesterfieldPage() {
         name: "How much does worktop wrapping cost in Chesterfield?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Worktop wrapping in Chesterfield starts from around £250 for a straight run. L-shape kitchens range from £350 and U-shape from £450. Fixed price given after the free survey.",
+          text: "Worktop wrapping in Chesterfield starts from around £350 for a straight run. L-shape kitchens range from £350 and U-shape from £450. Fixed price given after the free survey.",
         },
       },
       {
@@ -54,7 +54,7 @@ export default function WorktopWrappingChesterfieldPage() {
             Chesterfield and North Derbyshire homeowners choose worktop wrapping when their kitchen
             layout is solid but the surface needs updating. We apply commercial-grade vinyl directly
             to your existing worktops — marble, stone, wood grain or solid colour — in a single
-            visit from £250.
+            visit from £350.
           </p>
           <div className="mt-6 rounded-lg border-l-4 border-accent bg-background p-4">
             <p className="font-semibold text-foreground">
@@ -78,7 +78,7 @@ export default function WorktopWrappingChesterfieldPage() {
               <tbody>
                 <tr className="border-b border-border">
                   <td className="py-3 pr-4">Straight run (2–3m)</td>
-                  <td className="py-3">from £250</td>
+                  <td className="py-3">from £350</td>
                 </tr>
                 <tr className="border-b border-border">
                   <td className="py-3 pr-4">L-shape</td>
@@ -100,7 +100,7 @@ export default function WorktopWrappingChesterfieldPage() {
           <div className="mt-4 space-y-5">
             <div>
               <h3 className="font-semibold text-foreground">Cost in Chesterfield?</h3>
-              <p className="mt-2 text-muted">From £250 for a straight run. Fixed quote after free survey.</p>
+              <p className="mt-2 text-muted">From £350 for a straight run. Fixed quote after free survey.</p>
             </div>
             <div>
               <h3 className="font-semibold text-foreground">Do you cover Chesterfield?</h3>

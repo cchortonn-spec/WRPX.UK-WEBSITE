@@ -184,8 +184,8 @@ export default function KitchenWrappingRotherhamPage() {
             What Rotherham kitchens typically cost
           </h2>
           <p className="mt-4 text-muted leading-relaxed">
-            Most Rotherham kitchen wraps fall between <strong>£850 and £1,400</strong>.
-            Worktop-only wraps start from around £250. Fixed price after free survey -
+            Most Rotherham kitchen wraps start from around <strong>£1,350</strong> with worktops.
+            Worktop-only wraps start from around £350. Fixed price after free survey -
             see the{" "}
             <Link href="/kitchen-wrapping-cost/" className="text-accent hover:underline">
               kitchen wrapping cost guide

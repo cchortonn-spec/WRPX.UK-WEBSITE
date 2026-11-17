@@ -53,7 +53,11 @@ export default function KitchenWrappingNearMeGuidePage() {
               <p className="mt-4 text-muted leading-relaxed">
                 Kitchen wrapping is one of those services where the quality of the result varies
                 enormously from one installer to another. The film cost is similar across the
-                industry. The difference is in surface preparation, application technique and
+                industry. For what a job actually starts from, see the{" "}
+                <Link href="/kitchen-wrapping-cost/" className="text-accent hover:underline">
+                  kitchen wrapping cost guide
+                </Link>
+                . The difference is in surface preparation, application technique and
                 whether the installer will give you an honest answer about whether wrapping is
                 actually right for your specific kitchen.
               </p>

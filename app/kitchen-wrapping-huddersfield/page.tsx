@@ -115,8 +115,8 @@ export default function KitchenWrappingHuddersfieldPage() {
             What Huddersfield kitchens typically cost
           </h2>
           <p className="mt-4 text-muted leading-relaxed">
-            Most Huddersfield jobs fall between <strong>£900 and £1,500</strong>. Travel to HD postcodes is included.
-            Worktop-only wraps from around £250. See the{" "}
+            Full kitchens with worktops from around <strong>£1,350</strong>. Travel to HD postcodes is included.
+            Worktop-only wraps from around £350. See the{" "}
             <Link href="/kitchen-wrapping-cost/" className="text-accent hover:underline">kitchen wrapping cost guide</Link>.
           </p>
         </div>

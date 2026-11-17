@@ -84,7 +84,11 @@ export default function HowLongKitchenWrappingLastsPage() {
                 stronger adhesives, better UV stability and more durable surface coatings than
                 budget alternatives. The difference in material cost between a cheap film and a
                 premium film on a typical kitchen is £100–£200 at most. The difference in lifespan
-                can be 5–8 years.
+                can be 5–8 years. Current job starting prices are on the{" "}
+                <Link href="/kitchen-wrapping-cost/" className="text-accent hover:underline">
+                  kitchen wrapping cost guide
+                </Link>
+                .
               </p>
 
               <h3 className="mt-6 font-semibold text-foreground">3. Finish type</h3>

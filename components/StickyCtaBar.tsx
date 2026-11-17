@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import { siteConfig } from "@/lib/site-config";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 
@@ -10,6 +11,11 @@ const SCROLL_THRESHOLD = 120;
 /** Mobile-only sticky bottom bar — appears after user scrolls */
 export function StickyCtaBar() {
   const [visible, setVisible] = useState(false);
+  const pathname = usePathname();
+  const isCostPage =
+    pathname === "/kitchen-wrapping-cost" || pathname === "/kitchen-wrapping-cost/";
+  const primaryHref = isCostPage ? "/kitchen-wrapping-quote/" : "/contact/";
+  const primaryLabel = isCostPage ? "Get quote" : "Enquire";
 
   useEffect(() => {
     const onScroll = () => {
@@ -38,8 +44,11 @@ export function StickyCtaBar() {
       >
         Call
       </a>
-      <Link href="/contact/" className="btn-primary shrink-0 px-3 py-2.5 text-center text-sm">
-        Enquire
+      <Link
+        href={primaryHref}
+        className="btn-primary shrink-0 px-3 py-2.5 text-center text-sm"
+      >
+        {primaryLabel}
       </Link>
     </div>
   );
