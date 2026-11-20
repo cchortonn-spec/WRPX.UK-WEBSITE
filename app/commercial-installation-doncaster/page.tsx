@@ -35,6 +35,54 @@ export default function CommercialInstallationDoncasterPage() {
       <section className="px-4 py-12">
         <div className="container mx-auto max-w-3xl space-y-8">
           <div className="card-float p-8">
+            <h2 className="text-xl font-semibold text-foreground">Recent Doncaster project</h2>
+            <p className="mt-4 text-muted leading-relaxed">
+              Four reverse vending machines in Doncaster, wrapped in full-coverage
+              printed vinyl and finished around the doors, flaps and sensors.
+            </p>
+            <div className="mt-6 grid gap-4 sm:grid-cols-3">
+              {[
+                {
+                  src: "/images/reverse-vending-machine-wrap-doncaster/reverse-vending-machine-wrap-doncaster-07.jpg",
+                  alt: "Yellow reverse vending machine, straight on, Doncaster",
+                },
+                {
+                  src: "/images/reverse-vending-machine-wrap-doncaster/reverse-vending-machine-wrap-doncaster-03.jpg",
+                  alt: "Green reverse vending machine, seen straight on, Doncaster",
+                },
+                {
+                  src: "/images/reverse-vending-machine-wrap-doncaster/reverse-vending-machine-wrap-doncaster-11.jpg",
+                  alt: "Four reverse vending machines in a row, Doncaster",
+                },
+              ].map((img) => (
+                <Link
+                  key={img.src}
+                  href="/projects/reverse-vending-machine-wraps-doncaster/"
+                  className="block overflow-hidden rounded-lg border border-border"
+                >
+                  <div className="relative aspect-[3/4]">
+                    <Image
+                      src={img.src}
+                      alt={img.alt}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 640px) 100vw, 220px"
+                    />
+                  </div>
+                </Link>
+              ))}
+            </div>
+            <p className="mt-4">
+              <Link
+                href="/projects/reverse-vending-machine-wraps-doncaster/"
+                className="text-accent hover:underline"
+              >
+                See the reverse vending machine wraps
+              </Link>
+            </p>
+          </div>
+
+          <div className="card-float p-8">
             <h2 className="text-xl font-semibold text-foreground">What We Install in Doncaster</h2>
             <p className="mt-4 text-muted leading-relaxed">
               Window graphics, wall wraps, floor graphics, shop front vinyls, POS display graphics, commercial

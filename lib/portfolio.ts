@@ -29,6 +29,8 @@ export type PortfolioPhoto = {
   town?: string;
   /** Shown in the homepage "Recent projects" grid */
   featured?: boolean;
+  /** Project page for this job, when it has its own URL */
+  href?: string;
 };
 
 const FROSTED = "/images/commercial-frosted-glass-film-sheffield";
@@ -41,6 +43,8 @@ const WINDOWS = "/images/window-film-projects";
 const TRIDENT = "/images/gym-solar-film-liverpool";
 
 // November 2026 jobs
+const RVM = "/images/reverse-vending-machine-wrap-doncaster";
+const RVM_PAGE = "/projects/reverse-vending-machine-wraps-doncaster/";
 const WAVERLEY = "/images/stone-dining-table-oak-worktop-wrap-waverley";
 const DOOR_PANELS = "/images/frosted-film-front-door-panels";
 const DONCASTER_MARBLE = "/images/marble-effect-kitchen-wrap-doncaster";
@@ -56,6 +60,20 @@ const SHEFFIELD_MARBLE = "/images/marble-worktop-splashback-wrap-sheffield";
  * Waverley is in Sheffield; the front-door frosted film (Memood) is in Nottingham.
  */
 const novemberProjects: PortfolioPhoto[] = [
+  // Reverse vending machines — Doncaster
+  { src: `${RVM}/reverse-vending-machine-wrap-doncaster-01.jpg`, alt: "Red reverse vending machine, seen straight on, Doncaster", caption: "Red machine, Doncaster", projectLine: "Straight-on view of the red machine", categories: ["commercial"], town: "Doncaster", href: RVM_PAGE },
+  { src: `${RVM}/reverse-vending-machine-wrap-doncaster-02.jpg`, alt: "Red reverse vending machine from the side, the wrap turning the corner, Doncaster", caption: "Red machine, both faces, Doncaster", projectLine: "The wrap continues around both faces", categories: ["commercial"], town: "Doncaster", href: RVM_PAGE },
+  { src: `${RVM}/reverse-vending-machine-wrap-doncaster-03.jpg`, alt: "Green reverse vending machine, seen straight on, Doncaster", caption: "Green machine, Doncaster", projectLine: "Straight-on view of the green machine", categories: ["commercial"], town: "Doncaster", href: RVM_PAGE },
+  { src: `${RVM}/reverse-vending-machine-wrap-doncaster-04.jpg`, alt: "Green reverse vending machine from the side, Doncaster", caption: "Green machine, from the side, Doncaster", projectLine: "The green machine from the side", categories: ["commercial"], town: "Doncaster", href: RVM_PAGE },
+  { src: `${RVM}/reverse-vending-machine-wrap-doncaster-05.jpg`, alt: "Yellow reverse vending machine wrapped in printed vinyl graphics, Doncaster", caption: "Yellow machine, Doncaster", projectLine: "The vinyl turns cleanly round the corner", categories: ["commercial"], town: "Doncaster", href: RVM_PAGE, featured: true },
+  { src: `${RVM}/reverse-vending-machine-wrap-doncaster-06.jpg`, alt: "A closer look at the yellow reverse vending machine, Doncaster", caption: "Yellow machine, closer, Doncaster", projectLine: "A tighter view of the yellow machine", categories: ["commercial"], town: "Doncaster", href: RVM_PAGE },
+  { src: `${RVM}/reverse-vending-machine-wrap-doncaster-07.jpg`, alt: "Yellow reverse vending machine, straight on, Doncaster", caption: "Yellow machine, straight on, Doncaster", projectLine: "Front view of the yellow machine", categories: ["commercial"], town: "Doncaster", href: RVM_PAGE },
+  { src: `${RVM}/reverse-vending-machine-wrap-doncaster-08.jpg`, alt: "Yellow reverse vending machine, graphics on one face and the screen on the other, Doncaster", caption: "Yellow machine, both faces, Doncaster", projectLine: "Graphics on one face, the screen on the other", categories: ["commercial"], town: "Doncaster", href: RVM_PAGE },
+  { src: `${RVM}/reverse-vending-machine-wrap-doncaster-09.jpg`, alt: "Green reverse vending machine, with a yellow machine behind, Doncaster", caption: "Green machine, yellow behind, Doncaster", projectLine: "Green in front, yellow behind", categories: ["commercial"], town: "Doncaster", href: RVM_PAGE },
+  { src: `${RVM}/reverse-vending-machine-wrap-doncaster-10.jpg`, alt: "Green reverse vending machine standing in a warehouse aisle, Doncaster", caption: "Green machine in the aisle, Doncaster", projectLine: "The green machine in the aisle", categories: ["commercial"], town: "Doncaster", href: RVM_PAGE },
+  { src: `${RVM}/reverse-vending-machine-wrap-doncaster-11.jpg`, alt: "Four reverse vending machines in a row, Doncaster", caption: "Four machines together, Doncaster", projectLine: "All four machines together", categories: ["commercial"], town: "Doncaster", href: RVM_PAGE },
+  { src: `${RVM}/reverse-vending-machine-wrap-doncaster-12.jpg`, alt: "A closer view of the four wrapped machines, Doncaster", caption: "The lineup, closer, Doncaster", projectLine: "Closer to the lineup", categories: ["commercial"], town: "Doncaster", href: RVM_PAGE },
+
   // Stone-effect dining table + oak-effect worktops — Waverley
   { src: `${WAVERLEY}/open-plan-kitchen-dining-wrap-waverley-after-01.jpg`, alt: "Open-plan kitchen and dining area with a stone-effect wrapped table and oak-effect worktops, Sheffield", caption: "Open-plan kitchen and dining, Sheffield", projectLine: "Dining table and kitchen worktops wrapped in one visit", categories: ["kitchens", "furniture"], town: "Sheffield", featured: true },
   { src: `${WAVERLEY}/stone-effect-dining-table-wrap-waverley-after-01.jpg`, alt: "Dining table wrapped in light grey stone-effect vinyl with grey upholstered chairs, Sheffield", caption: "Stone-effect dining table wrap, Sheffield", projectLine: "Table top and edges wrapped in a light grey stone effect", categories: ["furniture"], town: "Sheffield", featured: true },
