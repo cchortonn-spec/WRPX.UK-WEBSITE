@@ -9,7 +9,7 @@ const PAGE_PATH = "/projects/reverse-vending-machine-wraps-doncaster/";
 const PAGE_URL = `${siteConfig.domain}${PAGE_PATH}`;
 const TITLE = "Reverse Vending Machine Wraps Doncaster | WRPX";
 const DESCRIPTION =
-  "WRPX supplied and fitted printed vinyl graphics on four reverse vending machines in Doncaster. Commercial machine and equipment wrapping, South Yorkshire.";
+  "Four reverse vending machines in Doncaster, transformed with full-coverage printed vinyl. Commercial machine and equipment wrapping by WRPX, across the UK.";
 
 const hero = photosByName("reverse-vending-machine-wrap-doncaster-05")[0];
 
@@ -85,7 +85,6 @@ const projectSchema = {
   name: "Reverse vending machine wraps, Doncaster",
   headline: "Reverse vending machine wraps, Doncaster",
   url: PAGE_URL,
-  dateCreated: "2026-11-11",
   creator: {
     "@type": "Organization",
     name: "WRPX",
@@ -108,8 +107,8 @@ const projectSchema = {
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  name: "Machine and equipment wrapping",
-  serviceType: "Commercial vinyl wrapping",
+  name: "Vinyl wrapping for machines and equipment",
+  serviceType: "Vinyl wrapping",
   url: PAGE_URL,
   provider: {
     "@type": "Organization",
@@ -121,7 +120,7 @@ const serviceSchema = {
     { "@type": "AdministrativeArea", name: "South Yorkshire" },
   ],
   description:
-    "WRPX supplies and fits printed vinyl graphics on vending machines, kiosks, retail units and equipment. Commercial vinyl wrapping in Doncaster and equipment wrapping across South Yorkshire.",
+    "Wrapping for vending machines, kiosks, retail units and other equipment.",
 };
 
 export default function ReverseVendingMachineWrapsDoncasterPage() {
@@ -165,10 +164,9 @@ export default function ReverseVendingMachineWrapsDoncasterPage() {
             Reverse vending machine wraps, Doncaster
           </h1>
           <p className="mt-5 text-lg text-muted leading-relaxed">
-            Four reverse vending machines — the bottle and can return machines —
-            finished in full-coverage printed vinyl graphics. WRPX supplied and
-            fitted them at a logistics site in Doncaster on Tuesday 10 and
-            Wednesday 11 November 2026, two machines a day.
+            Four reverse vending machines in Doncaster, wrapped by WRPX.
+            Full-coverage printed vinyl in a premium cast film, finished neatly
+            around the doors, flaps and sensors.
           </p>
         </div>
       </section>
@@ -199,29 +197,11 @@ export default function ReverseVendingMachineWrapsDoncasterPage() {
       <section className="px-4 pb-4">
         <div className="container mx-auto max-w-3xl">
           <div className="card-float p-8 md:p-10">
-            <h2 className="text-2xl font-semibold text-foreground">The brief</h2>
+            <h2 className="text-2xl font-semibold text-foreground">The finish</h2>
             <p className="mt-4 text-muted leading-relaxed">
-              These are the first machines of their kind branded for the client
-              in the UK, with more expected. Each one carries printed Oracal
-              3551 cast film, finished round the doors, flaps and sensors, so
-              the graphics sit as one surface.
+              The film is Oracal 3551. It follows the shape of each machine,
+              including the corners, so the graphics read as one surface.
             </p>
-            <ul className="mt-6 space-y-2 text-muted">
-              {[
-                "Four machines, full-coverage printed vinyl graphics",
-                "Printed Oracal 3551 cast film",
-                "Finished round the doors, flaps and sensors",
-                "Two machines a day, across two days",
-                "Supply and fit by WRPX",
-              ].map((item) => (
-                <li key={item} className="flex items-start gap-2">
-                  <span className="mt-0.5 text-accent" aria-hidden="true">
-                    ✓
-                  </span>
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
           </div>
         </div>
       </section>
@@ -230,9 +210,8 @@ export default function ReverseVendingMachineWrapsDoncasterPage() {
         <div className="container mx-auto max-w-3xl">
           <h2 className="text-2xl font-semibold text-foreground">The machines</h2>
           <p className="mt-4 text-muted leading-relaxed">
-            Red, green and yellow machines, photographed after the vinyl was
-            fitted. Straight-on, three-quarter, the corner where the wrap turns,
-            and the four finished machines together.
+            Red, green and yellow. Straight on, from the side, and all four
+            together.
           </p>
         </div>
       </section>
@@ -242,13 +221,10 @@ export default function ReverseVendingMachineWrapsDoncasterPage() {
         <div className="container mx-auto max-w-3xl space-y-8">
           <div className="card-float p-8 md:p-10">
             <h2 className="text-2xl font-semibold text-foreground">
-              Machine and equipment wrapping
+              Kiosks, units and equipment
             </h2>
             <p className="mt-4 text-muted leading-relaxed">
-              The same standard of fit applies to vending machines, kiosks,
-              retail units and equipment. Printed vinyl graphics, taken cleanly
-              around corners and working parts. Commercial vinyl wrapping in
-              Doncaster, and equipment wrapping across South Yorkshire.
+              The same approach suits kiosks, retail units and other equipment.
             </p>
             <p className="mt-4 text-muted">
               <Link href="/commercial-installation/" className="text-accent hover:underline">
@@ -269,8 +245,7 @@ export default function ReverseVendingMachineWrapsDoncasterPage() {
               Planning machine or equipment graphics?
             </h2>
             <p className="mt-4 text-muted leading-relaxed">
-              Tell us about the units, the finish and the site. WRPX supplies
-              and fits commercial vinyl wrapping in Doncaster and across the UK.
+              Tell us about the machines and the finish you want.
             </p>
             <Link href="/contact/" className="btn-primary mt-6 inline-block">
               Request a quote

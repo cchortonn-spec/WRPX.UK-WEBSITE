@@ -106,17 +106,17 @@ export default function CommercialInstallationPage() {
             {[
               {
                 src: "/images/reverse-vending-machine-wrap-doncaster/reverse-vending-machine-wrap-doncaster-05.jpg",
-                alt: "Yellow reverse vending machine wrap, three-quarter view, printed vinyl graphics turning cleanly round the corner, Doncaster",
+                alt: "Yellow reverse vending machine wrapped in printed vinyl graphics, Doncaster",
                 href: "/projects/reverse-vending-machine-wraps-doncaster/",
               },
               {
                 src: "/images/reverse-vending-machine-wrap-doncaster/reverse-vending-machine-wrap-doncaster-11.jpg",
-                alt: "Four finished reverse vending machines in a row, printed vinyl graphics supplied and fitted by WRPX in Doncaster",
+                alt: "Four reverse vending machines in a row, Doncaster",
                 href: "/projects/reverse-vending-machine-wraps-doncaster/",
               },
               {
                 src: "/images/reverse-vending-machine-wrap-doncaster/reverse-vending-machine-wrap-doncaster-01.jpg",
-                alt: "Finished red reverse vending machine wrapped in printed vinyl graphics by WRPX, straight-on at a logistics site in Doncaster",
+                alt: "Red reverse vending machine, seen straight on, Doncaster",
                 href: "/projects/reverse-vending-machine-wraps-doncaster/",
               },
               {

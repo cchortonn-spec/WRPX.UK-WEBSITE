@@ -37,24 +37,22 @@ export default function CommercialInstallationDoncasterPage() {
           <div className="card-float p-8">
             <h2 className="text-xl font-semibold text-foreground">Recent Doncaster project</h2>
             <p className="mt-4 text-muted leading-relaxed">
-              Four reverse vending machines, supplied and fitted with full-coverage
-              printed vinyl graphics at a logistics site in Doncaster on 10 and 11
-              November 2026. Two machines a day, finished round the doors, flaps
-              and sensors.
+              Four reverse vending machines in Doncaster, wrapped in full-coverage
+              printed vinyl and finished around the doors, flaps and sensors.
             </p>
             <div className="mt-6 grid gap-4 sm:grid-cols-3">
               {[
                 {
                   src: "/images/reverse-vending-machine-wrap-doncaster/reverse-vending-machine-wrap-doncaster-07.jpg",
-                  alt: "Yellow reverse vending machine straight-on, sharp front view of the printed vinyl graphics, vending machine wrap Doncaster",
+                  alt: "Yellow reverse vending machine, straight on, Doncaster",
                 },
                 {
                   src: "/images/reverse-vending-machine-wrap-doncaster/reverse-vending-machine-wrap-doncaster-03.jpg",
-                  alt: "Finished green reverse vending machine with full-coverage printed vinyl graphics, straight-on, commercial vinyl wrapping Doncaster",
+                  alt: "Green reverse vending machine, seen straight on, Doncaster",
                 },
                 {
                   src: "/images/reverse-vending-machine-wrap-doncaster/reverse-vending-machine-wrap-doncaster-11.jpg",
-                  alt: "Four finished reverse vending machines in a row, printed vinyl graphics supplied and fitted by WRPX in Doncaster",
+                  alt: "Four reverse vending machines in a row, Doncaster",
                 },
               ].map((img) => (
                 <Link
