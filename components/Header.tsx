@@ -63,6 +63,317 @@ function Dropdown({
   );
 }
 
+function MobileMenu({ onClose }: { onClose: () => void }) {
+  const [kitchensOpen, setKitchensOpen] = useState(false);
+  const [furnitureOpen, setFurnitureOpen] = useState(false);
+  const [commercialOpen, setCommercialOpen] = useState(false);
+  const [locationsOpen, setLocationsOpen] = useState(false);
+
+  return (
+    <div className="border-t border-border bg-card lg:hidden">
+      <div className="container mx-auto max-w-6xl px-4 py-4">
+        <ul className="space-y-3">
+          <li>
+            <Link
+              href="/contact/"
+              className="block py-2 text-base font-medium text-card-foreground hover:text-accent"
+              onClick={onClose}
+            >
+              Contact
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/gallery/"
+              className="block py-2 text-base font-medium text-card-foreground hover:text-accent"
+              onClick={onClose}
+            >
+              Gallery
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/about/"
+              className="block py-2 text-base font-medium text-card-foreground hover:text-accent"
+              onClick={onClose}
+            >
+              About
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/our-process/"
+              className="block py-2 text-base font-medium text-card-foreground hover:text-accent"
+              onClick={onClose}
+            >
+              Our Process
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/blog/"
+              className="block py-2 text-base font-medium text-card-foreground hover:text-accent"
+              onClick={onClose}
+            >
+              Blog
+            </Link>
+          </li>
+
+          <li className="border-t border-border pt-3">
+            <button
+              type="button"
+              onClick={() => setKitchensOpen(!kitchensOpen)}
+              className="flex w-full items-center justify-between py-2 text-base font-medium text-card-foreground"
+              aria-expanded={kitchensOpen}
+            >
+              Kitchens
+              <span className="text-muted">{kitchensOpen ? "−" : "+"}</span>
+            </button>
+            {kitchensOpen && (
+              <ul className="mt-1 space-y-1 pl-4">
+                <li>
+                  <Link
+                    href="/kitchen-wrapping/"
+                    className="block py-1.5 text-sm text-card-foreground hover:text-accent"
+                    onClick={onClose}
+                  >
+                    Kitchen Wrapping
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/kitchen-island-wrapping/"
+                    className="block py-1.5 text-sm text-card-foreground hover:text-accent"
+                    onClick={onClose}
+                  >
+                    Kitchen Island Wrapping
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/kitchen-door-wrapping/"
+                    className="block py-1.5 text-sm text-card-foreground hover:text-accent"
+                    onClick={onClose}
+                  >
+                    Kitchen Door Wrapping
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/splashback-wrapping/"
+                    className="block py-1.5 text-sm text-card-foreground hover:text-accent"
+                    onClick={onClose}
+                  >
+                    Splashback Wrapping
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/appliance-wrapping/"
+                    className="block py-1.5 text-sm text-card-foreground hover:text-accent"
+                    onClick={onClose}
+                  >
+                    Appliance Wrapping
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/worktop-wrapping/"
+                    className="block py-1.5 text-sm text-card-foreground hover:text-accent"
+                    onClick={onClose}
+                  >
+                    Worktop Wrapping
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/wrap-visualiser/"
+                    className="block py-1.5 text-sm text-card-foreground hover:text-accent"
+                    onClick={onClose}
+                  >
+                    Wrap Visualiser
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/kitchen-wrapping-quote/"
+                    className="block py-1.5 text-sm text-card-foreground hover:text-accent"
+                    onClick={onClose}
+                  >
+                    Get a Quote
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/kitchen-wrapping-cost/"
+                    className="block py-1.5 text-sm text-card-foreground hover:text-accent"
+                    onClick={onClose}
+                  >
+                    Cost Guide
+                  </Link>
+                </li>
+              </ul>
+            )}
+          </li>
+
+          <li className="border-t border-border pt-3">
+            <button
+              type="button"
+              onClick={() => setFurnitureOpen(!furnitureOpen)}
+              className="flex w-full items-center justify-between py-2 text-base font-medium text-card-foreground"
+              aria-expanded={furnitureOpen}
+            >
+              Furniture & Interiors
+              <span className="text-muted">{furnitureOpen ? "−" : "+"}</span>
+            </button>
+            {furnitureOpen && (
+              <ul className="mt-1 space-y-1 pl-4">
+                <li>
+                  <Link
+                    href="/bedroom-wardrobe-wrapping/"
+                    className="block py-1.5 text-sm text-card-foreground hover:text-accent"
+                    onClick={onClose}
+                  >
+                    Bedroom Wardrobe Wrapping
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/bathroom-cabinet-wrapping/"
+                    className="block py-1.5 text-sm text-card-foreground hover:text-accent"
+                    onClick={onClose}
+                  >
+                    Bathroom Cabinet Wrapping
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/furniture-wrapping/"
+                    className="block py-1.5 text-sm text-card-foreground hover:text-accent"
+                    onClick={onClose}
+                  >
+                    Furniture Wrapping
+                  </Link>
+                </li>
+              </ul>
+            )}
+          </li>
+
+          <li className="border-t border-border pt-3">
+            <button
+              type="button"
+              onClick={() => setCommercialOpen(!commercialOpen)}
+              className="flex w-full items-center justify-between py-2 text-base font-medium text-card-foreground"
+              aria-expanded={commercialOpen}
+            >
+              Commercial & Business
+              <span className="text-muted">{commercialOpen ? "−" : "+"}</span>
+            </button>
+            {commercialOpen && (
+              <ul className="mt-1 space-y-1 pl-4">
+                <li>
+                  <Link
+                    href="/architectural-vinyl-film/"
+                    className="block py-1.5 text-sm text-card-foreground hover:text-accent"
+                    onClick={onClose}
+                  >
+                    Architectural Vinyl Film
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/architectural-vinyl-finishes/"
+                    className="block py-1.5 text-sm text-card-foreground hover:text-accent"
+                    onClick={onClose}
+                  >
+                    Vinyl Finishes
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/window-film/"
+                    className="block py-1.5 text-sm text-card-foreground hover:text-accent"
+                    onClick={onClose}
+                  >
+                    Window Film
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/commercial-installation/"
+                    className="block py-1.5 text-sm text-card-foreground hover:text-accent"
+                    onClick={onClose}
+                  >
+                    Commercial & Retail
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/white-label-graphics-installation/"
+                    className="block py-1.5 text-sm text-card-foreground hover:text-accent"
+                    onClick={onClose}
+                  >
+                    White-Label Install
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/kitchen-wrapping-training/"
+                    className="block py-1.5 text-sm text-card-foreground hover:text-accent"
+                    onClick={onClose}
+                  >
+                    Kitchen Wrapping Training
+                  </Link>
+                </li>
+              </ul>
+            )}
+          </li>
+
+          <li className="border-t border-border pt-3">
+            <button
+              type="button"
+              onClick={() => setLocationsOpen(!locationsOpen)}
+              className="flex w-full items-center justify-between py-2 text-base font-medium text-card-foreground"
+              aria-expanded={locationsOpen}
+            >
+              Locations
+              <span className="text-muted">{locationsOpen ? "−" : "+"}</span>
+            </button>
+            {locationsOpen && (
+              <ul className="mt-1 space-y-1 pl-4">
+                {nav.locations.map((item) => (
+                  <li key={item.href}>
+                    <Link
+                      href={item.href}
+                      className="block py-1.5 text-sm text-card-foreground hover:text-accent"
+                      onClick={onClose}
+                    >
+                      {item.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </li>
+
+          <li className="border-t border-border pt-3">
+            <Link
+              href="/faq/"
+              className="block py-2 text-base font-medium text-card-foreground hover:text-accent"
+              onClick={onClose}
+            >
+              FAQ
+            </Link>
+          </li>
+        </ul>
+        <div className="mt-6 border-t border-border pt-6">
+          <WhatsAppButton label="Chat on WhatsApp" className="w-full justify-center" />
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export function Header() {
   const pathname = usePathname();
   const overHero = pathname === "/" && useImmersiveHero;
@@ -170,69 +481,7 @@ export function Header() {
       </div>
 
       {mobileOpen && (
-        <div className="border-t border-border bg-card lg:hidden">
-          <div className="container mx-auto max-w-6xl px-4 py-4">
-            <ul className="space-y-1">
-              <li className="pt-2 text-sm font-medium text-muted">Services</li>
-              {nav.services.map((item) => (
-                <li key={item.href}>
-                  <Link
-                    href={item.href}
-                    className="block py-1.5 pl-4 text-sm text-card-foreground hover:text-accent"
-                    onClick={() => setMobileOpen(false)}
-                  >
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
-              <li>
-                <Link
-                  href={nav.main[0].href}
-                  className="block py-2 text-card-foreground hover:text-accent"
-                  onClick={() => setMobileOpen(false)}
-                >
-                  {nav.main[0].label}
-                </Link>
-              </li>
-              <li className="pt-2 text-sm font-medium text-muted">About</li>
-              {nav.about.map((item) => (
-                <li key={item.href}>
-                  <Link
-                    href={item.href}
-                    className="block py-1.5 pl-4 text-sm text-card-foreground hover:text-accent"
-                    onClick={() => setMobileOpen(false)}
-                  >
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
-              <li className="pt-2 text-sm font-medium text-muted">Locations</li>
-              {nav.locations.map((item) => (
-                <li key={item.href}>
-                  <Link
-                    href={item.href}
-                    className="block py-1.5 pl-4 text-sm text-card-foreground hover:text-accent"
-                    onClick={() => setMobileOpen(false)}
-                  >
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
-              <li>
-                <Link
-                  href={nav.main[1].href}
-                  className="block py-2 text-card-foreground hover:text-accent"
-                  onClick={() => setMobileOpen(false)}
-                >
-                  {nav.main[1].label}
-                </Link>
-              </li>
-            </ul>
-            <div className="mt-6 border-t border-border pt-6">
-              <WhatsAppButton label="Chat on WhatsApp" className="w-full justify-center" />
-            </div>
-          </div>
-        </div>
+        <MobileMenu onClose={() => setMobileOpen(false)} />
       )}
       <ChristmasLights />
     </header>
