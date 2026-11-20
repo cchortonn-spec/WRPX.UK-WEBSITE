@@ -105,6 +105,21 @@ export default function CommercialInstallationPage() {
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {[
               {
+                src: "/images/reverse-vending-machine-wrap-doncaster/reverse-vending-machine-wrap-doncaster-05.jpg",
+                alt: "Yellow reverse vending machine wrap, three-quarter view, printed vinyl graphics turning cleanly round the corner, Doncaster",
+                href: "/projects/reverse-vending-machine-wraps-doncaster/",
+              },
+              {
+                src: "/images/reverse-vending-machine-wrap-doncaster/reverse-vending-machine-wrap-doncaster-11.jpg",
+                alt: "Four finished reverse vending machines in a row, printed vinyl graphics supplied and fitted by WRPX in Doncaster",
+                href: "/projects/reverse-vending-machine-wraps-doncaster/",
+              },
+              {
+                src: "/images/reverse-vending-machine-wrap-doncaster/reverse-vending-machine-wrap-doncaster-01.jpg",
+                alt: "Finished red reverse vending machine wrapped in printed vinyl graphics by WRPX, straight-on at a logistics site in Doncaster",
+                href: "/projects/reverse-vending-machine-wraps-doncaster/",
+              },
+              {
                 src: "/images/post-office-counter-wrap-sheffield/post-office-counter-vinyl-wrap-sheffield-after-01.jpg",
                 alt: "Post Office counter wrapped in red vinyl with a white Post Office logo, Sheffield.",
               },
@@ -140,8 +155,8 @@ export default function CommercialInstallationPage() {
                 src: "/images/window-film-projects/gym-window-film-doncaster-02.jpg",
                 alt: "Mirror-effect privacy film on a gym shop front, Doncaster.",
               },
-            ].map((img) => (
-              <div key={img.src} className="card-float overflow-hidden">
+            ].map((img) => {
+              const frame = (
                 <div className="relative aspect-[4/3]">
                   <Image
                     src={img.src}
@@ -151,8 +166,20 @@ export default function CommercialInstallationPage() {
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                 </div>
-              </div>
-            ))}
+              );
+              if ("href" in img && img.href) {
+                return (
+                  <Link key={img.src} href={img.href} className="card-float block overflow-hidden">
+                    {frame}
+                  </Link>
+                );
+              }
+              return (
+                <div key={img.src} className="card-float overflow-hidden">
+                  {frame}
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
