@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { v2 as cloudinary } from "cloudinary";
 import { Resend } from "resend";
 import { z } from "zod";
+import { buildLeadEmail } from "@/lib/lead-email";
 
 export const runtime = "nodejs";
 
@@ -100,31 +101,45 @@ export async function POST(request: Request) {
 
     const lead = parsed.data;
 
+    // Kitchen wraps are always domestic (home) jobs.
+    const quoteLabels: Record<string, string> = {
+      complete: "Complete kitchen wrap",
+      cabinet: "Cabinets only",
+      worktop: "Worktops only",
+    };
+    const doorStyleLabels: Record<string, string> = {
+      "j-pull": "J-pull",
+      shaker: "Shaker",
+      flat: "Flat / slab",
+      other: "Other",
+    };
+
+    const details: Array<{ label: string; value: string }> = [];
+    if (lead.doorStyle) {
+      details.push({ label: "Door style", value: doorStyleLabels[lead.doorStyle] ?? lead.doorStyle });
+    }
+    if (lead.doors) details.push({ label: "Doors", value: lead.doors });
+    if (lead.drawers) details.push({ label: "Drawers", value: lead.drawers });
+    if (lead.worktopMetres) details.push({ label: "Worktop length", value: `${lead.worktopMetres} m` });
+
+    const { subject, html } = buildLeadEmail({
+      type: "domestic",
+      name: `${lead.firstName} ${lead.lastName}`,
+      phone: lead.mobile,
+      email: lead.email,
+      location: lead.city,
+      source: "Kitchen quote form",
+      summary: quoteLabels[lead.quoteType] ?? lead.quoteType,
+      details,
+      photos: imageLinks,
+    });
+
     const emailResult = await resend.emails.send({
-      from: `WRPX Quotes <${leadFromEmail}>`,
+      from: `WRPX Leads <${leadFromEmail}>`,
       to: [leadToEmail],
-      subject: `New Kitchen Wrapping Quote - ${lead.firstName} ${lead.lastName}`,
+      subject,
       replyTo: lead.email,
-      html: `
-        <h2>New kitchen wrapping quote</h2>
-        <p><strong>Quote type:</strong> ${lead.quoteType}</p>
-        <p><strong>Door style:</strong> ${lead.doorStyle || "not provided"}</p>
-        <p><strong>Doors:</strong> ${lead.doors || "not provided"}</p>
-        <p><strong>Drawers:</strong> ${lead.drawers || "not provided"}</p>
-        <p><strong>Worktop metres:</strong> ${lead.worktopMetres || "not provided"}</p>
-        <hr />
-        <p><strong>Name:</strong> ${lead.firstName} ${lead.lastName}</p>
-        <p><strong>Email:</strong> ${lead.email}</p>
-        <p><strong>Mobile:</strong> ${lead.mobile}</p>
-        <p><strong>City:</strong> ${lead.city}</p>
-        <hr />
-        <h3>Uploaded photos</h3>
-        <ul>
-          ${imageLinks
-            .map((url, index) => `<li><a href="${url}">Photo ${index + 1}</a></li>`)
-            .join("")}
-        </ul>
-      `,
+      html,
     });
 
     if (emailResult.error) {

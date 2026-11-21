@@ -127,6 +127,8 @@ export default function RootLayout({
         <Script id="gtag-config" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
+            // Browsers where the owner has opened the dashboard are not counted by Google Analytics.
+            try { if (localStorage.getItem('wrpx_ignore') === '1') { window['ga-disable-${GA_MEASUREMENT_ID}'] = true; } } catch (e) {}
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', '${GA_MEASUREMENT_ID}');

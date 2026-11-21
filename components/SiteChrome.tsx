@@ -11,8 +11,10 @@ import { ViewportFit } from "@/components/ViewportFit";
 export function SiteChrome({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
   const isJarvis = pathname?.startsWith("/jarvis");
+  // The analytics dashboard is a private app screen: no public header, footer or Christmas extras.
+  const isDashboard = pathname?.startsWith("/dashboard");
 
-  if (isJarvis) {
+  if (isJarvis || isDashboard) {
     return <>{children}</>;
   }
 

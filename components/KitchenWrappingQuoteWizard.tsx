@@ -6,6 +6,8 @@ import Link from "next/link";
 import { track } from "@vercel/analytics";
 import { RESOURCES_HASH } from "@/components/QuoteResources";
 import { formatFrom, formatPounds, kitchenPricing } from "@/lib/pricing";
+import { sendGaEvent } from "@/lib/ga";
+import { trackEvent } from "@/lib/track-client";
 
 type QuoteType = "complete" | "cabinet" | "worktop" | "";
 type DoorStyle = "j-pull" | "shaker" | "flat" | "other" | "";
@@ -233,6 +235,9 @@ export function KitchenWrappingQuoteWizard() {
           path: window.location.pathname,
           form: "kitchen-wrapping",
         });
+        // Counted once, only after the server has confirmed the quote was sent.
+        trackEvent({ event_type: "quote_form", page_url: window.location.pathname });
+        sendGaEvent("quote_form_submit", { form: "kitchen-wrapping" });
         setSubmitted(true);
         requestAnimationFrame(() => scrollBelowHeader(topRef.current, false));
       })

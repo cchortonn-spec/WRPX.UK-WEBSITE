@@ -94,3 +94,125 @@ export function formatPercent(count: number, total: number) {
 export function formatHourLabel(hour: number) {
   return `${hour.toString().padStart(2, "0")}:00`;
 }
+
+// ---------- UK time ----------
+// The server runs in UTC, so day and hour buckets are worked out in UK time here.
+
+const UK_FORMAT = new Intl.DateTimeFormat("en-GB", {
+  timeZone: "Europe/London",
+  year: "numeric",
+  month: "2-digit",
+  day: "2-digit",
+  hour: "2-digit",
+  hourCycle: "h23",
+  weekday: "short",
+});
+
+const WEEKDAY_INDEX: Record<string, number> = {
+  Mon: 0,
+  Tue: 1,
+  Wed: 2,
+  Thu: 3,
+  Fri: 4,
+  Sat: 5,
+  Sun: 6,
+};
+
+export type UkTime = {
+  /** "YYYY-MM-DD" in UK time. */
+  dateKey: string;
+  hour: number;
+  /** Monday = 0 … Sunday = 6. */
+  weekday: number;
+};
+
+export function ukTime(date: Date): UkTime {
+  const parts: Record<string, string> = {};
+  for (const part of UK_FORMAT.formatToParts(date)) {
+    parts[part.type] = part.value;
+  }
+  return {
+    dateKey: `${parts.year}-${parts.month}-${parts.day}`,
+    hour: Number(parts.hour) % 24,
+    weekday: WEEKDAY_INDEX[parts.weekday] ?? 0,
+  };
+}
+
+/** Moves a "YYYY-MM-DD" key forwards or backwards by whole days. */
+export function shiftDateKey(dateKey: string, days: number) {
+  const [year, month, day] = dateKey.split("-").map(Number);
+  const date = new Date(Date.UTC(year, month - 1, day + days));
+  return date.toISOString().slice(0, 10);
+}
+
+// ---------- Traffic sources ----------
+
+/** Turns a website address into a short, readable source name. */
+export function simplifySource(hostOrName: string) {
+  const value = hostOrName.trim().toLowerCase().replace(/^www\./, "");
+  if (!value || value === "direct / unknown") return "direct";
+  if (value.includes("google.")) return "google";
+  if (value.includes("bing.")) return "bing";
+  if (value.includes("duckduckgo")) return "duckduckgo";
+  if (value.includes("yahoo.")) return "yahoo";
+  if (value.includes("ecosia")) return "ecosia";
+  if (value.includes("instagram")) return "instagram";
+  if (/(^|\.)(facebook|fb)\.com$|^l\.facebook|^m\.facebook|^lm\.facebook/.test(value)) return "facebook";
+  if (value === "t.co" || value.includes("twitter.") || value === "x.com") return "x";
+  if (value.includes("linkedin") || value === "lnkd.in") return "linkedin";
+  if (value.includes("tiktok")) return "tiktok";
+  if (value.includes("youtube") || value === "youtu.be") return "youtube";
+  if (value.includes("pinterest")) return "pinterest";
+  if (value.includes("whatsapp") || value === "wa.me") return "whatsapp";
+  return value;
+}
+
+/** City names arrive web-encoded from the host ("St%20Albans"). */
+export function decodeCity(city: string | null) {
+  if (!city) return null;
+  try {
+    return decodeURIComponent(city);
+  } catch {
+    return city;
+  }
+}
+
+// ---------- Page types (used for page-specific advice) ----------
+
+export type PageKind =
+  | "home"
+  | "quote"
+  | "contact"
+  | "gallery"
+  | "blog"
+  | "cost"
+  | "training"
+  | "location"
+  | "commercial"
+  | "service"
+  | "other";
+
+export function classifyPage(pageUrl: string): PageKind {
+  const path = pageUrl.split("?")[0].replace(/\/+$/, "") || "/";
+  if (path === "/") return "home";
+  if (path.startsWith("/kitchen-wrapping-quote")) return "quote";
+  if (path.startsWith("/contact")) return "contact";
+  if (path.startsWith("/gallery")) return "gallery";
+  if (path.startsWith("/blog")) return "blog";
+  if (path.startsWith("/kitchen-wrapping-cost")) return "cost";
+  if (path.includes("training")) return "training";
+  if (
+    /commercial|architectural|subcontract|white-label|print-company|shop-front|hospitality|sports-leisure|floor-vinyl|window-film/.test(
+      path
+    )
+  ) {
+    return "commercial";
+  }
+  if (/^\/(kitchen-wrapping|worktop-wrapping|furniture-wrapping|window-film)-[a-z-]+$/.test(path)) {
+    return "location";
+  }
+  if (/wrapping|splashback|appliance|wardrobe|bathroom|furniture|worktop|kitchen/.test(path)) {
+    return "service";
+  }
+  return "other";
+}

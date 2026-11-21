@@ -5,11 +5,18 @@ import { usePathname } from "next/navigation";
 import { isInternalAnalyticsPath } from "@/lib/analytics-helpers";
 import type { LeadEventType } from "@/lib/analytics-types";
 import { trackEvent } from "@/lib/track-client";
+import { placementOf, sendGaEvent } from "@/lib/ga";
 
 function getFormEventType(
   pathname: string,
   form: HTMLFormElement
 ): LeadEventType | null {
+  // Some forms report themselves once, when the enquiry has really been sent
+  // (the kitchen quote wizard is multi-step: every "Next" press is a submit).
+  if (form.classList.contains("qw-shell") || form.dataset.analyticsSelf === "true") {
+    return null;
+  }
+
   const explicitEvent = form.dataset.analyticsEvent;
   if (explicitEvent === "contact_form" || explicitEvent === "quote_form") {
     return explicitEvent;
@@ -70,27 +77,35 @@ export function AnalyticsTracker() {
 
       const href = link.getAttribute("href") ?? "";
 
-      if (href.startsWith("tel:")) {
+      const hrefLower = href.trim().toLowerCase();
+
+      if (hrefLower.startsWith("tel:")) {
         trackEvent({
           event_type: "phone_click",
           page_url: pageUrl,
+          link_location: placementOf(link),
         });
+        sendGaEvent("phone_click", { link_location: placementOf(link) });
         return;
       }
 
-      if (href.startsWith("mailto:")) {
+      if (hrefLower.startsWith("mailto:")) {
         trackEvent({
           event_type: "email_click",
           page_url: pageUrl,
+          link_location: placementOf(link),
         });
+        sendGaEvent("email_click", { link_location: placementOf(link) });
         return;
       }
 
-      if (href.includes("wa.me") || href.includes("whatsapp.com")) {
+      if (hrefLower.includes("wa.me") || hrefLower.includes("whatsapp.com")) {
         trackEvent({
           event_type: "whatsapp_click",
           page_url: pageUrl,
+          link_location: placementOf(link),
         });
+        sendGaEvent("whatsapp_click", { link_location: placementOf(link) });
       }
     }
 
@@ -114,6 +129,7 @@ export function AnalyticsTracker() {
         event_type: eventType,
         page_url: pageUrl,
       });
+      sendGaEvent(`${eventType}_submit`);
     }
 
     document.addEventListener("click", handleClick);
