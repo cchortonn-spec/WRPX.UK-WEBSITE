@@ -41,6 +41,7 @@ const BATH = "/images/bath-panel-wrapping";
 const KITCHENS = "/images/kitchen-wrapping-projects";
 const WINDOWS = "/images/window-film-projects";
 const TRIDENT = "/images/gym-solar-film-liverpool";
+const GYM_WINDOW_GRAPHICS_LIVERPOOL = "/images/window-graphics-gym-liverpool";
 
 // November 2026 jobs
 const GREY_KITCHEN = "/images/kitchen-wrap-grey-huddersfield";
@@ -190,6 +191,11 @@ const novemberProjects: PortfolioPhoto[] = [
 ];
 
 const recentProjects: PortfolioPhoto[] = [
+  // Cut-vinyl window lettering on gym glass, Liverpool
+  { src: `${GYM_WINDOW_GRAPHICS_LIVERPOOL}/window-graphics-gym-liverpool-01.jpg`, alt: "Large cut-vinyl letters on a gym window, looking out over trees and a white building", caption: "Window lettering on the gym glass", projectLine: "Large cut-vinyl letters on the full-height glass", categories: ["window-film", "commercial"], town: "Liverpool" },
+  { src: `${GYM_WINDOW_GRAPHICS_LIVERPOOL}/window-graphics-gym-liverpool-02.jpg`, alt: "Tall typographic window graphics across floor-to-ceiling gym glass, Liverpool", caption: "Window graphics, Liverpool", projectLine: "Cut vinyl lettering across the full-height windows", categories: ["window-film", "commercial"], town: "Liverpool" },
+  { src: `${GYM_WINDOW_GRAPHICS_LIVERPOOL}/window-graphics-gym-liverpool-03.jpg`, alt: "Gym equipment in front of floor-to-ceiling windows with large vinyl lettering", caption: "Gym floor and window graphics", projectLine: "The lettering sits on the glass behind the training floor", categories: ["window-film", "commercial"], town: "Liverpool" },
+
   ...novemberProjects,
 
   // Frosted film on glass balustrade panels — commercial lodge decking

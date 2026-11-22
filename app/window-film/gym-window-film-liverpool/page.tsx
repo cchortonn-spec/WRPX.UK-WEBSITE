@@ -2,6 +2,14 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { getServiceSchema } from "@/lib/schema";
 import { FaqAccordion } from "@/components/FaqAccordion";
+import { photosByName } from "@/lib/portfolio";
+import { ProjectPhotos } from "@/components/ProjectPhotos";
+
+const gymWindowGraphics = photosByName(
+  "window-graphics-gym-liverpool-01",
+  "window-graphics-gym-liverpool-02",
+  "window-graphics-gym-liverpool-03",
+);
 
 export const metadata: Metadata = {
   title: "Gym Window Film Liverpool | Frosted, Solar Control & Manifestation for Gyms | WRPX",
@@ -146,6 +154,16 @@ export default function GymWindowFilmLiverpoolPage() {
               Gym Window Film Overview
             </Link>
           </div>
+        </div>
+      </section>
+
+      <section className="px-4 pt-16">
+        <div className="container mx-auto max-w-5xl">
+          <ProjectPhotos
+            title="Window lettering on the gym glass"
+            intro="Large cut-vinyl letters across the floor-to-ceiling windows, with the training floor in front of the glass."
+            photos={gymWindowGraphics}
+          />
         </div>
       </section>
 
