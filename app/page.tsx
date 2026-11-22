@@ -39,6 +39,7 @@ export const metadata: Metadata = {
 };
 
 const recentProjects = photosByName(
+  "reverse-vending-machine-wrap-doncaster-05",
   "forest-green-kitchen-island-wrap-leeds-after-01",
   "navy-kitchen-wrap-manchester-01",
   "post-office-counter-vinyl-wrap-sheffield-after-01",
@@ -370,22 +371,36 @@ export default function HomePage() {
             and businesses across Sheffield, Leeds, York, Manchester, Doncaster and South Yorkshire.
           </p>
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {recentProjects.map((photo) => (
-              <figure key={photo.src} className="card-float overflow-hidden">
-                <div className="relative aspect-[4/3]">
-                  <Image
-                    src={photo.src}
-                    alt={photo.alt}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  />
-                </div>
-                <figcaption className="border-t border-border bg-card p-4 text-sm font-medium text-foreground">
-                  {photo.caption}
-                </figcaption>
-              </figure>
-            ))}
+            {recentProjects.map((photo) => {
+              const media = (
+                <>
+                  <div className="relative aspect-[4/3]">
+                    <Image
+                      src={photo.src}
+                      alt={photo.alt}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    />
+                  </div>
+                  <figcaption className="border-t border-border bg-card p-4 text-sm font-medium text-foreground">
+                    {photo.caption}
+                  </figcaption>
+                </>
+              );
+              if (!photo.href) {
+                return (
+                  <figure key={photo.src} className="card-float overflow-hidden">
+                    {media}
+                  </figure>
+                );
+              }
+              return (
+                <Link key={photo.src} href={photo.href} className="card-float block h-full overflow-hidden">
+                  <figure className="h-full">{media}</figure>
+                </Link>
+              );
+            })}
           </div>
           <p className="mt-8 text-center">
             <Link href="/gallery/" className="btn-secondary inline-block">

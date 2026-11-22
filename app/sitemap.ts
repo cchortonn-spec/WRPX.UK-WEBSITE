@@ -549,6 +549,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   );
 
   const blogPaths = blogPosts.map((post) => `blog/${post.slug}`);
+  const projectCaseStudies = [
+    "projects/reverse-vending-machine-wraps-doncaster",
+  ];
   const paths = [
     ...core,
     ...locations,
@@ -559,7 +562,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...furnitureLocations,
     ...programmaticPaths,
     ...blogPaths,
+    ...projectCaseStudies,
   ];
+
+  const fixedLastMod: Record<string, string> = {
+    "projects/reverse-vending-machine-wraps-doncaster": "2026-11-20",
+  };
 
   const highPriorityPaths = new Set([
     "kitchen-wrapping",
@@ -574,7 +582,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return paths.map((path) => ({
     url: path ? `${base}/${path}/` : `${base}/`,
-    lastModified: new Date(),
+    lastModified: fixedLastMod[path] ? new Date(fixedLastMod[path]) : new Date(),
     changeFrequency: "monthly" as const,
     priority: path === "" ? 1
       : highPriorityPaths.has(path) ? 0.9
