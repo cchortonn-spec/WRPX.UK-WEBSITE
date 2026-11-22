@@ -1418,3 +1418,43 @@ _Last updated by automation run on 2026-11-06_
 - `/subcontract-window-film-installation/` — Hull + Wolverhampton links added to city grid (now 25 cities)
 
 _Last updated by automation run on 2026-11-07_
+
+## Run 114 additions (2026-11-08)
+| Slug | Title / Purpose |
+|---|---|
+| `/window-film/retail-window-film-norwich/` | Retail window film Norwich — NR postcodes; Chapelfield NR2; Castle Quarter NR1; St Stephens NR1; Riverside NR1; Building Regulations manifestation (England); ~2h30m via A1(M)/A11; 37th retail WF city; FIRST Norwich retail WF page; completes Norwich cluster; Pillar 1/3 |
+| `/architectural-wrap-student-accommodation-norwich/` | Student accommodation vinyl wrap Norwich — NR postcodes; UEA NR4 (~17,000 students); Norwich University of the Arts NR2; Earlham Road NR4; Golden Triangle NR2; ~2h30m via A1(M)/A11; 37th PBSA city; FIRST Norwich PBSA wrap; Pillar 4 |
+| `/window-film/gym-window-film-walsall/` | Gym window film Walsall — WS postcodes; Walsall Aquatics Centre WS1; Bloxwich Leisure Centre WS3; PureGym WS1; Gallagher Retail Park WS2; Building Regulations manifestation (England); ~1h via M1/M6; 28th gym WF city; FIRST Walsall gym WF page; Pillar 1 |
+| `/subcontract-window-film-installation-walsall/` | Subcontract window film Walsall — WS postcodes; The Saddlers Centre WS1; Gallagher Retail Park WS2; Walsall Aquatics Centre WS1; Bloxwich Leisure Centre WS3; Building Regulations manifestation (England); ~1h via M1/M6; 25th B2B WF page; FIRST Walsall B2B WF page; Pillar 2 |
+
+**Hub maintenance (Run 114):**
+- `/window-film/gym-window-film/` — Norwich + Walsall links added (now 28 cities)
+- `/subcontract-window-film-installation/` — Norwich + Walsall links added (now 25 cities; note: Norwich added in earlier count so Walsall brings to 25)
+
+_Last updated by automation run on 2026-11-08_
+
+## Run 115 additions (2026-11-15)
+| Slug | Title / Purpose |
+|---|---|
+| `/window-film/retail-window-film-walsall/` | Retail window film Walsall — WS postcodes; The Saddlers Centre WS1; Gallagher Retail Park WS2; St Matthew's Quarter WS1; Building Regulations manifestation (England); ~1h via M1/M6; 38th retail WF city; FIRST Walsall retail WF page; completes Walsall cluster; Pillar 1/3 |
+| `/architectural-wrap-care-homes-walsall/` | Care home vinyl wrapping Walsall — WS postcodes; CQC (England); Manor Hospital WS2 care cluster; Bloxwich WS3; Aldridge WS9; Building Regulations manifestation (England); ~1h via M1/M6; 39th care homes city; FIRST Walsall care homes wrap; Pillar 4 |
+| `/architectural-wrap-student-accommodation-walsall/` | Student accommodation vinyl wrap Walsall — WS postcodes; University of Wolverhampton Walsall campus WS1 (Wisemore); Walsall College WS1; ~1h via M1/M6; 38th PBSA city; FIRST Walsall PBSA wrap; Pillar 4 |
+| `/window-film/gym-window-film-ipswich/` | Gym window film Ipswich — IP postcodes; Ipswich Sports Club IP1; Whitton Sports Centre IP3; Ipswich Waterfront IP3; Martlesham Heath IP5; Building Regulations manifestation (England); ~2h15m via A1(M)/A14; 29th gym WF city; FIRST Ipswich gym WF page; East Anglian expansion; Pillar 1 |
+
+**Hub maintenance (Run 115):**
+- `/window-film/gym-window-film/` — Ipswich link added (now 29 cities)
+
+_Last updated by automation run on 2026-11-15_
+
+## Run 116 additions (2026-11-22)
+| Slug | Title / Purpose |
+|---|---|
+| `/subcontract-window-film-installation-ipswich/` | Subcontract window film Ipswich — IP postcodes; Sailmakers Shopping Centre IP1; Buttermarket IP1; Martlesham Heath Business Park IP5; Copdock Retail Park IP8; Ipswich Sports Club IP1; Building Regulations manifestation (England); ~2h15m via A1(M)/A14; 26th B2B WF page; FIRST Ipswich B2B WF page; East Anglian expansion; Pillar 2 |
+| `/window-film/retail-window-film-ipswich/` | Retail window film Ipswich — IP postcodes; Sailmakers Shopping Centre IP1; Buttermarket IP1; Priory Walk IP1; Whitehouse Retail Park IP1; Copdock Retail Park IP8; Building Regulations manifestation (England); ~2h15m via A1(M)/A14; 39th retail WF city; FIRST Ipswich retail WF page; East Anglian expansion; Pillar 1/3 |
+| `/architectural-wrap-student-accommodation-ipswich/` | Student accommodation vinyl wrap Ipswich — IP postcodes; University of Suffolk IP4 (~10,000 students); Ipswich Waterfront IP3 corridor; student HMO zones IP1–IP4; ~2h15m via A1(M)/A14; 39th PBSA city; FIRST Ipswich PBSA wrap; East Anglian expansion; Pillar 4 |
+| `/architectural-wrap-care-homes-ipswich/` | Care home vinyl wrapping Ipswich — IP postcodes; CQC (England); Suffolk County Council; Ipswich Hospital IP4 cluster; Rushmere IP4; Whitton IP3; outer IP postcodes; ~2h15m via A1(M)/A14; 40th care homes city; FIRST Ipswich care homes wrap; East Anglian expansion; Pillar 4 |
+
+**Hub maintenance (Run 116):**
+- `/subcontract-window-film-installation/` — Ipswich link added (now 26 cities)
+
+_Last updated by automation run on 2026-11-22_
