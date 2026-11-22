@@ -9,6 +9,12 @@ const yorkPhotos = photosByName(
   "oak-effect-worktop-wrap-york-before-01",
 );
 
+const yorkTvPhotos = photosByName(
+  "tv-unit-wrap-oak-01",
+  "tv-unit-wrap-oak-03",
+  "tv-unit-wrap-oak-05",
+).map((photo) => ({ ...photo, href: "/furniture-wrapping/" }));
+
 export const metadata: Metadata = {
   title: "Kitchen Wrapping York | 5-Year Guarantee | Free Survey | WRPX",
   description:
@@ -132,11 +138,24 @@ export default function KitchenWrappingYorkPage() {
       </section>
 
       <section className="pt-12">
-        <div className="container mx-auto max-w-3xl px-4">
+        <div className="container mx-auto max-w-3xl space-y-8 px-4">
           <ProjectPhotos
             title="Recent York project — oak-effect worktop wrap"
             intro="Pale worktops and a breakfast bar wrapped in a natural oak effect. No new worktops, no fitters and no mess."
             photos={yorkPhotos}
+          />
+          <ProjectPhotos
+            title="Oak TV wall unit in York"
+            intro={
+              <>
+                A floating wall unit in warm oak, with white gloss doors.{" "}
+                <Link href="/furniture-wrapping/" className="text-accent hover:underline">
+                  Furniture wrapping
+                </Link>
+                .
+              </>
+            }
+            photos={yorkTvPhotos}
           />
         </div>
       </section>

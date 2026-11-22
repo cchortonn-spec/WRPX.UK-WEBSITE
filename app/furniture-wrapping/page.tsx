@@ -7,6 +7,12 @@ import { faqItems } from "@/lib/faq-data";
 import { photosByName } from "@/lib/portfolio";
 import { ProjectPhotos } from "@/components/ProjectPhotos";
 
+const oakTvPhotos = photosByName(
+  "tv-unit-wrap-oak-01",
+  "tv-unit-wrap-oak-03",
+  "tv-unit-wrap-oak-05",
+);
+
 const furniturePhotos = photosByName(
   "stone-effect-dining-table-wrap-waverley-after-01",
   "stone-effect-dining-table-wrap-waverley-after-02",
@@ -113,6 +119,12 @@ export default function FurnitureWrappingPage() {
               existing kitchen or bedroom decor.
             </p>
           </div>
+
+          <ProjectPhotos
+            title="Recent work: oak TV wall unit"
+            intro="A floating TV wall unit in warm oak. The back panel, shelves and carcasses share the finish, with white gloss doors."
+            photos={oakTvPhotos}
+          />
 
           <ProjectPhotos
             title="Matching furniture in one 3M finish"

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import {
   portfolioCategories,
   type PortfolioCategory,
@@ -53,25 +54,39 @@ export function PortfolioGallery({ photos }: { photos: PortfolioPhoto[] }) {
       <section className="px-4 py-16">
         <div className="container mx-auto max-w-6xl">
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {visible.map((item) => (
-              <figure key={item.src} className="card-float overflow-hidden">
-                <div className="relative aspect-[4/3]">
-                  <Image
-                    src={item.src}
-                    alt={item.alt}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  />
-                </div>
-                <figcaption className="border-t border-border bg-card p-4 text-sm text-muted">
-                  <span className="font-medium text-foreground">{item.caption}</span>
-                  {item.projectLine && (
-                    <span className="mt-1 block text-muted">{item.projectLine}</span>
-                  )}
-                </figcaption>
-              </figure>
-            ))}
+            {visible.map((item) => {
+              const media = (
+                <>
+                  <div className="relative aspect-[4/3]">
+                    <Image
+                      src={item.src}
+                      alt={item.alt}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    />
+                  </div>
+                  <figcaption className="border-t border-border bg-card p-4 text-sm text-muted">
+                    <span className="font-medium text-foreground">{item.caption}</span>
+                    {item.projectLine && (
+                      <span className="mt-1 block text-muted">{item.projectLine}</span>
+                    )}
+                  </figcaption>
+                </>
+              );
+              if (!item.href) {
+                return (
+                  <figure key={item.src} className="card-float overflow-hidden">
+                    {media}
+                  </figure>
+                );
+              }
+              return (
+                <Link key={item.src} href={item.href} className="card-float block h-full overflow-hidden">
+                  <figure className="h-full">{media}</figure>
+                </Link>
+              );
+            })}
           </div>
         </div>
       </section>

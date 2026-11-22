@@ -29,6 +29,8 @@ export type PortfolioPhoto = {
   town?: string;
   /** Shown in the homepage "Recent projects" grid */
   featured?: boolean;
+  /** Project page for this job, when it has its own URL */
+  href?: string;
 };
 
 const FROSTED = "/images/commercial-frosted-glass-film-sheffield";
@@ -41,6 +43,10 @@ const WINDOWS = "/images/window-film-projects";
 const TRIDENT = "/images/gym-solar-film-liverpool";
 
 // November 2026 jobs
+const GREY_KITCHEN = "/images/kitchen-wrap-grey-huddersfield";
+const GREY_KITCHEN_PAGE = "/projects/grey-kitchen-wrap-huddersfield/";
+const TV_OAK = "/images/tv-unit-wrap-oak";
+const BATH_GREY = "/images/bathroom-vanity-wrap-grey";
 const WAVERLEY = "/images/stone-dining-table-oak-worktop-wrap-waverley";
 const DOOR_PANELS = "/images/frosted-film-front-door-panels";
 const DONCASTER_MARBLE = "/images/marble-effect-kitchen-wrap-doncaster";
@@ -56,6 +62,24 @@ const SHEFFIELD_MARBLE = "/images/marble-worktop-splashback-wrap-sheffield";
  * Waverley is in Sheffield; the front-door frosted film (Memood) is in Nottingham.
  */
 const novemberProjects: PortfolioPhoto[] = [
+  // Grey kitchen — Huddersfield. Doors, drawer fronts and end panels only.
+  { src: `${GREY_KITCHEN}/kitchen-wrap-grey-huddersfield-01.jpg`, alt: "Long view down a finished kitchen wrapped in a smooth grey, Huddersfield", caption: "Finished kitchen, Huddersfield", projectLine: "Doors, drawer fronts and end panels in smooth grey", categories: ["kitchens"], town: "Huddersfield", href: GREY_KITCHEN_PAGE },
+  { src: `${GREY_KITCHEN}/kitchen-wrap-grey-huddersfield-02.jpg`, alt: "L-shaped run of grey cabinet doors beside a dark worktop, with an integrated washer", caption: "L-shaped run", projectLine: "Grey doors and an end panel along the run", categories: ["kitchens"], town: "Huddersfield", href: GREY_KITCHEN_PAGE },
+  { src: `${GREY_KITCHEN}/kitchen-wrap-grey-huddersfield-03.jpg`, alt: "Grey base units and drawer fronts along the sink run, with frosted wall cabinets above", caption: "Sink run", projectLine: "Base units and drawers in the same grey", categories: ["kitchens"], town: "Huddersfield", href: GREY_KITCHEN_PAGE },
+  { src: `${GREY_KITCHEN}/kitchen-wrap-grey-huddersfield-04.jpg`, alt: "Corner by the oven, with stacks of grey drawers", caption: "Oven corner", projectLine: "Drawer stacks beside the oven", categories: ["kitchens"], town: "Huddersfield", href: GREY_KITCHEN_PAGE },
+  { src: `${GREY_KITCHEN}/kitchen-wrap-grey-huddersfield-07.jpg`, alt: "Second kitchen in smooth grey, with frosted glass wall cabinets, Huddersfield", caption: "Frosted glass wall cabinets", projectLine: "Frosted glass wall cabinets over grey doors", categories: ["kitchens"], town: "Huddersfield", href: GREY_KITCHEN_PAGE },
+  { src: `${GREY_KITCHEN}/kitchen-wrap-grey-huddersfield-10.jpg`, alt: "Close view of grey drawer fronts and the edge of a tall unit", caption: "Drawer fronts", projectLine: "Clean edges on the drawer fronts", categories: ["kitchens"], town: "Huddersfield", href: GREY_KITCHEN_PAGE },
+
+  // Oak TV wall unit — York.
+  { src: `${TV_OAK}/tv-unit-wrap-oak-01.jpg`, alt: "Floating TV wall unit in York, wrapped in warm oak with white gloss doors", caption: "Oak TV wall unit, York", projectLine: "Back panel, shelves and carcasses in a warm oak finish", categories: ["furniture"], town: "York" },
+  { src: `${TV_OAK}/tv-unit-wrap-oak-03.jpg`, alt: "Front view of a floating TV wall in oak, with white gloss doors", caption: "TV wall from the front", projectLine: "White gloss doors set into the oak", categories: ["furniture"], town: "York" },
+  { src: `${TV_OAK}/tv-unit-wrap-oak-05.jpg`, alt: "Close view of the oak grain on the shelf and back panel of a TV wall", caption: "Oak grain on the shelf", projectLine: "Warm oak grain running across the shelf", categories: ["furniture"], town: "York" },
+
+  // Light grey bathroom furniture. No town.
+  { src: `${BATH_GREY}/bathroom-vanity-wrap-grey-01.jpg`, alt: "Bathroom furniture run in a soft light grey, with a vanity, open shelves and a bath panel", caption: "Bathroom furniture run", projectLine: "Vanity, open shelves and bath panel in soft light grey", categories: ["bathrooms"] },
+  { src: `${BATH_GREY}/bathroom-vanity-wrap-grey-03.jpg`, alt: "Close view of bathroom vanity doors in a soft light grey, beside the bath panel", caption: "Vanity doors", projectLine: "Vanity doors in a soft light grey", categories: ["bathrooms"] },
+  { src: `${BATH_GREY}/bathroom-vanity-wrap-grey-04.jpg`, alt: "Open shelf unit beside the toilet, in a soft light grey", caption: "Open shelf unit", projectLine: "Open shelves beside the toilet", categories: ["bathrooms"] },
+
   // Stone-effect dining table + oak-effect worktops — Waverley
   { src: `${WAVERLEY}/open-plan-kitchen-dining-wrap-waverley-after-01.jpg`, alt: "Open-plan kitchen and dining area with a stone-effect wrapped table and oak-effect worktops, Sheffield", caption: "Open-plan kitchen and dining, Sheffield", projectLine: "Dining table and kitchen worktops wrapped in one visit", categories: ["kitchens", "furniture"], town: "Sheffield", featured: true },
   { src: `${WAVERLEY}/stone-effect-dining-table-wrap-waverley-after-01.jpg`, alt: "Dining table wrapped in light grey stone-effect vinyl with grey upholstered chairs, Sheffield", caption: "Stone-effect dining table wrap, Sheffield", projectLine: "Table top and edges wrapped in a light grey stone effect", categories: ["furniture"], town: "Sheffield", featured: true },
