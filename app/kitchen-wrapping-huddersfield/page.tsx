@@ -1,6 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
- 
+import { photosByName } from "@/lib/portfolio";
+import { ProjectPhotos } from "@/components/ProjectPhotos";
+
+const huddersfieldKitchenPhotos = photosByName(
+  "kitchen-wrap-grey-huddersfield-01",
+  "kitchen-wrap-grey-huddersfield-02",
+  "kitchen-wrap-grey-huddersfield-03",
+);
+
 
 export const metadata: Metadata = {
   title: "Kitchen Wrapping Huddersfield | 5-Year Guarantee | Free Survey",
@@ -54,6 +62,28 @@ export default function KitchenWrappingHuddersfieldPage() {
           <div className="mt-6 rounded-lg border-l-4 border-accent bg-background p-4">
             <p className="font-semibold text-foreground">5-year guarantee on materials and workmanship. Named on every job.</p>
           </div>
+        </div>
+      </section>
+
+      <section className="px-4 py-12">
+        <div className="container mx-auto max-w-3xl">
+          <ProjectPhotos
+            title="Recent kitchen in Huddersfield"
+            intro={
+              <>
+                Two kitchens, with cabinet doors, drawer fronts and end panels
+                in a smooth grey finish.{" "}
+                <Link
+                  href="/projects/grey-kitchen-wrap-huddersfield/"
+                  className="text-accent hover:underline"
+                >
+                  See the full kitchen
+                </Link>
+                .
+              </>
+            }
+            photos={huddersfieldKitchenPhotos}
+          />
         </div>
       </section>
 

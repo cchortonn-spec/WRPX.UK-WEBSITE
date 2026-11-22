@@ -5,6 +5,12 @@ import { getServiceSchema } from "@/lib/schema";
 import { photosByName } from "@/lib/portfolio";
 import { ProjectPhotos } from "@/components/ProjectPhotos";
 
+const greyBathroomPhotos = photosByName(
+  "bathroom-vanity-wrap-grey-01",
+  "bathroom-vanity-wrap-grey-03",
+  "bathroom-vanity-wrap-grey-04",
+);
+
 const bathroomPhotos = photosByName(
   "oak-effect-bath-panel-wrap-chesterfield-01",
   "oak-effect-bath-panel-wrap-chesterfield-02",
@@ -118,6 +124,12 @@ export default function BathroomCabinetWrappingPage() {
               wet environment — we&apos;ll tell you before we quote.
             </p>
           </div>
+
+          <ProjectPhotos
+            title="Recent work: light grey bathroom furniture"
+            intro="A bathroom vanity wrap in a soft light grey. The vanity doors, open shelf unit and bath panel are finished to match."
+            photos={greyBathroomPhotos}
+          />
 
           <ProjectPhotos
             title="Recent job: oak-effect bath panel"
