@@ -9,7 +9,7 @@ import { ProjectPhotos } from "@/components/ProjectPhotos";
 
 const oakTvPhotos = photosByName(
   "tv-unit-wrap-oak-01",
-  "tv-unit-wrap-oak-02",
+  "tv-unit-wrap-oak-03",
   "tv-unit-wrap-oak-05",
 );
 
@@ -122,7 +122,7 @@ export default function FurnitureWrappingPage() {
 
           <ProjectPhotos
             title="Recent work: oak TV wall unit"
-            intro="A TV unit wrap in warm oak wood-grain vinyl. The back panel, shelves and cabinet carcasses share the finish, with white gloss doors."
+            intro="A floating TV wall unit in warm oak. The back panel, shelves and carcasses share the finish, with white gloss doors."
             photos={oakTvPhotos}
           />
 

@@ -18,13 +18,8 @@ const kitchenPhotos = photosByName(
   "kitchen-wrap-grey-huddersfield-02",
   "kitchen-wrap-grey-huddersfield-03",
   "kitchen-wrap-grey-huddersfield-04",
-  "kitchen-wrap-grey-huddersfield-05",
-  "kitchen-wrap-grey-huddersfield-06",
   "kitchen-wrap-grey-huddersfield-07",
-  "kitchen-wrap-grey-huddersfield-08",
-  "kitchen-wrap-grey-huddersfield-09",
   "kitchen-wrap-grey-huddersfield-10",
-  "kitchen-wrap-grey-huddersfield-11",
 ).map((photo) => ({ ...photo, href: undefined }));
 
 export const metadata: Metadata = {
@@ -220,7 +215,7 @@ export default function GreyKitchenWrapHuddersfieldPage() {
           <h2 className="text-2xl font-semibold text-foreground">The kitchens</h2>
           <p className="mt-4 text-muted leading-relaxed">
             One long view down the finished run, then a second kitchen with
-            frosted glass wall cabinets and pendant lights.
+            frosted glass wall cabinets.
           </p>
         </div>
       </section>
