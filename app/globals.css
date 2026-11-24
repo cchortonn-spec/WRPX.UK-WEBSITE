@@ -2330,8 +2330,8 @@ a[href^="tel"]:hover {
 @media (max-width: 767px) {
   .immersive-hero {
     margin-top: 0;
-    min-height: min(92vh, 44rem);
-    min-height: min(92svh, 44rem);
+    min-height: min(75vh, 38rem);
+    min-height: min(75svh, 38rem);
     align-items: flex-end;
   }
 
@@ -2341,7 +2341,8 @@ a[href^="tel"]:hover {
 
   .immersive-hero-image-mobile {
     display: block !important;
-    object-position: center 40%;
+    object-fit: contain;
+    object-position: center center;
   }
 
   .immersive-hero-content {
