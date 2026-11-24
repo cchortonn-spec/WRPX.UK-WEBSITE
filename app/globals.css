@@ -320,6 +320,7 @@ body::before {
 
 .wrpx-trust-featured-media {
   position: relative;
+  aspect-ratio: 16 / 9;
   min-height: 16rem;
 }
 
